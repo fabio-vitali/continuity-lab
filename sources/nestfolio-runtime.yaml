@@ -10,7 +10,7 @@ not_canonical_for:
   - future product thesis
   - future target architecture
   - product-development process
-reviewed_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+reviewed_revision: TO_BE_SET_BEFORE_RI-001
 revision_command: git -C /path/to/nestfolio rev-parse HEAD
 notes:
   - Record the exact reviewed revision before RI-001.
