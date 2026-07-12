@@ -1,0 +1,34 @@
+iteration:
+  id: REPLACE
+  type: REPLACE
+
+objective:
+  primary_question: REPLACE
+
+deliverables:
+  - path: REPLACE
+    purpose: REPLACE
+
+canonical_inputs: []
+
+source_inputs: []
+
+decisions_in_scope: []
+
+decisions_out_of_scope: []
+
+constraints: []
+
+open_questions: []
+
+explicit_exclusions: []
+
+required_methods: []
+
+output_contract:
+  - distinguish observations, hypotheses, proposals, decisions, rejected alternatives, and open questions
+  - update program state
+  - create session handoff
+  - list every changed file
+
+completion_criteria: []

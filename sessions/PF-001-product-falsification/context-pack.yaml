@@ -1,0 +1,90 @@
+iteration:
+  id: PF-001
+  type: product-falsification
+
+objective:
+  primary_question: >
+    Can the proposed Continuity product thesis, category, boundaries,
+    adoption model, and central abstractions survive a serious attempt
+    to prove that the product is unnecessary, incoherent, or economically impractical?
+
+deliverables:
+  - path: docs/50-validation/product-falsification-report.md
+    purpose: Record the falsification analysis and verdict.
+  - path: docs/10-product/product-foundation.md
+    purpose: Revise proposals and statuses based on the evidence.
+  - path: decisions/
+    purpose: Record high-impact retained, revised, or rejected choices.
+  - path: docs/90-state/program-state.md
+    purpose: Advance or block the program explicitly.
+  - path: sessions/PF-001-product-falsification/session-handoff.md
+    purpose: Prepare RI-001 or another product iteration.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/10-product/product-foundation.md
+  - docs/50-validation/product-falsification-plan.md
+  - docs/90-state/program-state.md
+
+source_inputs: []
+
+decisions_in_scope:
+  - whether the problem supports a standalone public product
+  - whether Engineering Continuity is a coherent category hypothesis
+  - whether Commitment, Goal, and Guard survive conceptual stress
+  - whether the proposed feature families form one product
+  - initial adopter and adoption wedge
+  - role of Context Formation
+
+decisions_out_of_scope:
+  - bounded contexts
+  - code organization
+  - persistence technology
+  - detailed provider interfaces
+  - migration implementation
+  - final commercial name
+
+constraints:
+  - preserve current feature completeness as a requirement unless explicitly rejected by Decision Record
+  - treat product proposals as provisional
+  - do not advocate for the product
+  - compare against credible combinations of existing tools
+  - use current public evidence for competitor and category analysis
+  - distinguish fatal flaws from fixable risks
+
+open_questions:
+  - is the product a category or a bundle
+  - who adopts and maintains it
+  - what minimum product creates immediate value
+  - whether Context Formation is a product capability or implementation detail
+
+explicit_exclusions:
+  - raw prior chats
+  - target architecture design
+  - detailed Nestfolio source review
+  - final naming and trademark decisions
+
+required_methods:
+  - adversarial analysis
+  - current competitor and substitute research
+  - twelve required scenario stress tests
+  - strongest-case analysis for alternatives
+  - explicit kill criteria
+
+output_contract:
+  - distinguish observations, hypotheses, proposals, decisions, rejected alternatives, and open questions
+  - cite current public research
+  - state what evidence would kill the product
+  - do not force a positive conclusion
+  - update program state
+  - create session handoff
+  - list every changed file
+
+completion_criteria:
+  - all falsification questions addressed
+  - all required scenarios modeled
+  - central abstractions retained, revised, or rejected explicitly
+  - initial adopter and wedge identified or declared absent
+  - G1 pass or fail recorded

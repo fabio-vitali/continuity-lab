@@ -1,0 +1,104 @@
+iteration:
+  id: TA-001
+  type: target-architecture
+
+objective:
+  primary_question: >
+    What target bounded contexts, ownership boundaries, contracts, state model,
+    provider boundaries, and context-formation architecture realize the validated
+    product foundation while preserving all required feature families?
+
+deliverables:
+  - path: docs/30-target-architecture/target-architecture.md
+    purpose: Own the target system architecture.
+  - path: decisions/
+    purpose: Record high-impact architectural decisions.
+  - path: docs/90-state/program-state.md
+    purpose: Record G3 result and next iteration.
+  - path: sessions/TA-001-target-architecture/session-handoff.md
+    purpose: Prepare product-experience design.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/10-product/product-foundation.md
+  - docs/20-current-system/current-runtime-map.md
+  - docs/50-validation/product-falsification-report.md
+  - docs/90-state/program-state.md
+
+source_inputs:
+  - targeted Nestfolio runtime slices only when the current-runtime map is insufficient
+
+decisions_in_scope:
+  - bounded contexts
+  - kernel boundary
+  - entity and lifecycle ownership
+  - command and event contracts
+  - persistence authority
+  - provider contracts
+  - pack model
+  - context-formation subsystem
+  - dependency rules
+  - placement of planner, worker, orchestrator, journal, assurance, and learning
+
+decisions_out_of_scope:
+  - final CLI details
+  - visual design
+  - commercial packaging
+  - final naming
+  - detailed migration sequence
+  - implementation code
+
+constraints:
+  - preserve validated product constraints
+  - account for every required feature family
+  - do not optimize around one executor
+  - local-first operation
+  - resumability across context loss
+  - human authority for irreversible and governance-changing decisions
+  - explicit evidence for transitions
+  - no silent foundation revision
+
+open_questions:
+  - kernel entity set
+  - state authority
+  - provider granularity
+  - Goal/Guard schema relationship
+  - Lesson ownership
+  - Context Pack reproducibility and omission risk
+
+explicit_exclusions:
+  - raw historical chats
+  - market positioning work
+  - detailed product UX
+  - migration implementation
+  - unrelated Nestfolio application code
+
+required_methods:
+  - scenario-driven architecture
+  - data and lifecycle ownership analysis
+  - dependency-rule specification
+  - current-to-target mapping
+  - failure-mode analysis
+  - explicit trade-off records
+
+output_contract:
+  - distinguish observations, proposals, decisions, rejected alternatives, and open questions
+  - create Decision Records for high-impact choices
+  - show all major workflows
+  - map every current feature family
+  - update program state
+  - create session handoff
+  - list every changed file
+
+completion_criteria:
+  - all bounded contexts have responsibilities and owned state
+  - all transitions have owners
+  - allowed dependencies are explicit
+  - state authority and ledger role are explicit
+  - provider contracts are bounded
+  - Context Formation is designed end to end
+  - current-to-target map is complete
+  - unresolved trade-offs are explicit
+  - G3 pass or fail recorded

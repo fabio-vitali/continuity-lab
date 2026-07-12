@@ -1,0 +1,82 @@
+iteration:
+  id: RI-001
+  type: current-system-inventory
+
+objective:
+  primary_question: >
+    What does the current Nestfolio runtime actually implement, how do its
+    responsibilities and state flows work, and which invariants and feature
+    families are supported by repository evidence?
+
+deliverables:
+  - path: docs/20-current-system/current-runtime-map.md
+    purpose: Factual map of the current runtime.
+  - path: docs/90-state/program-state.md
+    purpose: Record G2 result and next iteration.
+  - path: sessions/RI-001-runtime-inventory/session-handoff.md
+    purpose: Prepare TA-001.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/10-product/product-foundation.md
+  - docs/50-validation/product-falsification-report.md
+  - docs/90-state/program-state.md
+  - sources/nestfolio-runtime.yaml
+
+source_inputs:
+  - nestfolio repository at the exact revision recorded in sources/nestfolio-runtime.yaml
+
+decisions_in_scope:
+  - none about the future architecture
+
+decisions_out_of_scope:
+  - target bounded contexts
+  - renaming current concepts
+  - future persistence
+  - public UX
+  - migration plan
+
+constraints:
+  - describe current behavior before evaluating it
+  - cite exact files and tests
+  - map every major feature family
+  - distinguish implemented, partial, documented-only, and absent
+  - record unknowns rather than infer unsupported behavior
+
+open_questions:
+  - actual ownership of state and lifecycle transitions
+  - coupling between engine, adapters, and content
+  - journal authority and resumability behavior
+  - current context-construction behavior
+
+explicit_exclusions:
+  - redesign proposals
+  - market analysis
+  - raw prior chats
+  - unrelated Nestfolio application code except required bindings
+
+required_methods:
+  - repository map
+  - dependency tracing
+  - workflow tracing
+  - test-to-feature mapping
+  - invariant extraction
+  - state ownership analysis
+
+output_contract:
+  - separate observations from interpretations
+  - cite repository paths precisely
+  - do not produce target architecture
+  - update program state
+  - create session handoff
+  - list every changed file
+
+completion_criteria:
+  - every feature family has status and evidence
+  - entry points and main workflows are traced
+  - data/state ownership is documented
+  - invariants and failure behavior are documented
+  - unknowns and contradictions are explicit
+  - G2 pass or fail recorded
