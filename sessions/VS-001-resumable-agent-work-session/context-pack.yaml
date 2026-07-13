@@ -1,0 +1,137 @@
+iteration:
+  id: VS-001
+  name: Resumable Agent Work Session
+  type: architecture-validation-slice
+  status: authorized-not-started
+
+objective:
+  primary_question: >
+    Can Continuity prove in Nestfolio that one or more selected Work Items can
+    form a coherent Working Set, execute through Claude Code, persist a
+    verified Checkpoint, end the session, resume in a new session without
+    manual reconstruction or duplicate effects, validate completion with
+    Evidence, update work state, and record a candidate Lesson without
+    promoting it automatically?
+
+canonical_design_repository:
+  name: continuity-lab
+  role: canonical for product, architecture, slice contract, decisions, state, and validation evidence
+
+implementation_repository:
+  name: Nestfolio
+  role: canonical for VS-001 implementation code, tests, project bindings, and dogfooding evidence
+  revision_rule: >
+    Record the exact full Git commit used as the VS-001 baseline before making
+    changes. Do not overwrite the RI-001 evidence binding; create a distinct
+    VS-001 implementation-baseline record if the revision differs.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - sessions/VS-001-resumable-agent-work-session/context-pack.yaml
+  - docs/10-product/product-foundation.md
+  - docs/30-target-architecture/target-architecture.md
+  - decisions/DR-0012-repository-native-agentic-development-framework.md
+  - decisions/DR-0013-bounded-agent-work-core.md
+  - decisions/DR-0014-repository-local-canonical-state.md
+  - decisions/DR-0015-concrete-integration-ports-and-claude-code-adapter.md
+  - decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md
+  - decisions/DR-0017-govern-assurance-and-learning-promotion.md
+  - decisions/DR-0018-validate-through-vs-001-before-broader-migration.md
+  - docs/20-current-system/current-runtime-map.md
+  - docs/90-state/program-state.md
+  - docs/90-state/artifact-index.md
+  - sessions/TA-002-target-architecture-revision/session-handoff.md
+
+required_repositories:
+  - latest accepted continuity-lab repository
+  - Nestfolio repository at the exact declared VS-001 baseline revision
+
+required_path:
+  - select one or more Work Items
+  - create one coherent Working Set
+  - declare Scope, exclusions, completion criteria, and required Evidence
+  - resolve exact Packs, Skills/Procedures, Guards, Decisions, and repository context
+  - create and start one Run through Claude Code
+  - record at least one material keyed effect
+  - persist and verify an intermediate Checkpoint
+  - end the first Claude Code Session
+  - resume the Run in a fresh Claude Code Session without old-chat reconstruction
+  - prove completed effects are not repeated
+  - validate completion and attach criterion-linked Evidence
+  - complete or return Work through revision-safe transitions
+  - record an Observation and candidate Lesson without automatic promotion
+
+minimum_components:
+  framework:
+    - Work Item and Working Set state
+    - Scope and completion criteria
+    - Context Pack and Formation Trace
+    - Run, Session, Checkpoint, Handoff, lease, and effect-key semantics
+    - Validation Plan, Validation Result, Evidence, and completion gate
+    - Decision, Observation, and candidate Lesson
+    - Pack lock and Procedure resolution
+  claude_code_adapter:
+    - work selection or confirmation command
+    - Run start/bootstrap command
+    - checkpoint command or verified hook path
+    - fresh-session resume command
+    - validation and completion command path
+    - structured result and Observation capture
+  nestfolio_binding:
+    - current backlog representation adapter
+    - repository/path rules required by selected work
+    - selected project Skills/Procedures and validators
+
+required_failure_cases:
+  - unexpected or simulated Claude Code Session termination
+  - stale repository or Context Pack at resume
+  - missing required Evidence
+  - failed validation
+  - conflicting second writer or Session
+  - missing or mismatched Skill asset
+  - unsafe candidate Lesson that remains rejected or unpromoted
+
+explicit_non_goals:
+  - broad runtime migration
+  - complete Epic orchestration
+  - parallel agent fan-out
+  - theme clustering, dossier reconciliation, or general finding intake
+  - universal issue tracker synchronization
+  - external write adapters
+  - multi-executor parity
+  - hosted service, RBAC, analytics, or universal Console
+  - automatic Lesson promotion or Guard minting
+  - final public API, schema, package, or path stability
+  - unrelated Nestfolio feature work
+
+required_outputs_continuity_lab:
+  - docs/70-implementation/vs-001-resumable-agent-work-session.md
+  - docs/90-state/program-state.md
+  - docs/90-state/artifact-index.md
+  - sessions/VS-001-resumable-agent-work-session/context-pack.yaml
+  - sessions/VS-001-resumable-agent-work-session/prompt.md
+  - sessions/VS-001-resumable-agent-work-session/session-handoff.md
+  - relevant Decision Records only if the slice exposes a structural decision
+  - exact changed-file list and repository ZIP
+
+required_outputs_nestfolio:
+  - minimum implementation code and tests for the authorized path
+  - repository-local canonical artifacts produced by the dogfood Run
+  - exact baseline and result Git revisions
+  - changed-file list and repository ZIP or patch according to session capability
+
+completion_decision:
+  required: true
+  values:
+    - PASS
+    - FAIL
+  pass_rule: every mandatory acceptance criterion has observable evidence
+  next_iteration_rule: authorize exactly one next iteration based on evidence
+
+blocked_until_completion:
+  - PX-001
+  - MA-001
+  - broader implementation
+  - later vertical slices

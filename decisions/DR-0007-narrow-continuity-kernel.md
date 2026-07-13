@@ -1,13 +1,19 @@
 ---
 artifact_id: DR-0007
-status: validated
+status: superseded
 owner: architecture
 last_updated: 2026-07-13
 supersedes: []
-superseded_by: null
+superseded_by: DR-0013
 ---
 
 # DR-0007 — Define a Narrow Continuity Kernel
+
+## TA-002 supersession note
+
+`DR-0013` supersedes this record as active architecture authority. The dependency-free boundary and rejection of adapter/vendor code are preserved. The exclusion of Work, Run, Guard, and Lesson semantics is superseded by DR-0013.
+
+The remainder is retained unchanged as TA-001 historical evidence.
 
 ## Context
 
@@ -36,7 +42,7 @@ Context Pack and Handoff remain separate aggregates owned by their respective bo
 
 ## Status
 
-Validated, not ratified.
+Superseded by `DR-0013`; retained as historical TA-001 evidence.
 
 ## Supporting evidence
 
@@ -92,4 +98,4 @@ None.
 
 ## Superseded by
 
-None.
+`DR-0013`.

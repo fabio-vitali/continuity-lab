@@ -9,6 +9,10 @@ superseded_by: null
 
 # DR-0011 — Make Context Formation an Explicit, Reproducible Pipeline
 
+## TA-002 retention note
+
+TA-002 retains this Decision. Context Formation remains an explicit, reproducible pipeline, but it now forms execution context for Work Items, Working Sets, Sessions, and Runs inside the larger operational loop. The pipeline is not the complete product boundary, and its earlier human-only and multi-adapter validation assumptions no longer govern VS-001.
+
 ## Context
 
 PF-001 retained Context Formation only if it can explain authority, selection, exclusions, uncertainty, pending decisions, and Evidence provenance better than generic retrieval or memory. RI-001 found no generic Context Pack formation or validation subsystem in the current runtime.

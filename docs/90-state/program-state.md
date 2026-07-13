@@ -11,217 +11,176 @@ superseded_by: null
 
 ## Current phase
 
-**PI-001 — Product Intent Realignment: complete on 2026-07-13.**
+**TA-002 — Target Architecture Revision: complete on 2026-07-13.**
 
-The Product Foundation has been materially revised through `DR-0012`.
+The revised Target Architecture is accepted and validated.
 
-Continuity is now defined as a repository-native framework for effective and continuous coding-agent work, with Claude Code as the first executor and Nestfolio as the first dogfooding environment.
-
-The active operational loop is:
+Continuity is architected as a repository-native, Claude Code-first framework for continuous agentic development. The complete operational loop is:
 
 ```text
 select work
 → form context
 → execute through skills and agents
+→ checkpoint or resume
 → validate
-→ record state and learning
+→ attach evidence
+→ update work state
+→ record learning
 → continue
 ```
 
-Context Packs and Handoffs remain important but are no longer the complete product definition.
-
-## Next iteration
-
-**TA-002 — Target Architecture Revision**
-
-This is the sole authorized next iteration.
-
-TA-002 must revise the target architecture against the corrected Product Foundation. It must not assume either automatic restoration of the current Nestfolio runtime or continued exclusion of repository-local backlog, orchestration, resumable Run state, Guards, Lessons, and learning.
-
-TA-002 must classify every current feature family as one of:
-
-- framework core;
-- Claude Code adapter;
-- reusable Pack capability;
-- Nestfolio-specific Pack or binding;
-- external integration;
-- deferred;
-- rejected.
-
-Migration planning, product-experience continuation, vertical-slice design, and implementation are blocked until TA-002 is complete and G3 is reassessed.
+Context Packs and Handoffs remain first-class capabilities inside the loop. Work Items, Working Sets, Sessions, Runs, Checkpoints, Guards, Evidence, Decisions, and Lessons now have explicit product homes and authority boundaries.
 
 ## Gate history and current validity
 
 | Gate | Current result | Date | Owning evidence |
 |---|---|---|---|
 | G0 — Bootstrap | passed; valid | 2026-07-12 | governance artifacts, repository state, DR-0001 to DR-0003 |
-| G1 — Product survivability | interpretation revised; falsification evidence retained | 2026-07-13 | PF-001 report plus PI-001 correction and DR-0012 |
-| G2 — Current-system evidence | passed; valid | 2026-07-13 | `current-runtime-map.md`, exact Nestfolio revision binding |
-| G3 — Target architecture coherence | reopened | 2026-07-13 | TA-001 provisional; Product Foundation changed |
-| G4 — Product experience viability | blocked | — | requires revised G3 baseline |
-| G5 — Migration viability | blocked | — | requires revised G3 and later G4 authorization |
-| G6 — Implementation validation | blocked | — | requires approved architecture, migration, and vertical slice |
+| G1 — Product survivability | passed under PI-001-corrected interpretation; valid | 2026-07-13 | PF-001 evidence, revised Product Foundation, DR-0012 |
+| G2 — Current-system evidence | passed; valid | 2026-07-13 | validated `current-runtime-map.md`, exact Nestfolio revision binding |
+| G3 — Target architecture coherence | **passed; valid** | 2026-07-13 | revised `target-architecture.md`, DR-0013 to DR-0018, TA-002 handoff |
+| G4 — Product experience viability | blocked | — | not authorized; targeted experience may be learned inside VS-001 |
+| G5 — Migration viability | blocked | — | broader migration is not authorized |
+| G6 — Implementation validation | blocked | — | VS-001 is the authorized bounded validation slice; it does not itself pre-pass G6 |
 
-## G1 interpretation revision
+## G3 result
 
-PF-001 remains complete and valid as falsification evidence against:
+**G3 PASS.**
 
-- an established Engineering Continuity market category;
-- a universal commercial control plane;
-- mandatory ownership of enterprise systems of record;
-- preserve-all-features as a product requirement;
-- universal integration as an adoption requirement.
+The architecture is coherent with the corrected Product Foundation, sufficiently concrete for VS-001, compatible with the Current Runtime Map, explicit about canonical state and recovery, and free from unnecessary commercial-control-plane or universal-integration assumptions.
 
-The prior G1 interpretation is revised because it incorrectly treated the surviving Context Pack/Handoff wedge as the complete product definition and introduced constraints inconsistent with the actual stakeholder intent.
+No unresolved structural ambiguity requires another architecture iteration before the first validation slice.
 
-G1 is not rerun in PI-001. Its evidence is reclassified and its product conclusion is corrected through `DR-0012` and the revised Product Foundation.
+## Accepted target architecture
 
-## G2 validity
+### Framework Core
 
-RI-001 and G2 remain fully valid.
+Portable domain semantics and lifecycle rules for:
 
-The Current Runtime Map is factual evidence about the Nestfolio runtime and already separates observations from target-design decisions. Its feature inventory is required input to TA-002.
+- Work Items, Working Sets, Epics, selection, dependencies, and completion;
+- Scope, exclusions, constraints, and completion criteria;
+- Sessions, Runs, Checkpoints, pause, resume, retry, cancellation, failure, and stale state;
+- Context Packs, Formation Traces, and Handoffs;
+- Skills and Procedure references;
+- Guards, validation, Evidence, waivers, and completion gates;
+- Decisions, Observations, Lessons, and governed promotion proposals.
 
-The evidence remains bound to:
+### Claude Code Adapter
 
-- Nestfolio revision `3aa8f4773955541415f615abd80a0a9702bcb416`;
-- uploaded archive `nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip`;
-- archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`.
+First executor integration using native commands, skills, hooks, subagents, permissions, session bootstrap, context delivery, result capture, interruption handling, and resume behavior.
 
-## G3 and TA-001 status
+Claude Code-native formats do not become Framework Core semantics.
 
-G3 is reopened because the L1/L2 Product Foundation changed materially.
+### Skills and Packs
 
-TA-001 is provisional historical architecture:
+Reusable and project-specific Packs may contain canonical Procedure specifications and adapter-specific executable assets. Composition is explicit, versioned, digest-locked, capability-declared, and unable to redefine Core lifecycle or authority.
 
-- it was internally coherent for the narrow Context Pack/Handoff interpretation;
-- it was derived from a superseded product boundary;
-- it is not authorized as an implementation or migration baseline;
-- it must be revised through TA-002.
+### Nestfolio boundary
 
-Architecture Decision Records DR-0007 through DR-0011 remain historical validated TA-001 decisions and useful proposals. Their applicability to the active target is provisional pending TA-002. They may be retained, revised, superseded, or reclassified only through explicit TA-002 decisions.
+Nestfolio is the reference implementation and first dogfooding environment. Its backlog format, lanes, repository rules, deployment procedures, project Guards, and local skills may remain in a Nestfolio Pack or binding.
 
-## Current product direction
+### State authority
 
-### Primary user
+- versioned repository artifacts are authoritative for collaborative durable state;
+- a declared repository-local operational store is authoritative for active Run and Checkpoint state;
+- hidden Claude Code memory or chat is never authoritative;
+- external systems remain authoritative for their own objects;
+- derived indexes, caches, projections, and optional event streams are rebuildable.
 
-A developer, technical lead, architect, or small team using coding agents for sustained work in a medium-to-complex repository.
+## TA-001 disposition
 
-### Primary executor
+TA-001 remains historical architecture evidence.
 
-Claude Code.
+- its Context Formation and Handoff concepts are retained;
+- its dependency direction, typed references, local-first authority, explicit Pack locking, and reproducible context formation are preserved where compatible;
+- its Context Pack/Handoff-only boundary, public-Run exclusion, externalized backlog/orchestration, no learning, human-only requirement, and equal-priority executor-neutrality assumptions are rejected or revised;
+- its complete disposition is recorded in the TA-002 salvage matrix.
 
-Claude Code-first permits direct use of native skills, hooks, commands, subagents, permissions, and session behavior. Canonical product state should remain repository-readable where practical, but executor portability is not prioritized over current value.
+Decision Record status:
 
-### Product premise
+- `DR-0007` superseded by `DR-0013`;
+- `DR-0008` superseded by `DR-0014`;
+- `DR-0009` superseded by `DR-0015`;
+- `DR-0010` superseded by `DR-0016`;
+- `DR-0011` retained and integrated into the complete operational loop.
 
-Coding-agent use is required. Human operators remain responsible for direction, review, and decisions, but Continuity is not required to prove a separate agentless product.
+## Active architecture decisions
 
-### Product-owned repository-local state
+- `DR-0013` — bounded agent-work Core with first-class Runs;
+- `DR-0014` — repository-local canonical artifacts and declared operational state;
+- `DR-0015` — concrete typed integration ports and first-class Claude Code adapter;
+- `DR-0016` — Pack manifests, canonical procedures, and executor assets;
+- `DR-0017` — explicit Assurance and Learning promotion governance;
+- `DR-0018` — validate through VS-001 before broader migration.
 
-Continuity may own the local state needed to operate coding-agent work, including:
+Product decisions that remain active:
 
-- Work Items and local backlog;
-- Working Sets and Epics;
-- Sessions and resumable Runs;
-- scope, exclusions, constraints, and completion criteria;
-- Context Packs and Handoffs;
-- skills and executable procedures;
-- Decisions and pending human input;
-- Evidence and validation state;
-- Guards, Lessons, and reviewed learning;
-- recovery journals and projections.
+- `DR-0004` — no established Engineering Continuity market-category claim;
+- `DR-0005` — Goal and Guard remain separate; no shared Commitment entity;
+- `DR-0012` — repository-native agentic-development framework.
 
-### External authority boundary
+## Sole authorized next iteration
 
-Continuity must not replace enterprise systems of record by default. External issues, Git, PRs, CI, deployments, security systems, incident systems, catalogs, and organization policy remain authoritative for their own objects.
+**VS-001 — Resumable Agent Work Session**
 
-A local Continuity item may reference or derive from an external object while remaining authoritative for local agent execution.
+Primary objective:
 
-### Framework structure to be designed by TA-002
+> Prove in Nestfolio that one or more selected Work Items can form a bounded Working Set, execute through Claude Code, persist a verified Checkpoint, end the session, resume in a new session without manual reconstruction or duplicate effects, validate completion with Evidence, update work state, and record a non-promoted candidate Lesson.
 
-- stable framework core;
-- Claude Code adapter first;
-- reusable Packs;
-- Nestfolio-specific Pack or binding;
-- selective external integrations.
+VS-001 is an architecture-validation slice, not broad migration.
 
-## Active product decisions
+Use:
 
-- `DR-0004` — no established Engineering Continuity market-category claim.
-- `DR-0005` — Goal and Guard remain separate; no shared Commitment entity.
-- `DR-0012` — Continuity is a repository-native agentic-development framework.
+- `sessions/VS-001-resumable-agent-work-session/context-pack.yaml`;
+- `sessions/VS-001-resumable-agent-work-session/prompt.md`;
+- `sessions/TA-002-target-architecture-revision/session-handoff.md`;
+- the latest complete `continuity-lab` repository;
+- the Nestfolio repository only as implementation and dogfooding target at the revision selected by VS-001.
 
-`DR-0006` is superseded by DR-0012 as the active product-boundary authority.
+## VS-001 constraints
 
-## TA-001 architecture decision applicability
+VS-001 may implement only the minimum path defined in the Target Architecture.
 
-The following records are not implementation authority until TA-002 completes:
+It must not:
 
-- `DR-0007` — narrow Continuity Kernel;
-- `DR-0008` — repository artifact authority and secondary journal/ledger;
-- `DR-0009` — typed read-oriented providers;
-- `DR-0010` — Pack Definitions separate from Context Packs;
-- `DR-0011` — explicit Context Formation pipeline.
+- start broad migration of the current Nestfolio runtime;
+- implement every current feature family;
+- implement universal backlog synchronization or external writes;
+- implement multi-executor parity;
+- implement hosted collaboration, RBAC, analytics, or a universal Console;
+- implement automatic Guard minting or Lesson promotion;
+- authorize later work without evaluating slice evidence.
 
-TA-002 must evaluate them against the corrected product direction rather than automatically retaining or rejecting them.
+The VS-001 handoff must authorize exactly one next iteration based on evidence.
 
 ## Iteration queue
 
 1. PF-001 — Product Falsification — **complete; evidence retained; interpretation revised by PI-001**
 2. RI-001 — Current Runtime Inventory — **complete; G2 valid**
-3. TA-001 — Target Architecture — **complete historically; provisional; not an implementation baseline**
+3. TA-001 — Target Architecture — **complete historically; superseded as active baseline by TA-002**
 4. PI-001 — Product Intent Realignment — **complete**
-5. TA-002 — Target Architecture Revision — **sole authorized next iteration**
-6. PX-001 — Product Experience — **blocked; previous prepared iteration superseded**
-7. MA-001 — Migration Architecture — **blocked**
-8. VS-001 — First Vertical Slice — **blocked**
-9. Implementation — **blocked**
+5. TA-002 — Target Architecture Revision — **complete; G3 passed**
+6. VS-001 — Resumable Agent Work Session — **sole authorized next iteration**
+7. PX-001 — Product Experience — **blocked**
+8. MA-001 — Migration Architecture — **blocked**
+9. broader implementation — **blocked**
 
-## Active constraints and blockers
+## Active blockers
 
-- Do not start implementation or migration planning before TA-002 completes and G3 is reassessed.
-- Do not continue PX-001 against TA-001.
-- Do not design a commercial universal control plane.
-- Do not require usefulness without coding agents.
-- Do not require universal backlog or engineering-platform integrations.
-- Do not prioritize theoretical executor portability over Claude Code-first practical value.
-- Do not automatically promote every Nestfolio feature into framework core.
-- Do not automatically discard existing Nestfolio capabilities because TA-001 externalized them.
-- Keep Goal and Guard separate.
-- Keep external systems authoritative for their own objects.
-- Preserve repository-readable durable state and explicit human authority for judgment-based decisions.
-- Treat Context Packs and Handoffs as capabilities within the full operational loop.
+- No work beyond VS-001 is authorized.
+- No migration plan may assume direct reuse of current Nestfolio modules.
+- No project-specific behavior may enter Framework Core without evidence and a Decision.
+- No completed Work claim may bypass required Evidence or an explicit waiver.
+- No Lesson or Observation may become a canonical Skill, validator, Guard, or Pack rule automatically.
+- No hidden executor state may substitute for Run, Checkpoint, Context Pack, Decision, or Handoff state.
+- No generic integration or extension point may be introduced without a concrete slice need.
 
-## Required inputs for TA-002
+## G2 evidence binding
 
-Read in this order:
+RI-001 evidence remains bound to:
 
-1. `docs/00-governance/product-development-operating-model.md`
-2. `docs/00-governance/artifact-governance.md`
-3. `docs/00-governance/design-levels.md`
-4. `sessions/TA-002-target-architecture-revision/context-pack.yaml`
-5. `sessions/PI-001-product-intent-realignment/session-handoff.md`
-6. `docs/10-product/product-foundation.md`
-7. `decisions/DR-0012-repository-native-agentic-development-framework.md`
-8. `docs/50-validation/product-falsification-report.md`
-9. `docs/20-current-system/current-runtime-map.md`
-10. `docs/30-target-architecture/target-architecture.md`
-11. `decisions/DR-0004-do-not-establish-engineering-continuity-category.md`
-12. `decisions/DR-0005-separate-goal-and-guard.md`
-13. `decisions/DR-0006-narrow-product-boundary.md`
-14. `decisions/DR-0007-narrow-continuity-kernel.md`
-15. `decisions/DR-0008-local-first-artifact-authority.md`
-16. `decisions/DR-0009-typed-read-oriented-providers.md`
-17. `decisions/DR-0010-separate-pack-definitions-from-context-packs.md`
-18. `decisions/DR-0011-explicit-context-formation-pipeline.md`
-19. `docs/90-state/program-state.md`
-20. `docs/90-state/artifact-index.md`
+- Nestfolio revision `3aa8f4773955541415f615abd80a0a9702bcb416`;
+- uploaded archive `nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip`;
+- archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`.
 
-Use the Current Runtime Map as canonical implementation evidence. Inspect the Nestfolio source only if a specific classification cannot be resolved from the map.
-
-## TA-002 completion requirement
-
-TA-002 must produce a coherent architecture for the complete operational loop, classify every current feature family, define authority and dependency boundaries, and explicitly decide the disposition of TA-001 architecture decisions.
-
-No migration or implementation authorization may be granted unless G3 passes again.
+A later VS-001 implementation revision must be recorded separately and does not alter the identity of the validated Current Runtime Map.

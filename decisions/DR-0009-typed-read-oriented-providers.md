@@ -1,13 +1,19 @@
 ---
 artifact_id: DR-0009
-status: validated
+status: superseded
 owner: architecture
 last_updated: 2026-07-13
 supersedes: []
-superseded_by: null
+superseded_by: DR-0015
 ---
 
 # DR-0009 — Use Typed, Read-Oriented Provider Contracts
+
+## TA-002 supersession note
+
+`DR-0015` supersedes this record as active architecture authority. Typed authority-specific ports and rejection of generic arbitrary execution are preserved. Universal read-only integration and executor-export-only behavior are superseded by DR-0015.
+
+The remainder is retained unchanged as TA-001 historical evidence.
 
 ## Context
 
@@ -36,7 +42,7 @@ Resolved content is treated as untrusted data. It cannot change provider permiss
 
 ## Status
 
-Validated, not ratified.
+Superseded by `DR-0015`; retained as historical TA-001 evidence.
 
 ## Supporting evidence
 
@@ -89,4 +95,4 @@ None.
 
 ## Superseded by
 
-None.
+`DR-0015`.

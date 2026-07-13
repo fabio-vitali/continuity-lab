@@ -1,13 +1,19 @@
 ---
 artifact_id: DR-0010
-status: validated
+status: superseded
 owner: architecture
 last_updated: 2026-07-13
 supersedes: []
-superseded_by: null
+superseded_by: DR-0016
 ---
 
 # DR-0010 — Separate Pack Definitions from Context Packs
+
+## TA-002 supersession note
+
+`DR-0016` supersedes this record as active architecture authority. The separation of reusable Packs from concrete Context Packs and explicit digest-locked composition are preserved. The restriction to declarative non-executable Pack content is superseded by DR-0016.
+
+The remainder is retained unchanged as TA-001 historical evidence.
 
 ## Context
 
@@ -33,7 +39,7 @@ Executable integrations are separately installed providers with declared capabil
 
 ## Status
 
-Validated, not ratified.
+Superseded by `DR-0016`; retained as historical TA-001 evidence.
 
 ## Supporting evidence
 
@@ -86,4 +92,4 @@ None.
 
 ## Superseded by
 
-None.
+`DR-0016`.

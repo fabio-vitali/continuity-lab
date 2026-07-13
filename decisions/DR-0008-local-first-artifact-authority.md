@@ -1,13 +1,19 @@
 ---
 artifact_id: DR-0008
-status: validated
+status: superseded
 owner: architecture
 last_updated: 2026-07-13
 supersedes: []
-superseded_by: null
+superseded_by: DR-0014
 ---
 
 # DR-0008 — Make Repository Artifacts Authoritative and Keep Ledger State Secondary
+
+## TA-002 supersession note
+
+`DR-0014` supersedes this record as active architecture authority. Repository-readable durable authority and rejection of event-sourced primary state are preserved. The treatment of operational state as always secondary is superseded for first-class Runs and Checkpoints by DR-0014.
+
+The remainder is retained unchanged as TA-001 historical evidence.
 
 ## Context
 
@@ -31,7 +37,7 @@ A pending human decision must be present in the product artifact before an opera
 
 ## Status
 
-Validated, not ratified.
+Superseded by `DR-0014`; retained as historical TA-001 evidence.
 
 ## Supporting evidence
 
@@ -84,4 +90,4 @@ None.
 
 ## Superseded by
 
-None.
+`DR-0014`.

@@ -1,101 +1,66 @@
 # TA-002 — Target Architecture Revision
 
-You are running iteration **TA-002 — Target Architecture Revision** for the Continuity product-design program.
+Run **TA-002 — Target Architecture Revision** using the uploaded `continuity-lab` repository as the only canonical project memory. Do not rely on previous chats.
 
-Use the uploaded `continuity-lab` repository as the only canonical project memory. Do not rely on previous chats.
+TA-001 is provisional architecture derived from a superseded product interpretation. Recover everything compatible with the corrected Product Foundation, explicitly revise incompatible parts, and preserve rejected material as historical evidence.
 
-TA-002 is authorized only because PI-001 corrected the Product Foundation, marked TA-001 provisional, and reopened G3.
-
-Do not treat TA-001 as an implementation baseline. Treat it as a historical architectural proposal whose decisions must be explicitly retained, revised, or superseded.
-
-Read, in this order:
+Read, in order:
 
 1. `docs/00-governance/product-development-operating-model.md`
 2. `docs/00-governance/artifact-governance.md`
 3. `docs/00-governance/design-levels.md`
-4. `sessions/TA-002-target-architecture-revision/context-pack.yaml`
-5. `sessions/PI-001-product-intent-realignment/session-handoff.md`
-6. `docs/10-product/product-foundation.md`
-7. `decisions/DR-0012-repository-native-agentic-development-framework.md`
-8. `docs/50-validation/product-falsification-report.md`
-9. `docs/20-current-system/current-runtime-map.md`
-10. `docs/30-target-architecture/target-architecture.md`
-11. `decisions/DR-0004-do-not-establish-engineering-continuity-category.md`
-12. `decisions/DR-0005-separate-goal-and-guard.md`
-13. `decisions/DR-0006-narrow-product-boundary.md`
-14. `decisions/DR-0007-narrow-continuity-kernel.md`
-15. `decisions/DR-0008-local-first-artifact-authority.md`
-16. `decisions/DR-0009-typed-read-oriented-providers.md`
-17. `decisions/DR-0010-separate-pack-definitions-from-context-packs.md`
-18. `decisions/DR-0011-explicit-context-formation-pipeline.md`
-19. `docs/90-state/program-state.md`
-20. `docs/90-state/artifact-index.md`
+4. `sessions/PI-001-product-intent-realignment/context-pack.yaml`
+5. `docs/10-product/product-foundation.md`
+6. `docs/50-validation/product-falsification-report.md`
+7. `docs/20-current-system/current-runtime-map.md`
+8. `docs/30-target-architecture/target-architecture.md`
+9. all `decisions/DR-*.md`
+10. `docs/90-state/program-state.md`
+11. `docs/90-state/artifact-index.md`
+12. `sessions/PI-001-product-intent-realignment/session-handoff.md`
+13. the complete TA-001 session directory and handoff
 
-Use the validated Current Runtime Map as canonical current-implementation evidence. Request or inspect the Nestfolio repository only if a specific feature-family classification cannot be resolved from that map.
+Before modifying architecture, verify that Program State records PI-001 complete, RI-001/G2 valid, TA-001 provisional, G3 reopened, and TA-002 as the sole next iteration. Stop on inconsistency.
 
-Primary question:
+Product premise:
 
-> What target architecture supports Continuity as a Claude Code-first, repository-native agentic-development framework across work selection, context formation, skill execution, validation, resumable Runs, durable state, Guards, learning, and continuation without becoming a universal enterprise control plane?
+- Continuity is a practical repository-native framework for coding agents on medium-to-complex repositories.
+- Claude Code is the first and primary executor.
+- Nestfolio is the first dogfooding environment.
+- The operational loop is:
 
-The architecture must support:
+```text
+select work → form context → execute through skills and agents → checkpoint or resume → validate → attach evidence → update work state → record learning → continue
+```
 
-`select work → form context → execute through skills and agents → validate → record state and learning → continue`
+Produce:
 
-Determine explicitly:
+1. an explicit TA-001 salvage matrix using only `retain`, `revise`, `move to framework core`, `move to Claude Code adapter`, `move to reusable pack`, `move to Nestfolio pack`, `defer`, or `reject`;
+2. a classification of every Current Runtime Map feature family as framework, Claude Code adapter, reusable Pack, Nestfolio-specific, implementation detail to replace, deferred, or rejected;
+3. explicit boundaries for Framework Core, Claude Code Adapter, Skills/Procedures, Packs/project bindings, repository-local Work, Context Formation, Execution Continuity, Assurance, and Learning;
+4. allowed dependency direction between Core, application services, repository infrastructure, adapters, Packs, Nestfolio, and external systems;
+5. canonical ownership, storage, mutability, lifecycle, versioning, references, concurrency, recovery, and audit for Work Item, Working Set, Scope, Run, Checkpoint, Context Pack, Handoff, Skill reference, Guard, Evidence, Decision, and Lesson;
+6. ten concrete end-to-end operational workflows;
+7. explicit failure and recovery semantics;
+8. a complete definition, but no implementation, of `VS-001 — Resumable Agent Work Session`;
+9. an unconditional G3 PASS or FAIL.
 
-- target bounded contexts and their responsibilities;
-- framework-core boundaries;
-- Claude Code adapter responsibilities and permitted native coupling;
-- reusable Pack and Nestfolio-specific Pack/binding boundaries;
-- ownership and lifecycle of Work Items, local backlog state, Working Sets, Epics, Sessions, and Runs;
-- scope, exclusions, constraints, completion criteria, and evidence-bound completion;
-- the architecture of Skills and executable procedures;
-- the role of Context Packs and Handoffs inside the complete operational loop;
-- the role and authority of Guards, Evidence, Decisions, Lessons, and learning;
-- durable canonical state versus operational journal, recovery, idempotency, and projections;
-- selective external integration contracts and authority boundaries;
-- dependency directions, failure handling, and recovery behavior;
-- the target disposition of every current runtime feature family;
-- the explicit disposition of DR-0007 through DR-0011.
+Preserve Goal/Guard separation, external authority for external objects, repository-readable durable state, human authority for judgment and governance changes, and practical Claude Code-first value.
 
-Preserve:
-
-- no established Engineering Continuity market-category claim;
-- no commercial universal control plane;
-- no replacement of enterprise systems of record by default;
-- Goal and Guard separation;
-- concrete-use-driven external integrations;
-- Claude Code-first practical value;
-- repository-readable durable state where practical;
-- human authority for judgment-based and governance-changing decisions;
-- Nestfolio as reference implementation and first dogfooding environment.
-
-Do not:
-
-- design implementation code or package-level implementation plans;
-- design migration sequencing;
-- design product experience;
-- require usefulness without coding agents;
-- require universal backlog synchronization;
-- prioritize theoretical executor parity over Claude Code-first value;
-- automatically restore every current Nestfolio feature;
-- automatically preserve every TA-001 decision;
-- silently promote proposals into decisions;
-- start a later iteration.
+Do not design a commercial control plane, universal integrations, agentless utility, broad migration, implementation code, or automatic learning-to-rule promotion.
 
 Create or update:
 
-- `docs/30-target-architecture/target-architecture.md`;
-- relevant `decisions/DR-*.md`;
-- `docs/90-state/program-state.md`;
-- `docs/90-state/artifact-index.md`;
-- `sessions/TA-002-target-architecture-revision/session-handoff.md`.
+- `docs/30-target-architecture/target-architecture.md`
+- relevant `decisions/DR-*.md`
+- `docs/90-state/program-state.md`
+- `docs/90-state/artifact-index.md`
+- `sessions/TA-002-target-architecture-revision/context-pack.yaml`
+- `sessions/TA-002-target-architecture-revision/prompt.md`
+- `sessions/TA-002-target-architecture-revision/session-handoff.md`
 
-At completion:
+Prefer new superseding Decision Records to destructive edits of TA-001 history.
 
-- classify every current feature family;
-- explicitly retain, revise, or supersede DR-0007 through DR-0011;
-- record an explicit G3 pass or fail;
-- authorize exactly one next iteration only if justified;
-- keep migration and implementation blocked unless G3 passes;
-- return a ZIP containing the complete updated repository and list every changed file.
+If G3 passes, mark TA-002 complete, accept the revised architecture, pass G3, authorize exactly `VS-001 — Resumable Agent Work Session`, and keep broader migration and unrelated implementation blocked.
+
+Return a ZIP of the complete updated repository and list every changed or created file.

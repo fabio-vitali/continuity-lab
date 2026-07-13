@@ -9,10 +9,8 @@ superseded_by: null
 
 # Product Experience
 
-PX-001 is blocked.
+PX-001 remains blocked.
 
-The prepared PX-001 materials were based on TA-001, which is now provisional after PI-001 corrected the Product Foundation and reopened G3.
+TA-002 passed G3 and authorized **VS-001 — Resumable Agent Work Session** as the sole next iteration. The slice will produce concrete evidence about Claude Code session bootstrap, checkpointing, resume, validation, and failure visibility.
 
-Do not run PX-001.
-
-Product-experience design may resume only after **TA-002 — Target Architecture Revision** completes, G3 is reassessed, and Program State explicitly authorizes the next iteration.
+Do not resume the superseded prepared PX-001 session. A future product-experience iteration requires explicit Program State authorization after VS-001 evidence is evaluated.

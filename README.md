@@ -9,9 +9,7 @@ superseded_by: null
 
 # Continuity Lab
 
-This repository is the canonical design and development workspace for the product currently known as **Continuity**.
-
-It is deliberately separate from Nestfolio.
+This repository is the canonical design and development workspace for the product currently known as **Continuity**. It is deliberately separate from Nestfolio.
 
 ## Repository responsibilities
 
@@ -19,28 +17,24 @@ It is deliberately separate from Nestfolio.
 
 Canonical for:
 
-- development operating model;
+- development governance;
 - product thesis and conceptual model;
-- design decisions;
-- current-system analysis;
-- target architecture;
-- product experience;
-- falsification and validation;
-- migration strategy;
-- implementation-slice specifications;
-- program state and session handoffs.
+- architecture and Decision Records;
+- current-system evidence;
+- validation-slice contracts and results;
+- product experience and migration decisions when authorized;
+- Program State and session handoffs.
 
 ### `nestfolio`
 
 Canonical for:
 
-- the current runtime implementation;
-- current tests;
+- the current runtime implementation and tests;
 - project-specific bindings;
-- evidence about what exists today;
-- first practical dogfooding of Continuity.
+- VS-001 implementation and dogfooding evidence;
+- practical proof of Continuity in a medium-to-complex repository.
 
-Nestfolio is the reference implementation and proving ground. Project-specific behavior may remain in a Nestfolio Pack or binding instead of entering framework core.
+Nestfolio-specific backlog conventions, repository rules, deployment procedures, Guards, Skills, and Lessons may remain in a Nestfolio Pack or binding.
 
 ## Current product direction
 
@@ -48,59 +42,66 @@ Continuity is a repository-native framework for sustained coding-agent work.
 
 Primary executor: **Claude Code**.
 
-Operational loop:
-
 ```text
 select work
 → form context
 → execute through skills and agents
+→ checkpoint or resume
 → validate
-→ record state and learning
+→ attach evidence
+→ update work state
+→ record learning
 → continue
 ```
-
-Context Packs and Handoffs are important capabilities inside this loop, not the complete product.
 
 ## Current program position
 
 Completed:
 
-1. **PF-001 — Product Falsification** — evidence retained; narrow interpretation later revised.
+1. **PF-001 — Product Falsification** — evidence retained; interpretation revised by PI-001.
 2. **RI-001 — Current Runtime Inventory** — G2 passed and remains valid.
-3. **TA-001 — Target Architecture** — completed historically; now provisional.
-4. **PI-001 — Product Intent Realignment** — product direction corrected; G3 reopened.
+3. **TA-001 — Target Architecture** — historical and superseded as the active baseline.
+4. **PI-001 — Product Intent Realignment** — corrected the product direction.
+5. **TA-002 — Target Architecture Revision** — completed; **G3 passed**; revised architecture accepted.
 
 Sole authorized next iteration:
 
-5. **TA-002 — Target Architecture Revision**
+6. **VS-001 — Resumable Agent Work Session**
 
-PX-001, migration, and implementation are blocked.
+PX-001, migration architecture, broader implementation, and unrelated Nestfolio work remain blocked.
 
-See `docs/90-state/program-state.md` for the canonical current state.
+See `docs/90-state/program-state.md` for canonical state.
+
+## Accepted architecture boundaries
+
+- Framework Core owns portable Work, Run, Checkpoint, Context, Assurance, Decision, and Learning semantics.
+- Application Services coordinate use cases through declared ports.
+- Repository Infrastructure owns artifacts, operational state, Git inspection, leases, and recovery.
+- The Claude Code Adapter owns native commands, skills, hooks, subagents, session bootstrap, and result capture.
+- Packs contain reusable procedures and adapter assets without redefining Core semantics.
+- Nestfolio behavior remains project-specific unless evidence justifies promotion.
 
 ## Before every AI session
 
-1. Pull the latest `continuity-lab`.
-2. Export or ZIP the repository.
-3. Upload only the inputs listed in that session's Context Pack or handoff.
+1. Pull the latest canonical repositories.
+2. Export or ZIP only the repositories required by the session.
+3. Upload the exact inputs listed in the session Context Pack.
 4. Paste the corresponding prompt unchanged.
 5. Do not paste earlier chat transcripts.
-6. At the end, download the produced files.
-7. Review the Git diff.
-8. Commit the iteration output only after confirming status and gate changes.
+6. Review every returned diff.
+7. Commit only after confirming artifact status, gate changes, and the sole next iteration.
 
 ## Next session
 
-Run **TA-002 — Target Architecture Revision** in a fresh conversation.
+Run **VS-001 — Resumable Agent Work Session** in a fresh conversation.
 
 Use:
 
-- `sessions/TA-002-target-architecture-revision/context-pack.yaml`;
-- `sessions/TA-002-target-architecture-revision/prompt.md`;
-- `sessions/PI-001-product-intent-realignment/session-handoff.md`;
-- the latest complete repository ZIP.
-
-Do not run the prepared PX-001 session. Do not start migration or implementation.
+- `sessions/VS-001-resumable-agent-work-session/context-pack.yaml`;
+- `sessions/VS-001-resumable-agent-work-session/prompt.md`;
+- `sessions/TA-002-target-architecture-revision/session-handoff.md`;
+- the latest complete `continuity-lab` repository;
+- the Nestfolio repository at the exact implementation baseline declared by VS-001.
 
 ## Canonical starting points
 
@@ -109,8 +110,9 @@ Do not run the prepared PX-001 session. Do not start migration or implementation
 - Design levels: `docs/00-governance/design-levels.md`
 - Product foundation: `docs/10-product/product-foundation.md`
 - Current runtime evidence: `docs/20-current-system/current-runtime-map.md`
-- Provisional TA-001 architecture: `docs/30-target-architecture/target-architecture.md`
+- Accepted target architecture: `docs/30-target-architecture/target-architecture.md`
 - Active product decision: `decisions/DR-0012-repository-native-agentic-development-framework.md`
+- Active architecture decisions: `decisions/DR-0013-*.md` through `decisions/DR-0018-*.md`
 - Program state: `docs/90-state/program-state.md`
 - Artifact index: `docs/90-state/artifact-index.md`
 
@@ -118,9 +120,4 @@ Do not run the prepared PX-001 session. Do not start migration or implementation
 
 A chat answer is not project memory.
 
-A result becomes project memory only after it is:
-
-1. classified;
-2. written to the correct artifact;
-3. reviewed through a diff;
-4. committed to this repository.
+A result becomes project memory only after it is classified, written to the correct artifact, reviewed through a diff, and committed.
