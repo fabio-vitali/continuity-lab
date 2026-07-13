@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository entry point; records TA-002 completion, G3 PASS, and VS-001 authorization |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, and VS-001 startup instructions |
+| `README.md` | Ratified | Program | Repository entry point; records VS-001 FAIL and VS-001A-only authorization |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact VS-001 review and VS-001A startup instructions |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Program | Governs iterations and phase gates |
 | `docs/00-governance/artifact-governance.md` | Ratified | Program | Governs canonical files and changes |
 | `docs/00-governance/design-levels.md` | Ratified | Program | Separates levels of design |
@@ -21,12 +21,13 @@ superseded_by: null
 | `docs/20-current-system/current-runtime-map.md` | Validated | Current-system analysis | Maps exact Nestfolio runtime revision; remains valid G2 evidence |
 | `docs/30-target-architecture/README.md` | Ratified | Architecture | Identifies TA-002 architecture as active G3 baseline |
 | `docs/30-target-architecture/target-architecture.md` | Validated | Architecture | Accepted TA-002 architecture, salvage matrix, current-feature classification, state/workflow/recovery model, and VS-001 definition |
-| `docs/40-product-experience/README.md` | Ratified | Product experience | Records PX-001 as blocked pending VS-001 evidence and explicit authorization |
+| `docs/40-product-experience/README.md` | Ratified | Product experience | Records PX-001 as blocked pending VS-001A evidence and explicit authorization |
 | `docs/50-validation/product-falsification-plan.md` | Ratified | Validation | Governs PF-001 |
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Preserves PF-001 evidence and PI-001 correction |
-| `docs/60-migration/README.md` | Ratified | Migration | Records migration as blocked until after VS-001 evidence and later authorization |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Records VS-001 as the sole bounded implementation/validation slice |
-| `docs/90-state/program-state.md` | Ratified | Program | Records TA-002 completion, G3 PASS, active decisions, and VS-001-only authorization |
+| `docs/60-migration/README.md` | Ratified | Migration | Records migration as blocked until after VS-001A evidence and later authorization |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Records VS-001 FAIL and VS-001A as the sole corrective validation slice |
+| `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Maps all VS-001 evidence, records strict FAIL, revisions, limitations, and sole next iteration |
+| `docs/90-state/program-state.md` | Ratified | Program | Records VS-001 FAIL, preserved architecture validity, and VS-001A-only authorization |
 | `docs/90-state/artifact-index.md` | Ratified | Program | Index of canonical artifacts and statuses |
 | `sources/nestfolio-runtime.yaml` | Ratified | Sources | Binds RI-001 evidence to exact Nestfolio revision and archive hash |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Ratified | Program | Repository separation |
@@ -65,6 +66,10 @@ superseded_by: null
 | `sessions/TA-002-target-architecture-revision/context-pack.yaml` | Validated | Session | Completed TA-002 input/output contract and result |
 | `sessions/TA-002-target-architecture-revision/prompt.md` | Ratified | Session | Preserves executable TA-002 instruction |
 | `sessions/TA-002-target-architecture-revision/session-handoff.md` | Validated | Session | Closes TA-002, records G3 PASS, and authorizes VS-001 only |
-| `sessions/VS-001-resumable-agent-work-session/context-pack.yaml` | Ratified | Session | Authorized VS-001 scope, inputs, required path, failures, outputs, and blockers |
+| `sessions/VS-001-resumable-agent-work-session/context-pack.yaml` | Validated | Session | Completed VS-001 contract, FAIL result, revisions, and acceptance summary |
 | `sessions/VS-001-resumable-agent-work-session/prompt.md` | Ratified | Session | Executable VS-001 instruction |
-| `sessions/VS-001-resumable-agent-work-session/session-handoff.md` | Draft | Session | Placeholder to be completed by VS-001 |
+| `sessions/VS-001-resumable-agent-work-session/session-handoff.md` | Validated | Session | Closes VS-001 with FAIL and authorizes VS-001A only |
+| `sessions/VS-001-resumable-agent-work-session/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for VS-001 closure |
+| `sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml` | Ratified | Session | Authorized corrective slice for genuine Claude Code Session evidence only |
+| `sessions/VS-001A-claude-code-session-confirmation/prompt.md` | Ratified | Session | Executable bounded VS-001A instruction |
+| `sessions/VS-001A-claude-code-session-confirmation/session-handoff.md` | Draft | Session | Placeholder to be completed by VS-001A |

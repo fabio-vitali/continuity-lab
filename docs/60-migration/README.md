@@ -9,12 +9,12 @@ superseded_by: null
 
 # Migration
 
-Broad migration design is blocked.
+Broad migration design remains blocked.
 
-TA-002 passed G3, but `DR-0018` authorizes VS-001 as a bounded architecture-validation slice before any migration architecture.
+TA-002 passed G3 and VS-001 validated the bounded repository-native mechanics, but VS-001 failed strict executor acceptance because no real Claude Code binary was available. `DR-0018` therefore still prevents migration architecture.
 
-No current Nestfolio module is approved for direct reuse by TA-002. VS-001 may reuse a capability only when it serves the slice and remains consistent with the accepted boundaries.
+**VS-001A — Interactive Claude Code Session Confirmation** is the sole authorized next iteration. No current Nestfolio module is approved for broader extraction or migration.
 
-Planned future artifact, only when authorized:
+Planned future artifact, only when explicitly authorized:
 
 - `migration-plan.md`

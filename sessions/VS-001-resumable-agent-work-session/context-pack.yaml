@@ -2,7 +2,7 @@ iteration:
   id: VS-001
   name: Resumable Agent Work Session
   type: architecture-validation-slice
-  status: authorized-not-started
+  status: completed
 
 objective:
   primary_question: >
@@ -135,3 +135,16 @@ blocked_until_completion:
   - MA-001
   - broader implementation
   - later vertical slices
+
+result:
+  decision: FAIL
+  completed_on: 2026-07-13
+  reason: >
+    The repository-native adapter path and all bounded mechanics were implemented
+    and validated, but no Claude Code binary was available. Acceptance criteria
+    requiring actual first and fresh Claude Code Sessions remain unproven.
+  nestfolio_baseline_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+  nestfolio_result_revision: 67e21251ee4e64ff8051c4b239a8466dac296dd2
+  acceptance_passed: [1, 2, 3, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  acceptance_failed: [4, 7, 8]
+  sole_authorized_next_iteration: VS-001A

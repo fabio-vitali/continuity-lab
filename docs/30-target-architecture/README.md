@@ -9,7 +9,7 @@ superseded_by: null
 
 # Target Architecture
 
-`target-architecture.md` is the accepted TA-002 architecture and the current G3 baseline.
+`target-architecture.md` is the accepted TA-002 architecture and current G3 baseline.
 
 TA-002:
 
@@ -20,6 +20,8 @@ TA-002:
 - defined `VS-001 — Resumable Agent Work Session`;
 - passed G3.
 
-TA-001 remains preserved through its session artifacts and superseded Decision Records. It is not the active architecture baseline.
+VS-001 found no structural contradiction. Its repository-native implementation is retained. The strict slice result is FAIL only because genuine Claude Code Session provenance was unavailable.
 
-The sole authorized next iteration is VS-001. Broader migration and implementation remain blocked.
+The architecture remains valid. **VS-001A — Interactive Claude Code Session Confirmation** is the sole authorized next iteration and may not expand the architecture.
+
+TA-001 remains preserved through its session artifacts and superseded Decision Records. It is not the active architecture baseline. Broader migration and implementation remain blocked.

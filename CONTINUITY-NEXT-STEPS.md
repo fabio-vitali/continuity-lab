@@ -1,84 +1,79 @@
 # Current Execution Instructions
 
-## 1. Review and commit TA-002
+## 1. Review and commit VS-001
 
-After replacing the local repository with the returned ZIP contents:
+Replace the local repositories with the returned contents, then review both diffs.
 
-```bash
-cd continuity-lab
-git diff
-git add .
-git commit -m "TA-002 revise target architecture"
-git push
-```
-
-Confirm before committing that:
-
-- `target-architecture.md` contains the complete TA-001 salvage matrix and Current Runtime Map classification;
-- Work Items, Working Sets, Sessions, Runs, Checkpoints, Context Packs, Handoffs, Guards, Evidence, Decisions, and Lessons have explicit ownership;
-- Framework Core, application services, repository infrastructure, Claude Code Adapter, Packs, and Nestfolio bindings are separated;
-- DR-0007 through DR-0010 are superseded by DR-0013 through DR-0016;
-- DR-0011 is retained inside the complete operational loop;
-- DR-0017 governs Assurance and Learning promotion;
-- DR-0018 authorizes VS-001 before broader migration;
-- G3 is PASS;
-- VS-001 is the sole authorized next iteration;
-- PX-001, migration, and broader implementation remain blocked.
-
-## 2. Prepare the VS-001 session
-
-Create a fresh conversation and upload:
-
-1. the latest complete `continuity-lab` ZIP;
-2. the Nestfolio repository at the exact implementation baseline you intend to use.
-
-Use:
+Nestfolio expected implementation result:
 
 ```text
-sessions/VS-001-resumable-agent-work-session/context-pack.yaml
-sessions/VS-001-resumable-agent-work-session/prompt.md
-sessions/TA-002-target-architecture-revision/session-handoff.md
+67e21251ee4e64ff8051c4b239a8466dac296dd2
 ```
 
-Paste the VS-001 prompt unchanged.
+Confirm that:
 
-Before implementation begins, require the session to record the exact full Nestfolio Git commit. Do not overwrite RI-001's historical evidence binding.
+- `runtime/continuity/` contains only the bounded VS-001 path;
+- `.claude/skills/continuity-*` and `continuity/packs/**` are explicit and digest-locked;
+- `continuity/artifacts/**` and `.continuity/**` contain the dogfood Run evidence;
+- `continuity/evidence/vs001/test-results.txt` reports 6 passed and 0 failed;
+- `continuity/evidence/vs001/environment.json` states that Claude Code was unavailable;
+- no unrelated Nestfolio source was modified.
 
-## 3. Keep the slice bounded
+Then commit/push the returned `continuity-lab` changes after reviewing `git diff`.
 
-VS-001 must prove only:
+## 2. Do not reinterpret the result
+
+VS-001 is **FAIL**, not partial PASS.
+
+The implementation is retained, but criteria 4, 7, and 8 are unproven because no actual Claude Code process participated. Do not discard the implementation and do not mark G6 passed.
+
+## 3. Run only VS-001A
+
+Start a fresh conversation and upload:
+
+1. the latest committed `continuity-lab` ZIP;
+2. Nestfolio at `67e21251ee4e64ff8051c4b239a8466dac296dd2` or a descendant containing it exactly.
+
+Use unchanged:
 
 ```text
-select work
-→ form a Working Set
-→ declare Scope and completion criteria
-→ resolve Skills, Guards, Decisions, and context
-→ execute with Claude Code
-→ checkpoint
-→ end the Session
-→ resume in a fresh Session
-→ validate and attach Evidence
-→ update Work state
-→ record a candidate Lesson
+sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml
+sessions/VS-001A-claude-code-session-confirmation/prompt.md
+sessions/VS-001-resumable-agent-work-session/session-handoff.md
 ```
 
-Do not expand into broad runtime migration, all current feature families, external writes, universal integrations, multi-executor parity, hosted collaboration, full Epic orchestration, or automatic Guard/Lesson promotion.
+Before any Run starts, verify and capture the real `claude` executable/version. If unavailable, VS-001A must fail without simulation.
+
+## 4. Keep VS-001A bounded
+
+VS-001A proves only:
+
+```text
+real Claude Code Session 1 consumes adapter view
+→ keyed effect
+→ verified Checkpoint/Handoff
+→ Session 1 ends
+→ separately started real Claude Code Session 2 resumes
+→ effect deduplicates
+→ executor-linked Evidence
+```
+
+Do not alter accepted architecture unless an actual blocker is discovered. Do not migrate more runtime capabilities.
 
 ## Still blocked
 
 - PX-001;
 - MA-001;
 - broader implementation;
+- later vertical slices;
 - unrelated Nestfolio work;
-- commercial or universal-control-plane design.
+- commercial/universal-control-plane design.
 
 ## Permanent rules
 
-- Chat and Canvas are not canonical.
+- Chat and hidden executor state are not canonical.
 - Review every generated Git diff before committing.
 - Keep Goal and Guard separate.
-- Keep external systems authoritative for their own objects.
-- Keep hidden Claude Code state non-authoritative.
 - Keep Nestfolio-specific behavior outside Framework Core.
 - Require criterion-linked Evidence for completion.
 - Never promote an Observation or Lesson automatically.

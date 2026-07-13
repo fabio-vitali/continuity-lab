@@ -11,25 +11,15 @@ superseded_by: null
 
 ## Current phase
 
-**TA-002 — Target Architecture Revision: complete on 2026-07-13.**
+**VS-001 — Resumable Agent Work Session: complete with FAIL on 2026-07-13.**
 
-The revised Target Architecture is accepted and validated.
+The bounded repository-native implementation is valid and retained. The slice failed only because the environment did not provide a real Claude Code executable, leaving acceptance criteria 4, 7, and 8 without genuine executor evidence.
 
-Continuity is architected as a repository-native, Claude Code-first framework for continuous agentic development. The complete operational loop is:
+The sole authorized next iteration is:
 
-```text
-select work
-→ form context
-→ execute through skills and agents
-→ checkpoint or resume
-→ validate
-→ attach evidence
-→ update work state
-→ record learning
-→ continue
-```
+**VS-001A — Interactive Claude Code Session Confirmation**.
 
-Context Packs and Handoffs remain first-class capabilities inside the loop. Work Items, Working Sets, Sessions, Runs, Checkpoints, Guards, Evidence, Decisions, and Lessons now have explicit product homes and authority boundaries.
+It is a corrective validation slice, not a new architecture or migration phase.
 
 ## Gate history and current validity
 
@@ -37,150 +27,133 @@ Context Packs and Handoffs remain first-class capabilities inside the loop. Work
 |---|---|---|---|
 | G0 — Bootstrap | passed; valid | 2026-07-12 | governance artifacts, repository state, DR-0001 to DR-0003 |
 | G1 — Product survivability | passed under PI-001-corrected interpretation; valid | 2026-07-13 | PF-001 evidence, revised Product Foundation, DR-0012 |
-| G2 — Current-system evidence | passed; valid | 2026-07-13 | validated `current-runtime-map.md`, exact Nestfolio revision binding |
-| G3 — Target architecture coherence | **passed; valid** | 2026-07-13 | revised `target-architecture.md`, DR-0013 to DR-0018, TA-002 handoff |
-| G4 — Product experience viability | blocked | — | not authorized; targeted experience may be learned inside VS-001 |
-| G5 — Migration viability | blocked | — | broader migration is not authorized |
-| G6 — Implementation validation | blocked | — | VS-001 is the authorized bounded validation slice; it does not itself pre-pass G6 |
+| G2 — Current-system evidence | passed; valid | 2026-07-13 | validated Current Runtime Map and exact RI-001 Nestfolio binding |
+| G3 — Target architecture coherence | passed; valid | 2026-07-13 | TA-002 architecture, DR-0013 to DR-0018, TA-002 handoff |
+| G4 — Product experience viability | blocked | — | not authorized |
+| G5 — Migration viability | blocked | — | not authorized |
+| G6 — Implementation validation | blocked | — | VS-001 repository mechanics passed, but real Claude Code Session evidence remains incomplete |
 
-## G3 result
+## VS-001 result
 
-**G3 PASS.**
+**Unconditional decision: FAIL.**
 
-The architecture is coherent with the corrected Product Foundation, sufficiently concrete for VS-001, compatible with the Current Runtime Map, explicit about canonical state and recovery, and free from unnecessary commercial-control-plane or universal-integration assumptions.
+Passed evidence:
 
-No unresolved structural ambiguity requires another architecture iteration before the first validation slice.
+- Work selection, Working Set, Scope, Context Pack, Formation Trace, Pack lock, Guards, Decisions, and repository fingerprint;
+- material keyed effect and deduplication;
+- verified intermediate/final Checkpoints and Handoff;
+- stale repository and Skill-lock failure behavior;
+- lease conflict and revision-safe state updates;
+- Validation Plan, passing Evidence, and completion block on missing/failed validation;
+- candidate/rejected Lesson behavior with no automatic promotion;
+- derived-index rebuild with canonical state preservation;
+- six deterministic tests, all passing.
+
+Failed evidence:
+
+- no genuine Claude Code process began from the adapter-produced view;
+- no genuine first Claude Code Session ending was observable;
+- no separately invoked genuine fresh Claude Code Session resume was observable.
+
+Canonical report: `docs/70-implementation/vs-001-resumable-agent-work-session.md`.
+
+Nestfolio implementation result: `67e21251ee4e64ff8051c4b239a8466dac296dd2`.
 
 ## Accepted target architecture
 
+TA-002 remains the active accepted architecture. VS-001 found no structural contradiction.
+
 ### Framework Core
 
-Portable domain semantics and lifecycle rules for:
+Portable lifecycle and authority semantics for Work, Working Sets, Scope, Sessions, Runs, Checkpoints, Context, Assurance, Decisions, Observations, Lessons, revisions, leases, and effect keys.
 
-- Work Items, Working Sets, Epics, selection, dependencies, and completion;
-- Scope, exclusions, constraints, and completion criteria;
-- Sessions, Runs, Checkpoints, pause, resume, retry, cancellation, failure, and stale state;
-- Context Packs, Formation Traces, and Handoffs;
-- Skills and Procedure references;
-- Guards, validation, Evidence, waivers, and completion gates;
-- Decisions, Observations, Lessons, and governed promotion proposals.
+### Application and repository infrastructure
+
+Application services coordinate commands through declared ports. Repository infrastructure owns tracked artifacts, operational Run state, Git/repository observation, atomic writes, compare-and-swap revisions, leases, recovery, audit, and rebuildable read models.
 
 ### Claude Code Adapter
 
-First executor integration using native commands, skills, hooks, subagents, permissions, session bootstrap, context delivery, result capture, interruption handling, and resume behavior.
+The adapter owns executor commands, Skills, hooks, bootstrap/resume views, and structured result capture. Claude-specific state is never canonical. VS-001A must prove this boundary with the actual executor.
 
-Claude Code-native formats do not become Framework Core semantics.
+### Packs and Nestfolio binding
 
-### Skills and Packs
-
-Reusable and project-specific Packs may contain canonical Procedure specifications and adapter-specific executable assets. Composition is explicit, versioned, digest-locked, capability-declared, and unable to redefine Core lifecycle or authority.
-
-### Nestfolio boundary
-
-Nestfolio is the reference implementation and first dogfooding environment. Its backlog format, lanes, repository rules, deployment procedures, project Guards, and local skills may remain in a Nestfolio Pack or binding.
-
-### State authority
-
-- versioned repository artifacts are authoritative for collaborative durable state;
-- a declared repository-local operational store is authoritative for active Run and Checkpoint state;
-- hidden Claude Code memory or chat is never authoritative;
-- external systems remain authoritative for their own objects;
-- derived indexes, caches, projections, and optional event streams are rebuildable.
-
-## TA-001 disposition
-
-TA-001 remains historical architecture evidence.
-
-- its Context Formation and Handoff concepts are retained;
-- its dependency direction, typed references, local-first authority, explicit Pack locking, and reproducible context formation are preserved where compatible;
-- its Context Pack/Handoff-only boundary, public-Run exclusion, externalized backlog/orchestration, no learning, human-only requirement, and equal-priority executor-neutrality assumptions are rejected or revised;
-- its complete disposition is recorded in the TA-002 salvage matrix.
-
-Decision Record status:
-
-- `DR-0007` superseded by `DR-0013`;
-- `DR-0008` superseded by `DR-0014`;
-- `DR-0009` superseded by `DR-0015`;
-- `DR-0010` superseded by `DR-0016`;
-- `DR-0011` retained and integrated into the complete operational loop.
+Reusable Procedure semantics and executor assets are digest-locked through Packs. Nestfolio-specific backlog, path, Guard, Decision, validator, and repository rules remain in its Pack/binding unless later evidence and a Decision justify promotion.
 
 ## Active architecture decisions
 
-- `DR-0013` — bounded agent-work Core with first-class Runs;
-- `DR-0014` — repository-local canonical artifacts and declared operational state;
-- `DR-0015` — concrete typed integration ports and first-class Claude Code adapter;
-- `DR-0016` — Pack manifests, canonical procedures, and executor assets;
-- `DR-0017` — explicit Assurance and Learning promotion governance;
-- `DR-0018` — validate through VS-001 before broader migration.
+- `DR-0012` — repository-native agentic-development framework;
+- `DR-0013` — bounded agent-work Core;
+- `DR-0014` — repository-local canonical state and operational Run store;
+- `DR-0015` — concrete integration ports and Claude Code Adapter;
+- `DR-0016` — Pack manifests, Procedures, executor assets, and project bindings;
+- `DR-0017` — governed Assurance and Learning promotion;
+- `DR-0018` — bounded validation before broader migration.
 
-Product decisions that remain active:
-
-- `DR-0004` — no established Engineering Continuity market-category claim;
-- `DR-0005` — Goal and Guard remain separate; no shared Commitment entity;
-- `DR-0012` — repository-native agentic-development framework.
+No new Decision Record was created by VS-001.
 
 ## Sole authorized next iteration
 
-**VS-001 — Resumable Agent Work Session**
+### VS-001A — Interactive Claude Code Session Confirmation
 
-Primary objective:
+Primary question:
 
-> Prove in Nestfolio that one or more selected Work Items can form a bounded Working Set, execute through Claude Code, persist a verified Checkpoint, end the session, resume in a new session without manual reconstruction or duplicate effects, validate completion with Evidence, update work state, and record a non-promoted candidate Lesson.
+> Can the existing VS-001 implementation prove actual adapter bootstrap, first-Session end, and fresh-Session resume through two genuine Claude Code Sessions without architecture expansion?
 
-VS-001 is an architecture-validation slice, not broad migration.
+Required baseline:
 
-Use:
+- Nestfolio commit `67e21251ee4e64ff8051c4b239a8466dac296dd2` or an upstream descendant containing it exactly.
 
-- `sessions/VS-001-resumable-agent-work-session/context-pack.yaml`;
-- `sessions/VS-001-resumable-agent-work-session/prompt.md`;
-- `sessions/TA-002-target-architecture-revision/session-handoff.md`;
-- the latest complete `continuity-lab` repository;
-- the Nestfolio repository only as implementation and dogfooding target at the revision selected by VS-001.
+Required outcome:
 
-## VS-001 constraints
+- exact Claude Code version/provenance;
+- genuine Session 1 starts from the adapter-produced view;
+- verified Checkpoint and Handoff before Session 1 ends;
+- separately invoked genuine Session 2 resumes without old transcript;
+- keyed effect remains deduplicated;
+- criterion-linked Evidence;
+- unconditional PASS or FAIL;
+- exactly one next iteration authorized.
 
-VS-001 may implement only the minimum path defined in the Target Architecture.
-
-It must not:
-
-- start broad migration of the current Nestfolio runtime;
-- implement every current feature family;
-- implement universal backlog synchronization or external writes;
-- implement multi-executor parity;
-- implement hosted collaboration, RBAC, analytics, or a universal Console;
-- implement automatic Guard minting or Lesson promotion;
-- authorize later work without evaluating slice evidence.
-
-The VS-001 handoff must authorize exactly one next iteration based on evidence.
+VS-001A must reuse the existing implementation and may fix only defects that directly prevent this proof.
 
 ## Iteration queue
 
-1. PF-001 — Product Falsification — **complete; evidence retained; interpretation revised by PI-001**
+1. PF-001 — Product Falsification — **complete; interpretation revised by PI-001**
 2. RI-001 — Current Runtime Inventory — **complete; G2 valid**
-3. TA-001 — Target Architecture — **complete historically; superseded as active baseline by TA-002**
+3. TA-001 — Target Architecture — **historical; superseded as active baseline**
 4. PI-001 — Product Intent Realignment — **complete**
 5. TA-002 — Target Architecture Revision — **complete; G3 passed**
-6. VS-001 — Resumable Agent Work Session — **sole authorized next iteration**
-7. PX-001 — Product Experience — **blocked**
-8. MA-001 — Migration Architecture — **blocked**
-9. broader implementation — **blocked**
+6. VS-001 — Resumable Agent Work Session — **complete; FAIL due missing real-executor evidence**
+7. VS-001A — Interactive Claude Code Session Confirmation — **sole authorized next iteration**
+8. PX-001 — Product Experience — **blocked**
+9. MA-001 — Migration Architecture — **blocked**
+10. broader implementation/later vertical slices — **blocked**
 
 ## Active blockers
 
-- No work beyond VS-001 is authorized.
-- No migration plan may assume direct reuse of current Nestfolio modules.
+- No work beyond VS-001A is authorized.
+- Do not redo or rewrite `run-vs001`; create distinct VS-001A artifacts.
+- Do not simulate Claude Code when the real executable is unavailable.
 - No project-specific behavior may enter Framework Core without evidence and a Decision.
 - No completed Work claim may bypass required Evidence or an explicit waiver.
-- No Lesson or Observation may become a canonical Skill, validator, Guard, or Pack rule automatically.
-- No hidden executor state may substitute for Run, Checkpoint, Context Pack, Decision, or Handoff state.
-- No generic integration or extension point may be introduced without a concrete slice need.
+- No Lesson or Observation may automatically change a Skill, Guard, validator, or Pack.
+- No hidden executor state may substitute for Run, Checkpoint, Context Pack, Decision, Handoff, or Evidence.
+- No generic integration or extension point may be introduced without a concrete authorized need.
 
-## G2 evidence binding
+## Evidence bindings
 
-RI-001 evidence remains bound to:
+### RI-001 historical binding
 
-- Nestfolio revision `3aa8f4773955541415f615abd80a0a9702bcb416`;
-- uploaded archive `nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip`;
-- archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`.
+- Nestfolio revision: `3aa8f4773955541415f615abd80a0a9702bcb416`;
+- archive SHA-256: `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`.
 
-A later VS-001 implementation revision must be recorded separately and does not alter the identity of the validated Current Runtime Map.
+This remains the identity of the validated Current Runtime Map.
+
+### VS-001 implementation binding
+
+- baseline upstream revision: `3aa8f4773955541415f615abd80a0a9702bcb416`;
+- validated local result revision: `67e21251ee4e64ff8051c4b239a8466dac296dd2`;
+- result tree: `fda29bc3ebc2155c7178040cbafee042cc8c5bb9`;
+- executor limitation: Claude Code binary unavailable.
+
+The VS-001 binding does not overwrite RI-001 provenance.

@@ -1,0 +1,96 @@
+iteration:
+  id: VS-001A
+  name: Interactive Claude Code Session Confirmation
+  type: corrective-validation-slice
+  status: authorized-not-started
+
+objective:
+  primary_question: >
+    Can the existing VS-001 implementation prove acceptance criteria 4, 7,
+    and 8 through two genuine Claude Code Sessions, with exact executor
+    provenance and without architecture or feature expansion?
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/70-implementation/vs-001-resumable-agent-work-session.md
+  - docs/90-state/program-state.md
+  - sessions/VS-001-resumable-agent-work-session/session-handoff.md
+  - sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml
+
+implementation_repository:
+  name: Nestfolio
+  required_baseline_revision: 67e21251ee4e64ff8051c4b239a8466dac296dd2
+  rule: >
+    Use this exact commit or an upstream descendant containing it. Record the
+    exact full revision before execution. Do not rerun or rewrite run-vs001.
+
+required_executor:
+  product: Claude Code
+  precondition: >
+    The real Claude Code executable must be available. Capture its exact
+    version and invocation provenance before starting. If unavailable, stop
+    with FAIL and do not simulate the missing evidence.
+
+required_path:
+  - create a new bounded Work Item, Working Set, Run, and distinct effect key for VS-001A
+  - start genuine Claude Code Session 1 from the adapter-produced execution view
+  - record observable executor version and Session provenance without making hidden state authoritative
+  - execute one material keyed effect through the declared Procedure
+  - persist a verified intermediate Checkpoint with the exact next action
+  - end or deliberately interrupt genuine Claude Code Session 1 and publish a Handoff
+  - start a separately invoked fresh Claude Code Session 2 without the old transcript
+  - discover and resume the Run through the adapter-produced resume view
+  - attempt the same effect key and prove deduplication
+  - validate and attach criterion-linked Evidence for the three missing criteria
+  - issue unconditional PASS or FAIL and authorize exactly one next iteration
+
+acceptance_criteria:
+  - id: actual-adapter-bootstrap
+    statement: >
+      Genuine Claude Code Session 1 begins from the adapter-produced execution
+      view, not from a manually reconstructed prompt.
+  - id: actual-first-session-end
+    statement: >
+      Genuine Claude Code Session 1 ends after a verified Checkpoint/Handoff.
+  - id: actual-fresh-session-resume
+    statement: >
+      A separately started genuine Claude Code Session 2 locates and resumes
+      the Run without reading the old transcript or manual reconstruction.
+  - id: effect-deduplication-confirmation
+    statement: The resumed Session does not repeat the completed keyed effect.
+
+explicit_non_goals:
+  - changing accepted Core semantics or architecture boundaries
+  - broad migration or another current-runtime feature family
+  - product-experience design
+  - migration architecture
+  - external writes or integrations
+  - parallel orchestration or multi-executor parity
+  - automatic Lesson or Guard promotion
+  - unrelated Nestfolio work
+
+required_outputs_continuity_lab:
+  - docs/70-implementation/vs-001a-claude-code-session-confirmation.md
+  - docs/90-state/program-state.md
+  - docs/90-state/artifact-index.md
+  - complete VS-001A session handoff
+
+required_outputs_nestfolio:
+  - new VS-001A canonical Run/Session/Checkpoint/Handoff/Evidence artifacts
+  - exact Claude Code version and invocation provenance
+  - exact baseline and result revisions
+  - changed-file manifest and patch/ZIP
+
+completion_decision:
+  required: true
+  values: [PASS, FAIL]
+  pass_rule: every VS-001A acceptance criterion has observable real-executor evidence
+  next_iteration_rule: authorize exactly one next iteration
+
+blocked_until_completion:
+  - PX-001
+  - MA-001
+  - broader implementation
+  - later vertical slices

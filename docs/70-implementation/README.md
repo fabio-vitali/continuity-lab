@@ -9,16 +9,22 @@ superseded_by: null
 
 # Implementation
 
-Implementation does not begin from chat proposals. It begins from accepted architecture and an explicitly authorized bounded slice.
+Implementation begins only from accepted architecture and an explicitly authorized bounded slice.
 
-The sole authorized implementation/validation iteration is:
+## Completed slice
 
-- **VS-001 — Resumable Agent Work Session**
+- **VS-001 — Resumable Agent Work Session** — completed with **FAIL**.
 
-VS-001 may implement only the path defined in the Target Architecture and its Context Pack. It is not broad migration and does not authorize later slices automatically.
+The bounded repository-native implementation and tests are retained. The failure is limited to missing genuine Claude Code Session provenance, not to the Core/store/Pack/adapter mechanics.
 
-Expected VS-001 design/validation artifact:
+Canonical report:
 
 - `vs-001-resumable-agent-work-session.md`
+
+## Sole authorized slice
+
+- **VS-001A — Interactive Claude Code Session Confirmation**
+
+VS-001A may only run the existing path in two real Claude Code Sessions and close acceptance criteria 4, 7, and 8. It may not expand architecture or begin broader migration.
 
 All other implementation remains blocked.
