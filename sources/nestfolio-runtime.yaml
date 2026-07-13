@@ -11,8 +11,22 @@ not_canonical_for:
   - future target architecture
   - product-development process
 reviewed_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+reviewed_archive:
+  filename: nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip
+  archive_root: nestfolio/
+  sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+  embedded_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+  revision_marker: zip-comment
+verification:
+  status: verified
+  verified_on: 2026-07-13
+  methods:
+    - full reviewed_revision equals the revision embedded in the uploaded ZIP comment
+    - the exact commit and tree exist in the declared public repository
+    - commit-specific changed-file state matches the uploaded archive
+    - every exact source and test evidence path cited by current-runtime-map.md exists in the uploaded revision
 revision_command: git -C /path/to/nestfolio rev-parse HEAD
 notes:
-  - Record the exact reviewed revision before RI-001.
+  - The archive contains no .git metadata; the retained archive hash and embedded full SHA bind the reviewed bytes to the declared revision.
   - Do not copy the runtime into continuity-lab.
   - Do not use an unrecorded moving branch as architectural evidence.

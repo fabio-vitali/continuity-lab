@@ -13,40 +13,35 @@ superseded_by: null
 
 - ID: `RI-001`
 - Type: current-system inventory
-- Outcome: snapshot inventory completed; G2 failed on source provenance
+- Outcome: exact-revision inventory validated; G2 passed
 - Date: 2026-07-13
 
 ## Objective completed
 
-RI-001 built a factual technical map of the supplied Nestfolio runtime snapshot without redesigning it.
-
-The map covers:
-
-- repository structure and dependency directions;
-- runtime entry points;
-- check registry and evaluator execution;
-- Git and scheduled enforcement;
-- journal authority, replay, parking, and fulfilment;
-- single-item and epic workflows;
-- intake, planning, themes, and operator projection;
-- check minting, curation, lesson reconciliation, and eval scenarios;
-- state ownership and lifecycle transitions;
-- project-specific bindings;
-- failure handling;
-- test-to-feature evidence;
-- per-feature-family implementation classification;
-- absent retained-product concepts;
-- explicit unknowns and documentation/code contradictions.
+RI-001 built and then revalidated a factual technical map of the current Nestfolio runtime without redesigning it. Source provenance is closed and the evidence is bound to exact Nestfolio revision `3aa8f4773955541415f615abd80a0a9702bcb416`.
 
 Primary output:
 
 - `docs/20-current-system/current-runtime-map.md`
 
-## Evidence reviewed
+The map covers:
 
-### Continuity design memory
+- repository structure and dependency directions;
+- runtime entry points and adapter bindings;
+- check registry and evaluator execution;
+- Git, scheduled, and declared trigger enforcement;
+- journal authority, replay, parking, fulfilment, and runtime-path provenance;
+- single-item, generic-item, epic, intake, themes, planning, and operator workflows;
+- check minting, curation, lesson reconciliation, and evaluation scenarios;
+- state ownership and lifecycle transitions;
+- project-specific bindings;
+- invariants and failure handling;
+- test-to-feature evidence;
+- per-feature-family implementation classification;
+- absent retained-product concepts;
+- explicit unknowns, limitations, and documentation/code contradictions.
 
-Read in the required order:
+## Canonical read order used
 
 1. `docs/00-governance/product-development-operating-model.md`
 2. `docs/00-governance/artifact-governance.md`
@@ -54,29 +49,56 @@ Read in the required order:
 4. `sessions/RI-001-runtime-inventory/context-pack.yaml`
 5. `docs/10-product/product-foundation.md`
 6. `docs/50-validation/product-falsification-report.md`
-7. `docs/90-state/program-state.md`
-8. `sources/nestfolio-runtime.yaml`
+7. `docs/20-current-system/current-runtime-map.md`
+8. `docs/90-state/program-state.md`
+9. `docs/90-state/artifact-index.md`
+10. `sessions/RI-001-runtime-inventory/session-handoff.md`
+11. `sources/nestfolio-runtime.yaml`
+
+## Source provenance verification
+
+### Continuity input
+
+- Uploaded archive: `continuity-lab-bc54e2ee193183c14faea5033b53a28a614fd8f5.zip`
+- Input archive SHA-256: `fff52a33492f854b0b89d77c623f2abe3af0108f14418117ba88e19128e70335`
 
 ### Nestfolio implementation evidence
 
-Inspected the supplied `nestfolio-main(1).zip` archive, including:
+- Uploaded archive: `nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip`
+- Archive SHA-256: `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`
+- Full SHA declared in `sources/nestfolio-runtime.yaml`: `3aa8f4773955541415f615abd80a0a9702bcb416`
+- Full SHA embedded in the ZIP comment: `3aa8f4773955541415f615abd80a0a9702bcb416`
+- Exact public repository commit and tree: verified present
+- Commit-specific file-state check: verified for `docs/BACKLOG.md` and `docs/backlog/runtime-self-hosting-debt.md`
+- Exact source and test evidence paths cited by the runtime map: rechecked and present
 
-- `runtime/engine/**`;
-- `runtime/adapters/**`;
-- `runtime/content/**`;
-- `runtime/starter/**`;
-- `runtime/eval/**`;
-- runtime tests;
-- `runtime/runtime.config.json`;
-- `runtime/README.md` and `runtime/GUIDE.md`;
-- `.github/workflows/runtime-audit.yml`;
-- `scripts/verify-structure.sh`;
-- project bindings in `.claude/skills/backlog-next/**` and referenced tooling.
+The archive has no `.git` directory, so Git object commands cannot execute inside it. The matching full SHA marker, manifest, exact public commit/tree, commit-specific file state, and retained archive hash provide the required revision binding.
 
-Archive identity:
+## Exact-revision inventory result
 
-- Nestfolio uploaded archive SHA-256: `2a58ddd65ea3247c76a34ae0f1020d7709d3c8b2154f6a505d9fdcf61626ef74`
-- Continuity input archive SHA-256: `f2525fe38da7ade61723c6a0201bcf3e8405a193da5ba17baef03d4d39bfe800`
+The previous map was not assumed correct. It was rechecked against the supplied revision.
+
+Confirmed unchanged:
+
+- ring-1 engine dependency isolation;
+- ring-2 deploy-runner self-containment contradiction;
+- check registry, evaluator, scope, watch, and gate behavior;
+- journal state authority and replay semantics;
+- worker and epic-orchestrator host-owned closure boundaries;
+- intake, planning, operational view, backward lifecycle, scheduled audit, and Git gate behavior;
+- project bindings and external adapter dependencies;
+- `fanOut`, `onTrigger`, dossier reconciliation, and leftovers spin-out as test-only/unwired;
+- public CLI gaps for `runtime watch`, `runtime next`, and direct `run-check`;
+- absence of runtime Context Pack and executor-neutral Handoff artifacts;
+- all previously documented major failure paths and contradictions.
+
+Corrected or added:
+
+1. `run-item.mjs` accepts an item ID, reads the backlog, uses `makeDriverCapabilities`, supports fulfilment, and records `path:runtime`; it is classified **implemented**.
+2. `run-themes.mjs` uses judged capabilities and completes journaled park/fulfil plus theme mutations; its entry point is classified **implemented**.
+3. Runtime-path provenance is now mapped as journal observability owned by item, next, epic, intake, and themes drivers.
+4. Static test distribution is corrected to 186 top-level declarations in `runtime/engine/test` and 78 in `runtime/adapters/claude-code/test`; the total remains 421 across 79 files.
+5. `run-view` resume-hint limitations are explicit: no hints for themes/backward and shared `item-*` hints always point to `run-next`.
 
 ## Main factual findings
 
@@ -84,100 +106,55 @@ Archive identity:
 2. Ring-1 engine production imports are isolated from adapters and project content.
 3. Ring-2 is not fully self-contained: the deploy runner dynamically imports repository helpers outside `runtime/`.
 4. The Git-common-dir NDJSON journal is the authority for runtime progress, parked decisions, fulfilment, replay, and selected evidence records.
-5. The worker and orchestrator perform gates and floor decisions but do not themselves implement code changes, ship, create/merge pull requests, or close backlog state.
-6. The content ring contains 36 checks: 35 active and 1 superseded.
-7. Static test inspection found 79 test files and 421 top-level `test(...)` declarations; the guide claims 422.
+5. Runtime-path provenance stores workstream/SHA observability in the owning journal but is not a separate runtime-selection authority.
+6. The worker and orchestrator perform gates and floor decisions but do not themselves implement code changes, ship, create/merge pull requests, or close backlog state.
+7. The content ring contains 36 checks: 35 active and 1 superseded.
 8. `fanOut`, `onTrigger`, dossier reconciliation, and leftovers spin-out have no production caller found.
-9. Public/documented CLI behavior is incomplete for `runtime watch`, `runtime next`, and direct `run-check` invocation.
-10. Context Pack and executor-neutral Handoff artifacts are absent from the current runtime. Evidence/provenance and decisions exist only as partial ingredients for the narrowed product hypothesis.
+9. Context Pack and executor-neutral Handoff artifacts are absent from the current runtime. Evidence/provenance and decisions remain partial ingredients only.
+10. Every major feature family has repository evidence or an explicit status and limitation.
 
-## Feature classification result
+## Test execution status
 
-Every major feature family was assigned exactly one of:
+The test suite was inspected but not executed.
 
-- implemented;
-- partially implemented;
-- documented but not implemented;
-- test-only;
-- absent;
-- unclear.
-
-The complete classification and exact source/test paths are in `docs/20-current-system/current-runtime-map.md`.
-
-## Test execution limitation
-
-The test suite was not executed during this iteration.
-
-- Nestfolio declares Node `>=24` and pnpm `>=10`.
+- Nestfolio requires Node `>=24` and pnpm `>=10`, with package manager `pnpm@10.30.3`.
 - The available environment provided Node `22.16.0`, no pnpm, and no installed dependencies.
-- Tests were inspected statically and mapped to features.
+- Static inspection found 79 test files and 421 top-level `test(...)` declarations.
+- `runtime/GUIDE.md` states 422, so the one-case documentation discrepancy remains explicit.
+- Judgment integrations requiring Claude Code/model credentials were not exercised.
 
-This limitation is recorded as an evidence constraint, not concealed as a successful test run.
-
-## Blocking source contradiction
-
-`sources/nestfolio-runtime.yaml` contains:
-
-```yaml
-reviewed_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
-```
-
-The supplied Nestfolio archive contains no `.git` metadata or commit identifier. The exact Git revision required by the Context Pack cannot therefore be established from the supplied inputs.
-
-No commit SHA was invented and the source manifest was not silently changed.
+This limitation is accurately recorded and is not a G2 blocker under the continuation instruction.
 
 ## Gate result
 
-**G2 — Current-system evidence: FAIL.**
+**G2 — Current-system evidence: PASS on 2026-07-13.**
 
-Reason:
+Pass basis:
 
-- the technical inventory is complete for the identified archive bytes;
-- the canonical implementation revision is not recorded or recoverable;
-- target architecture cannot rely on moving/unidentified source evidence.
+- the runtime remains factually mapped without redesign;
+- all major feature families have repository evidence or explicit status;
+- responsibilities, workflows, dependencies, state ownership, transitions, invariants, failure handling, bindings, and tests are documented;
+- observations and interpretations remain separated;
+- the evidence is demonstrably bound to the exact revision declared by the source manifest.
 
-`docs/20-current-system/current-runtime-map.md` remains **provisional** until the source is bound to an exact commit and verified.
+`docs/20-current-system/current-runtime-map.md` is now **validated**. RI-001 is complete.
 
-## Changed files
+## Files changed in the provenance-closure continuation
 
-- `docs/20-current-system/current-runtime-map.md` — created
-- `docs/90-state/program-state.md` — updated
-- `docs/90-state/artifact-index.md` — updated
-- `sessions/RI-001-runtime-inventory/session-handoff.md` — updated
+- `sources/nestfolio-runtime.yaml` — added archive identity and exact-revision verification record
+- `docs/20-current-system/current-runtime-map.md` — revalidated and corrected against the declared revision; status changed to validated; G2 changed to PASS
+- `docs/90-state/program-state.md` — recorded G2 pass, RI-001 completion, and TA-001 authorization
+- `docs/90-state/artifact-index.md` — updated artifact statuses/roles and indexed the authorized TA-001 session artifacts
+- `sessions/RI-001-runtime-inventory/session-handoff.md` — replaced the failed provenance handoff with this completed RI-001 handoff
 
 No Nestfolio implementation file was modified.
 
-## Sole authorized next objective
+## Sole authorized next iteration
 
-Continue RI-001 only to close source provenance.
+**TA-001 — Target Architecture**
 
-Do not start TA-001 yet.
+Use `sessions/TA-001-target-architecture/context-pack.yaml` and `sessions/TA-001-target-architecture/prompt.md` with the complete updated `continuity-lab` repository.
 
-### Required input
+TA-001 must prefer the validated Current Runtime Map over rereading the entire Nestfolio repository. Inspect targeted source slices only when the map is insufficient. Do not use raw PF-001 or RI-001 chat transcripts as canonical memory.
 
-- complete updated `continuity-lab` repository from this handoff;
-- a Nestfolio checkout/archive at a known full Git commit SHA;
-- `sources/nestfolio-runtime.yaml` updated to that exact SHA;
-- no raw PF-001 or RI-001 chat transcript.
-
-### Required work
-
-1. verify that the declared Nestfolio commit is the source snapshot being reviewed;
-2. compare it with archive SHA-256 `2a58ddd65ea3247c76a34ae0f1020d7709d3c8b2154f6a505d9fdcf61626ef74` where possible;
-3. re-check all current-runtime-map evidence against the declared commit;
-4. amend only facts that differ;
-5. record final G2 pass or fail;
-6. only after a G2 pass, authorize TA-001 in Program State.
-
-### Completion criteria
-
-- `sources/nestfolio-runtime.yaml` contains a full exact commit SHA;
-- the reviewed repository/archived bytes are demonstrably tied to that SHA;
-- `current-runtime-map.md` is verified or corrected against that source;
-- test-execution status is stated accurately;
-- G2 is recorded;
-- changed files are listed.
-
-## Suggested executable prompt for the continuation
-
-> You are continuing iteration RI-001 only to close Nestfolio source provenance. Use the uploaded `continuity-lab` repository as canonical design memory and the supplied Nestfolio checkout/archive as canonical implementation evidence. First verify that `sources/nestfolio-runtime.yaml` records the exact full Git commit SHA represented by the Nestfolio source. Then verify `docs/20-current-system/current-runtime-map.md` against that exact revision, correcting only evidence that differs. Do not redesign, rename, simplify, propose target bounded contexts, or start TA-001. Update the source manifest, runtime map if necessary, Program State, Artifact Index, and RI-001 handoff. Record G2 pass or fail and return the complete updated `continuity-lab` repository as a ZIP with all changed files listed.
+No PX-001, migration, or implementation work is authorized before TA-001 records G3.

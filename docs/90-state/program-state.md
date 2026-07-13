@@ -13,31 +13,28 @@ superseded_by: null
 
 **G2 — Current-system evidence**
 
-Status: **failed on 2026-07-13 because the reviewed Nestfolio revision is not identifiable**.
+Status: **passed on 2026-07-13**.
 
-RI-001 completed a neutral technical inventory of the supplied Nestfolio archive and recorded its archive SHA-256 in `docs/20-current-system/current-runtime-map.md`. The inventory maps responsibilities, state, entry points, workflows, dependency directions, project bindings, failure handling, tests, invariants, feature families, unknowns, and documentation/code contradictions.
+RI-001 is complete. The current Nestfolio runtime is factually mapped in `docs/20-current-system/current-runtime-map.md`, including responsibilities, state ownership, entry points, workflows, transitions, dependency directions, adapters, project bindings, invariants, failure handling, feature-family classifications, tests, explicit absences, and remaining limitations.
 
-G2 did not pass because `sources/nestfolio-runtime.yaml` still contains `reviewed_revision: TO_BE_SET_BEFORE_RI-001`, while the supplied Nestfolio archive contains no `.git` metadata. The archive can therefore be identified only by its byte hash, not proven to be the exact canonical Git revision required by the RI-001 Context Pack.
+The validated evidence is bound to:
 
-This failure does not invalidate the factual map of the supplied archive. It prevents that map from becoming sufficient canonical evidence for target architecture.
+- Nestfolio revision `3aa8f4773955541415f615abd80a0a9702bcb416`;
+- uploaded archive `nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip`;
+- archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`;
+- the matching full revision embedded in the archive ZIP comment and recorded in `sources/nestfolio-runtime.yaml`.
+
+The exact-revision re-check confirmed the prior inventory and corrected revision-specific evidence for the generic item driver, themes driver, runtime-path provenance, and per-area static test distribution.
 
 ## Next iteration
 
-**RI-001 continuation — Nestfolio revision provenance closure**
+**TA-001 — Target Architecture**
 
-This is the only authorized next design iteration.
+This is the sole authorized next design iteration. It has not been started by RI-001.
 
-Its single objective is to bind the completed runtime inventory to an exact Git-addressable Nestfolio revision and verify whether the mapped evidence differs at that revision.
+TA-001 must use the validated Product Foundation, Product Falsification Report, Current Runtime Map, Program State, relevant Decision Records, and `sessions/TA-001-target-architecture/context-pack.yaml`. Targeted Nestfolio source inspection is permitted only when the validated Current Runtime Map is insufficient.
 
-Required actions:
-
-1. obtain the exact Nestfolio commit SHA corresponding to the supplied snapshot, or supply a new archive/check-out at a declared commit SHA;
-2. set `reviewed_revision` in `sources/nestfolio-runtime.yaml` to that full SHA;
-3. compare the declared revision with the archive inventoried by RI-001;
-4. update only evidence that differs;
-5. re-record G2 pass or fail.
-
-No target architecture, bounded-context allocation, concept renaming, migration design, or product-experience work is authorized during this continuation.
+TA-001 may not silently revise the Product Foundation, restore rejected concepts or scope, or treat current runtime breadth as a mandatory target feature set.
 
 ## Current ratified decisions
 
@@ -103,27 +100,27 @@ Initial wedge:
 
 ## Current-system evidence state
 
-- `docs/20-current-system/current-runtime-map.md` is **provisional**.
-- It is factual for Nestfolio archive SHA-256 `2a58ddd65ea3247c76a34ae0f1020d7709d3c8b2154f6a505d9fdcf61626ef74`.
-- It is not yet bound to a Nestfolio commit SHA.
-- Tests were inspected statically but not executed during RI-001 because the available environment did not satisfy the repository's declared Node/pnpm requirements and dependencies were absent.
-- G2 remains closed until revision provenance is repaired and the map is checked against that revision.
+- `docs/20-current-system/current-runtime-map.md` is **validated**.
+- It is bound to Nestfolio revision `3aa8f4773955541415f615abd80a0a9702bcb416` and archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`.
+- Every exact repository path cited as implementation or test evidence was rechecked against the uploaded revision.
+- All major feature families have repository evidence or explicit implemented/partial/documented-only/test-only/absent/unclear status.
+- Tests were inspected statically but not executed because the available environment provided Node `22.16.0`, no pnpm, and no installed dependencies, while Nestfolio requires Node `>=24`, pnpm `>=10`, and declares `pnpm@10.30.3`.
+- Static inspection found 79 test files and 421 top-level `test(...)` declarations; `runtime/GUIDE.md` states 422.
+- G2 passed despite the execution limitation because test execution was not a prerequisite when repository runtime requirements could not be satisfied.
 
 ## Iteration queue
 
 1. PF-001 — Product Falsification — **complete**
-2. RI-001 — Current Runtime Inventory — **inventory complete; provenance closure active**
-3. TA-001 — Target Architecture — **blocked by G2 failure**
-4. PX-001 — Product Experience — blocked
+2. RI-001 — Current Runtime Inventory — **complete; G2 passed**
+3. TA-001 — Target Architecture — **sole authorized next iteration**
+4. PX-001 — Product Experience — blocked pending G3
 5. MA-001 — Migration Architecture — blocked
 6. VS-001 — First Vertical Slice — blocked
 
-Only the first incomplete iteration is active.
+No iteration after TA-001 is authorized yet.
 
-## Blockers
+## Active constraints and blockers
 
-- G2 cannot pass until `sources/nestfolio-runtime.yaml` records an exact reviewed commit and the runtime map is verified against it.
-- Target architecture is blocked until G2 passes.
 - Target architecture may not silently restore the rejected broad control-plane boundary, Commitment entity, or preserve-feature-completeness constraint.
 - The breadth of the current Nestfolio runtime is evidence, not a target feature-retention mandate.
 - Final naming and category claims are blocked until a dedicated market and availability study supported by user evidence.
@@ -131,34 +128,31 @@ Only the first incomplete iteration is active.
 - Migration design is blocked until G3 passes.
 - Implementation is blocked until a vertical slice is approved.
 
-## Required input for the RI-001 continuation
+## Required input for TA-001
 
 Use:
 
 - the complete current `continuity-lab` repository;
-- `sessions/RI-001-runtime-inventory/context-pack.yaml`;
+- `sessions/TA-001-target-architecture/context-pack.yaml`;
+- `docs/00-governance/product-development-operating-model.md`;
+- `docs/00-governance/artifact-governance.md`;
+- `docs/00-governance/design-levels.md`;
+- `docs/10-product/product-foundation.md`;
 - `docs/20-current-system/current-runtime-map.md`;
-- a Nestfolio checkout/archive with an exact full Git commit SHA;
-- an updated `sources/nestfolio-runtime.yaml` recording that SHA;
+- `docs/50-validation/product-falsification-report.md`;
+- `docs/90-state/program-state.md`;
+- relevant validated or ratified Decision Records;
+- targeted Nestfolio runtime slices only when the validated map is insufficient;
 - no raw PF-001 or RI-001 chat transcript.
 
-## Required output from the RI-001 continuation
+## G2 completion record
 
-- verified or corrected current-runtime evidence against the declared commit;
-- updated source manifest;
-- updated program state and artifact index if status changes;
-- updated RI-001 handoff;
-- final G2 pass or fail;
-- exact changed-file list.
+G2 passed because:
 
-## G2 pass condition carried forward
-
-G2 may pass only when:
-
-- the current runtime is mapped without redesigning it;
-- responsibilities, data, workflows, dependencies, invariants, and tests are documented;
-- every major feature family has repository evidence;
-- unknowns are explicit;
+- the current runtime is mapped without redesign;
+- responsibilities, state, workflows, dependencies, transitions, invariants, failure handling, bindings, and tests are documented;
+- every major feature family has repository evidence or explicit unknown/absence status;
+- observations and interpretations remain separated;
 - the evidence is bound to the exact Nestfolio revision declared by the source manifest.
 
 ## PF-001 kill criteria carried forward
