@@ -2,7 +2,9 @@
 artifact_id: LAB-README
 status: ratified
 owner: program
-last_updated: 2026-07-12
+last_updated: 2026-07-13
+supersedes: []
+superseded_by: null
 ---
 
 # Continuity Lab
@@ -39,51 +41,41 @@ Canonical for:
 
 Nestfolio is an implementation source and experimental proving ground. It is not the canonical source for the future product definition.
 
-## Immediate execution order
+## Current program position
 
-Do not start target architecture yet.
+Completed:
 
-1. **PF-001 — Product falsification**
-2. **RI-001 — Current runtime inventory**
-3. **TA-001 — Target architecture**
+1. **PF-001 — Product Falsification** — G1 passed with material revision.
+2. **RI-001 — Current Runtime Inventory** — G2 passed.
+3. **TA-001 — Target Architecture** — G3 passed.
 
-Each iteration runs in a fresh AI context and produces repository artifacts.
+Sole authorized next iteration:
 
-## Setup
+4. **PX-001 — Product Experience**
 
-Create a private, empty GitHub repository named:
+Migration and implementation remain blocked.
 
-```text
-continuity-lab
-```
-
-Unpack this bootstrap into it, then run:
-
-```bash
-git init
-git add .
-git commit -m "bootstrap Continuity product design program"
-git branch -M main
-git remote add origin git@github.com:fabio-vitali/continuity-lab.git
-git push -u origin main
-```
-
-Alternatively, after unpacking:
-
-```bash
-gh repo create fabio-vitali/continuity-lab   --private   --source=.   --remote=origin   --push
-```
+See `docs/90-state/program-state.md` for the canonical current state.
 
 ## Before every AI session
 
 1. Pull the latest `continuity-lab`.
-2. Export or zip the repository.
+2. Export or ZIP the repository.
 3. Upload only the inputs listed in that session's Context Pack.
 4. Paste the corresponding `prompt.md` unchanged.
 5. Do not paste earlier chat transcripts.
 6. At the end, download the produced files.
 7. Review the Git diff.
-8. Commit the iteration output using the required commit message.
+8. Commit the iteration output using the commit message declared by the current execution instructions.
+
+## Next session
+
+Use:
+
+- `sessions/PX-001-product-experience/context-pack.yaml`
+- `sessions/PX-001-product-experience/prompt.md`
+
+Run PX-001 in a fresh ChatGPT conversation using the latest repository ZIP. Do not upload Nestfolio unless the session identifies a narrow missing current-experience fact.
 
 ## Canonical starting points
 
@@ -91,6 +83,8 @@ gh repo create fabio-vitali/continuity-lab   --private   --source=.   --remote=o
 - Artifact rules: `docs/00-governance/artifact-governance.md`
 - Design levels: `docs/00-governance/design-levels.md`
 - Product foundation: `docs/10-product/product-foundation.md`
+- Current runtime evidence: `docs/20-current-system/current-runtime-map.md`
+- Target architecture: `docs/30-target-architecture/target-architecture.md`
 - Program state: `docs/90-state/program-state.md`
 - Artifact index: `docs/90-state/artifact-index.md`
 

@@ -1,0 +1,141 @@
+iteration:
+  id: PX-001
+  type: product-experience
+
+objective:
+  primary_question: >
+    How can the validated Context Pack and Handoff architecture deliver useful
+    first value within ten minutes, remain understandable and recoverable, and
+    preserve authority boundaries across human and executor handoffs?
+
+deliverables:
+  - path: docs/40-product-experience/product-experience.md
+    purpose: Own the target product workflows, interaction model, explainability, and recovery experience.
+  - path: decisions/
+    purpose: Record high-impact product-experience decisions.
+  - path: docs/90-state/program-state.md
+    purpose: Record G4 result and the sole authorized next iteration.
+  - path: docs/90-state/artifact-index.md
+    purpose: Record changed artifact status and ownership.
+  - path: sessions/PX-001-product-experience/session-handoff.md
+    purpose: Prepare migration-architecture work only if G4 passes.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/10-product/product-foundation.md
+  - docs/30-target-architecture/target-architecture.md
+  - docs/50-validation/product-falsification-report.md
+  - docs/90-state/program-state.md
+  - decisions/DR-0004-do-not-establish-engineering-continuity-category.md
+  - decisions/DR-0005-separate-goal-and-guard.md
+  - decisions/DR-0006-narrow-product-boundary.md
+  - decisions/DR-0007-narrow-continuity-kernel.md
+  - decisions/DR-0008-local-first-artifact-authority.md
+  - decisions/DR-0009-typed-read-oriented-providers.md
+  - decisions/DR-0010-separate-pack-definitions-from-context-packs.md
+  - decisions/DR-0011-explicit-context-formation-pipeline.md
+  - sessions/TA-001-target-architecture/session-handoff.md
+
+source_inputs:
+  - targeted current-runtime evidence only when a concrete current-experience fact is missing
+
+decisions_in_scope:
+  - onboarding and ten-minute first value
+  - primary Context Pack workflow
+  - primary Handoff and takeover workflow
+  - validation versus authorization interaction model
+  - source, scope, exclusion, uncertainty, and evidence explainability
+  - pending human Decision interaction
+  - provider failure, stale state, contradiction, and recovery experience
+  - executor-neutral export and executor switching
+  - human-only usage
+  - progressive adoption
+  - bounded CLI and local Console roles
+
+decisions_out_of_scope:
+  - target architecture ownership changes without an explicit cross-level revision proposal
+  - implementation code and package layout
+  - detailed migration sequence
+  - final commercial naming, pricing, and packaging
+  - hosted enterprise governance and analytics
+  - generic backlog, policy, orchestration, incident, or learning workflows
+
+constraints:
+  - preserve the validated Product Foundation and target architecture
+  - first useful artifact or diagnostic within ten minutes
+  - repository-native and local-first initial value
+  - executor-neutral and human-usable
+  - no second authoritative state
+  - visible source authority, revisions, exclusions, uncertainty, and pending decisions
+  - deterministic diagnostics must be distinct from judgment and human authority
+  - CLI and Console may not become sources of truth
+  - no silent Context Pack completeness claim
+  - no mandatory hosted service
+
+required_scenarios:
+  - single developer with a long interrupted task
+  - small team using existing issue and CI systems
+  - monorepo with path and ownership boundaries
+  - long migration interrupted across sessions
+  - executor switch mid-work
+  - human-only handoff
+  - product repository dogfood
+  - required provider unavailable
+  - contradictory canonical sources
+  - stale authorized Context Pack
+  - interrupted local operation and recovery
+  - successor cannot identify the next correct action
+
+open_questions:
+  - default authorization policy
+  - terminology for Pack Definition versus Context Pack
+  - minimum required fields versus progressive disclosure
+  - takeover-validation protocol
+  - omission-diagnostic confidence language
+  - whether a local Console is necessary for the initial wedge
+  - how and when to show Formation Trace details
+  - offline behavior when external references cannot refresh
+
+explicit_exclusions:
+  - raw historical chats
+  - full Nestfolio repository by default
+  - migration implementation
+  - unrelated current-runtime feature retention
+  - universal engineering Console
+  - product-owned Goal or Guard lifecycle
+  - worker, orchestrator, deploy, or merge execution
+  - Lesson curation and automatic rule minting
+
+required_methods:
+  - scenario-driven workflow design
+  - progressive-disclosure analysis
+  - authority and confidence communication analysis
+  - error and recovery journey design
+  - first-value friction analysis
+  - comparative baseline awareness
+  - explicit cross-level contradiction check
+
+output_contract:
+  - distinguish observations, proposals, decisions, rejected alternatives, and open questions
+  - specify end-to-end user journeys and state-visible transitions
+  - show CLI and optional Console responsibility boundaries
+  - show failure and recovery behavior
+  - retain all architecture authority boundaries
+  - create Decision Records for high-impact choices
+  - update program state and artifact index
+  - create a session handoff
+  - list every changed file
+
+completion_criteria:
+  - onboarding and ten-minute first value are concrete
+  - Context Pack lifecycle is understandable and actionable
+  - Handoff and takeover workflows are concrete
+  - authority, scope, exclusions, evidence, uncertainty, and decisions are explainable
+  - failure and recovery UX is specified
+  - human and executor workflows share the same canonical artifacts
+  - progressive adoption does not require migration of external systems
+  - Console scope is bounded or explicitly rejected
+  - architecture contradictions are absent or raised explicitly
+  - G4 pass or fail is recorded

@@ -1,144 +1,66 @@
-# Exact Setup and Execution Instructions
+# Current Execution Instructions
 
-## 1. Create the canonical repository
+## 1. Review and commit TA-001
 
-Create a **private** GitHub repository:
-
-```text
-fabio-vitali/continuity-lab
-```
-
-Do not put these artifacts into Nestfolio.
-
-## 2. Bootstrap it
-
-Unzip `continuity-lab-bootstrap.zip`, enter the `continuity-lab` directory, and run:
+After replacing your local repository with the returned ZIP contents:
 
 ```bash
-git init
-git add .
-git commit -m "bootstrap Continuity product design program"
-git branch -M main
-git remote add origin git@github.com:fabio-vitali/continuity-lab.git
-git push -u origin main
-```
-
-Or:
-
-```bash
-gh repo create fabio-vitali/continuity-lab --private --source=. --remote=origin --push
-```
-
-## 3. Register the Nestfolio revision
-
-In your local Nestfolio clone:
-
-```bash
-git pull
-git rev-parse HEAD
-```
-
-Copy the SHA into:
-
-```text
-continuity-lab/sources/nestfolio-runtime.yaml
-```
-
-Replace:
-
-```yaml
-reviewed_revision: TO_BE_SET_BEFORE_RI-001
-```
-
-Commit this change before RI-001.
-
-## 4. Run PF-001 now
-
-Start a **new ChatGPT conversation**.
-
-Upload only the latest ZIP of `continuity-lab`.
-
-Paste the complete content of:
-
-```text
-sessions/PF-001-product-falsification/prompt.md
-```
-
-Do not upload Nestfolio. Do not paste this chat.
-
-When the session returns the updated repository:
-
-```bash
-unzip <returned-file>.zip -d /tmp/continuity-result
-rsync -av --delete /tmp/continuity-result/continuity-lab/ ./continuity-lab/
 cd continuity-lab
 git diff
-git add .
-git commit -m "PF-001 falsify product thesis"
-git push
-```
-
-Review the diff before committing.
-
-## 5. Run RI-001 only after PF-001
-
-Requirements:
-
-- Program State says G1 passed, or explicitly defines a corrective product iteration.
-- `sources/nestfolio-runtime.yaml` contains an exact commit SHA.
-
-Start another new conversation.
-
-Upload:
-
-- latest `continuity-lab.zip`;
-- `nestfolio` ZIP at the recorded revision.
-
-Paste:
-
-```text
-sessions/RI-001-runtime-inventory/prompt.md
-```
-
-Commit result:
-
-```bash
-git commit -am "RI-001 map current runtime"
-```
-
-Add new files before committing with `git add .`.
-
-## 6. Run TA-001 only after RI-001
-
-Requirements:
-
-- G1 passed;
-- G2 passed;
-- Product Foundation, Falsification Report, and Current Runtime Map are canonical.
-
-Start another new conversation.
-
-Upload latest `continuity-lab.zip`. Upload Nestfolio only if requested or needed for targeted verification.
-
-Paste:
-
-```text
-sessions/TA-001-target-architecture/prompt.md
-```
-
-Commit result:
-
-```bash
 git add .
 git commit -m "TA-001 define target architecture"
 git push
 ```
 
-## Never do these things
+Review the diff before committing. Confirm that:
 
-- Do not use the current chat as input to later phases.
-- Do not keep canonical decisions only in Canvas.
-- Do not copy the runtime into `continuity-lab`.
-- Do not start target architecture before PF-001 and RI-001.
-- Do not allow an AI session to change product thesis silently.
-- Do not commit AI output without reviewing the diff.
+- `docs/30-target-architecture/target-architecture.md` is present and validated;
+- Program State records G3 as passed;
+- DR-0007 through DR-0011 are present and validated;
+- PX-001 is the sole authorized next iteration;
+- no implementation or migration plan was introduced.
+
+## 2. Run PX-001 in a fresh conversation
+
+Upload the latest ZIP of `continuity-lab`.
+
+Do not upload Nestfolio unless a narrow current-experience fact is later shown to be missing from canonical artifacts.
+
+Paste the complete content of:
+
+```text
+sessions/PX-001-product-experience/prompt.md
+```
+
+The session must use:
+
+```text
+sessions/PX-001-product-experience/context-pack.yaml
+```
+
+Do not paste PF-001, RI-001, or TA-001 chat transcripts.
+
+## 3. Commit PX-001 only after review
+
+Expected commit command:
+
+```bash
+git add .
+git commit -m "PX-001 define product experience"
+git push
+```
+
+## Still blocked
+
+Do not start:
+
+- MA-001 Migration Architecture before G4 passes;
+- VS-001 First Vertical Slice before G4 and G5 pass;
+- implementation work in Nestfolio before an approved vertical slice exists.
+
+## Permanent rules
+
+- Chat and Canvas are not canonical.
+- Do not silently revise Product Foundation or Target Architecture from a lower design level.
+- Do not restore the broad control-plane boundary, Commitment entity, product-owned Goal/Guard lifecycle, generic orchestration, learning loop, or universal Console.
+- Review every generated Git diff before committing.

@@ -2,15 +2,17 @@
 artifact_id: TARGET-ARCH-INDEX
 status: ratified
 owner: architecture
-last_updated: 2026-07-12
+last_updated: 2026-07-13
+supersedes: []
+superseded_by: null
 ---
 
 # Target Architecture
 
-The target architecture begins only after gates G1 and G2 pass.
+Gate G3 passed on 2026-07-13.
 
-Planned primary artifact:
+Canonical artifact:
 
-- `target-architecture.md` — produced by TA-001.
+- `target-architecture.md` — validated target bounded contexts, ownership, contracts, persistence, providers, Context Formation, failure behavior, dependency rules, and current-to-target mapping.
 
-Do not create this artifact from the current mixed conversation.
+Target architecture is an input to PX-001. Migration and implementation remain blocked.
