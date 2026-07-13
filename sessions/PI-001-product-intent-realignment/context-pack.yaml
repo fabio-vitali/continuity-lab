@@ -1,0 +1,131 @@
+iteration:
+  id: PI-001
+  type: product-intent-realignment
+  status: complete
+
+objective:
+  primary_question: >
+    What product are we actually building, for whom, and according to which
+    success criteria, when Continuity is a repository-native framework for
+    effective and continuous coding-agent work rather than a commercial
+    universal control plane?
+
+deliverables:
+  - path: docs/10-product/product-foundation.md
+    purpose: Own the corrected product intent, boundary, concepts, and dogfooding success criteria.
+  - path: docs/50-validation/product-falsification-report.md
+    purpose: Preserve PF-001 evidence while correcting the narrow product interpretation.
+  - path: decisions/DR-0012-repository-native-agentic-development-framework.md
+    purpose: Record the accepted product realignment and supersede DR-0006 as active boundary authority.
+  - path: docs/30-target-architecture/target-architecture.md
+    purpose: Mark TA-001 provisional and require TA-002 without redesigning architecture.
+  - path: docs/90-state/program-state.md
+    purpose: Preserve G2, revise G1 interpretation, reopen G3, and authorize TA-002 only.
+  - path: docs/90-state/artifact-index.md
+    purpose: Record all changed artifact statuses and roles.
+  - path: sessions/PI-001-product-intent-realignment/session-handoff.md
+    purpose: Close PI-001 and make TA-002 executable in a fresh context.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/10-product/product-foundation.md
+  - docs/50-validation/product-falsification-report.md
+  - docs/20-current-system/current-runtime-map.md
+  - docs/30-target-architecture/target-architecture.md
+  - decisions/DR-0001-separate-canonical-design-repository.md
+  - decisions/DR-0002-artifact-first-context-isolation.md
+  - decisions/DR-0003-falsification-before-architecture.md
+  - decisions/DR-0004-do-not-establish-engineering-continuity-category.md
+  - decisions/DR-0005-separate-goal-and-guard.md
+  - decisions/DR-0006-narrow-product-boundary.md
+  - decisions/DR-0007-narrow-continuity-kernel.md
+  - decisions/DR-0008-local-first-artifact-authority.md
+  - decisions/DR-0009-typed-read-oriented-providers.md
+  - decisions/DR-0010-separate-pack-definitions-from-context-packs.md
+  - decisions/DR-0011-explicit-context-formation-pipeline.md
+  - docs/90-state/program-state.md
+  - docs/90-state/artifact-index.md
+  - sessions/TA-001-target-architecture/session-handoff.md
+
+source_inputs:
+  - none; the validated Current Runtime Map is sufficient implementation evidence for PI-001
+
+decisions_in_scope:
+  - primary user and operating environment
+  - coding-agent use as a product premise
+  - Claude Code-first meaning and canonical-artifact boundary
+  - skills and executable procedures
+  - repository-local agent-work state ownership
+  - Work Items, Working Sets, Epics, Sessions, Runs, scope, and completion criteria
+  - Context Pack and Handoff role within the complete framework
+  - Guards, Evidence, Decisions, Lessons, and learning
+  - framework core, agent adapters, reusable Packs, and Nestfolio-specific bindings
+  - PF-001 conclusions retained and superseded
+  - DR-0006 supersession
+  - sustained Nestfolio dogfooding success criteria
+  - gate and iteration-sequence correction
+
+decisions_out_of_scope:
+  - revised bounded contexts and package architecture
+  - implementation code or schemas
+  - migration sequencing
+  - product-experience design
+  - commercial packaging, pricing, or market strategy
+  - automatic restoration of current Nestfolio features
+
+constraints:
+  - use continuity-lab as the only canonical project memory
+  - preserve RI-001 and G2
+  - preserve PF-001 evidence against the commercial universal-control-plane hypothesis
+  - keep Goal and Guard separate
+  - do not replace enterprise systems of record
+  - add external integrations only for concrete usage
+  - do not require usefulness without coding agents
+  - do not prioritize theoretical executor portability over Claude Code-first practical value
+  - do not redesign the architecture during PI-001
+  - mark TA-001 provisional and require TA-002
+  - authorize exactly one next iteration
+
+explicit_exclusions:
+  - previous chats
+  - Nestfolio source reinspection
+  - architecture redesign
+  - implementation and migration planning
+  - universal backlog integration
+  - commercial control-plane design
+  - silent promotion of proposals into decisions
+  - deletion of historical evidence
+
+required_methods:
+  - cross-level contradiction analysis
+  - explicit retained-versus-superseded conclusion classification
+  - authority-boundary analysis
+  - practical operational-loop modeling
+  - current-feature role classification requirements
+  - concrete dogfooding validation design
+
+output_contract:
+  - distinguish validated decisions, hypotheses, constraints, historical evidence, and provisional criteria
+  - update all owning artifacts
+  - preserve historical evidence with explicit supersession markers
+  - record one new Decision Record
+  - preserve G2 and reopen G3
+  - authorize TA-002 only
+  - create a complete session handoff
+  - list every changed file
+
+completion_criteria:
+  - primary user, executor premise, and operating environment are explicit
+  - Claude Code-first is defined without unnecessary canonical coupling
+  - repository-local agent-work state ownership is decided
+  - all required operational concepts have explicit roles
+  - Context Packs and Handoffs are placed inside the larger loop
+  - framework core, adapters, reusable Packs, and Nestfolio bindings are distinguished
+  - PF-001 retained and superseded conclusions are explicit
+  - DR-0006 is superseded through a new Decision Record
+  - sustained Nestfolio dogfooding criteria are concrete
+  - TA-001 is provisional and not an implementation baseline
+  - Program State preserves G2, reopens G3, and authorizes TA-002 only
+  - migration and implementation remain blocked

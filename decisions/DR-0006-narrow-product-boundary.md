@@ -1,13 +1,33 @@
 ---
 artifact_id: DR-0006
-status: validated
+status: superseded
 owner: product
 last_updated: 2026-07-13
 supersedes: []
-superseded_by: null
+superseded_by: DR-0012
 ---
 
 # DR-0006 — Narrow the Initial Product Boundary and Reject Feature Completeness as a Product Constraint
+
+## PI-001 supersession note
+
+`DR-0012` supersedes this record as the active product-boundary decision.
+
+The following conclusions remain preserved through DR-0012:
+
+- do not build a universal commercial engineering control plane;
+- do not require preservation of every current feature;
+- do not replace enterprise systems of record by default;
+- add external integrations selectively.
+
+The following restrictions are superseded:
+
+- Context Pack and Handoff as the complete product boundary;
+- categorical exclusion of repository-local backlog, orchestration, resumable Run state, Guards, Lessons, and learning;
+- no-agent viability and theoretical executor neutrality as product requirements;
+- read-only integration and externally owned execution as universal product constraints.
+
+The remainder of this file is retained as historical PF-001 evidence and rationale.
 
 ## Context
 
@@ -38,7 +58,7 @@ Do not infer that this Decision removes or deprecates any current implementation
 
 ## Status
 
-Validated, not ratified.
+Superseded by `DR-0012`. This decision was historically validated during PF-001 but no longer governs the active product boundary.
 
 ## Supporting evidence
 
@@ -111,4 +131,4 @@ Before expanding the boundary, demonstrate:
 
 ## Superseded by
 
-None.
+`DR-0012 — Reframe Continuity as a Repository-Native Agentic-Development Framework`.

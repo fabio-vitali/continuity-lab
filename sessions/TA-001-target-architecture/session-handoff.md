@@ -1,13 +1,19 @@
 ---
 artifact_id: TA-001-TARGET-ARCHITECTURE-HANDOFF
-status: validated
+status: superseded
 owner: session
 last_updated: 2026-07-13
 supersedes: []
-superseded_by: null
+superseded_by: PI-001-PRODUCT-INTENT-REALIGNMENT-HANDOFF
 ---
 
 # Session Handoff
+
+## PI-001 supersession notice
+
+The TA-001 execution record is retained as historical evidence. Its G3 pass and PX-001 authorization were based on a product interpretation superseded by PI-001 and `DR-0012`.
+
+TA-001 is now provisional, G3 is reopened, and the sole authorized next iteration is TA-002. The original handoff content below records the state at TA-001 closure and is not current program authority.
 
 ## Iteration closed
 

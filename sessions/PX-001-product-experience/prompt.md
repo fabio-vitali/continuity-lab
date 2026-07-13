@@ -1,3 +1,9 @@
+# Superseded — Do Not Run
+
+This PX-001 prompt was prepared from TA-001. PI-001 made TA-001 provisional and reopened G3. The sole authorized next iteration is TA-002. The original prompt is retained below as historical prepared material.
+
+---
+
 You are running iteration **PX-001 — Product Experience**.
 
 This iteration is authorized only if Program State records that G1, G2, and G3 passed.

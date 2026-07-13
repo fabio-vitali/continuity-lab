@@ -9,10 +9,16 @@ superseded_by: null
 
 # Target Architecture
 
-Gate G3 passed on 2026-07-13.
+TA-001 is provisional after PI-001 corrected the Product Foundation.
 
-Canonical artifact:
+Canonical historical artifact:
 
-- `target-architecture.md` — validated target bounded contexts, ownership, contracts, persistence, providers, Context Formation, failure behavior, dependency rules, and current-to-target mapping.
+- `target-architecture.md` — internally coherent TA-001 architecture for the superseded Context Pack/Handoff-only product interpretation.
 
-Target architecture is an input to PX-001. Migration and implementation remain blocked.
+TA-001 is not authorized as an implementation or migration baseline.
+
+G3 is reopened. The sole authorized next iteration is:
+
+- **TA-002 — Target Architecture Revision**
+
+TA-002 must redesign the architecture around the full agentic-development operational loop and explicitly classify all current Nestfolio feature families.

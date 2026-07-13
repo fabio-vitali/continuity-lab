@@ -9,10 +9,10 @@ superseded_by: null
 
 # Product Experience
 
-PX-001 is the sole authorized next iteration after G3 passed on 2026-07-13.
+PX-001 is blocked.
 
-Planned canonical artifact:
+The prepared PX-001 materials were based on TA-001, which is now provisional after PI-001 corrected the Product Foundation and reopened G3.
 
-- `product-experience.md` — onboarding, primary workflows, progressive disclosure, authorization, explainability, error and recovery UX, executor switching, human-only use, CLI, and the bounded role of any local Console.
+Do not run PX-001.
 
-Use `sessions/PX-001-product-experience/context-pack.yaml` and `prompt.md` in a fresh session.
+Product-experience design may resume only after **TA-002 — Target Architecture Revision** completes, G3 is reassessed, and Program State explicitly authorizes the next iteration.

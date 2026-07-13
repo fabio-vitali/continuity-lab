@@ -1,0 +1,165 @@
+iteration:
+  id: TA-002
+  type: target-architecture-revision
+  status: authorized-not-started
+
+objective:
+  primary_question: >
+    What target architecture supports Continuity as a Claude Code-first,
+    repository-native agentic-development framework across work selection,
+    context formation, skill execution, validation, resumable Runs, durable
+    state, Guards, learning, and continuation without becoming a universal
+    enterprise control plane?
+
+deliverables:
+  - path: docs/30-target-architecture/target-architecture.md
+    purpose: Replace the provisional TA-001 baseline with a coherent architecture for the corrected product direction.
+  - path: decisions/
+    purpose: Record high-impact architecture decisions and explicitly disposition DR-0007 through DR-0011.
+  - path: docs/90-state/program-state.md
+    purpose: Record the TA-002 outcome, explicit G3 result, and exactly one next authorized iteration if G3 passes.
+  - path: docs/90-state/artifact-index.md
+    purpose: Record changed artifact status, ownership, and supersession.
+  - path: sessions/TA-002-target-architecture-revision/session-handoff.md
+    purpose: Close TA-002 and prepare the next iteration only if G3 passes.
+
+canonical_inputs:
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - sessions/TA-002-target-architecture-revision/context-pack.yaml
+  - sessions/PI-001-product-intent-realignment/session-handoff.md
+  - docs/10-product/product-foundation.md
+  - decisions/DR-0012-repository-native-agentic-development-framework.md
+  - docs/50-validation/product-falsification-report.md
+  - docs/20-current-system/current-runtime-map.md
+  - docs/30-target-architecture/target-architecture.md
+  - decisions/DR-0004-do-not-establish-engineering-continuity-category.md
+  - decisions/DR-0005-separate-goal-and-guard.md
+  - decisions/DR-0006-narrow-product-boundary.md
+  - decisions/DR-0007-narrow-continuity-kernel.md
+  - decisions/DR-0008-local-first-artifact-authority.md
+  - decisions/DR-0009-typed-read-oriented-providers.md
+  - decisions/DR-0010-separate-pack-definitions-from-context-packs.md
+  - decisions/DR-0011-explicit-context-formation-pipeline.md
+  - docs/90-state/program-state.md
+  - docs/90-state/artifact-index.md
+
+source_inputs:
+  - the Nestfolio repository only if a specific feature-family classification cannot be resolved from the validated Current Runtime Map
+
+decisions_in_scope:
+  - target bounded contexts and responsibility allocation
+  - framework-core boundary
+  - Claude Code adapter boundary and use of native capabilities
+  - reusable Pack and Nestfolio-specific Pack or binding boundaries
+  - Work Item, local backlog, Working Set, Epic, Session, and Run ownership
+  - scope, exclusions, constraints, and completion-criteria lifecycle
+  - skill and executable-procedure architecture
+  - Context Pack and Handoff placement in the complete operational loop
+  - Guard, Evidence, Decision, Lesson, and learning lifecycle and authority
+  - durable state, journal, recovery, idempotency, and projections
+  - external authority and selective integration contracts
+  - current-runtime feature-family classification
+  - explicit retention, revision, or supersession of DR-0007 through DR-0011
+  - dependency directions and failure behavior
+
+decisions_out_of_scope:
+  - implementation code, package-level implementation plans, or schemas
+  - product-experience design
+  - migration sequence or code extraction plan
+  - commercial product, pricing, or market-category design
+  - universal integration coverage
+  - automatic preservation of every current feature
+  - automatic preservation of TA-001 decisions
+
+constraints:
+  - preserve the corrected Product Foundation and DR-0012
+  - use Claude Code as the first executor without unnecessarily coupling canonical durable state
+  - support the complete operational loop
+  - preserve Goal and Guard separation
+  - preserve enterprise systems of record for their own objects
+  - allow repository-local agent-work authority where explicitly bounded
+  - use external integrations only for concrete workflows
+  - classify every current feature family
+  - prefer practical value over theoretical executor parity
+  - distinguish framework core from reusable and Nestfolio-specific behavior
+  - make all lifecycle and state authority explicit
+  - do not authorize migration or implementation unless G3 passes
+
+required_scenarios:
+  - select and execute one Work Item through Claude Code skills
+  - form and execute a multi-item Working Set
+  - coordinate an Epic across multiple sessions
+  - interrupt and resume a Run without duplicate effects
+  - require and fulfil a human Decision
+  - validate completion against explicit criteria and Evidence
+  - record a Lesson and reuse it through a Skill, check, validator, Guard, or Pack update
+  - keep a Nestfolio-specific procedure outside framework core
+  - reference an external issue without duplicating its full lifecycle
+  - operate when an external integration is unavailable
+  - recover after session loss or context truncation
+  - switch executor using durable canonical state without requiring parity of native features
+  - dogfood Continuity on its own repository-development process
+
+open_questions:
+  - which current journal semantics belong in framework core
+  - whether local Work Item and Epic state share one aggregate model or separate contexts
+  - how Skills and Packs are versioned, composed, and authorized
+  - which Guard and Lesson lifecycle capabilities are core versus Pack behavior
+  - what Run state must be canonical versus operational
+  - how Claude Code-native state is surfaced into durable artifacts
+  - where Context Formation ends and execution orchestration begins
+  - which external writes are justified by concrete Nestfolio workflows
+  - which TA-001 decisions survive unchanged
+
+explicit_exclusions:
+  - raw previous chats
+  - implementation code
+  - migration planning
+  - product-experience workflows
+  - commercial control-plane design
+  - no-agent usefulness requirement
+  - universal backlog synchronization
+  - equal-priority multi-executor implementation
+  - unclassified restoration of Nestfolio features
+  - silent promotion of proposals into decisions
+
+required_methods:
+  - architecture synthesis from the corrected L1/L2 product direction
+  - current-to-target feature classification
+  - authority and lifecycle analysis
+  - dependency-direction analysis
+  - scenario stress testing
+  - failure, interruption, and recovery analysis
+  - explicit TA-001 decision disposition
+  - contradiction check against Product Foundation and DR-0012
+
+output_contract:
+  - distinguish observations, proposals, decisions, rejected alternatives, and open questions
+  - define bounded contexts, owned state, lifecycle authority, and allowed dependencies
+  - show the complete operational loop end to end
+  - classify every current runtime feature family
+  - explicitly disposition DR-0007 through DR-0011
+  - create Decision Records for accepted high-impact choices
+  - update target architecture, program state, and artifact index
+  - record an explicit G3 pass or fail
+  - authorize exactly one next iteration only if justified
+  - keep migration and implementation blocked unless G3 passes
+  - create the TA-002 session handoff
+  - list every changed file and return the complete repository ZIP
+
+completion_criteria:
+  - architecture covers work selection, context, skills, execution, validation, state and learning, and continuation
+  - Claude Code-first and canonical-artifact boundaries are explicit
+  - repository-local and external authority boundaries are explicit
+  - Work Items, Working Sets, Epics, Sessions, Runs, scope, and completion criteria have deliberate homes
+  - Skills and executable procedures have a deliberate home
+  - Context Packs and Handoffs are integrated without defining the entire product
+  - Guards, Evidence, Decisions, Lessons, and learning have explicit lifecycle and authority
+  - framework core, agent adapters, reusable Packs, and Nestfolio-specific bindings are separated
+  - all current feature families are classified
+  - TA-001 decisions are explicitly retained, revised, or superseded
+  - failure and recovery behavior are coherent
+  - unresolved trade-offs are explicit
+  - G3 passes or fails explicitly

@@ -19,9 +19,36 @@ Research cut-off: **2026-07-13**.
 
 Can the proposed Continuity product thesis, category, boundaries, adoption model, and central abstractions survive a serious attempt to prove that the product is unnecessary, incoherent, or economically impractical?
 
+
+## PI-001 reinterpretation — Validated correction
+
+PI-001 identified that PF-001 tested the proposal through an incorrectly dominant commercial and universal-control-plane framing.
+
+The market, category, substitution, synchronization, and governance evidence in this report remains valid. It continues to falsify:
+
+- an established Engineering Continuity market category;
+- a universal engineering control plane;
+- mandatory ownership of enterprise backlog, CI/CD, policy, incident, catalog, and organization state;
+- preservation of every existing Nestfolio feature as a product constraint;
+- universal external integrations as an adoption requirement.
+
+The report's narrower conclusion is revised. Context Packs and Handoffs are not the complete product definition. The actual product is a repository-native agentic-development framework whose operational loop includes work selection, context formation, execution through skills and agents, validation, durable state, learning, and continuation.
+
+The following PF-001-derived requirements are superseded by `DR-0012`:
+
+- usefulness without coding agents;
+- executor neutrality as a higher priority than Claude Code-first practical value;
+- categorical exclusion of repository-local backlog, orchestration, Run state, Guards, Lessons, and learning;
+- the assumption that all execution and runtime checkpoints must remain external;
+- a Context Pack/Handoff ten-minute wedge as the defining complete-product success criterion.
+
+PF-001 remains valid evidence against the commercial universal-control-plane hypothesis. It is no longer the authority for a Context Pack/Handoff-only product boundary.
+
 ## Verdict
 
-### Overall result
+The verdict below records PF-001 as originally concluded. Where it conflicts with the PI-001 reinterpretation above, PI-001 and `DR-0012` govern.
+
+### PF-001 historical overall result
 
 **The proposed broad “Engineering Continuity Control Plane” does not survive falsification. A narrower repository-native continuity product hypothesis survives.**
 
@@ -47,7 +74,7 @@ A narrower hypothesis remains credible:
 
 This surviving hypothesis is not yet a validated product. It is a testable wedge.
 
-### G1 result
+### PF-001 historical G1 result
 
 **G1 — Product survivability: PASS WITH MATERIAL REVISION.**
 
@@ -843,6 +870,8 @@ Measure:
 
 ## Final falsification statement
 
-Continuity should **not** proceed as a new all-encompassing control plane, a replacement for issue tracking, a generic policy platform, an agent orchestrator, or an organization-wide learning system.
+Continuity should **not** proceed as a new all-encompassing commercial control plane, a replacement for enterprise issue tracking, a universal policy platform, a mandatory hosted agent platform, or an organization-wide governance system.
 
-It may proceed as a narrow, repository-native continuity protocol and product hypothesis only if it can prove that explicit, evidence-bound context and handoffs outperform disciplined use of existing repositories, issue trackers, CI, and agent instructions while adding little maintenance and no new source of truth.
+PF-001 remains valid evidence for those rejections.
+
+PI-001 supersedes the conclusion that Continuity must therefore be limited to Context Packs and Handoffs. Continuity may proceed as a repository-native agentic-development framework that owns the local work state, executable procedures, resumable Runs, validation, Guards, and learning required for sustained coding-agent work, provided it preserves clear authority boundaries and proves practical value through Nestfolio dogfooding.

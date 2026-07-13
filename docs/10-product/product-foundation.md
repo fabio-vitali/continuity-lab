@@ -11,404 +11,584 @@ superseded_by: null
 
 ## Purpose
 
-Define the current product problem, thesis, boundaries, conceptual hypotheses, constraints, target adopter, and validation requirements.
+Define the current product intent, primary user, operating premise, enduring value, product boundary, conceptual model, success criteria, and validation requirements for Continuity.
 
-Presence in this file does not imply ratification. Each major section states its epistemic status. PF-001 evidence is owned by `docs/50-validation/product-falsification-report.md`.
+This artifact is the L1/L2 product authority. Architecture and implementation must follow it; they may challenge it only through the cross-level change rule.
 
-## PF-001 outcome — Validated Observation
+## PI-001 outcome — Validated product direction
 
-The original proposal for an **Engineering Continuity Control Plane** did not survive falsification.
+The product objective used by PF-001 and TA-001 was framed too much as a potential commercial product and universal engineering control plane. That framing correctly exposed category, integration, synchronization, and governance risks, but it also removed practical capabilities that are central to the actual intended use.
 
-Current source-control, DevSecOps, issue-management, internal-developer-platform, policy, workflow, and coding-agent products can reproduce most of the proposed broad feature set when combined fairly. A product that owns Work, Assurance, Execution, Learning, Trust, and a universal Console would duplicate existing authorities and create substantial governance and synchronization debt.
+Continuity is not being designed primarily as a standalone commercial platform. It is a practical, repository-native framework that helps developers and teams use coding agents effectively across sustained work in medium-to-complex enterprise repositories.
 
-A narrower product hypothesis survives around explicit, evidence-bound Context Packs and Handoffs that support safe continuation across humans, sessions, and executors without replacing existing systems of record.
+Its first executor and primary practical target is Claude Code.
 
-Decision references:
+Its intended evolution path is:
 
-- `DR-0004` — do not establish Engineering Continuity as a market category;
-- `DR-0005` — separate Goal and Guard; reject Commitment as a shared entity;
-- `DR-0006` — narrow the initial product boundary and reject feature completeness as a product constraint.
+```text
+Claude Code
+→ skills
+→ backlog and work orchestration
+→ resumable execution
+→ guards and learning
+```
 
-## Problem — Revised Hypothesis
+Its operational loop is:
 
-Software work can lose material engineering intent when it is interrupted, transferred, or resumed across:
+```text
+select work
+→ form context
+→ execute through skills and agents
+→ validate
+→ record state and learning
+→ continue
+```
 
-- agent sessions;
-- executor or model changes;
-- people and teams;
-- long-running initiatives;
-- architecture or migration phases;
-- incident remediation;
-- repository and documentation evolution.
+Decision reference:
 
-Repositories, issues, pull requests, CI, ADRs, instructions, and agent memory already preserve much of this context when maintained well. The unresolved problem is narrower:
+- `DR-0012` — reframe Continuity as a repository-native agentic-development framework.
 
-> The next human or executor may not know which context is authoritative, relevant, complete, current, intentionally excluded, or still awaiting a human decision.
+## Product description — Validated Decision
 
-The severity of this problem is expected to vary strongly by task length, interruption frequency, repository complexity, and executor changes. It is not assumed to justify a product for ordinary short tasks.
+> Continuity is a repository-native framework for organizing, executing, validating, resuming, and improving long-running software-development work performed with coding agents.
+
+It gives an agent and its human operators durable, inspectable project memory and executable procedures so work can continue across sessions without losing tasks, scope, decisions, constraints, evidence, completion criteria, or learned ways of working.
+
+Context Packs and Handoffs are important mechanisms within this framework. They are not the complete product definition.
+
+## Primary user and operating environment — Validated Decision
+
+The primary user is:
+
+- an experienced software developer, technical lead, architect, or small engineering team;
+- working in a medium-to-complex repository, commonly a monorepo or multi-domain codebase;
+- using coding agents as a normal part of implementation, analysis, validation, and maintenance;
+- responsible for work that spans multiple tasks, sessions, branches, decisions, and verification steps;
+- able to install repository-local conventions, skills, scripts, and state without enterprise procurement.
+
+The primary operating environment is:
+
+- a Git repository containing code, tests, documentation, and agent instructions;
+- a local or CI-capable development environment;
+- Claude Code as the first executor;
+- existing engineering systems such as GitHub, GitLab, Jira, CI, or deployment platforms where already useful;
+- repository-local Continuity artifacts and executable procedures that remain reviewable through ordinary code review.
+
+Nestfolio is the reference implementation and first dogfooding environment. It is not the universal product model, but it is the first source of practical requirements and validation evidence.
+
+## Coding-agent premise — Validated Decision
+
+Using a coding agent is a product premise, not an optional adoption mode.
+
+Continuity does not need to prove that it is independently valuable for agentless software development. Humans remain essential as operators, reviewers, decision authorities, and collaborators, but the product exists to improve agent-assisted development.
+
+Human-readable and repository-native artifacts remain required because they provide inspectability, reviewability, recovery, and vendor independence. They do not imply a separate human-only product requirement.
+
+## Claude Code-first — Validated Decision
+
+Claude Code-first means:
+
+- initial workflows, skills, hooks, commands, adapters, and dogfooding optimize for Claude Code;
+- current practical value takes priority over abstract parity across executors;
+- Claude Code capabilities may be used directly when they solve real repository work problems;
+- the first complete operational loop must work well with Claude Code before multi-executor equivalence is pursued.
+
+Claude Code-first does not mean that canonical product artifacts should encode Claude Code-specific semantics when a stable, inexpensive, repository-level representation is sufficient.
+
+The boundary is:
+
+- **canonical work state and durable product concepts** should remain understandable outside one vendor runtime;
+- **executor adapters and executable procedures** may be Claude Code-specific;
+- **portability** is a preservation property for durable state, not a requirement to support every executor equally or immediately;
+- abstractions must not be introduced solely to achieve theoretical executor neutrality at the expense of current usefulness.
+
+## Problem — Revised Validated Hypothesis
+
+Coding agents can perform substantial software work, but long-running repository work degrades when the active session is treated as the only operational memory.
+
+Material information is commonly lost or fragmented across:
+
+- task lists and partially completed backlog items;
+- changing scope and exclusions;
+- multi-task working sets and epics;
+- decisions and unresolved questions;
+- project constraints and repository-specific procedures;
+- evidence required to claim completion;
+- interrupted tool calls or partially completed operations;
+- lessons discovered during implementation;
+- transitions between sessions, models, people, or branches.
+
+Repository instructions and vendor memory help, but they do not by themselves provide a complete, inspectable work-management and continuation loop.
+
+The practical problem is:
+
+> How can a developer or team use coding agents continuously on a complex repository without repeatedly reconstructing work state, losing constraints or decisions, duplicating actions, or declaring work complete without evidence?
 
 ## Product thesis — Provisional Hypothesis
 
-> A repository-native continuity layer may reduce rediscovery and unsafe continuation by producing explicit, evidence-bound Context Packs and Handoffs that remain portable across people, sessions, and executors, while leaving work, CI, policy enforcement, and workflow execution in their existing systems of record.
+> A repository-native framework that combines executable skills, agent-oriented work state, deliberate context formation, resumable Runs, validation, Guards, Decisions, Evidence, Handoffs, and reusable learning can materially improve the reliability and continuity of coding-agent work without replacing enterprise systems of record.
 
-The product should make continuation:
+The product should make agentic development:
 
-- reproducible;
-- explainable;
-- scoped;
-- evidence-aware;
-- executor-neutral;
-- independent of prior conversation history.
+- continuous across sessions;
+- scope-aware;
+- procedure-driven;
+- resumable after interruption;
+- evidence-bound;
+- reviewable by humans;
+- increasingly adapted to the repository through explicit learning;
+- practical in the repository before it is generalized into a platform.
 
-This thesis remains unvalidated until comparative takeover experiments demonstrate material benefit over a disciplined repository baseline.
+## Category and commercial boundary — Validated Decision
 
-## Category and naming — Validated Decision and Open Question
+- Continuity must not claim an established **Engineering Continuity** market category.
+- The phrase may remain an internal problem-domain label.
+- The current objective is not to create a standalone commercial product, establish a new software category, or satisfy a universal enterprise buyer.
+- Commercial packaging, pricing, hosted governance, and market positioning are not product constraints for the current program.
+- The product must be explainable through the concrete agentic-development problem it solves.
 
-- **Engineering Continuity** is not a validated market category.
-- The phrase may be used internally as a problem-domain label only.
-- **Continuity** remains a working name, not a commercial decision.
-- The product must be explainable without invented category terminology.
-
-Current plain-language description:
-
-> Repository-native, evidence-bound context and handoffs for resumable engineering work across humans and coding agents.
-
-Final naming and trademark analysis remain out of scope.
-
-## Initial adopter — Provisional Hypothesis
-
-The initial adopter is a senior developer, technical lead, or small platform-minded team that:
-
-- owns one or a few repositories;
-- performs multi-session or multi-week engineering work;
-- uses one or more coding agents;
-- experiences executor changes, interruptions, or handoffs;
-- already has Git, CI, issues, and repository documentation;
-- can add repository-local conventions without enterprise procurement;
-- is willing to compare continuation quality against its current workflow.
-
-Large regulated organizations, central platform teams, and human-only teams may be later users but are not the initial market hypothesis.
-
-## Adoption wedge — Provisional Proposal
-
-The minimum useful product should:
-
-1. reference an existing work item or objective without importing the backlog;
-2. form or validate a versioned Context Pack from canonical repository artifacts and selected external references;
-3. require explicit scope, exclusions, uncertainty, and pending human decisions;
-4. create or validate an evidence-bound Handoff at a real interruption or ownership boundary;
-5. allow a different human or executor to resume without the prior conversation;
-6. diagnose missing continuity information rather than pretending the context is complete.
-
-The first-use test is ten minutes. A user should receive either a useful Context Pack/Handoff or a useful diagnostic without replacing an issue tracker, CI, policy engine, or coding agent.
+PF-001 remains valid evidence that a universal commercial control plane spanning issue management, policy, CI/CD, incidents, agent execution, knowledge, and organization governance would be incoherent and expensive to adopt.
 
 ## Product boundary — Validated Decision
 
-### The product may own
+### Continuity may own
 
-- Context Pack and Handoff structures;
-- validation of their completeness and internal consistency;
-- explicit objective, scope, constraints, exclusions, uncertainties, and output contracts;
-- references to canonical Decisions and Evidence;
-- continuity checks at session, executor, or ownership boundaries;
-- executor-neutral invocation and export conventions;
-- diagnostics for stale, contradictory, missing, or unauthoritative context.
+Repository-local state and behavior required to coordinate coding-agent work, including:
 
-### The product should reference, not own
+- agent-oriented backlog items and their local lifecycle;
+- active working sets and explicit work selection;
+- epics or grouped work when they improve coherent execution;
+- session records and durable session boundaries;
+- resumable Runs and operation checkpoints;
+- current scope, exclusions, constraints, and completion criteria;
+- Context Packs and context-formation traces;
+- Handoffs and continuation readiness;
+- executable skills and procedures;
+- project and reusable Packs;
+- Decisions and pending human decisions where the repository is the selected authority;
+- Evidence references and locally produced validation evidence;
+- Guards used to protect repository work;
+- Lessons and reviewed promotion of lessons into skills, checks, or Guards;
+- journals, indexes, and projections needed for recovery and operation.
 
-- backlog items, priority, and project status;
-- source code, commits, branches, and pull requests;
-- CI results, test artifacts, and build provenance;
-- policy definitions, rule engines, and enforcement outcomes;
-- incident records and postmortems;
+This ownership is legitimate when the state exists specifically to operate Continuity and coding agents inside the repository.
+
+### Continuity must not replace by default
+
+- enterprise portfolio planning;
+- organization-wide issue management;
+- source-control authority;
+- pull-request and branch authority;
+- CI/CD execution and artifact stores;
+- security and compliance systems of record;
+- incident-management systems;
 - service catalogs and ownership directories;
-- agent runtime checkpoints and vendor memory;
-- organization-wide knowledge bases.
+- organization-wide policy administration;
+- universal agent infrastructure.
 
-### The product is not initially
+Continuity may link to or selectively integrate with these systems when concrete usage requires it. It must not require universal integration or duplicate their complete state.
 
-- a generic task tracker;
-- an issue hierarchy or prioritization system;
-- a generic policy engine;
-- an application-security scanner;
-- a CI/CD or deployment platform;
-- an agent runtime or durable workflow engine;
-- a generic memory or RAG system;
-- an internal developer portal;
-- an incident-management product;
-- a universal engineering Console;
-- an automatic rule generator;
-- a mandatory hosted service.
+### Repository-local authority rule
 
-## Constraints — Validated or Provisional
+A repository-local Continuity backlog or Run state may be authoritative for agent execution without becoming the enterprise source of truth for product planning.
 
-### Existing-authority preservation — Validated Constraint
+When an external item exists, Continuity may:
 
-The product must not create a second authoritative state for work, policy, code, evidence, incidents, or runtime execution. It stores references and continuity metadata unless a later explicit Decision proves ownership necessary.
+- reference it;
+- derive a local executable item or working set;
+- record local execution state and evidence;
+- optionally synchronize a narrow result through an explicit adapter.
 
-### Executor independence — Validated Constraint
+The external system remains authoritative for the external object. Continuity remains authoritative for its local agent-work representation and execution history.
 
-No central product concept may depend on Claude Code, Codex, Copilot, or another single executor.
+## Core operational concepts — Revised Provisional Model
 
-### Context resilience — Validated Constraint
+### Work Item
 
-Continuation must survive model replacement, session loss, context truncation, executor failure, interruption, and human/agent handoff.
+A bounded unit of agent-executable repository work.
 
-### Explicit context formation — Provisional Product Constraint
-
-Task-specific context is intentionally formed and inspectable rather than indefinitely accumulated or retrieved opaquely.
-
-A Context Pack must make visible:
-
-- selected sources;
-- authority and revision where known;
-- explicit exclusions;
-- known uncertainty;
-- pending decisions;
-- output contract.
-
-### Human authority — Validated Constraint
-
-Irreversible, governance-changing, and judgment-based operations remain subject to explicit human Decision policies.
-
-### Local-first value — Provisional Constraint
-
-The product should provide meaningful repository-local value without a mandatory hosted service. Team collaboration and analytics may be optional later capabilities.
-
-### No-agent viability — Validated Constraint
-
-The product must remain usable for human handoffs, even if agent-assisted work is the stronger initial wedge.
-
-### Evidence references — Validated Constraint
-
-A significant continuation or acceptance claim must identify its Evidence. Evidence should remain in its authoritative system where practical and be referenced with provenance, scope, and freshness rather than copied into a new store.
-
-### Low maintenance — Provisional Constraint
-
-The product must save more rediscovery and failure cost than it creates in authoring, curation, synchronization, and review.
-
-## Rejected constraint — Validated Decision
-
-### Preserve all current feature families
-
-The prior requirement that the future product provide every major feature family of the current runtime is rejected as a product constraint by `DR-0006`.
-
-It prevented genuine falsification and forced unrelated categories into one product. RI-001 must still inventory every current feature family neutrally, but product inclusion requires later evidence and an explicit Decision.
-
-No feature is discarded from the current runtime by this product decision. Its disposition is simply no longer predetermined.
-
-## Conceptual model — Revised Provisional Proposals
-
-### Context Pack
-
-A versioned continuation input contract for one bounded objective.
-
-Candidate content:
+It should identify:
 
 - objective;
-- authoritative references;
-- constraints;
-- authorized scope;
-- explicit exclusions;
-- applicable external Goals and Guards;
-- current continuation state;
-- pending human Decisions;
-- selected Evidence;
-- relevant code or document slices;
-- known uncertainties;
-- output contract.
-
-A Context Pack is not a transcript, generic memory dump, or guarantee of completeness.
-
-### Handoff
-
-A durable continuation output contract produced at an interruption, executor change, ownership change, or iteration boundary.
-
-Candidate content:
-
-- completed work;
+- scope and exclusions;
+- relevant constraints and Decisions;
+- expected outputs;
+- completion criteria;
+- validation requirements;
 - current state;
-- pending work;
-- changed artifacts;
-- Evidence produced;
-- Decisions accepted, rejected, or pending;
-- discovered risks and uncertainty;
-- exact next objective;
-- required inputs and exclusions;
-- validation result for continuation readiness.
+- evidence and dependencies;
+- optional reference to an external issue or request.
 
-### Evidence Reference
+A Work Item is not required to model every field or workflow of an enterprise issue tracker.
 
-A reference to externally authoritative evidence, including enough provenance to answer:
+### Working Set
 
-- what claim the evidence supports;
-- where it is stored;
-- which revision or run produced it;
-- its scope;
-- its freshness;
-- whether it is reproducible.
+The explicitly selected set of Work Items and supporting context that may be acted on together.
 
-The product should not assume that all Evidence can or should be copied locally.
+A Working Set prevents an agent session from treating the entire repository backlog as active. It provides bounded scope for planning, context formation, and execution.
 
-### Decision
+### Epic
 
-An explicitly human-governed choice with epistemic and maturity status. The product may reference existing ADRs, pull-request approvals, issue approvals, or other authoritative records rather than owning every Decision.
+A coherent group of Work Items requiring coordinated progress, shared context, ordering, or a common completion boundary.
+
+An Epic is a practical orchestration structure, not a mandatory replica of Jira or another product hierarchy.
+
+### Session
+
+A bounded interaction period between humans, coding agents, and the repository.
+
+A Session may start or resume Runs, make Decisions, execute skills, and produce a Handoff. Session state is not sufficient as durable project memory unless consolidated into repository-local artifacts.
 
 ### Run
 
-A bounded execution episode by a human, agent, or mixed team. Run remains a candidate concept only if it is necessary to express continuation independently of a vendor runtime.
+A durable, resumable execution episode for one Work Item, Working Set, Epic stage, skill, validation flow, or other bounded procedure.
 
-## Goal and Guard — Validated Conceptual Separation
+A Run may contain:
 
-### Goal
+- selected inputs and context revision;
+- current step and completed effects;
+- decisions or human input required;
+- produced changes and Evidence;
+- failure and recovery state;
+- exact continuation instruction.
 
-A condition a person or team intends to make true through time-bound work.
+Run is a first-class product concept because resumable execution is part of the intended product, not merely an adapter concern.
 
-Goals normally belong to existing issue and project systems. The product may reference them but should not assume ownership.
+### Scope and completion criteria
+
+Scope defines what the Run or Work Item is authorized to change or inspect. Exclusions state what is deliberately outside the work.
+
+Completion criteria state what must be true before the item can be considered complete. They must be testable or explicitly reviewable and linked to Evidence.
+
+### Context Pack
+
+A formed, versioned input contract for a specific Work Item, Working Set, Epic stage, Session, or Run.
+
+A Context Pack may contain:
+
+- selected canonical artifacts and code slices;
+- task and working-set state;
+- scope, exclusions, and constraints;
+- applicable Decisions and Guards;
+- relevant skills and procedures;
+- known uncertainty;
+- required Evidence and completion criteria;
+- exact execution objective.
+
+Context Packs are one part of the execution loop. They are not the entire product.
+
+### Handoff
+
+A durable continuation contract created when work crosses a meaningful boundary such as session end, interruption, executor change, human takeover, or iteration closure.
+
+A Handoff records:
+
+- completed and pending work;
+- current Run and work-state position;
+- changed artifacts;
+- Decisions and unresolved questions;
+- Evidence produced or still required;
+- failures, risks, and uncertainty;
+- exact next action and required context.
+
+A Handoff is not required after every small action. It exists where durable continuation value exceeds its cost.
+
+### Skill and executable procedure
+
+A Skill is a named, versioned, executable procedure that helps an agent perform recurring repository work correctly.
+
+Skills may encode:
+
+- task selection;
+- context formation;
+- implementation rituals;
+- validation flows;
+- backlog updates;
+- deployment preparation;
+- evidence collection;
+- handoff creation;
+- project-specific operating knowledge.
+
+Skills are central product capabilities. They may be implemented using Claude Code-specific facilities while remaining represented and governed in the repository.
 
 ### Guard
 
-A condition a person or team intends to keep true through deterministic enforcement, measurement, or explicit human review.
+A condition intended to remain true through deterministic enforcement, measurement, or explicit human review.
 
-Guards normally belong to policy repositories, CI, review processes, scorecards, or security tools. The product may reference them and their evidence but should not assume one evaluator model.
+Guards may protect:
 
-### Commitment
+- repository structure;
+- work-state invariants;
+- scope boundaries;
+- test or evidence requirements;
+- procedure conformance;
+- known project risks.
 
-`Commitment` is rejected as a shared entity or schema. It may remain optional umbrella vocabulary for “something the project has intentionally promised,” but it has no independent lifecycle or authority.
+Goal and Guard remain separate concepts. A Guard violation may create work; completing work may propose a Guard change. They do not require one shared entity or lifecycle.
 
-Goal and Guard may be related:
+### Evidence
 
-- a violated Guard may cause a Goal in an issue tracker;
-- completing a Goal may result in a Guard proposal or policy change;
-- an incident may link to both.
+A result that supports a claim about execution or completion.
 
-These relationships do not require them to share storage, schema, lifecycle, or product ownership.
+Evidence may be local or externally referenced and can include:
 
-## Deferred or rejected initial public concepts
+- test results;
+- static analysis;
+- diffs and commits;
+- generated reports;
+- human approvals;
+- runtime observations;
+- reproduced failure or success conditions.
 
-### Observation — Deferred
+Completion claims should identify the Evidence that supports them.
 
-Useful as an epistemic state and diagnostic label, but not proven necessary as an initial first-class user object.
+### Decision
 
-### Lesson — Rejected for the initial wedge
+An explicit accepted, rejected, deferred, or pending choice that materially affects work.
 
-A curated Lesson entity creates substantial classification, deduplication, and lifecycle debt. Initial workflows should reference incident findings, ADR rationale, review outcomes, or handoff observations where they already live.
+Decisions may be stored directly in Continuity artifacts or referenced from an authoritative ADR, review, issue, or pull request. Judgment-based and governance-changing decisions remain under human authority unless an explicit policy delegates them.
 
-A later learning experiment may reintroduce Lesson if automated extraction and measurable reuse justify it.
+### Lesson and learning
 
-### Event — Rejected for the initial wedge
+A Lesson is a reusable finding about how work should be performed, validated, scoped, or avoided in this repository or class of repositories.
 
-No initial user-facing need was established. Events remain an implementation or integration concern unless a later product workflow requires them publicly.
+Learning is not automatic rule proliferation. A Lesson may be:
 
-## Continuity cycle — Provisional Proposal
+- recorded from a Run or failure;
+- linked to Evidence;
+- reviewed and deduplicated;
+- applied to a Pack or project binding;
+- promoted into a Skill, validator, check, or Guard;
+- superseded or retired when no longer valid.
 
-```text
-Existing objective or work item
-→ form explicit Context Pack
-→ execute with any human or agent
-→ produce externally verifiable Evidence
-→ record pending Decisions and uncertainty
-→ create and validate Handoff
-→ resume with a different session, executor, or owner
-```
+Continuity may own this repository-local learning loop because improving future agent work is part of the intended product.
 
-This cycle is intentionally narrower than a complete delivery or learning operating system.
+## Framework structure — Product-level boundary
 
-## Context Formation — Retained Provisional Hypothesis
+### Framework core
 
-Generic retrieval, memory, skills, and repository instructions are widely available. Context Formation is valuable only if it adds all of the following:
+The framework core should own stable, reusable semantics needed for the operational loop, such as:
 
-- explicit authority;
-- reproducible source selection;
-- explicit exclusions;
-- bounded scope;
-- visible uncertainty;
-- pending human decisions;
-- evidence provenance;
-- takeover validation.
+- work selection and bounded work state;
+- Run and session continuation;
+- scope and completion semantics;
+- context and handoff contracts;
+- evidence, decision, Guard, and learning relationships;
+- validation and state-transition rules;
+- extension and Pack contracts.
 
-The product must answer:
+The exact bounded contexts and package boundaries belong to TA-002.
 
-> Why was this context selected, what was deliberately excluded, and what evidence shows that another executor can safely continue?
+### Agent adapters
 
-If it cannot answer this better than current tools and repository templates, Context Formation is not a differentiator.
+Agent adapters bind the framework to a concrete executor.
 
-## Progressive adoption — Revised Provisional Proposal
+The first adapter is Claude Code and may use its native skills, hooks, commands, subagents, tool permissions, and session behavior. Other adapters are optional and should be added only when real use justifies them.
 
-1. **Diagnose** — inspect one repository and identify missing continuation contracts or contradictory canonical state.
-2. **Form** — create or validate one Context Pack for existing work.
-3. **Handoff** — create and validate one executor-neutral Handoff.
-4. **Reference Evidence** — bind acceptance and continuation claims to existing CI, PR, ADR, or issue evidence.
-5. **Integrate selectively** — add optional adapters for issue, CI, policy, or agent systems only where repeated value is demonstrated.
-6. **Govern later** — consider Guard lifecycle, learning, analytics, or multi-team coordination only after the core wedge is validated.
+### Reusable Packs
 
-Importing checks, backlog, or organizational policy is not an initial adoption requirement.
+A reusable Pack groups portable behavior such as:
 
-## Current feature-family disposition — Provisional Assessment
+- skills and procedures;
+- work-item templates;
+- validators and Guards;
+- context-formation recipes;
+- evidence collectors;
+- handoff conventions;
+- integration bindings.
 
-This section guides RI-001 inventory but is not a target architecture or final inclusion decision.
+Packs should make useful behavior reusable without forcing all repositories into one universal model.
 
-| Current feature family | PF-001 disposition |
-|---|---|
-| durable journal | Candidate support for Handoff and continuation evidence |
-| pause and fulfil | Candidate support for interruption and pending human input |
-| human decision floor | Retain as product constraint and reference model |
-| scope control | Candidate core capability |
-| evidence and proof | Candidate core capability through references |
-| executor integrations | Candidate core capability only when executor-neutral |
-| operational status | Candidate limited continuity status; must not duplicate issue/runtime state |
-| planner and worker | External agent/runtime concern unless RI-001 proves unique continuity value |
-| grouped or epic orchestration | Existing work-management concern; not initial boundary |
-| backlog routing, prioritization, rank, single-active discipline | Existing issue/project concern; not initial boundary |
-| check/Guard registry and lifecycle | Existing policy/platform concern; deferred integration hypothesis |
-| watch, triggers, findings, intake | Existing CI/security/incident concern; deferred integration hypothesis |
-| deploy and ship gates | Existing CI/CD concern; reference Evidence only |
-| lessons and minting enforcement | Rejected for initial wedge; later learning hypothesis |
-| curation, supersession, retirement | Necessary only for product-owned artifacts; broad Guard curation deferred |
-| evaluator calibration and flake contracts | Existing assurance concern; deferred unless applied to continuity validation itself |
-| starter packs | Possible adoption aid after the core protocol stabilizes |
-| deterministic and judgment-based evaluation | Must remain distinct; judgment requires explicit human authority |
+### Project-specific Pack or binding
 
-RI-001 must inventory facts without forcing them into these provisional dispositions.
+Nestfolio-specific behavior may remain in a Nestfolio Pack or project binding, including:
 
-## Product metrics — Revised Provisional Proposal
+- backlog conventions;
+- repository structure checks;
+- domain-specific validation;
+- deployment or release procedures;
+- project-specific task routing;
+- local Guard and Lesson content.
 
-Primary comparative metrics:
+Project-specific behavior should enter the universal framework core only after repeated evidence shows that it is stable, reusable, and not merely a Nestfolio convention.
 
-- time to first correct action after takeover;
-- repeated exploratory commands or tool calls;
-- incorrect assumptions at continuation;
-- material constraint omissions;
-- context volume required to resume;
-- handoff authoring and review time;
-- percentage of handoffs successfully resumed without prior conversation;
-- stale or contradictory context detected before execution;
-- external Evidence references that remain resolvable and current.
+## Progressive practical evolution — Validated Direction
 
-Guard count, Lesson count, agent Run count, and generated code volume are not product success metrics.
+### Stage 1 — Claude Code operating layer
 
-## Required validation before product expansion
+Make repository instructions, skills, and durable artifacts work coherently with Claude Code.
 
-The narrow product hypothesis must be compared against:
+### Stage 2 — Skills and repeatable procedures
 
-1. repository state only;
-2. repository plus issue/PR and agent instructions;
-3. repository plus a structured manual handoff template;
-4. formed Context Pack plus validated Handoff.
+Encode high-value repository workflows as executable, reviewable skills.
 
-Tests should include:
+### Stage 3 — Backlog and work orchestration
 
-- at least two different coding executors;
-- one human takeover;
-- one long migration or refactor;
-- one monorepo or multi-domain task;
-- interrupted and executor-switch conditions;
-- authoring and maintenance cost.
+Select, group, scope, route, and complete agent work without relying on chat memory.
 
-The product should be killed or revised if it does not produce a material continuation benefit over the strongest baseline.
+### Stage 4 — Resumable execution
 
-## Next program implication — Validated Observation
+Persist Run progress, decisions, effects, and continuation state across interruption and session loss.
 
-PF-001 authorizes RI-001 to inventory the current runtime. It does not authorize target architecture.
+### Stage 5 — Guards and learning
 
-RI-001 must determine which existing capabilities provide evidence for the revised continuity wedge, which belong to adjacent systems, and which create maintenance or coupling inconsistent with the new boundary.
+Use Evidence and Lessons to improve procedures and protect future work through reviewed Skills, checks, and Guards.
+
+These stages are an evolution path, not a mandate to restore every current Nestfolio capability unchanged.
+
+## Current feature-family classification rule — Validated Decision
+
+Existing Nestfolio features must not be automatically retained or automatically discarded.
+
+TA-002 must classify each feature as one of:
+
+- framework core;
+- Claude Code adapter;
+- reusable Pack capability;
+- Nestfolio-specific Pack or binding;
+- external integration;
+- deferred;
+- rejected.
+
+Classification must consider actual agentic-development value, coupling, reusability, and maintenance cost.
+
+## PF-001 conclusions retained — Validated Evidence
+
+The following PF-001 conclusions remain valid:
+
+- Continuity must not claim an established Engineering Continuity market category.
+- A universal commercial control plane spanning all engineering systems is not the product.
+- Continuity must not replace enterprise systems of record by default.
+- Preserve-all-features is not a product constraint.
+- Goal and Guard remain separate concepts.
+- External integrations should be introduced only for concrete usage.
+- Repository-native and local-first operation is valuable.
+- Human authority remains required for judgment-based and governance-changing choices.
+- Context Packs and Handoffs are important continuity capabilities.
+- Maintenance cost must remain lower than the work loss and rediscovery cost removed.
+
+## PF-001 conclusions revised or superseded — Validated Decision
+
+The following conclusions no longer govern the product:
+
+- Context Pack and Handoff as the complete product boundary;
+- usefulness without coding agents as a product requirement;
+- executor neutrality as a reason to avoid Claude Code-specific practical capabilities;
+- product prohibition on repository-local backlog, orchestration, Run state, Guards, Lessons, or learning;
+- the assumption that all work execution and runtime checkpoints must remain external;
+- read-only integrations as a universal product constraint;
+- the ten-minute Context Pack/Handoff diagnostic as the defining success test;
+- the exclusion of skills, workers, orchestration, and learning from the initial product definition.
+
+`DR-0006` is superseded as the active product-boundary decision by `DR-0012`. Its evidence against a commercial universal control plane and mandatory feature completeness is preserved.
+
+## Constraints — Validated or Provisional
+
+### Repository-native durable state — Validated Constraint
+
+Durable product state must be inspectable, reviewable, and recoverable from repository-local artifacts and declared stores. Hidden model or conversation state is never sufficient authority.
+
+### Practical value before abstraction — Validated Constraint
+
+A general abstraction must not displace a working Claude Code-first capability unless it provides concrete safety, reuse, or maintainability value.
+
+### No enterprise-system replacement — Validated Constraint
+
+Continuity must not recreate organization-wide issue, CI/CD, policy, incident, or catalog systems merely to control agent work.
+
+### Explicit authority — Validated Constraint
+
+Every durable state family must have a declared authority. Local Continuity state and external referenced state may coexist only with clear ownership and synchronization rules.
+
+### Goal and Guard separation — Validated Constraint
+
+Goal and Guard remain distinct in meaning and lifecycle.
+
+### Human decision floor — Validated Constraint
+
+Irreversible, security-sensitive, governance-changing, and genuinely judgment-based actions require explicit human authority or an explicitly accepted delegation policy.
+
+### Evidence-bound completion — Provisional Constraint
+
+Material completion claims should be backed by declared Evidence appropriate to the completion criteria.
+
+### Recoverability — Provisional Constraint
+
+A Run should be recoverable without relying on the previous chat transcript, hidden executor memory, or manual reconstruction of completed effects.
+
+### Selective integration — Validated Constraint
+
+External integrations are added only when a concrete workflow requires them. Universal integration coverage is not a success criterion.
+
+## Sustained Nestfolio dogfooding success criteria — Provisional Validation Contract
+
+The product direction is considered practically validated only after sustained use in Nestfolio demonstrates the full operational loop.
+
+Minimum dogfooding period:
+
+- at least six consecutive weeks of active development;
+- at least twenty non-trivial Work Items managed through Continuity;
+- at least five multi-item or multi-session work efforts, including at least two Epics or equivalent grouped workflows;
+- at least fifteen resumptions after a session boundary or interruption.
+
+Required outcome criteria:
+
+1. **Work continuity** — at least 90% of sampled resumptions identify the correct next action without reconstructing prior chat history.
+2. **State integrity** — no material Work Item, scope constraint, accepted Decision, or required completion criterion is lost across sampled resumptions.
+3. **Resumable execution** — interrupted Runs resume without duplicated completed effects or silent skipping of required steps in at least 90% of tested recoveries.
+4. **Evidence-bound completion** — at least 90% of completed non-trivial items have explicit completion criteria and linked validation Evidence.
+5. **Practical work selection** — the developer can select the next coherent Work Item or Working Set from repository state without manually rebuilding priority and dependency context in chat.
+6. **Skill reuse** — at least three executable skills or procedures are each reused successfully on three or more real tasks.
+7. **Learning loop** — at least five evidence-backed Lessons are recorded, and at least two are reused through an updated Skill, validator, check, Guard, or Pack rule.
+8. **Project-specific separation** — Nestfolio-only behavior remains classifiable as a project Pack or binding unless repeated evidence justifies promotion to core.
+9. **Operational overhead** — routine Continuity maintenance and state recording remain below 15% of active development time for the dogfooded work.
+10. **No forced external duplication** — dogfooding does not require copying the complete state of an enterprise backlog, CI system, or policy platform into Continuity.
+11. **Failure visibility** — unresolved decisions, failed validation, stale state, and unavailable evidence are visible and do not silently produce a completion claim.
+12. **Developer preference** — after the dogfooding period, the primary developer chooses to keep using the framework for long-running Nestfolio work rather than return to ad hoc Claude Code sessions and manual notes.
+
+Thresholds may be revised before implementation only through an explicit validation Decision. Failure against several criteria should revise the product or its operating model rather than trigger automatic feature expansion.
+
+## Product success metrics — Provisional Proposal
+
+Ongoing metrics should include:
+
+- time from session start to first correct action;
+- number of repeated exploratory actions after resume;
+- incomplete or lost Work Items;
+- scope violations or omitted constraints;
+- Run recovery success rate;
+- duplicate side effects after retry;
+- percentage of completion claims with Evidence;
+- skill reuse and failure rates;
+- Lesson reuse and Guard effectiveness;
+- maintenance overhead;
+- human interventions caused by unclear state;
+- percentage of project-specific behavior incorrectly placed in core.
+
+Generated code volume, number of integrations, number of supported executors, and number of public objects are not success metrics.
+
+## Kill or revise conditions — Provisional Validation Criteria
+
+Continuity should be materially revised if sustained Nestfolio use shows that:
+
+- disciplined Claude Code skills plus a simple backlog file provide equivalent continuity with substantially less machinery;
+- local work state becomes more expensive to maintain than reconstructing it;
+- Runs cannot recover reliably from interruption;
+- skills and learning do not improve repeated work;
+- the framework repeatedly duplicates or conflicts with external authority;
+- the core becomes dominated by Nestfolio-specific behavior;
+- executor abstraction prevents use of practical Claude Code capabilities;
+- agents still require prior chat reconstruction to resume correctly;
+- completion state cannot be trusted because Evidence and criteria are routinely missing.
+
+## Program implication — Validated Observation
+
+PI-001 changes the Product Foundation and therefore invalidates TA-001 as an implementation baseline.
+
+RI-001 and G2 remain valid factual current-system evidence.
+
+G3 is reopened. TA-001 is provisional historical architecture derived from the superseded product interpretation.
+
+The sole authorized next iteration is:
+
+**TA-002 — Target Architecture Revision**.

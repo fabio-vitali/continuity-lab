@@ -1,3 +1,7 @@
+status: superseded
+superseded_by: PI-001
+reason: TA-001 is provisional and G3 is reopened; do not run PX-001.
+
 iteration:
   id: PX-001
   type: product-experience

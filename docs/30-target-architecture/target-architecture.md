@@ -1,6 +1,6 @@
 ---
 artifact_id: TARGET-ARCHITECTURE
-status: validated
+status: provisional
 owner: architecture
 last_updated: 2026-07-13
 supersedes: []
@@ -11,13 +11,17 @@ superseded_by: null
 
 ## 1. Purpose and decision status
 
-This artifact defines the L3 target architecture for the product hypothesis validated by PF-001:
+> **PI-001 status notice**
+>
+> TA-001 is **provisional**. It was derived from the now-superseded interpretation that Context Packs and Handoffs define the complete product boundary. It is retained as historical architecture evidence, but it is **not authorized as an implementation or migration baseline**. The architecture must be revised through **TA-002 — Target Architecture Revision** before G3 can pass again.
+
+This artifact records the L3 target architecture produced by TA-001 for the former product hypothesis:
 
 > Repository-native, evidence-bound context and handoffs for resumable engineering work across humans and coding agents.
 
-It is the owning artifact for target bounded contexts, state ownership, lifecycle authority, contracts, provider boundaries, persistence, Context Formation, failure and recovery behavior, dependency rules, and current-to-target disposition.
+It remains useful as a classified architectural proposal and as evidence of decisions made under that interpretation. It no longer owns the active target baseline where it conflicts with the revised Product Foundation and `DR-0012`.
 
-The architecture is **validated for Gate G3**. It authorizes product-experience design, not implementation or migration. Exact CLI syntax, file serialization, UI, commercial packaging, and migration sequencing remain out of scope.
+Exact CLI syntax, file serialization, UI, commercial packaging, and migration sequencing remain out of scope. No architecture redesign is performed in PI-001.
 
 ## 2. Authorization and governing constraints
 
@@ -945,20 +949,10 @@ These questions do not block G3 because ownership and dependency boundaries are 
 
 ## 23. G3 assessment
 
-**Gate G3 — Target architecture coherence: PASS on 2026-07-13.**
+**Historical TA-001 result:** G3 was recorded as passed on 2026-07-13 against the former Product Foundation.
 
-The gate passes because:
+**Current PI-001 result:** G3 is reopened.
 
-- all target bounded contexts have explicit responsibilities and owned state;
-- Context Pack, Handoff, Pack Definition, reference snapshots, validation reports, journal, and ledger ownership are unambiguous;
-- lifecycle and transition authority are explicit;
-- Kernel boundaries and dependency directions are explicit;
-- providers are typed, read-oriented, authority-preserving, and executor-neutral;
-- the Pack model and Context Formation pipeline are defined end to end;
-- local-first persistence, event-ledger role, operation recovery, and failure behavior are explicit;
-- planner, worker, orchestrator, journal, assurance, trust, learning, and Console have deliberate placement;
-- every current runtime feature family has a target disposition;
-- all PF-001 scenarios were stress-tested without silently restoring rejected scope;
-- unresolved trade-offs are listed and do not create ambiguous authority.
+The TA-001 coherence assessment remains evidence that the architecture was internally coherent for the narrow Context Pack/Handoff interpretation. It does not establish coherence against the revised repository-native agentic-development framework, which now includes work selection, skills, repository-local work state, resumable Runs, Guards, and learning as legitimate product concerns.
 
-G3 does not validate product experience, implementation feasibility, migration cost, market value, omission-diagnostic quality, or takeover outcomes. The sole authorized next iteration is **PX-001 — Product Experience**.
+TA-001 is therefore provisional and not an implementation baseline. **TA-002 — Target Architecture Revision** must reassess bounded contexts, authority, lifecycle, adapters, Packs, current-feature classification, and the complete operational loop.
