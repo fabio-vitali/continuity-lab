@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository entry point; records PX-001/G4 PASS and MA-001 as the sole authorized next iteration |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review and next-session instructions for contracting and running MA-001 only |
+| `README.md` | Ratified | Program | Repository entry point; records MA-001 as authorized and contracted but not executed, with G5 pending |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, ZIP creation, and fresh-session execution instructions for the prepared MA-001 contract |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Program | Governs iterations and phase gates |
 | `docs/00-governance/artifact-governance.md` | Ratified | Program | Governs canonical files and changes |
 | `docs/00-governance/design-levels.md` | Ratified | Program | Separates levels of design |
@@ -25,11 +25,11 @@ superseded_by: null
 | `docs/40-product-experience/product-experience.md` | Validated | Product experience | Accepted L4 experience: onboarding, workflows, adoption, explainability, Decisions, CLI, Console disposition, recovery, scenarios, and TA-002 conformance |
 | `docs/50-validation/product-falsification-plan.md` | Ratified | Validation | Governs PF-001 |
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Preserves PF-001 evidence and PI-001 correction |
-| `docs/60-migration/README.md` | Ratified | Migration | Records MA-001 as the sole authorized next design iteration and keeps migration implementation blocked |
+| `docs/60-migration/README.md` | Ratified | Migration | Records the active MA-001 contract, distinguishes preparation from execution, and keeps G5 and implementation pending |
 | `docs/70-implementation/README.md` | Ratified | Implementation | Records VS-001 historical FAIL, VS-001A PASS/G6, and that implementation remains blocked during MA-001 |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Maps all VS-001 evidence, records strict FAIL, revisions, limitations, and sole next iteration (historical) |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Maps all VS-001A executor-provenance evidence, records PASS, exact revisions, and the G6 PASS rationale |
-| `docs/90-state/program-state.md` | Ratified | Program | Records PX-001/G4 PASS, preserved VS evidence, active experience decisions, and MA-001-only authorization |
+| `docs/90-state/program-state.md` | Ratified | Program | Records MA-001 as authorized and contracted but not executed, G5 pending, and all implementation blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | Index of canonical artifacts and statuses |
 | `sources/nestfolio-runtime.yaml` | Ratified | Sources | Binds RI-001 evidence to exact Nestfolio revision and archive hash |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Ratified | Program | Repository separation |
@@ -79,3 +79,6 @@ superseded_by: null
 | `sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml` | Validated | Session | Completed VS-001A contract, PASS result, exact revisions, and executor provenance |
 | `sessions/VS-001A-claude-code-session-confirmation/prompt.md` | Ratified | Session | Historical executable VS-001A instruction |
 | `sessions/VS-001A-claude-code-session-confirmation/session-handoff.md` | Validated | Session | Closes VS-001A with PASS, records G6 PASS, and authorizes PX-001 only |
+| `sessions/MA-001-migration-architecture/context-pack.yaml` | Ratified | Session | Active MA-001 L5 input, method, output, exclusion, scenario, evidence, and unconditional G5 contract; result pending |
+| `sessions/MA-001-migration-architecture/prompt.md` | Ratified | Session | Complete executable instruction for running MA-001 in a separate fresh session |
+| `sessions/MA-001-migration-architecture/session-handoff.md` | Provisional | Session | Prepared unused placeholder; confirms MA-001 has not run, no migration plan exists, and G5 is pending |

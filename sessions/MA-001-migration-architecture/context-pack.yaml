@@ -1,0 +1,457 @@
+contract:
+  status: authorized
+  authored_on: 2026-07-14
+  authority:
+    - docs/90-state/program-state.md
+    - decisions/DR-0022-authorize-ma-001-after-g4-pass.md
+    - sessions/PX-001-product-experience/session-handoff.md
+  execution_rule: >
+    This contract authorizes MA-001 — Migration Architecture only. It does not
+    execute MA-001, create the migration plan, decide G5, authorize an
+    implementation slice, or permit migration implementation.
+  canonical_memory_rule: >
+    The uploaded continuity-lab repository is the only canonical project
+    memory. Prior chats, hidden executor state, transcripts, local notes, and
+    the Nestfolio repository are not canonical inputs.
+
+iteration:
+  id: MA-001
+  name: Migration Architecture
+  type: migration-architecture-design
+  design_level: L5
+  gate: G5
+  status: authorized-not-started
+
+objective:
+  primary_question: >
+    Can the accepted TA-002 architecture and PX-001 Product Experience be
+    introduced incrementally and reversibly from the validated current
+    runtime, with independent-value slices, explicit compatibility and
+    rollback, preserved authority boundaries, and no big-bang rewrite?
+  required_outcome: >
+    Produce a complete L5 migration architecture, evaluate it through the
+    required scenarios and methods, issue an unconditional G5 PASS or FAIL,
+    and authorize exactly one evidence-justified next iteration.
+
+verified_authorization_preconditions:
+  - TA-002 is complete and G3 is passed and valid.
+  - VS-001 is complete and its historical FAIL remains preserved.
+  - VS-001A is complete with PASS and G6 is passed on the combined VS-001 and VS-001A evidence.
+  - PX-001 is complete with unconditional PASS and G4 is passed and valid.
+  - the accepted Product Experience is canonical.
+  - DR-0022 authorizes MA-001 as the sole next iteration.
+  - MA-001 has not been executed and no G5 result exists.
+  - migration implementation, broader implementation, later vertical slices, Console implementation, universal integrations, hosted-service work, commercial-control-plane work, and broad Nestfolio migration remain blocked.
+
+execution_authorization_check:
+  first_read: docs/90-state/program-state.md
+  rule: >
+    Before any design work or file modification, verify every authorization
+    precondition above against canonical Program State. If any condition is
+    inconsistent, apply the canonical contradiction rule: stop without
+    modifying files, report the inconsistency, identify the owning artifacts,
+    and do not silently choose an interpretation.
+
+active_contract_input:
+  path: sessions/MA-001-migration-architecture/context-pack.yaml
+  rule: >
+    Read this active contract after authorization verification and before the
+    ordered design evidence. Preserve it during execution and append a clearly
+    separated final_result section rather than rewriting the original input,
+    method, output, exclusion, or acceptance contract after the outcome is
+    known.
+
+ordered_canonical_inputs:
+  - order: 1
+    path: docs/00-governance/product-development-operating-model.md
+    purpose: Governs isolated iterations, G5, epistemic states, one-next-iteration closure, and executable handoffs.
+  - order: 2
+    path: docs/00-governance/artifact-governance.md
+    purpose: Governs canonical ownership, contradiction handling, Decision Records, artifact lifecycle, and review.
+  - order: 3
+    path: docs/00-governance/design-levels.md
+    purpose: Defines L5 migration ownership and prevents silent changes to L1, L3, L4, or L6 concerns.
+  - order: 4
+    path: docs/10-product/product-foundation.md
+    purpose: Provides product boundaries, authority constraints, Claude Code-first evolution, and dogfooding success criteria.
+  - order: 5
+    path: docs/20-current-system/current-runtime-map.md
+    purpose: Primary and authoritative current-system evidence for capability, state, workflow, dependency, invariant, and implementation-status mapping.
+  - order: 6
+    path: docs/30-target-architecture/target-architecture.md
+    purpose: Provides accepted TA-002 classifications, architectural boundaries, ownership, lifecycle, dependency, authority, recovery, and rejected alternatives.
+  - order: 7
+    path: docs/40-product-experience/product-experience.md
+    purpose: Provides accepted PX-001 workflows, cumulative adoption levels, compatibility expectations, authority UX, recovery behavior, and Nestfolio dogfooding boundaries.
+  - order: 8
+    path: docs/70-implementation/vs-001-resumable-agent-work-session.md
+    purpose: Provides validated repository mechanics, failure evidence, historical FAIL, and bounded-slice limitations that migration must preserve accurately.
+  - order: 9
+    path: docs/70-implementation/vs-001a-claude-code-session-confirmation.md
+    purpose: Provides genuine Claude Code session, checkpoint, handoff, fresh-session resume, deduplication, and G6 evidence.
+  - order: 10
+    path: docs/90-state/program-state.md
+    purpose: Provides current program authorization, gate validity, blockers, evidence bindings, and sole-next-iteration rule.
+  - order: 11
+    path: docs/90-state/artifact-index.md
+    purpose: Provides canonical status, ownership, and active versus historical artifact classification.
+  - order: 12
+    paths:
+      - decisions/DR-0012-repository-native-agentic-development-framework.md
+      - decisions/DR-0013-bounded-agent-work-core.md
+      - decisions/DR-0014-repository-local-canonical-state.md
+      - decisions/DR-0015-concrete-integration-ports-and-claude-code-adapter.md
+      - decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md
+      - decisions/DR-0017-govern-assurance-and-learning-promotion.md
+      - decisions/DR-0018-validate-through-vs-001-before-broader-migration.md
+      - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+      - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+      - decisions/DR-0021-defer-local-non-authoritative-console.md
+      - decisions/DR-0022-authorize-ma-001-after-g4-pass.md
+    purpose: Provides the complete active product, architecture, experience, assurance, and program-sequence decision set relevant to migration.
+  - order: 13
+    path: sessions/TA-002-target-architecture-revision/session-handoff.md
+    purpose: Preserves accepted architecture evidence, G3 closure, classifications, risks, and continuity constraints.
+  - order: 14
+    path: sessions/VS-001-resumable-agent-work-session/session-handoff.md
+    purpose: Preserves the historical FAIL rationale and valid repository-mechanics evidence without rewriting it.
+  - order: 15
+    path: sessions/VS-001A-claude-code-session-confirmation/session-handoff.md
+    purpose: Preserves PASS closure, executor-provenance evidence, and combined G6 rationale.
+  - order: 16
+    path: sessions/PX-001-product-experience/session-handoff.md
+    purpose: Provides the accepted Product Experience closure and executable MA-001 output, exclusion, and G5 contract.
+
+included_context:
+  - accepted repository-native product direction and practical Claude Code-first evolution
+  - validated current-runtime capabilities, state authorities, entry points, workflows, invariants, implementation-status classifications, unknowns, and contradictions from the Current Runtime Map
+  - accepted TA-002 classification boundaries for Framework Core, Application Services, Repository Infrastructure, Claude Code Adapter, reusable Packs, Nestfolio Pack or project binding, external integrations, deferred capabilities, and rejected capabilities
+  - accepted repository-local versioned artifacts and declared operational-state authority model
+  - accepted PX-001 cumulative adoption levels, truthful guarantee labels, Context Pack authorization boundary, Run continuity, Assurance, recovery, and dogfooding experience
+  - VS-001 repository-mechanics evidence and VS-001A genuine executor-provenance evidence
+  - external-system authority preservation and selective integration constraints
+  - known non-structural implementation questions only as migration risks, assumptions, or later implementation inputs
+
+excluded_context:
+  - prior chats, chat summaries, transcripts, hidden Claude Code state, vendor memory, or local notes
+  - the Nestfolio repository by default
+  - TA-001 as an active architecture baseline
+  - migration implementation or execution of any migration slice
+  - implementation code, package layout, final schemas, tests, adapters, stores, Skills, hooks, Console code, or command implementation
+  - broad Nestfolio feature migration or unrelated Nestfolio work
+  - rerunning, rewriting, or reinterpreting run-vs001 or run-vs001a
+  - universal executor parity or universal issue, CI/CD, policy, incident, catalog, security, or platform integrations
+  - hosted services, RBAC, analytics, billing, commercial packaging, or a commercial control plane
+  - agentless product positioning
+  - silent changes to Product Foundation, Target Architecture, Product Experience, validation reports, or accepted Decisions
+
+current_system_authority:
+  primary_source: docs/20-current-system/current-runtime-map.md
+  authority_rule: >
+    Treat the validated Current Runtime Map as the primary current-system
+    authority. Do not infer current implementation facts from memory, desired
+    target behavior, VS-001 code summaries, or the Product Experience.
+  unresolved_fact_rule: >
+    Distinguish a current-runtime unknown from a migration contradiction. A
+    non-blocking unknown may remain an explicit implementation-discovery item
+    only when ownership, compatibility, rollback, and the G5 decision do not
+    depend on its resolution.
+
+future_nestfolio_source_inspection:
+  default: prohibited
+  permitted_only_when_all_are_true:
+    - a specific current-runtime fact essential to a G5 conclusion is absent, ambiguous, or contradictory in the Current Runtime Map
+    - the affected migration decision cannot be safely expressed as a bounded assumption or later implementation-discovery item
+    - the exact question, expected evidence, repository revision, paths or symbols, and maximum inspection scope are recorded before inspection
+    - the inspection is read-only and does not execute or modify Nestfolio
+    - the result is used only to resolve the declared current-system evidence gap
+  prohibited_forms:
+    - broad repository upload or whole-repository reread by default
+    - browsing Nestfolio to discover additional feature scope
+    - using current code as authority to override accepted Product Foundation, TA-002, or PX-001
+    - modifying Nestfolio or producing implementation artifacts
+  stop_rule: >
+    If essential source evidence is required but unavailable in the active
+    session, stop the affected conclusion, record the exact evidence request,
+    and do not fabricate a G5 PASS.
+
+required_methods:
+  - name: current_to_target_capability_matrix
+    requirements:
+      - map every relevant current feature family and runtime ring to accepted target classifications
+      - identify retain, wrap, adapt, migrate, replace, defer, reject, or retire disposition
+      - distinguish current implementation status from target desirability
+      - trace each disposition to canonical evidence and Decision authority
+  - name: authority_and_source_of_truth_ledger
+    requirements:
+      - enumerate each durable and operational state family used during migration
+      - declare current owner, transitional owner, target owner, permitted writers, readers, synchronization direction, conflict rule, and retirement condition
+      - preserve external authority for external objects and Continuity authority for local agent-work state
+      - prohibit dual unqualified authority
+  - name: migration_slice_design
+    requirements:
+      - define independently valuable, bounded, reversible slices
+      - map every slice to one or more PX-001 cumulative adoption levels
+      - specify entry conditions, user value, capability delta, affected owners, coexistence, compatibility, validation, Evidence, rollback, abandonment, recovery, and exit conditions
+      - avoid implementation detail while remaining executable as a later delivery contract
+  - name: compatibility_and_coexistence_matrix
+    requirements:
+      - define current-to-target artifact, state, command, procedure, and operational-store compatibility
+      - define read, write, import, export, bridge, shadow, freeze, supersession, and deprecation behavior where applicable
+      - make temporary overlap explicit and time-bounded
+      - identify unsupported combinations and fail-safe behavior
+  - name: state_transition_and_transformation_ownership
+    requirements:
+      - identify which component owns any state interpretation or transformation
+      - define validation and audit obligations without prescribing schemas or code
+      - preserve revisions, digests, provenance, effect keys, Evidence, Decisions, and history
+      - prohibit hidden one-off manual transformation as an authority mechanism
+  - name: scenario_walkthroughs
+    requirements:
+      - evaluate every required scenario against the proposed slices
+      - record PASS or FAIL observations and unresolved dependencies
+      - include rollback and recovery walkthroughs, not only happy paths
+  - name: risk_and_evidence_ordering
+    requirements:
+      - order slices by uncertainty reduction, authority risk, reversibility, dependency, and evidence value
+      - do not order primarily by feature breadth, visual completeness, or desire to restore all current behavior
+      - identify which slice proves or invalidates the next migration assumption
+  - name: alternatives_and_rejection_analysis
+    requirements:
+      - evaluate serious alternatives including big-bang rewrite, preserve-all-current-runtime, greenfield target beside current runtime, schema-first universalization, early Console, and premature multi-executor or integration generalization
+      - record accepted, deferred, and rejected alternatives with consequences
+  - name: architectural_contradiction_analysis
+    requirements:
+      - distinguish blocking L1/L3/L4 contradictions from non-structural implementation questions
+      - apply the canonical contradiction rule and cross-level change rule
+      - force G5 FAIL when an unresolved blocking contradiction prevents an incremental reversible path
+  - name: unconditional_gate_decision
+    requirements:
+      - evaluate every G5 completion criterion conjunctively
+      - issue exactly PASS or FAIL with no conditional or partial PASS
+      - authorize exactly one next iteration after, and only after, the result
+
+required_migration_scenarios:
+  - id: M1
+    name: Level 1 procedure-first adoption
+    question: Can one current useful Claude Code procedure be exposed through the accepted Pack and Adapter boundaries without migrating backlog, Runs, or Assurance?
+  - id: M2
+    name: Pack locking and reusable procedure coexistence
+    question: Can current project-specific assets coexist with reusable Pack definitions while exact versions and digests remain authoritative and rollback remains possible?
+  - id: M3
+    name: Local Work and Scope transition
+    question: Can current backlog Markdown and routing behavior become or feed target Work, Working Set, Scope, and criteria without making Continuity the enterprise backlog authority?
+  - id: M4
+    name: Context Pack introduction
+    question: Can formed, validated, explicitly authorized immutable Context Packs be introduced while current procedures and lower adoption levels continue to work truthfully?
+  - id: M5
+    name: Operational Run-state transition
+    question: Can current journal behavior and validated VS-001 mechanics transition to the declared target operational store without duplicated effects, lost checkpoints, or competing Run authority?
+  - id: M6
+    name: Fresh-session continuity
+    question: Can the genuine VS-001A start, checkpoint, handoff, and fresh-session resume path become an incremental product capability without rerunning or rewriting historical evidence?
+  - id: M7
+    name: Assurance and completion transition
+    question: Can current checks, findings, validation, and ship evidence transition into target Validation Plan, Evidence, Guard, Waiver, and completion-gate ownership without equating current checks with all target Assurance semantics?
+  - id: M8
+    name: Decision and learning transition
+    question: Can current backward-learning behavior transition into governed Observation, Lesson, and promotion flows without automatic mutation of Skills, Guards, validators, rules, Packs, or bindings?
+  - id: M9
+    name: Project-binding preservation
+    question: Can Nestfolio-specific backlog conventions, repository topology, validators, deployment procedures, routing, Guards, and Lessons remain in the Nestfolio Pack or binding through every slice?
+  - id: M10
+    name: External-authority coexistence
+    question: Can Git, issue, PR, CI, deployment, security, and other external authorities remain authoritative while Continuity owns only its local execution representation and evidence references?
+  - id: M11
+    name: Partial adoption and downgrade
+    question: Can a repository stop at any cumulative PX-001 level, or disable a higher level, without deleting or falsifying historical canonical artifacts and guarantees?
+  - id: M12
+    name: Failed slice rollback
+    question: Can each proposed slice be rolled back or abandoned after partial use while preserving readable history, authority, and recovery paths?
+  - id: M13
+    name: Concurrent current and target mechanisms
+    question: Where temporary overlap is unavoidable, are writer ownership, synchronization direction, conflict detection, cutover, and retirement explicit and non-ambiguous?
+  - id: M14
+    name: Stale, corrupt, or divergent state
+    question: Does migration fail safely when current or target artifacts, operational state, Pack assets, repository identity, Evidence, or projections are stale, corrupt, missing, or divergent?
+  - id: M15
+    name: No-Console migration
+    question: Can all required migration slices deliver and validate value through repository artifacts, Claude Code, and non-authoritative CLI surfaces without requiring Console implementation?
+  - id: M16
+    name: No-big-bang end-to-end path
+    question: Does the complete sequence reach the accepted TA-002 and PX-001 target through independently valuable reversible slices without a mandatory coordinated rewrite?
+
+required_migration_architecture:
+  current_to_target_mapping:
+    - use accepted TA-002 classification boundaries
+    - cover current engine, adapters, content, starter, evaluation, backlog, journal, checks, findings, planning, orchestration, assurance, and learning families as relevant
+    - preserve current implementation-status distinctions: implemented, partially implemented, documented but not implemented, test-only, and absent
+  slices:
+    - assign stable identifiers and names
+    - declare independent user value and active PX-001 adoption level
+    - declare prerequisites and dependencies
+    - declare current and target capabilities and owners
+    - declare compatibility and coexistence behavior
+    - declare canonical state and source-of-truth ownership throughout transition
+    - declare transformation ownership without code or schema design
+    - declare validation plan, criterion-linked Evidence, and failure cases
+    - declare rollback, abandonment, recovery, and retirement paths
+    - declare explicit non-goals and blocked adjacent work
+  component_transitions:
+    - Framework Core
+    - Application Services
+    - Repository Infrastructure
+    - Claude Code Adapter
+    - reusable Packs
+    - Nestfolio Pack or project binding
+    - external authorities and narrowly justified integration ports
+  ordering:
+    - prioritize risk reduction and evidence
+    - preserve practical first value
+    - avoid feature-completeness sequencing
+    - identify explicit cutover and deprecation points
+  alternatives:
+    required_rejections_unless_new_evidence_proves_otherwise:
+      - big-bang rewrite
+      - automatic migration of every current Nestfolio capability
+      - premature promotion of Nestfolio behavior into Framework Core
+      - schema-first or universal-API-first generalization
+      - mandatory Console
+      - hosted or commercial control plane
+      - universal integrations or multi-executor parity before concrete evidence
+  unresolved_questions:
+    rule: >
+      Separate non-structural implementation questions from blocking migration
+      contradictions. Non-structural questions must have an owner, the slice in
+      which they become answerable, and a safe default or stop condition.
+
+architectural_contradiction_handling:
+  rule: >
+    Do not silently change Product Foundation, TA-002, PX-001, validation
+    reports, or accepted Decisions to make migration easier.
+  required_steps:
+    - state the exact migration need and scenario
+    - identify the conflicting canonical owner, Decision, lifecycle, authority rule, or invariant
+    - classify the issue as a blocking contradiction or a non-structural implementation question
+    - stop the affected migration path
+    - record an Observation and explicit revision proposal
+    - create a Decision Record only when a genuine high-impact choice is justified and accepted under governance
+    - do not implement or silently resolve an L1, L3, or L4 revision inside the migration plan
+  gate_effect: An unresolved blocking contradiction forces G5 FAIL.
+
+required_deliverables:
+  primary:
+    - docs/60-migration/migration-plan.md
+  conditional:
+    - relevant new decisions/DR-*.md only when a genuine high-impact migration choice or accepted contradiction resolution requires one
+  state_and_navigation:
+    - docs/90-state/program-state.md
+    - docs/90-state/artifact-index.md
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/60-migration/README.md
+    - docs/70-implementation/README.md only when needed to keep implementation authorization and blockers consistent
+  session:
+    - sessions/MA-001-migration-architecture/context-pack.yaml
+    - sessions/MA-001-migration-architecture/prompt.md
+    - sessions/MA-001-migration-architecture/session-handoff.md
+  return_artifacts:
+    - complete updated continuity-lab repository ZIP
+    - exact changed-file manifest
+
+migration_plan_minimum_structure:
+  - authority, scope, epistemic framing, and G5 question
+  - validated current-state summary and current-to-target capability matrix
+  - migration principles and invariants
+  - authority and source-of-truth ledger
+  - compatibility and coexistence matrix
+  - independently valuable migration slices with PX-001 adoption-level mapping
+  - component transition plan for Core, Application Services, Repository Infrastructure, Claude Code Adapter, reusable Packs, Nestfolio binding, and external authorities
+  - state transformation ownership and audit requirements without implementation detail
+  - validation and Evidence contract for every slice
+  - rollback, abandonment, recovery, cutover, deprecation, and retirement paths
+  - risk- and evidence-based ordering with explicit dependencies
+  - scenario results
+  - rejected and deferred alternatives
+  - blocking contradictions versus non-structural implementation questions
+  - unconditional G5 PASS or FAIL rationale
+  - exactly one evidence-justified next iteration
+
+prohibited_actions:
+  - create or modify implementation code, tests, schemas, adapters, stores, Skills, hooks, Console code, Pack assets, or Nestfolio artifacts
+  - execute a migration slice or broad feature migration
+  - inspect or request the Nestfolio repository except under the narrowly justified source-inspection rule
+  - rerun, rewrite, or reinterpret run-vs001 or run-vs001a
+  - silently modify Product Foundation, Target Architecture, Product Experience, validation reports, or accepted Decisions
+  - move Nestfolio-specific behavior into Framework Core without repeated evidence and a Decision
+  - create universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, or a commercial control plane
+  - pre-authorize implementation before G5
+  - declare a conditional, partial, provisional, or caveated G5 PASS
+  - authorize more than one next iteration
+
+completion_criteria:
+  - every relevant current capability has a traceable target disposition using accepted TA-002 boundaries
+  - the proposed path requires no big-bang rewrite
+  - every migration slice has independent user value and explicit PX-001 adoption-level mapping
+  - every slice defines compatibility, coexistence, source-of-truth ownership, validation, Evidence, rollback, abandonment, recovery, and exit conditions
+  - current and target authority never overlap ambiguously
+  - external authorities remain authoritative for their objects
+  - cumulative adoption artifacts remain compatible and truthful across upgrade, coexistence, downgrade, and rollback
+  - Framework Core, Application Services, Repository Infrastructure, Claude Code Adapter, reusable Packs, Nestfolio binding, and external authority transitions are explicit
+  - state transformation ownership is explicit without implementation detail
+  - implementation order is justified by risk and evidence rather than feature breadth
+  - serious alternatives are evaluated and rejected or deferred explicitly
+  - unresolved non-structural questions are separated from blocking contradictions and assigned to a later evidence point
+  - every required migration scenario has a recorded PASS or FAIL observation
+  - no blocked Product Experience requirement is hidden in migration detail
+  - no unresolved blocking contradiction remains for PASS
+  - exactly one next iteration is authorized only after the G5 result
+
+completion_decision:
+  required: true
+  gate: G5
+  allowed_values:
+    - PASS
+    - FAIL
+  conditional_or_partial_pass_allowed: false
+  pass_semantics: >
+    PASS only when all completion criteria are satisfied conjunctively and the
+    complete path demonstrates that accepted TA-002 and PX-001 can be reached
+    through independently valuable, compatible, authority-safe, reversible
+    slices without a big-bang rewrite.
+  fail_semantics: >
+    FAIL when any essential capability has no safe target disposition, any
+    required transition needs ambiguous dual authority or an unavoidable
+    big-bang cutover, any required slice lacks independent value or rollback,
+    any required scenario fails structurally, or any blocking contradiction
+    remains unresolved.
+  evidence_rule: >
+    Do not hide a failed criterion or missing essential evidence in a risk,
+    assumption, future-work, or implementation-question section while
+    declaring PASS.
+
+next_iteration_rule:
+  timing: after_g5_only
+  count: exactly_one
+  rule: >
+    MA-001 execution must authorize exactly one evidence-justified next
+    iteration after PASS or FAIL. This contract does not preselect or
+    pre-authorize that iteration. Every other iteration remains blocked.
+
+blocked_until_g5:
+  - migration implementation and execution of any migration slice
+  - broader implementation and later vertical slices
+  - Console implementation
+  - universal executor or platform integrations
+  - hosted-service, RBAC, analytics, billing, or commercial-control-plane work
+  - broad or unrelated Nestfolio migration
+  - promotion of Nestfolio-specific behavior into Framework Core without repeated evidence and a Decision
+
+result:
+  decision: pending
+  gate_g5: pending
+  completed_on: null
+  primary_deliverable: null
+  decisions_created: []
+  blocking_contradictions: []
+  sole_authorized_next_iteration: null

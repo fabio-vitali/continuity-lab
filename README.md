@@ -29,9 +29,9 @@ select work
 
 ## Repository responsibilities
 
-`continuity-lab` is canonical for governance, product/architecture/experience decisions, iteration contracts, validation reports, Program State, and handoffs.
+`continuity-lab` is canonical for governance, product, architecture, experience, migration design, iteration contracts, validation reports, Program State, and handoffs.
 
-Nestfolio is canonical for implementation code, tests, project bindings, and dogfooding evidence when a session contract explicitly authorizes its use.
+Nestfolio is canonical for implementation code, tests, project bindings, and dogfooding evidence only when a reviewed session contract explicitly authorizes narrowly scoped use.
 
 ## Current program position
 
@@ -48,22 +48,31 @@ Completed:
 
 The accepted Product Experience defines cumulative adoption, ten-minute first value, Work and Context workflows, Context Pack explainability, Claude Code continuity, human Decisions, safe failure/recovery, a non-authoritative CLI, and a deferred local Console.
 
-Sole authorized next iteration:
+## Sole authorized next iteration
 
 9. **MA-001 — Migration Architecture** (Gate G5).
 
-MA-001 must first receive a newly authored active session contract from the completed PX-001 evidence. Migration implementation, broader implementation, later vertical slices, Console implementation, universal integrations, and unrelated Nestfolio work remain blocked.
+MA-001 is **authorized and contracted**. Its active contract is prepared under:
 
-## Next session
+```text
+sessions/MA-001-migration-architecture/
+```
 
-Use a fresh session to author the MA-001 contract from:
+MA-001 has **not** been executed. `docs/60-migration/migration-plan.md` does not exist, no G5 result exists, and no implementation slice is authorized.
 
-- `docs/90-state/program-state.md`;
-- `docs/40-product-experience/product-experience.md`;
-- `sessions/PX-001-product-experience/session-handoff.md`;
-- the exact ordered inputs and completion contract declared in that handoff.
+Migration implementation, broader implementation, later vertical slices, Console implementation, universal integrations, hosted-service work, commercial-control-plane work, and broad or unrelated Nestfolio migration remain blocked.
 
-Do not execute an improvised migration prompt. Do not implement migration. The Current Runtime Map is the primary current-system authority; any later source inspection must be explicitly and narrowly authorized by the MA-001 contract.
+## Next human action
+
+Review and commit the prepared MA-001 contract and state/navigation changes. Then create `continuity-lab-ma001-contract.zip` from the committed `HEAD`, open a separate fresh conversation, upload that ZIP, and paste the complete unmodified contents of:
+
+```text
+sessions/MA-001-migration-architecture/prompt.md
+```
+
+Exact commands and checks are in `CONTINUITY-NEXT-STEPS.md`.
+
+Do not upload Nestfolio by default. The Current Runtime Map is the primary current-system authority. A narrowly scoped source request is permitted only if the reviewed MA-001 contract's evidence-gap rule is triggered during execution.
 
 ## Canonical starting points
 
@@ -74,10 +83,13 @@ Do not execute an improvised migration prompt. Do not implement migration. The C
 - Current runtime evidence: `docs/20-current-system/current-runtime-map.md`
 - Target architecture: `docs/30-target-architecture/target-architecture.md`
 - Product Experience: `docs/40-product-experience/product-experience.md`
+- Migration navigation: `docs/60-migration/README.md`
 - VS-001 report: `docs/70-implementation/vs-001-resumable-agent-work-session.md`
 - VS-001A report: `docs/70-implementation/vs-001a-claude-code-session-confirmation.md`
 - Program state: `docs/90-state/program-state.md`
 - Artifact index: `docs/90-state/artifact-index.md`
+- Active MA-001 contract: `sessions/MA-001-migration-architecture/context-pack.yaml`
+- Executable MA-001 prompt: `sessions/MA-001-migration-architecture/prompt.md`
 
 ## Rule
 

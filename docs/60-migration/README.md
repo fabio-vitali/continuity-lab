@@ -9,23 +9,45 @@ superseded_by: null
 
 # Migration
 
-**MA-001 — Migration Architecture is the sole authorized next iteration. Gate G5 remains pending.**
+**MA-001 — Migration Architecture is authorized and contracted as the sole next iteration. Gate G5 remains pending.**
 
-MA-001 is authorized only after PX-001 completed with G4 PASS. It must first receive a new active session contract authored from current Program State and the completed PX-001 handoff.
+The active reviewed-before-execution contract is located at:
 
-MA-001 may design:
+```text
+sessions/MA-001-migration-architecture/
+  context-pack.yaml
+  prompt.md
+  session-handoff.md
+```
 
-- incremental migration slices with independent value;
-- compatibility boundaries;
-- rollback and abandonment paths;
-- authority preservation;
-- current-to-target state and capability transitions;
-- ordering and validation requirements.
+This records only that MA-001 is ready for review and later execution. It does not record that MA-001 has run.
 
-MA-001 must not implement migration, rerun existing vertical slices, create a big-bang rewrite, or pre-authorize implementation.
+Current facts:
 
-Planned canonical artifact, only when the reviewed MA-001 contract executes:
+- `docs/60-migration/migration-plan.md` has not been created;
+- no G5 PASS or FAIL exists;
+- no migration architecture has been accepted;
+- no migration or implementation slice is authorized;
+- the MA-001 handoff is a prepared, unused placeholder.
+
+When executed in a separate fresh session, MA-001 may design:
+
+- current-to-target capability mapping using accepted TA-002 classifications;
+- independently valuable migration slices mapped to PX-001 adoption levels;
+- compatibility and explicit coexistence boundaries;
+- source-of-truth and authority preservation;
+- state-transformation ownership without implementation detail;
+- validation and Evidence requirements;
+- rollback, abandonment, recovery, cutover, deprecation, and retirement paths;
+- risk- and evidence-based ordering;
+- unconditional G5 PASS or FAIL and exactly one next iteration.
+
+MA-001 must not implement migration, rerun existing vertical slices, create a big-bang rewrite, inspect Nestfolio broadly, or pre-authorize implementation.
+
+Planned canonical artifact, created only by the later reviewed MA-001 execution:
 
 - `migration-plan.md`
 
-Migration implementation and every later slice remain blocked until G5 is decided and one next iteration is explicitly authorized.
+Review, commit, ZIP creation, and fresh-session instructions are exact in `CONTINUITY-NEXT-STEPS.md`.
+
+Migration implementation and every later slice remain blocked until G5 is decided and exactly one next iteration is explicitly authorized.

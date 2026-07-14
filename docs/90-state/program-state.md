@@ -11,26 +11,22 @@ superseded_by: null
 
 ## Current phase
 
-**PX-001 — Product Experience is complete. Gate G4 passed unconditionally on 2026-07-14.**
+**MA-001 — Migration Architecture is authorized and contracted, but it has not been executed.**
 
-The accepted Product Experience provides:
+PX-001 is complete with unconditional PASS and Gate G4 remains passed and valid. The accepted Product Experience is canonical. `DR-0022` authorizes MA-001 as the sole next iteration.
 
-- cumulative adoption from one Claude Code Skill/Procedure to the complete validated loop;
-- a credible ten-minute Level 1 first-value path;
-- explicit guarantee labeling that prevents false completeness;
-- explainable Context Pack formation, validation, authorization, delivery, staleness, revocation, refresh, reformation, and supersession;
-- durable Claude Code start, checkpoint, Handoff, fresh-session resume, validation, completion, cancellation, and learning-review workflows;
-- explicit human Decision and authority boundaries;
-- fail-safe recovery and retry behavior;
-- a non-authoritative CLI model;
-- an explicit decision to defer a local non-authoritative Console;
-- no blocking contradiction with TA-002.
+The active MA-001 contract is prepared under:
 
-The sole authorized next iteration is:
+```text
+sessions/MA-001-migration-architecture/
+  context-pack.yaml
+  prompt.md
+  session-handoff.md
+```
 
-**MA-001 — Migration Architecture** (Gate G5), authorized by `DR-0022` after the G4 PASS.
+The contract authorizes an L5 design iteration only. The handoff is a prepared, unused placeholder. `docs/60-migration/migration-plan.md` has not been created, MA-001 has not run, no G5 result exists, and no implementation slice is authorized.
 
-MA-001 must first receive a new active session contract authored from this Program State and the completed PX-001 handoff. No migration implementation, broader implementation, or later vertical slice is authorized.
+The next human action is to review and commit the contract, create `continuity-lab-ma001-contract.zip` from committed `HEAD`, then run the complete `sessions/MA-001-migration-architecture/prompt.md` in a separate fresh session. Do not upload Nestfolio by default; the Current Runtime Map is the primary current-system authority.
 
 ## Gate history and current validity
 
@@ -41,7 +37,7 @@ MA-001 must first receive a new active session contract authored from this Progr
 | G2 — Current-system evidence | passed; valid | 2026-07-13 | validated Current Runtime Map and exact RI-001 Nestfolio binding |
 | G3 — Target architecture coherence | passed; valid | 2026-07-13 | TA-002 architecture, DR-0013 to DR-0018, TA-002 handoff |
 | G4 — Product experience viability | **passed; valid** | 2026-07-14 | Product Experience, DR-0019 to DR-0021, PX-001 scenario and conformance evidence |
-| G5 — Migration viability | pending — MA-001 is the sole authorized next iteration | — | MA-001 contract and evidence not yet produced |
+| G5 — Migration viability | pending — MA-001 is authorized and contracted but not executed | — | active contract prepared; migration plan and execution evidence not yet produced |
 | G6 — Implementation validation | **passed; valid** | 2026-07-13 | combined VS-001 repository mechanics and VS-001A genuine Claude Code executor provenance |
 
 ## PX-001 result
@@ -147,33 +143,39 @@ Reusable Procedure semantics and executor assets are digest-locked through Packs
 
 ### MA-001 — Migration Architecture
 
+Status:
+
+```text
+authorized and contracted
+not executed
+G5 pending
+```
+
 Primary question:
 
 > Can the accepted TA-002 architecture and PX-001 Product Experience be introduced incrementally and reversibly from the validated current runtime, with independent-value slices, explicit compatibility and rollback, preserved authority boundaries, and no big-bang rewrite?
 
-Required contract-authoring inputs:
+Active contract:
 
-1. `docs/00-governance/product-development-operating-model.md`;
-2. `docs/00-governance/artifact-governance.md`;
-3. `docs/00-governance/design-levels.md`;
-4. `docs/10-product/product-foundation.md`;
-5. `docs/20-current-system/current-runtime-map.md`;
-6. `docs/30-target-architecture/target-architecture.md`;
-7. `docs/40-product-experience/product-experience.md`;
-8. VS-001 and VS-001A validation reports;
-9. `docs/90-state/program-state.md` and `artifact-index.md`;
-10. Decision Records `DR-0012` through `DR-0022`;
-11. TA-002, VS-001, VS-001A, and PX-001 handoffs.
+- `sessions/MA-001-migration-architecture/context-pack.yaml`;
+- `sessions/MA-001-migration-architecture/prompt.md`;
+- `sessions/MA-001-migration-architecture/session-handoff.md` — prepared, unused placeholder.
 
-The Current Runtime Map is the primary current-system authority. Any later Nestfolio source inspection must be narrowly justified and explicitly authorized by the MA-001 contract; it is not implicitly required by this state update.
+The Current Runtime Map is the primary current-system authority. Nestfolio source inspection is prohibited by default and may occur only if the active contract's narrowly scoped evidence-gap rule is satisfied.
 
 Required MA-001 outcome:
 
 - a migration architecture only, not implementation;
-- explicit incremental slices with independent user value and adoption-level mapping;
-- compatibility, rollback, authority, and transition boundaries;
+- current-to-target capability mapping using accepted TA-002 classifications;
+- explicit incremental slices with independent user value and PX-001 adoption-level mapping;
+- compatibility, coexistence, rollback, abandonment, recovery, authority, and transition boundaries;
+- transition ownership for Framework Core, Application Services, Repository Infrastructure, Claude Code Adapter, reusable Packs, Nestfolio binding, and external authorities;
+- criterion-linked validation and Evidence for every slice;
+- risk- and evidence-based ordering;
 - unconditional G5 PASS or FAIL;
-- exactly one evidence-justified next iteration.
+- exactly one evidence-justified next iteration after the result.
+
+The contract itself does not pre-authorize that next iteration.
 
 ## Iteration queue
 
@@ -185,13 +187,13 @@ Required MA-001 outcome:
 6. VS-001 — Resumable Agent Work Session — **complete; historical FAIL preserved**
 7. VS-001A — Interactive Claude Code Session Confirmation — **complete; PASS; G6 passed on combined evidence**
 8. PX-001 — Product Experience — **complete; PASS; G4 passed**
-9. MA-001 — Migration Architecture — **sole authorized next iteration; active contract not yet authored**
+9. MA-001 — Migration Architecture — **sole authorized next iteration; active contract prepared; not executed; G5 pending**
 10. broader implementation/later vertical slices — **blocked pending G5 and explicit authorization**
 
 ## Active blockers
 
-- Only MA-001 contract authoring and, after that contract is reviewed, MA-001 execution are authorized.
-- No migration implementation or broader implementation is authorized.
+- Only review/commit of the prepared MA-001 contract and, after that review, MA-001 execution in a fresh session are authorized.
+- MA-001 contract preparation is not execution: no migration plan, G5 result, migration implementation, or broader implementation is authorized.
 - Do not redo or rewrite `run-vs001` or `run-vs001a`.
 - Do not modify Product Foundation, Target Architecture, Product Experience, or validation reports merely to simplify migration.
 - No project-specific behavior may enter Framework Core without repeated evidence and a Decision.
