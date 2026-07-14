@@ -13,25 +13,24 @@ This repository is the canonical design and development workspace for **Continui
 
 ## Product direction
 
-Continuity is a repository-native framework for sustained coding-agent work, with Claude Code as the primary executor.
+Continuity is a repository-native framework for sustained coding-agent work, with Claude Code as the first and primary executor.
 
 ```text
 select work
-→ form context
-→ execute through skills and agents
-→ checkpoint or resume
-→ validate
-→ attach evidence
-→ update work state
-→ record learning
+→ form and authorize context
+→ execute through Procedures and agents
+→ checkpoint, hand off, and resume
+→ validate and attach Evidence
+→ complete or stop truthfully
+→ review Decisions and learning
 → continue
 ```
 
 ## Repository responsibilities
 
-`continuity-lab` is canonical for governance, product, architecture, experience, migration design, iteration contracts, validation reports, Program State, and handoffs.
+`continuity-lab` is canonical for governance, product intent, current-system evidence, target architecture, Product Experience, migration architecture, iteration contracts, validation reports, Program State, Decisions, and handoffs.
 
-Nestfolio is canonical for implementation code, tests, project bindings, and dogfooding evidence only when a reviewed session contract explicitly authorizes narrowly scoped use.
+Nestfolio is the first dogfooding environment and remains canonical for its implementation code, tests, and project-specific binding only when an active reviewed contract explicitly authorizes narrowly scoped use.
 
 ## Current program position
 
@@ -39,40 +38,56 @@ Completed:
 
 1. PF-001 — Product Falsification;
 2. RI-001 — Current Runtime Inventory — G2 valid;
-3. TA-001 — historical architecture;
+3. TA-001 — historical architecture, no longer an active baseline;
 4. PI-001 — Product Intent Realignment;
 5. TA-002 — Target Architecture Revision — G3 passed;
 6. VS-001 — Resumable Agent Work Session — **FAIL** (historical, preserved);
-7. VS-001A — Interactive Claude Code Session Confirmation — **PASS**; **G6 passed** on combined VS-001 + VS-001A evidence;
-8. PX-001 — Product Experience — **PASS**; **G4 passed**.
+7. VS-001A — Interactive Claude Code Session Confirmation — **PASS**; G6 passed on combined VS-001 and VS-001A evidence;
+8. PX-001 — Product Experience — **PASS**; G4 passed;
+9. MA-001 — Migration Architecture — **PASS**; G5 passed.
 
-The accepted Product Experience defines cumulative adoption, ten-minute first value, Work and Context workflows, Context Pack explainability, Claude Code continuity, human Decisions, safe failure/recovery, a non-authoritative CLI, and a deferred local Console.
+The accepted migration architecture is:
+
+- `docs/60-migration/migration-plan.md`;
+- `decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md`.
+
+It defines seven cumulative, independently valuable, reversible slices from a Skills-only Procedure through governed Level 6 Assurance and Learning. It rejects big-bang rewrite, unqualified dual authority, mandatory Console adoption, and premature universalization.
+
+No migration slice was executed during MA-001. No implementation artifact was created or modified.
 
 ## Sole authorized next iteration
 
-9. **MA-001 — Migration Architecture** (Gate G5).
+**MI-001 — Procedure-First Adoption** is the sole authorized next iteration.
 
-MA-001 is **authorized and contracted**. Its active contract is prepared under:
+Current status:
 
 ```text
-sessions/MA-001-migration-architecture/
+authorized-contract-required
+not contracted
+not executed
 ```
 
-MA-001 has **not** been executed. `docs/60-migration/migration-plan.md` does not exist, no G5 result exists, and no implementation slice is authorized.
+MI-001 execution is not yet authorized. The immediate operation is to author and review its session contract in a fresh isolated contract-authoring session. That operation must not implement MI-001.
 
-Migration implementation, broader implementation, later vertical slices, Console implementation, universal integrations, hosted-service work, commercial-control-plane work, and broad or unrelated Nestfolio migration remain blocked.
+All later migration slices, broader implementation, Console work, universal integrations, hosted or commercial control-plane work, and broad Nestfolio migration remain blocked.
 
 ## Next human action
 
-Review and commit the prepared MA-001 contract and state/navigation changes. Then create `continuity-lab-ma001-contract.zip` from the committed `HEAD`, open a separate fresh conversation, upload that ZIP, and paste the complete unmodified contents of:
+Review and commit the completed MA-001 artifacts. Create a clean ZIP from committed `HEAD`. Then open a separate fresh conversation, upload only that ZIP, and paste the exact MI-001 contract-authoring prompt provided in `CONTINUITY-NEXT-STEPS.md`.
 
-```text
-sessions/MA-001-migration-architecture/prompt.md
-```
+Do not proceed directly to MI-001 implementation.
 
-Exact commands and checks are in `CONTINUITY-NEXT-STEPS.md`.
+## Accepted migration slices
 
-Do not upload Nestfolio by default. The Current Runtime Map is the primary current-system authority. A narrowly scoped source request is permitted only if the reviewed MA-001 contract's evidence-gap rule is triggered during execution.
+1. MI-001 — Procedure-First Adoption — PX Level 1
+2. MI-002 — Reusable Pack Composition — PX Level 2
+3. MI-003 — Bounded Local Work and Scope — PX Level 3
+4. MI-004 — Authorized Context Introduction — PX Level 4
+5. MI-005 — Resumable Run Cutover — PX Level 5
+6. MI-006 — Evidence-Bound Completion and Guard Coexistence — PX Level 6 Assurance
+7. MI-007 — Governed Learning and Selective Current-Runtime Retirement — PX Level 6 Learning
+
+Only MI-001 contract authoring is currently permitted. This list is an accepted sequence, not blanket execution authorization.
 
 ## Canonical starting points
 
@@ -83,14 +98,14 @@ Do not upload Nestfolio by default. The Current Runtime Map is the primary curre
 - Current runtime evidence: `docs/20-current-system/current-runtime-map.md`
 - Target architecture: `docs/30-target-architecture/target-architecture.md`
 - Product Experience: `docs/40-product-experience/product-experience.md`
+- Migration architecture: `docs/60-migration/migration-plan.md`
 - Migration navigation: `docs/60-migration/README.md`
-- VS-001 report: `docs/70-implementation/vs-001-resumable-agent-work-session.md`
-- VS-001A report: `docs/70-implementation/vs-001a-claude-code-session-confirmation.md`
+- Implementation evidence: `docs/70-implementation/README.md`
 - Program state: `docs/90-state/program-state.md`
 - Artifact index: `docs/90-state/artifact-index.md`
-- Active MA-001 contract: `sessions/MA-001-migration-architecture/context-pack.yaml`
-- Executable MA-001 prompt: `sessions/MA-001-migration-architecture/prompt.md`
+- MA-001 closure: `sessions/MA-001-migration-architecture/session-handoff.md`
+- Current execution instructions: `CONTINUITY-NEXT-STEPS.md`
 
 ## Rule
 
-Chat is not project memory. A result becomes canonical only when classified, written to the owning artifact, reviewed through a diff, and committed.
+Chat is not project memory. A result becomes canonical only when classified, written to its owning artifact, reviewed through a diff, and committed. Every new iteration uses a fresh isolated session and exactly one active reviewed contract.

@@ -9,76 +9,74 @@ superseded_by: null
 
 # Artifact Index
 
-| Artifact | Status | Owner | Role |
+| Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository entry point; records MA-001 as authorized and contracted but not executed, with G5 pending |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, ZIP creation, and fresh-session execution instructions for the prepared MA-001 contract |
-| `docs/00-governance/product-development-operating-model.md` | Ratified | Program | Governs iterations and phase gates |
-| `docs/00-governance/artifact-governance.md` | Ratified | Program | Governs canonical files and changes |
-| `docs/00-governance/design-levels.md` | Ratified | Program | Separates levels of design |
-| `docs/10-product/product-foundation.md` | Provisional | Product | Owns corrected repository-native agentic-development product direction and dogfooding success criteria |
-| `docs/20-current-system/README.md` | Ratified | Current-system analysis | Defines current-system artifact scope |
-| `docs/20-current-system/current-runtime-map.md` | Validated | Current-system analysis | Maps exact Nestfolio runtime revision; remains valid G2 evidence |
-| `docs/30-target-architecture/README.md` | Ratified | Architecture | Identifies TA-002 architecture as active G3 baseline |
-| `docs/30-target-architecture/target-architecture.md` | Validated | Architecture | Accepted TA-002 architecture, salvage matrix, current-feature classification, state/workflow/recovery model, and VS-001 definition |
-| `docs/40-product-experience/README.md` | Ratified | Product experience | Indexes the completed PX-001 design and G4 PASS |
-| `docs/40-product-experience/product-experience.md` | Validated | Product experience | Accepted L4 experience: onboarding, workflows, adoption, explainability, Decisions, CLI, Console disposition, recovery, scenarios, and TA-002 conformance |
-| `docs/50-validation/product-falsification-plan.md` | Ratified | Validation | Governs PF-001 |
-| `docs/50-validation/product-falsification-report.md` | Validated | Validation | Preserves PF-001 evidence and PI-001 correction |
-| `docs/60-migration/README.md` | Ratified | Migration | Records the active MA-001 contract, distinguishes preparation from execution, and keeps G5 and implementation pending |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Records VS-001 historical FAIL, VS-001A PASS/G6, and that implementation remains blocked during MA-001 |
-| `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Maps all VS-001 evidence, records strict FAIL, revisions, limitations, and sole next iteration (historical) |
-| `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Maps all VS-001A executor-provenance evidence, records PASS, exact revisions, and the G6 PASS rationale |
-| `docs/90-state/program-state.md` | Ratified | Program | Records MA-001 as authorized and contracted but not executed, G5 pending, and all implementation blocked |
-| `docs/90-state/artifact-index.md` | Ratified | Program | Index of canonical artifacts and statuses |
-| `sources/nestfolio-runtime.yaml` | Ratified | Sources | Binds RI-001 evidence to exact Nestfolio revision and archive hash |
-| `decisions/DR-0001-separate-canonical-design-repository.md` | Ratified | Program | Repository separation |
-| `decisions/DR-0002-artifact-first-context-isolation.md` | Ratified | Program | Context and canonical-memory protocol |
-| `decisions/DR-0003-falsification-before-architecture.md` | Ratified | Program | Historical phase ordering and gate prerequisites |
+| `README.md` | Ratified | Program | Repository orientation; records G5 PASS and MI-001 as the sole contract-required next iteration |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, archive, and fresh-session instructions for authoring the MI-001 contract |
+| `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
+| `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
+| `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
+| `docs/10-product/product-foundation.md` | Validated | Product | Canonical product intent corrected by PI-001 |
+| `docs/20-current-system/current-runtime-map.md` | Validated | Current system | Primary current-runtime authority and implementation-status inventory |
+| `docs/30-target-architecture/target-architecture.md` | Validated | Architecture | Accepted TA-002 target architecture and classification boundaries |
+| `docs/40-product-experience/product-experience.md` | Validated | Product experience | Accepted PX-001 cumulative adoption experience and truthful guarantees |
+| `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
+| `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and MI-001 boundary |
+| `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence and records MI-001 as contract-required before any new implementation |
+| `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
+| `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: G5 PASS, DR-0023 active, MI-001 sole next iteration, all other work blocked |
+| `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
+| `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
+| `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
+| `decisions/DR-0002-artifact-first-context-isolation.md` | Validated | Governance | Artifact-first isolated-session operation |
+| `decisions/DR-0003-falsification-before-architecture.md` | Validated | Governance | Falsification before architecture |
 | `decisions/DR-0004-do-not-establish-engineering-continuity-category.md` | Validated | Product | Rejects an established market-category claim |
-| `decisions/DR-0005-separate-goal-and-guard.md` | Validated | Product | Separates Goal and Guard and rejects Commitment as a shared entity |
-| `decisions/DR-0006-narrow-product-boundary.md` | Superseded | Product | Historical PF-001 boundary superseded by DR-0012 |
-| `decisions/DR-0007-narrow-continuity-kernel.md` | Superseded | Architecture | Historical narrow Kernel; superseded by DR-0013 |
-| `decisions/DR-0008-local-first-artifact-authority.md` | Superseded | Architecture | Historical artifact/ledger authority; superseded by DR-0014 |
-| `decisions/DR-0009-typed-read-oriented-providers.md` | Superseded | Architecture | Historical read-oriented provider decision; superseded by DR-0015 |
-| `decisions/DR-0010-separate-pack-definitions-from-context-packs.md` | Superseded | Architecture | Historical declarative Pack decision; superseded by DR-0016 |
-| `decisions/DR-0011-explicit-context-formation-pipeline.md` | Validated | Architecture | Retained explicit reproducible Context Formation pipeline inside the complete operational loop |
-| `decisions/DR-0012-repository-native-agentic-development-framework.md` | Validated | Product | Active product-boundary decision |
-| `decisions/DR-0013-bounded-agent-work-core.md` | Validated | Architecture | Active Framework Core boundary with first-class Work and Run semantics |
-| `decisions/DR-0014-repository-local-canonical-state.md` | Validated | Architecture | Active dual canonical storage and recovery authority decision |
-| `decisions/DR-0015-concrete-integration-ports-and-claude-code-adapter.md` | Validated | Architecture | Active typed integration and Claude Code Adapter decision |
-| `decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md` | Validated | Architecture | Active Pack, Procedure, executor-asset, and project-binding decision |
-| `decisions/DR-0017-govern-assurance-and-learning-promotion.md` | Validated | Architecture | Active Guard, Evidence, waiver, Observation, Lesson, and promotion governance decision |
-| `decisions/DR-0018-validate-through-vs-001-before-broader-migration.md` | Validated | Program | Historical sequence decision that authorized VS-001 before broader migration or implementation |
-| `decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md` | Validated | Product experience | Adopts six cumulative levels and requires truthful active/absent guarantee labeling |
-| `decisions/DR-0020-explicit-human-context-authorization-by-default.md` | Validated | Product experience | Requires human Context Pack authorization by default and bounds opt-in deterministic policy |
-| `decisions/DR-0021-defer-local-non-authoritative-console.md` | Validated | Product experience | Defers a local Console while fixing its future non-authoritative boundaries |
-| `decisions/DR-0022-authorize-ma-001-after-g4-pass.md` | Validated | Program | Authorizes MA-001 only after G4 PASS and keeps implementation blocked |
+| `decisions/DR-0005-separate-goal-and-guard.md` | Validated | Product | Goal and Guard remain separate concepts |
+| `decisions/DR-0006-narrow-product-boundary.md` | Superseded | Product | Historical narrow product boundary superseded by corrected product intent |
+| `decisions/DR-0007-narrow-continuity-kernel.md` | Superseded | Architecture | Historical Core decision superseded by TA-002 |
+| `decisions/DR-0008-local-first-artifact-authority.md` | Superseded | Architecture | Historical artifact/ledger authority superseded by DR-0014 |
+| `decisions/DR-0009-typed-read-oriented-providers.md` | Superseded | Architecture | Historical provider model superseded by concrete integration ports |
+| `decisions/DR-0010-separate-pack-definitions-from-context-packs.md` | Superseded | Architecture | Historical declarative Pack decision superseded by DR-0016 |
+| `decisions/DR-0011-explicit-context-formation-pipeline.md` | Validated | Architecture | Explicit Context formation remains required |
+| `decisions/DR-0012-repository-native-agentic-development-framework.md` | Validated | Product | Corrected repository-native framework direction with Claude Code first |
+| `decisions/DR-0013-bounded-agent-work-core.md` | Validated | Architecture | Active bounded Framework Core boundary |
+| `decisions/DR-0014-repository-local-canonical-state.md` | Validated | Architecture | Active tracked-artifact and operational-Run storage authority |
+| `decisions/DR-0015-concrete-integration-ports-and-claude-code-adapter.md` | Validated | Architecture | Active integration-port and Claude Code Adapter boundary |
+| `decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md` | Validated | Architecture | Active Pack, Procedure, executor-asset, and project-binding boundary |
+| `decisions/DR-0017-govern-assurance-and-learning-promotion.md` | Validated | Architecture | Active Assurance, Guard, Evidence, Observation, Lesson, and promotion governance |
+| `decisions/DR-0018-validate-through-vs-001-before-broader-migration.md` | Validated | Program | Historical bounded-validation sequencing decision |
+| `decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md` | Validated | Product experience | Six cumulative levels and truthful guarantee labeling |
+| `decisions/DR-0020-explicit-human-context-authorization-by-default.md` | Validated | Product experience | Human Context Pack authorization by default |
+| `decisions/DR-0021-defer-local-non-authoritative-console.md` | Validated | Product experience | Local non-authoritative Console deferred |
+| `decisions/DR-0022-authorize-ma-001-after-g4-pass.md` | Validated | Program | Historical authorization of MA-001 after G4 PASS |
+| `decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md` | Validated | Migration | Accepts the seven-slice cumulative strangler path, qualified coexistence, and per-effort cutover |
 | `sessions/PF-001-product-falsification/context-pack.yaml` | Ratified | Session | Historical PF-001 input contract |
-| `sessions/PF-001-product-falsification/prompt.md` | Ratified | Session | Historical executable PF-001 instruction |
+| `sessions/PF-001-product-falsification/prompt.md` | Ratified | Session | Historical PF-001 executable instruction |
 | `sessions/PF-001-product-falsification/session-handoff.md` | Ratified | Session | Historical PF-001 closure |
 | `sessions/RI-001-runtime-inventory/context-pack.yaml` | Ratified | Session | Historical RI-001 input contract |
-| `sessions/RI-001-runtime-inventory/prompt.md` | Ratified | Session | Historical executable RI-001 instruction |
-| `sessions/RI-001-runtime-inventory/session-handoff.md` | Validated | Session | Closes RI-001 and records still-valid G2 result |
+| `sessions/RI-001-runtime-inventory/prompt.md` | Ratified | Session | Historical RI-001 executable instruction |
+| `sessions/RI-001-runtime-inventory/session-handoff.md` | Validated | Session | RI-001 closure and still-valid G2 result |
 | `sessions/TA-001-target-architecture/context-pack.yaml` | Ratified | Session | Historical TA-001 input contract |
-| `sessions/TA-001-target-architecture/prompt.md` | Ratified | Session | Historical executable TA-001 instruction |
-| `sessions/TA-001-target-architecture/session-handoff.md` | Superseded | Session | Historical TA-001 closure and superseded G3/PX authorization |
-| `sessions/PX-001-product-experience/context-pack.yaml` | Validated | Session | Preserves the executed PX-001 contract and records PASS, G4, changed files, and MA-001-only authorization |
-| `sessions/PX-001-product-experience/prompt.md` | Ratified | Session | Exact historical instruction executed for PX-001 |
-| `sessions/PX-001-product-experience/session-handoff.md` | Validated | Session | Closes PX-001 with PASS/G4, decisions, changed files, and executable MA-001 handoff |
+| `sessions/TA-001-target-architecture/prompt.md` | Ratified | Session | Historical TA-001 executable instruction |
+| `sessions/TA-001-target-architecture/session-handoff.md` | Superseded | Session | Historical TA-001 closure; not an active baseline |
 | `sessions/PI-001-product-intent-realignment/context-pack.yaml` | Ratified | Session | PI-001 input contract |
-| `sessions/PI-001-product-intent-realignment/prompt.md` | Ratified | Session | Executable PI-001 instruction |
-| `sessions/PI-001-product-intent-realignment/session-handoff.md` | Validated | Session | Closes PI-001 and historically authorizes TA-002 |
-| `sessions/TA-002-target-architecture-revision/context-pack.yaml` | Validated | Session | Completed TA-002 input/output contract and result |
-| `sessions/TA-002-target-architecture-revision/prompt.md` | Ratified | Session | Preserves executable TA-002 instruction |
-| `sessions/TA-002-target-architecture-revision/session-handoff.md` | Validated | Session | Closes TA-002, records G3 PASS, and authorizes VS-001 only |
-| `sessions/VS-001-resumable-agent-work-session/context-pack.yaml` | Validated | Session | Completed VS-001 contract, FAIL result, revisions, and acceptance summary |
-| `sessions/VS-001-resumable-agent-work-session/prompt.md` | Ratified | Session | Executable VS-001 instruction |
-| `sessions/VS-001-resumable-agent-work-session/session-handoff.md` | Validated | Session | Closes VS-001 with FAIL and authorizes VS-001A only |
+| `sessions/PI-001-product-intent-realignment/prompt.md` | Ratified | Session | PI-001 executable instruction |
+| `sessions/PI-001-product-intent-realignment/session-handoff.md` | Validated | Session | PI-001 closure and corrected product intent |
+| `sessions/TA-002-target-architecture-revision/context-pack.yaml` | Validated | Session | Completed TA-002 contract and result |
+| `sessions/TA-002-target-architecture-revision/prompt.md` | Ratified | Session | Exact TA-002 executable instruction |
+| `sessions/TA-002-target-architecture-revision/session-handoff.md` | Validated | Session | TA-002 closure and G3 PASS |
+| `sessions/VS-001-resumable-agent-work-session/context-pack.yaml` | Validated | Session | Completed VS-001 contract and historical FAIL result |
+| `sessions/VS-001-resumable-agent-work-session/prompt.md` | Ratified | Session | Exact VS-001 executable instruction |
+| `sessions/VS-001-resumable-agent-work-session/session-handoff.md` | Validated | Session | VS-001 closure and VS-001A-only historical authorization |
 | `sessions/VS-001-resumable-agent-work-session/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for VS-001 closure |
-| `sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml` | Validated | Session | Completed VS-001A contract, PASS result, exact revisions, and executor provenance |
-| `sessions/VS-001A-claude-code-session-confirmation/prompt.md` | Ratified | Session | Historical executable VS-001A instruction |
-| `sessions/VS-001A-claude-code-session-confirmation/session-handoff.md` | Validated | Session | Closes VS-001A with PASS, records G6 PASS, and authorizes PX-001 only |
-| `sessions/MA-001-migration-architecture/context-pack.yaml` | Ratified | Session | Active MA-001 L5 input, method, output, exclusion, scenario, evidence, and unconditional G5 contract; result pending |
-| `sessions/MA-001-migration-architecture/prompt.md` | Ratified | Session | Complete executable instruction for running MA-001 in a separate fresh session |
-| `sessions/MA-001-migration-architecture/session-handoff.md` | Provisional | Session | Prepared unused placeholder; confirms MA-001 has not run, no migration plan exists, and G5 is pending |
+| `sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml` | Validated | Session | Completed VS-001A contract, PASS, revisions, and executor provenance |
+| `sessions/VS-001A-claude-code-session-confirmation/prompt.md` | Ratified | Session | Exact VS-001A executable instruction |
+| `sessions/VS-001A-claude-code-session-confirmation/session-handoff.md` | Validated | Session | VS-001A closure and combined G6 PASS |
+| `sessions/PX-001-product-experience/context-pack.yaml` | Validated | Session | Completed PX-001 contract, PASS, G4, and MA-001-only authorization |
+| `sessions/PX-001-product-experience/prompt.md` | Ratified | Session | Exact PX-001 executable instruction |
+| `sessions/PX-001-product-experience/session-handoff.md` | Validated | Session | PX-001 closure and historical MA-001 authorization |
+| `sessions/MA-001-migration-architecture/context-pack.yaml` | Validated | Session | Original MA-001 contract preserved with appended final PASS, G5, scenarios, changed files, and MI-001-only authorization |
+| `sessions/MA-001-migration-architecture/prompt.md` | Ratified | Session | Exact byte-preserved MA-001 instruction executed in the isolated session |
+| `sessions/MA-001-migration-architecture/session-handoff.md` | Validated | Session | Completed MA-001 handoff with observations, M1–M16 results, G5 PASS, changed files, and executable MI-001 contract-authoring continuation |

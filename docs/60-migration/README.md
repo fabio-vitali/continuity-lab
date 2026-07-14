@@ -9,45 +9,46 @@ superseded_by: null
 
 # Migration
 
-**MA-001 — Migration Architecture is authorized and contracted as the sole next iteration. Gate G5 remains pending.**
+**MA-001 — Migration Architecture is complete with unconditional PASS. Gate G5 is passed and valid.**
 
-The active reviewed-before-execution contract is located at:
+Canonical migration authority:
+
+- `migration-plan.md`;
+- `../../decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md`;
+- `../../sessions/MA-001-migration-architecture/session-handoff.md`.
+
+## Accepted approach
+
+Continuity migrates cumulatively by PX-001 guarantee level through a Procedure- or effort-level strangler path. Current and target mechanisms may coexist only with explicit routing and one qualified authority for every canonical object.
+
+Existing current Runs drain, complete, or are abandoned under current journal rules. New target Runs begin in target Repository Infrastructure only after their effort is cut over. Active Run state is never transformed in place.
+
+External systems remain authoritative for their objects. Nestfolio-specific behavior remains in the Nestfolio Pack or project binding. CLI and any later Console are non-authoritative.
+
+## Accepted slices
+
+| Slice | Level | Independent value |
+|---|---:|---|
+| MI-001 — Procedure-First Adoption | 1 | One useful Skills-only Procedure invoked from repository instructions |
+| MI-002 — Reusable Pack Composition | 2 | Reusable Procedures and exact Pack locking |
+| MI-003 — Bounded Local Work and Scope | 3 | Local Work selection, Working Set, Scope, and completion criteria |
+| MI-004 — Authorized Context Introduction | 4 | Formed, validated, explained, and authorized Context Packs |
+| MI-005 — Resumable Run Cutover | 5 | Runs, Checkpoints, Handoffs, and genuine fresh-session resume |
+| MI-006 — Evidence-Bound Completion and Guard Coexistence | 6 | Criterion-linked Evidence, Guards, Waivers, and truthful completion |
+| MI-007 — Governed Learning and Selective Current-Runtime Retirement | 6 | Decisions, reviewed learning, and selective legacy retirement |
+
+Every slice has explicit compatibility, coexistence, authority, validation, Evidence, rollback, abandonment, recovery, cutover, deprecation, retirement, and exclusions in `migration-plan.md`.
+
+## Current authorization
+
+Only **MI-001 contract authoring** is permitted.
 
 ```text
-sessions/MA-001-migration-architecture/
-  context-pack.yaml
-  prompt.md
-  session-handoff.md
+MI-001: authorized-contract-required
+execution: blocked
+MI-002 through MI-007: blocked
 ```
 
-This records only that MA-001 is ready for review and later execution. It does not record that MA-001 has run.
+No migration slice was executed by MA-001. No implementation artifact was created or modified.
 
-Current facts:
-
-- `docs/60-migration/migration-plan.md` has not been created;
-- no G5 PASS or FAIL exists;
-- no migration architecture has been accepted;
-- no migration or implementation slice is authorized;
-- the MA-001 handoff is a prepared, unused placeholder.
-
-When executed in a separate fresh session, MA-001 may design:
-
-- current-to-target capability mapping using accepted TA-002 classifications;
-- independently valuable migration slices mapped to PX-001 adoption levels;
-- compatibility and explicit coexistence boundaries;
-- source-of-truth and authority preservation;
-- state-transformation ownership without implementation detail;
-- validation and Evidence requirements;
-- rollback, abandonment, recovery, cutover, deprecation, and retirement paths;
-- risk- and evidence-based ordering;
-- unconditional G5 PASS or FAIL and exactly one next iteration.
-
-MA-001 must not implement migration, rerun existing vertical slices, create a big-bang rewrite, inspect Nestfolio broadly, or pre-authorize implementation.
-
-Planned canonical artifact, created only by the later reviewed MA-001 execution:
-
-- `migration-plan.md`
-
-Review, commit, ZIP creation, and fresh-session instructions are exact in `CONTINUITY-NEXT-STEPS.md`.
-
-Migration implementation and every later slice remain blocked until G5 is decided and exactly one next iteration is explicitly authorized.
+The exact review, commit, ZIP, and fresh-session procedure is in `../../CONTINUITY-NEXT-STEPS.md`.

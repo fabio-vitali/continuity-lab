@@ -455,3 +455,107 @@ result:
   decisions_created: []
   blocking_contradictions: []
   sole_authorized_next_iteration: null
+
+final_result:
+  decision: PASS
+  gate_g5: passed
+  completed_on: 2026-07-14
+  unconditional: true
+  decisive_rationale: >
+    Every completion criterion is satisfied conjunctively. The accepted TA-002
+    architecture and PX-001 Product Experience can be introduced from the
+    validated current runtime through seven independently valuable cumulative
+    slices. Each slice has explicit authority, compatibility, coexistence,
+    validation, Evidence, rollback, abandonment, recovery, cutover,
+    deprecation, and retirement rules. The path requires no big-bang rewrite,
+    no unqualified dual authority, no mandatory Console, and no premature
+    universalization. External systems retain authority for their objects and
+    Nestfolio-specific behavior remains in its project binding.
+  primary_deliverable: docs/60-migration/migration-plan.md
+  decisions_created:
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+  nestfolio_source_inspection:
+    performed: false
+    reason: >
+      The canonical Current Runtime Map and accepted validation evidence were
+      sufficient to decide every G5 criterion. No exact unresolved current fact
+      remained that met the contract's evidence-gap threshold.
+  blocking_contradictions: []
+  non_structural_implementation_questions:
+    - exact repository path and command naming for the first Skills-only Procedure
+    - concrete Pack manifest and lock serialization selected by MI-002
+    - concrete local Work artifact serialization selected by MI-003
+    - operational Run-store layout and recovery mechanics selected by MI-005
+    - exact adapter hook and result-capture surfaces selected by the owning implementation slice
+    - retirement timing for individual legacy capabilities after replacement evidence exists
+  scenario_results:
+    M1: PASS
+    M2: PASS
+    M3: PASS
+    M4: PASS
+    M5: PASS
+    M6: PASS
+    M7: PASS
+    M8: PASS
+    M9: PASS
+    M10: PASS
+    M11: PASS
+    M12: PASS
+    M13: PASS
+    M14: PASS
+    M15: PASS
+    M16: PASS
+  accepted_migration_slices:
+    - id: MI-001
+      name: Procedure-First Adoption
+      px_level: 1
+    - id: MI-002
+      name: Reusable Pack Composition
+      px_level: 2
+    - id: MI-003
+      name: Bounded Local Work and Scope
+      px_level: 3
+    - id: MI-004
+      name: Authorized Context Introduction
+      px_level: 4
+    - id: MI-005
+      name: Resumable Run Cutover
+      px_level: 5
+    - id: MI-006
+      name: Evidence-Bound Completion and Guard Coexistence
+      px_level: 6
+    - id: MI-007
+      name: Governed Learning and Selective Current-Runtime Retirement
+      px_level: 6
+  sole_authorized_next_iteration:
+    id: MI-001
+    name: Procedure-First Adoption
+    status: authorized-contract-required
+    execution_authorized: false
+    required_next_operation: author and review the MI-001 session contract in a fresh isolated contract-authoring session
+  changed_files:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/60-migration/README.md
+    - docs/60-migration/migration-plan.md
+    - docs/70-implementation/README.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/90-state/program-state.md
+    - docs/90-state/artifact-index.md
+    - sessions/MA-001-migration-architecture/context-pack.yaml
+    - sessions/MA-001-migration-architecture/session-handoff.md
+  prompt_integrity:
+    path: sessions/MA-001-migration-architecture/prompt.md
+    sha256: a6531bd13408e87f5c48fc06dc275bfea785949b5ad339a89da975b9791feb3b
+    modified: false
+  no_migration_slice_executed: true
+  no_implementation_artifact_created_or_modified: true
+  still_blocked:
+    - MI-001 execution until its reviewed contract is committed and separately invoked
+    - MI-002 through MI-007 until predecessor Evidence and explicit authorization
+    - broader implementation and later vertical slices
+    - Console implementation
+    - universal executor or platform integrations
+    - hosted-service, RBAC, analytics, billing, commercial packaging, and commercial-control-plane work
+    - broad or unrelated Nestfolio migration
+    - promotion of Nestfolio-specific behavior into Framework Core without repeated evidence and a Decision
