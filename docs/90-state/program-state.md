@@ -19,7 +19,7 @@ The accepted migration architecture is canonical in `docs/60-migration/migration
 
 No migration slice was executed during MA-001. No implementation artifact was created or modified.
 
-The sole authorized next iteration is **MI-001 — Procedure-First Adoption**. Its reviewed session contract is now prepared under `sessions/MI-001-procedure-first-adoption/`. Contract authorization is complete, but execution authorization becomes effective only after the contract is reviewed, committed, and supplied unchanged to a fresh isolated execution session.
+The sole authorized next iteration is **MI-001 — Procedure-First Adoption**. Its session contract under `sessions/MI-001-procedure-first-adoption/` has been reviewed and committed. MI-001 is `authorized-not-started`, has not executed, and its result is pending. Execution is authorized only in a fresh isolated session supplied with the committed canonical repository and the bounded Nestfolio input required by the contract.
 
 ## Gate history and current validity
 
@@ -157,8 +157,9 @@ Status:
 
 ```text
 authorized-not-started
-contracted; review-and-commit required before execution
+contract reviewed and committed
 not executed
+result pending
 ```
 
 Purpose:
@@ -167,12 +168,10 @@ Purpose:
 
 Required next operation:
 
-1. review the prepared MI-001 contract and exact changed-file manifest;
-2. commit and push the contract-authoring changes;
-3. create a clean ZIP from committed `HEAD`;
-4. open a fresh isolated execution session with the committed repository and the bounded Nestfolio implementation input required by the contract;
-5. execute the complete unmodified `sessions/MI-001-procedure-first-adoption/prompt.md`;
-6. do not execute MI-001 in the contract-authoring session.
+1. create a clean ZIP from committed `HEAD`;
+2. open a fresh isolated execution session with the committed repository and the bounded Nestfolio implementation input required by the contract;
+3. execute the complete unmodified `sessions/MI-001-procedure-first-adoption/prompt.md`;
+4. do not execute MI-001 in the contract-authoring or authorization-correction session.
 
 Contract selection:
 
@@ -195,13 +194,13 @@ The contract does not pre-authorize MI-002 or any broader implementation.
 7. VS-001A — Interactive Claude Code Session Confirmation — **complete; PASS; G6 passed on combined evidence**
 8. PX-001 — Product Experience — **complete; PASS; G4 passed**
 9. MA-001 — Migration Architecture — **complete; PASS; G5 passed**
-10. MI-001 — Procedure-First Adoption — **sole authorized next iteration; contract prepared; authorized-not-started; not executed**
+10. MI-001 — Procedure-First Adoption — **sole authorized next iteration; contract reviewed and committed; authorized-not-started; not executed; result pending**
 11. MI-002 through MI-007 — **architecturally sequenced but blocked pending prior-slice evidence and explicit authorization**
 12. broader implementation and unrelated migration — **blocked**
 
 ## Active blockers
 
-- MI-001 execution is blocked in this contract-authoring session and until the prepared contract is reviewed and committed; after that, only a separate fresh session using the exact committed prompt may execute it.
+- MI-001 execution is prohibited in the contract-authoring and authorization-correction sessions. It is authorized only in a separate fresh isolated session using the exact committed contract and required bounded Nestfolio input.
 - MI-002 through MI-007 are blocked until their predecessors produce accepted Evidence and Program State explicitly authorizes exactly one of them.
 - No migration slice may be executed under the MA-001 prompt or handoff.
 - Broader implementation, later vertical slices, or reproduction of the whole current runtime remain blocked.

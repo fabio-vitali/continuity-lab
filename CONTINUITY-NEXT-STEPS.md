@@ -1,45 +1,36 @@
-# Continuity — Exact Next Steps After MI-001 Contract Authoring
+# Continuity — Authorize and Execute MI-001
 
 ## Current state
 
 - MA-001 is complete with unconditional PASS; G5 is passed and valid.
-- DR-0023 and the Migration Plan remain canonical.
-- The MI-001 contract is prepared.
-- MI-001 is `authorized-not-started`, contracted, and not executed.
-- MI-001 remains the sole authorized iteration.
-- This repository contains no MI-001 implementation result.
+- `docs/60-migration/migration-plan.md` and DR-0023 remain accepted and canonical.
+- The MI-001 contract under `sessions/MI-001-procedure-first-adoption/` was reviewed and committed in revision `5a179ef22b1c27146a89d6e63823cb4cc6eb33c6`.
+- This update corrects the stale authorization wording that still described review and commit as pending.
+- MI-001 is the sole authorized execution iteration with status `authorized-not-started`.
+- MI-001 has not executed and its result is pending.
+- MI-002 through MI-007 and all broader work remain blocked.
 
-## 1. Review the contract-authoring diff
+## 1. Apply and review this authorization-state correction
 
-Only these files may have changed:
+Only these files must differ from revision `5a179ef22b1c27146a89d6e63823cb4cc6eb33c6`:
 
 ```text
-README.md
 CONTINUITY-NEXT-STEPS.md
-docs/60-migration/README.md
-docs/70-implementation/README.md
-docs/90-state/artifact-index.md
 docs/90-state/program-state.md
-sessions/MI-001-procedure-first-adoption/context-pack.yaml
-sessions/MI-001-procedure-first-adoption/prompt.md
-sessions/MI-001-procedure-first-adoption/session-handoff.md
 ```
 
 Verify:
 
 ```bash
-{
-  git diff --name-only
-  git ls-files --others --exclude-standard
-} | sort -u
-
+git status --short
+git diff --name-only
 git diff --check
 git diff
 ```
 
-Do not commit if any other path changed. Confirm that no implementation code, tests, schemas, adapters, stores, Skills, hooks, Pack assets, Console code, Decision Record, or Nestfolio artifact changed.
+Do not continue if any other file changed.
 
-Review especially:
+The following MI-001 contract files must remain unchanged:
 
 ```text
 sessions/MI-001-procedure-first-adoption/context-pack.yaml
@@ -47,95 +38,105 @@ sessions/MI-001-procedure-first-adoption/prompt.md
 sessions/MI-001-procedure-first-adoption/session-handoff.md
 ```
 
-The selected Level 1 Procedure is `nestfolio.backlog-next`, entered through `/backlog-next`, with current asset source `.claude/skills/backlog-next/**` and an exact per-asset SHA-256 lock to be created during execution.
+The handoff remains an unused placeholder until MI-001 actually executes.
 
-## 2. Commit and push the contract
+## 2. Commit and push the correction
 
 Run:
 
 ```bash
 git add \
-  README.md \
   CONTINUITY-NEXT-STEPS.md \
-  docs/60-migration/README.md \
-  docs/70-implementation/README.md \
-  docs/90-state/artifact-index.md \
-  docs/90-state/program-state.md \
-  sessions/MI-001-procedure-first-adoption/context-pack.yaml \
-  sessions/MI-001-procedure-first-adoption/prompt.md \
-  sessions/MI-001-procedure-first-adoption/session-handoff.md
+  docs/90-state/program-state.md
 
 git diff --cached --check
 git diff --cached
-git commit -m "Prepare MI-001 procedure-first adoption contract"
+
+git commit -m "Authorize committed MI-001 execution contract"
 git push
 ```
 
-## 3. Create clean committed archives
+Do not amend or rewrite the already reviewed MI-001 contract.
 
-Create the canonical contract archive from committed `HEAD`:
+## 3. Create the canonical committed archive
+
+After the push succeeds:
 
 ```bash
+REVISION="$(git rev-parse HEAD)"
+
 git archive \
   --format=zip \
-  --output=../continuity-lab-mi001-contracted.zip \
+  --output="../continuity-lab-${REVISION}.zip" \
   HEAD
+
+unzip -z "../continuity-lab-${REVISION}.zip"
 ```
 
-For MI-001 execution, also prepare the Nestfolio implementation repository at the exact revision/precondition required by the contract. The baseline recorded in `sources/nestfolio-runtime.yaml` is:
+The ZIP comment must show the same full commit SHA returned by `git rev-parse HEAD`.
+
+Prepare Nestfolio at the exact revision required by the active contract:
 
 ```text
 3aa8f4773955541415f615abd80a0a9702bcb416
 ```
 
-Do not use an unreviewed moving branch. Do not copy Nestfolio into continuity-lab.
+Do not use a moving branch or an uncommitted Nestfolio working tree.
 
 ## 4. Execute MI-001 in a fresh isolated conversation
 
-Open a new conversation. Upload:
+Open a new conversation and upload:
 
 ```text
-continuity-lab-mi001-contracted.zip
+continuity-lab-<NEW-COMMIT-SHA>.zip
+nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip
 ```
 
-and the exact bounded Nestfolio archive/repository input required by the contract.
-
-Paste the complete contents of this file without modification:
+Paste the complete, unchanged contents of:
 
 ```text
 sessions/MI-001-procedure-first-adoption/prompt.md
 ```
 
-Do not summarize, shorten, merge, or supplement the prompt with prior-chat assumptions. Do not execute MI-001 in the contract-authoring conversation.
+Do not summarize or supplement the prompt with assumptions from earlier conversations.
 
-## 5. Required execution outcome
+The authorization check should now find all of these conditions consistently recorded:
+
+```text
+MA-001 PASS and G5 valid
+migration plan accepted and canonical
+DR-0023 validated and active
+MI-001 contract reviewed and committed
+MI-001 sole authorized execution iteration
+MI-001 authorized-not-started
+MI-001 not executed
+MI-001 result pending
+MI-002 through MI-007 and broader work blocked
+```
+
+## 5. Required MI-001 outcome
 
 The fresh executor must:
 
-- implement only the contracted PX Level 1 slice;
-- modify only the paths explicitly permitted by the contract;
-- validate every success and failure scenario;
-- provide criterion-linked Evidence C1-C7;
-- issue an unconditional PASS or FAIL;
-- select exactly one evidence-justified next iteration only after that result;
-- return exact changed-file manifests and complete updated repository ZIPs.
+- implement only the contracted Level 1 `nestfolio.backlog-next` slice;
+- modify only paths permitted by the active Context Pack;
+- execute every required success and failure scenario;
+- produce criterion-linked Evidence C1 through C7;
+- issue exactly one unconditional PASS or FAIL;
+- return complete updated ZIP archives for every modified repository;
+- select exactly one evidence-justified next iteration only after the verdict.
 
 A PASS does not automatically authorize MI-002.
 
 ## Work that remains blocked
 
-- MI-001 execution anywhere except the separate fresh committed-contract session;
+- MI-001 execution in the contract-authoring or authorization-correction conversation;
 - MI-002 through MI-007 until predecessor Evidence and explicit Program State authorization;
-- reusable multi-Procedure Pack composition and Level 2 conflict/compatibility machinery;
-- canonical Work, Working Set, Scope, or backlog migration;
-- Context Packs;
-- resumable Runs, effects, Checkpoints, and Handoffs;
-- Assurance, Guards, Waivers, and trusted completion;
-- governed Decisions, Observations, Lessons, and automatic promotion;
-- broader implementation and later vertical slices;
-- reproduction or migration of the complete current runtime;
+- reusable multi-Procedure composition and Level 2 machinery;
+- canonical Work, Working Set, Scope, Context Pack, Session, Run, effect, Checkpoint, Handoff, Assurance, Waiver, Guard, Decision, Observation, or Lesson state beyond the contracted slice;
+- broader implementation or migration;
 - Console implementation;
-- universal executor/platform integrations;
-- hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane;
+- universal executor or platform integrations;
+- hosted services, RBAC, analytics, billing, commercial packaging, and commercial control-plane work;
 - broad or unrelated Nestfolio migration;
 - promotion of Nestfolio-specific behavior into Framework Core without repeated cross-project evidence and a new Decision.
