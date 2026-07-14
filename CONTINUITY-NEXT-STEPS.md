@@ -1,47 +1,68 @@
 # Current Execution Instructions
 
-## 1. Review and commit the PX-001 contract
+## 1. Review and commit the PX-001 result
 
-Review the complete diff for the contract-authoring operation and confirm that:
+Review the complete diff and confirm that:
 
-- `sessions/PX-001-product-experience/context-pack.yaml` is the active 2026-07-14 contract;
-- `sessions/PX-001-product-experience/prompt.md` is the active executable instruction;
-- the old TA-001-derived context pack and prompt are preserved only by the real repository Git history, not duplicated in the working tree;
-- `sessions/PX-001-product-experience/session-handoff.md` remains the superseded unused placeholder and will be replaced only when PX-001 executes;
-- Program State, Artifact Index, `README.md`, and `docs/40-product-experience/README.md` consistently record PX-001 as contracted but not executed;
-- no Product Foundation, Target Architecture, implementation report, or Decision Record changed;
-- G4 remains pending and no later iteration is authorized.
+- `docs/40-product-experience/product-experience.md` contains the complete accepted L4 design;
+- G4 is an unconditional PASS;
+- all twenty-one required scenarios and the TA-002 conformance matrix are present;
+- `DR-0019` through `DR-0022` record the durable Product Experience and program-sequence decisions;
+- the active PX-001 Context Pack preserves its original contract and appends `final_result`;
+- the PX-001 prompt is unchanged;
+- the old unused handoff placeholder has been replaced by the validated PX-001 handoff;
+- Program State, Artifact Index, README files, and next-step instructions consistently authorize MA-001 only;
+- no Product Foundation, Target Architecture, VS-001/VS-001A report, or implementation artifact changed;
+- no migration plan or implementation artifact was created.
 
-Commit the reviewed changes in the real `continuity-lab` Git repository so the replaced contract remains recoverable through Git history.
+Commit the reviewed changes in the real `continuity-lab` Git repository.
 
-## 2. Run only PX-001
+## 2. Author the MA-001 contract
 
-Start a fresh AI session using:
+Start a fresh AI session with the latest committed complete `continuity-lab` repository.
 
-1. the latest committed complete `continuity-lab` repository;
-2. `sessions/PX-001-product-experience/context-pack.yaml`;
-3. `sessions/PX-001-product-experience/prompt.md`.
+Use `sessions/PX-001-product-experience/session-handoff.md` as the executable handoff for:
 
-Do not upload, inspect, or request Nestfolio. Do not provide prior chats. The active prompt contains the complete read order, design scope, methods, deliverables, prohibitions, completion criteria, and G4 semantics.
+- the exact ordered inputs;
+- the MA-001 primary question;
+- the output contract;
+- explicit exclusions;
+- G5 completion criteria.
 
-PX-001 must produce the Product Experience design, conceptually test all required scenarios, issue an unconditional G4 PASS or FAIL, and authorize exactly one evidence-justified next iteration.
+Create a new active session directory:
+
+```text
+sessions/MA-001-migration-architecture/
+  context-pack.yaml
+  prompt.md
+  session-handoff.md
+```
+
+The contract-authoring operation must verify that PX-001 is complete, G4 is valid, MA-001 is the sole authorized next iteration, and all implementation remains blocked. It must not execute MA-001 or create `docs/60-migration/migration-plan.md` yet.
+
+## 3. Run only the reviewed MA-001 contract
+
+After the contract is reviewed and committed, execute MA-001 in a new isolated session.
+
+MA-001 is L5 design only. It must produce migration architecture, issue unconditional G5 PASS or FAIL, and authorize exactly one evidence-justified next iteration.
 
 ## Still blocked
 
-- MA-001 and all migration architecture;
+- migration implementation;
 - broader implementation;
 - later vertical slices;
+- local Console implementation;
 - universal executor or platform integrations;
 - hosted-service or commercial-control-plane work;
 - broad or unrelated Nestfolio migration.
 
 ## Permanent rules
 
-- Chat, transcripts, UI state, and hidden executor state are not canonical.
+- Chat, transcripts, CLI state, Console state, and hidden executor state are not canonical.
 - Review every generated Git diff before committing.
-- Preserve accepted TA-002 boundaries unless a blocking contradiction is raised explicitly.
+- Preserve accepted TA-002 and PX-001 boundaries unless a contradiction is raised explicitly.
 - Keep Goal and Guard separate.
 - Keep Nestfolio-specific behavior outside Framework Core.
-- Require criterion-linked Evidence for completion.
+- Require criterion-linked Evidence or an explicit waiver for completion.
 - Never promote an Observation or Lesson automatically.
 - Authorize exactly one next iteration only after the current gate result.

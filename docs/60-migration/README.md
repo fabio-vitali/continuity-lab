@@ -2,19 +2,30 @@
 artifact_id: MIGRATION-INDEX
 status: ratified
 owner: migration
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 supersedes: []
 superseded_by: null
 ---
 
 # Migration
 
-Broad migration design remains blocked.
+**MA-001 — Migration Architecture is the sole authorized next iteration. Gate G5 remains pending.**
 
-TA-002 passed G3 and VS-001 validated the bounded repository-native mechanics, but VS-001 failed strict executor acceptance because no real Claude Code binary was available. `DR-0018` therefore still prevents migration architecture.
+MA-001 is authorized only after PX-001 completed with G4 PASS. It must first receive a new active session contract authored from current Program State and the completed PX-001 handoff.
 
-**VS-001A — Interactive Claude Code Session Confirmation** is the sole authorized next iteration. No current Nestfolio module is approved for broader extraction or migration.
+MA-001 may design:
 
-Planned future artifact, only when explicitly authorized:
+- incremental migration slices with independent value;
+- compatibility boundaries;
+- rollback and abandonment paths;
+- authority preservation;
+- current-to-target state and capability transitions;
+- ordering and validation requirements.
+
+MA-001 must not implement migration, rerun existing vertical slices, create a big-bang rewrite, or pre-authorize implementation.
+
+Planned canonical artifact, only when the reviewed MA-001 contract executes:
 
 - `migration-plan.md`
+
+Migration implementation and every later slice remain blocked until G5 is decided and one next iteration is explicitly authorized.
