@@ -2,7 +2,7 @@
 artifact_id: STATE-PROGRAM
 status: ratified
 owner: program
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 supersedes: []
 superseded_by: null
 ---
@@ -11,15 +11,15 @@ superseded_by: null
 
 ## Current phase
 
-**VS-001A — Interactive Claude Code Session Confirmation: complete with PASS on 2026-07-13. Gate G6 passed.**
+**PX-001 — Product Experience: authorized and contracted on 2026-07-14; not yet executed. Gate G4 remains pending.**
 
-Two genuine Claude Code Sessions executed the unchanged VS-001 implementation on Run `run-vs001a` and closed the executor-provenance evidence gap (VS-001 acceptance criteria 4, 7, 8) with criterion-linked deterministic Evidence. No architecture was broadened and no additional capability was migrated.
+VS-001A completed with PASS on 2026-07-13. Two genuine Claude Code Sessions executed the unchanged VS-001 implementation on Run `run-vs001a` and closed the executor-provenance evidence gap (VS-001 acceptance criteria 4, 7, 8) with criterion-linked deterministic Evidence. Gate G6 remains passed on the combined VS-001 and VS-001A evidence.
 
-The sole authorized next iteration is:
+The sole authorized next iteration remains:
 
 **PX-001 — Product Experience** (Gate G4).
 
-It requires a new session contract; the previously prepared PX-001 session files are superseded and must not be run.
+The active PX-001 contract is `sessions/PX-001-product-experience/context-pack.yaml` plus `sessions/PX-001-product-experience/prompt.md`, authored on 2026-07-14 from the accepted TA-002 architecture and the combined VS-001/VS-001A evidence. The old TA-001-derived contract is historical through Git history and must not be restored or run. The existing PX-001 handoff remains a superseded unused placeholder until PX-001 executes.
 
 ## Gate history and current validity
 
@@ -29,7 +29,7 @@ It requires a new session contract; the previously prepared PX-001 session files
 | G1 — Product survivability | passed under PI-001-corrected interpretation; valid | 2026-07-13 | PF-001 evidence, revised Product Foundation, DR-0012 |
 | G2 — Current-system evidence | passed; valid | 2026-07-13 | validated Current Runtime Map and exact RI-001 Nestfolio binding |
 | G3 — Target architecture coherence | passed; valid | 2026-07-13 | TA-002 architecture, DR-0013 to DR-0018, TA-002 handoff |
-| G4 — Product experience viability | pending — PX-001 authorized as sole next iteration | — | to be produced by PX-001 under a new contract |
+| G4 — Product experience viability | pending — PX-001 authorized and actively contracted as sole next iteration | — | active 2026-07-14 PX-001 contract; evidence to be produced by PX-001 |
 | G5 — Migration viability | blocked | — | not authorized |
 | G6 — Implementation validation | **passed; valid** | 2026-07-13 | combined VS-001 (repository mechanics) and VS-001A (genuine Claude Code executor provenance) evidence |
 
@@ -113,8 +113,9 @@ Primary question:
 
 Required inputs:
 
-- a **new** PX-001 session contract (context pack and prompt) authored from this Program State; the prepared PX-001 files under `sessions/PX-001-product-experience/` are superseded and must not be run;
-- the VS-001 and VS-001A validation reports and the accepted TA-002 architecture.
+- the active PX-001 Context Pack and prompt authored on 2026-07-14 under `sessions/PX-001-product-experience/`;
+- the VS-001 and VS-001A validation reports and the accepted TA-002 architecture;
+- no Nestfolio repository and no prior chat context.
 
 Required outcome: Gate G4 evidence, an unconditional PASS or FAIL, and exactly one authorized next iteration.
 
@@ -129,7 +130,7 @@ PX-001 is a design iteration. It must not broaden the architecture, migrate anot
 5. TA-002 — Target Architecture Revision — **complete; G3 passed**
 6. VS-001 — Resumable Agent Work Session — **complete; historical FAIL preserved (missing real-executor evidence at the time)**
 7. VS-001A — Interactive Claude Code Session Confirmation — **complete; PASS; G6 passed on combined evidence**
-8. PX-001 — Product Experience — **sole authorized next iteration (new contract required)**
+8. PX-001 — Product Experience — **sole authorized next iteration; active contract ready; not yet executed**
 9. MA-001 — Migration Architecture — **blocked**
 10. broader implementation/later vertical slices — **blocked**
 
@@ -137,7 +138,7 @@ PX-001 is a design iteration. It must not broaden the architecture, migrate anot
 
 - No work beyond PX-001 is authorized.
 - Do not redo or rewrite `run-vs001` or `run-vs001a`.
-- Do not run the superseded prepared PX-001 session files; PX-001 requires a new contract.
+- Run only the active PX-001 context pack and prompt authored on 2026-07-14; do not restore or execute the TA-001-derived versions preserved in Git history.
 - No project-specific behavior may enter Framework Core without evidence and a Decision.
 - No completed Work claim may bypass required Evidence or an explicit waiver.
 - No Lesson or Observation may automatically change a Skill, Guard, validator, or Pack.

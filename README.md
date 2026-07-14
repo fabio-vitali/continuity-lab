@@ -2,7 +2,7 @@
 artifact_id: LAB-README
 status: ratified
 owner: program
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 supersedes: []
 superseded_by: null
 ---
@@ -49,18 +49,19 @@ Two genuine Claude Code Sessions (version 2.1.207) proved adapter bootstrap, fir
 
 Sole authorized next iteration:
 
-8. **PX-001 — Product Experience** (Gate G4) — requires a **new** session contract; the previously prepared PX-001 session files are superseded and must not be run.
+8. **PX-001 — Product Experience** (Gate G4) — sole authorized next iteration; the active context pack and prompt were authored on 2026-07-14 and are ready to run. G4 remains pending.
 
 MA-001, broader implementation, later vertical slices, and unrelated Nestfolio work remain blocked.
 
 ## Next session
 
-Author a new PX-001 contract first (context pack and prompt under `sessions/`), then run it in a fresh conversation with:
+Run only the active PX-001 contract in a fresh conversation with:
 
-- the new PX-001 context pack and prompt;
-- `sessions/VS-001A-claude-code-session-confirmation/session-handoff.md`;
-- the latest complete `continuity-lab` repository;
-- the VS-001 and VS-001A validation reports as canonical evidence inputs.
+- `sessions/PX-001-product-experience/context-pack.yaml`;
+- `sessions/PX-001-product-experience/prompt.md`;
+- the latest complete `continuity-lab` repository.
+
+Do not upload or request Nestfolio. Do not restore the superseded TA-001-derived PX-001 contract from Git history. The active contract already names the VS-001/VS-001A reports, accepted TA-002 architecture, Decisions, and handoffs that must be read.
 
 Nestfolio VS-001A evidence identity: baseline `7db8688c1586b685ec295dcfa28c17f0ad798ebc`, result revision `2b47cddc3e38e26cdde47da38e2d8dc3e862c436` (both on `main`).
 

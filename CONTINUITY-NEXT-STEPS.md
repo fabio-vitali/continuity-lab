@@ -1,49 +1,47 @@
 # Current Execution Instructions
 
-## 1. Review and commit the VS-001A closure
+## 1. Review and commit the PX-001 contract
 
-Nestfolio: the VS-001A evidence commit is already on `main` and pushed:
+Review the complete diff for the contract-authoring operation and confirm that:
 
-```text
-2b47cddc3e38e26cdde47da38e2d8dc3e862c436
-```
+- `sessions/PX-001-product-experience/context-pack.yaml` is the active 2026-07-14 contract;
+- `sessions/PX-001-product-experience/prompt.md` is the active executable instruction;
+- the old TA-001-derived context pack and prompt are preserved only by the real repository Git history, not duplicated in the working tree;
+- `sessions/PX-001-product-experience/session-handoff.md` remains the superseded unused placeholder and will be replaced only when PX-001 executes;
+- Program State, Artifact Index, `README.md`, and `docs/40-product-experience/README.md` consistently record PX-001 as contracted but not executed;
+- no Product Foundation, Target Architecture, implementation report, or Decision Record changed;
+- G4 remains pending and no later iteration is authorized.
 
-Confirm that:
+Commit the reviewed changes in the real `continuity-lab` Git repository so the replaced contract remains recoverable through Git history.
 
-- `continuity/artifacts/**` and `.continuity/**` contain only the new `run-vs001a` Run/Session/Checkpoint/Handoff/Evidence artifacts plus the executor-provenance records under `.continuity/executor-sessions/`;
-- `continuity/evidence/vs001a/` contains the preparation record, `closure.json`, and `changed-files.txt`;
-- the run-vs001 artifacts and all VS-001 evidence are untouched;
-- no Nestfolio source outside the continuity paths was modified.
+## 2. Run only PX-001
 
-Continuity-lab: review `git diff`, then commit the VS-001A closure documents (validation report, completed context pack and handoff, Program State, artifact index, READMEs, this file).
+Start a fresh AI session using:
 
-## 2. Do not reinterpret the results
+1. the latest committed complete `continuity-lab` repository;
+2. `sessions/PX-001-product-experience/context-pack.yaml`;
+3. `sessions/PX-001-product-experience/prompt.md`.
 
-- VS-001 remains **FAIL** — a historical verdict, preserved unchanged.
-- VS-001A is **PASS** — every acceptance criterion has genuine Claude Code executor evidence (version 2.1.207, session ids `ea22919f-…` and `99ea8ab4-…`, both `startup_source: startup`).
-- **G6 is passed** on the combined VS-001 + VS-001A evidence, recorded in `docs/90-state/program-state.md`.
+Do not upload, inspect, or request Nestfolio. Do not provide prior chats. The active prompt contains the complete read order, design scope, methods, deliverables, prohibitions, completion criteria, and G4 semantics.
 
-## 3. Next: author and run only PX-001
-
-PX-001 — Product Experience (Gate G4) is the sole authorized next iteration.
-
-1. Author a **new** PX-001 session contract (context pack + prompt) from the current Program State. The previously prepared files under `sessions/PX-001-product-experience/` are superseded — do not run them.
-2. Start a fresh conversation with the new contract, the VS-001A handoff, and the VS-001/VS-001A validation reports.
-3. PX-001 is a design iteration: G4 evidence, unconditional PASS or FAIL, exactly one next iteration authorized.
+PX-001 must produce the Product Experience design, conceptually test all required scenarios, issue an unconditional G4 PASS or FAIL, and authorize exactly one evidence-justified next iteration.
 
 ## Still blocked
 
-- MA-001;
+- MA-001 and all migration architecture;
 - broader implementation;
 - later vertical slices;
-- unrelated Nestfolio work;
-- commercial/universal-control-plane design.
+- universal executor or platform integrations;
+- hosted-service or commercial-control-plane work;
+- broad or unrelated Nestfolio migration.
 
 ## Permanent rules
 
-- Chat and hidden executor state are not canonical.
+- Chat, transcripts, UI state, and hidden executor state are not canonical.
 - Review every generated Git diff before committing.
+- Preserve accepted TA-002 boundaries unless a blocking contradiction is raised explicitly.
 - Keep Goal and Guard separate.
 - Keep Nestfolio-specific behavior outside Framework Core.
 - Require criterion-linked Evidence for completion.
 - Never promote an Observation or Lesson automatically.
+- Authorize exactly one next iteration only after the current gate result.

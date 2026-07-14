@@ -2,7 +2,7 @@
 artifact_id: STATE-ARTIFACT-INDEX
 status: ratified
 owner: program
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 supersedes: []
 superseded_by: null
 ---
@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository entry point; records VS-001A PASS, G6 passed, and PX-001-only authorization |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact VS-001A review and PX-001 contract-authoring instructions |
+| `README.md` | Ratified | Program | Repository entry point; records VS-001A PASS, G6 passed, and the active PX-001 contract |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, and execution instructions for the active PX-001 contract |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Program | Governs iterations and phase gates |
 | `docs/00-governance/artifact-governance.md` | Ratified | Program | Governs canonical files and changes |
 | `docs/00-governance/design-levels.md` | Ratified | Program | Separates levels of design |
@@ -21,14 +21,14 @@ superseded_by: null
 | `docs/20-current-system/current-runtime-map.md` | Validated | Current-system analysis | Maps exact Nestfolio runtime revision; remains valid G2 evidence |
 | `docs/30-target-architecture/README.md` | Ratified | Architecture | Identifies TA-002 architecture as active G3 baseline |
 | `docs/30-target-architecture/target-architecture.md` | Validated | Architecture | Accepted TA-002 architecture, salvage matrix, current-feature classification, state/workflow/recovery model, and VS-001 definition |
-| `docs/40-product-experience/README.md` | Ratified | Product experience | Records PX-001 as the sole authorized next iteration, requiring a new session contract |
+| `docs/40-product-experience/README.md` | Ratified | Product experience | Records PX-001 as the sole authorized next iteration with an active 2026-07-14 contract; G4 pending |
 | `docs/50-validation/product-falsification-plan.md` | Ratified | Validation | Governs PF-001 |
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Preserves PF-001 evidence and PI-001 correction |
 | `docs/60-migration/README.md` | Ratified | Migration | Records migration as blocked until after VS-001A evidence and later authorization |
 | `docs/70-implementation/README.md` | Ratified | Implementation | Records VS-001 historical FAIL and VS-001A PASS; no further implementation slice authorized |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Maps all VS-001 evidence, records strict FAIL, revisions, limitations, and sole next iteration (historical) |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Maps all VS-001A executor-provenance evidence, records PASS, exact revisions, and the G6 PASS rationale |
-| `docs/90-state/program-state.md` | Ratified | Program | Records VS-001A PASS, G6 passed, preserved VS-001 historical FAIL, and PX-001-only authorization |
+| `docs/90-state/program-state.md` | Ratified | Program | Records the active PX-001 contract, G4 pending, G6 passed, preserved VS-001 historical FAIL, and PX-001-only authorization |
 | `docs/90-state/artifact-index.md` | Ratified | Program | Index of canonical artifacts and statuses |
 | `sources/nestfolio-runtime.yaml` | Ratified | Sources | Binds RI-001 evidence to exact Nestfolio revision and archive hash |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Ratified | Program | Repository separation |
@@ -58,9 +58,9 @@ superseded_by: null
 | `sessions/TA-001-target-architecture/context-pack.yaml` | Ratified | Session | Historical TA-001 input contract |
 | `sessions/TA-001-target-architecture/prompt.md` | Ratified | Session | Historical executable TA-001 instruction |
 | `sessions/TA-001-target-architecture/session-handoff.md` | Superseded | Session | Historical TA-001 closure and superseded G3/PX authorization |
-| `sessions/PX-001-product-experience/context-pack.yaml` | Superseded | Session | Prepared PX-001 input; not authorized |
-| `sessions/PX-001-product-experience/prompt.md` | Superseded | Session | Prepared PX-001 instruction; must not be run |
-| `sessions/PX-001-product-experience/session-handoff.md` | Superseded | Session | Unused placeholder from superseded PX-001 plan |
+| `sessions/PX-001-product-experience/context-pack.yaml` | Ratified | Session | Active PX-001 objective, inputs, methods, scenarios, invariants, outputs, completion criteria, and unconditional G4 contract |
+| `sessions/PX-001-product-experience/prompt.md` | Ratified | Session | Active executable PX-001 instruction authored from TA-002 and VS-001/VS-001A evidence |
+| `sessions/PX-001-product-experience/session-handoff.md` | Superseded | Session | Unused TA-001-derived placeholder; must be replaced when the active PX-001 contract executes |
 | `sessions/PI-001-product-intent-realignment/context-pack.yaml` | Ratified | Session | PI-001 input contract |
 | `sessions/PI-001-product-intent-realignment/prompt.md` | Ratified | Session | Executable PI-001 instruction |
 | `sessions/PI-001-product-intent-realignment/session-handoff.md` | Validated | Session | Closes PI-001 and historically authorizes TA-002 |

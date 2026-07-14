@@ -1,145 +1,388 @@
-status: superseded
-superseded_by: PI-001
-reason: TA-001 is provisional and G3 is reopened; do not run PX-001.
+contract:
+  status: authorized
+  authored_on: 2026-07-14
+  authority:
+    - docs/90-state/program-state.md
+    - sessions/VS-001A-claude-code-session-confirmation/session-handoff.md
+  replaces: >
+    The TA-001-derived PX-001 context pack and prompt, which remain historical
+    only through Git history and must not be restored or executed.
+  execution_rule: >
+    This contract authorizes PX-001 only. It does not execute PX-001, decide
+    G4, or authorize any later iteration.
 
 iteration:
   id: PX-001
-  type: product-experience
+  name: Product Experience
+  type: product-experience-design
+  design_level: L4
+  gate: G4
+  status: authorized-not-started
 
 objective:
   primary_question: >
-    How can the validated Context Pack and Handoff architecture deliver useful
-    first value within ten minutes, remain understandable and recoverable, and
-    preserve authority boundaries across human and executor handoffs?
+    Can the validated repository-native Continuity loop be given a viable
+    product experience — onboarding, primary workflows, progressive
+    disclosure, adoption levels, error and recovery UX, human decision UX,
+    and context explainability — without violating the accepted TA-002
+    architecture?
+  required_outcome: >
+    Produce conceptually testable product-experience evidence for the complete
+    validated loop, issue an unconditional G4 PASS or FAIL, and authorize
+    exactly one next iteration without pre-authorizing it in this contract.
 
-deliverables:
-  - path: docs/40-product-experience/product-experience.md
-    purpose: Own the target product workflows, interaction model, explainability, and recovery experience.
-  - path: decisions/
-    purpose: Record high-impact product-experience decisions.
+product_premise:
+  description: >
+    Continuity is a repository-native framework for coding agents working on
+    medium-to-complex repositories. Claude Code is the first and primary
+    executor. Nestfolio is the first dogfooding environment.
+  operational_loop: >
+    select work → form context → execute through skills and agents → checkpoint
+    or resume → validate → attach evidence → update work state → record learning
+    → continue
+  human_role: >
+    Humans remain operators, reviewers, decision authorities, and
+    collaborators. Human-readable inspection and handoff are useful product
+    qualities, not an agentless product position.
+
+verified_authorization_preconditions:
+  - TA-002 is complete and the revised Target Architecture is accepted.
+  - G3 is passed and valid.
+  - VS-001 is complete and its historical FAIL is preserved.
+  - VS-001A is complete with PASS.
+  - G6 is passed on the combined VS-001 and VS-001A evidence.
+  - PX-001 is the sole authorized next iteration.
+  - the former PX-001 context pack, prompt, and handoff are superseded historical material and must not be run
+  - MA-001, migration architecture, broader implementation, later vertical slices, and unrelated migration work remain blocked
+
+justified_canonical_inputs:
+  - path: docs/00-governance/product-development-operating-model.md
+    purpose: Governs iteration isolation, phase gates, epistemic states, handoff quality, and the requirement for one next objective.
+  - path: docs/00-governance/artifact-governance.md
+    purpose: Governs ownership, contradiction handling, Decision Records, canonical updates, and review of generated changes.
+  - path: docs/00-governance/design-levels.md
+    purpose: Defines L4 Product Experience ownership and prevents silent L3 architecture changes.
+  - path: sessions/PX-001-product-experience/context-pack.yaml
+    purpose: Provides this active PX-001 input, method, output, and completion contract.
+  - path: docs/10-product/product-foundation.md
+    purpose: Provides the corrected product premise, users, concepts, adoption path, constraints, success metrics, and Nestfolio dogfooding contract.
+  - path: docs/30-target-architecture/target-architecture.md
+    purpose: Provides the accepted boundaries, lifecycles, authority, workflows, state transitions, failures, recovery semantics, CLI entry points, and deferred Console decision.
+  - path: docs/50-validation/product-falsification-report.md
+    purpose: Preserves falsification evidence, adoption risks, comparative baselines, ten-minute-value concerns, and rejected commercial-control-plane assumptions.
+  - path: docs/70-implementation/vs-001-resumable-agent-work-session.md
+    purpose: Provides validated repository-mechanics evidence, demonstrated failure cases, limitations, and the historical strict FAIL.
+  - path: docs/70-implementation/vs-001a-claude-code-session-confirmation.md
+    purpose: Provides genuine Claude Code bootstrap, interruption, handoff, fresh-session resume, deduplication, and G6 evidence.
   - path: docs/90-state/program-state.md
-    purpose: Record G4 result and the sole authorized next iteration.
+    purpose: Provides current authorization, valid gate history, blockers, and accepted architecture summary.
   - path: docs/90-state/artifact-index.md
-    purpose: Record changed artifact status and ownership.
-  - path: sessions/PX-001-product-experience/session-handoff.md
-    purpose: Prepare migration-architecture work only if G4 passes.
+    purpose: Provides canonical artifact status, ownership, and active-versus-superseded classification.
+  - path: decisions/DR-0012-repository-native-agentic-development-framework.md
+    purpose: Fixes the product boundary, Claude Code-first premise, local work authority, and rejection of the universal control plane.
+  - path: decisions/DR-0013-bounded-agent-work-core.md
+    purpose: Fixes Framework Core concepts and prevents UX from redefining lifecycle semantics.
+  - path: decisions/DR-0014-repository-local-canonical-state.md
+    purpose: Fixes repository-artifact and operational-store authority, recovery, and transfer boundaries.
+  - path: decisions/DR-0015-concrete-integration-ports-and-claude-code-adapter.md
+    purpose: Fixes the Claude Code Adapter boundary and concrete typed integration policy.
+  - path: decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md
+    purpose: Fixes Pack, Procedure, executor-asset, capability, and project-binding boundaries.
+  - path: decisions/DR-0017-govern-assurance-and-learning-promotion.md
+    purpose: Fixes human authority, validation modes, waivers, and non-automatic learning promotion.
+  - path: decisions/DR-0018-validate-through-vs-001-before-broader-migration.md
+    purpose: Preserves the bounded validation sequence and the prohibition on broad migration or implementation expansion.
+  - path: sessions/TA-002-target-architecture-revision/session-handoff.md
+    purpose: Preserves the accepted architecture result, G3 PASS, and architectural continuity constraints.
+  - path: sessions/VS-001-resumable-agent-work-session/session-handoff.md
+    purpose: Preserves the historical FAIL rationale and valid repository-mechanics evidence.
+  - path: sessions/VS-001A-claude-code-session-confirmation/session-handoff.md
+    purpose: Provides the PASS closure, combined G6 rationale, and PX-001-only authorization.
 
-canonical_inputs:
-  - docs/00-governance/product-development-operating-model.md
-  - docs/00-governance/artifact-governance.md
-  - docs/00-governance/design-levels.md
-  - docs/10-product/product-foundation.md
-  - docs/30-target-architecture/target-architecture.md
-  - docs/50-validation/product-falsification-report.md
-  - docs/90-state/program-state.md
-  - decisions/DR-0004-do-not-establish-engineering-continuity-category.md
-  - decisions/DR-0005-separate-goal-and-guard.md
-  - decisions/DR-0006-narrow-product-boundary.md
-  - decisions/DR-0007-narrow-continuity-kernel.md
-  - decisions/DR-0008-local-first-artifact-authority.md
-  - decisions/DR-0009-typed-read-oriented-providers.md
-  - decisions/DR-0010-separate-pack-definitions-from-context-packs.md
-  - decisions/DR-0011-explicit-context-formation-pipeline.md
-  - sessions/TA-001-target-architecture/session-handoff.md
+included_information:
+  - accepted product and architecture semantics needed to design user-visible workflows
+  - validated VS-001 and VS-001A behavior, evidence, limitations, and failure cases
+  - repository-native authority, revisions, digests, leases, effect keys, checkpoints, handoffs, validation, and recovery rules
+  - product-level adoption risks, comparative baselines, and dogfooding requirements
+  - the fact that Nestfolio is the first dogfooding environment and that project-specific behavior belongs in its Pack or binding
 
-source_inputs:
-  - targeted current-runtime evidence only when a concrete current-experience fact is missing
+historical_material_policy:
+  included_only_for_provenance:
+    - the superseded TA-001-derived PX-001 context pack, prompt, and unused handoff as they existed before this contract
+  authority: none
+  rule: >
+    Do not restore, copy, merge, or execute their product interpretation. Git
+    history is the preservation mechanism.
 
-decisions_in_scope:
-  - onboarding and ten-minute first value
-  - primary Context Pack workflow
-  - primary Handoff and takeover workflow
-  - validation versus authorization interaction model
-  - source, scope, exclusion, uncertainty, and evidence explainability
-  - pending human Decision interaction
-  - provider failure, stale state, contradiction, and recovery experience
-  - executor-neutral export and executor switching
-  - human-only usage
-  - progressive adoption
-  - bounded CLI and local Console roles
+deliberately_excluded_information:
+  - raw or summarized prior chats
+  - the Nestfolio repository or any request to upload it
+  - hidden Claude Code state, transcripts, or vendor memory as canonical input
+  - TA-001 as an active architecture baseline
+  - migration architecture and implementation sequencing
+  - implementation code, package layout, final schemas, command implementation, or another vertical slice
+  - broad Nestfolio migration or unrelated Nestfolio work
+  - commercial packaging, pricing, hosted governance, market-category design, or a commercial control plane
+  - universal executor, issue-tracker, CI/CD, policy, incident, catalog, or platform integrations
+  - agentless product positioning
 
-decisions_out_of_scope:
-  - target architecture ownership changes without an explicit cross-level revision proposal
-  - implementation code and package layout
-  - detailed migration sequence
-  - final commercial naming, pricing, and packaging
-  - hosted enterprise governance and analytics
-  - generic backlog, policy, orchestration, incident, or learning workflows
+required_design_scope:
+  - installation and onboarding
+  - useful first value within ten minutes
+  - work selection and Session/Run start
+  - visible Working Set, Scope, exclusions, constraints, completion criteria, and current authority
+  - Context Pack formation, inspection, validation, authorization, delivery, rejection, expiration, revocation, refresh, reformation, and supersession
+  - Claude Code start, interruption, checkpoint, handoff, fresh-session resume, validation, evidence attachment, completion, cancellation, and return-to-backlog
+  - context explainability for included and excluded sources, authority, revisions, provenance, uncertainty, contradictions, stale inputs, omissions, and missing Evidence
+  - human Decisions, judgment Evidence, deterministic checks, waivers, overrides, and explicit decision boundaries
+  - failure, recovery, retry, stale-state, lease-conflict, invalid-Evidence, unavailable-provider, unknown-effect, and corrupted-derived-state experiences
+  - progressive adoption from Skills-only use to the complete validated loop
+  - CLI responsibilities and interaction contracts
+  - an explicit Decision to require, defer, or reject a local non-authoritative Console
+  - useful human-only inspection, review, transfer, and handoff workflows without repositioning the product as agentless
+  - Nestfolio dogfooding UX while keeping Nestfolio-specific behavior in a project Pack or binding
 
-constraints:
-  - preserve the validated Product Foundation and target architecture
-  - first useful artifact or diagnostic within ten minutes
-  - repository-native and local-first initial value
-  - executor-neutral and human-usable
-  - no second authoritative state
-  - visible source authority, revisions, exclusions, uncertainty, and pending decisions
-  - deterministic diagnostics must be distinct from judgment and human authority
-  - CLI and Console may not become sources of truth
-  - no silent Context Pack completeness claim
-  - no mandatory hosted service
+questions_in_scope:
+  - What is the smallest installation and repository activation path?
+  - What produces useful first value within ten minutes at each adoption level?
+  - Which user-visible objects and states are primary, and which remain progressively disclosed?
+  - How does a user understand why work, context, a procedure, a Guard, or Evidence was selected or excluded?
+  - When is context authorization explicit, policy-driven, rejected, stale, revoked, expired, refreshed, or re-formed?
+  - How are material human judgments requested, recorded, deferred, rejected, waived, and resumed?
+  - What must the CLI own, and what must it never conceal or make authoritative?
+  - Is a local Console necessary for comprehension or recovery, merely useful later, or unjustified?
+  - Which flows should be inspectable or transferable by a human without an active agent session?
+  - How does progressive adoption avoid forcing the full Run model before the user receives value?
+  - Which Nestfolio interactions validate the generic experience without becoming Framework Core requirements?
+
+questions_out_of_scope:
+  - changing accepted TA-002 ownership, lifecycle, dependency, persistence, or authority boundaries except through an explicit blocking contradiction
+  - designing migration stages, compatibility layers, rollback architecture, or extraction order
+  - selecting implementation language, frameworks, libraries, storage technologies, or final repository paths
+  - implementing CLI commands, Console code, hooks, Skills, adapters, validators, stores, or schemas
+  - implementing another slice or extending VS-001/VS-001A
+  - designing universal integrations or multi-executor parity
+  - designing a hosted service, organization control plane, RBAC, analytics, billing, or commercial packaging
+  - broad redesign of Nestfolio workflows
 
 required_scenarios:
-  - single developer with a long interrupted task
-  - small team using existing issue and CI systems
-  - monorepo with path and ownership boundaries
-  - long migration interrupted across sessions
-  - executor switch mid-work
-  - human-only handoff
-  - product repository dogfood
-  - required provider unavailable
-  - contradictory canonical sources
-  - stale authorized Context Pack
-  - interrupted local operation and recovery
-  - successor cannot identify the next correct action
-
-open_questions:
-  - default authorization policy
-  - terminology for Pack Definition versus Context Pack
-  - minimum required fields versus progressive disclosure
-  - takeover-validation protocol
-  - omission-diagnostic confidence language
-  - whether a local Console is necessary for the initial wedge
-  - how and when to show Formation Trace details
-  - offline behavior when external references cannot refresh
-
-explicit_exclusions:
-  - raw historical chats
-  - full Nestfolio repository by default
-  - migration implementation
-  - unrelated current-runtime feature retention
-  - universal engineering Console
-  - product-owned Goal or Guard lifecycle
-  - worker, orchestrator, deploy, or merge execution
-  - Lesson curation and automatic rule minting
+  - id: first-install-clean-repository
+    description: A developer installs or invokes Continuity in an existing medium-complexity repository and reaches a useful diagnostic or action within ten minutes.
+  - id: skills-only-adoption
+    description: A developer begins with one Claude Code Skill or Procedure and minimal durable state, while seeing the next optional adoption step.
+  - id: select-and-start-work
+    description: A developer selects one Work Item or Working Set, inspects Scope and completion criteria, forms and authorizes context, and starts Claude Code.
+  - id: inspect-context-before-start
+    description: A user sees included and excluded sources, revisions, authority, uncertainty, contradictions, stale inputs, and missing Evidence before authorizing or rejecting context.
+  - id: reject-and-reform-context
+    description: A user rejects an invalid or unsafe Context Pack, changes the relevant input or Scope, and reforms a new version without mutating the rejected version.
+  - id: context-expiration-and-refresh
+    description: An authorized Context Pack becomes stale, expired, revoked, or superseded and the experience explains whether refresh, reformation, or abandonment is required.
+  - id: uninterrupted-claude-run
+    description: Claude Code executes a bounded Run, checkpoints, validates, attaches criterion-linked Evidence, updates work state, and completes.
+  - id: interrupted-fresh-session-resume
+    description: A Session ends or crashes after a verified Checkpoint/Handoff and a separately started fresh Claude Code Session resumes without the old transcript.
+  - id: unknown-or-retryable-effect
+    description: A material effect is failed, retryable, completed, deduplicated, or outcome-unknown, and the user is prevented from unsafe automatic replay.
+  - id: stale-repository-or-scope
+    description: Repository drift, changed Scope, changed Work, or changed Pack assets stale the Run or Context Pack and require visible reconciliation.
+  - id: lease-conflict
+    description: Two Sessions attempt conflicting mutation and the second receives a clear ownership, transfer, read-only, or reconciliation path.
+  - id: invalid-or-missing-evidence
+    description: Evidence is missing, stale, invalid, unsupported, or mapped to the wrong criterion and completion remains blocked absent an explicit waiver.
+  - id: unavailable-provider-or-validator
+    description: An external reference, provider, permission, validator, or Claude capability is unavailable and the experience distinguishes retry, degraded continuation, waiver, and hard block.
+  - id: corrupted-derived-state
+    description: A read model or index is corrupt or missing and can be rebuilt without implying canonical state loss; ambiguous canonical corruption fails closed.
+  - id: contradictory-authority
+    description: Canonical sources, Decisions, Guards, or external references conflict and the user must resolve an explicit Decision rather than receive a silent winner.
+  - id: human-judgment-boundary
+    description: A judgment-based review, Scope expansion, Guard waiver, unsafe retry, Lesson acceptance, or governance change requires the correct human authority.
+  - id: candidate-lesson-review
+    description: An Observation becomes a candidate Lesson but cannot automatically change a Skill, Guard, validator, rule, Pack, or binding.
+  - id: human-inspection-and-handoff
+    description: A human can inspect current work, context, checkpoint, evidence, decisions, and exact next action or take over without hidden executor state.
+  - id: nestfolio-dogfood
+    description: The experience can be dogfooded in Nestfolio while project conventions remain visibly supplied by the Nestfolio Pack or binding.
+  - id: small-team-existing-systems
+    description: A small team keeps existing issue and CI authorities while Continuity owns only its repository-local agent-work representation and evidence links.
+  - id: monorepo-bounded-scope
+    description: A monorepo user understands path, ownership, dependency, and write-scope boundaries without loading or authorizing the entire repository.
 
 required_methods:
-  - scenario-driven workflow design
-  - progressive-disclosure analysis
-  - authority and confidence communication analysis
-  - error and recovery journey design
-  - first-value friction analysis
-  - comparative baseline awareness
-  - explicit cross-level contradiction check
+  - authorization and contradiction check before design work
+  - scenario-driven end-to-end journey design
+  - state-transition UX mapping against accepted TA-002 lifecycles
+  - cognitive walkthrough of first install and ten-minute first value
+  - progressive-disclosure analysis for novice, routine, diagnostic, and expert views
+  - progressive-adoption analysis from Skills-only through the complete loop
+  - authority, provenance, confidence, uncertainty, contradiction, and omission communication analysis
+  - human-decision and judgment-boundary mapping
+  - failure-mode, recovery, retry, and safe-default matrix
+  - CLI-versus-Console responsibility analysis
+  - comparative baseline analysis against disciplined Claude Code Skills, repository instructions, backlog files, Git, issues, CI, and manual handoffs
+  - conceptual usability and takeover tests for every required scenario
+  - explicit architecture-conformance matrix linking each experience choice to TA-002 ownership and invariants
+  - explicit rejection/deferment analysis for serious alternatives
+
+constraints_and_invariants:
+  - preserve the accepted TA-002 architectural boundaries unless a blocking contradiction is raised explicitly and PX-001 stops affected design instead of silently changing L3
+  - repository-local canonical artifacts and the declared operational store remain the only Continuity authorities for their owned state
+  - hidden executor state, chat, transcript, UI cache, Console state, or provider cache is never canonical authority
+  - no second source of truth
+  - Claude Code remains the first and primary executor; theoretical multi-executor parity must not displace practical value
+  - Context Packs, Handoffs, Checkpoints, Evidence, Decisions, Scope, Work, and Runs retain their accepted lifecycle and immutability rules
+  - authorized Context Packs are immutable; rejection, refresh, expiration, revocation, staleness, and supersession create explicit state or a new version
+  - completion remains criterion-linked and Evidence-bound, with visible explicit waivers only under declared authority
+  - deterministic Evidence, agent judgment, human judgment, external references, and unavailable validation remain distinguishable
+  - material human judgment and governance-changing actions preserve the human decision floor
+  - no automatic Lesson-to-Guard, Lesson-to-Skill, Lesson-to-validator, Lesson-to-rule, or Observation-to-authority promotion
+  - Goal and Guard remain separate
+  - Nestfolio-specific behavior remains in a Nestfolio Pack or binding unless repeated evidence and a Decision justify promotion
+  - the CLI and any Console are non-authoritative interfaces over canonical state and application commands
+  - installation and first value must not require a hosted service, enterprise migration, universal integration, or complete adoption of the Run model
+  - progressive adoption must not produce incompatible state models or dead-end artifacts
+  - conceptual UX may expose deferred capability but must not imply it already exists or authorize implementation
+
+prohibited_actions:
+  - execute PX-001 during contract authoring
+  - create implementation code or executable assets
+  - create another implementation vertical slice
+  - create migration architecture or broad Nestfolio migration
+  - modify Product Foundation, accepted Target Architecture, VS-001/VS-001A reports, or DR-0012 through DR-0018 unless PX-001 later raises a blocking contradiction under governance
+  - create a commercial control plane or hosted-service requirement
+  - require universal executor or platform integrations
+  - position Continuity as an agentless product
+  - treat automatic learning promotion as acceptable
+  - make a CLI, Console, Claude transcript, or hidden state authoritative
+  - pre-authorize MA-001 or any later iteration before the G4 result
+
+open_questions:
+  - What is the minimum supported installation and repository initialization path?
+  - What is the smallest useful artifact, diagnostic, or action that proves ten-minute value under the corrected full-loop product premise?
+  - Which adoption levels are distinct, reversible, and cumulative rather than separate products?
+  - Which objects and warnings must always be visible before execution, and which can be progressively disclosed?
+  - What authorization policy is safe by default for formed Context Packs?
+  - How are context expiration, staleness, revocation, refresh, and reformation differentiated for users?
+  - What takeover validation proves that a fresh human or Claude Code Session understands the correct next action?
+  - How should uncertainty, missing Evidence, unavailable authority, and contradictory sources be expressed without false confidence?
+  - What operations require confirmation, explicit Decision, waiver, or capability grant?
+  - Is a local non-authoritative Console required for first value, required only for diagnosis/recovery, deferred, or rejected?
+  - Which human-only inspection and handoff flows add real value without creating an agentless positioning requirement?
+  - How can Nestfolio dogfooding reveal generic experience defects without promoting its conventions into Framework Core?
+
+required_deliverables:
+  - path: docs/40-product-experience/product-experience.md
+    action: create
+    purpose: Own the accepted product workflows, interaction model, progressive disclosure, adoption levels, explainability, human decisions, errors, recovery, CLI, Console disposition, and conceptual tests.
+  - path: decisions/DR-*.md
+    action: create-as-needed
+    purpose: Record accepted or rejected high-impact product-experience choices, using the next available identifiers and explicit supersession where applicable.
+  - path: docs/90-state/program-state.md
+    action: update
+    purpose: Record the unconditional G4 result and exactly one authorized next iteration.
+  - path: docs/90-state/artifact-index.md
+    action: update
+    purpose: Record new and changed artifact status, ownership, and supersession.
+  - path: sessions/PX-001-product-experience/context-pack.yaml
+    action: update
+    purpose: Preserve this executed contract and append the final result, G4 decision, changed files, and next-iteration authorization without rewriting the original requirements.
+  - path: sessions/PX-001-product-experience/prompt.md
+    action: preserve-or-update-non-normatively
+    purpose: Preserve the exact executed instruction; only add a clearly separated completion note if governance requires it, never rewrite the historical command after execution.
+  - path: sessions/PX-001-product-experience/session-handoff.md
+    action: replace-superseded-placeholder
+    purpose: Close PX-001 with result, evidence, decisions, changed files, unresolved contradictions, and the sole next authorized iteration.
 
 output_contract:
-  - distinguish observations, proposals, decisions, rejected alternatives, and open questions
-  - specify end-to-end user journeys and state-visible transitions
-  - show CLI and optional Console responsibility boundaries
-  - show failure and recovery behavior
-  - retain all architecture authority boundaries
-  - create Decision Records for high-impact choices
-  - update program state and artifact index
-  - create a session handoff
-  - list every changed file
+  product_experience_document:
+    - distinguish observations, hypotheses, proposals, accepted decisions, rejected alternatives, constraints, and open questions
+    - define actors, entry points, prerequisites, visible state, commands, transitions, outputs, decision points, failure behavior, recovery, and authority for every primary workflow
+    - define installation, onboarding, ten-minute first value, and progressive adoption levels with measurable conceptual success criteria
+    - define the complete Claude Code loop from work selection through continuation
+    - define Context Pack explainability and lifecycle in user-visible terms without changing TA-002 semantics
+    - define human decision and judgment UX, including waivers and unsafe-operation boundaries
+    - define a comprehensive failure/recovery matrix and the user-visible difference between retryable, blocked, stale, invalid, unavailable, conflicting, and corrupt states
+    - define CLI responsibilities and explicitly decide whether a local non-authoritative Console is required, deferred, or rejected
+    - define human inspection and handoff workflows where useful
+    - define Nestfolio dogfooding flows and the Framework Core versus project-binding boundary
+    - include a conceptual test result for every required scenario and a conformance mapping to TA-002
+  decision_records:
+    - create a Decision Record for every accepted or rejected high-impact experience choice that changes durable direction
+    - do not use Decision Records for minor wording, screen layout, or local interaction detail
+    - do not modify DR-0012 through DR-0018 unless an explicit blocking contradiction requires a higher-level revision proposal
+  state_updates:
+    - record PX-001 as complete only after all completion criteria are evaluated
+    - record G4 as unconditional PASS or FAIL with decisive rationale
+    - authorize exactly one next iteration and keep every other later iteration blocked
+  session_closure:
+    - list every changed file
+    - preserve superseded and rejected material through Git history and explicit status, not duplicate active copies
+    - demonstrate that a competent fresh agent can continue from repository artifacts without prior chat
 
 completion_criteria:
-  - onboarding and ten-minute first value are concrete
-  - Context Pack lifecycle is understandable and actionable
-  - Handoff and takeover workflows are concrete
-  - authority, scope, exclusions, evidence, uncertainty, and decisions are explainable
-  - failure and recovery UX is specified
-  - human and executor workflows share the same canonical artifacts
-  - progressive adoption does not require migration of external systems
-  - Console scope is bounded or explicitly rejected
-  - architecture contradictions are absent or raised explicitly
-  - G4 pass or fail is recorded
+  - installation and onboarding are concrete, bounded, and repository-native
+  - at least one credible useful first-value path completes conceptually within ten minutes without hosted services, enterprise migration, or universal integration
+  - work selection, Working Set, Scope, Context Pack, Run/Session, Checkpoint, Handoff, validation, Evidence, completion, and continuation workflows are coherent end to end
+  - every accepted TA-002 state relevant to users has a visible meaning, entry condition, allowed action, and recovery or exit path
+  - Context Pack inclusion, exclusion, authority, revisions, provenance, uncertainty, contradictions, stale inputs, omissions, and missing Evidence are explainable and actionable
+  - context inspection, authorization, rejection, expiration, revocation, refresh, reformation, staleness, and supersession are differentiated without mutating authorized versions
+  - fresh-session Claude Code resume is understandable without transcript dependence or hidden authority
+  - deterministic checks, agent judgment, human judgment, external Evidence, failures, unavailability, and waivers are visibly distinct
+  - human decision boundaries cover Scope expansion, conflicting authority, unsafe retries, waivers, governance changes, and learning promotion
+  - required failure and recovery experiences are complete, fail safely, and do not create false completion or duplicate effects
+  - progressive adoption begins with practical Skills-only value and reaches the validated complete loop without incompatible artifacts or forced migration
+  - CLI responsibilities are explicit and non-authoritative
+  - the local Console is explicitly required, deferred, or rejected with rationale and boundaries
+  - useful human inspection and handoff flows are included without making agentless adoption a product requirement
+  - Nestfolio dogfooding is concrete and keeps project-specific behavior outside Framework Core
+  - every required scenario has a conceptual result, observed risk, and unresolved issue or acceptance conclusion
+  - serious alternative experiences are accepted, deferred, or rejected explicitly
+  - no accepted experience choice silently violates TA-002; any blocking contradiction is raised and handled under cross-level governance
+  - docs/40-product-experience/product-experience.md and any required Decision Records are complete enough for a fresh agent to continue
+  - Program State and Artifact Index are updated consistently
+  - the PX-001 Context Pack records the final result and the superseded handoff placeholder is replaced
+  - G4 is recorded as unconditional PASS or FAIL
+  - exactly one next iteration is authorized, with no automatic assumption that it is MA-001
+
+completion_decision:
+  required: true
+  gate: G4
+  allowed_values:
+    - PASS
+    - FAIL
+  conditional_or_partial_pass_allowed: false
+  pass_semantics: >
+    PASS only if every completion criterion is satisfied, the full validated
+    operational loop has a coherent and conceptually tested experience, no
+    blocking contradiction with TA-002 remains, and the experience offers a
+    credible ten-minute first-value path plus safe failure and recovery UX.
+  fail_semantics: >
+    FAIL if any essential workflow, authority boundary, explainability need,
+    recovery path, adoption path, or human-decision boundary cannot be made
+    viable within accepted TA-002 constraints, or if a blocking contradiction
+    remains unresolved. A FAIL must preserve usable design evidence and state
+    the exact corrective question.
+  decision_rule: >
+    Do not convert missing work, unresolved contradictions, or important
+    deferrals into a conditional PASS. Deferred non-essential implementation
+    details are allowed only when ownership and user-visible semantics are
+    already decided.
+  next_iteration_rule: >
+    After PASS or FAIL, authorize exactly one evidence-justified next
+    iteration. Do not preselect or automatically authorize MA-001. The PX-001
+    contract itself authorizes no work beyond PX-001.
+
+blocked_until_px001_completion:
+  - MA-001 and all migration architecture
+  - broader implementation
+  - later vertical slices
+  - universal executor or platform integrations
+  - hosted-service or commercial-control-plane work
+  - broad or unrelated Nestfolio migration
+
+result:
+  decision: pending
+  gate_g4: pending
+  completed_on: null
+  sole_authorized_next_iteration: null
