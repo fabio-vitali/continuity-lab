@@ -42,27 +42,27 @@ Completed:
 3. TA-001 — historical architecture;
 4. PI-001 — Product Intent Realignment;
 5. TA-002 — Target Architecture Revision — G3 passed;
-6. VS-001 — Resumable Agent Work Session — **FAIL**.
+6. VS-001 — Resumable Agent Work Session — **FAIL** (historical, preserved);
+7. VS-001A — Interactive Claude Code Session Confirmation — **PASS**; **G6 passed** on combined VS-001 + VS-001A evidence.
 
-VS-001 implemented and validated the bounded repository-native mechanics, but the environment lacked Claude Code. Actual executor bootstrap, first-Session end, and fresh-Session resume remain unproven.
+Two genuine Claude Code Sessions (version 2.1.207) proved adapter bootstrap, first-Session end after a verified Checkpoint/Handoff, fresh-Session resume from repository-local state, and keyed-effect deduplication on Run `run-vs001a`.
 
 Sole authorized next iteration:
 
-7. **VS-001A — Interactive Claude Code Session Confirmation**.
+8. **PX-001 — Product Experience** (Gate G4) — requires a **new** session contract; the previously prepared PX-001 session files are superseded and must not be run.
 
-PX-001, migration architecture, broader implementation, later vertical slices, and unrelated Nestfolio work remain blocked.
+MA-001, broader implementation, later vertical slices, and unrelated Nestfolio work remain blocked.
 
 ## Next session
 
-Use a fresh conversation with:
+Author a new PX-001 contract first (context pack and prompt under `sessions/`), then run it in a fresh conversation with:
 
-- `sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml`;
-- `sessions/VS-001A-claude-code-session-confirmation/prompt.md`;
-- `sessions/VS-001-resumable-agent-work-session/session-handoff.md`;
+- the new PX-001 context pack and prompt;
+- `sessions/VS-001A-claude-code-session-confirmation/session-handoff.md`;
 - the latest complete `continuity-lab` repository;
-- Nestfolio at commit `67e21251ee4e64ff8051c4b239a8466dac296dd2` or an upstream descendant containing it.
+- the VS-001 and VS-001A validation reports as canonical evidence inputs.
 
-The real Claude Code executable is a hard precondition. Do not substitute a Node/shell harness.
+Nestfolio VS-001A evidence identity: baseline `7db8688c1586b685ec295dcfa28c17f0ad798ebc`, result revision `2b47cddc3e38e26cdde47da38e2d8dc3e862c436` (both on `main`).
 
 ## Canonical starting points
 
@@ -73,6 +73,7 @@ The real Claude Code executable is a hard precondition. Do not substitute a Node
 - Current runtime evidence: `docs/20-current-system/current-runtime-map.md`
 - Target architecture: `docs/30-target-architecture/target-architecture.md`
 - VS-001 report: `docs/70-implementation/vs-001-resumable-agent-work-session.md`
+- VS-001A report: `docs/70-implementation/vs-001a-claude-code-session-confirmation.md`
 - Program state: `docs/90-state/program-state.md`
 - Artifact index: `docs/90-state/artifact-index.md`
 

@@ -1,68 +1,38 @@
 # Current Execution Instructions
 
-## 1. Review and commit VS-001
+## 1. Review and commit the VS-001A closure
 
-Replace the local repositories with the returned contents, then review both diffs.
-
-Nestfolio expected implementation result:
+Nestfolio: the VS-001A evidence commit is already on `main` and pushed:
 
 ```text
-67e21251ee4e64ff8051c4b239a8466dac296dd2
+2b47cddc3e38e26cdde47da38e2d8dc3e862c436
 ```
 
 Confirm that:
 
-- `runtime/continuity/` contains only the bounded VS-001 path;
-- `.claude/skills/continuity-*` and `continuity/packs/**` are explicit and digest-locked;
-- `continuity/artifacts/**` and `.continuity/**` contain the dogfood Run evidence;
-- `continuity/evidence/vs001/test-results.txt` reports 6 passed and 0 failed;
-- `continuity/evidence/vs001/environment.json` states that Claude Code was unavailable;
-- no unrelated Nestfolio source was modified.
+- `continuity/artifacts/**` and `.continuity/**` contain only the new `run-vs001a` Run/Session/Checkpoint/Handoff/Evidence artifacts plus the executor-provenance records under `.continuity/executor-sessions/`;
+- `continuity/evidence/vs001a/` contains the preparation record, `closure.json`, and `changed-files.txt`;
+- the run-vs001 artifacts and all VS-001 evidence are untouched;
+- no Nestfolio source outside the continuity paths was modified.
 
-Then commit/push the returned `continuity-lab` changes after reviewing `git diff`.
+Continuity-lab: review `git diff`, then commit the VS-001A closure documents (validation report, completed context pack and handoff, Program State, artifact index, READMEs, this file).
 
-## 2. Do not reinterpret the result
+## 2. Do not reinterpret the results
 
-VS-001 is **FAIL**, not partial PASS.
+- VS-001 remains **FAIL** — a historical verdict, preserved unchanged.
+- VS-001A is **PASS** — every acceptance criterion has genuine Claude Code executor evidence (version 2.1.207, session ids `ea22919f-…` and `99ea8ab4-…`, both `startup_source: startup`).
+- **G6 is passed** on the combined VS-001 + VS-001A evidence, recorded in `docs/90-state/program-state.md`.
 
-The implementation is retained, but criteria 4, 7, and 8 are unproven because no actual Claude Code process participated. Do not discard the implementation and do not mark G6 passed.
+## 3. Next: author and run only PX-001
 
-## 3. Run only VS-001A
+PX-001 — Product Experience (Gate G4) is the sole authorized next iteration.
 
-Start a fresh conversation and upload:
-
-1. the latest committed `continuity-lab` ZIP;
-2. Nestfolio at `67e21251ee4e64ff8051c4b239a8466dac296dd2` or a descendant containing it exactly.
-
-Use unchanged:
-
-```text
-sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml
-sessions/VS-001A-claude-code-session-confirmation/prompt.md
-sessions/VS-001-resumable-agent-work-session/session-handoff.md
-```
-
-Before any Run starts, verify and capture the real `claude` executable/version. If unavailable, VS-001A must fail without simulation.
-
-## 4. Keep VS-001A bounded
-
-VS-001A proves only:
-
-```text
-real Claude Code Session 1 consumes adapter view
-→ keyed effect
-→ verified Checkpoint/Handoff
-→ Session 1 ends
-→ separately started real Claude Code Session 2 resumes
-→ effect deduplicates
-→ executor-linked Evidence
-```
-
-Do not alter accepted architecture unless an actual blocker is discovered. Do not migrate more runtime capabilities.
+1. Author a **new** PX-001 session contract (context pack + prompt) from the current Program State. The previously prepared files under `sessions/PX-001-product-experience/` are superseded — do not run them.
+2. Start a fresh conversation with the new contract, the VS-001A handoff, and the VS-001/VS-001A validation reports.
+3. PX-001 is a design iteration: G4 evidence, unconditional PASS or FAIL, exactly one next iteration authorized.
 
 ## Still blocked
 
-- PX-001;
 - MA-001;
 - broader implementation;
 - later vertical slices;

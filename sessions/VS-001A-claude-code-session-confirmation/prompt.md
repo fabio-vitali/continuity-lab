@@ -2,7 +2,7 @@
 
 Run only the corrective validation slice defined by `sessions/VS-001A-claude-code-session-confirmation/context-pack.yaml`.
 
-Use `continuity-lab` as canonical design/program memory and Nestfolio at commit `67e21251ee4e64ff8051c4b239a8466dac296dd2` or an exact descendant as the implementation target.
+Use `continuity-lab` as canonical design/program memory and Nestfolio at commit `34f7c86d0bea256f2fbe8c0c63ca2b04f924f62f` or an exact descendant as the implementation target.
 
 First verify that the real Claude Code executable is available and record its exact version. If it is unavailable, end VS-001A with FAIL. Do not substitute a shell/Node harness for genuine Claude Code executor evidence.
 

@@ -2,7 +2,7 @@ iteration:
   id: VS-001A
   name: Interactive Claude Code Session Confirmation
   type: corrective-validation-slice
-  status: authorized-not-started
+  status: completed
 
 objective:
   primary_question: >
@@ -21,7 +21,7 @@ canonical_inputs:
 
 implementation_repository:
   name: Nestfolio
-  required_baseline_revision: 67e21251ee4e64ff8051c4b239a8466dac296dd2
+  required_baseline_revision: 34f7c86d0bea256f2fbe8c0c63ca2b04f924f62f
   rule: >
     Use this exact commit or an upstream descendant containing it. Record the
     exact full revision before execution. Do not rerun or rewrite run-vs001.
@@ -94,3 +94,30 @@ blocked_until_completion:
   - MA-001
   - broader implementation
   - later vertical slices
+
+result:
+  decision: PASS
+  completed_on: 2026-07-13
+  reason: >
+    Two genuine Claude Code Sessions (version 2.1.207, distinct real session
+    ids, both startup_source=startup) executed the unchanged VS-001 path on
+    Run run-vs001a. Adapter bootstrap, first-Session end after verified
+    Checkpoint/Handoff, fresh-Session resume from repository-local state with
+    passing freshness validation, and keyed-effect deduplication all have
+    accepted deterministic criterion-linked Evidence with exact executor
+    provenance.
+  claude_code_version: "2.1.207 (Claude Code)"
+  claude_session_ids:
+    session_1: ea22919f-d2db-4667-ab73-84e2b1563e28
+    session_2: 99ea8ab4-eb2e-4433-b293-1da9e628eb18
+  nestfolio_baseline_revision: 7db8688c1586b685ec295dcfa28c17f0ad798ebc
+  nestfolio_required_baseline_contained: 34f7c86d0bea256f2fbe8c0c63ca2b04f924f62f
+  nestfolio_result_revision: 2b47cddc3e38e26cdde47da38e2d8dc3e862c436
+  acceptance_passed:
+    - actual-adapter-bootstrap
+    - actual-first-session-end
+    - actual-fresh-session-resume
+    - effect-deduplication-confirmation
+  acceptance_failed: []
+  gate_g6: PASS on combined VS-001 and VS-001A evidence
+  sole_authorized_next_iteration: PX-001

@@ -11,20 +11,20 @@ superseded_by: null
 
 Implementation begins only from accepted architecture and an explicitly authorized bounded slice.
 
-## Completed slice
+## Completed slices
 
-- **VS-001 — Resumable Agent Work Session** — completed with **FAIL**.
+- **VS-001 — Resumable Agent Work Session** — completed with **FAIL** (historical, preserved). The bounded repository-native implementation and tests are retained; the failure was limited to missing genuine Claude Code Session provenance.
+- **VS-001A — Interactive Claude Code Session Confirmation** — completed with **PASS**. Two genuine Claude Code Sessions proved adapter bootstrap, first-Session end after verified Checkpoint/Handoff, fresh-Session resume from repository-local state, and keyed-effect deduplication.
 
-The bounded repository-native implementation and tests are retained. The failure is limited to missing genuine Claude Code Session provenance, not to the Core/store/Pack/adapter mechanics.
+Gate **G6 — Implementation validation** is **passed** on the combined VS-001 and VS-001A evidence.
 
-Canonical report:
+Canonical reports:
 
 - `vs-001-resumable-agent-work-session.md`
+- `vs-001a-claude-code-session-confirmation.md`
 
-## Sole authorized slice
+## Authorization
 
-- **VS-001A — Interactive Claude Code Session Confirmation**
-
-VS-001A may only run the existing path in two real Claude Code Sessions and close acceptance criteria 4, 7, and 8. It may not expand architecture or begin broader migration.
+No further implementation slice is authorized. The sole authorized program iteration is **PX-001 — Product Experience** (a design iteration under a new session contract).
 
 All other implementation remains blocked.
