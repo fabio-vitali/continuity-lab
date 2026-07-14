@@ -1,142 +1,75 @@
-# Continuity — Authorize and Execute MI-001
+# Continuity — Corrective MI-001A Executor Confirmation
 
 ## Current state
 
-- MA-001 is complete with unconditional PASS; G5 is passed and valid.
-- `docs/60-migration/migration-plan.md` and DR-0023 remain accepted and canonical.
-- The MI-001 contract under `sessions/MI-001-procedure-first-adoption/` was reviewed and committed in revision `5a179ef22b1c27146a89d6e63823cb4cc6eb33c6`.
-- This update corrects the stale authorization wording that still described review and commit as pending.
-- MI-001 is the sole authorized execution iteration with status `authorized-not-started`.
-- MI-001 has not executed and its result is pending.
-- MI-002 through MI-007 and all broader work remain blocked.
+- MI-001 completed with unconditional **FAIL**.
+- The Level 1 Nestfolio implementation candidate is retained and deterministic validation passed.
+- The missing evidence is narrow: no genuine Claude Code executor was available to run the active `/backlog-next` path or the direct path after disable.
+- MI-002 is not authorized.
+- The sole selected next iteration is **MI-001A — Genuine Claude Code Invocation Confirmation**, status `selected-contract-required`.
 
-## 1. Apply and review this authorization-state correction
+## 1. Review and commit the MI-001 closure
 
-Only these files must differ from revision `5a179ef22b1c27146a89d6e63823cb4cc6eb33c6`:
+Review both updated repositories and confirm only the manifests listed in the MI-001 report changed.
 
-```text
-CONTINUITY-NEXT-STEPS.md
-docs/90-state/program-state.md
-```
-
-Verify:
+For continuity-lab:
 
 ```bash
 git status --short
-git diff --name-only
 git diff --check
 git diff
 ```
 
-Do not continue if any other file changed.
-
-The following MI-001 contract files must remain unchanged:
-
-```text
-sessions/MI-001-procedure-first-adoption/context-pack.yaml
-sessions/MI-001-procedure-first-adoption/prompt.md
-sessions/MI-001-procedure-first-adoption/session-handoff.md
-```
-
-The handoff remains an unused placeholder until MI-001 actually executes.
-
-## 2. Commit and push the correction
-
-Run:
+For Nestfolio:
 
 ```bash
-git add \
-  CONTINUITY-NEXT-STEPS.md \
-  docs/90-state/program-state.md
-
-git diff --cached --check
-git diff --cached
-
-git commit -m "Authorize committed MI-001 execution contract"
-git push
+git status --short
+git diff --check
+git diff
+npm run -s continuity:doctor
+npm run -s continuity:inspect
+node --test tests/continuity-level-1.test.mjs
 ```
 
-Do not amend or rewrite the already reviewed MI-001 contract.
+Do not claim MI-001 PASS. Preserve the FAIL and the retained candidate.
 
-## 3. Create the canonical committed archive
+## 2. Commit and push both repositories
 
-After the push succeeds:
+Use separate reviewed commits. Do not amend the historical MI-001 contract or fabricate executor evidence.
 
-```bash
-REVISION="$(git rev-parse HEAD)"
-
-git archive \
-  --format=zip \
-  --output="../continuity-lab-${REVISION}.zip" \
-  HEAD
-
-unzip -z "../continuity-lab-${REVISION}.zip"
-```
-
-The ZIP comment must show the same full commit SHA returned by `git rev-parse HEAD`.
-
-Prepare Nestfolio at the exact revision required by the active contract:
+Suggested messages:
 
 ```text
-3aa8f4773955541415f615abd80a0a9702bcb416
+continuity-lab: Close MI-001 with executor-confirmation failure
+Nestfolio: Add Continuity Level 1 backlog-next boundary
 ```
 
-Do not use a moving branch or an uncommitted Nestfolio working tree.
+## 3. Prepare MI-001A contract authoring
 
-## 4. Execute MI-001 in a fresh isolated conversation
+Open a fresh isolated conversation with the committed continuity-lab archive only. Request a contract-authoring operation for **MI-001A — Genuine Claude Code Invocation Confirmation**.
 
-Open a new conversation and upload:
+The contract must remain narrowly limited to:
 
-```text
-continuity-lab-<NEW-COMMIT-SHA>.zip
-nestfolio-3aa8f4773955541415f615abd80a0a9702bcb416.zip
-```
+1. verify the retained Nestfolio implementation revision and exact lock;
+2. run `/backlog-next` through the active Level 1 boundary in genuine Claude Code;
+3. capture structured boundary provenance and the normal visible Skill result;
+4. disable Level 1;
+5. start a fresh genuine Claude Code Session and invoke `/backlog-next` directly;
+6. restore activation if the direct-path proof succeeds;
+7. issue unconditional PASS or FAIL.
 
-Paste the complete, unchanged contents of:
+It must not add MI-002 composition, Work, Context, Run, Assurance, Learning, Console, universal integration, or unrelated Nestfolio changes.
 
-```text
-sessions/MI-001-procedure-first-adoption/prompt.md
-```
+## 4. Execute MI-001A only after review and commit
 
-Do not summarize or supplement the prompt with assumptions from earlier conversations.
-
-The authorization check should now find all of these conditions consistently recorded:
-
-```text
-MA-001 PASS and G5 valid
-migration plan accepted and canonical
-DR-0023 validated and active
-MI-001 contract reviewed and committed
-MI-001 sole authorized execution iteration
-MI-001 authorized-not-started
-MI-001 not executed
-MI-001 result pending
-MI-002 through MI-007 and broader work blocked
-```
-
-## 5. Required MI-001 outcome
-
-The fresh executor must:
-
-- implement only the contracted Level 1 `nestfolio.backlog-next` slice;
-- modify only paths permitted by the active Context Pack;
-- execute every required success and failure scenario;
-- produce criterion-linked Evidence C1 through C7;
-- issue exactly one unconditional PASS or FAIL;
-- return complete updated ZIP archives for every modified repository;
-- select exactly one evidence-justified next iteration only after the verdict.
-
-A PASS does not automatically authorize MI-002.
+After the MI-001A contract is reviewed and committed, create clean archives from the exact committed revisions and run the contract in a fresh environment where the Claude Code CLI/Session is genuinely available and authenticated.
 
 ## Work that remains blocked
 
-- MI-001 execution in the contract-authoring or authorization-correction conversation;
-- MI-002 through MI-007 until predecessor Evidence and explicit Program State authorization;
-- reusable multi-Procedure composition and Level 2 machinery;
-- canonical Work, Working Set, Scope, Context Pack, Session, Run, effect, Checkpoint, Handoff, Assurance, Waiver, Guard, Decision, Observation, or Lesson state beyond the contracted slice;
+- MI-002 through MI-007;
+- reusable multi-Procedure Pack composition;
+- canonical Work, Working Set, Scope, Context Pack, Session, Run, effect, Checkpoint, Handoff, Assurance, Waiver, Guard, Decision, Observation, or Lesson state;
 - broader implementation or migration;
-- Console implementation;
-- universal executor or platform integrations;
-- hosted services, RBAC, analytics, billing, commercial packaging, and commercial control-plane work;
+- Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane;
 - broad or unrelated Nestfolio migration;
-- promotion of Nestfolio-specific behavior into Framework Core without repeated cross-project evidence and a new Decision.
+- promotion of project-specific behavior into Framework Core.
