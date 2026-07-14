@@ -343,3 +343,123 @@ blocked_until_completion:
   - broad or unrelated Nestfolio changes
 
 execution_closure:
+  executed_on: 2026-07-14
+  unconditional_result: FAIL
+  verdict_label: "MI-001A — Genuine Claude Code Invocation Confirmation: UNCONDITIONAL FAIL"
+  failure_class: candidate-identity-mismatch (retained-candidate identity drift)
+  reason: >
+    A genuine installed and authenticated Claude Code executor was available
+    with admissible Session provenance, but the committed Nestfolio revision
+    does not contain the exact retained MI-001 candidate. The pre-invocation
+    identity verification found one locked-asset digest mismatch on
+    .claude/skills/backlog-next/SKILL.md. Under repository_bindings.nestfolio
+    .identity_rule any mismatch is unconditional FAIL and must not be repaired
+    inside MI-001A. The Level 1 boundary failed closed with
+    ASSET_DIGEST_MISMATCH before delegation, blocking the genuine C1
+    invocation; Scenario B was therefore correctly not started and C3 was not
+    executed. The conjunctive verdict rule permits no partial credit.
+  revisions:
+    continuity_lab_authorizing_revision: b8306295030fd8b4667e96dad4c3556316fa3c0b
+    nestfolio_scenario_a_inspected_revision: b7d597ac5361d3c33b6f44a448373f3f9e79b8dc
+    nestfolio_scenario_a_evidence_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    mi001_recorded_source_revision_is_ancestor_of_head: true
+    both_worktrees_clean_at_scenario_start: true
+  executor_provenance:
+    product: Claude Code
+    version: 2.1.209 (Claude Code)
+    executable_path: /Users/fabiovitali/.local/bin/claude
+    invocation_channel: interactive Claude Code repository session in /Users/fabiovitali/WebstormProjects/nestfolio
+    model: claude-fable-5
+    scenario_a_session_id: 4f27b7f0-7b22-4d90-9d06-2b7fa4532451
+    runtime: Node v24.14.0, npm 11.9.0, darwin 25.3.0
+    preflight_captured_utc: "2026-07-14T16:01:37.372Z"
+    result_recorded_utc: "2026-07-14T16:03:47Z"
+  candidate_identity_verification:
+    identity_field_checks: 26 of 26 PASS
+    locked_assets: 18 of 19 verified; 1 mismatched; 0 unenumerated under the asset root
+    mismatched_asset:
+      path: .claude/skills/backlog-next/SKILL.md
+      expected_sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+      expected_bytes: 33928
+      actual_sha256: 0de07500cad6a05ee14842edc4375a508d55beb7b318b1a387c0e2b99ff42620
+      actual_bytes: 33164
+    independent_aggregate_lock_digest_recomputation: >
+      PASS — recomputed 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602
+      matches continuity/level-1/pack-lock.json exactly; the lock is intact and
+      untampered. The defect is the delivered SKILL.md bytes, not the lock.
+    candidate_identity_matches: false
+  scenario_a_outcome:
+    commands_blocked:
+      - "npm run -s continuity:doctor — exit 1; blocked; ASSET_DIGEST_MISMATCH"
+      - "npm run -s continuity:inspect — exit 1; blocked; ASSET_DIGEST_MISMATCH"
+      - "npm run -s continuity:verify — exit 1; blocked; ASSET_DIGEST_MISMATCH"
+      - "npm run -s continuity:invoke -- -- --auto — exit 1; blocked; ASSET_DIGEST_MISMATCH"
+    level_1_boundary_failed_closed: true
+    block_code: ASSET_DIGEST_MISMATCH
+    delegation_to_backlog_next_produced: false
+    backlog_next_invoked: false
+    truthful_guarantee_card_shown: Level 1 active guarantees with explicit Level 2-6 absence and remediation
+  scenario_b:
+    status: correctly-not-started
+    level_1_disable_performed: false
+  boundary_statements:
+    activation_state_at_end: active (untouched)
+    behavior_authority_unchanged: .claude/skills/backlog-next/** was not modified and remains behavior authority
+    no_level_2_to_6_guarantee_claimed: true
+    no_canonical_repository_work_completion_claimed: true
+    nestfolio_changes_limited_to: continuity/evidence/mi-001a/scenario-a/** (eight evidence files; no protected path changed)
+  criteria:
+    C1: FAIL — genuine Level 1 invocation blocked before delegation by the candidate identity mismatch
+    C3: NOT EXECUTED — Scenario B correctly not started; FAIL under the conjunctive verdict rule
+    preserved_mi001_criteria: >
+      MI-001 C2, C4, C5, C6, and C7 remain preserved factually as MI-001
+      execution results against the MI-001 execution archive. They do not
+      qualify or soften the MI-001A unconditional FAIL. The MI-001A identity
+      verification independently shows the committed Nestfolio revision does
+      not reproduce the C2-verified 19-asset content (18 of 19 verify).
+  root_cause: >
+    Retained-candidate identity drift: the committed Nestfolio revision omitted
+    the intended MI-001 modification to .claude/skills/backlog-next/SKILL.md,
+    while continuity/level-1/pack-lock.json and the canonical MI-001 identity
+    records expected the modified file. The candidate application commit
+    b7d597ac contains only 14 of the 15 canonical MI-001 manifest entries; the
+    delivered SKILL.md is byte-identical to the pre-MI-001 source revision
+    3aa8f4773955541415f615abd80a0a9702bcb416, and the locked digest matches
+    neither the source revision nor the delivered tree.
+  implementation_report: docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+  evidence:
+    - nestfolio continuity/evidence/mi-001a/scenario-a/00-preflight-provenance.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/01-candidate-identity-verification.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/02-protected-path-hashes-before.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/03-scenario-a-result.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/commands/01-doctor.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/commands/02-inspect.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/commands/03-verify.json
+    - nestfolio continuity/evidence/mi-001a/scenario-a/commands/04-invoke.json
+  selected_next_iteration:
+    id: MI-001B
+    name: Retained Level 1 Candidate Identity Restoration
+    status: selected-contract-required
+    contracted: false
+    executed: false
+    sole_selected_next_iteration: true
+    bounded_purpose: >
+      Restore or deliberately supersede the invalid retained candidate identity
+      before any genuine invocation confirmation can be attempted.
+    execution_block: >
+      MI-001B remains blocked from execution until a separate reviewed and
+      committed contract exists. This closure does not author that contract.
+    restoration_rule: >
+      MI-001B must prefer byte-exact restoration of
+      .claude/skills/backlog-next/SKILL.md
+      (SHA-256 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90,
+      33928 bytes) from the preserved
+      original MI-001 implementation candidate. If the exact intended MI-001
+      SKILL.md bytes cannot be recovered from a preserved implementation
+      artifact, MI-001B must stop rather than falsely claim restoration; a
+      separately authorized candidate-reconstruction operation would then be
+      required.
+  blocked:
+    - MI-002 through MI-007
+    - all broader implementation and migration
+    - any further genuine invocation iteration until MI-001B closes

@@ -12,7 +12,7 @@ superseded_by: null
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
 | `README.md` | Ratified | Program | Repository orientation; records MI-001 unconditional FAIL and MI-001A as the sole selected contract-required follow-up |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, dual-repository upload, and genuine Claude Code MI-001A execution instructions |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact next user actions after the MI-001A unconditional FAIL: review and commit the closure, then author the MI-001B contract in a separate reviewed operation |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -27,7 +27,8 @@ superseded_by: null
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
-| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 FAIL preserved, retained candidate, MI-001A contracted and sole authorized-not-started execution iteration, later work blocked |
+| `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md` | Validated | Implementation | Canonical MI-001A report: genuine executor provenance, candidate identity mismatch, unconditional FAIL, retained-candidate identity drift root cause, and MI-001B selection |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 and MI-001A FAIL preserved, invalid retained-candidate identity recorded, MI-001B sole selected contract-required iteration, later work blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -84,6 +85,6 @@ superseded_by: null
 | `sessions/MI-001-procedure-first-adoption/context-pack.yaml` | Validated | Session | Original MI-001 contract preserved with appended FAIL closure, criterion results, and MI-001A selection |
 | `sessions/MI-001-procedure-first-adoption/prompt.md` | Ratified | Session | Complete fresh-session MI-001 execution instruction selecting `nestfolio.backlog-next` |
 | `sessions/MI-001-procedure-first-adoption/session-handoff.md` | Validated | Session | Completed MI-001 FAIL handoff with source binding, evidence summary, manifests, blockers, and MI-001A continuation |
-| `sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml` | Ratified | Session | Narrow MI-001A contract for genuine active-boundary and direct-after-disable Claude Code evidence; effective only from the user-reviewed committed revision |
+| `sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml` | Validated | Session | Original MI-001A contract preserved with appended unconditional FAIL closure, candidate-mismatch evidence, executor provenance, and MI-001B selection |
 | `sessions/MI-001A-genuine-claude-code-invocation-confirmation/prompt.md` | Ratified | Session | Preserved executable MI-001A instruction with exact candidate binding, real-executor requirement, conjunctive verdict, and prohibited expansion |
-| `sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md` | Draft | Session | Unused MI-001A execution placeholder; contains no evidence, verdict, or later-iteration authorization |
+| `sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md` | Validated | Session | Completed MI-001A FAIL handoff with revision bindings, genuine Session provenance, mismatch evidence, root cause, manifests, and MI-001B continuation |
