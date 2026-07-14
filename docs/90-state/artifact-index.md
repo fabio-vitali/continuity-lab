@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; records G5 PASS and MI-001 as the sole contract-required next iteration |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, archive, and fresh-session instructions for authoring the MI-001 contract |
+| `README.md` | Ratified | Program | Repository orientation; records G5 PASS and MI-001 as the sole contracted, authorized-not-started next iteration |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact review, commit, archive, and fresh-session instructions for executing the prepared MI-001 contract |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -21,12 +21,12 @@ superseded_by: null
 | `docs/30-target-architecture/target-architecture.md` | Validated | Architecture | Accepted TA-002 target architecture and classification boundaries |
 | `docs/40-product-experience/product-experience.md` | Validated | Product experience | Accepted PX-001 cumulative adoption experience and truthful guarantees |
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
-| `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and MI-001 boundary |
+| `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and prepared MI-001 execution boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence and records MI-001 as contract-required before any new implementation |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence and records MI-001 as contracted but executable only in a fresh committed session |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
-| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: G5 PASS, DR-0023 active, MI-001 sole next iteration, all other work blocked |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: G5 PASS, DR-0023 active, MI-001 contracted and sole next iteration, all other work blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -80,3 +80,7 @@ superseded_by: null
 | `sessions/MA-001-migration-architecture/context-pack.yaml` | Validated | Session | Original MA-001 contract preserved with appended final PASS, G5, scenarios, changed files, and MI-001-only authorization |
 | `sessions/MA-001-migration-architecture/prompt.md` | Ratified | Session | Exact byte-preserved MA-001 instruction executed in the isolated session |
 | `sessions/MA-001-migration-architecture/session-handoff.md` | Validated | Session | Completed MA-001 handoff with observations, M1–M16 results, G5 PASS, changed files, and executable MI-001 contract-authoring continuation |
+
+| `sessions/MI-001-procedure-first-adoption/context-pack.yaml` | Ratified | Session | Prepared executable MI-001 Level 1 contract; authorized-not-started with pending result |
+| `sessions/MI-001-procedure-first-adoption/prompt.md` | Ratified | Session | Complete fresh-session MI-001 execution instruction selecting `nestfolio.backlog-next` |
+| `sessions/MI-001-procedure-first-adoption/session-handoff.md` | Prepared unused placeholder | Session | Explicitly records that MI-001 has not executed and contains no fabricated result |

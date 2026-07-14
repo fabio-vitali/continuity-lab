@@ -41,14 +41,15 @@ Every slice has explicit compatibility, coexistence, authority, validation, Evid
 
 ## Current authorization
 
-Only **MI-001 contract authoring** is permitted.
+The **MI-001 contract is prepared**. MI-001 remains the sole authorized iteration, but execution is permitted only after review and commit and only in a separate fresh session using the exact prompt.
 
 ```text
-MI-001: authorized-contract-required
-execution: blocked
+MI-001: authorized-not-started; contracted; not executed
+execution in this session: blocked
+execution after reviewed commit: fresh session only
 MI-002 through MI-007: blocked
 ```
 
 No migration slice was executed by MA-001. No implementation artifact was created or modified.
 
-The exact review, commit, ZIP, and fresh-session procedure is in `../../CONTINUITY-NEXT-STEPS.md`.
+The contract selects `nestfolio.backlog-next` at `/backlog-next` as the single Level 1 Procedure. The exact review, commit, ZIP, and fresh-session execution procedure is in `../../CONTINUITY-NEXT-STEPS.md`.

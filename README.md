@@ -62,20 +62,20 @@ No migration slice was executed during MA-001. No implementation artifact was cr
 Current status:
 
 ```text
-authorized-contract-required
-not contracted
+authorized-not-started
+contracted; review-and-commit required before execution
 not executed
 ```
 
-MI-001 execution is not yet authorized. The immediate operation is to author and review its session contract in a fresh isolated contract-authoring session. That operation must not implement MI-001.
+The MI-001 session contract is prepared. Execution remains prohibited in this contract-authoring session and until the contract is reviewed and committed. After commit, only a separate fresh isolated session using the exact committed prompt may execute MI-001.
 
 All later migration slices, broader implementation, Console work, universal integrations, hosted or commercial control-plane work, and broad Nestfolio migration remain blocked.
 
 ## Next human action
 
-Review and commit the completed MA-001 artifacts. Create a clean ZIP from committed `HEAD`. Then open a separate fresh conversation, upload only that ZIP, and paste the exact MI-001 contract-authoring prompt provided in `CONTINUITY-NEXT-STEPS.md`.
+Review the MI-001 contract-authoring diff, commit and push it, and create a clean ZIP from committed `HEAD`. Then open a separate fresh execution conversation with the committed continuity-lab archive and the exact bounded Nestfolio implementation input required by the contract. Paste the complete unmodified `sessions/MI-001-procedure-first-adoption/prompt.md`.
 
-Do not proceed directly to MI-001 implementation.
+Do not execute MI-001 in this contract-authoring conversation.
 
 ## Accepted migration slices
 
@@ -87,7 +87,7 @@ Do not proceed directly to MI-001 implementation.
 6. MI-006 — Evidence-Bound Completion and Guard Coexistence — PX Level 6 Assurance
 7. MI-007 — Governed Learning and Selective Current-Runtime Retirement — PX Level 6 Learning
 
-Only MI-001 contract authoring is currently permitted. This list is an accepted sequence, not blanket execution authorization.
+Only the prepared MI-001 contract may become executable after review and commit; no later slice is authorized. This list is an accepted sequence, not blanket execution authorization.
 
 ## Canonical starting points
 

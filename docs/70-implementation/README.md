@@ -27,14 +27,16 @@ Canonical reports:
 
 MA-001 completed with unconditional PASS and G5 is valid. The accepted migration architecture is `../60-migration/migration-plan.md`.
 
-The sole authorized next iteration is **MI-001 — Procedure-First Adoption**, but only its contract-authoring operation is currently permitted.
+The sole authorized next iteration is **MI-001 — Procedure-First Adoption**. Its contract is prepared, but no MI-001 implementation has occurred. Execution is allowed only after review and commit and only in a separate fresh isolated session.
 
 ```text
-MI-001 contract: not yet authored
-MI-001 execution: blocked
+MI-001 contract: prepared
+MI-001 status: authorized-not-started; not executed
+execution in contract-authoring session: blocked
+execution after reviewed commit: fresh session only
 all later slices: blocked
 ```
 
-The MI-001 contract must be authored, reviewed, committed, and then executed in a separate fresh session. It must remain bounded to PX-001 Level 1: repository instructions, one useful Skills-only Procedure, its minimal Pack/project binding, exact asset lock, and Claude Code entry point. It must not introduce reusable multi-Procedure Pack composition, canonical Work state, Context Packs, Runs, Assurance, governed Learning, Console code, or unrelated migration.
+The prepared MI-001 contract must be reviewed, committed, and then executed in a separate fresh session. It selects `nestfolio.backlog-next`, entered through `/backlog-next`, and remains bounded to PX-001 Level 1: repository instructions, one useful Skills-only Procedure, its minimal project Pack/binding, exact asset lock, and Claude Code entry point. It must not introduce reusable multi-Procedure Pack composition, canonical Work state, Context Packs, Runs, Assurance, governed Learning, Console code, or unrelated migration.
 
-MA-001 created or modified no implementation code, tests, schemas, adapters, stores, Skills, hooks, Pack assets, Console code, or Nestfolio artifacts.
+MI-001 contract authoring created or modified no implementation code, tests, schemas, adapters, stores, Skills, hooks, Pack assets, Console code, or Nestfolio artifacts. The prepared handoff is explicitly unused and contains no result.

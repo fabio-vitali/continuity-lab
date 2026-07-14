@@ -1,0 +1,258 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-14
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - sessions/MA-001-migration-architecture/session-handoff.md
+  result: pending
+  execution_rule: >
+    This contract authorizes only MI-001 — Procedure-First Adoption execution in
+    a separate fresh isolated session. Contract authoring did not execute MI-001.
+  canonical_memory_rule: >
+    continuity-lab is canonical for product, architecture, migration, contract,
+    state, and result. The exact Nestfolio revision named below is permitted only
+    as bounded current implementation evidence and as the project-specific
+    modification target expressly listed by this contract.
+
+iteration:
+  id: MI-001
+  name: Procedure-First Adoption
+  type: bounded-migration-implementation
+  design_level: L6
+  product_experience_level: 1
+  status: authorized-not-started
+  completion_gate: unconditional-mi-001-decision
+
+objective:
+  primary_question: >
+    Can one existing high-value Claude Code Skill be exposed through the target
+    Procedure, minimal Pack/project-binding, exact asset-lock, adapter, and
+    activation boundary while preserving its practical behavior and introducing
+    no canonical Work, Context Pack, Run, Assurance, Decision, or Lesson state?
+  selected_procedure:
+    id: nestfolio.backlog-next
+    display_name: Backlog Next
+    current_entry_point: /backlog-next
+    current_asset_root: .claude/skills/backlog-next/
+    current_primary_asset: .claude/skills/backlog-next/SKILL.md
+    justification:
+      - Product Experience explicitly names "Nestfolio binding / backlog-next procedure" as the selection rule.
+      - Current Runtime Map identifies .claude/skills/backlog-next/** as production-reachable Claude Code behavior.
+      - The procedure provides immediate practical value by guiding the next bounded repository task while preserving current backlog authority.
+
+independent_value:
+  statement: >
+    Within ten minutes, a developer can read repository instructions, inspect a
+    truthful Level 1 guarantee card, verify the exact locked backlog-next asset,
+    and invoke it through Claude Code without adopting Continuity Work or Run state.
+  visible_result: >
+    Claude Code invokes the exact locked existing backlog-next Skill, reports the
+    Procedure identity, asset digest, prerequisites, permissions, Level 1
+    guarantees and absent guarantees, and returns the Skill's normal bounded result.
+
+actors:
+  - developer or repository maintainer
+  - Claude Code executor
+  - Continuity activation/inspect/invoke application service
+  - existing Nestfolio backlog-next Skill
+
+preconditions:
+  - MA-001 PASS and G5 remain valid.
+  - DR-0023 remains active.
+  - continuity-lab contract is committed and unchanged.
+  - Nestfolio implementation input is exactly revision 3aa8f4773955541415f615abd80a0a9702bcb416 or a reviewed descendant whose relevant asset changes are explicitly reported before modification.
+  - Claude Code can discover repository instructions and invoke repository Skills.
+  - existing repository checks and backlog authority remain available.
+
+entry_and_io:
+  repository_entry_point: CLAUDE.md Level 1 Continuity section pointing to /backlog-next
+  inspect_entry_point: a bounded Continuity Level 1 inspect command or script chosen during execution
+  invoke_entry_point: a bounded Continuity Level 1 invoke command or script that delegates to /backlog-next
+  inputs:
+    - repository identity
+    - Procedure id nestfolio.backlog-next
+    - exact Pack lock
+    - current Skill asset bundle under .claude/skills/backlog-next/
+    - any arguments already accepted by the current Skill
+  outputs:
+    - truthful Level 1 guarantee header
+    - Procedure and Pack identity
+    - exact asset paths and SHA-256 digests
+    - prerequisite and permission preflight result
+    - structured invocation result and provenance
+    - normal current Skill-visible output
+
+level_1_guarantees:
+  active:
+    - one declared Procedure identity and version
+    - one minimal project-specific Pack manifest
+    - one Nestfolio project binding
+    - exact lock for every executable or instruction asset used by the Procedure
+    - repository identity and activation diagnostic
+    - capability and permission preflight
+    - explicit Claude Code entry point
+    - structured result capture and truthful guarantee labeling
+    - fail-closed behavior for missing or mismatched locked assets
+  explicitly_absent:
+    level_2:
+      - reusable multi-Procedure Pack composition
+      - general compatibility or conflict resolution
+      - dependency solving across Packs
+    level_3:
+      - canonical Work, Working Set, Scope, selection, or completion criteria
+    level_4:
+      - Context Pack formation, validation, authorization, or expiration
+    level_5:
+      - Session or Run state, effects, leases, Checkpoints, Handoffs, or resume
+    level_6:
+      - Assurance Evidence authority, Guards, Waivers, completion claims, Decisions, Observations, Lessons, or promotion
+
+component_participation:
+  framework_core: stable Procedure, asset, capability, digest, guarantee-level, and result value semantics only
+  application_services: activate, inspect, verify, and invoke one Procedure
+  repository_infrastructure: repository identity, deterministic asset hashing, lock read/write, atomic activation metadata, and read-only invocation provenance
+  claude_code_adapter: repository instruction surface, Skill discovery/invocation, guarantee card, preflight display, and structured result mapping
+  minimal_pack: one project-specific Pack containing only nestfolio.backlog-next declaration and its asset manifest
+  project_binding: maps the Procedure to the existing Nestfolio Skill, current repository prerequisites, and current Claude Code entry point
+  explicit_non_participation:
+    - Work Coordination
+    - Context formation
+    - Run store and resumability
+    - Assurance and governed learning
+    - Console
+    - universal adapters or external synchronization
+
+current_disposition_and_target_ownership:
+  current_skill_behavior: retain and wrap; remains executable behavior authority
+  current_repository_instructions: adapt minimally; remain human-readable repository guidance
+  current_backlog_content_and_state: retain unchanged and authoritative under existing Nestfolio rules
+  current_checks_and_gates: retain unchanged; may be run only as the current Skill already requires
+  pack_manifest_and_procedure_contract: new target Pack boundary
+  exact_pack_lock: new target repository-infrastructure authority for the selected asset bytes only
+  invocation_boundary: new target application-service and Claude Code Adapter boundary
+
+compatibility:
+  - Direct /backlog-next invocation remains usable when Continuity Level 1 activation is disabled.
+  - Target invocation delegates to the same locked current asset; it must not reimplement or silently alter Skill behavior.
+  - Existing CLAUDE.md content is preserved except for the smallest clear Level 1 entry section.
+  - Existing checks, scripts, backlog files, statuses, journal state, and runtime content remain owned by current mechanisms.
+  - The asset source is exactly .claude/skills/backlog-next/**; every consumed file is enumerated and SHA-256 locked.
+  - A file may not be resolved from two locations or two digests under the same Procedure version.
+  - Claude Code hidden state, transcripts, provider cache, and chat are never authority.
+
+authority_boundaries:
+  procedure_contract: authoritative for identity, purpose, declared inputs/outputs, prerequisites, permissions, guarantee level, stop conditions, and result shape
+  pack_manifest: authoritative for the single Procedure membership and asset declarations
+  project_binding: authoritative only for Nestfolio-specific path, repository prerequisites, and adapter mapping
+  executor_asset: existing locked Skill files remain authoritative for executable/instruction behavior
+  pack_lock: authoritative for exact selected asset paths and digests
+  prohibited_canonical_state:
+    - Work
+    - Working Set
+    - Scope
+    - Context Pack or Formation Trace
+    - Session or Run
+    - Checkpoint or Handoff
+    - Assurance Evidence or Waiver
+    - Guard
+    - Decision
+    - Observation or Lesson
+
+required_scenarios:
+  success:
+    - clean activation identifies repository and reports Level 1 with all higher guarantees absent
+    - inspect displays one Procedure, one project Pack, exact asset list, digests, prerequisites, permissions, and entry point
+    - real bounded Claude Code invocation delegates to the locked backlog-next Skill and returns structured provenance plus normal visible result
+    - disabling activation restores direct current invocation with no backlog or runtime conversion
+  failure:
+    - missing primary Skill asset blocks activation or invocation
+    - any locked asset digest mismatch blocks invocation before Skill execution
+    - missing Claude Code capability or declared prerequisite blocks with remediation
+    - duplicate Procedure id/version or duplicate asset source blocks activation
+    - attempted Work, Run, completion, Assurance, or learning claim is rejected as outside Level 1
+    - partial activation or corrupt lock fails closed and is removable without changing current backlog state
+
+validation_and_evidence:
+  criteria:
+    C1: ten-minute path completes from repository instructions through inspect and bounded invocation
+    C2: exact lock enumerates and verifies every asset consumed by the Procedure
+    C3: current direct Skill behavior remains available after disable
+    C4: no Level 2-6 state or guarantee is created or implied
+    C5: current checks and repository content remain compatible
+    C6: authority ownership is observable and unambiguous
+    C7: rollback/removal preserves readable contract and test history without converting current state
+  required_evidence:
+    - command transcript or deterministic test output for activation and inspect
+    - complete asset manifest with SHA-256 values
+    - successful real Claude Code invocation provenance
+    - failure outputs for missing asset, digest mismatch, missing prerequisite, duplicate identity, and forbidden higher-level claim
+    - diff demonstrating no forbidden canonical state or unrelated repository change
+    - disable/removal proof followed by successful direct current invocation
+    - criterion-to-evidence matrix for C1 through C7
+
+rollback_and_history:
+  disable: remove or switch off the explicit Level 1 activation route while leaving the current Skill untouched
+  rollback: restore the prior lock or prior bounded adapter/instruction revision
+  removal: remove target manifest, lock, adapter entry, and instruction section only after preserving reviewed Git history
+  abandonment: record MI-001 FAIL and leave direct current behavior active; do not authorize MI-002
+  history: preserve failed validations, previous lock versions, invocation provenance, and Git history; no fabricated success and no state conversion
+
+permitted_execution_scope:
+  continuity_lab_may_modify:
+    - sessions/MI-001-procedure-first-adoption/context-pack.yaml
+    - sessions/MI-001-procedure-first-adoption/session-handoff.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - docs/70-implementation/README.md
+    - docs/90-state/program-state.md
+    - docs/90-state/artifact-index.md
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+  nestfolio_may_modify_only:
+    - CLAUDE.md
+    - .claude/skills/backlog-next/**
+    - continuity/level-1/**
+    - package.json
+    - package-lock.json
+    - tests limited to the new continuity/level-1 boundary and backlog-next compatibility
+  nestfolio_read_only_evidence:
+    - existing .claude/skills/backlog-next/**
+    - current repository instructions
+    - current checks and scripts directly invoked by backlog-next
+    - current runtime configuration needed only for compatibility verification
+  forbidden:
+    - any other continuity-lab file
+    - any other Nestfolio source, feature, backlog content, runtime engine, journal, schema, adapter, Pack, Skill, hook, Console, or migration change
+
+explicit_exclusions:
+  - reusable or multi-Procedure Pack composition
+  - Level 2 compatibility, conflict, dependency, or resolution machinery
+  - canonical Work, Working Set, Scope, or backlog migration
+  - Context Packs
+  - resumable Runs, effects, Checkpoints, or Handoffs
+  - Assurance, Guards, Waivers, or trusted completion
+  - governed Learning, Decisions, Observations, Lessons, or promotion
+  - Console work
+  - broad current-runtime extraction or migration
+  - universal executor or platform integrations
+  - hosted services or commercial control plane
+  - unrelated Nestfolio changes
+
+completion_decision:
+  rule: >
+    Issue exactly one unconditional PASS or FAIL. PASS requires every criterion
+    C1-C7 and every required success and failure scenario to pass with cited
+    Evidence, all changed files to remain inside the permitted scope, no Level
+    2-6 authority or state to exist, and direct current invocation to remain
+    usable after disable. Otherwise issue FAIL.
+  result: pending
+
+next_iteration_selection:
+  rule: >
+    Select exactly one evidence-justified next iteration only after the
+    unconditional MI-001 result. PASS may justify MI-002 only if evidence shows
+    real need and readiness for reusable multi-Procedure composition; it does
+    not pre-authorize MI-002. FAIL must select one corrective MI-001 follow-up or
+    architecture review, not MI-002.
+  selected: pending
