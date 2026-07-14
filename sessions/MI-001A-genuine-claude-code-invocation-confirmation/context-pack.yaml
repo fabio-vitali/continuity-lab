@@ -1,0 +1,345 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-14
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - sessions/MI-001-procedure-first-adoption/context-pack.yaml
+    - sessions/MI-001-procedure-first-adoption/session-handoff.md
+  result: pending
+  effective_authorization_rule: >
+    Contract authoring does not execute MI-001A and does not itself prove review
+    or commit. MI-001A may execute only from a clean committed continuity-lab
+    revision containing these exact contract files after user review. The
+    executor must record that revision before inspecting Nestfolio.
+  canonical_memory_rule: >
+    continuity-lab is the only canonical product and program memory. Nestfolio
+    is permitted during MI-001A execution only as the exact retained MI-001
+    implementation candidate and bounded evidence target defined below.
+  contradiction_rule: >
+    If any authorization fact, repository binding, candidate identity, asset
+    digest, or authority statement conflicts with another canonical artifact,
+    stop without modification, report the contradiction, and identify the
+    owning artifacts.
+
+iteration:
+  id: MI-001A
+  name: Genuine Claude Code Invocation Confirmation
+  type: corrective-executor-validation
+  design_level: L7
+  product_experience_level: 1
+  status: authorized-not-started
+  completion_gate: unconditional-mi-001a-decision
+  sole_purpose: >
+    Close only the genuine Claude Code executor evidence missing from MI-001 C1
+    and C3 without redesigning, reimplementing, or expanding the retained Level
+    1 slice.
+
+objective:
+  primary_question: >
+    Can a real installed and authenticated Claude Code executor invoke the exact
+    retained nestfolio.backlog-next Level 1 boundary and, after Level 1 is
+    disabled, invoke the existing /backlog-next Skill directly while preserving
+    the implementation candidate, current repository content, and all truthful
+    Level 1 authority boundaries?
+  missing_obligations:
+    C1: genuine Level 1 Claude Code invocation with normal visible Skill result
+    C3: genuine direct current Skill invocation after Level 1 disable or permitted removal
+
+canonical_authorization_preconditions:
+  - MA-001 completed with unconditional PASS and G5 remains passed and valid.
+  - docs/60-migration/migration-plan.md is accepted and canonical.
+  - DR-0023 is validated and active.
+  - MI-001 completed with unconditional FAIL.
+  - the MI-001 implementation candidate is retained.
+  - MI-001 failed only because genuine Claude Code executor evidence required by C1 and C3 was unavailable.
+  - MI-001A is the sole authorized execution iteration with status authorized-not-started.
+  - MI-001A has not executed and its result is pending.
+  - MI-002 through MI-007 and all broader work remain blocked.
+
+repository_bindings:
+  continuity_lab:
+    contract_authoring_baseline_revision: 43491958e67bb07b9f4aad776f83375b3fda8a55
+    required_execution_revision: >
+      The exact clean user-reviewed commit containing the MI-001 FAIL closure and
+      these MI-001A contract files. Record the full Git revision, branch, remote,
+      worktree status, and archive provenance before execution. Do not execute
+      from this uncommitted generated ZIP as though it were already reviewed.
+  nestfolio:
+    mi001_recorded_source_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+    mi001_recorded_input_archive_sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+    required_execution_revision_rule: >
+      Use exactly the committed Nestfolio revision uploaded for MI-001A. Record
+      its full Git revision before any command and prove that it contains the
+      retained MI-001 candidate derived from the recorded source revision with
+      the exact candidate identity below. No alternate, reconstructed, or
+      partially copied candidate is admissible.
+    required_candidate_identity:
+      pack: nestfolio.level-1@1.0.0
+      procedure: nestfolio.backlog-next@1.0.0
+      claude_code_entry_point: /backlog-next
+      behavior_authority: .claude/skills/backlog-next/**
+      asset_count: 19
+      lock_algorithm: SHA-256
+      aggregate_lock_digest: 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602
+      delivered_activation_state: active
+      required_level: 1
+      forbidden_guarantee_levels: [2, 3, 4, 5, 6]
+      mi001_candidate_file_manifest:
+        - .claude/skills/backlog-next/SKILL.md
+        - CLAUDE.md
+        - continuity/level-1/README.md
+        - continuity/level-1/activation.json
+        - continuity/level-1/cli.mjs
+        - continuity/level-1/pack-lock.json
+        - continuity/level-1/pack-manifest.json
+        - continuity/level-1/procedure-contract.json
+        - continuity/level-1/project-binding.json
+        - continuity/level-1/src/application-service.mjs
+        - continuity/level-1/src/claude-code-adapter.mjs
+        - continuity/level-1/src/core.mjs
+        - continuity/level-1/src/repository-infrastructure.mjs
+        - package.json
+        - tests/continuity-level-1.test.mjs
+    identity_rule: >
+      The Pack manifest, Procedure contract, project binding, Pack lock,
+      activation metadata, executor asset root, and aggregate lock digest must
+      match the MI-001 candidate exactly before genuine invocation. Any mismatch
+      is unconditional FAIL; MI-001A must not repair it.
+
+required_executor:
+  product: Claude Code
+  availability: installed
+  authentication: authenticated and able to start a genuine repository session
+  required_provenance:
+    - exact Claude Code version output
+    - exact executable path or invocation channel
+    - exact command used to start each Session
+    - distinct observable Session identifiers or equivalent genuine-session provenance
+    - UTC timestamps for Session start, invocation, result, disable, direct invocation, restoration, and closure
+    - stdout, stderr, exit status, and relevant Claude Code-visible output
+  stop_rule: >
+    If a real installed and authenticated Claude Code executor or admissible
+    genuine Session provenance is unavailable, issue unconditional FAIL. Do not
+    substitute a shell harness, Node process, test adapter, mock, simulation, or
+    fabricated transcript.
+
+scope_invariants:
+  - MI-001A validates the retained candidate; it does not redesign or reimplement it.
+  - .claude/skills/backlog-next/** remains executable and instruction behavior authority.
+  - the Pack manifest owns membership and declarations only.
+  - the Procedure contract owns identity, declared inputs/outputs, prerequisites, permissions, stop conditions, and result shape.
+  - the project binding owns only Nestfolio-specific path, repository prerequisites, and adapter mapping.
+  - the Pack lock owns exact selected asset paths and digests.
+  - Claude Code hidden state, chat history, provider cache, and unexported transcript are never canonical authority.
+  - no Level 2-6 guarantee or state may be created, implied, or claimed.
+  - no canonical repository-work completion may be claimed.
+
+required_genuine_scenarios:
+  - id: active-level-1-invocation
+    sequence:
+      - verify both exact committed repository revisions and clean initial worktrees
+      - capture Claude Code version, executable provenance, authentication readiness, and Session start provenance
+      - run the existing Level 1 doctor, inspect, and verify paths without changing implementation bytes
+      - inspect the Pack manifest, Procedure contract, project binding, Pack lock, and every locked Skill asset
+      - confirm 19 assets and the exact aggregate lock digest
+      - invoke the existing bounded Level 1 path and obtain its delegation to /backlog-next with the selected arguments
+      - invoke /backlog-next through the same genuine Claude Code Session
+      - capture the normal visible Skill result and structured invocation provenance
+    required_structured_result:
+      - continuity-lab revision
+      - Nestfolio revision
+      - repository identity resolution
+      - Claude Code version and Session provenance
+      - Pack and Procedure identities
+      - manifest, contract, binding, lock, and Skill paths inspected
+      - complete locked-asset verification result and aggregate digest
+      - statement that .claude/skills/backlog-next/** remained behavior authority
+      - active Level 1 guarantees
+      - explicit absence of Levels 2-6
+      - statement that no canonical repository-work completion was claimed
+      - exact invocation command, arguments, timestamps, exit status, and relevant visible output
+  - id: direct-current-invocation-after-disable
+    sequence:
+      - capture a protected-path and worktree baseline before disable
+      - disable Level 1 using only the existing MI-001 activation mechanism, or remove only activation assets if the retained implementation explicitly supports that route
+      - prove target invocation is disabled and direct /backlog-next is the current route
+      - start a separately invoked fresh genuine Claude Code Session without relying on the previous Session transcript
+      - invoke the existing /backlog-next Skill directly with the same bounded arguments
+      - capture the normal visible Skill result and genuine Session provenance
+      - prove existing Skill, backlog, checks, journal, runtime content, Pack/Procedure/binding/lock bytes, and repository history remain preserved
+      - restore the delivered Level 1 activation state using the existing activation mechanism
+      - rerun doctor, inspect, verify, and protected-path comparison
+    required_structured_result:
+      - exact disable or permitted-removal command and output
+      - proof that target invocation was disabled
+      - fresh Claude Code version and Session provenance
+      - exact direct /backlog-next command, arguments, timestamps, exit status, and relevant visible output
+      - before/after changed-file manifests and protected-path hashes
+      - exact restoration command and final active-state verification
+
+required_commands_and_outputs:
+  known_mi001_commands:
+    - npm run -s continuity:doctor
+    - npm run -s continuity:inspect
+    - npm run -s continuity:verify
+    - npm run -s continuity:invoke -- -- --auto
+    - npm run -s continuity:disable
+    - npm run -s continuity:activate
+    - node --test tests/continuity-level-1.test.mjs
+    - node --test .claude/skills/backlog-next/test/*.test.mjs
+  rule: >
+    Record the exact commands actually used, including the real Claude Code
+    Session-start command and genuine /backlog-next invocation. The known MI-001
+    commands are required where available but do not themselves count as genuine
+    executor evidence.
+
+preservation_checks:
+  protected_read_only_paths:
+    - .claude/skills/backlog-next/**
+    - CLAUDE.md
+    - continuity/level-1/README.md
+    - continuity/level-1/cli.mjs
+    - continuity/level-1/pack-lock.json
+    - continuity/level-1/pack-manifest.json
+    - continuity/level-1/procedure-contract.json
+    - continuity/level-1/project-binding.json
+    - continuity/level-1/src/**
+    - package.json
+    - tests/continuity-level-1.test.mjs
+    - all backlog content and state
+    - all current checks and validators
+    - all journal and runtime content
+  required_before_after_proof:
+    - Git revision and clean-status comparison
+    - exact changed-file manifest
+    - SHA-256 comparison for protected paths
+    - complete 19-asset lock verification
+    - aggregate lock digest comparison
+    - existing Level 1 test result
+    - current backlog-next test parity, with environment limitations distinguished from regressions
+  regression_rule: >
+    Any changed protected byte, unpermitted file, failed previously passing
+    criterion, lost direct behavior, false guarantee, or non-restored activation
+    state is unconditional FAIL. Do not fix the defect inside MI-001A.
+
+admissible_evidence:
+  required:
+    - real Claude Code process or authenticated product Session output
+    - observable Session provenance distinct for the two scenarios
+    - machine-captured command, timestamp, exit, stdout/stderr, and repository-revision records
+    - structured active-boundary and direct-invocation result records
+    - exact before/after manifests and hashes
+  insufficient_or_prohibited:
+    - unit tests alone
+    - mocks or simulated Claude responses
+    - fabricated or manually rewritten transcripts
+    - adapter-only or shell-only invocation
+    - screenshots without machine-verifiable provenance
+    - hidden executor state as authority
+    - a claim that the Skill would have run
+
+criteria_preservation:
+  C2: exact 19-asset lock and verification remain PASS
+  C4: no Level 2-6 state or claim remains PASS
+  C5: current-content and check compatibility remains PASS
+  C6: authority ownership remains observable and unambiguous
+  C7: rollback or disable preserves current bytes and history
+
+verdict:
+  type: conjunctive-unconditional
+  pass_rule: >
+    PASS is permitted only when genuine C1 active Level 1 Claude Code invocation
+    and genuine C3 direct current invocation after disable or permitted removal
+    both pass, every previously passed MI-001 criterion remains valid, the exact
+    candidate identity remains unchanged, activation is restored, and no
+    unpermitted repository change occurred.
+  fail_rule: >
+    Failure or inadmissible evidence for either genuine executor scenario,
+    candidate drift, any regression of C2/C4/C5/C6/C7, any forbidden guarantee,
+    any canonical work-completion claim, or any unpermitted change requires
+    unconditional FAIL.
+  no_partial_credit: true
+
+explicit_non_goals:
+  - Level 1 redesign or defect correction
+  - new Procedure semantics or Skill behavior
+  - reusable multi-Procedure Pack composition or Level 2 resolution
+  - canonical Work, Working Set, Scope, selection, or completion criteria
+  - Context Pack formation, validation, authorization, expiration, or infrastructure
+  - Session, Run, effect, lease, Checkpoint, Handoff, or resume infrastructure
+  - Assurance Evidence authority, Guards, Waivers, completion governance, Decisions, Observations, Lessons, or learning promotion
+  - Console functionality
+  - hosted services, RBAC, analytics, billing, packaging, or commercial control plane
+  - universal integrations or multi-executor parity
+  - broad or unrelated Nestfolio migration
+  - project-specific behavior promotion into Framework Core
+
+permitted_execution_scope:
+  continuity_lab:
+    create:
+      - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+    modify:
+      - sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml
+      - sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md
+      - docs/90-state/program-state.md
+      - docs/90-state/artifact-index.md
+      - CONTINUITY-NEXT-STEPS.md
+    rule: >
+      Append execution closure to this contract without rewriting its original
+      authorization terms. Replace the unused handoff placeholder with the
+      evidence-linked final handoff.
+  nestfolio:
+    temporary_or_restored:
+      - continuity/level-1/activation.json
+    create:
+      - continuity/evidence/mi-001a/**
+    rule: >
+      No implementation, Skill, Pack, Procedure, binding, adapter, service,
+      test, backlog, check, journal, or runtime content may change. Activation
+      must be restored to its delivered active state before closure. Evidence
+      files must contain only MI-001A command/provenance/result records and must
+      not become Work, Run, Assurance, or completion authority.
+  everything_else: prohibited
+
+required_outputs:
+  continuity_lab:
+    - completed MI-001A context pack with appended result
+    - preserved executable prompt
+    - completed evidence-linked session handoff
+    - canonical MI-001A implementation-validation report
+    - updated Program State
+    - updated Artifact Index
+    - updated next-step instructions
+  nestfolio:
+    - genuine active-boundary invocation evidence
+    - genuine direct-current invocation evidence after disable
+    - exact command and Claude Code output captures
+    - repository, executor, timestamp, manifest, hash, and provenance records
+    - restored active Level 1 state
+  return:
+    - complete updated ZIP archives for every modified repository
+    - exact changed-file manifests
+    - validation commands and results
+    - unconditional PASS or FAIL
+    - exactly one selected next iteration
+
+next_iteration_rule:
+  on_pass: >
+    Record that MI-001 plus MI-001A jointly satisfy the Level 1 evidence
+    obligation. Select exactly one next iteration. MI-002 may be selected only
+    as selected-contract-required when the accepted evidence justifies it; it is
+    not pre-authorized by this contract.
+  on_fail: >
+    Select exactly one narrowly corrective MI-001 follow-up or architecture
+    review. Do not select MI-002.
+
+blocked_until_completion:
+  - MI-002 through MI-007
+  - all broader implementation and migration
+  - Console, hosted services, universal integrations, and commercial work
+  - broad or unrelated Nestfolio changes
+
+execution_closure:
