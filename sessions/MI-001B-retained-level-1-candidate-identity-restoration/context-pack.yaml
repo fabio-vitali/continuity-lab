@@ -1,0 +1,374 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-14
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+    - sessions/MI-001-procedure-first-adoption/context-pack.yaml
+    - sessions/MI-001-procedure-first-adoption/session-handoff.md
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md
+  result: pending
+  effective_authorization_rule: >
+    Contract authoring does not execute MI-001B and does not itself prove user
+    review or commit. MI-001B may execute only from a clean committed
+    continuity-lab revision containing these exact contract files after user
+    review. The executor must record that full revision before inspecting or
+    modifying Nestfolio.
+  canonical_memory_rule: >
+    continuity-lab is the only canonical product and program memory. Nestfolio
+    and the preserved MI-001 implementation candidate artifact are bounded
+    execution evidence and modification inputs only; they are not additional
+    product or program authority.
+  contradiction_rule: >
+    If any authorization fact, repository revision, provenance claim, retained
+    candidate identity, locked digest, byte size, manifest, or authority
+    statement conflicts with another canonical artifact, stop without
+    modification, report the contradiction, and identify the owning artifacts.
+
+iteration:
+  id: MI-001B
+  name: Retained Level 1 Candidate Identity Restoration
+  type: corrective-candidate-identity-restoration
+  design_level: L7
+  product_experience_level: 1
+  status: authorized-not-started
+  completion_gate: unconditional-mi-001b-decision
+  sole_purpose: >
+    Restore the exact intended MI-001 bytes of
+    .claude/skills/backlog-next/SKILL.md so that the retained committed Level 1
+    implementation candidate coherently matches its already-recorded lock and
+    identity, without redesign, reconstruction, invocation, or broader change.
+
+objective:
+  primary_question: >
+    Can the exact intended MI-001 SKILL.md bytes be recovered from the proven
+    preserved original MI-001 implementation candidate artifact and installed
+    as the sole Nestfolio implementation change, producing the already-recorded
+    locked identity and passing every bounded verification?
+  expected_file:
+    path: .claude/skills/backlog-next/SKILL.md
+    sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    bytes: 33928
+  delivered_mismatched_file:
+    sha256: 0de07500cad6a05ee14842edc4375a508d55beb7b318b1a387c0e2b99ff42620
+    bytes: 33164
+
+canonical_authorization_preconditions:
+  - MA-001 completed with unconditional PASS and G5 remains passed and valid.
+  - MI-001 completed with unconditional FAIL.
+  - MI-001A completed with unconditional FAIL.
+  - MI-001A failed before genuine Skill invocation because the retained committed Nestfolio candidate did not match its locked identity.
+  - .claude/skills/backlog-next/SKILL.md was the sole locked-asset digest mismatch.
+  - the Level 1 boundary failed closed correctly with ASSET_DIGEST_MISMATCH.
+  - /backlog-next was not invoked.
+  - Scenario B was not executed.
+  - MI-001B is the sole authorized execution iteration with status authorized-not-started.
+  - MI-001B has not executed and its result is pending.
+  - MI-002 through MI-007 and all broader work remain blocked.
+
+repository_bindings:
+  continuity_lab:
+    mi001a_fail_closure_revision: 75520a5c1118ca70c687ce76382c4809f374c993
+    mi001a_fail_closure_archive_sha256: 55d240ad138b7646e230f52ce3e680a7133aed5563dbd39cd7b018a2cf5a9cb7
+    mi001a_fail_closure_zip_comment: 75520a5c1118ca70c687ce76382c4809f374c993
+    required_execution_revision: >
+      The exact clean user-reviewed commit derived from the bound MI-001A FAIL
+      closure revision and containing these MI-001B contract files. Record its
+      full Git revision, branch, remote, clean worktree status, and archive
+      provenance before any Nestfolio inspection. The generated contract ZIP is
+      not evidence that review and commit occurred.
+  nestfolio:
+    mi001_recorded_source_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+    mi001_recorded_input_archive_sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+    mi001a_scenario_a_inspected_revision: b7d597ac5361d3c33b6f44a448373f3f9e79b8dc
+    mi001a_scenario_a_evidence_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    required_starting_revision_rule: >
+      Start from a clean committed Nestfolio revision whose implementation tree
+      is exactly the MI-001A Scenario A inspected candidate at b7d597ac. The
+      preferred repository start is the clean evidence revision 63ad0b2d, which
+      must prove b7d597ac as an ancestor and must differ from it only under
+      continuity/evidence/mi-001a/**. Any protected-path or candidate-byte drift
+      is unconditional FAIL before modification.
+    retained_candidate_identity:
+      pack: nestfolio.level-1@1.0.0
+      procedure: nestfolio.backlog-next@1.0.0
+      claude_code_entry_point: /backlog-next
+      behavior_authority: .claude/skills/backlog-next/**
+      asset_count: 19
+      lock_algorithm: SHA-256
+      aggregate_lock_digest: 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602
+      delivered_activation_state: active
+      required_level: 1
+      forbidden_guarantee_levels: [2, 3, 4, 5, 6]
+    starting_mismatch:
+      path: .claude/skills/backlog-next/SKILL.md
+      expected_sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+      expected_bytes: 33928
+      actual_sha256: 0de07500cad6a05ee14842edc4375a508d55beb7b318b1a387c0e2b99ff42620
+      actual_bytes: 33164
+      all_other_locked_assets_verified: 18 of 18
+      aggregate_lock_verified: true
+
+preserved_original_artifact_binding:
+  artifact_role: >
+    The original modified Nestfolio implementation-candidate archive produced
+    and returned by the MI-001 execution, before the later incomplete candidate
+    application commit omitted the SKILL.md modification.
+  canonical_content_binding:
+    source_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+    source_archive_sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+    required_mi001_manifest_entries: 15
+    required_modified_entry: .claude/skills/backlog-next/SKILL.md
+    required_skill_sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    required_skill_bytes: 33928
+    required_asset_count: 19
+    required_aggregate_lock_digest: 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602
+  provenance_rule: >
+    The source must be the preserved original MI-001 output artifact itself, or
+    a byte-identical preserved copy with a provable chain to that output. A
+    filename, recollection, newly assembled directory, reconstructed patch,
+    inferred prose, generated preflight, later working tree, or arbitrary file
+    that merely happens to hash correctly is not sufficient provenance.
+  canonical_limit: >
+    The supplied continuity-lab closure records the MI-001 input archive
+    identity, the exact MI-001 changed-file manifest, the intended SKILL.md
+    digest and byte size, and the complete retained candidate identity, but it
+    does not contain the original output archive and does not record an
+    archive-level SHA-256 for that output. Therefore execution must establish
+    original-artifact provenance from preserved MI-001 delivery evidence before
+    extraction. If that provenance cannot be proven, stop without modifying
+    Nestfolio and issue unconditional FAIL.
+  no_reconstruction_rule: >
+    Do not recreate, edit, patch, regenerate, normalize, reformat, or derive
+    SKILL.md from memory, chat, diffs, inferred prose, tests, the lock, or a new
+    design. Only byte-for-byte extraction from the proven preserved original
+    MI-001 implementation artifact is admissible.
+
+required_execution_sequence:
+  - id: authorization-and-clean-start
+    actions:
+      - read docs/90-state/program-state.md first and apply the contradiction rule
+      - record the exact clean committed continuity-lab execution revision
+      - record the exact clean committed Nestfolio starting revision
+      - prove the Nestfolio implementation baseline is b7d597ac and any later difference is limited to MI-001A evidence
+      - capture initial worktree status and protected-path hashes
+  - id: prove-original-artifact
+    actions:
+      - identify the preserved original MI-001 implementation candidate artifact
+      - record its path or storage reference, immutable archive SHA-256, byte size, timestamps, and available original delivery provenance
+      - prove its chain to the MI-001 execution output and the canonical MI-001 source binding
+      - stop without Nestfolio modification if provenance is unavailable, ambiguous, reconstructed, or contradictory
+  - id: extract-and-verify-before-installation
+    actions:
+      - extract only .claude/skills/backlog-next/SKILL.md into an isolated temporary location
+      - preserve bytes exactly with no newline, encoding, metadata, or formatting transformation
+      - verify SHA-256 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+      - verify exact byte size 33928
+      - stop without Nestfolio modification if either check fails
+  - id: single-file-installation
+    actions:
+      - replace only .claude/skills/backlog-next/SKILL.md with the verified extracted bytes
+      - do not alter continuity/level-1/pack-lock.json or any other identity asset
+      - verify immediately after installation the expected SHA-256 and byte size
+      - record that SKILL.md is the sole implementation change
+  - id: complete-verification
+    actions:
+      - verify all 19 locked assets against the unchanged lock
+      - independently recompute and verify the aggregate lock digest
+      - run continuity:doctor
+      - run continuity:inspect
+      - run continuity:verify
+      - run the Level 1 test suite
+      - run the existing /backlog-next Skill tests
+      - compare all protected paths against the starting baseline, permitting only the intended SKILL.md change and MI-001B evidence files
+      - produce the exact changed-file manifest
+  - id: verdict-and-closure
+    actions:
+      - issue exactly one unconditional PASS or FAIL
+      - do not invoke /backlog-next or the Level 1 invoke path
+      - do not run genuine invocation confirmation
+      - do not claim C1 or C3
+      - update only the contract-permitted continuity-lab closure files
+      - select at most one subsequent separately contracted iteration under the next-iteration rule
+
+required_commands_and_outputs:
+  required_commands:
+    - git status --short
+    - npm run -s continuity:doctor
+    - npm run -s continuity:inspect
+    - npm run -s continuity:verify
+    - node --test tests/continuity-level-1.test.mjs
+    - node --test .claude/skills/backlog-next/test/*.test.mjs
+  forbidden_commands_or_actions:
+    - npm run continuity:invoke
+    - npm run -s continuity:invoke
+    - /backlog-next
+    - genuine Claude Code Skill invocation confirmation
+    - npm run continuity:disable
+    - npm run continuity:activate
+    - removal or disabling of Level 1
+  output_capture:
+    - exact command
+    - UTC start and end timestamps
+    - exit status
+    - stdout and stderr
+    - tool and runtime versions relevant to reproducibility
+    - repository revisions and clean-status records
+    - before and after hashes
+    - exact changed-file manifest
+  environment_rule: >
+    Every required verification must succeed. A test environment limitation,
+    missing dependency, unsupported runtime, skipped test, or inconclusive
+    result does not count as PASS and must not be repaired by changing package
+    scripts, dependencies, tests, or implementation inside MI-001B.
+
+protected_paths:
+  immutable:
+    - continuity/level-1/pack-lock.json
+    - continuity/level-1/pack-manifest.json
+    - continuity/level-1/procedure-contract.json
+    - continuity/level-1/project-binding.json
+    - continuity/level-1/activation.json
+    - continuity/level-1/README.md
+    - continuity/level-1/cli.mjs
+    - continuity/level-1/src/**
+    - CLAUDE.md
+    - package.json
+    - tests/continuity-level-1.test.mjs
+    - .claude/skills/backlog-next/** except .claude/skills/backlog-next/SKILL.md
+    - all adapters and application services
+    - all backlog content and state
+    - all checks and validators
+    - all journal and runtime content
+    - all repository history
+  permitted_single_implementation_change:
+    - .claude/skills/backlog-next/SKILL.md
+
+permitted_execution_scope:
+  continuity_lab:
+    create:
+      - docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md
+    modify:
+      - sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml
+      - sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md
+      - docs/90-state/program-state.md
+      - docs/90-state/artifact-index.md
+      - docs/70-implementation/README.md
+      - README.md
+      - CONTINUITY-NEXT-STEPS.md
+    rule: >
+      Append execution closure to this preserved contract without rewriting its
+      original authorization terms. Replace the unused handoff placeholder with
+      the completed evidence-linked handoff. No other continuity-lab file may
+      change.
+  nestfolio:
+    modify:
+      - .claude/skills/backlog-next/SKILL.md
+    create:
+      - continuity/evidence/mi-001b/00-preflight-provenance.json
+      - continuity/evidence/mi-001b/01-source-artifact-provenance.json
+      - continuity/evidence/mi-001b/02-extracted-skill-verification.json
+      - continuity/evidence/mi-001b/03-protected-path-hashes-before.json
+      - continuity/evidence/mi-001b/04-installation-result.json
+      - continuity/evidence/mi-001b/05-verification-results.json
+      - continuity/evidence/mi-001b/06-protected-path-hashes-after.json
+      - continuity/evidence/mi-001b/changed-files.txt
+    rule: >
+      SKILL.md is the only permitted implementation change. Evidence files may
+      record only MI-001B provenance, commands, hashes, manifests, and results;
+      they must not become Work, Run, Assurance, completion, backlog, journal,
+      or runtime authority. If original-artifact provenance or pre-installation
+      digest verification fails, create no Nestfolio file and modify nothing.
+  everything_else: prohibited
+
+failure_containment:
+  pre_installation_failure: >
+    Stop without modifying Nestfolio and record unconditional FAIL only in the
+    permitted continuity-lab closure artifacts.
+  post_installation_failure: >
+    Restore the exact starting SKILL.md bytes
+    (SHA-256 0de07500cad6a05ee14842edc4375a508d55beb7b318b1a387c0e2b99ff42620,
+    33164 bytes), verify restoration, leave all other protected paths unchanged,
+    and issue unconditional FAIL. Failure to restore is itself unconditional
+    FAIL and must be reported explicitly.
+
+verdict:
+  type: conjunctive-unconditional
+  pass_rule: >
+    PASS is permitted only if the exact intended SKILL.md is recovered by
+    byte-for-byte extraction from a proven preserved original MI-001
+    implementation artifact, verifies as SHA-256
+    9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    and 33928 bytes before and after installation, is the sole Nestfolio
+    implementation change, all 19 locked assets verify against the unchanged
+    lock, the independently recomputed aggregate digest equals
+    7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602,
+    every required command and test succeeds, protected paths are preserved,
+    and the exact changed-file manifest contains no unpermitted path.
+  fail_rule: >
+    Missing or unprovable original-artifact provenance, unavailable exact bytes,
+    digest or byte-size mismatch, any reconstruction, any lock change, any
+    unpermitted file change, any incomplete or failed verification, any Skill or
+    Level 1 invocation, any C1 or C3 claim, any Level 2-6 claim, or any failure
+    to preserve or restore protected paths requires unconditional FAIL.
+  no_partial_credit: true
+
+explicit_non_goals:
+  - invoking /backlog-next
+  - proving genuine active-boundary invocation
+  - proving direct-current invocation after disable
+  - claiming or changing MI-001 C1 or C3
+  - changing the Pack lock, Pack manifest, Procedure contract, project binding, activation, CLAUDE.md, package scripts, adapters, services, or tests
+  - redesigning or reconstructing the Skill preflight
+  - changing backlog, checks, journal, runtime content, or any other Skill asset
+  - disabling or removing Level 1
+  - Level 2-6 state, guarantee, or implementation
+  - broader Nestfolio migration or unrelated correction
+  - Console, hosted services, universal integrations, RBAC, analytics, billing, packaging, or commercial control plane
+
+required_outputs:
+  continuity_lab:
+    - completed MI-001B context pack with appended result
+    - preserved executable prompt
+    - completed evidence-linked session handoff
+    - canonical MI-001B implementation-validation report
+    - updated Program State
+    - updated Artifact Index
+    - updated implementation orientation
+    - updated repository orientation
+    - updated next-step instructions
+  nestfolio_on_pass:
+    - exact restored .claude/skills/backlog-next/SKILL.md
+    - narrowly scoped MI-001B evidence records
+    - exact changed-file manifest
+  return:
+    - complete updated ZIP archives for every modified repository
+    - exact changed-file manifests
+    - validation commands and results
+    - unconditional PASS or FAIL
+    - exactly one selected next iteration or an explicit blocked state if no iteration is justified
+
+next_iteration_rule:
+  on_pass: >
+    A PASS may select exactly one subsequent genuine active-boundary and
+    direct-current Claude Code invocation confirmation iteration with status
+    selected-contract-required. It must not author, authorize, or execute that
+    confirmation automatically. MI-002 must remain blocked.
+  on_fail_unavailable_or_unproven_bytes: >
+    Select only a separately contract-required candidate-reconstruction or
+    evidence-recovery iteration when canonically justified. Do not reconstruct
+    inside MI-001B and do not select MI-002.
+  on_other_fail: >
+    Select at most one narrowly corrective identity-restoration follow-up or
+    architecture review. Do not select MI-002.
+
+blocked_until_completion:
+  - every genuine invocation confirmation iteration
+  - MI-002 through MI-007
+  - all broader implementation and migration
+  - Console, hosted services, universal integrations, and commercial work
+  - broad or unrelated Nestfolio changes

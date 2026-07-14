@@ -15,13 +15,17 @@ This repository is the canonical product, architecture, migration, program-state
 
 PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete. G2 through G6 remain valid under their recorded evidence.
 
-**MI-001 — Procedure-First Adoption completed with unconditional FAIL.** The Nestfolio Level 1 implementation candidate was built and deterministic validation passed, but the available environment had no genuine Claude Code executor for the two mandatory invocation scenarios. The failure is preserved in `docs/70-implementation/mi-001-procedure-first-adoption.md`.
+**MI-001 — Procedure-First Adoption completed with unconditional FAIL.** Its deterministic Level 1 results C2, C4, C5, C6, and C7 remain preserved factually.
 
-## Sole selected next iteration
+**MI-001A — Genuine Claude Code Invocation Confirmation completed with unconditional FAIL.** Scenario A stopped before delegation because the committed Nestfolio candidate omitted the intended modified `.claude/skills/backlog-next/SKILL.md`; 18 of 19 locked assets verified, the unchanged lock remained coherent, the Level 1 boundary failed closed with `ASSET_DIGEST_MISMATCH`, `/backlog-next` was not invoked, and Scenario B was not executed.
 
-**MI-001A — Genuine Claude Code Invocation Confirmation** is selected with status `selected-contract-required`. It must prove the retained candidate through a real active-boundary `/backlog-next` invocation and a real direct `/backlog-next` invocation after disable. It is not authorized until a reviewed contract is committed.
+## Sole authorized execution iteration
 
-MI-002 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
+The **MI-001B — Retained Level 1 Candidate Identity Restoration** contract is authored. MI-001B has status `authorized-not-started`, result pending, and has not executed.
+
+Its only permitted implementation purpose is byte-exact restoration of `.claude/skills/backlog-next/SKILL.md` from the proven preserved original MI-001 implementation artifact. Reconstruction, lock modification, invocation, C1/C3 claims, and broader changes are prohibited. Execution is effective only from a clean user-reviewed commit containing the exact contract.
+
+MI-002 through MI-007, genuine invocation confirmation, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
 
 ## Canonical starting points
 
@@ -32,6 +36,8 @@ MI-002 through MI-007, broader implementation, Console work, universal integrati
 - Product Experience: `docs/40-product-experience/product-experience.md`
 - Migration: `docs/60-migration/migration-plan.md`
 - MI-001 report: `docs/70-implementation/mi-001-procedure-first-adoption.md`
+- MI-001A report: `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md`
+- MI-001B contract: `sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

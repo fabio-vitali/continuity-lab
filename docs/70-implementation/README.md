@@ -15,16 +15,20 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 
 - **VS-001 — Resumable Agent Work Session** — historical **FAIL**; repository mechanics remain valid.
 - **VS-001A — Interactive Claude Code Session Confirmation** — **PASS**; G6 remains passed on combined evidence.
-- **MI-001 — Procedure-First Adoption** — **FAIL**. The Level 1 Pack/Procedure/binding/lock/adapter implementation candidate and all deterministic failure scenarios completed, but no genuine Claude Code executor was available for the required bounded invocation or the required direct invocation after disable.
+- **MI-001 — Procedure-First Adoption** — **UNCONDITIONAL FAIL**. The Level 1 candidate and deterministic verification were produced, but the required genuine executor scenarios were unavailable. C2, C4, C5, C6, and C7 remain preserved factually.
+- **MI-001A — Genuine Claude Code Invocation Confirmation** — **UNCONDITIONAL FAIL**. The committed candidate omitted the intended modified `SKILL.md`; the boundary failed closed before delegation, `/backlog-next` was not invoked, and Scenario B was not executed.
 
 Canonical reports:
 
 - `vs-001-resumable-agent-work-session.md`;
 - `vs-001a-claude-code-session-confirmation.md`;
-- `mi-001-procedure-first-adoption.md`.
+- `mi-001-procedure-first-adoption.md`;
+- `mi-001a-genuine-claude-code-invocation-confirmation.md`.
 
 ## Current implementation position
 
-The Nestfolio Level 1 candidate is retained for corrective confirmation. It truthfully exposes only `nestfolio.backlog-next`, exact-locks every current Skill asset, and creates no Level 2-6 canonical state.
+The retained committed Level 1 candidate is invalid only because `.claude/skills/backlog-next/SKILL.md` does not match its unchanged lock. The lock expects SHA-256 `9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90` and 33928 bytes; the delivered file is SHA-256 `0de07500cad6a05ee14842edc4375a508d55beb7b318b1a387c0e2b99ff42620` and 33164 bytes.
 
-The sole selected next iteration is **MI-001A — Genuine Claude Code Invocation Confirmation**, status `selected-contract-required`. It must prove the two missing genuine executor scenarios in a real Claude Code environment. MI-002 and broader implementation remain blocked.
+The **MI-001B — Retained Level 1 Candidate Identity Restoration** contract is authored and is the sole `authorized-not-started` iteration. It permits only byte-exact recovery of the intended `SKILL.md` from the proven preserved original MI-001 implementation artifact, plus narrowly scoped evidence. It prohibits reconstruction, lock changes, invocation, Level 1 disable/removal, C1/C3 claims, and every broader implementation change.
+
+MI-002 and broader implementation remain blocked.

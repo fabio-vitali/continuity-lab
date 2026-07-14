@@ -1,0 +1,9 @@
+M README.md
+M CONTINUITY-NEXT-STEPS.md
+M docs/70-implementation/README.md
+M docs/90-state/artifact-index.md
+M docs/90-state/program-state.md
+A sessions/MI-001B-retained-level-1-candidate-identity-restoration/changed-files.txt
+A sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml
+A sessions/MI-001B-retained-level-1-candidate-identity-restoration/prompt.md
+A sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md
