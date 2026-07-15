@@ -3,6 +3,13 @@ contract:
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15
   finalized_on: 2026-07-15
+  amended_on: 2026-07-16
+  amendment: >
+    Amended before execution to bind the contract to a direct Claude Code
+    session executor and to adapt the canonical complete-read proof to that
+    executor's file-read tool channel. The objective, human-selection boundary,
+    Nestfolio scope, S1-S10, F1-F12, validation, preservation, rollback,
+    verdict, and every historical disposition are unchanged.
   contract_authorized: true
   execution_authorized: false
   execution_instruction_received: false
@@ -75,13 +82,14 @@ repository_bindings:
     contract_authoring_base_revision: 323834ff98bdf066daaf96d24957e154c899393e
     contract_authoring_base_subject: Record MI-003-R1 unconditional failure closure
     contract_authoring_base_single_parent: 6aa004ff01ba9caab242680fbf62e3d53730bf46
+    contract_amendment_base_revision: f98d76070949a721e004207e2bc61b4617623ce4
+    contract_amendment_base_subject: Authorize MI-003-R2 segmented canonical complete-read correction retry
     required_execution_contract_revision: must be named exactly by the later execution instruction
     required_execution_contract_identity: >
       The named revision must be the clean pushed main revision containing this
-      finalized contract byte-for-byte, with the reviewed nine-path
-      contract-authoring delta, exact single parent
-      323834ff98bdf066daaf96d24957e154c899393e, and exact subject
-      "Authorize MI-003-R2 segmented canonical complete-read correction retry".
+      amended contract byte-for-byte, with exact single parent
+      f98d76070949a721e004207e2bc61b4617623ce4 and exact subject
+      "Amend MI-003-R2 contract for direct Claude Code execution".
     required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
   nestfolio:
     required_branch: main
@@ -90,12 +98,27 @@ repository_bindings:
     required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
   unresolved_or_mismatched_binding_blocks_execution: true
 
+executor_identity:
+  session_executor: >
+    The MI-003-R2 execution session is conducted directly by Claude Code
+    operating under the human's explicit execution instruction. The session
+    executor performs the contracted work itself with its own tools.
+  nested_executor_rule: >
+    Every prohibition on invoking Claude Code or any Skill binds the session
+    executor against delegation: it must not spawn a nested Claude Code
+    instance, sub-agent, or background task, and must not invoke any Skill,
+    slash command, /backlog-next, continuity:invoke, or other executor
+    procedure. Conducting the contracted work directly in the session does not
+    violate those prohibitions. F11 remains the required fail-closed behavior
+    of the created Level 3 tooling and is unchanged.
+
 canonical_complete_read_protocol:
   correction_basis: >
     MI-003-R1 failed solely because its sixth canonical logical path was emitted
     as one response that the tool channel truncated. MI-003-R2 changes only how
     complete consumption of one logical path is proved. It does not waive or
-    reinterpret either historical failure.
+    reinterpret either historical failure. As amended, the proof is adapted to
+    the direct Claude Code session executor and its file-read tool channel.
   metadata_phase: >
     Before any repository content read, complete every required Git metadata and
     contract-identity gate separately for all three repositories. Metadata
@@ -113,7 +136,7 @@ canonical_complete_read_protocol:
   program_state_first_rule: >
     After all metadata gates pass, the first logical repository path opened must
     be continuity-lab docs/90-state/program-state.md. It must be the sole
-    logical repository path addressed until every segment and its whole-path
+    logical repository path addressed until every chunk and its whole-path
     completion proof pass. The first content operation may establish the plan
     for Program State only; it may not open the R2 Context Pack or any other
     path in the same call or in parallel.
@@ -127,55 +150,35 @@ canonical_complete_read_protocol:
     Require well-formed UTF-8 so every raw payload remains directly readable;
     invalid encoding is CANONICAL_PATH_ENCODING_INVALID and fails C1 before
     another path opens.
-  deterministic_segmentation:
-    algorithm_id: greedy-utf8-codepoints-max-4096-v1
-    payload_max_bytes: 4096
+  read_operation:
+    algorithm_id: claude-code-contiguous-read-coverage-v1
     rule: >
-      Starting at byte zero, greedily take the largest positive contiguous raw
-      byte prefix of at most 4096 bytes that ends on a UTF-8 code-point boundary.
-      Preserve every byte and continue at the exact next byte without overlap or
-      gap. A segment may cross or divide a logical line but never a UTF-8 code
-      point. The last segment ends at the exact total byte count. An empty file
-      has one zero-byte segment. Do not invent or substitute another algorithm.
-  segment_operation: >
-    Emit exactly one segment per tool response. The response must contain a
-    deterministic begin envelope, the exact raw payload, and a deterministic end
-    envelope. Both envelopes identify repository role, revision, path, blob,
-    whole-path SHA-256, algorithm, segment index/count, start/end byte offsets,
-    start/end logical-line cursors, payload LF count, payload byte count, and
-    payload SHA-256. The
-    begin envelope must be the first output and the matching end envelope the
-    last output. The command must exit zero with empty stderr. Set the tool
-    output allowance to at least 12000 tokens and do not combine segments or
-    paths in one response.
+      Read the exact bytes of the path from the clean working tree at the bound
+      revision using the session executor's file-read tool, in contiguous,
+      ordered, non-overlapping, forward-only line-range chunks. Read the whole
+      path in one call whenever it fits the tool's response limits. Never read
+      any other path between the chunks of an open logical-path session.
   output_completeness_gate: >
-    A segment is consumed only when the tool response explicitly reports no
-    truncation, omission, elision, or output-token clipping; both exact envelopes
-    and the full directly readable UTF-8 payload are visible; envelope fields
-    match the plan; and the payload byte count and SHA-256 verify. A warning,
-    missing completeness
-    metadata, shortened or summarized payload, absent envelope, mismatched
-    digest, nonzero exit, or non-empty stderr is CANONICAL_SEGMENT_INCOMPLETE.
-    It never counts as completion and the executor must not advance to another
-    segment or path.
-  contiguous_completion_proof: >
-    Close a logical-path session only after every segment index from one through
-    the declared count has passed exactly once in order; the first start offset
-    is zero; every next start equals the prior end; payload LF counts sum to the
-    recorded total LF count and line cursors chain to the derived final cursor;
-    every payload is at most 4096 bytes and ends on a UTF-8 code-point boundary;
-    the final end equals
-    total bytes; the ordered payload digests and byte counts recombine to the
-    recorded whole-path SHA-256 and byte count; and a final same-path
-    verification matches the bound blob identity. No narrative assertion can
-    replace these machine-verifiable facts.
-  incomplete_segment_disposition: >
-    If any segment response is incomplete, keep the same logical-path session
-    open and stop. Do not reread, retry, resize, skip, or advance during that
-    execution. Close MI-003-R2 as UNCONDITIONAL FAIL with
-    CANONICAL_SEGMENT_INCOMPLETE before Nestfolio inspection if the laboratory
-    sequence is not yet complete. Tool truncation can therefore cause failure
-    but can never masquerade as a successful complete read.
+    A chunk is consumed only when the tool response presents the requested line
+    range directly and completely, with no truncation, clipping, omission,
+    elision, summarization, or persisted-to-file substitution reported or
+    observable. Any such condition is CANONICAL_SEGMENT_INCOMPLETE. It never
+    counts as completion and the executor must not advance past it.
+  incomplete_chunk_recovery: >
+    After CANONICAL_SEGMENT_INCOMPLETE, the executor may re-read starting at the
+    exact first unconsumed line with a smaller line limit, within the same open
+    logical-path session. Recovery must remain forward-contiguous and
+    non-interleaved and never skips, reorders, or substitutes content. Tool
+    truncation can therefore delay completion but can never masquerade as it;
+    unrecoverable truncation fails C1 before another path opens.
+  whole_path_completion_proof: >
+    Close a logical-path session only after the consumed chunks form one
+    contiguous line coverage from the first line to the recorded final logical
+    line with no gap or overlap; the covered line count equals the recorded
+    logical-line count; and a final same-path verification proves the
+    working-tree bytes still match the recorded byte count, whole-path SHA-256,
+    and bound Git blob identity. No narrative assertion can replace these
+    machine-verifiable facts.
   serial_sequence_rule: >
     After Program State closes, open every remaining logical path one at a time,
     completely, in the exact order below. Do not parallelize or interleave path
@@ -458,7 +461,7 @@ deterministic_evidence:
     - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
     - repository bindings include branch, HEAD, local origin/main, upstream, remote main, clean state, and observed time
     - repository binding evidence records that Program State was the first and sole logical path and remained sole until its complete proof closed
-    - canonical-read evidence records every path plan, segment envelope and digest, channel completeness result, contiguous coverage proof, and final whole-path proof
+    - canonical-read evidence records every path plan, chunk range, channel completeness result, contiguous coverage proof, and final whole-path proof
     - source inventory includes every considered path and blob SHA-256 without copying unrelated source content into evidence
     - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
     - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
@@ -555,8 +558,9 @@ prohibited_actions:
   - inspect or modify Nestfolio content before a separate explicit MI-003-R2 execution instruction and valid gates
   - modify, repair, relabel, qualify, supersede, or reinterpret any historical MI-003-R1 artifact or result
   - change any original MI-003 objective, selection boundary, criterion, scenario, validation, rollback, scope, or prohibition
-  - treat incomplete, truncated, summarized, omitted, elided, or clipped tool output as a complete segment or path
-  - interleave, batch, parallelize, reorder, skip, resize, retry, or substitute canonical path or segment reads
+  - treat incomplete, truncated, summarized, omitted, elided, or clipped tool output as a complete chunk or path
+  - interleave, batch, parallelize, reorder, skip, or substitute canonical path reads; recovery re-reads must remain forward-contiguous within the same open logical-path session
+  - spawn a nested Claude Code instance, sub-agent, background task, Skill, or slash command as a sub-executor during MI-003-R2 execution
   - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during MI-003-R2 execution
 
 verdict:

@@ -2,7 +2,7 @@
 artifact_id: LAB-README
 status: ratified
 owner: program
-last_updated: 2026-07-15
+last_updated: 2026-07-16
 supersedes: []
 superseded_by: null
 ---
@@ -62,14 +62,14 @@ candidate projection, selection, test, or mutation. MI-003 remains one
 immutable historical failure, and MI-004 and broader work remain blocked.
 
 **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read
-Correction Retry** is finalized and authorized-not-started as a separately
-reviewable contract publication candidate. Its sole correction replaces
-single-response complete-read proof with deterministic contiguous UTF-8
-segments capped at 4096 bytes, one segment and one logical path at a time, with
-exact envelopes, digests, coverage, and explicit no-truncation gates. Program
-State remains the first and sole logical repository path until its proof closes.
-MI-003 and MI-003-R1 remain separate immutable UNCONDITIONAL FAIL results;
-MI-003-R2 execution and MI-004 remain unauthorized.
+Correction Retry** is published and amended, with explicit human authorization,
+for a direct Claude Code session executor. Its sole correction replaces
+single-response complete-read proof with contiguous, ordered, forward-only
+chunk reads, one logical path at a time, with explicit no-truncation gates,
+forward-contiguous recovery, and whole-path byte, SHA-256, and Git blob
+verification. Program State remains the first and sole logical repository path
+until its proof closes. MI-003 and MI-003-R1 remain separate immutable
+UNCONDITIONAL FAIL results; MI-003-R2 execution and MI-004 remain unauthorized.
 
 ## Canonical starting points
 

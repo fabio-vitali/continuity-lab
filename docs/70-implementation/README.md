@@ -2,7 +2,7 @@
 artifact_id: IMPLEMENTATION-INDEX
 status: ratified
 owner: implementation
-last_updated: 2026-07-15
+last_updated: 2026-07-16
 supersedes: []
 superseded_by: null
 ---
@@ -28,11 +28,12 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-003 — Bounded Local Work and Scope** — **UNCONDITIONAL FAIL**. Exact repository and contract-identity gates passed, but the Context Pack was read before canonical Program State. Execution stopped before Nestfolio content read or mutation; candidate derivation, selection, Level 3 creation, tests, scenarios, rebuilds, and rollback were not executed.
 - **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry** — **UNCONDITIONAL FAIL**. Program State was read first and alone, but the sixth canonical read returned a truncated representation of the Migration Plan. C1 failed with `CANONICAL_READ_PARTIAL`; execution stopped before Nestfolio content read or mutation.
 
-MI-003-R2 is a finalized authorized-not-started contract candidate, not a
-completed implementation slice. It may correct only canonical complete-read
-proof through deterministic, contiguous, non-interleaved segments whose tool
-responses explicitly prove absence of truncation. It preserves MI-003 and
-MI-003-R1 as separate immutable failures and leaves MI-004 blocked.
+MI-003-R2 is a published amended contract candidate bound to a direct Claude
+Code session executor, not a completed implementation slice. It may correct
+only canonical complete-read proof through deterministic, contiguous,
+non-interleaved chunks whose tool responses explicitly prove absence of
+truncation. It preserves MI-003 and MI-003-R1 as separate immutable failures
+and leaves MI-004 blocked.
 
 Canonical reports:
 
@@ -83,9 +84,10 @@ candidate, selection, Level 3 state, test, scenario, or mutation occurred. The
 historical MI-003 and all MI-002 results remain immutable; MI-004 is blocked.
 
 **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read
-Correction Retry** is finalized but unexecuted. Program State remains the first
-and sole logical path until its greedy UTF-8 segments close with exact
-byte, line, blob, and SHA-256 coverage. Each response may contain one segment
-only and must explicitly report complete output; truncation can fail C1 but
-cannot masquerade as completion. Every other MI-003 objective, authority,
-scope, scenario, validation, rollback, and prohibition remains unchanged.
+Correction Retry** is published, amended for a direct Claude Code session
+executor, and unexecuted. Program State remains the first and sole logical path
+until its contiguous chunks close with exact byte, line, blob, and SHA-256
+coverage. Every chunk must be explicitly complete; truncation can fail C1 but
+cannot masquerade as completion, and recovery must remain forward-contiguous.
+Every other MI-003 objective, authority, scope, scenario, validation, rollback,
+and prohibition remains unchanged.
