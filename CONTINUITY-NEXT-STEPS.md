@@ -1,36 +1,36 @@
-# Continuity — MI-002-R2 Contract Publication Handoff
+# Continuity — MI-003 Contract-Authoring Handoff
 
 ## Current state
 
-- MI-002-R1 remains one immutable `UNCONDITIONAL FAIL`, caused solely by its
-  canonical-read-order deviation after valid repository gates.
-- Nestfolio remains clean, pushed, and unchanged at
-  `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`; no affected MI-002 evidence
-  was regenerated, and the published C7 22/23
-  `ROLLBACK_RECOVERY_IDENTITY_MISMATCH` remains unresolved.
-- MI-002-R2 is finalized, reviewed, and `authorized-not-started`. Contract
-  authorization does not imply execution authorization.
-- R2 execution, Nestfolio tests or mutation, MI-003, Claude Code, every Skill,
-  and broader work remain unauthorized.
+- MI-002-R2 is published with `UNCONDITIONAL PASS`. The exact eight-path
+  Nestfolio correction is revision
+  `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`.
+- MI-002-R1 remains one immutable `UNCONDITIONAL FAIL` caused solely by its
+  canonical-read-order deviation. The original MI-002 `UNCONDITIONAL PASS` and
+  exact execution conditions remain preserved.
+- MI-003 — Bounded Local Work and Scope is selected only as
+  `selected-contract-required`. It is not authored, authorized, or started.
 
 ## Next valid operation
 
 Open a fresh control session and paste the following complete instruction:
 
 ```text
-This is an MI-002-R2 contract-publication session only. It authorizes review, commit, and push of the exact finalized MI-002-R2 contract-authoring change in continuity-lab. It does not authorize MI-002-R2 execution, any Nestfolio content inspection, mutation, or test, MI-003, Claude Code, any Skill, or broader work.
+This is a fresh MI-003 contract-authoring control session only. It authorizes canonical review and the bounded authoring, review, and finalization of an MI-003 — Bounded Local Work and Scope execution contract in continuity-lab, plus preparation of its exact publication handoff. It does not authorize MI-003 execution, Nestfolio content inspection or mutation, Claude Code, any Skill, a selected backlog item, dependency changes, commit, push, broader implementation, or unrelated repository work.
 
 Do not rely on previous chat state.
 
-Before reading repository content, verify Git metadata separately for continuity-workspace, continuity-lab, and Nestfolio. Require continuity-workspace clean pushed main at eb990e114973e42af9935379f6b13f34f2e5e3b8; Nestfolio clean pushed main at cc4e772f0a74886caebd07cff9b5d69d8f12ab48, whose exact single parent is 8f923240b6be1e0373b25b090f6be76139e4b256; and continuity-lab main based exactly on published MI-002-R1 failure-closure revision 60ac7397aa399de1f8f4d0e3456999a797136dd3 with exactly the nine paths and statuses recorded in sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/changed-files.txt and no staged or additional change. For each clean repository require HEAD, local origin/main, upstream, and remote main to be exactly identical; for dirty continuity-lab require HEAD, local origin/main, upstream, and remote main all exactly 60ac7397aa399de1f8f4d0e3456999a797136dd3 before publication. Stop before content read on any contradiction. Do not fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history.
+Before reading repository content, verify Git metadata separately for continuity-workspace, continuity-lab, and Nestfolio. Require continuity-workspace clean on main at eb990e114973e42af9935379f6b13f34f2e5e3b8 with HEAD, local origin/main, upstream, and remote main exactly aligned. Require Nestfolio clean on main at fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6 with HEAD, local origin/main, upstream, and remote main exactly aligned. Require continuity-lab clean on main with HEAD, local origin/main, upstream, and remote main exactly aligned; require HEAD's subject to be "Close MI-002-R2 C7 correction retry", its exact single parent to be 62f1e2f1ef2838c3ac3e40649526ad39617a81de, and its commit delta to contain exactly ten modified paths and one added path. Record the exact aligned continuity-lab revision for the contract binding. Stop before content read on any contradiction. Do not fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history.
 
-After the metadata gates pass, read docs/90-state/program-state.md first. Then read, in order, sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml, prompt.md, session-handoff.md, and changed-files.txt. Review the complete continuity-lab diff against 60ac7397aa399de1f8f4d0e3456999a797136dd3.
+After the metadata gates pass, read continuity-lab docs/90-state/program-state.md first, before any other repository content. Then read, in order, CONTINUITY-NEXT-STEPS.md, docs/00-governance/product-development-operating-model.md, docs/00-governance/artifact-governance.md, docs/00-governance/design-levels.md, docs/60-migration/migration-plan.md, docs/70-implementation/mi-002-reusable-pack-composition.md, sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml, sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md, and sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt. Require the last file to match the already verified eleven-path commit delta exactly. Do not inspect Nestfolio content.
 
-Confirm that the contract is finalized, reviewed, and authorized-not-started; that contract authorization explicitly does not imply execution authorization; that it binds continuity-workspace eb990e114973e42af9935379f6b13f34f2e5e3b8, continuity-lab failure-closure base 60ac7397aa399de1f8f4d0e3456999a797136dd3, published Nestfolio cc4e772f0a74886caebd07cff9b5d69d8f12ab48, and exact immutable predecessor 8f923240b6be1e0373b25b090f6be76139e4b256; that it preserves MI-002-R1 as one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation; that it preserves the original MI-002 result and exact execution conditions; and that it retries only the unresolved publication-dependent C7 recovery-fixture correction with bounded validation, directly affected evidence regeneration, and necessary canonical publication/state binding updates. Confirm the conjunctive unconditional single-result verdict and all prohibited expansion boundaries.
+Derive the exact MI-003 contract only from those canonical authorities. Preserve MI-002-R2 as published UNCONDITIONAL PASS at Nestfolio fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6, MI-002-R1 as immutable UNCONDITIONAL FAIL, and the original MI-002 result and exact execution conditions. Keep MI-003 selected-contract-required until the contract is fully reviewed and finalized; selection and contract authorization must explicitly not imply execution authorization.
 
-If and only if the exact manifest and review pass, commit and push only continuity-lab main with the English commit subject "Authorize MI-002-R2 C7 correction retry contract". Then verify continuity-lab is clean and its HEAD, local origin/main, upstream, and remote main are exactly identical. Reverify continuity-workspace and Nestfolio remain clean, pushed, and at their exact required revisions, including the Nestfolio single-parent relation.
+Author only the bounded MI-003 contract-authoring artifacts and necessary current program bindings in continuity-lab: README.md, CONTINUITY-NEXT-STEPS.md, docs/70-implementation/README.md, docs/90-state/artifact-index.md, docs/90-state/program-state.md, sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml, sessions/MI-003-bounded-local-work-and-scope/prompt.md, sessions/MI-003-bounded-local-work-and-scope/session-handoff.md, and sessions/MI-003-bounded-local-work-and-scope/changed-files.txt. The final manifest must contain exactly those nine paths with correct statuses and no staged or additional change. Write all repository artifacts in English and validate YAML and manifest consistency.
 
-Do not modify continuity-workspace or Nestfolio, run any Nestfolio test, execute MI-002-R2, modify historical MI-002-R1 artifacts, author or execute MI-003, invoke Claude Code or any Skill, commit or push another repository, or perform broader work.
+The contract must define exact repository bindings, canonical read order, objective, in-scope and immutable paths, required preconditions, bounded success and mandatory failure scenarios, deterministic evidence, preservation and rollback requirements, conjunctive unconditional verdict, explicit prohibited actions, and an exact later execution-authorization rule. It must not silently choose or execute a backlog item, invoke Claude Code or any Skill, change dependencies, create implementation or evidence in Nestfolio, create Level 4-6 authority, or broaden beyond MI-003. Any material ambiguity must stop contract finalization and be reported rather than guessed.
 
-Report the exact published continuity-lab revision and commit subject. State that MI-002-R2 execution remains unauthorized. The next valid operation after successful publication is a fresh MI-002-R2 execution session requiring another separate explicit user instruction; provide a complete copy-paste-ready execution prompt with the exact published contract revision inserted. Do not execute R2 in the publication session.
+Review the complete continuity-lab diff against the exact published start revision. If and only if the contract is internally consistent, canonical, valid, and exactly scoped, leave the nine-path contract-authoring candidate uncommitted and unstaged for a separate publication session. Do not commit or push in this session.
+
+Report the contract status, exact nine-path manifest, validation performed, and preservation of all MI-002 history. Provide a complete copy-paste-ready prompt for a fresh MI-003 contract-publication session with the exact start revision and commit subject inserted. Do not publish or execute MI-003.
 ```

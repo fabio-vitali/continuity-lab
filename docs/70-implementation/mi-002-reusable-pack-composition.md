@@ -185,20 +185,31 @@ inside the contract maximum; there are no other changed paths.
 
 ## Publication-dependent correction status
 
-MI-002-R1 closed with **UNCONDITIONAL FAIL** before pre-edit reproduction or
-any Nestfolio mutation. Its exact repository metadata gates passed, but the
-required canonical read order did not: `CONTINUITY-NEXT-STEPS.md` and then the
-R1 Context Pack were read before canonical `docs/90-state/program-state.md`.
-The conjunctive R1 verdict therefore required immediate failure. Nestfolio
-remains exact at published revision
-`cc4e772f0a74886caebd07cff9b5d69d8f12ab48`; no MI-002 evidence was regenerated,
-and the published 22/23 C7 discrepancy remains unresolved.
+MI-002-R1 remains one immutable **UNCONDITIONAL FAIL** caused solely by its
+canonical-read-order deviation. It stopped before reproduction, mutation,
+validation, or evidence regeneration, and none of its artifacts or result was
+modified by the retry.
+
+MI-002-R2 completed with **UNCONDITIONAL PASS** from continuity-lab revision
+`62f1e2f1ef2838c3ac3e40649526ad39617a81de` and published Nestfolio base
+`cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, whose exact single parent is
+`8f923240b6be1e0373b25b090f6be76139e4b256`. The required Program-State-first
+read order passed. Pre-edit validation reproduced exactly 22/23 with the sole
+C7 `ROLLBACK_RECOVERY_IDENTITY_MISMATCH`. Both recovery reads now bind to the
+immutable predecessor, and the test verifies the exact 6467-byte package and
+196-byte activation SHA-256 identities before fixture use.
+
+Corrected validation is Level 2 23/23, retained Level 1 14/14, backlog-next
+68/68, and all fifteen mandatory failures pass-failed-closed. Pack verification,
+resolution, comparison, and active-guarantee inspection pass. Production Level
+2, both aggregate locks, all Pack and Procedure identities, activation,
+retained Level 1, dependencies, and package routes remain exact. The exact
+eight-path correction and its directly affected evidence are published at
+Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`.
 
 ## Next iteration
 
-Exactly one next iteration is selected: **MI-002-R2 — Reusable Pack Composition
-Publication-Dependent C7 Correction Retry**, status
-`selected-contract-required`.
-
-Selection is not authorization. MI-002-R2 has not been authored, authorized,
-or started. MI-003 remains unauthorized and blocked, as does all broader work.
+Exactly one next iteration is selected: **MI-003 — Bounded Local Work and
+Scope**, status `selected-contract-required`. Selection is not authorization.
+MI-003 remains unauthorized and unstarted. Fresh MI-003 contract authoring is
+the next valid operation; selection is not execution authorization.

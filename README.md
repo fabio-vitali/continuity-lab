@@ -36,11 +36,11 @@ Its deterministic Nestfolio evidence is published at exact revision
 
 MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation.
 
-**MI-002 — Reusable Pack Composition has a bounded publication-dependent C7 discrepancy.** Its original execution at Nestfolio HEAD `8f923240b6be1e0373b25b090f6be76139e4b256` produced 23/23, but published HEAD `cc4e772f0a74886caebd07cff9b5d69d8f12ab48` makes the isolated rollback fixture's `git show HEAD:package.json` select the 6945-byte Level 2 package instead of the locked 6467-byte Level 1 predecessor, producing `ROLLBACK_RECOVERY_IDENTITY_MISMATCH` and 22/23. Production Level 2, Pack identities, lock material, activation, and Level 1 remain unchanged.
+**MI-002 — Reusable Pack Composition retains its original UNCONDITIONAL PASS and exact execution conditions.** The publication-dependent C7 discrepancy was a recovery-fixture provenance defect only; production Level 2, Pack identities, lock material, activation, and Level 1 remained unchanged.
 
-**MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction** is complete with **UNCONDITIONAL FAIL**. Its clean pushed repository gates passed, but execution did not follow the required canonical read order: `CONTINUITY-NEXT-STEPS.md` and then the R1 Context Pack were read before canonical `docs/90-state/program-state.md`. The correction stopped before pre-edit reproduction or any Nestfolio mutation; Nestfolio remains exact at published revision `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, and the published C7 discrepancy remains unresolved.
+**MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction** is complete with **UNCONDITIONAL FAIL**. Its clean pushed repository gates passed, but execution did not follow the required canonical read order: `CONTINUITY-NEXT-STEPS.md` and then the R1 Context Pack were read before canonical `docs/90-state/program-state.md`. The correction stopped before pre-edit reproduction or any Nestfolio mutation; its sole historical result and unchanged-Nestfolio disposition remain immutable.
 
-**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** is finalized, reviewed, and `authorized-not-started`. Contract authorization does not imply execution authorization. It is bound to continuity-lab failure-closure revision `60ac7397aa399de1f8f4d0e3456999a797136dd3`, continuity-workspace `eb990e114973e42af9935379f6b13f34f2e5e3b8`, published Nestfolio `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, and immutable predecessor `8f923240b6be1e0373b25b090f6be76139e4b256`. It retries only the unresolved publication-dependent C7 recovery-fixture correction; publication is the next valid operation. MI-003 remains unauthorized and blocked. MI-004 through MI-007 and broader work remain blocked.
+**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** is published with **UNCONDITIONAL PASS** at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`. It reproduced exactly 22/23 and the sole `ROLLBACK_RECOVERY_IDENTITY_MISMATCH`, bound both isolated recovery reads to immutable predecessor `8f923240b6be1e0373b25b090f6be76139e4b256` with exact digest/size checks, and restored 23/23 while Level 1 remains 14/14 and backlog-next 68/68. MI-003 is selected-contract-required but unauthorized and unstarted; contract authoring is next. MI-004 through MI-007 and broader work remain blocked.
 
 ## Canonical starting points
 
@@ -78,9 +78,10 @@ MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate
 - MI-002-R1 completion handoff: `sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/session-handoff.md`
 - MI-002-R1 execution-closure manifest: `sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/execution-changed-files.txt`
 - MI-002-R2 finalized correction-retry contract: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml`
-- MI-002-R2 preserved future execution prompt: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/prompt.md`
-- MI-002-R2 contract handoff: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md`
+- MI-002-R2 preserved execution prompt: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/prompt.md`
+- MI-002-R2 completion handoff: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md`
 - MI-002-R2 contract-authoring manifest: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/changed-files.txt`
+- MI-002-R2 execution-closure manifest: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

@@ -48,8 +48,9 @@ The exact continuity-lab closure manifest is
 Nestfolio manifest is
 `continuity/evidence/mi-002/commands/04-final-changed-files.json`.
 
-Both repositories intentionally remain uncommitted and unpushed pending a
-separate explicit publication instruction.
+At the original MI-002 execution closure, both repositories intentionally
+remained uncommitted and unpushed pending a separate explicit publication
+instruction.
 
 ## Next valid program operation
 
@@ -57,12 +58,13 @@ Exactly one next iteration is selected: **MI-003 — Bounded Local Work and
 Scope**, status `selected-contract-required`. Selection is not authorization;
 MI-003 has not been authored, authorized, or started.
 
-The next safe operation is a separate MI-002 publication session. It must begin
+The next safe operation recorded at that closure was a separate MI-002
+publication session. It had to begin
 by rechecking both dirty working-tree manifests against the canonical evidence,
 rerun the final bounded validation, review the diff, and only then commit and
-push each repository if the user explicitly authorizes publication. MI-003
-contract authoring remains blocked until publication is complete and Program
-State binds the resulting clean pushed revisions.
+push each repository if the user explicitly authorized publication. MI-003
+contract authoring remained blocked until publication completed and Program
+State bound the resulting clean pushed revisions.
 
 ## Publication-dependent correction disposition
 
@@ -71,8 +73,16 @@ canonical read order was not followed after valid execution start. It stopped
 before pre-edit reproduction and before any Nestfolio mutation. The exact
 published Nestfolio tree at
 `cc4e772f0a74886caebd07cff9b5d69d8f12ab48` remains unchanged, no MI-002
-evidence was regenerated, and the C7 publication discrepancy remains
-unresolved.
+evidence was regenerated, and that R1 result left the C7 publication discrepancy
+unresolved for a later retry.
 
-MI-002-R2 is selected only as `selected-contract-required`; it is not authored,
-authorized, or started. MI-003 remains blocked.
+MI-002-R2 later completed and was published with **UNCONDITIONAL PASS**. It
+followed the exact Program-State-first canonical order, reproduced the sole published 22/23 C7
+failure and `ROLLBACK_RECOVERY_IDENTITY_MISMATCH`, bound both recovery reads to
+the immutable predecessor with exact pre-write identity assertions, and restored
+23/23. Level 1 remains 14/14 and backlog-next 68/68. The exact eight-path
+Nestfolio correction is published at revision
+`fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`.
+
+MI-003 is now selected only as `selected-contract-required`; it is not authored,
+authorized, or started. Fresh contract authoring is the next valid operation.

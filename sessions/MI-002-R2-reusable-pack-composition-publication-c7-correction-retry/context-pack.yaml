@@ -1,13 +1,13 @@
 contract:
-  status: authorized-not-started
+  status: complete
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15
   finalized_on: 2026-07-15
   contract_authorized: true
-  execution_authorized: false
-  execution_instruction_received: false
-  execution_started: false
-  result: pending
+  execution_authorized: true
+  execution_instruction_received: true
+  execution_started: true
+  result: unconditional-pass
   authority:
     - docs/90-state/program-state.md
     - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/context-pack.yaml
@@ -30,7 +30,7 @@ iteration:
   id: MI-002-R2
   name: Reusable Pack Composition Publication-Dependent C7 Correction Retry
   type: bounded-validation-fixture-and-evidence-correction-retry
-  status: authorized-not-started
+  status: complete
   correction_only: true
   predecessor_result: MI-002-R1 UNCONDITIONAL FAIL
 
@@ -82,7 +82,7 @@ publication_bindings:
     required_branch: main
     contract_authoring_base_revision: 60ac7397aa399de1f8f4d0e3456999a797136dd3
     base_role: exact published MI-002-R1 failure-closure revision
-    execution_authorization_revision: exact-final-committed-and-pushed-R2-contract-revision
+    execution_authorization_revision: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
     required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
   nestfolio:
     required_branch: main
@@ -340,3 +340,82 @@ completion_criteria:
   - no R2 execution, Nestfolio test, or Nestfolio modification
   - exact nine-path contract-authoring changed-file manifest
   - publication handoff requiring a fresh control session and separate explicit instruction
+
+execution_closure:
+  status: complete
+  result: MI-002-R2 UNCONDITIONAL PASS
+  executed_on: 2026-07-15
+  authorization_revision: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
+  valid_execution_start: true
+  repository_gates:
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
+    nestfolio: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    nestfolio_exact_single_parent: 8f923240b6be1e0373b25b090f6be76139e4b256
+    branches_clean_pushed_and_aligned_at_start: true
+  canonical_read_order:
+    result: pass
+    program_state_read_first: true
+    required_entries_read_in_order: 16
+  pre_edit_reproduction:
+    command: node --test tests/continuity-level-2.test.mjs
+    tests: 23
+    pass: 22
+    fail: 1
+    sole_failure: C7 isolated rollback restores exact Level 1 bytes and reapply selects the identical lock
+    diagnostic: ROLLBACK_RECOVERY_IDENTITY_MISMATCH
+  immutable_recovery:
+    source_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
+    package_json:
+      bytes: 6467
+      sha256: b69da6f561a3ca51b80511efc7cc615412e6e98ba16339f1944218b96e059677
+    level_1_activation:
+      bytes: 196
+      sha256: d8d011c6d672cda725f039ddfffb26b9157bb95462538423ac473bb3b37a0650
+    verified_before_fixture_use: true
+  correction:
+    recovery_reads_bound_to_immutable_revision: 2/2
+    byte_size_assertions_before_fixture_write: 2/2
+    sha256_assertions_before_fixture_write: 2/2
+    production_fix: false
+  validation:
+    level_2_tests: 23/23 pass
+    level_1_tests: 14/14 pass
+    backlog_next_tests: 68/68 pass
+    mandatory_failure_scenarios: 15/15 pass-failed-closed
+    pack_verification: pass
+    resolution: pass
+    comparison: pass
+    active_guarantee_inspection: pass
+  preservation:
+    original_mi_002_result_and_execution_conditions: exact
+    mi_002_r1_result_and_artifacts: exact
+    production_level_2: exact
+    retained_level_1: exact
+    pack_procedure_lock_and_activation_identities: exact
+    package_json: exact
+    package_lock_json: absent
+    dependencies_changed: false
+    level_3_to_6_state_created: false
+    selected_backlog_executed: false
+    reusable_procedure_repository_writes: 0
+    reusable_procedure_network_requests: 0
+    skill_or_claude_code_invoked: false
+    mi_003_authored_authorized_or_executed: false
+  publication:
+    nestfolio_base_revision: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    nestfolio_published_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    nestfolio_commit_subject: Correct MI-002 C7 recovery fixture binding
+    nestfolio_changed_paths: 8
+    continuity_lab_closure_paths: 11
+    continuity_lab_commit_subject: Close MI-002-R2 C7 correction retry
+    status: published
+  canonical_changes:
+    nestfolio_manifest: continuity/evidence/mi-002/commands/04-final-changed-files.json publicationCorrection
+    continuity_lab_manifest: sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt
+  next_iteration:
+    selected: MI-003 — Bounded Local Work and Scope
+    status: selected-contract-required
+    authorized: false
+    started: false
+    r2_publication_gate_satisfied: true

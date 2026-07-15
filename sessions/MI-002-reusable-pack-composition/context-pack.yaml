@@ -524,3 +524,24 @@ publication_correction_status:
     status: selected-contract-required
     authorized: false
     started: false
+
+publication_correction_retry_status:
+  correction_iteration: MI-002-R2
+  result: unconditional-pass
+  authorization_revision: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
+  nestfolio_candidate_base_revision: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+  nestfolio_published_correction_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+  immutable_recovery_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
+  pre_edit_level_2_tests: 22/23 with sole ROLLBACK_RECOVERY_IDENTITY_MISMATCH
+  corrected_level_2_tests: 23/23 pass
+  level_1_tests: 14/14 pass
+  backlog_next_tests: 68/68 pass
+  directly_affected_nestfolio_paths: 8
+  publication_pending: false
+  publication_status: published
+  selected_next_iteration:
+    id: MI-003
+    title: Bounded Local Work and Scope
+    status: selected-contract-required
+    authorized: false
+    started: false
