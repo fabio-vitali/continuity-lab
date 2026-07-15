@@ -25,6 +25,7 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-002 — Reusable Pack Composition** — original execution **UNCONDITIONAL PASS** at its exact condition; MI-002-R2 corrects only the later publication-dependent C7 fixture provenance and does not re-grade the original result.
 - **MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction** — **UNCONDITIONAL FAIL**. Repository gates passed, but the required canonical read order was not followed. Execution stopped before pre-edit reproduction and before any Nestfolio mutation; that sole historical result remains immutable.
 - **MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** — **UNCONDITIONAL PASS**. Exact 22/23 and the sole typed diagnostic were reproduced; immutable predecessor binding plus pre-write identity checks restored 23/23 with all bounded validation and preservation requirements passing.
+- **MI-003 — Bounded Local Work and Scope** — **UNCONDITIONAL FAIL**. Exact repository and contract-identity gates passed, but the Context Pack was read before canonical Program State. Execution stopped before Nestfolio content read or mutation; candidate derivation, selection, Level 3 creation, tests, scenarios, rebuilds, and rollback were not executed.
 
 Canonical reports:
 
@@ -55,11 +56,10 @@ MI-001C closed without finding a directly verified canonical input archive, an a
 
 **MI-002 — Reusable Pack Composition** retains its exact active lock aggregate `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26` and original 23/23 execution condition. MI-002-R1 remains one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation. MI-002-R2 is published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6` after exact 22/23 reproduction, immutable recovery binding, 23/23 correction, Level 1 14/14, backlog-next 68/68, and complete preservation checks.
 
-**MI-003 — Bounded Local Work and Scope** has a fully authored, reviewed, and
-finalized contract publication candidate. The contract limits a later execution
-to one explicitly human-selected Level 3 local Work representation, exact
-create-only paths, deterministic candidate and Work Brief rebuilds, typed
-failure scenarios, source-preserving return/cancel, and exact preservation of
-all existing Nestfolio bytes. It does not select or implement a backlog item,
-and contract authorization or publication does not authorize execution. The
-candidate remains uncommitted and unstaged; publication is the next operation.
+**MI-003 — Bounded Local Work and Scope** is complete with UNCONDITIONAL FAIL.
+The exact bindings and contract identity passed, but the canonical read order
+did not: the Context Pack was read before Program State. C1 failed and the
+conjunctive execution stopped before Nestfolio content read or mutation. No
+candidate, selection, Level 3 state, selected-work implementation, test,
+scenario, rebuild, return, or cancel exists. The exact nine-path continuity-lab
+closure is uncommitted and unstaged; its publication is the next operation.

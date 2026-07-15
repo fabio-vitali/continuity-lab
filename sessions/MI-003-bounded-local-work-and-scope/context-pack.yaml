@@ -1,12 +1,12 @@
 contract:
-  status: finalized-publication-candidate
+  status: completed-unconditional-fail
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15
   finalized_on: 2026-07-15
   contract_authorized: true
-  execution_authorized: false
-  execution_instruction_received: false
-  execution_started: false
+  execution_authorized: true
+  execution_instruction_received: true
+  execution_started: true
   authority:
     - docs/90-state/program-state.md
     - CONTINUITY-NEXT-STEPS.md
@@ -34,9 +34,9 @@ iteration:
   name: Bounded Local Work and Scope
   type: bounded-level-3-local-work-authority-slice
   px_level: 3
-  status: finalized-publication-candidate
+  status: completed-unconditional-fail
   selected_item: null
-  execution_status: unauthorized-and-unstarted
+  execution_status: completed-unconditional-fail
 
 objective:
   primary_question: >
@@ -460,3 +460,104 @@ completion_criteria:
   - no Nestfolio content inspection, mutation, selected item, Skill, Claude Code, dependency operation, commit, or push
   - exact nine-path uncommitted and unstaged continuity-lab contract-authoring manifest
   - publication handoff for a fresh control session
+
+execution_closure:
+  status: completed
+  result: MI-003 UNCONDITIONAL FAIL
+  closed_on: 2026-07-15
+  execution_contract_revision: 2e90dd1ffa944d5a633e65e0f2c1c52f751af4ad
+  repository_bindings:
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: 2e90dd1ffa944d5a633e65e0f2c1c52f751af4ad
+    nestfolio: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    disposition: >
+      All three repositories passed the exact clean-main HEAD, local
+      origin/main, upstream, and remote-main alignment gates before content
+      read. The MI-003 commit subject, single parent, and reviewed nine-path
+      delta also matched exactly.
+  sole_failure:
+    criterion: C1
+    diagnostic: CANONICAL_READ_ORDER_DEVIATION
+    required_first_content: docs/90-state/program-state.md
+    observed_first_content: sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+    disposition: >
+      The executor read the MI-003 Context Pack before canonical Program State.
+      The contract defines any earlier or reordered content read as an
+      unconditional failure and requires stop before Nestfolio mutation.
+  candidate_projection:
+    status: not-executed
+    considered_source_entries: 0
+    candidate_identity: null
+    rationale: Nestfolio content inspection was prohibited after the C1 failure.
+  human_selection:
+    status: not-received-and-not-requested
+    source_path: null
+    stable_source_local_identity: null
+    source_revision: null
+    source_sha256: null
+    rationale: >
+      The execution instruction contained no exact selection tuple, and the
+      earlier unconditional failure prevented candidate derivation and the
+      selection checkpoint.
+  criteria:
+    C1: fail
+    C2: not-executed
+    C3: not-executed
+    C4: not-executed
+    C5: not-executed
+    C6: not-executed
+    C7: not-executed
+  success_scenarios:
+    S1: not-executed
+    S2: not-executed
+    S3: not-executed
+    S4: not-executed
+    S5: not-executed
+    S6: not-executed
+    S7: not-executed
+    S8: not-executed
+    S9: not-executed
+    S10: not-executed
+  mandatory_failures:
+    F1: not-executed
+    F2: not-executed
+    F3: not-executed
+    F4: not-executed
+    F5: not-executed
+    F6: not-executed
+    F7: not-executed
+    F8: not-executed
+    F9: not-executed
+    F10: not-executed
+    F11: not-executed
+    F12: not-executed
+  validation:
+    level_3_tests: not-executed
+    level_2_tests: not-executed
+    level_1_tests: not-executed
+    backlog_next_tests: not-executed
+    candidates_rebuild: not-executed
+    work_brief_rebuild: not-executed
+    return_transition: not-executed
+    cancel_transition: not-executed
+  preservation:
+    nestfolio_content_read: false
+    nestfolio_mutated: false
+    nestfolio_manifest: []
+    created_level_3_paths: 0
+    pre_existing_tracked_bytes_changed: 0
+    package_lock_json_created: false
+    dependency_operation: false
+    claude_code_invoked: false
+    skill_invoked: false
+    selected_backlog_effort_executed: false
+    level_4_to_6_authority_created: false
+  rollback:
+    required: false
+    cleanup_performed: false
+    reason: No Nestfolio mutation or MI-003 path creation occurred.
+  next_valid_operation: >
+    Publish this exact execution closure in a fresh control session. After that
+    publication, select only a separately authored, reviewed, finalized, and
+    published bounded MI-003 correction retry or an explicit architecture
+    review. MI-004 remains blocked.

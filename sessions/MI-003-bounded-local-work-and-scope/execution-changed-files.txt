@@ -1,0 +1,9 @@
+M CONTINUITY-NEXT-STEPS.md
+M README.md
+M docs/70-implementation/README.md
+A docs/70-implementation/mi-003-bounded-local-work-and-scope.md
+M docs/90-state/artifact-index.md
+M docs/90-state/program-state.md
+M sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+A sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt
+M sessions/MI-003-bounded-local-work-and-scope/session-handoff.md
