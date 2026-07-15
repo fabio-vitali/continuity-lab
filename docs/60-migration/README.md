@@ -42,13 +42,13 @@ Every slice has explicit compatibility, coexistence, authority, validation, Evid
 ## Current contract position
 
 MI-001 through MI-001E-R1 are complete with their historical results preserved.
-The **MI-002 contract is complete and reviewed**, but neither contract nor
-execution authorization exists. Its exact Level 2 boundary is recorded in
+The **MI-002 contract is complete, unchanged, reviewed, and
+authorized-not-started**. Its exact Level 2 boundary is recorded in
 `../../sessions/MI-002-reusable-pack-composition/context-pack.yaml`.
 
 ```text
-MI-002: reviewed-not-authorized; not executed
-authorization in this session: prohibited
+MI-002: authorized-not-started; result pending
+execution instruction: not received
 execution in this session: prohibited
 MI-003 through MI-007: blocked
 ```
@@ -57,7 +57,7 @@ The reviewed contract composes exact local Pack versions only. It introduces no
 Work, Context, Run, Assurance, Learning, remote registry, dependency solver, or
 broader migration authority.
 
-The next permitted operation requires a separate user instruction and is limited
-to publication of the reviewed contract without authorization. Exact binding,
-authorization, and execution remain later separate operations. The exact
-handoff is in `../../CONTINUITY-NEXT-STEPS.md`.
+The next permitted operation requires a separate explicit execution instruction
+in a fresh control session after exact clean pushed repository verification.
+Authorization alone does not execute MI-002. The exact handoff is in
+`../../CONTINUITY-NEXT-STEPS.md`.

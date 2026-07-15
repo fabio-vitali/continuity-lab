@@ -34,7 +34,7 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 Its deterministic Nestfolio evidence is published at exact revision
 `8f923240b6be1e0373b25b090f6be76139e4b256`.
 
-MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation. **MI-002 — Reusable Pack Composition** is the sole selected iteration. Its complete Level 2 contract is reviewed under `sessions/MI-002-reusable-pack-composition/`, but it is not authorized or executed. The contract preserves immutable 1.0.1, composes it only with one new read-only generic repository Procedure, and keeps all Level 3–6 and broader work blocked. Contract review is not authorization. Original-output recovery claims, MI-003 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
+MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation. **MI-002 — Reusable Pack Composition** is the sole selected iteration and is authorized-not-started. Its complete unchanged Level 2 contract is bound to clean pushed continuity-lab publication revision `555bea7c4c7d72c7c5070bf3517a6926564b5429` and Nestfolio revision `8f923240b6be1e0373b25b090f6be76139e4b256`; no separate execution instruction has been received and execution has not started. The contract preserves immutable 1.0.1, composes it only with one new read-only generic repository Procedure, and keeps all Level 3–6 and broader work blocked. Original-output recovery claims, MI-003 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
 
 ## Canonical starting points
 
@@ -63,7 +63,7 @@ MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate
 - MI-001E-R1 preserved execution prompt: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md`
 - MI-001E-R1 completed handoff: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md`
 - MI-001E-R1 canonical report: `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`
-- MI-002 reviewed contract: `sessions/MI-002-reusable-pack-composition/context-pack.yaml`
+- MI-002 authorized-not-started contract: `sessions/MI-002-reusable-pack-composition/context-pack.yaml`
 - MI-002 inactive future prompt: `sessions/MI-002-reusable-pack-composition/prompt.md`
 - MI-002 contract handoff: `sessions/MI-002-reusable-pack-composition/session-handoff.md`
 - Program State: `docs/90-state/program-state.md`

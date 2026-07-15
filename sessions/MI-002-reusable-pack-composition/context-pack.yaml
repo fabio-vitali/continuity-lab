@@ -1,9 +1,9 @@
 contract:
-  status: reviewed-not-authorized
+  status: authorized-not-started
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15
-  contract_authorized: false
-  execution_authorized: false
+  contract_authorized: true
+  execution_authorized: true
   execution_instruction_received: false
   execution_started: false
   result: pending
@@ -19,12 +19,13 @@ contract:
     - docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
     - docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md
   authorization_rule: >
-    This is a complete reviewed contract, not an authorization. It must not be
-    executed merely because it exists, is reviewed, is committed, or is pushed.
-    A later control operation must separately verify and record exact clean
-    pushed repository bindings, change contract_authorized and
-    execution_authorized only under explicit user authority, and provide a
-    separate execution instruction. Until then, prompt.md is inactive.
+    This complete reviewed contract is authorized-not-started. Contract and
+    execution authorization do not constitute an execution instruction. MI-002
+    may begin only in a later fresh control session after Git metadata proves
+    the exact clean pushed authorization revision derived from the recorded
+    publication binding, Nestfolio remains at the exact recorded execution
+    revision, and a separate explicit execution instruction is received. Until
+    then, prompt.md is inactive.
 
 iteration:
   id: MI-002
@@ -32,7 +33,7 @@ iteration:
   type: bounded-migration-implementation
   design_level: L6
   product_experience_level: 2
-  status: reviewed-not-authorized
+  status: authorized-not-started
   completion_gate: unconditional-mi-002-decision
 
 objective:
@@ -78,27 +79,29 @@ publication_bindings:
   continuity_lab:
     required_branch: main
     reviewed_source_revision: 89cb37decc19067e8e0c1a1771b335e4889c4db1
-    future_authorization_revision: unset
+    future_authorization_revision: 555bea7c4c7d72c7c5070bf3517a6926564b5429
+    published_contract_sha256: f8b60ba7df44ac993033963ca0f390d4cf3bcdc1d42c107bddf4d31d3c77a94c
     rule: >
-      Before any later authorization or execution, Git metadata must prove a
-      clean pushed main at one exact revision containing this reviewed contract
-      and its control-artifact updates. The exact revision must be inserted by a
-      separately authorized control operation; no self-reference is required in
-      this reviewed, uncommitted contract.
+      Authorization metadata proved clean pushed main at the exact publication
+      revision containing the unchanged reviewed contract and its control
+      artifacts. Later execution must additionally prove the clean pushed final
+      authorization revision reported by this control operation; no
+      self-reference is required in this contract.
   nestfolio:
     canonical_evidence_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
-    future_execution_revision: unset
+    future_execution_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
     source_of_binding: >
       Program State and the validated MI-001E-R1 report identify this as the
       published revision containing the exact restored active 1.0.1 candidate
       and deterministic MI-001E-R1 evidence.
-    access_now: prohibited
+    access_now: prohibited-after-authorization-session
     future_access_rule: >
-      This contract-authoring operation grants no Nestfolio inspection or
-      modification authority. A later explicit authorization may permit only
-      the bounded read and write paths declared below, after Git metadata proves
+      The authorization session completed only the explicitly permitted bounded
+      read-only verification and made no Nestfolio change. A later fresh control
+      session with a separate explicit execution instruction may inspect or
+      modify only the bounded paths declared below, after Git metadata proves
       the exact clean pushed revision and before repository content is read.
-  unresolved_binding_blocks_execution: true
+  unresolved_binding_blocks_execution: false
 
 retained_level_1_baseline:
   pack: nestfolio.level-1@1.0.1
@@ -388,9 +391,11 @@ rollback_abandonment_and_recovery:
 
 future_permitted_repository_scope:
   rule: >
-    These paths are a future maximum, not present authority. They become
-    inspectable or modifiable only if a later explicit authorization updates the
-    contract and exact repository bindings without changing this boundary.
+    These paths remain the execution maximum, not authority to act in this
+    authorization session. They become inspectable or modifiable only in a
+    later fresh control session after a separate explicit execution instruction
+    and exact clean pushed repository verification, without changing this
+    boundary.
   continuity_lab_may_modify_on_execution_closure:
     - sessions/MI-002-reusable-pack-composition/context-pack.yaml
     - sessions/MI-002-reusable-pack-composition/session-handoff.md

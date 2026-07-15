@@ -6,5 +6,4 @@ docs/90-state/artifact-index.md
 docs/90-state/program-state.md
 sessions/MI-002-reusable-pack-composition/changed-files.txt
 sessions/MI-002-reusable-pack-composition/context-pack.yaml
-sessions/MI-002-reusable-pack-composition/prompt.md
 sessions/MI-002-reusable-pack-composition/session-handoff.md
