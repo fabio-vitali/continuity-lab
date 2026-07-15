@@ -21,13 +21,13 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 
 **MI-001B — Retained Level 1 Candidate Identity Restoration completed with unconditional FAIL.** The only supplied archive was the continuity-lab source archive for `47f89495ced69f464724c52967d077679cdec78a`, not the original modified Nestfolio output returned by MI-001. It contained none of the required 15 Nestfolio manifest entries and no `SKILL.md`; execution stopped before extraction or installation and Nestfolio remained unchanged.
 
-## Sole authorized execution iteration
+**MI-001C — Original MI-001 Output Artifact Evidence Recovery completed with unconditional FAIL.** The bounded sources contained no directly verifiable canonical input archive and no original MI-001 output or proven byte-identical preserved copy. The only Git ZIP was an unrelated Nestfolio integration fixture; a zero-byte file restored under `output/MI-001C` after execution start was not an archive or pre-existing delivery evidence. No delivery chain, exact output delta, or streamed Skill identity could be proven, and Nestfolio remained unchanged.
 
-**MI-001C — Original MI-001 Output Artifact Evidence Recovery** has status `authorized-not-started`. Its reviewed contract authorizes only a fully automated, deterministic, read-only search of bounded local evidence sources. It has not executed and its result is pending.
+## Sole selected next iteration
 
-Its only permitted purpose is to locate and prove the unmodified original MI-001 modified Nestfolio output artifact, or a byte-identical preserved copy with a provable delivery chain. It is limited to the two authorized continuity-workspace evidence directories and relevant local Git evidence in continuity-lab and Nestfolio. It may not inspect other locations, reconstruct, edit, install, or invoke the Skill.
+**MI-001D — Retained Level 1 Candidate Deliberate Supersession** has status `selected-contract-required`. It is not authored, authorized, or executed.
 
-MI-002 through MI-007, genuine invocation confirmation, candidate reconstruction, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
+Candidate reconstruction, repair, installation, deliberate supersession, MI-002 through MI-007, genuine invocation confirmation, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked until a separate reviewed contract authorizes otherwise.
 
 ## Canonical starting points
 
@@ -41,7 +41,8 @@ MI-002 through MI-007, genuine invocation confirmation, candidate reconstruction
 - MI-001A report: `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md`
 - MI-001B report: `docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md`
 - MI-001B completed contract: `sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml`
-- MI-001C authorized contract: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml`
+- MI-001C report: `docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md`
+- MI-001C completed contract: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml`
 - MI-001C executable prompt: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`

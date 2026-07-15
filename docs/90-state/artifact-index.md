@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; records MI-001 through MI-001B FAIL, unchanged Nestfolio, and MI-001C as the sole authorized bounded read-only evidence-recovery iteration |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact user actions to review, commit, push, and later execute the MI-001C contract without broadening evidence scope |
+| `README.md` | Ratified | Program | Repository orientation; records MI-001 through MI-001C FAIL, unchanged Nestfolio, and MI-001D as the sole selected contract-required iteration |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact user actions to review, commit, and push the MI-001C closure before separately authoring any MI-001D contract |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -23,13 +23,14 @@ superseded_by: null
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
 | `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and prepared MI-001 execution boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence, MI-001 through MI-001B FAIL, the invalid candidate, the provenance-gate stop, and the authorized bounded MI-001C evidence-recovery position |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence, MI-001 through MI-001C FAIL, the invalid candidate, the unsuccessful bounded recovery, and the selected MI-001D position |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
 | `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md` | Validated | Implementation | Canonical MI-001A report: genuine executor provenance, candidate identity mismatch, unconditional FAIL, retained-candidate identity drift root cause, and MI-001B selection |
 | `docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md` | Validated | Implementation | Canonical MI-001B report: repository bindings, supplied-archive metadata, original-output provenance failure, pre-installation stop, unchanged Nestfolio, unconditional FAIL, and MI-001C selection |
-| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001B FAIL preserved, Nestfolio unchanged, MI-001C authorized-not-started for bounded read-only evidence recovery, invocation and later work blocked |
+| `docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md` | Validated | Implementation | Canonical MI-001C report: authorization, full bounded ledger, absent input/output and delivery chain, recorded deviations, unchanged Nestfolio, unconditional FAIL, and MI-001D selection |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001C FAIL preserved, Nestfolio unchanged, MI-001D selected-contract-required, invocation and later work blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -93,7 +94,7 @@ superseded_by: null
 | `sessions/MI-001B-retained-level-1-candidate-identity-restoration/prompt.md` | Ratified | Session | Preserved executable MI-001B instruction; prohibits reconstruction, invocation, lock changes, C1/C3 claims, and broader modification |
 | `sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md` | Validated | Session | Completed MI-001B FAIL handoff with revision bindings, supplied-archive provenance result, verification disposition, unchanged Nestfolio, manifests, and MI-001C continuation |
 | `sessions/MI-001B-retained-level-1-candidate-identity-restoration/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001B contract-authoring operation |
-| `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml` | Ratified | Session | Authorized MI-001C contract for automated read-only discovery, original-delivery proof, direct input binding, exact 15-entry delta, streamed Skill verification, one unconditional result, and bounded next-iteration selection |
+| `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml` | Validated | Session | Original MI-001C authorization preserved with appended unconditional FAIL closure, complete ledger, input/delivery/delta/Skill dispositions, deviations, and MI-001D selection |
 | `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md` | Ratified | Session | Complete executable MI-001C instruction with exact evidence roots, Git-read boundaries, provenance rules, prohibited mutations, and closure requirements |
-| `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md` | Draft | Session | Deliberately unused non-evidentiary placeholder to be replaced only after MI-001C execution |
+| `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md` | Validated | Session | Completed MI-001C FAIL handoff with repository/input bindings, full candidate ledger, no delivery chain, non-executed delta/Skill checks, deviations, unchanged Nestfolio, manifest, and MI-001D continuation |
 | `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001C contract-authoring operation |

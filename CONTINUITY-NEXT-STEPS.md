@@ -1,14 +1,16 @@
-# Continuity — MI-001C Contract Review and Execution Handoff
+# Continuity — MI-001C Closure Review and MI-001D Contract Handoff
 
 ## Current state
 
-- MI-001, MI-001A, and MI-001B are complete with **UNCONDITIONAL FAIL**.
+- MI-001, MI-001A, MI-001B, and MI-001C are complete with **UNCONDITIONAL FAIL**.
+- MI-001C found no directly verifiable canonical input archive, no original MI-001 output or proven byte-identical preserved copy, and no delivery chain.
+- The exact 15-entry delta and required `SKILL.md` identity were not verifiable because no admissible archive pair existed.
 - Nestfolio remains clean and unchanged at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`.
-- **MI-001C — Original MI-001 Output Artifact Evidence Recovery** is the sole `authorized-not-started` execution iteration after this contract is reviewed, committed, and pushed.
-- MI-001C has not executed and its result is pending.
-- Candidate reconstruction, candidate installation, deliberate supersession, genuine invocation confirmation, `/backlog-next`, `continuity:invoke`, MI-002 through MI-007, and broader work remain blocked.
+- **MI-001D — Retained Level 1 Candidate Deliberate Supersession** is the sole selected next iteration with status `selected-contract-required`.
+- MI-001D is not authored, authorized, or executed.
+- Reconstruction, installation, deliberate supersession, genuine invocation confirmation, `/backlog-next`, `continuity:invoke`, MI-002 through MI-007, and broader work remain blocked.
 
-## 1. Review the contract-authoring change
+## 1. Review the MI-001C closure
 
 From continuity-lab, run:
 
@@ -19,54 +21,39 @@ git diff -- \
   README.md \
   CONTINUITY-NEXT-STEPS.md \
   docs/70-implementation/README.md \
+  docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md \
   docs/90-state/artifact-index.md \
-  docs/90-state/program-state.md
-git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/changed-files.txt || true
-git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml || true
-git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md || true
-git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md || true
+  docs/90-state/program-state.md \
+  sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml \
+  sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md
 ```
 
-Confirm that the contract:
+Confirm that the closure:
 
-- authorizes only a fully automated, deterministic, read-only evidence-recovery operation;
-- limits filesystem inspection to `continuity-workspace/retained-artifacts/MI-001` and `continuity-workspace/output`;
-- limits repository inspection to relevant read-only Git history, reflogs, stashes, indexes, and object databases in continuity-lab and Nestfolio;
-- excludes Downloads, other home locations, browser data, cloud storage, network resources, and unrelated projects;
-- distinguishes original delivery from every later recreation or derivation;
-- requires a complete, non-circular, pre-existing delivery chain;
-- directly verifies MI-001 source revision `3aa8f4773955541415f615abd80a0a9702bcb416` and input archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`;
-- requires the exact 15-entry MI-001 changed-file manifest;
-- streams `SKILL.md` without extraction or installation and requires SHA-256 `9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90`, 33928 bytes;
-- converges on exactly one unconditional result;
-- selects MI-001D deliberate supersession, still contract-required, if the original artifact cannot be recovered;
-- keeps Nestfolio, invocation, MI-002, and broader work blocked.
+- records exactly one result, `MI-001C UNCONDITIONAL FAIL`;
+- preserves the original contract terms and appends the execution closure;
+- records continuity-lab execution revision `dcd4289db3df1d30d4daaf7d7e0b8a19fd5cc0aa`;
+- records direct source commit/tree existence but failed input-archive verification;
+- classifies the historical `mock-alpaca.zip` Git object and the post-start zero-byte output as non-candidates;
+- records no admissible original output, preserved copy, or delivery chain;
+- marks all 15 delta entries and streamed Skill identity as not verifiable/not executed, never as PASS;
+- records the evidence-source mutation and inspection order/scope deviations;
+- confirms no extraction, installation, invocation, reconstruction, or Nestfolio change;
+- selects only MI-001D with status `selected-contract-required`.
 
 ## 2. Commit and push only after explicit approval
 
-Commit exactly the nine paths listed in the contract-authoring manifest. Push the resulting `main` commit to `origin/main`. Record the full pushed revision.
+If the closure is accepted, commit exactly the eight changed continuity-lab paths listed in the report and push the resulting `main` commit to `origin/main`. Do not commit any continuity-workspace ZIP into continuity-lab. Do not modify or commit Nestfolio.
 
-Do not modify or commit Nestfolio. Do not commit the generated ZIP from continuity-workspace into continuity-lab.
+## 3. Author a separate MI-001D contract only when requested
 
-## 3. Start a fresh MI-001C execution session
+MI-001D is not executable from this closure. A fresh contract-authoring session must read the committed MI-001C closure and create a separately reviewable contract. Do not treat `selected-contract-required` as execution authorization.
 
-Only after the reviewed continuity-lab commit is pushed and all three repositories satisfy the contract bindings, open a fresh local WebStorm/Codex session rooted at:
-
-```text
-/Users/fabiovitali/WebstormProjects/continuity-workspace
-```
-
-Paste the complete contents of:
-
-```text
-/Users/fabiovitali/WebstormProjects/continuity-lab/sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md
-```
-
-The execution session must not use conversational memory from contract authoring. It must read the committed contract and apply its exact evidence boundaries.
+The MI-001D contract must explicitly govern deliberate supersession of the invalid retained Level 1 candidate without claiming recovery of the lost original output. It must preserve the historical MI-001/MI-001A/MI-001B/MI-001C results and continue to block invocation until the superseded candidate has its own independently validated identity.
 
 ## Work that remains blocked
 
-- reconstruction, editing, installation, repair, or supersession of the retained candidate;
+- candidate reconstruction, repair, installation, or deliberate supersession;
 - `/backlog-next`, `continuity:invoke`, and every genuine invocation confirmation;
 - MI-002 through MI-007;
 - reusable multi-Procedure Pack composition;

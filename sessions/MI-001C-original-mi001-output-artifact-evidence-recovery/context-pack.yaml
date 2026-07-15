@@ -428,3 +428,77 @@ blocked_until_completion:
   - all broader implementation and migration
   - Console, hosted services, universal integrations, and commercial work
   - broad or unrelated Nestfolio changes
+
+execution_closure:
+  executed_on: 2026-07-15
+  execution_revision: dcd4289db3df1d30d4daaf7d7e0b8a19fd5cc0aa
+  unconditional_result: FAIL
+  verdict_label: "MI-001C UNCONDITIONAL FAIL"
+  reason: >
+    The bounded sources contained neither the canonical MI-001 input archive
+    nor the original MI-001 output or a proven byte-identical preserved copy.
+    The only Git ZIP was an unrelated historical Nestfolio integration fixture.
+    A zero-byte non-archive file was restored under output/MI-001C after the
+    execution began, so it cannot be pre-existing delivery evidence and zero
+    evidence-source mutation cannot be proven. Direct input verification, a
+    delivery chain, the exact 15-entry delta, and the required streamed Skill
+    identity were unavailable. The execution also recorded a Git-surface order
+    deviation and one initial unfiltered Nestfolio index listing; both are
+    mandatory FAIL conditions under this contract.
+  repository_bindings:
+    continuity_workspace: f011140c3f39ac2daa117c8c721b53c6c179871b
+    continuity_lab: dcd4289db3df1d30d4daaf7d7e0b8a19fd5cc0aa
+    continuity_lab_parent: 538f57a6ad3fa2880acb704c865c99fd4ee04c92
+    nestfolio: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    nestfolio_unchanged: true
+  canonical_input:
+    source_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+    source_tree: aac85d58faf7f61cd6ec5f5c9ba4f29d9bfe2402
+    input_archive_sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+    input_zip_comment: 3aa8f4773955541415f615abd80a0a9702bcb416
+    commit_and_tree_exist: true
+    direct_archive_verification: FAIL — archive absent from bounded sources
+  inventory:
+    continuity_workspace_regular_files_initially: 0
+    continuity_lab_blobs_scanned: 239
+    continuity_lab_archive_objects: 0
+    nestfolio_blobs_scanned: 16700
+    nestfolio_archive_objects: 1
+    admissible_candidates: 0
+  candidates:
+    - sha256: b64e9419363f8faea7cba3cd346f90b8a4fde5afe428683237f81b79fa74f3e0
+      location: nestfolio blob efc4804062c591b40930af9ced5b22dd900def37
+      format: zip
+      bytes: 1391
+      classification: non-candidate
+      reason: unrelated historical libs/integration-testing/assets/mock-alpaca.zip fixture
+    - sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      location: continuity-workspace/output/MI-001C/continuity-lab-MI-001C-contract-uncommitted-20260715T091639Z.zip
+      format: non-archive
+      bytes: 0
+      classification: non-candidate
+      reason: restored after execution start; empty and not a ZIP
+  delivery_chain: FAIL — none available
+  exact_manifest: NOT VERIFIABLE — no verified input/output archive pair
+  streamed_skill:
+    status: NOT EXECUTED — member unavailable
+    required_sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    required_bytes: 33928
+  deviations:
+    - bounded output evidence source changed after execution start
+    - Nestfolio Git surfaces were inspected before continuity-lab Git surfaces
+    - initial Nestfolio index listing was not limited to relevant entries
+  no_extraction_installation_invocation_or_reconstruction: true
+  selected_next_iteration:
+    id: MI-001D
+    name: Retained Level 1 Candidate Deliberate Supersession
+    status: selected-contract-required
+    authored: false
+    authorized: false
+    executed: false
+  blocked:
+    - candidate reconstruction, repair, installation, or deliberate supersession
+    - every genuine invocation confirmation iteration
+    - /backlog-next and continuity:invoke
+    - MI-002 through MI-007
+    - all broader implementation and migration
