@@ -1,6 +1,6 @@
 ---
 artifact_id: SESSION-HANDOFF-MI-001E-R1
-status: ratified
+status: validated
 owner: session
 last_updated: 2026-07-15
 supersedes: []
@@ -11,62 +11,75 @@ superseded_by: null
 
 ## Status
 
-**Finalized contract authorized-not-started. No execution instruction received;
-execution not started; result pending.**
+**Complete — UNCONDITIONAL PASS.**
 
-This is a non-evidentiary pre-execution handoff. It records no MI-001E-R1
-result and does not authorize Claude Code, a Skill, `/backlog-next`, Nestfolio
-inspection, or repository modification.
+Execution was bound to clean pushed continuity-lab revision
+`1113a670a638ac9e946eeb31fcc373bb8187bb8e` and exact clean pushed Nestfolio
+revision `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`.
 
-## Correction contract
+The immutable 1.0.1 candidate verified 19/19 assets and aggregate lock digest
+`376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4`
+before and after. Exact active activation, all 3417 tracked files, and the Git
+index file and flags were restored to the start state.
 
-The reviewed contract addresses only the two proven MI-001E gaps:
+## Scenario disposition
 
-- both Claude Code process starts and ends must be machine-captured exactly;
-- R1 evidence remains in an external temporary spool during both Sessions, and
-  the disabled Scenario B temporarily hides only the authorized activation-file
-  mutation from current Skill clean-tree status using a fully captured and
-  exactly restored skip-worktree bit.
+- Session A: `98496f9a-8d01-44e4-a60f-00d8e8e6a471`; exact process interval
+  `2026-07-15T12:55:12.343Z` to `2026-07-15T12:56:18.748Z`; genuine active
+  Level 1 delegation and genuine `/backlog-next --auto`; normal bounded rank-1
+  selection; no item execution.
+- Session B: `7581a042-6dcd-4430-8225-5aba036ee023`; exact process interval
+  `2026-07-15T12:59:01.103Z` to `2026-07-15T12:59:50.528Z`; direct genuine
+  `/backlog-next --auto` while activation was disabled under the exact
+  single-path containment; normal bounded rank-1 selection; no item execution.
+- Executor: authenticated Claude Code 2.1.210, resolved binary SHA-256
+  `1b471d62d1117482689d75447f5e050c640da717a5a3c91e6c13792450f8c662`;
+  no drift between Sessions.
+- Disabled boundary probe: required `LEVEL1_DISABLED` result.
+- Containment: only `continuity/level-1/activation.json` carried
+  `skip-worktree`; disabled bytes and clean current-Skill status were proven;
+  the bit was cleared before exact activation restore.
 
-The immutable `nestfolio.level-1@1.0.1` /
-`nestfolio.backlog-next@1.0.1` candidate, 19-asset lock, current Skill behavior,
-and all historical results remain unchanged. The containment is execution
-harness metadata only; it grants no repository-work authority and cannot be
-used for any other path.
+## Verdict and preservation
 
-## Final publication bindings
+```text
+C1 PASS
+C2 PASS
+C3 PASS
+C4 PASS
+C5 PASS
+C6 PASS
+C7 PASS
+```
 
-- Nestfolio exact clean pushed execution revision:
-  `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`;
-- Nestfolio publication delta: exactly 23 deterministic files under
-  `continuity/evidence/mi-001e/**` above parent
-  `c7f9ceaf79d1703769d8175774268924119042f6`;
-- continuity-lab authorization revision: the exact clean pushed final commit
-  containing this contract, resolved without self-reference by Git metadata;
-- contract status: `authorized-not-started`;
-- execution instruction: absent;
-- result: pending.
+Level 1 tests pass 14/14 and backlog-next tests pass 68/68 before and after.
+The protected manifest digest is
+`9a1d6f03f30e8dd0f7e9963266d8e59e6e712a7167a666eb613f1868ae7873c8`;
+the byte-exact start/final index digest is
+`ed10bb8a6963ef7fc84873be9902c01e51e2dd37203634d6be7ee91900b81002`.
+Recovery copy and external spool were deleted with absence proof.
 
-Commit and push do not start execution. A separate explicit user instruction in
-a fresh control session is still required before the preserved prompt may run.
+Final Nestfolio changes are only deterministic JSON under
+`continuity/evidence/mi-001e-r1/**`. No selected backlog item, implementation,
+candidate, Skill, dependency, Level 2–6 state, MI-001 output, commit, or push
+changed during R1 execution. The evidence-only closure was subsequently
+published at Nestfolio revision
+`8f923240b6be1e0373b25b090f6be76139e4b256`. MI-002 was not authorized.
 
-## Scope of authoring and publication
+## Continuation
 
-The contract-authoring operation inspected and modified continuity-lab only.
-The later publication-binding operation inspected and committed only the
-already-produced 23 MI-001E evidence files in Nestfolio, then inserted their
-exact published revision here. Neither operation ran Claude Code, invoked a
-Skill or continuity boundary, executed a backlog item, modified 1.0.1,
-recovered MI-001 output, authorized MI-002, or started MI-001E-R1.
+MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1
+candidate and corrected genuine-invocation evidence obligation. Only
+**MI-002 — Reusable Pack Composition** is selected with status
+`selected-contract-required`. Selection is not authorization. Do not author,
+authorize, or execute MI-002 without a separately reviewed contract and an
+explicit later authorization.
 
-## Next action after publication verification
+Canonical report:
+`docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`.
 
-Do not execute automatically. Verify both published repositories are clean and
-remote-aligned. When execution is intended, open a fresh control session and
-issue only the exact separate MI-001E-R1 execution instruction preserved in
-`prompt.md`.
+Canonical Nestfolio evidence: `continuity/evidence/mi-001e-r1/**`.
 
-Pre-final non-canonical review ZIP:
-`/Users/fabiovitali/WebstormProjects/continuity-workspace/output/MI-001E-R1/continuity-lab-MI-001E-R1-contract-review-20260715T123649Z.zip`.
-It predates the exact Nestfolio binding and is retained only as a review
-artifact; it is not authorization or execution evidence.
+Repository archive identities are recorded in Nestfolio
+`continuity/evidence/mi-001e-r1/commands/20-repository-zip-identities.json` and
+the external execution delivery.

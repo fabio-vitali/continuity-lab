@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation is complete with UNCONDITIONAL FAIL. Exact active 1.0.1 and all protected state were restored. Its deterministic Nestfolio evidence is published at exact revision `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`. MI-001E-R1 is the sole authorized-not-started correction iteration: its bounded contract is finalized with exact timing, external evidence spooling, single-path disabled activation containment, and the exact Nestfolio binding. No execution instruction has been received, execution has not started, and result remains pending. MI-002 remains blocked and unauthorized.**
+**MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction is complete with UNCONDITIONAL PASS. Two fresh genuine Claude Code Sessions have exact machine-captured process intervals and returned normal bounded `/backlog-next --auto` results through the active boundary and directly while disabled under the exact single-path containment. Exact active 1.0.1, all 3417 tracked bytes, and the Git index bytes and flags were restored. MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation. MI-002 is the sole selected-contract-required next iteration; it is not authored, authorized, or executed.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -21,7 +21,7 @@ MI-001A executed Scenario A from the committed contract revision with a genuine 
 
 MI-001B executed from the reviewed contract revision and failed at the original-artifact provenance gate. The supplied archive SHA-256 was `0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb`; its ZIP comment was continuity-lab revision `47f89495ced69f464724c52967d077679cdec78a`, and its 115 entries contained 0 of the 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`. Nothing was extracted or installed, no Nestfolio evidence was created, and restoration was not applicable.
 
-MI-002 through MI-007 and all broader work remain blocked. Original-output reconstruction or recovery claims remain prohibited. No iteration is currently authorized for execution.
+MI-002 is selected-contract-required only. MI-003 through MI-007 and all broader work remain blocked. Original-output reconstruction or recovery claims remain prohibited. No iteration is currently authorized for execution.
 
 ## Gate history and current validity
 
@@ -35,7 +35,7 @@ MI-002 through MI-007 and all broader work remain blocked. Original-output recon
 | G5 | passed; valid | Migration Plan, DR-0023, MA-001 handoff |
 | G6 | passed; valid | combined VS-001 and VS-001A evidence |
 
-The MI-001 and MI-001A FAIL results do not revoke G5 or G6. They block progression to MI-002 until the retained candidate identity is restored under MI-001B, or a later separately authorized supersession closes the candidate issue, and the Level 1 genuine-evidence obligation is closed.
+The MI-001 and MI-001A FAIL results do not revoke G5 or G6. MI-001D deliberate supersession plus MI-001E and MI-001E-R1 genuine-invocation evidence now close the Level 1 obligation without repairing, relabeling, reconstructing, or recovering the historical 1.0.0 output.
 
 ## MI-001 result
 
@@ -234,28 +234,27 @@ Canonical report:
 Status:
 
 ```text
-authorized-not-started
-contract finalized and authorized
-Nestfolio binding c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a
-no execution instruction
-not executed
-result pending
+complete
+unconditional PASS
+two exact-timed fresh genuine Claude Code Sessions
+normal active-boundary and direct-disabled Skill results
+exact active 1.0.1 and Git-index metadata restored
 ```
 
-The reviewed correction contract is under
-`sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/`.
-It preserves immutable 1.0.1 and addresses only the two MI-001E gaps: exact
-machine-captured process intervals and a clean current-Skill view during the
-authorized disabled activation state. All R1 evidence remains external during
-both Sessions; only the activation file's skip-worktree bit may be temporarily
-set and exactly restored during Scenario B.
+Execution facts:
 
-The contract is finalized but authorization does not start execution. Nestfolio
-revision `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a` is the exact execution
-binding and adds only reviewed MI-001E evidence above the immutable MI-001D
-revision. Execution requires clean pushed repository verification followed by a
-separate explicit instruction in a fresh control session. MI-002 remains
-blocked and unauthorized.
+- continuity-lab authorization revision: `1113a670a638ac9e946eeb31fcc373bb8187bb8e`;
+- Nestfolio execution revision: `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`;
+- genuine executor: authenticated Claude Code 2.1.210, resolved binary SHA-256 `1b471d62d1117482689d75447f5e050c640da717a5a3c91e6c13792450f8c662`, no drift;
+- Session A: `98496f9a-8d01-44e4-a60f-00d8e8e6a471`, exact interval `2026-07-15T12:55:12.343Z` to `2026-07-15T12:56:18.748Z`, active boundary plus normal bounded result;
+- Session B: `7581a042-6dcd-4430-8225-5aba036ee023`, exact interval `2026-07-15T12:59:01.103Z` to `2026-07-15T12:59:50.528Z`, normal direct result while disabled under the one-path containment;
+- immutable candidate: 19/19 assets and aggregate digest `376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4` before and after;
+- protection: 3417 tracked entries, byte-exact activation and index restoration, no special final index flags;
+- diagnostics ready; Level 1 tests 14/14 and backlog-next tests 68/68 before and after;
+- no selected backlog item, implementation, candidate, Skill, dependency, MI-001 output, commit, push, or Level 2–6 state changed.
+
+Canonical report:
+`docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`.
 
 ## Iteration queue
 
@@ -274,19 +273,18 @@ blocked and unauthorized.
 13. MI-001C — complete; unconditional FAIL; no directly verified input archive, admissible output, or delivery chain; Nestfolio unchanged
 14. MI-001D — complete; unconditional PASS; deliberate 1.0.1 supersession verified without invocation or recovery claim
 15. MI-001E — complete; unconditional FAIL; Scenario B produced no normal result and exact Session A start UTC is absent; active 1.0.1 restored
-16. MI-001E-R1 — authorized-not-started; finalized exact contract; no execution instruction; result pending
-17. MI-002 through MI-007 — blocked
-18. broader implementation and unrelated migration — blocked
+16. MI-001E-R1 — complete; unconditional PASS; exact-timed active and direct-disabled genuine results; exact restoration
+17. MI-002 — selected-contract-required; not authored, authorized, or executed
+18. MI-003 through MI-007 — blocked
+19. broader implementation and unrelated migration — blocked
 
 ## Active blockers
 
-- The retained historical Nestfolio 1.0.0 candidate identity remains invalid; MI-001D did not relabel or repair it.
-- MI-001B proved that the supplied archive is a continuity-lab source archive, not the original modified Nestfolio output; the required output artifact and exact recoverable bytes remain unavailable.
-- MI-001C found no admissible original output or proven preserved copy and could not directly verify the canonical input archive.
-- MI-001E failed because Scenario B's direct genuine invocation produced no normal result under the current clean-tree preflight and exact Session A start UTC is absent.
-- MI-001E-R1 is authorized-not-started but has no separate execution instruction and has not executed.
-- Contract publication, authorization, commit, or push alone does not start R1; exact clean pushed repository verification and a fresh explicit execution instruction are required.
-- MI-002 through MI-007 remain blocked until the Level 1 evidence obligation is closed and Program State explicitly selects one next iteration.
+- The retained historical Nestfolio 1.0.0 candidate identity remains invalid; MI-001D did not relabel or repair it, and no recovery claim is permitted.
+- MI-001B and MI-001C provenance failures remain immutable history; the Level 1 closure relies only on deliberate 1.0.1 supersession and genuine evidence.
+- MI-001E remains historical UNCONDITIONAL FAIL; MI-001E-R1 corrects its two bounded evidence gaps without rewriting that result.
+- MI-002 is selected-contract-required but has no authored or reviewed contract and is not authorized for execution.
+- MI-003 through MI-007 remain blocked.
 - No Level 2 reusable composition, Work, Context, Run, Assurance, or Learning machinery is authorized.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
 - Broad or unrelated Nestfolio migration remains blocked.
@@ -324,9 +322,11 @@ blocked and unauthorized.
 - MI-001E completed handoff: `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md`
 - MI-001E report: `docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md`
 - MI-001E Nestfolio evidence: `continuity/evidence/mi-001e/**` at published Nestfolio revision `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`
-- MI-001E-R1 finalized authorized-not-started contract: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/context-pack.yaml`
-- MI-001E-R1 preserved future execution prompt: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md`
-- MI-001E-R1 non-evidentiary pre-execution handoff: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md`
+- MI-001E-R1 completed contract: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/context-pack.yaml`
+- MI-001E-R1 preserved execution prompt: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md`
+- MI-001E-R1 completed handoff: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md`
+- MI-001E-R1 report: `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`
+- MI-001E-R1 Nestfolio evidence: `continuity/evidence/mi-001e-r1/**` at published revision `8f923240b6be1e0373b25b090f6be76139e4b256`, above exact execution binding `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`
 - MI-001E-R1 contract-authoring manifest: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/changed-files.txt`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file

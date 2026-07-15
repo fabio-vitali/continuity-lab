@@ -310,3 +310,61 @@ completion_criteria:
   - no Nestfolio inspection or modification during contract authoring
   - exact contract-authoring changed-file manifest
   - non-canonical review ZIP outside both repositories
+
+execution_closure:
+  status: complete
+  result: MI-001E-R1 UNCONDITIONAL PASS
+  executed_on: 2026-07-15
+  authorization_revision: 1113a670a638ac9e946eeb31fcc373bb8187bb8e
+  nestfolio_revision: c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a
+  nestfolio_evidence_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
+  candidate:
+    pack: nestfolio.level-1@1.0.1
+    procedure: nestfolio.backlog-next@1.0.1
+    skill_sha256: e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1
+    skill_bytes: 34126
+    assets_verified: 19/19 before and after
+    aggregate_lock_digest: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+    final_activation: exact active 1.0.1
+  genuine_sessions:
+    scenario_a:
+      session_id: 98496f9a-8d01-44e4-a60f-00d8e8e6a471
+      start_utc: 2026-07-15T12:55:12.343Z
+      end_utc: 2026-07-15T12:56:18.748Z
+      result: active boundary and normal visible bounded Skill result proven
+    scenario_b:
+      session_id: 7581a042-6dcd-4430-8225-5aba036ee023
+      start_utc: 2026-07-15T12:59:01.103Z
+      end_utc: 2026-07-15T12:59:50.528Z
+      result: direct disabled current-Skill normal visible bounded result proven
+    distinct: true
+    executor: authenticated Claude Code 2.1.210
+    executor_drift: false
+  criteria:
+    C1: PASS
+    C2: PASS
+    C3: PASS
+    C4: PASS
+    C5: PASS
+    C6: PASS
+    C7: PASS
+  preservation:
+    protected_entries: 3417
+    protected_manifest_digest: 9a1d6f03f30e8dd0f7e9963266d8e59e6e712a7167a666eb613f1868ae7873c8
+    index_sha256_start_and_final: ed10bb8a6963ef7fc84873be9902c01e51e2dd37203634d6be7ee91900b81002
+    index_flags_start_and_final: none
+    level1_tests: 14/14 before and after
+    backlog_next_tests: 68/68 before and after
+    recovery_copy: verified, used only for exact index-file restoration, deleted, absence verified
+    evidence_spool: external through both Sessions and restoration, deleted, absence verified
+    final_nestfolio_changes: continuity/evidence/mi-001e-r1/** only
+    level_2_to_6: absent
+  prohibited_action_disposition: none occurred
+  canonical_report: docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md
+  canonical_evidence: continuity/evidence/mi-001e-r1/**
+  selected_next_iteration:
+    id: MI-002
+    title: Reusable Pack Composition
+    status: selected-contract-required
+    authorized: false
+    executed: false

@@ -25,11 +25,16 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 
 **MI-001D — Retained Level 1 Candidate Deliberate Supersession completed with UNCONDITIONAL PASS.** It deliberately created one new active `nestfolio.level-1@1.0.1` / `nestfolio.backlog-next@1.0.1` candidate without recovering or reconstructing MI-001 output. All 19 assets, the fresh aggregate lock, diagnostics, Level 1 and backlog-next tests, mandatory failure fixtures, Level 2–6 absence, isolated disable/re-enable, and byte-exact rollback passed. No Skill or invocation ran.
 
-## Sole selected correction iteration
+## Current selected iteration
 
 **MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** is complete with **UNCONDITIONAL FAIL**. Scenario A proved the active boundary and normal genuine Skill result. Scenario B's genuine direct Skill invocation stopped at the current clean-tree preflight and produced no normal result; exact Session A start UTC is also absent. Exact active 1.0.1, protected bytes, diagnostics, and tests were restored.
 
-**MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** is the sole authorized-not-started iteration. Its finalized contract binds exact clean pushed Nestfolio revision `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`. No execution instruction has been received and result is pending. Contract publication or authorization alone does not start execution. Original-output recovery claims, MI-002 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
+**MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** is complete with **UNCONDITIONAL PASS**. Two fresh genuine Claude Code Sessions have exact machine-captured intervals and normal active-boundary and direct-disabled `/backlog-next --auto` results. Exact active 1.0.1, all protected bytes, and Git-index bytes and flags were restored; no selected backlog item or implementation work ran.
+
+Its deterministic Nestfolio evidence is published at exact revision
+`8f923240b6be1e0373b25b090f6be76139e4b256`.
+
+MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation. **MI-002 — Reusable Pack Composition** is the sole `selected-contract-required` next iteration. Selection is not authorization: MI-002 is not authored, authorized, or executed. Original-output recovery claims, MI-003 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
 
 ## Canonical starting points
 
@@ -54,9 +59,10 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 - MI-001E preserved executable prompt: `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/prompt.md`
 - MI-001E completed handoff: `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md`
 - MI-001E canonical report: `docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md`
-- MI-001E-R1 finalized authorized-not-started contract: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/context-pack.yaml`
-- MI-001E-R1 preserved future prompt: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md`
-- MI-001E-R1 pre-execution handoff: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md`
+- MI-001E-R1 completed contract: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/context-pack.yaml`
+- MI-001E-R1 preserved execution prompt: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md`
+- MI-001E-R1 completed handoff: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md`
+- MI-001E-R1 canonical report: `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

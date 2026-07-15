@@ -21,6 +21,7 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-001C — Original MI-001 Output Artifact Evidence Recovery** — **UNCONDITIONAL FAIL**. No directly verifiable input archive or admissible original output was found; the only Git ZIP was an unrelated fixture, a post-start zero-byte output was a non-candidate, no delivery chain/delta/Skill identity could be proven, and Nestfolio remained unchanged.
 - **MI-001D — Retained Level 1 Candidate Deliberate Supersession** — **UNCONDITIONAL PASS**. One newly authored active 1.0.1 candidate verifies 19/19 assets, diagnostics, tests, mandatory failures, Level 2–6 absence, isolated disable/re-enable, and byte-exact rollback without invoking any Skill or claiming recovery of MI-001 output.
 - **MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** — **UNCONDITIONAL FAIL**. Scenario A proved the active Level 1 boundary and normal genuine Skill result. Scenario B genuinely invoked the Skill directly after disable, but current clean-tree preflight returned no normal result; exact Session A start UTC is also absent. Active 1.0.1 and all protected bytes were restored.
+- **MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** — **UNCONDITIONAL PASS**. Two fresh genuine Sessions have exact process intervals and normal active and direct-disabled results under the one-path containment. Active 1.0.1, protected bytes, and index metadata were restored exactly.
 
 Canonical reports:
 
@@ -45,4 +46,6 @@ MI-001C closed without finding a directly verified canonical input archive, an a
 
 **MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** is complete with UNCONDITIONAL FAIL. Both genuine Claude Code Sessions occurred, but Scenario B returned no normal visible result under the current clean-tree preflight and exact Session A start UTC was not captured. Exact active 1.0.1, diagnostics, tests, and protected bytes were restored; final Nestfolio changes are permitted deterministic evidence only.
 
-**MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** is the sole authorized-not-started iteration. Its finalized contract corrects timing and disabled clean-state evidence only, preserves immutable 1.0.1, and binds exact clean pushed Nestfolio revision `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`. It has no execution instruction and has not executed. MI-002 and broader implementation remain blocked.
+**MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** is complete with UNCONDITIONAL PASS. Exact-timed Sessions A and B returned normal bounded results; the disabled Scenario B used only the activation-file `skip-worktree` containment, and exact active 1.0.1 plus Git-index metadata were restored. MI-001D, MI-001E, and MI-001E-R1 jointly close the Level 1 obligation.
+
+**MI-002 — Reusable Pack Composition** is selected-contract-required only. It has not been authored, authorized, or executed. Broader implementation remains blocked.
