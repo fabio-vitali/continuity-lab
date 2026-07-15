@@ -372,3 +372,84 @@ blocked_until_completion:
   - all broader implementation and migration
   - Console, hosted services, universal integrations, and commercial work
   - broad or unrelated Nestfolio changes
+
+execution_closure:
+  executed_on: 2026-07-15
+  unconditional_result: FAIL
+  verdict_label: "MI-001B — Retained Level 1 Candidate Identity Restoration: UNCONDITIONAL FAIL"
+  failure_class: original-mi001-output-artifact-provenance-failure
+  reason: >
+    Authorization and repository binding passed, but the only supplied archive
+    was a continuity-lab source archive for revision
+    47f89495ced69f464724c52967d077679cdec78a, not the original modified
+    Nestfolio implementation-candidate artifact returned by MI-001. Its ZIP
+    comment was the continuity-lab revision, its 115 entries contained none of
+    the exact 15 required MI-001 changed-file manifest entries, and the required
+    .claude/skills/backlog-next/SKILL.md member was absent. Original-output
+    provenance and the exact recoverable bytes were therefore unavailable.
+    Execution stopped before extraction or installation as required.
+  repository_bindings:
+    control_workspace_revision: cbe855bf86fea2a81bd2153d35546dbf3e334e65
+    continuity_lab_execution_revision: 47f89495ced69f464724c52967d077679cdec78a
+    continuity_lab_branch: main
+    continuity_lab_clean_at_start: true
+    continuity_lab_remote: origin https://github.com/fabio-vitali/continuity-lab.git
+    nestfolio_starting_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    nestfolio_branch: main
+    nestfolio_clean_at_start_and_end: true
+    nestfolio_remote: origin https://github.com/fabio-vitali/nestfolio
+    inspected_revision_is_ancestor: true
+    later_diff_limited_to_mi001a_evidence: true
+  supplied_candidate:
+    absolute_path: /Users/fabiovitali/WebstormProjects/continuity-workspace/retained-artifacts/MI-001/continuity-lab-47f89495ced69f464724c52967d077679cdec78a.zip
+    filename: continuity-lab-47f89495ced69f464724c52967d077679cdec78a.zip
+    sha256: 0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb
+    bytes: 347866
+    zip_comment: 47f89495ced69f464724c52967d077679cdec78a
+    entry_count: 115
+    archive_integrity: PASS
+    available_extended_attribute: com.apple.provenance
+    downloaded_date: unavailable
+    where_from: unavailable
+    canonical_mi001_manifest_entries_present: 0 of 15
+    required_skill_member_present: false
+    original_mi001_output_provenance_proven: false
+  execution_result:
+    extraction_performed: false
+    installation_performed: false
+    nestfolio_evidence_created: false
+    nestfolio_modified: false
+    restoration_required: false
+    restoration_result: not-applicable
+    pack_lock_modified: false
+    backlog_next_invoked: false
+    continuity_invoke_run: false
+    genuine_invocation_confirmation_run: false
+    c1_or_c3_claimed: false
+    level_2_to_6_claimed_or_created: false
+  verification_disposition:
+    authorization_and_clean_start: PASS
+    original_artifact_provenance: FAIL
+    exact_mi001_manifest: FAIL (0 of 15 entries present)
+    streamed_skill_sha256_and_size: NOT EXECUTED (member absent)
+    installation_and_post_installation_identity: NOT EXECUTED
+    locked_assets_and_aggregate_digest: NOT EXECUTED
+    doctor_inspect_verify_and_tests: NOT EXECUTED
+    protected_path_comparison: NOT APPLICABLE (no installation)
+  implementation_report: docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md
+  selected_next_iteration:
+    id: MI-001C
+    name: Original MI-001 Output Artifact Evidence Recovery
+    status: selected-contract-required
+    contracted: false
+    authorized: false
+    executed: false
+    sole_purpose: >
+      Locate and prove the unmodified original MI-001 modified Nestfolio output
+      artifact, or a byte-identical preserved copy with a provable delivery
+      chain, without reconstruction, editing, installation, or invocation.
+  blocked:
+    - MI-002 through MI-007
+    - every genuine invocation confirmation iteration
+    - candidate reconstruction unless separately contracted after evidence recovery fails
+    - all broader implementation and migration

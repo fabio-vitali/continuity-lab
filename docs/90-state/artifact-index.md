@@ -2,7 +2,7 @@
 artifact_id: STATE-ARTIFACT-INDEX
 status: ratified
 owner: program
-last_updated: 2026-07-14
+last_updated: 2026-07-15
 supersedes: []
 superseded_by: null
 ---
@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; records MI-001 and MI-001A FAIL, the invalid retained candidate, and MI-001B as the sole authorized-not-started restoration iteration |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact user actions after MI-001B contract authoring: review/commit continuity-lab, preserve and prove the original MI-001 artifact, prepare the clean Nestfolio evidence revision, and execute only the reviewed restoration contract |
+| `README.md` | Ratified | Program | Repository orientation; records MI-001, MI-001A, and MI-001B FAIL, unchanged Nestfolio, and MI-001C as the sole selected contract-required evidence-recovery iteration |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact user actions after MI-001B FAIL: review/commit closure, preserve the supplied non-matching archive, and separately contract original MI-001 output-artifact evidence recovery |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -23,12 +23,13 @@ superseded_by: null
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
 | `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and prepared MI-001 execution boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence, MI-001 and MI-001A FAIL, the sole-file candidate mismatch, and the bounded MI-001B restoration position |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence, MI-001 through MI-001B FAIL, the invalid candidate, the provenance-gate stop, and the bounded MI-001C evidence-recovery position |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
 | `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md` | Validated | Implementation | Canonical MI-001A report: genuine executor provenance, candidate identity mismatch, unconditional FAIL, retained-candidate identity drift root cause, and MI-001B selection |
-| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 and MI-001A FAIL preserved, MI-001B contract authored as sole authorized-not-started iteration, invocation and later work blocked |
+| `docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md` | Validated | Implementation | Canonical MI-001B report: repository bindings, supplied-archive metadata, original-output provenance failure, pre-installation stop, unchanged Nestfolio, unconditional FAIL, and MI-001C selection |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001B FAIL preserved, Nestfolio unchanged, MI-001C selected-contract-required, invocation and later work blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -88,7 +89,7 @@ superseded_by: null
 | `sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml` | Validated | Session | Original MI-001A contract preserved with appended unconditional FAIL closure, candidate-mismatch evidence, executor provenance, and MI-001B selection |
 | `sessions/MI-001A-genuine-claude-code-invocation-confirmation/prompt.md` | Ratified | Session | Preserved executable MI-001A instruction with exact candidate binding, real-executor requirement, conjunctive verdict, and prohibited expansion |
 | `sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md` | Validated | Session | Completed MI-001A FAIL handoff with revision bindings, genuine Session provenance, mismatch evidence, root cause, manifests, and MI-001B continuation |
-| `sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml` | Ratified | Session | Active MI-001B execution contract: exact revision and candidate bindings, original-artifact provenance gate, byte-exact single-file restoration, immutable lock, verification, verdict, and closure rules |
+| `sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml` | Validated | Session | Original MI-001B contract preserved with appended unconditional FAIL closure, supplied-archive identity, provenance failure, pre-installation stop, and MI-001C selection |
 | `sessions/MI-001B-retained-level-1-candidate-identity-restoration/prompt.md` | Ratified | Session | Preserved executable MI-001B instruction; prohibits reconstruction, invocation, lock changes, C1/C3 claims, and broader modification |
-| `sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md` | Draft | Session | Unused non-evidentiary placeholder to be replaced only after MI-001B execution and unconditional verdict |
+| `sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md` | Validated | Session | Completed MI-001B FAIL handoff with revision bindings, supplied-archive provenance result, verification disposition, unchanged Nestfolio, manifests, and MI-001C continuation |
 | `sessions/MI-001B-retained-level-1-candidate-identity-restoration/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001B contract-authoring operation |

@@ -2,7 +2,7 @@
 artifact_id: LAB-README
 status: ratified
 owner: program
-last_updated: 2026-07-14
+last_updated: 2026-07-15
 supersedes: []
 superseded_by: null
 ---
@@ -19,13 +19,15 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 
 **MI-001A — Genuine Claude Code Invocation Confirmation completed with unconditional FAIL.** Scenario A stopped before delegation because the committed Nestfolio candidate omitted the intended modified `.claude/skills/backlog-next/SKILL.md`; 18 of 19 locked assets verified, the unchanged lock remained coherent, the Level 1 boundary failed closed with `ASSET_DIGEST_MISMATCH`, `/backlog-next` was not invoked, and Scenario B was not executed.
 
-## Sole authorized execution iteration
+**MI-001B — Retained Level 1 Candidate Identity Restoration completed with unconditional FAIL.** The only supplied archive was the continuity-lab source archive for `47f89495ced69f464724c52967d077679cdec78a`, not the original modified Nestfolio output returned by MI-001. It contained none of the required 15 Nestfolio manifest entries and no `SKILL.md`; execution stopped before extraction or installation and Nestfolio remained unchanged.
 
-The **MI-001B — Retained Level 1 Candidate Identity Restoration** contract is authored. MI-001B has status `authorized-not-started`, result pending, and has not executed.
+## Sole selected next iteration
 
-Its only permitted implementation purpose is byte-exact restoration of `.claude/skills/backlog-next/SKILL.md` from the proven preserved original MI-001 implementation artifact. Reconstruction, lock modification, invocation, C1/C3 claims, and broader changes are prohibited. Execution is effective only from a clean user-reviewed commit containing the exact contract.
+**MI-001C — Original MI-001 Output Artifact Evidence Recovery** is selected with status `selected-contract-required`. It is not contracted, authorized, or executed.
 
-MI-002 through MI-007, genuine invocation confirmation, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
+Its only permitted purpose is to locate and prove the unmodified original MI-001 modified Nestfolio output artifact, or a byte-identical preserved copy with a provable delivery chain. It may not reconstruct, edit, install, or invoke the Skill.
+
+MI-002 through MI-007, genuine invocation confirmation, candidate reconstruction, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
 
 ## Canonical starting points
 
@@ -37,7 +39,8 @@ MI-002 through MI-007, genuine invocation confirmation, broader implementation, 
 - Migration: `docs/60-migration/migration-plan.md`
 - MI-001 report: `docs/70-implementation/mi-001-procedure-first-adoption.md`
 - MI-001A report: `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md`
-- MI-001B contract: `sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml`
+- MI-001B report: `docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md`
+- MI-001B completed contract: `sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
