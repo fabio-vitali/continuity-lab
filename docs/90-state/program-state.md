@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-001C — Original MI-001 Output Artifact Evidence Recovery is complete with UNCONDITIONAL FAIL. The bounded sources contained neither the directly verifiable canonical input archive nor the original MI-001 output or a proven byte-identical preserved copy. The only Git ZIP was an unrelated Nestfolio integration fixture, while a zero-byte non-archive file restored under `output/MI-001C` after execution start could not be pre-existing delivery evidence. MI-001D — Retained Level 1 Candidate Deliberate Supersession is the sole authorized execution iteration with status `authorized-not-started`; it has no execution instruction, has not executed, and its result is pending.**
+**MI-001D — Retained Level 1 Candidate Deliberate Supersession is complete with UNCONDITIONAL PASS. The invalid retained 1.0.0 identity was independently reproduced and deliberately superseded by one newly authored active `nestfolio.level-1@1.0.1` / `nestfolio.backlog-next@1.0.1` candidate. All 19 assets and the fresh aggregate lock verify; diagnostics, tests, mandatory failures, isolated disable/re-enable, Level 2–6 absence, compatibility, scope, and byte-exact rollback pass. The new candidate is not recovered or reconstructed MI-001 output. MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation is the sole selected next iteration with status `selected-contract-required`; it is not contracted, authorized, or executed.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -21,7 +21,7 @@ MI-001A executed Scenario A from the committed contract revision with a genuine 
 
 MI-001B executed from the reviewed contract revision and failed at the original-artifact provenance gate. The supplied archive SHA-256 was `0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb`; its ZIP comment was continuity-lab revision `47f89495ced69f464724c52967d077679cdec78a`, and its 115 entries contained 0 of the 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`. Nothing was extracted or installed, no Nestfolio evidence was created, and restoration was not applicable.
 
-MI-002 through MI-007 and all broader work remain blocked. No genuine invocation confirmation or original-output reconstruction or recovery claim is authorized. MI-001D execution may begin only from the exact clean committed and pushed authorization revision after a separate explicit user execution instruction; no such instruction exists yet, so no Nestfolio inspection or mutation may occur.
+MI-002 through MI-007 and all broader work remain blocked. No genuine invocation confirmation or original-output reconstruction or recovery claim is authorized. MI-001E requires a separate reviewed contract and explicit authorization before execution.
 
 ## Gate history and current validity
 
@@ -80,7 +80,7 @@ MI-001 C2, C4, C5, C6, and C7 remain preserved factually as MI-001 execution res
 
 Canonical report: `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md`.
 
-## Retained implementation candidate — identity invalid
+## Retained implementation candidate 1.0.0 — historically invalid
 
 The retained MI-001 candidate identity expected in Nestfolio is:
 
@@ -95,7 +95,7 @@ aggregate lock digest: 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d
 delivered activation state: active
 ```
 
-**The committed candidate is invalid.** Nestfolio commit `b7d597ac` applied only 14 of the 15 canonical MI-001 manifest entries: the intended modification to `.claude/skills/backlog-next/SKILL.md` was never committed. The delivered `SKILL.md` is byte-identical to the MI-001 recorded source revision `3aa8f4773955541415f615abd80a0a9702bcb416`; the Pack lock and all identity records are internally consistent and untampered and expect the modified file. Every Level 1 entry path correctly fails closed with `ASSET_DIGEST_MISMATCH` until MI-001B restores the candidate identity, or a later separately authorized iteration supersedes it.
+**The committed historical candidate is invalid.** Nestfolio commit `b7d597ac` applied only 14 of the 15 canonical MI-001 manifest entries: the intended modification to `.claude/skills/backlog-next/SKILL.md` was never committed. The delivered `SKILL.md` is byte-identical to the MI-001 recorded source revision `3aa8f4773955541415f615abd80a0a9702bcb416`; the Pack lock and all identity records are internally consistent and untampered and expect the modified file. At the pre-MI-001D start revision, every Level 1 entry path correctly failed closed with `ASSET_DIGEST_MISMATCH`. MI-001D later superseded, but did not repair or relabel, this identity.
 
 The MI-001 recorded source revision remains `3aa8f4773955541415f615abd80a0a9702bcb416`, with input archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`.
 
@@ -160,22 +160,54 @@ Execution facts:
 
 Canonical report: `docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md`.
 
-## Sole selected next iteration
+## MI-001D result
 
 ### MI-001D — Retained Level 1 Candidate Deliberate Supersession
 
 Status:
 
 ```text
-authorized-not-started
-contract reviewed and approved
-result pending
-no execution instruction
+complete
+unconditional PASS
+new active 1.0.1 candidate
+19 of 19 assets verified
+no invocation
+no recovery claim
+```
+
+Execution facts:
+
+- continuity-lab authorization revision: `f58d482b73a545b34f5f0cd100a5204bb0419a8f`;
+- Nestfolio start revision: `63ad0b2da2dfb2192d24e73a9224b65654deadb7`;
+- Nestfolio post-review published revision: `c7f9ceaf79d1703769d8175774268924119042f6`;
+- new Pack/Procedure: `nestfolio.level-1@1.0.1` / `nestfolio.backlog-next@1.0.1`;
+- new Skill: SHA-256 `e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1`, 34126 bytes;
+- 19 of 19 assets verify; aggregate lock digest `376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4`;
+- diagnostics ready; Level 1 tests 14/14; backlog-next baseline/final 68/68;
+- every mandatory failure, isolated disable/re-enable, and byte-exact rollback passed;
+- activation ends active; Levels 2–6 remain absent;
+- no Skill, Claude Code, `/backlog-next`, or `continuity:invoke` ran;
+- no MI-001 recovery or reconstruction claim was made.
+
+Canonical report: `docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md`.
+
+## Sole selected next iteration
+
+### MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation
+
+Status:
+
+```text
+selected-contract-required
+not contracted
+not authorized
 not executed
 sole selected next iteration
 ```
 
-MI-001D is governed by the reviewed contract under `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/`. It deliberately defines a new version-distinct candidate rather than recovering or reconstructing the unavailable MI-001 output. The contract forbids Skill execution and invocation. Authorization does not itself start execution; a separate explicit user instruction is still required.
+MI-001E may receive a separately reviewed contract for genuine invocation
+confirmation of the new 1.0.1 candidate. This selection does not authorize it
+and does not authorize MI-002.
 
 ## Iteration queue
 
@@ -192,17 +224,18 @@ MI-001D is governed by the reviewed contract under `sessions/MI-001D-retained-le
 11. MI-001A — complete; unconditional FAIL; retained-candidate identity drift identified
 12. MI-001B — complete; unconditional FAIL; original-output provenance failed before extraction or installation; Nestfolio unchanged
 13. MI-001C — complete; unconditional FAIL; no directly verified input archive, admissible output, or delivery chain; Nestfolio unchanged
-14. MI-001D — authorized-not-started; contract reviewed and approved; result pending; no execution instruction
-15. MI-002 through MI-007 — blocked
-16. broader implementation and unrelated migration — blocked
+14. MI-001D — complete; unconditional PASS; deliberate 1.0.1 supersession verified without invocation or recovery claim
+15. MI-001E — selected-contract-required; not contracted, authorized, or executed
+16. MI-002 through MI-007 — blocked
+17. broader implementation and unrelated migration — blocked
 
 ## Active blockers
 
-- The committed Nestfolio candidate identity is invalid: the delivered `SKILL.md` does not match the Pack lock; every Level 1 entry path fails closed with `ASSET_DIGEST_MISMATCH`.
+- The retained historical Nestfolio 1.0.0 candidate identity remains invalid; MI-001D did not relabel or repair it.
 - MI-001B proved that the supplied archive is a continuity-lab source archive, not the original modified Nestfolio output; the required output artifact and exact recoverable bytes remain unavailable.
 - MI-001C found no admissible original output or proven preserved copy and could not directly verify the canonical input archive.
-- MI-001D is authorized-not-started but has no separate execution instruction and has not executed.
-- No candidate reconstruction, genuine invocation confirmation, `/backlog-next` invocation, or `continuity:invoke` command is authorized.
+- MI-001E is selected-contract-required but has no reviewed contract, authorization, or execution.
+- No genuine invocation confirmation, `/backlog-next` invocation, or `continuity:invoke` command is authorized.
 - MI-002 through MI-007 remain blocked until the Level 1 evidence obligation is closed and Program State explicitly selects one next iteration.
 - No Level 2 reusable composition, Work, Context, Run, Assurance, or Learning machinery is authorized.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
@@ -231,8 +264,10 @@ MI-001D is governed by the reviewed contract under `sessions/MI-001D-retained-le
 - MI-001C completed contract: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml`
 - MI-001C executable prompt: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md`
 - MI-001C handoff: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md`
-- MI-001D authorized-not-started contract: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml`
+- MI-001D completed contract: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml`
 - MI-001D preserved future executable prompt: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/prompt.md`
-- MI-001D unused handoff placeholder: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md`
+- MI-001D completed handoff: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md`
+- MI-001D report: `docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md`
+- MI-001D Nestfolio evidence: `continuity/evidence/mi-001d/**` at published Nestfolio revision `c7f9ceaf79d1703769d8175774268924119042f6`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file

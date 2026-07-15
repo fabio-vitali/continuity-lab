@@ -328,3 +328,76 @@ required_outputs:
   - exact continuity-lab and Nestfolio changed-file manifests
   - complete repository ZIP deliverables under continuity-workspace/output/MI-001D
   - exactly one selected contract-required next iteration
+
+execution_closure:
+  executed_on: 2026-07-15
+  execution_started_utc: "2026-07-15T10:05:40Z"
+  unconditional_result: PASS
+  verdict_label: "MI-001D UNCONDITIONAL PASS"
+  repository_bindings:
+    continuity_lab_authorization_revision: f58d482b73a545b34f5f0cd100a5204bb0419a8f
+    continuity_lab_branch: main
+    continuity_lab_head_main_upstream_origin_identical_at_start: true
+    nestfolio_start_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    nestfolio_branch: main
+    nestfolio_head_main_upstream_origin_identical_and_clean_at_start: true
+    nestfolio_post_review_published_revision: c7f9ceaf79d1703769d8175774268924119042f6
+    nestfolio_post_review_head_main_upstream_origin_identical_and_clean: true
+  retained_identity:
+    pack: nestfolio.level-1@1.0.0
+    procedure: nestfolio.backlog-next@1.0.0
+    verified_assets: 18 of 19
+    sole_mismatch: .claude/skills/backlog-next/SKILL.md
+    recorded_and_recomputed_aggregate: 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602
+    boundary_result: ASSET_DIGEST_MISMATCH
+    remains_historically_invalid: true
+  superseding_identity:
+    pack: nestfolio.level-1@1.0.1
+    procedure: nestfolio.backlog-next@1.0.1
+    entry_point: /backlog-next
+    behavior_authority: .claude/skills/backlog-next/**
+    asset_count: 19
+    verified_assets: 19 of 19
+    skill_sha256: e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1
+    skill_bytes: 34126
+    aggregate_lock_digest: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+    activation: active
+    guarantee_level: 1
+    newly_authored_not_recovered: true
+  validation:
+    doctor_inspect_verify: PASS
+    level_1_tests: 14 of 14 PASS
+    backlog_next_baseline: 68 of 68 PASS
+    backlog_next_final: 68 of 68 PASS
+    mandatory_failure_fixtures: 13 of 13 PASS
+    isolated_disable_reenable: PASS
+    isolated_byte_exact_rollback: PASS
+    protected_paths_restored_in_rollback_fixture: 33 of 33
+    level_2_to_6_absence: PASS
+    final_scope: PASS
+  prohibited_actions:
+    skill_or_claude_code_execution: false
+    backlog_next_invocation: false
+    continuity_invoke: false
+    original_output_reconstruction_or_recovery_claim: false
+    dependency_installation: false
+    commit_or_push: false
+    mi002_authorization: false
+  post_review_publication:
+    separately_authorized: true
+    nestfolio_commit: c7f9ceaf79d1703769d8175774268924119042f6
+    nestfolio_pushed_to_origin_main: true
+    changes_execution_verdict: false
+  implementation_report: docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+  nestfolio_evidence: continuity/evidence/mi-001d/**
+  selected_next_iteration:
+    id: MI-001E
+    name: Superseding Candidate Genuine Claude Code Invocation Confirmation
+    status: selected-contract-required
+    contracted: false
+    authorized: false
+    executed: false
+  blocked:
+    - MI-001E execution until a separate reviewed contract and authorization
+    - MI-002 through MI-007
+    - all broader implementation and migration

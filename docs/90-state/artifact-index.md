@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; records MI-001 through MI-001C FAIL, unchanged Nestfolio, and the authorized-not-started MI-001D contract |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact post-authorization handoff: verify the pushed contract revision, then require a separate explicit MI-001D execution instruction |
+| `README.md` | Ratified | Program | Repository orientation; preserves MI-001 through MI-001C FAIL, records MI-001D PASS, and names uncontracted MI-001E as the sole selected iteration |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact post-MI-001D handoff: preserve both uncommitted working trees and require a separate reviewed MI-001E contract |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -30,7 +30,8 @@ superseded_by: null
 | `docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md` | Validated | Implementation | Canonical MI-001A report: genuine executor provenance, candidate identity mismatch, unconditional FAIL, retained-candidate identity drift root cause, and MI-001B selection |
 | `docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md` | Validated | Implementation | Canonical MI-001B report: repository bindings, supplied-archive metadata, original-output provenance failure, pre-installation stop, unchanged Nestfolio, unconditional FAIL, and MI-001C selection |
 | `docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md` | Validated | Implementation | Canonical MI-001C report: authorization, full bounded ledger, absent input/output and delivery chain, recorded deviations, unchanged Nestfolio, unconditional FAIL, and MI-001D selection |
-| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001C FAIL preserved, Nestfolio unchanged, MI-001D authorized-not-started without an execution instruction, invocation and later work blocked |
+| `docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md` | Validated | Implementation | Canonical MI-001D report: deliberate new 1.0.1 identity, 19-asset lock, diagnostics/tests/failure/rollback evidence, unconditional PASS, and MI-001E selection |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001C FAIL preserved, MI-001D PASS, MI-001E selected-contract-required, invocation and later work blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -98,7 +99,7 @@ superseded_by: null
 | `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md` | Ratified | Session | Complete executable MI-001C instruction with exact evidence roots, Git-read boundaries, provenance rules, prohibited mutations, and closure requirements |
 | `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md` | Validated | Session | Completed MI-001C FAIL handoff with repository/input bindings, full candidate ledger, no delivery chain, non-executed delta/Skill checks, deviations, unchanged Nestfolio, manifest, and MI-001D continuation |
 | `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001C contract-authoring operation |
-| `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml` | Ratified | Session | Reviewed authorized-not-started MI-001D contract for a new version-distinct Level 1 candidate; explicitly forbids original-output reconstruction or recovery claims, invocation, and MI-002 authorization |
+| `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml` | Validated | Session | Original reviewed MI-001D authorization preserved with appended PASS closure, new 1.0.1 identity, validation results, and MI-001E selection |
 | `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/prompt.md` | Ratified | Session | Preserved MI-001D execution instruction; usable only from the exact clean committed and pushed authorization revision after separate explicit user execution authorization |
-| `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md` | Draft | Session | Non-evidentiary placeholder confirming MI-001D is authorized-not-started without an execution instruction, unexecuted, and without result |
+| `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md` | Validated | Session | Completed MI-001D PASS handoff with repository bindings, retained defect, new identity, validation, ZIP, blockers, and MI-001E continuation |
 | `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001D contract-authoring and authorization operation |

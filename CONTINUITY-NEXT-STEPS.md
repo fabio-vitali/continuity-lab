@@ -1,60 +1,53 @@
-# Continuity — MI-001D Authorized Contract Handoff
+# Continuity — MI-001D PASS Handoff
 
 ## Current state
 
-- MI-001, MI-001A, MI-001B, and MI-001C remain complete with **UNCONDITIONAL FAIL**.
-- MI-001 C2, C4, C5, C6, and C7 remain historical execution facts only.
-- No original MI-001 output or proven byte-identical preserved copy was recovered.
-- Nestfolio remains canonically bound as unchanged at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`.
-- MI-001D is the sole authorized execution iteration with status `authorized-not-started` and result pending.
-- The MI-001D contract is reviewed and approved, but there is no execution instruction and MI-001D has not started.
-- The earlier review ZIP is not proof of the canonical authorization commit or execution approval.
+- MI-001, MI-001A, MI-001B, and MI-001C remain complete with
+  **UNCONDITIONAL FAIL**.
+- MI-001D is complete with **UNCONDITIONAL PASS**.
+- Nestfolio contains one new active `nestfolio.level-1@1.0.1` /
+  `nestfolio.backlog-next@1.0.1` candidate, committed and pushed at
+  `c7f9ceaf79d1703769d8175774268924119042f6`.
+- The candidate is newly authored after MI-001C and is not recovered,
+  restored, or reconstructed MI-001 output.
+- All 19 assets, the aggregate lock, diagnostics, tests, mandatory failures,
+  isolated disable/re-enable, and byte-exact rollback passed.
+- No Skill, Claude Code, `/backlog-next`, or `continuity:invoke` ran.
+- The reviewed MI-001D implementation and canonical closure are committed and
+  pushed on their respective `main` branches.
 
-## Verify the authorization commit after push
+## Sole selected next iteration
 
-From `continuity-lab`, run:
+**MI-001E — Superseding Candidate Genuine Claude Code Invocation
+Confirmation** has status `selected-contract-required`.
+
+MI-001E is not contracted, authorized, or executed. A fresh operation must
+author and review its contract from the final committed MI-001D closure before
+any execution instruction may be considered.
+
+Do not infer execution authorization from MI-001D PASS, the committed
+revisions, the repository ZIPs, or this handoff.
+
+## Preserve the published baselines
+
+Before any fresh operation, verify both repositories remain clean and aligned:
 
 ```bash
-git status --short
-git branch --show-current
-git rev-parse HEAD
-git rev-parse '@{upstream}'
-git rev-parse refs/remotes/origin/main
+git -C /Users/fabiovitali/WebstormProjects/nestfolio status --short --branch
+git -C /Users/fabiovitali/WebstormProjects/continuity-lab status --short --branch
 ```
 
-Require:
-
-- empty `git status --short`;
-- branch `main`;
-- identical full revisions for HEAD, upstream, and `origin/main`;
-- the commit contains exactly the nine paths in
-  `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/changed-files.txt`;
-- the committed Context Pack records `authorized-not-started` and `result: pending`;
-- Program State records no execution instruction and preserves all four FAIL results.
-
-## Separate instruction required to execute
-
-Do not execute MI-001D automatically after commit or push. When execution is
-intended, issue this exact separate instruction in a fresh session:
-
-> Execute MI-001D exactly from the committed authorized contract. Read Program
-> State first. Verify the clean pushed continuity-lab authorization revision and
-> all repository bindings before inspecting or modifying Nestfolio. Do not
-> reconstruct or claim recovery of the original MI-001 output. Do not execute
-> any Skill, Claude Code, /backlog-next, or continuity:invoke. Do not authorize
-> MI-002. Do not commit or push without separate authorization.
-
-Until that instruction is issued, do not inspect or modify Nestfolio and do not
-start any MI-001D command.
+Do not alter either repository without a fresh reviewed contract and explicit
+authorization. The external PASS archives are under
+`/Users/fabiovitali/WebstormProjects/continuity-workspace/output/MI-001D/`.
 
 ## Work that remains blocked
 
-- original MI-001 output reconstruction, approximation, or recovery claims;
-- MI-001D execution until the separate instruction above;
+- MI-001E contract execution until separate review and authorization;
 - Claude Code, `/backlog-next`, `continuity:invoke`, and Skill execution;
-- genuine invocation confirmation;
+- original MI-001 output reconstruction, approximation, or recovery claims;
 - MI-002 through MI-007 and broader migration;
-- Level 2-6 state or guarantees;
+- Level 2–6 state or guarantees;
 - Console, hosted services, universal integrations, RBAC, analytics, billing,
   commercial packaging, and commercial control plane;
 - broad or unrelated Nestfolio changes;
