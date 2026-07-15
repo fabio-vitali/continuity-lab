@@ -1,0 +1,312 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-15
+  reviewed_on: 2026-07-15
+  finalized_on: 2026-07-15
+  contract_authorized: true
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  result: pending
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+    - docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
+    - sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/context-pack.yaml
+    - sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md
+  authorization_rule: >
+    This finalized contract is authorized-not-started, but publication and
+    contract authorization are not execution instructions. Execution may begin
+    only after Git metadata proves continuity-lab clean and pushed at the exact
+    final commit containing this contract and Nestfolio clean and pushed at the
+    exact bound revision, followed by a separate explicit user instruction.
+
+iteration:
+  id: MI-001E-R1
+  name: Superseding Candidate Genuine Claude Code Invocation Confirmation Correction
+  type: bounded-evidence-correction
+  status: authorized-not-started
+
+objective:
+  primary_question: >
+    Can two fresh genuine Claude Code Sessions close the exact MI-001E evidence
+    gaps by machine-capturing both process intervals and returning normal
+    visible /backlog-next --auto results, including direct current behavior
+    while Level 1 is disabled, without changing the immutable 1.0.1 candidate,
+    executing selected repository work, or creating Level 2-6 state?
+  correction_only: true
+
+canonical_inputs:
+  - docs/90-state/program-state.md
+  - CONTINUITY-NEXT-STEPS.md
+  - docs/00-governance/product-development-operating-model.md
+  - docs/00-governance/artifact-governance.md
+  - docs/00-governance/design-levels.md
+  - docs/60-migration/migration-plan.md
+  - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+  - docs/70-implementation/mi-001-procedure-first-adoption.md
+  - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+  - docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+  - docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
+  - sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/context-pack.yaml
+  - sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md
+
+publication_bindings:
+  continuity_lab:
+    required_branch: main
+    authorization_revision: exact-final-committed-and-pushed-contract-revision
+    rule: >
+      Execution requires clean HEAD, local main, upstream, origin/main, and
+      remote main to identify one exact reviewed committed and pushed revision
+      containing the completed MI-001E closure and final MI-001E-R1 contract.
+  nestfolio:
+    required_branch: main
+    mi001e_parent_revision: c7f9ceaf79d1703769d8175774268924119042f6
+    execution_revision: c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a
+    publication_delta: continuity/evidence/mi-001e/** only
+    rule: >
+      The exact clean pushed execution revision must descend from the immutable
+      MI-001D revision and may add only reviewed MI-001E deterministic evidence.
+      The full revision is inserted and reviewed in this finalized contract.
+  unresolved_binding_blocks_execution: false
+
+immutable_candidate:
+  pack: nestfolio.level-1@1.0.1
+  procedure: nestfolio.backlog-next@1.0.1
+  entry_point: /backlog-next
+  bounded_arguments: --auto
+  behavior_authority: .claude/skills/backlog-next/**
+  asset_count: 19
+  lock_algorithm: SHA-256
+  skill_sha256: e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1
+  skill_bytes: 34126
+  aggregate_lock_digest: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+  start_and_final_activation: active
+  provenance: newly authored MI-001D 1.0.1 candidate; not recovered or reconstructed MI-001 output
+  mutation_prohibited: true
+
+mi001e_failure_to_correct:
+  scenario_a_provenance_gap: exact Claude Code process-start UTC was not machine-captured
+  scenario_b_behavior_gap: >
+    The genuine direct Skill invocation occurred while the tracked activation
+    and already-written MI-001E evidence made the repository non-clean, so the
+    Skill's current clean-tree preflight stopped before a normal result.
+  preserved_facts:
+    - MI-001E C1, C2, C4, C5, C6, and C7 PASS remain historical facts
+    - MI-001E C3 FAIL and unconditional FAIL remain immutable history
+    - exact active 1.0.1 and all protected bytes were restored
+    - no selected backlog task or repository work was executed
+
+correction_design:
+  evidence_spool:
+    location: temporary directory outside both repositories
+    rule: >
+      Capture all R1 evidence outside both repositories until both genuine
+      Sessions end and active 1.0.1 plus exact Git-index metadata are restored.
+      No continuity/evidence/mi-001e-r1 path may exist during either Skill
+      invocation. Validate, deterministically serialize, copy only the permitted
+      JSON files into Nestfolio after restoration, then delete and verify absence
+      of the temporary spool.
+  exact_session_timing:
+    rule: >
+      A machine wrapper must write the UTC start immediately before launching
+      each Claude Code process, obtain the genuine Session identity without
+      transcript dependence, write UTC end and exit immediately after process
+      termination, and bind those fields to the bounded result record. A null,
+      inferred, rounded, reconstructed, or merely bounded start is FAIL.
+  disabled_clean_state_containment:
+    permitted_git_metadata_operation: >
+      Temporarily set the skip-worktree bit only for
+      continuity/level-1/activation.json after the exact disable and disabled
+      boundary probe, solely so current Skill clean-tree preflight does not
+      classify the authorized Level 1 control-file mutation as repository work.
+    exact_commands:
+      set: git update-index --skip-worktree continuity/level-1/activation.json
+      clear: git update-index --no-skip-worktree continuity/level-1/activation.json
+    mandatory_proofs:
+      - start index flags and index-file SHA-256 captured before mutation
+      - activation bytes independently prove disabled while the bit is set
+      - HEAD and every tracked content byte remain unchanged
+      - git status is clean before Session B because evidence remains external and only the authorized activation path is hidden
+      - no other assume-unchanged or skip-worktree flag changes
+      - bit cleared immediately after Session B and before activation restore
+      - final index flags equal start exactly and final Git status is clean before evidence publication
+      - final active activation bytes equal start exactly
+    fail_closed: >
+      If the single-path containment does not produce these exact conditions,
+      clear the bit, restore active activation, verify start-equivalent index
+      flags and bytes, issue unconditional FAIL, and do not start Session B.
+    authority_boundary: >
+      This is an execution-harness metadata containment only. It does not change
+      the Skill, its clean-tree rule, the candidate, tracked Git history, or
+      repository-work semantics, and it grants no permission to execute work.
+
+genuine_executor_contract:
+  executor: installed and already authenticated Claude Code
+  sessions: exactly 2
+  session_a: fresh process in exact Nestfolio working directory
+  session_b: separately started fresh process with no A resume or transcript dependency
+  allowed_skill_invocations:
+    - Session A: exactly /backlog-next --auto after active Level 1 delegation
+    - Session B: exactly /backlog-next --auto directly while activation is disabled and containment is active
+  prohibited_substitutes:
+    - mock, simulation, adapter-only, shell-only, or Node-only evidence
+    - fabricated or manually reconstructed timing or Session identity
+    - raw transcript, hidden prompt, chat history, or provider cache as authority
+  executor_drift_rule: >
+    Capture binary, digest, version, authentication readiness, model when
+    observable, and startup source before both Sessions. Any automatic or
+    explicit executor version/binary drift between Sessions is unconditional
+    FAIL; do not update, downgrade, or repair the executor inside R1.
+
+scenario_a:
+  - require exact clean published Nestfolio start and active exact 1.0.1
+  - start the timing wrapper before the genuine Claude Code process
+  - in Session A run exactly npm run -s continuity:invoke -- -- --auto
+  - require ready delegation to exactly /backlog-next --auto
+  - in the same Session invoke exactly /backlog-next --auto
+  - capture the normal visible bounded result without adopting or executing it
+  - terminate Session A and capture exact end, exit, and distinct Session identity
+
+scenario_b:
+  - require no in-repository R1 evidence and unchanged protected bytes
+  - run exactly npm run -s continuity:disable
+  - run the single probe npm run -s continuity:invoke -- -- --auto and require LEVEL1_DISABLED
+  - apply and prove the single-path disabled clean-state containment
+  - start a distinct timing wrapper before fresh genuine Claude Code Session B
+  - invoke exactly /backlog-next --auto directly
+  - capture the normal visible bounded result without adopting or executing it
+  - terminate Session B and capture exact end, exit, and distinct Session identity
+  - clear and verify the index containment before running npm run -s continuity:activate
+  - restore exact active 1.0.1 and rerun all required verification
+
+criteria:
+  C1: >
+    PASS only when genuine Session A has an exact machine-captured process
+    interval, traverses the active exact 1.0.1 boundary, invokes the Skill, and
+    returns its normal visible bounded result.
+  C2: All 19 assets and the aggregate lock independently match the immutable candidate before and after.
+  C3: >
+    PASS only when fresh genuine Session B has an exact machine-captured process
+    interval, directly invokes the current Skill while Level 1 activation is
+    disabled under the exact single-path containment, and returns its normal
+    visible bounded result.
+  C4: No Level 2-6 state, guarantee, or canonical repository-work completion is created or claimed.
+  C5: Current content, checks, Skill behavior, diagnostics, and test parity remain unchanged.
+  C6: Procedure, Pack, binding, lock, activation, executor, containment, and behavior authority remain observable and unambiguous.
+  C7: Disable, containment, restoration, and failure handling preserve exact protected bytes, index flags, and Git history.
+
+required_verification:
+  before_and_after:
+    - exact repository bindings and clean pushed revisions
+    - all 19 asset digests, byte sizes, count, and aggregate lock digest
+    - activation bytes and protected tracked-file manifest
+    - Git index-file digest and every assume-unchanged or skip-worktree flag
+    - continuity:doctor, continuity:inspect, and continuity:verify
+    - Level 1 test suite, expected 14/14
+    - backlog-next test suite, expected 68/68
+    - explicit Level 2-6 absence
+  recovery_copy: >
+    Create a verified byte-exact protected-path, activation, and Git-index
+    recovery copy outside both repositories before any mutation. Use it only for
+    exact failure containment, never for implementation repair. Delete and prove
+    absence after restoration.
+
+permitted_nestfolio_scope:
+  temporary_and_must_restore_exactly:
+    - continuity/level-1/activation.json
+    - the skip-worktree bit for continuity/level-1/activation.json
+  create_after_both_sessions_and_restoration_only:
+    - continuity/evidence/mi-001e-r1/00-preflight-provenance.json
+    - continuity/evidence/mi-001e-r1/01-candidate-and-index-verification.json
+    - continuity/evidence/mi-001e-r1/02-protected-path-hashes-before.json
+    - continuity/evidence/mi-001e-r1/03-scenario-a.json
+    - continuity/evidence/mi-001e-r1/04-scenario-b.json
+    - continuity/evidence/mi-001e-r1/05-protected-path-hashes-after.json
+    - continuity/evidence/mi-001e-r1/06-final-verdict.json
+    - continuity/evidence/mi-001e-r1/commands/*.json
+  final_scope_rule: >
+    Final Nestfolio changes may contain only new deterministic MI-001E-R1 JSON
+    evidence. MI-001E evidence is immutable input. Every other tracked and
+    untracked byte and every Git-index flag must equal the exact start state.
+
+prohibited_actions:
+  - modify, repair, redesign, relock, reversion, or upgrade the 1.0.1 candidate
+  - weaken, edit, bypass in code, or misrepresent the Skill clean-tree preflight
+  - use assume-unchanged, skip-worktree, or another Git visibility mechanism for any path except the one exact temporary activation containment
+  - create R1 evidence inside Nestfolio before both Sessions end and restoration completes
+  - invoke any Skill other than the two exact contracted /backlog-next --auto invocations
+  - execute, adopt, edit, complete, or otherwise act on a selected backlog item
+  - run continuity:invoke outside Scenario A and the one disabled Scenario B probe
+  - use more than two Claude Code Sessions or resume Session A for Session B
+  - reconstruct, approximate, infer, install, or claim recovery of MI-001 output
+  - install packages or modify any dependency lock
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during execution
+  - modify MI-001E evidence or any Nestfolio path outside the permitted scope
+  - create Level 2-6 state or guarantees
+  - select or authorize MI-002 inside R1 unless the final PASS rule explicitly permits selection only
+
+evidence_rules:
+  format: deterministic JSON
+  required:
+    - exact commands in order with UTC start/end, exit, and bounded stdout/stderr
+    - two exact non-null machine-captured Claude process intervals and distinct genuine Session identities
+    - normal visible bounded Skill result from each Session
+    - exact activation, index-flag, protected-manifest, lock, diagnostics, and test evidence
+    - external spool and recovery-copy manifests plus deletion proof
+    - exact final changed-file manifests and repository ZIP identities
+  exclude:
+    - credentials, tokens, secrets, authentication identities, and unrelated environment content
+    - raw transcripts, full prompts, hidden state, provider cache, and unrelated repository content
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  pass_rule: >
+    Issue MI-001E-R1 UNCONDITIONAL PASS only if all publication and execution
+    authorization bindings pass; both exact genuine Session intervals and
+    normal results are proven; C1-C7 pass; active 1.0.1, every protected byte,
+    and index flag are restored exactly; final scope is evidence-only; and no
+    prohibited action occurs.
+  fail_rule: >
+    Any missing, ambiguous, failed, skipped, reconstructed, drifted,
+    out-of-scope, or provenance-misrepresented required condition after valid
+    execution start is MI-001E-R1 UNCONDITIONAL FAIL. Restore exact start state
+    before closure; no partial or qualified PASS is permitted.
+  no_partial_credit: true
+
+permitted_execution_closure:
+  continuity_lab:
+    create:
+      - docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md
+    modify:
+      - sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/context-pack.yaml
+      - sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md
+      - docs/90-state/program-state.md
+      - docs/90-state/artifact-index.md
+      - docs/70-implementation/README.md
+      - README.md
+      - CONTINUITY-NEXT-STEPS.md
+  external_output:
+    - continuity-workspace/output/MI-001E-R1/continuity-lab-MI-001E-R1-<result>-<UTC timestamp>.zip
+    - continuity-workspace/output/MI-001E-R1/nestfolio-MI-001E-R1-<result>-<UTC timestamp>.zip
+  no_other_closure_write: true
+
+next_iteration_rule:
+  on_pass: >
+    Record that MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding
+    Level 1 candidate and corrected genuine-invocation evidence obligation.
+    Select only MI-002 as selected-contract-required if no unresolved Level 1
+    defect or authority contradiction remains. Selection is not authorization;
+    do not author, authorize, or execute MI-002 inside R1.
+  on_fail: >
+    Select only MI-001E-R2 as selected-contract-required unless an authorization
+    contradiction stopped before R1 validly started. Do not select MI-002.
+
+completion_criteria:
+  - finalized authorized-not-started correction contract with exact Nestfolio publication binding
+  - no execution instruction or execution
+  - no Nestfolio inspection or modification during contract authoring
+  - exact contract-authoring changed-file manifest
+  - non-canonical review ZIP outside both repositories

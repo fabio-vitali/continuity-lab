@@ -437,3 +437,60 @@ required_outputs:
   - exact continuity-lab and Nestfolio changed-file manifests
   - complete repository ZIP deliverables under continuity-workspace/output/MI-001E
   - exactly one selected contract-required next iteration
+
+execution_closure:
+  status: complete
+  result: MI-001E UNCONDITIONAL FAIL
+  executed_on: 2026-07-15
+  authorization_revision: 9a4fde998a290879138913da03ea9b69b86efbc5
+  nestfolio_revision: c7f9ceaf79d1703769d8175774268924119042f6
+  candidate:
+    pack: nestfolio.level-1@1.0.1
+    procedure: nestfolio.backlog-next@1.0.1
+    skill_sha256: e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1
+    skill_bytes: 34126
+    assets_verified: 19/19
+    aggregate_lock_digest: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+    final_activation: exact active 1.0.1
+  genuine_sessions:
+    scenario_a:
+      session_id: 7c8a48a1-9f31-4dad-b449-3fdbf5993e5a
+      result: active boundary and normal visible Skill result proven
+      start_utc: null
+      provenance_disposition: exact start UTC not captured; honest bounded interval retained
+    scenario_b:
+      session_id: f9a8e67b-7657-4e1b-9db0-6dbcc54ded5e
+      start_utc: 2026-07-15T12:12:17Z
+      end_utc: 2026-07-15T12:14:18Z
+      result: genuine direct Skill invocation stopped by current clean-tree preflight
+  criteria:
+    C1: PASS
+    C2: PASS
+    C3: FAIL
+    C4: PASS
+    C5: PASS
+    C6: PASS
+    C7: PASS
+  fail_reasons:
+    - Scenario B returned no normal visible result after its genuine direct invocation.
+    - Exact Session A start UTC was not machine-captured.
+  preservation:
+    protected_bytes: exact before/after match
+    level1_tests: 14/14
+    backlog_next_tests: 68/68
+    recovery_copy: verified, unused, deleted, and absence verified
+    final_nestfolio_changes: continuity/evidence/mi-001e/** only
+    level_2_to_6: absent
+  prohibited_action_disposition: none occurred
+  canonical_report: docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
+  canonical_evidence: continuity/evidence/mi-001e/**
+  selected_next_iteration:
+    id: MI-001E-R1
+    title: Superseding Candidate Genuine Claude Code Invocation Confirmation Correction
+    status: selected-contract-required
+    authorized: false
+    executed: false
+  mi_002:
+    selected: false
+    authorized: false
+    executed: false
