@@ -53,4 +53,13 @@ MI-001C closed without finding a directly verified canonical input archive, an a
 
 **MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** is complete with UNCONDITIONAL PASS. Exact-timed Sessions A and B returned normal bounded results; the disabled Scenario B used only the activation-file `skip-worktree` containment, and exact active 1.0.1 plus Git-index metadata were restored. MI-001D, MI-001E, and MI-001E-R1 jointly close the Level 1 obligation.
 
-**MI-002 — Reusable Pack Composition** retains its exact active lock aggregate `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26` and original 23/23 execution condition. MI-002-R1 remains one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation. MI-002-R2 is published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6` after exact 22/23 reproduction, immutable recovery binding, 23/23 correction, Level 1 14/14, backlog-next 68/68, and complete preservation checks. MI-003 is selected-contract-required but remains unauthorized and unstarted; contract authoring is next.
+**MI-002 — Reusable Pack Composition** retains its exact active lock aggregate `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26` and original 23/23 execution condition. MI-002-R1 remains one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation. MI-002-R2 is published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6` after exact 22/23 reproduction, immutable recovery binding, 23/23 correction, Level 1 14/14, backlog-next 68/68, and complete preservation checks.
+
+**MI-003 — Bounded Local Work and Scope** has a fully authored, reviewed, and
+finalized contract publication candidate. The contract limits a later execution
+to one explicitly human-selected Level 3 local Work representation, exact
+create-only paths, deterministic candidate and Work Brief rebuilds, typed
+failure scenarios, source-preserving return/cancel, and exact preservation of
+all existing Nestfolio bytes. It does not select or implement a backlog item,
+and contract authorization or publication does not authorize execution. The
+candidate remains uncommitted and unstaged; publication is the next operation.

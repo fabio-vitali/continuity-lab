@@ -40,7 +40,15 @@ MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate
 
 **MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction** is complete with **UNCONDITIONAL FAIL**. Its clean pushed repository gates passed, but execution did not follow the required canonical read order: `CONTINUITY-NEXT-STEPS.md` and then the R1 Context Pack were read before canonical `docs/90-state/program-state.md`. The correction stopped before pre-edit reproduction or any Nestfolio mutation; its sole historical result and unchanged-Nestfolio disposition remain immutable.
 
-**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** is published with **UNCONDITIONAL PASS** at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`. It reproduced exactly 22/23 and the sole `ROLLBACK_RECOVERY_IDENTITY_MISMATCH`, bound both isolated recovery reads to immutable predecessor `8f923240b6be1e0373b25b090f6be76139e4b256` with exact digest/size checks, and restored 23/23 while Level 1 remains 14/14 and backlog-next 68/68. MI-003 is selected-contract-required but unauthorized and unstarted; contract authoring is next. MI-004 through MI-007 and broader work remain blocked.
+**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** is published with **UNCONDITIONAL PASS** at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`. It reproduced exactly 22/23 and the sole `ROLLBACK_RECOVERY_IDENTITY_MISMATCH`, bound both isolated recovery reads to immutable predecessor `8f923240b6be1e0373b25b090f6be76139e4b256` with exact digest/size checks, and restored 23/23 while Level 1 remains 14/14 and backlog-next 68/68.
+
+**MI-003 — Bounded Local Work and Scope** now has a fully authored, reviewed,
+and finalized nine-path contract publication candidate. The contract requires
+separate later execution authorization and an exact human selection before any
+Level 3 route can activate. No backlog item has been selected, no Nestfolio
+content was inspected or changed, and MI-003 remains unauthorized for execution
+and unstarted. Contract publication is the only next valid operation. MI-004
+through MI-007 and broader work remain blocked.
 
 ## Canonical starting points
 
@@ -82,6 +90,10 @@ MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate
 - MI-002-R2 completion handoff: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md`
 - MI-002-R2 contract-authoring manifest: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/changed-files.txt`
 - MI-002-R2 execution-closure manifest: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt`
+- MI-003 finalized contract publication candidate: `sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml`
+- MI-003 preserved inactive future execution prompt: `sessions/MI-003-bounded-local-work-and-scope/prompt.md`
+- MI-003 contract-authoring handoff: `sessions/MI-003-bounded-local-work-and-scope/session-handoff.md`
+- MI-003 contract-authoring manifest: `sessions/MI-003-bounded-local-work-and-scope/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

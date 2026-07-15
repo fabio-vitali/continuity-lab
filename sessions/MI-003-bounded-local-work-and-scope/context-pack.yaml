@@ -1,0 +1,462 @@
+contract:
+  status: finalized-publication-candidate
+  authored_on: 2026-07-15
+  reviewed_on: 2026-07-15
+  finalized_on: 2026-07-15
+  contract_authorized: true
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  authority:
+    - docs/90-state/program-state.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/00-governance/product-development-operating-model.md
+    - docs/00-governance/artifact-governance.md
+    - docs/00-governance/design-levels.md
+    - docs/60-migration/migration-plan.md
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt
+  authorization_rule: >
+    Contract selection, authoring, review, finalization, authorization, or
+    publication does not authorize MI-003 execution. Execution may begin only
+    in a later fresh control session after the user supplies a separate explicit
+    MI-003 execution instruction naming the exact published continuity-lab
+    contract revision and all three required repository revisions; Git metadata
+    proves the exact clean pushed bindings; canonical Program State is read
+    first; this contract is unchanged at that revision; and the instruction
+    authorizes only the bounded MI-003 capability execution. Backlog work itself
+    remains unauthorized.
+
+iteration:
+  id: MI-003
+  name: Bounded Local Work and Scope
+  type: bounded-level-3-local-work-authority-slice
+  px_level: 3
+  status: finalized-publication-candidate
+  selected_item: null
+  execution_status: unauthorized-and-unstarted
+
+objective:
+  primary_question: >
+    Can one coherent current Nestfolio backlog effort be selected through an
+    explicit human decision and represented as exact local Work, WorkSelection,
+    Working Set, Scope, criteria, route, and Work Brief artifacts, while the
+    current backlog remains planning authority, target state owns only the local
+    execution representation, candidate projections rebuild deterministically,
+    and rollback is source-preserving and reversible?
+  completion_boundary: >
+    Implement and validate only the Level 3 selection and local-authority
+    boundary for one explicitly selected effort. Do not perform the selected
+    effort, mutate its backlog source, form or authorize a Context Pack, create
+    durable Run or Assurance authority, or begin MI-004 or broader work.
+
+repository_bindings:
+  continuity_workspace:
+    required_branch: main
+    revision: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+    content_read: prohibited
+    mutation: prohibited
+  continuity_lab:
+    required_branch: main
+    contract_authoring_base_revision: 1563cc65b06cacae7557734a08be418cae0ae47a
+    contract_authoring_base_subject: Close MI-002-R2 C7 correction retry
+    contract_authoring_base_single_parent: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
+    required_execution_contract_revision: must be named exactly by the later execution instruction
+    required_execution_contract_identity: >
+      The named revision must be the clean pushed main revision containing this
+      finalized contract byte-for-byte, with the reviewed nine-path
+      contract-authoring delta and intended subject
+      "Authorize MI-003 bounded local work and scope contract".
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  nestfolio:
+    required_branch: main
+    revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    revision_role: exact published MI-002-R2 UNCONDITIONAL PASS revision
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  unresolved_or_mismatched_binding_blocks_execution: true
+
+canonical_read_order:
+  rule: >
+    After all metadata gates pass and before any other repository content is
+    read, docs/90-state/program-state.md must be read first. Every following
+    entry must be read in the listed order. Any earlier, missing, reordered, or
+    extra content read before completion of this sequence is MI-003
+    UNCONDITIONAL FAIL and requires stop before Nestfolio mutation.
+  required_continuity_lab_order:
+    - docs/90-state/program-state.md
+    - sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+    - sessions/MI-003-bounded-local-work-and-scope/prompt.md
+    - sessions/MI-003-bounded-local-work-and-scope/session-handoff.md
+    - docs/60-migration/migration-plan.md
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt
+  required_nestfolio_order_after_lab_sequence:
+    - continuity/evidence/mi-002/commands/04-final-changed-files.json
+    - package.json
+    - continuity/level-1/** in bytewise path order
+    - continuity/level-2/** in bytewise path order
+    - .claude/skills/backlog-next/SKILL.md
+    - docs/backlog/** in bytewise path order
+  rule_for_missing_named_path: >
+    A missing named path, unexpected path form, or inability to establish a
+    deterministic bytewise order blocks execution before mutation. Do not infer
+    or substitute another source.
+
+immutable_history:
+  mi_002_r2:
+    result: published unconditional-pass
+    nestfolio_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    authorization_revision: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
+    level_2_tests: 23/23 pass
+    level_1_tests: 14/14 pass
+    backlog_next_tests: 68/68 pass
+    rule: >
+      Preserve the published result, exact eight-path correction, all directly
+      affected evidence, production Level 2, and retained Level 1.
+  mi_002_r1:
+    result: unconditional-fail
+    sole_cause: canonical-read-order deviation
+    nestfolio_mutated: false
+    rule: >
+      Preserve this single historical result and every R1 artifact without
+      repair, relabeling, supersession, qualification, or modification.
+  original_mi_002:
+    result: unconditional-pass at exact original execution condition
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3
+    nestfolio_execution_head: 8f923240b6be1e0373b25b090f6be76139e4b256
+    nestfolio_published_implementation: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    packs:
+      - nestfolio.level-1@1.0.1
+      - continuity.repository-tools@1.0.0
+    procedures:
+      - nestfolio.backlog-next@1.0.1
+      - continuity.repository-status@1.0.0
+    level_1_aggregate: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+    level_2_aggregate: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+    packs_count: 2
+    procedures_count: 2
+    overrides: 0
+    registries: 0
+    remote_sources: 0
+    success_scenarios: 10/10 pass
+    mandatory_failure_scenarios: 15/15 pass-failed-closed
+    package_lock_json: absent before and after
+    selected_backlog_executed: false
+    level_3_to_6_state_created: false
+    rule: >
+      Preserve the result and exact execution conditions as historical facts.
+      MI-003 may add only its contracted Level 3 state and may not rewrite or
+      re-grade MI-002.
+
+selection_authority:
+  silent_selection: prohibited
+  initial_selected_item: null
+  candidate_phase: >
+    The separately authorized execution may read the exact bounded backlog and
+    ranking sources and deterministically produce the candidate projection and
+    inclusion/exclusion rationale. It may not activate a route or write any
+    selected Work artifact before a human selection is received.
+  human_selection_rule: >
+    The user must explicitly identify exactly one candidate by source path,
+    stable source-local identity, Nestfolio source revision, and source SHA-256.
+    The selection may be supplied in the initial execution instruction or in a
+    later message after candidate review. The executor must verify an exact
+    match to the candidate projection. Absence, multiplicity, mismatch, or an
+    inferred substitute blocks selection. Human selection authorizes only the
+    Level 3 representation and route; it never authorizes implementation of the
+    selected backlog effort.
+  target_authority_after_selection: >
+    The current backlog remains authority for planning content and status.
+    Target Work owns only the immutable local execution representation. No
+    automatic source write-back or bidirectional synchronization exists.
+
+required_preconditions:
+  - all three exact Git bindings pass before any repository content read
+  - canonical read order passes exactly
+  - all permitted Nestfolio create paths are absent at the published start
+  - package-lock.json is absent and no dependency operation is needed
+  - MI-002 Level 2 tests return 23/23 before mutation
+  - retained Level 1 tests return 14/14 before mutation
+  - backlog-next tests return 68/68 before mutation without invoking the Skill
+  - exact two-Pack/two-Procedure Level 2 identity and both aggregate locks verify
+  - current backlog and ranking sources are readable and digestible at the exact Nestfolio revision
+  - candidate derivation is deterministic and records all considered source entries
+  - one explicit human selection exactly matches one eligible candidate
+  - selected effort has no unresolved hard dependency, stale source, ambiguous mapping, or active current/target route conflict
+  - Scope, exclusions, outputs, criteria, required evidence modes, and rollback boundary are explicit before route activation
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata and exact committed objects required by this contract
+    - package.json
+    - CLAUDE.md
+    - docs/backlog/**
+    - .claude/skills/backlog-next/SKILL.md
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/evidence/mi-002/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - .claude/skills/backlog-next/test/**
+  create_exactly_on_pass:
+    - continuity/level-3/bin/continuity-work.mjs
+    - continuity/level-3/schema/work-artifacts.schema.json
+    - continuity/level-3/candidates.json
+    - continuity/level-3/work-selection.json
+    - continuity/level-3/work.json
+    - continuity/level-3/working-set.json
+    - continuity/level-3/scope.json
+    - continuity/level-3/route.json
+    - continuity/level-3/work-brief.json
+    - tests/continuity-level-3.test.mjs
+    - continuity/evidence/mi-003/00-repository-bindings.json
+    - continuity/evidence/mi-003/01-candidate-discovery.json
+    - continuity/evidence/mi-003/02-selection-scope-and-route.json
+    - continuity/evidence/mi-003/03-success-scenarios.json
+    - continuity/evidence/mi-003/04-mandatory-failures.json
+    - continuity/evidence/mi-003/05-preservation-and-rollback.json
+    - continuity/evidence/mi-003/06-criterion-matrix-and-verdict.json
+    - continuity/evidence/mi-003/commands/01-level3-tests.json
+    - continuity/evidence/mi-003/commands/02-level2-tests.json
+    - continuity/evidence/mi-003/commands/03-level1-tests.json
+    - continuity/evidence/mi-003/commands/04-backlog-next-tests.json
+    - continuity/evidence/mi-003/commands/05-final-changed-files.json
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly the twenty-two added paths above, with no modified, deleted,
+    renamed, staged, or additional path. Existing tracked bytes are immutable.
+  path_absence_rule: >
+    Any pre-existing permitted create path is a collision and blocks execution;
+    it must not be overwritten, adopted, repaired, or deleted.
+
+artifact_semantics:
+  serialization: canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+  candidates: >
+    Rebuildable non-authoritative projection over every in-scope backlog source,
+    recording source path, stable identity, source digest, source revision,
+    declared status, dependency disposition, rank inputs, eligibility,
+    inclusion/exclusion rationale, and derivation algorithm identity.
+  work_selection: >
+    Immutable record of the exact human selection, candidate digest, source
+    tuple, actor statement, rationale, accepted target route, expected source
+    revision, and rollback boundary.
+  work: >
+    Local execution representation containing objective, source reference,
+    outputs, criteria, Evidence requirements, Procedure references, current
+    status, and explicit absent higher-level guarantees.
+  working_set: exactly one selected Work identity and revision; no Epic orchestration
+  scope: >
+    Versioned include paths, immutable/excluded paths, permitted effects,
+    prohibited effects, non-goals, outputs, criteria, validation requirements,
+    dependency facts, source revision, and digest.
+  route: >
+    Exact Work/source identity and revision, route target, active PX level 3,
+    owning command family, no active Run store, human actor statement,
+    transition time, rationale, rollback boundary, and no-conflict result. The
+    route must never be inferred from file presence.
+  work_brief: >
+    Deterministic read-only projection of Work, Working Set, Scope, route,
+    Procedure references, source authorities, criteria, absent guarantees, and
+    exact digests. It is not a Context Pack and carries no execution
+    authorization.
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: exact source inventory and deterministic candidate rebuild produce byte-identical candidates.json
+  - id: S2
+    requirement: every included and excluded source entry has a typed rationale and exact source identity
+  - id: S3
+    requirement: one explicit human selection matches exactly one eligible candidate
+  - id: S4
+    requirement: WorkSelection, Work, Working Set, and Scope are internally referentially and digest consistent
+  - id: S5
+    requirement: Scope states exact includes, exclusions, outputs, criteria, Evidence requirements, and prohibited effects
+  - id: S6
+    requirement: route identifies one target Level 3 local authority while current backlog remains planning authority
+  - id: S7
+    requirement: Work Brief rebuild is byte-identical and truthfully states absent Level 4-6 guarantees
+  - id: S8
+    requirement: isolated return and cancel transitions preserve source and target history and disable the target route
+  - id: S9
+    requirement: Level 2, retained Level 1, and backlog-next test suites remain exact
+  - id: S10
+    requirement: final source backlog, package, dependencies, lower levels, MI-002 evidence, Git index, and all pre-existing tracked bytes remain unchanged
+
+mandatory_failure_scenarios:
+  - id: F1
+    condition: stale source revision or source digest
+    diagnostic: STALE_WORK_SOURCE
+  - id: F2
+    condition: unresolved hard dependency or blocked dependency target
+    diagnostic: HARD_DEPENDENCY_UNRESOLVED
+  - id: F3
+    condition: corrupt, incomplete, or non-deterministic candidate projection
+    diagnostic: CANDIDATE_PROJECTION_INVALID
+  - id: F4
+    condition: active current route, target route, lease, or ownership conflict
+    diagnostic: DUAL_ROUTE_CONFLICT
+  - id: F5
+    condition: missing or ambiguous source identity, status, rank input, or field mapping
+    diagnostic: AMBIGUOUS_WORK_MAPPING
+  - id: F6
+    condition: no explicit human selection, multiple selections, or selection tuple mismatch
+    diagnostic: SELECTION_AUTHORITY_MISSING
+  - id: F7
+    condition: Scope is empty, internally contradictory, or expands beyond the selected effort
+    diagnostic: INVALID_OR_UNBOUNDED_SCOPE
+  - id: F8
+    condition: output, criterion, Evidence requirement, exclusion, or rollback boundary is missing
+    diagnostic: INCOMPLETE_WORK_CONTRACT
+  - id: F9
+    condition: route is inferred from file presence or omits authority and conflict fields
+    diagnostic: ROUTE_AUTHORITY_INVALID
+  - id: F10
+    condition: attempt to mutate backlog or any other pre-existing tracked byte
+    diagnostic: SOURCE_MUTATION_PROHIBITED
+  - id: F11
+    condition: attempt to execute the selected effort or invoke Claude Code or any Skill
+    diagnostic: WORK_EXECUTION_PROHIBITED
+  - id: F12
+    condition: claim or creation of Context, Run, Assurance, completion, Decision, Learning, Level 4-6, external-write, or universal-ranking authority
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses the contracted canonical serialization
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, local origin/main, upstream, remote main, clean state, and observed time
+    - source inventory includes every considered path and blob SHA-256 without copying unrelated source content into evidence
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
+    - no chat transcript, hidden manual copy, timestamp-dependent candidate ordering, or unrecorded inference is admissible
+    - temporary fixtures are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-3.test.mjs returns all tests passing
+    - node --test tests/continuity-level-2.test.mjs returns 23/23
+    - node --test tests/continuity-level-1.test.mjs returns 14/14
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68
+    - all S1-S10 success scenarios pass
+    - all F1-F12 mandatory failure scenarios fail closed with the exact typed diagnostic
+    - candidates.json and work-brief.json each rebuild byte-identically from canonical sources
+    - isolated return and cancel each restore the exact source-preserving disabled-route condition
+    - final Git and digest comparison proves every pre-existing tracked path equals the exact start revision
+    - final Nestfolio manifest contains exactly twenty-two additions and no other status
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata, the complete tracked-tree identity, all critical
+    lower-level and MI-002 digests, absence of every create path, and a verified
+    external recovery ledger outside all repositories. Do not copy backlog
+    content or secrets into the recovery ledger.
+  success_rollback_proof: >
+    In isolated temporary copies only, exercise return and cancel from the
+    selected target representation. Each transition must preserve the original
+    source tuple and all immutable target revisions, disable target routing, and
+    require a new explicit selection revision before reactivation. Do not mutate
+    the real backlog source or create a current-route write.
+  execution_failure: >
+    If any actual execution condition fails after mutation, remove only the
+    newly created MI-003 paths, verify Nestfolio is byte-identical and clean at
+    the exact published start revision, retain diagnostics outside all
+    repositories, and close MI-003 as UNCONDITIONAL FAIL in continuity-lab.
+    Never retain partial Level 3 authority after a failed execution.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+    - sessions/MI-003-bounded-local-work-and-scope/session-handoff.md
+  create:
+    - docs/70-implementation/mi-003-bounded-local-work-and-scope.md
+    - sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt
+  rule: >
+    A later separately authorized execution closure may record only the one
+    unconditional MI-003 result, exact validation and preservation facts,
+    exact Nestfolio candidate disposition, and next valid operation. The
+    preserved prompt and contract-authoring manifest remain immutable. No other
+    continuity-lab path may change.
+
+explicitly_immutable:
+  continuity_workspace:
+    - all content and Git state
+  continuity_lab_during_execution:
+    - all paths except the exact execution-closure scope
+    - all historical session artifacts and implementation reports
+  nestfolio:
+    - every pre-existing tracked path at fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    - package.json
+    - package-lock.json absence
+    - CLAUDE.md
+    - docs/backlog/**
+    - .claude/skills/**
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/evidence/mi-001*/**
+    - continuity/evidence/mi-002/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+
+prohibited_actions:
+  - execute MI-003 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio content before a separate explicit MI-003 execution instruction and valid gates
+  - silently select, infer, substitute, or auto-activate a backlog item
+  - perform any implementation work described by the selected backlog effort
+  - invoke Claude Code, any Skill, /backlog-next, continuity:invoke, or another executor procedure
+  - mutate backlog source, status, priority, dependency, rank, or external object
+  - create automatic bidirectional synchronization or external writes
+  - modify package.json, dependencies, package-lock.json, Level 1, Level 2, or MI-002 evidence
+  - create a Context Pack, Formation Trace, Session, Run, Checkpoint, Handoff, Assurance Plan, Evidence authority, Guard, Waiver, Decision, Observation, Lesson, Change Proposal, completion claim, Level 4-6 state, registry, remote source, universal ranking, Epic orchestration, intake, or themes migration
+  - promote Nestfolio behavior into reusable Pack or Framework Core authority
+  - inspect or modify paths outside the exact read and create boundaries
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during MI-003 execution
+  - execute MI-004 or any broader or unrelated implementation
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 exact repository bindings, canonical read order, and explicit human selection authority
+    - C2 deterministic complete candidate derivation with exact inclusion and exclusion rationale
+    - C3 internally exact WorkSelection, Work, Working Set, Scope, criteria, and Work Brief
+    - C4 every mandatory failure blocks with the exact typed diagnostic
+    - C5 current backlog, all pre-existing bytes, MI-002, Level 2, Level 1, dependencies, and direct paths remain exact
+    - C6 planning, local execution, route, Git, Procedure, and absent-guarantee authority is observable and unambiguous
+    - C7 deterministic rebuild, source-preserving return and cancel, cleanup, and exact final manifest pass with no Level 4-6 authority
+  pass_rule: >
+    Issue MI-003 UNCONDITIONAL PASS only if C1-C7, S1-S10, F1-F12, every
+    precondition, all required validation, preservation, rollback, cleanup, and
+    exact-manifest requirements pass conjunctively and no prohibited action
+    occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, reordered, mismatched, out-of-scope,
+    non-deterministic, partially successful, or failed required condition after
+    valid execution start is MI-003 UNCONDITIONAL FAIL. Restore exact Nestfolio
+    start state after any real mutation. No qualified PASS, partial PASS,
+    inferred selection, silent repair, evidence-only override, or history
+    rewrite is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Preserve the selected Level 3 representation as a bounded candidate and
+    select MI-004 only as contract-required. MI-004 remains unauthorized until
+    a separate contract is authored, reviewed, finalized, published, and later
+    explicitly authorized for execution.
+  on_fail: >
+    Keep MI-004 blocked. Select only a bounded MI-003 correction or an explicit
+    architecture review supported by the failure evidence. Do not broaden scope.
+
+completion_criteria:
+  - finalized, reviewed, internally consistent MI-003 contract publication candidate
+  - contract authorization recorded without execution authorization
+  - no Nestfolio content inspection, mutation, selected item, Skill, Claude Code, dependency operation, commit, or push
+  - exact nine-path uncommitted and unstaged continuity-lab contract-authoring manifest
+  - publication handoff for a fresh control session
