@@ -61,6 +61,16 @@ be proven and rereading would further violate the sequence, C1 failed with
 candidate projection, selection, test, or mutation. MI-003 remains one
 immutable historical failure, and MI-004 and broader work remain blocked.
 
+**MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read
+Correction Retry** is finalized and authorized-not-started as a separately
+reviewable contract publication candidate. Its sole correction replaces
+single-response complete-read proof with deterministic contiguous UTF-8
+segments capped at 4096 bytes, one segment and one logical path at a time, with
+exact envelopes, digests, coverage, and explicit no-truncation gates. Program
+State remains the first and sole logical repository path until its proof closes.
+MI-003 and MI-003-R1 remain separate immutable UNCONDITIONAL FAIL results;
+MI-003-R2 execution and MI-004 remain unauthorized.
+
 ## Canonical starting points
 
 - Governance: `docs/00-governance/`
@@ -115,6 +125,10 @@ immutable historical failure, and MI-004 and broader work remain blocked.
 - MI-003-R1 execution handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
 - MI-003-R1 execution-closure manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt`
 - MI-003-R1 canonical report: `docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`
+- MI-003-R2 finalized correction-retry contract candidate: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml`
+- MI-003-R2 preserved future execution prompt: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/prompt.md`
+- MI-003-R2 publication handoff: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md`
+- MI-003-R2 contract-authoring manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

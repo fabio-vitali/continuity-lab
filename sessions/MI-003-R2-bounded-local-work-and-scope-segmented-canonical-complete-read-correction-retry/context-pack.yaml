@@ -1,0 +1,603 @@
+contract:
+  status: finalized
+  authored_on: 2026-07-15
+  reviewed_on: 2026-07-15
+  finalized_on: 2026-07-15
+  contract_authorized: true
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  result: null
+  authority:
+    - docs/90-state/program-state.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml
+    - docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/changed-files.txt
+    - sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+    - sessions/MI-003-bounded-local-work-and-scope/prompt.md
+    - sessions/MI-003-bounded-local-work-and-scope/session-handoff.md
+    - sessions/MI-003-bounded-local-work-and-scope/changed-files.txt
+    - sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt
+    - docs/70-implementation/mi-003-bounded-local-work-and-scope.md
+  authorization_rule: >
+    This reviewed contract candidate authorizes neither publication nor
+    execution. Publication requires the exact fresh control-session handoff and
+    may publish only the reviewed nine-path contract-authoring delta. Execution
+    requires a later fresh instruction naming the exact published revision and
+    all three bindings. No authoring, review, publication, or execution
+    instruction authorizes implementation of a selected backlog effort.
+
+iteration:
+  id: MI-003-R2
+  name: Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry
+  type: bounded-level-3-local-work-authority-complete-read-correction-retry
+  px_level: 3
+  status: authorized-not-started
+  correction_only: true
+  predecessor_results:
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+  selected_item: null
+  execution_status: not-started
+
+objective:
+  primary_question: >
+    Can one coherent current Nestfolio backlog effort be selected through an
+    explicit human decision and represented as exact local Work, WorkSelection,
+    Working Set, Scope, criteria, route, and Work Brief artifacts, while the
+    current backlog remains planning authority, target state owns only the local
+    execution representation, candidate projections rebuild deterministically,
+    and rollback is source-preserving and reversible?
+  completion_boundary: >
+    Implement and validate only the Level 3 selection and local-authority
+    boundary for one explicitly selected effort. Do not perform the selected
+    effort, mutate its backlog source, form or authorize a Context Pack, create
+    durable Run or Assurance authority, or begin MI-004 or broader work.
+  retry_boundary: >
+    Retry the unchanged original MI-003 objective only. The sole correction is
+    a deterministic, non-interleaved, segmented proof that every canonical
+    logical path was completely consumed without allowing tool-output
+    truncation to count as completion. No other MI-003-R1 or MI-003 rule,
+    criterion, scenario, scope, validation, rollback, or prohibition changes.
+
+repository_bindings:
+  continuity_workspace:
+    required_branch: main
+    revision: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+    content_read: prohibited
+    mutation: prohibited
+  continuity_lab:
+    required_branch: main
+    contract_authoring_base_revision: 323834ff98bdf066daaf96d24957e154c899393e
+    contract_authoring_base_subject: Record MI-003-R1 unconditional failure closure
+    contract_authoring_base_single_parent: 6aa004ff01ba9caab242680fbf62e3d53730bf46
+    required_execution_contract_revision: must be named exactly by the later execution instruction
+    required_execution_contract_identity: >
+      The named revision must be the clean pushed main revision containing this
+      finalized contract byte-for-byte, with the reviewed nine-path
+      contract-authoring delta, exact single parent
+      323834ff98bdf066daaf96d24957e154c899393e, and exact subject
+      "Authorize MI-003-R2 segmented canonical complete-read correction retry".
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  nestfolio:
+    required_branch: main
+    revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    revision_role: exact published MI-002-R2 PASS revision and unchanged MI-003 and MI-003-R1 binding
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  unresolved_or_mismatched_binding_blocks_execution: true
+
+canonical_complete_read_protocol:
+  correction_basis: >
+    MI-003-R1 failed solely because its sixth canonical logical path was emitted
+    as one response that the tool channel truncated. MI-003-R2 changes only how
+    complete consumption of one logical path is proved. It does not waive or
+    reinterpret either historical failure.
+  metadata_phase: >
+    Before any repository content read, complete every required Git metadata and
+    contract-identity gate separately for all three repositories. Metadata
+    inspection must not open tracked or untracked file content. Any failed or
+    contradictory gate stops before content read and before execution starts.
+  logical_path_session: >
+    A logical-path read session begins when one exact canonical file is opened
+    for plan or payload access and ends only after its completion proof passes.
+    During that session every content-bearing, planning, counting, sizing,
+    digesting, or verification operation may address only that same path. No
+    other repository path may be listed, opened, previewed, diffed, hashed,
+    counted, or batched before the session closes. Directory expansion may
+    occur only at its listed order position and yields individual file paths in
+    bytewise order; each file then receives its own logical-path session.
+  program_state_first_rule: >
+    After all metadata gates pass, the first logical repository path opened must
+    be continuity-lab docs/90-state/program-state.md. It must be the sole
+    logical repository path addressed until every segment and its whole-path
+    completion proof pass. The first content operation may establish the plan
+    for Program State only; it may not open the R2 Context Pack or any other
+    path in the same call or in parallel.
+  canonical_source: >
+    Read the exact bytes of each named path from the bound clean revision. Record
+    the repository role, revision, path, Git blob object identity, total byte
+    count, total LF count, total logical-line count, whole-path SHA-256, and
+    whether the final byte is LF. A logical line is an LF-terminated byte record
+    or the non-empty final byte record after the last LF. Empty files have zero
+    logical lines.
+    Require well-formed UTF-8 so every raw payload remains directly readable;
+    invalid encoding is CANONICAL_PATH_ENCODING_INVALID and fails C1 before
+    another path opens.
+  deterministic_segmentation:
+    algorithm_id: greedy-utf8-codepoints-max-4096-v1
+    payload_max_bytes: 4096
+    rule: >
+      Starting at byte zero, greedily take the largest positive contiguous raw
+      byte prefix of at most 4096 bytes that ends on a UTF-8 code-point boundary.
+      Preserve every byte and continue at the exact next byte without overlap or
+      gap. A segment may cross or divide a logical line but never a UTF-8 code
+      point. The last segment ends at the exact total byte count. An empty file
+      has one zero-byte segment. Do not invent or substitute another algorithm.
+  segment_operation: >
+    Emit exactly one segment per tool response. The response must contain a
+    deterministic begin envelope, the exact raw payload, and a deterministic end
+    envelope. Both envelopes identify repository role, revision, path, blob,
+    whole-path SHA-256, algorithm, segment index/count, start/end byte offsets,
+    start/end logical-line cursors, payload LF count, payload byte count, and
+    payload SHA-256. The
+    begin envelope must be the first output and the matching end envelope the
+    last output. The command must exit zero with empty stderr. Set the tool
+    output allowance to at least 12000 tokens and do not combine segments or
+    paths in one response.
+  output_completeness_gate: >
+    A segment is consumed only when the tool response explicitly reports no
+    truncation, omission, elision, or output-token clipping; both exact envelopes
+    and the full directly readable UTF-8 payload are visible; envelope fields
+    match the plan; and the payload byte count and SHA-256 verify. A warning,
+    missing completeness
+    metadata, shortened or summarized payload, absent envelope, mismatched
+    digest, nonzero exit, or non-empty stderr is CANONICAL_SEGMENT_INCOMPLETE.
+    It never counts as completion and the executor must not advance to another
+    segment or path.
+  contiguous_completion_proof: >
+    Close a logical-path session only after every segment index from one through
+    the declared count has passed exactly once in order; the first start offset
+    is zero; every next start equals the prior end; payload LF counts sum to the
+    recorded total LF count and line cursors chain to the derived final cursor;
+    every payload is at most 4096 bytes and ends on a UTF-8 code-point boundary;
+    the final end equals
+    total bytes; the ordered payload digests and byte counts recombine to the
+    recorded whole-path SHA-256 and byte count; and a final same-path
+    verification matches the bound blob identity. No narrative assertion can
+    replace these machine-verifiable facts.
+  incomplete_segment_disposition: >
+    If any segment response is incomplete, keep the same logical-path session
+    open and stop. Do not reread, retry, resize, skip, or advance during that
+    execution. Close MI-003-R2 as UNCONDITIONAL FAIL with
+    CANONICAL_SEGMENT_INCOMPLETE before Nestfolio inspection if the laboratory
+    sequence is not yet complete. Tool truncation can therefore cause failure
+    but can never masquerade as a successful complete read.
+  serial_sequence_rule: >
+    After Program State closes, open every remaining logical path one at a time,
+    completely, in the exact order below. Do not parallelize or interleave path
+    sessions. Any earlier, missing, partial, reordered, parallel, batched, extra,
+    or unproved read is MI-003-R2 UNCONDITIONAL FAIL and requires stop before
+    Nestfolio mutation.
+  required_continuity_lab_order:
+    - docs/90-state/program-state.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml
+    - docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/changed-files.txt
+    - sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+    - sessions/MI-003-bounded-local-work-and-scope/prompt.md
+    - sessions/MI-003-bounded-local-work-and-scope/session-handoff.md
+    - docs/60-migration/migration-plan.md
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt
+    - docs/70-implementation/mi-003-bounded-local-work-and-scope.md
+    - sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt
+    - sessions/MI-003-bounded-local-work-and-scope/changed-files.txt
+  required_nestfolio_order_after_lab_sequence:
+    - continuity/evidence/mi-002/commands/04-final-changed-files.json
+    - package.json
+    - continuity/level-1/** in bytewise path order, one logical file path at a time
+    - continuity/level-2/** in bytewise path order, one logical file path at a time
+    - .claude/skills/backlog-next/SKILL.md
+    - docs/backlog/** in bytewise path order, one logical file path at a time
+  rule_for_missing_named_path: >
+    A missing path, unexpected path form, non-regular file, path collision,
+    inability to establish bytewise order, or inability to prove any complete
+    logical-path session blocks execution before mutation. Do not infer or
+    substitute another source.
+
+immutable_history:
+  mi_003:
+    result: unconditional-fail
+    execution_contract_revision: 2e90dd1ffa944d5a633e65e0f2c1c52f751af4ad
+    published_failure_closure_revision: 55e81e441e9e2facfda5382c3de57d1b8b3f5c9e
+    sole_cause: canonical-read-order deviation
+    nestfolio_content_read: false
+    nestfolio_mutated: false
+    candidate_projection_created: false
+    human_selection_received: false
+    rule: Preserve this result and every original contract, prompt, handoff, manifest, report, and closure byte without repair, relabeling, qualification, or reinterpretation.
+  mi_003_r1:
+    result: unconditional-fail
+    execution_contract_revision: 6aa004ff01ba9caab242680fbf62e3d53730bf46
+    published_failure_closure_revision: 323834ff98bdf066daaf96d24957e154c899393e
+    sole_cause: CANONICAL_READ_PARTIAL on the sixth canonical logical path
+    nestfolio_content_read: false
+    nestfolio_mutated: false
+    candidate_projection_created: false
+    human_selection_received: false
+    rule: Preserve this separate result and every R1 artifact and closure byte without repair, relabeling, qualification, supersession, or reinterpretation.
+  mi_002_r2:
+    result: published unconditional-pass
+    nestfolio_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    authorization_revision: 62f1e2f1ef2838c3ac3e40649526ad39617a81de
+    level_2_tests: 23/23 pass
+    level_1_tests: 14/14 pass
+    backlog_next_tests: 68/68 pass
+    rule: >
+      Preserve the published result, exact eight-path correction, all directly
+      affected evidence, production Level 2, and retained Level 1.
+  mi_002_r1:
+    result: unconditional-fail
+    sole_cause: canonical-read-order deviation
+    nestfolio_mutated: false
+    rule: Preserve this immutable historical result and every artifact byte.
+  original_mi_002:
+    result: unconditional-pass at exact original execution condition
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3
+    nestfolio_execution_head: 8f923240b6be1e0373b25b090f6be76139e4b256
+    nestfolio_published_implementation: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    packs:
+      - nestfolio.level-1@1.0.1
+      - continuity.repository-tools@1.0.0
+    procedures:
+      - nestfolio.backlog-next@1.0.1
+      - continuity.repository-status@1.0.0
+    level_1_aggregate: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+    level_2_aggregate: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+    packs_count: 2
+    procedures_count: 2
+    overrides: 0
+    registries: 0
+    remote_sources: 0
+    success_scenarios: 10/10 pass
+    mandatory_failure_scenarios: 15/15 pass-failed-closed
+    package_lock_json: absent before and after
+    selected_backlog_executed: false
+    level_3_to_6_state_created: false
+    rule: >
+      Preserve the result and exact execution conditions as historical facts.
+      MI-003-R2 may add only its contracted Level 3 state and may not rewrite or
+      re-grade MI-002.
+
+selection_authority:
+  silent_selection: prohibited
+  initial_selected_item: null
+  candidate_phase: >
+    The separately authorized execution may read the exact bounded backlog and
+    ranking sources and deterministically produce the candidate projection and
+    inclusion/exclusion rationale. It may not activate a route or write any
+    selected Work artifact before a human selection is received.
+  human_selection_rule: >
+    The user must explicitly identify exactly one candidate by source path,
+    stable source-local identity, Nestfolio source revision, and source SHA-256.
+    The selection may be supplied in the initial execution instruction or in a
+    later message after candidate review. The executor must verify an exact
+    match to the candidate projection. Absence, multiplicity, mismatch, or an
+    inferred substitute blocks selection. Human selection authorizes only the
+    Level 3 representation and route; it never authorizes implementation of the
+    selected backlog effort.
+  target_authority_after_selection: >
+    The current backlog remains authority for planning content and status.
+    Target Work owns only the immutable local execution representation. No
+    automatic source write-back or bidirectional synchronization exists.
+
+required_preconditions:
+  - all three exact Git bindings pass before any repository content read
+  - every canonical logical-path session passes the segmented complete-read protocol in exact order
+  - all permitted Nestfolio create paths are absent at the published start
+  - package-lock.json is absent and no dependency operation is needed
+  - MI-002 Level 2 tests return 23/23 before mutation
+  - retained Level 1 tests return 14/14 before mutation
+  - backlog-next tests return 68/68 before mutation without invoking the Skill
+  - exact two-Pack/two-Procedure Level 2 identity and both aggregate locks verify
+  - current backlog and ranking sources are readable and digestible at the exact Nestfolio revision
+  - candidate derivation is deterministic and records all considered source entries
+  - one explicit human selection exactly matches one eligible candidate
+  - selected effort has no unresolved hard dependency, stale source, ambiguous mapping, or active current/target route conflict
+  - Scope, exclusions, outputs, criteria, required evidence modes, and rollback boundary are explicit before route activation
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata and exact committed objects required by this contract
+    - package.json
+    - CLAUDE.md
+    - docs/backlog/**
+    - .claude/skills/backlog-next/SKILL.md
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/evidence/mi-002/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - .claude/skills/backlog-next/test/**
+  create_exactly_on_pass:
+    - continuity/level-3/bin/continuity-work.mjs
+    - continuity/level-3/schema/work-artifacts.schema.json
+    - continuity/level-3/candidates.json
+    - continuity/level-3/work-selection.json
+    - continuity/level-3/work.json
+    - continuity/level-3/working-set.json
+    - continuity/level-3/scope.json
+    - continuity/level-3/route.json
+    - continuity/level-3/work-brief.json
+    - tests/continuity-level-3.test.mjs
+    - continuity/evidence/mi-003/00-repository-bindings.json
+    - continuity/evidence/mi-003/01-candidate-discovery.json
+    - continuity/evidence/mi-003/02-selection-scope-and-route.json
+    - continuity/evidence/mi-003/03-success-scenarios.json
+    - continuity/evidence/mi-003/04-mandatory-failures.json
+    - continuity/evidence/mi-003/05-preservation-and-rollback.json
+    - continuity/evidence/mi-003/06-criterion-matrix-and-verdict.json
+    - continuity/evidence/mi-003/commands/01-level3-tests.json
+    - continuity/evidence/mi-003/commands/02-level2-tests.json
+    - continuity/evidence/mi-003/commands/03-level1-tests.json
+    - continuity/evidence/mi-003/commands/04-backlog-next-tests.json
+    - continuity/evidence/mi-003/commands/05-final-changed-files.json
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly the twenty-two added paths above, with no modified, deleted,
+    renamed, staged, or additional path. Existing tracked bytes are immutable.
+  path_absence_rule: >
+    Any pre-existing permitted create path is a collision and blocks execution;
+    it must not be overwritten, adopted, repaired, or deleted.
+
+artifact_semantics:
+  serialization: canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+  candidates: >
+    Rebuildable non-authoritative projection over every in-scope backlog source,
+    recording source path, stable identity, source digest, source revision,
+    declared status, dependency disposition, rank inputs, eligibility,
+    inclusion/exclusion rationale, and derivation algorithm identity.
+  work_selection: >
+    Immutable record of the exact human selection, candidate digest, source
+    tuple, actor statement, rationale, accepted target route, expected source
+    revision, and rollback boundary.
+  work: >
+    Local execution representation containing objective, source reference,
+    outputs, criteria, Evidence requirements, Procedure references, current
+    status, and explicit absent higher-level guarantees.
+  working_set: exactly one selected Work identity and revision; no Epic orchestration
+  scope: >
+    Versioned include paths, immutable/excluded paths, permitted effects,
+    prohibited effects, non-goals, outputs, criteria, validation requirements,
+    dependency facts, source revision, and digest.
+  route: >
+    Exact Work/source identity and revision, route target, active PX level 3,
+    owning command family, no active Run store, human actor statement,
+    transition time, rationale, rollback boundary, and no-conflict result. The
+    route must never be inferred from file presence.
+  work_brief: >
+    Deterministic read-only projection of Work, Working Set, Scope, route,
+    Procedure references, source authorities, criteria, absent guarantees, and
+    exact digests. It is not a Context Pack and carries no execution
+    authorization.
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: exact source inventory and deterministic candidate rebuild produce byte-identical candidates.json
+  - id: S2
+    requirement: every included and excluded source entry has a typed rationale and exact source identity
+  - id: S3
+    requirement: one explicit human selection matches exactly one eligible candidate
+  - id: S4
+    requirement: WorkSelection, Work, Working Set, and Scope are internally referentially and digest consistent
+  - id: S5
+    requirement: Scope states exact includes, exclusions, outputs, criteria, Evidence requirements, and prohibited effects
+  - id: S6
+    requirement: route identifies one target Level 3 local authority while current backlog remains planning authority
+  - id: S7
+    requirement: Work Brief rebuild is byte-identical and truthfully states absent Level 4-6 guarantees
+  - id: S8
+    requirement: isolated return and cancel transitions preserve source and target history and disable the target route
+  - id: S9
+    requirement: Level 2, retained Level 1, and backlog-next test suites remain exact
+  - id: S10
+    requirement: final source backlog, package, dependencies, lower levels, MI-002 evidence, Git index, and all pre-existing tracked bytes remain unchanged
+
+mandatory_failure_scenarios:
+  - id: F1
+    condition: stale source revision or source digest
+    diagnostic: STALE_WORK_SOURCE
+  - id: F2
+    condition: unresolved hard dependency or blocked dependency target
+    diagnostic: HARD_DEPENDENCY_UNRESOLVED
+  - id: F3
+    condition: corrupt, incomplete, or non-deterministic candidate projection
+    diagnostic: CANDIDATE_PROJECTION_INVALID
+  - id: F4
+    condition: active current route, target route, lease, or ownership conflict
+    diagnostic: DUAL_ROUTE_CONFLICT
+  - id: F5
+    condition: missing or ambiguous source identity, status, rank input, or field mapping
+    diagnostic: AMBIGUOUS_WORK_MAPPING
+  - id: F6
+    condition: no explicit human selection, multiple selections, or selection tuple mismatch
+    diagnostic: SELECTION_AUTHORITY_MISSING
+  - id: F7
+    condition: Scope is empty, internally contradictory, or expands beyond the selected effort
+    diagnostic: INVALID_OR_UNBOUNDED_SCOPE
+  - id: F8
+    condition: output, criterion, Evidence requirement, exclusion, or rollback boundary is missing
+    diagnostic: INCOMPLETE_WORK_CONTRACT
+  - id: F9
+    condition: route is inferred from file presence or omits authority and conflict fields
+    diagnostic: ROUTE_AUTHORITY_INVALID
+  - id: F10
+    condition: attempt to mutate backlog or any other pre-existing tracked byte
+    diagnostic: SOURCE_MUTATION_PROHIBITED
+  - id: F11
+    condition: attempt to execute the selected effort or invoke Claude Code or any Skill
+    diagnostic: WORK_EXECUTION_PROHIBITED
+  - id: F12
+    condition: claim or creation of Context, Run, Assurance, completion, Decision, Learning, Level 4-6, external-write, or universal-ranking authority
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses the contracted canonical serialization
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, local origin/main, upstream, remote main, clean state, and observed time
+    - repository binding evidence records that Program State was the first and sole logical path and remained sole until its complete proof closed
+    - canonical-read evidence records every path plan, segment envelope and digest, channel completeness result, contiguous coverage proof, and final whole-path proof
+    - source inventory includes every considered path and blob SHA-256 without copying unrelated source content into evidence
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
+    - no chat transcript, hidden manual copy, timestamp-dependent candidate ordering, or unrecorded inference is admissible
+    - temporary fixtures are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-3.test.mjs returns all tests passing
+    - node --test tests/continuity-level-2.test.mjs returns 23/23
+    - node --test tests/continuity-level-1.test.mjs returns 14/14
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68
+    - all S1-S10 success scenarios pass
+    - all F1-F12 mandatory failure scenarios fail closed with the exact typed diagnostic
+    - candidates.json and work-brief.json each rebuild byte-identically from canonical sources
+    - isolated return and cancel each restore the exact source-preserving disabled-route condition
+    - final Git and digest comparison proves every pre-existing tracked path equals the exact start revision
+    - final Nestfolio manifest contains exactly twenty-two additions and no other status
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata, the complete tracked-tree identity, all critical
+    lower-level and MI-002 digests, absence of every create path, and a verified
+    external recovery ledger outside all repositories. Do not copy backlog
+    content or secrets into the recovery ledger.
+  success_rollback_proof: >
+    In isolated temporary copies only, exercise return and cancel from the
+    selected target representation. Each transition must preserve the original
+    source tuple and all immutable target revisions, disable target routing, and
+    require a new explicit selection revision before reactivation. Do not mutate
+    the real backlog source or create a current-route write.
+  execution_failure: >
+    If any actual execution condition fails after mutation, remove only the
+    newly created MI-003 paths, verify Nestfolio is byte-identical and clean at
+    the exact published start revision, retain diagnostics outside all
+    repositories, and close MI-003-R2 as UNCONDITIONAL FAIL in continuity-lab.
+    Never retain partial Level 3 authority after a failed execution.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md
+  create:
+    - docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt
+  rule: >
+    A later separately authorized execution closure may record only the one R2
+    result and exact execution facts. All MI-003 and MI-003-R1 artifacts and the
+    R2 prompt and authoring manifest remain immutable.
+
+explicitly_immutable:
+  continuity_workspace: [all content and Git state]
+  continuity_lab_during_execution:
+    - all MI-003 and MI-003-R1 artifacts and reports
+    - R2 prompt and contract-authoring manifest
+    - every path outside the exact R2 execution-closure scope
+    - all historical session artifacts and implementation reports
+  nestfolio:
+    - every pre-existing tracked path at fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    - package.json
+    - package-lock.json absence
+    - CLAUDE.md
+    - docs/backlog/**
+    - .claude/skills/**
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/evidence/mi-001*/**
+    - continuity/evidence/mi-002/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+
+prohibited_actions:
+  - execute MI-003 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio content before a separate explicit MI-003 execution instruction and valid gates
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during MI-003 execution
+  - execute MI-003-R1 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio content before a separate explicit MI-003-R1 execution instruction and valid gates
+  - modify, repair, relabel, qualify, supersede, or reinterpret any historical MI-003 artifact or result
+  - silently select, infer, substitute, or auto-activate a backlog item
+  - perform any implementation work described by the selected backlog effort
+  - invoke Claude Code, any Skill, /backlog-next, continuity:invoke, or another executor procedure
+  - mutate backlog source, status, priority, dependency, rank, or external object
+  - create automatic bidirectional synchronization or external writes
+  - modify package.json, dependencies, package-lock.json, Level 1, Level 2, or MI-002 evidence
+  - create a Context Pack, Formation Trace, Session, Run, Checkpoint, Handoff, Assurance Plan, Evidence authority, Guard, Waiver, Decision, Observation, Lesson, Change Proposal, completion claim, Level 4-6 state, registry, remote source, universal ranking, Epic orchestration, intake, or themes migration
+  - promote Nestfolio behavior into reusable Pack or Framework Core authority
+  - inspect or modify paths outside the exact read and create boundaries
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during MI-003-R1 execution
+  - execute MI-004 or any broader or unrelated implementation
+  - execute MI-003-R2 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio content before a separate explicit MI-003-R2 execution instruction and valid gates
+  - modify, repair, relabel, qualify, supersede, or reinterpret any historical MI-003-R1 artifact or result
+  - change any original MI-003 objective, selection boundary, criterion, scenario, validation, rollback, scope, or prohibition
+  - treat incomplete, truncated, summarized, omitted, elided, or clipped tool output as a complete segment or path
+  - interleave, batch, parallelize, reorder, skip, resize, retry, or substitute canonical path or segment reads
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during MI-003-R2 execution
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 exact repository bindings, segmented canonical complete-read proof, and explicit human selection authority
+    - C2 deterministic complete candidate derivation with exact inclusion and exclusion rationale
+    - C3 internally exact WorkSelection, Work, Working Set, Scope, criteria, and Work Brief
+    - C4 every mandatory failure blocks with the exact typed diagnostic
+    - C5 current backlog, all pre-existing bytes, MI-002, Level 2, Level 1, dependencies, and direct paths remain exact
+    - C6 planning, local execution, route, Git, Procedure, and absent-guarantee authority is observable and unambiguous
+    - C7 deterministic rebuild, source-preserving return and cancel, cleanup, and exact final manifest pass with no Level 4-6 authority
+  pass_rule: >
+    Issue MI-003-R2 UNCONDITIONAL PASS only if C1-C7, S1-S10, F1-F12,
+    every precondition, every path and segment proof, validation, preservation,
+    rollback, cleanup, and exact-manifest requirement passes conjunctively and no
+    prohibited action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, reordered, interleaved, truncated,
+    clipped, mismatched, out-of-scope, non-deterministic, partial, or failed
+    condition after valid execution start is MI-003-R2 UNCONDITIONAL FAIL. No
+    qualified PASS, partial PASS, inferred selection, silent repair,
+    evidence-only override, historical reinterpretation, or history rewrite is
+    permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Preserve MI-003 and MI-003-R1 as separate historical UNCONDITIONAL FAIL
+    results and record R2 separately. Preserve the selected Level 3
+    representation as bounded candidate state. MI-004 remains unauthorized
+    until separately contracted, reviewed, published, and explicitly executed.
+  on_fail: >
+    Preserve all three separate results and keep MI-004 blocked. Select only a
+    newly bounded correction or explicit architecture review supported by the
+    failure evidence. Do not broaden scope.
+
+completion_criteria:
+  - finalized reviewed internally consistent MI-003-R2 contract publication candidate
+  - contract authorization recorded without publication or execution
+  - sole normative correction is deterministic non-interleaved segmented canonical complete-read proof
+  - MI-003 and MI-003-R1 remain separate immutable unconditional failures and all MI-002 history remains preserved
+  - no Nestfolio content inspection mutation candidate selection Skill Claude Code dependency operation external write commit or push
+  - exact nine-path uncommitted and unstaged continuity-lab contract-authoring manifest
+  - publication handoff for a fresh control session

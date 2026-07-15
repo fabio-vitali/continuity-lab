@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry remains published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 result remain immutable. MI-003 — Bounded Local Work and Scope remains one immutable UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State after valid gates. MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry is separately complete with UNCONDITIONAL FAIL: all exact gates passed and Program State was read first and alone, but the sixth canonical read returned a truncated representation of the Migration Plan, so complete serial reading could not be proven. Execution stopped before any Nestfolio content read, candidate projection, selection, test, or mutation. MI-004 remains blocked.**
+**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry remains published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 result remain immutable. MI-003 — Bounded Local Work and Scope remains one immutable UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State after valid gates. MI-003-R1 is separately complete with UNCONDITIONAL FAIL caused solely by the truncated sixth canonical read. MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry is finalized and authorized-not-started as an uncommitted publication candidate. Its sole correction defines deterministic, contiguous, non-interleaved segmented proof that cannot credit truncated tool output; Program State remains the first and sole logical repository path until its proof closes. No Nestfolio content was inspected and MI-004 remains blocked.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -87,7 +87,8 @@ correction is published at Nestfolio revision
 UNCONDITIONAL FAIL caused by its canonical-read-order deviation; Nestfolio
 remains unchanged. MI-003-R1 is separately complete with UNCONDITIONAL FAIL
 caused solely by its partial sixth canonical read and does not alter any
-historical result.
+historical result. MI-003-R2 is an unexecuted correction-only contract candidate
+and does not alter any historical result.
 
 ## Most recent execution result
 
@@ -149,6 +150,36 @@ preservation validation, and the twenty-two-addition manifest were not
 executed. The exact Nestfolio manifest is empty; rollback was not required.
 MI-003 remains its own immutable historical UNCONDITIONAL FAIL and all MI-002
 history remains byte-preserved.
+
+## Selected complete-read correction retry
+
+### MI-003-R2 — Segmented Canonical Complete-Read Correction Retry
+
+Status:
+
+```text
+finalized contract publication candidate
+authorized-not-started
+execution unauthorized
+Nestfolio uninspected and unchanged
+```
+
+MI-003-R2 retains the original objective, explicit human-selection boundary,
+conjunctive verdict, exact Nestfolio scope, S1-S10, F1-F12, validation,
+preservation, rollback, and prohibitions. Its sole correction defines one
+logical-path read session at a time and greedily segments readable UTF-8 content
+at code-point boundaries into payloads of at most 4096 bytes. Every segment requires exact envelopes,
+blob and SHA-256 identity, contiguous byte and line coverage, and explicit tool
+confirmation that output was not truncated, clipped, omitted, or elided.
+Program State is the first logical repository path and remains the sole path
+addressed until its complete proof closes. An incomplete response fails C1 and
+can never be credited as completion.
+
+The exact nine-path contract-authoring candidate is uncommitted and unstaged.
+No R2 execution, Nestfolio content read, candidate derivation, human selection,
+test, mutation, dependency operation, external write, Claude Code, Skill,
+commit, or push occurred. MI-003 and MI-003-R1 remain separate immutable
+UNCONDITIONAL FAIL results and all MI-002 history remains preserved.
 
 ## MI-001 result
 
@@ -392,8 +423,9 @@ Canonical report:
 19. MI-002-R2 — published; unconditional PASS; exact eight-path Nestfolio correction and eleven-path continuity-lab closure
 20. MI-003 — complete; unconditional FAIL caused by canonical read order; no Nestfolio content read or changed; no candidate or selection; immutable nine-path closure published
 21. MI-003-R1 — complete; unconditional FAIL caused by a partial sixth canonical read; no Nestfolio content read or changed
-22. MI-004 through MI-007 — blocked
-23. broader implementation and unrelated migration — blocked
+22. MI-003-R2 — finalized authorized-not-started contract publication candidate; sole correction is segmented canonical complete-read proof
+23. MI-004 through MI-007 — blocked
+24. broader implementation and unrelated migration — blocked
 
 ## Active blockers
 
@@ -403,7 +435,8 @@ Canonical report:
 - MI-002-R1 remains one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation; R2 does not repair or relabel it.
 - MI-002-R2 is published with UNCONDITIONAL PASS at exact Nestfolio correction revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 execution remain immutable history.
 - MI-003 is complete with UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State. Nestfolio remains uninspected and unchanged; no candidate or selection exists. MI-004 through MI-007 remain blocked.
-- MI-003-R1 is complete with UNCONDITIONAL FAIL caused solely by the partial sixth canonical read. Its nine-path failure closure requires separate publication; MI-003 and every original artifact remain immutable.
+- MI-003-R1 is complete and published with UNCONDITIONAL FAIL caused solely by the partial sixth canonical read; MI-003 and every original and R1 artifact remain immutable.
+- MI-003-R2 is finalized but uncommitted and unexecuted. Only its exact nine-path contract-authoring candidate may be published next; execution remains unauthorized and MI-004 remains blocked.
 - Level 2 reusable composition is active in published Nestfolio. Work, Context, Run, Assurance, and Learning remain unauthorized and absent; MI-003 created no Level 3 state.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
 - Broad or unrelated Nestfolio migration remains blocked.
@@ -478,5 +511,9 @@ Canonical report:
 - MI-003-R1 execution handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
 - MI-003-R1 execution-closure manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt`
 - MI-003-R1 report: `docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`
+- MI-003-R2 finalized correction-retry contract candidate: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml`
+- MI-003-R2 preserved future execution prompt: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/prompt.md`
+- MI-003-R2 publication handoff: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md`
+- MI-003-R2 contract-authoring manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/changed-files.txt`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file
