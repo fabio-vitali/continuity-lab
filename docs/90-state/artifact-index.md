@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; preserves MI-001 through MI-001C FAIL, records MI-001D PASS, and names uncontracted MI-001E as the sole selected iteration |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact post-MI-001D handoff: preserve both uncommitted working trees and require a separate reviewed MI-001E contract |
+| `README.md` | Ratified | Program | Repository orientation; preserves MI-001 through MI-001C FAIL, records MI-001D PASS, and names authorized-not-started MI-001E as the sole execution iteration |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact post-authorization handoff: verify the pushed MI-001E contract revision, then require a separate explicit execution instruction |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -23,7 +23,7 @@ superseded_by: null
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
 | `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and prepared MI-001 execution boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves VS evidence, MI-001 through MI-001C FAIL, the invalid candidate, the unsuccessful bounded recovery, and the authorized-not-started MI-001D contract position |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results and the MI-001D 1.0.1 PASS, and records the bounded authorized-not-started MI-001E validation position |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
@@ -31,7 +31,7 @@ superseded_by: null
 | `docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md` | Validated | Implementation | Canonical MI-001B report: repository bindings, supplied-archive metadata, original-output provenance failure, pre-installation stop, unchanged Nestfolio, unconditional FAIL, and MI-001C selection |
 | `docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md` | Validated | Implementation | Canonical MI-001C report: authorization, full bounded ledger, absent input/output and delivery chain, recorded deviations, unchanged Nestfolio, unconditional FAIL, and MI-001D selection |
 | `docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md` | Validated | Implementation | Canonical MI-001D report: deliberate new 1.0.1 identity, 19-asset lock, diagnostics/tests/failure/rollback evidence, unconditional PASS, and MI-001E selection |
-| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001C FAIL preserved, MI-001D PASS, MI-001E selected-contract-required, invocation and later work blocked |
+| `docs/90-state/program-state.md` | Ratified | Program | Active program truth: MI-001 through MI-001C FAIL preserved, MI-001D PASS, MI-001E authorized-not-started without an execution instruction, and MI-002 blocked |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -103,3 +103,7 @@ superseded_by: null
 | `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/prompt.md` | Ratified | Session | Preserved MI-001D execution instruction; usable only from the exact clean committed and pushed authorization revision after separate explicit user execution authorization |
 | `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md` | Validated | Session | Completed MI-001D PASS handoff with repository bindings, retained defect, new identity, validation, ZIP, blockers, and MI-001E continuation |
 | `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001D contract-authoring and authorization operation |
+| `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/context-pack.yaml` | Ratified | Session | Reviewed authorized-not-started MI-001E contract for two genuine invocation scenarios against the immutable 1.0.1 candidate; prohibits implementation changes, repository-work execution, and MI-002 authorization |
+| `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/prompt.md` | Ratified | Session | Preserved MI-001E execution instruction; usable only from the exact clean committed and pushed authorization revision after separate explicit user execution authorization |
+| `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md` | Draft | Session | Non-evidentiary placeholder confirming MI-001E is authorized-not-started without an execution instruction, unexecuted, and without result |
+| `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/changed-files.txt` | Validated | Session | Exact continuity-lab changed-file manifest for the MI-001E contract-authoring and authorization operation |

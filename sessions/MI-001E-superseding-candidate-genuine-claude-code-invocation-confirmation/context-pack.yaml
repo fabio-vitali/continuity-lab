@@ -1,0 +1,439 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-15
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+    - docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+    - sessions/MI-001-procedure-first-adoption/context-pack.yaml
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md
+    - sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml
+    - sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md
+  result: pending
+  execution_authorization_rule: >
+    The contract terms are reviewed and authorized with status
+    authorized-not-started, but MI-001E has no execution instruction and must
+    not start. Execution additionally requires this exact authorization to be
+    committed and pushed on clean continuity-lab main plus a separate explicit
+    user instruction to execute MI-001E. The contract-review ZIP, review,
+    authorization, commit, or push alone is not execution approval.
+  canonical_memory_rule: >
+    The committed continuity-lab repository is the only canonical product and
+    program memory. Nestfolio is the exact bounded implementation and evidence
+    target named by this contract, not an independent product or program
+    authority. Chat, prior executor memory, hidden Claude state, transcripts,
+    repository ZIPs, and remembered MI-001 or MI-001A output cannot supply
+    missing requirements or evidence.
+  contradiction_rule: >
+    Before any Nestfolio content inspection or mutation, a future executor must
+    stop if authorization, repository bindings, the MI-001D PASS closure,
+    candidate identity, blocked-work statements, or permitted scope conflict.
+    This preauthorization stop is not an MI-001E result.
+
+iteration:
+  id: MI-001E
+  name: Superseding Candidate Genuine Claude Code Invocation Confirmation
+  type: bounded-genuine-executor-validation
+  design_level: L7
+  product_experience_level: 1
+  status: authorized-not-started
+  completion_gate: unconditional-mi-001e-result
+  sole_purpose: >
+    Close only the genuine Claude Code invocation evidence obligation for the
+    exact active superseding 1.0.1 Level 1 candidate proven by MI-001D, without
+    redesigning or modifying the candidate, executing repository work selected
+    by backlog-next, creating Level 2-6 state, or authorizing MI-002.
+
+primary_question: >
+  Can two distinct genuine installed and authenticated Claude Code Sessions
+  first invoke the exact active nestfolio.backlog-next@1.0.1 Procedure through
+  its verified Level 1 boundary and then invoke the same current Skill directly
+  after Level 1 is disabled, while preserving the full 1.0.1 candidate,
+  repository content, truthful authority boundaries, and restored active state?
+
+missing_obligations:
+  C1: >
+    Genuine active Level 1 Claude Code invocation through the verified
+    nestfolio.level-1@1.0.1 boundary, including normal visible Skill result.
+  C3: >
+    Genuine direct current /backlog-next invocation in a fresh Claude Code
+    Session after Level 1 disable, followed by exact active-state restoration.
+
+canonical_preconditions:
+  - MA-001 remains complete with unconditional PASS and G5 remains valid.
+  - MI-001 remains complete with unconditional FAIL; C2, C4, C5, C6, and C7 remain preserved only as historical MI-001 execution facts.
+  - MI-001A remains complete with unconditional FAIL before delegation because the historical retained 1.0.0 candidate identity drifted.
+  - MI-001B and MI-001C remain complete with unconditional FAIL and no original-output recovery.
+  - MI-001D remains complete with unconditional PASS for one newly authored active 1.0.1 candidate and no invocation.
+  - The historical retained 1.0.0 candidate remains invalid and is not repaired, relabeled, recovered, or reconstructed.
+  - MI-001E is the sole authorized-not-started iteration; it has no execution instruction, has not executed, and its result is pending.
+  - MI-002 through MI-007 and all broader implementation or migration remain blocked.
+
+repository_bindings:
+  continuity_lab:
+    contract_authoring_baseline: 3a1dc31c338319d793aaee693423af7f6dcd5724
+    branch: main
+    required_execution_revision: >
+      The exact clean, reviewed, explicitly authorized, committed, and pushed
+      main revision derived from the MI-001D PASS closure baseline and
+      containing this MI-001E contract. Record the full revision. Prove HEAD,
+      refs/heads/main, upstream, refs/remotes/origin/main, and the remote main
+      ref are identical before reading repository content.
+  nestfolio:
+    required_start_revision: c7f9ceaf79d1703769d8175774268924119042f6
+    required_branch: main
+    required_state: >
+      Clean worktree and index at the exact published MI-001D post-review
+      revision, with HEAD, local main, upstream, refs/remotes/origin/main, and
+      the remote main ref identical before content inspection.
+    mi001d_start_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    mi001d_authorization_revision: f58d482b73a545b34f5f0cd100a5204bb0419a8f
+  remote_verification_rule: >
+    Read-only git ls-remote for refs/heads/main is permitted only to verify the
+    pushed bindings. Do not fetch, pull, install, browse, or query unrelated
+    remote content.
+  network_rule: >
+    Network use is prohibited except for the two read-only main-ref
+    verifications and the minimum authenticated Claude Code service traffic
+    required by the two genuine Sessions. Do not update Claude Code, log in
+    interactively, install dependencies, browse the web, or call any other
+    external service. If existing authentication is unavailable, fail rather
+    than changing credentials or broadening access.
+
+required_candidate_identity:
+  pack: nestfolio.level-1@1.0.1
+  procedure: nestfolio.backlog-next@1.0.1
+  entry_point: /backlog-next
+  bounded_arguments:
+    - --auto
+  behavior_authority: .claude/skills/backlog-next/**
+  asset_count: 19
+  lock_algorithm: SHA-256
+  skill:
+    sha256: e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1
+    bytes: 34126
+  aggregate_lock_digest: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+  activation: active
+  guarantee_level: 1
+  forbidden_guarantee_levels: [2, 3, 4, 5, 6]
+  provenance: newly-authored-after-mi001c-not-recovered-mi001-output
+  identity_rule: >
+    Before any genuine invocation, independently verify every identity field,
+    all actual regular files under the behavior-authority root, every lock path,
+    SHA-256, byte size, asset count, and the aggregate lock digest. Require no
+    missing or unenumerated asset and exactly one Pack, Procedure, binding, and
+    active activation. Any mismatch after valid execution start is MI-001E
+    UNCONDITIONAL FAIL. Do not repair it and do not invoke either scenario.
+
+required_executor:
+  product: Claude Code
+  availability: installed
+  authentication: already authenticated and able to start a genuine repository session
+  session_count: 2
+  session_rule: >
+    Use two separately started genuine Claude Code processes or product
+    Sessions with distinct observable Session identifiers. Scenario B must not
+    resume Scenario A or depend on its transcript, chat, hidden state, cache, or
+    unexported context.
+  required_provenance:
+    - exact Claude Code version output
+    - exact executable path and resolved binary identity
+    - exact command and working directory used to start each Session
+    - distinct Session identifiers and startup source or equivalent genuine-session provenance
+    - model identifier when observable
+    - existing authentication readiness without credentials or tokens
+    - UTC Session start, invocation, visible result, Session end, disable, restoration, and closure timestamps
+    - exact exit status and bounded relevant visible output for each invocation
+  stop_rule: >
+    If a real installed and already authenticated Claude Code executor,
+    distinct genuine Session provenance, or safe bounded output capture is
+    unavailable after valid execution start, issue MI-001E UNCONDITIONAL FAIL.
+    Do not substitute a shell harness, Node process, test adapter, mock,
+    simulation, fabricated transcript, or claim that the Skill would have run.
+
+scope_invariants:
+  - MI-001E validates the exact committed 1.0.1 candidate; it does not redesign, repair, upgrade, or reimplement it.
+  - .claude/skills/backlog-next/** remains executable and instruction behavior authority.
+  - the Pack manifest owns membership and declarations only.
+  - the Procedure contract owns identity, declared inputs and outputs, prerequisites, permissions, stop conditions, and result shape.
+  - the project binding owns only Nestfolio-specific path, repository prerequisites, and adapter mapping.
+  - the Pack lock owns exact selected asset paths and digests.
+  - the active Level 1 boundary and the direct-current route must invoke the same exact locked Skill with --auto.
+  - Claude Code hidden state, transcript, chat, provider cache, and unexported output are never canonical authority.
+  - neither invocation may execute the selected backlog task or modify repository work.
+  - no Level 2-6 guarantee, state, or canonical repository-work completion may be created, implied, or claimed.
+
+required_execution_sequence:
+  - id: metadata-authorization-and-clean-start
+    actions:
+      - use Git metadata only to verify both exact clean pushed repository bindings before reading repository content
+      - read docs/90-state/program-state.md as the first repository content
+      - read this Context Pack and prompt from the exact committed authorization revision
+      - confirm all canonical preconditions, blocked work, and prohibited actions
+      - capture tool versions, environment, and UTC execution start
+  - id: immutable-candidate-preflight
+    actions:
+      - capture exact clean status and protected-path hashes before evidence creation
+      - create a byte-exact temporary recovery copy of protected paths outside both repositories and record its manifest and digest
+      - independently verify the complete 1.0.1 identity and all 19 locked assets
+      - run doctor, inspect, verify, Level 1 tests, and backlog-next tests without installing dependencies
+      - prove active Level 1 guarantees and explicit Level 2-6 absence
+      - stop with unconditional FAIL before invocation on any candidate mismatch or regression
+  - id: scenario-a-active-level-1
+    actions:
+      - start genuine Claude Code Session A in the exact Nestfolio repository
+      - from that Session run the existing bounded continuity:invoke path with --auto and capture its exact /backlog-next --auto delegation
+      - in the same Session invoke exactly /backlog-next --auto
+      - capture the normal visible bounded Skill result and genuine Session provenance
+      - record that the Skill remained behavior authority and no selected repository work was executed
+      - end Session A before any disable action
+  - id: scenario-b-direct-current-after-disable
+    actions:
+      - capture a second clean/protected-path baseline excluding already-created MI-001E evidence
+      - disable Level 1 using only the existing continuity:disable activation mechanism
+      - prove the target boundary fails closed with LEVEL1_DISABLED and reports direct /backlog-next as the current route
+      - start a separately invoked fresh genuine Claude Code Session B with no Scenario A transcript dependency
+      - invoke exactly /backlog-next --auto directly
+      - capture the normal visible bounded Skill result and genuine Session provenance
+      - end Session B and restore active Level 1 using only continuity:activate
+      - rerun doctor, inspect, verify, tests, lock verification, hashes, and exact changed-file comparison
+  - id: single-result-and-closure
+    actions:
+      - issue exactly one MI-001E UNCONDITIONAL PASS or FAIL
+      - preserve or restore the exact active 1.0.1 candidate and every protected byte before closure
+      - write only contract-permitted deterministic evidence and continuity-lab closure
+      - generate complete repository ZIPs outside both repositories
+      - select exactly one next contract-required iteration under the conditional rule
+
+required_genuine_scenarios:
+  scenario_a:
+    id: active-level-1-invocation
+    exact_target_command: npm run -s continuity:invoke -- -- --auto
+    exact_skill_invocation: /backlog-next --auto
+    required_result:
+      - ready active Level 1 boundary and exact 1.0.1 identity
+      - structured delegation to /backlog-next --auto
+      - genuine same-Session Skill invocation
+      - normal visible bounded Skill result
+      - exact invocation and Session provenance
+      - no repository mutation except MI-001E evidence
+  scenario_b:
+    id: direct-current-invocation-after-disable
+    exact_disable_command: npm run -s continuity:disable
+    exact_disabled_probe: npm run -s continuity:invoke -- -- --auto
+    exact_skill_invocation: /backlog-next --auto
+    exact_restore_command: npm run -s continuity:activate
+    required_result:
+      - target invocation blocked with LEVEL1_DISABLED before Skill execution
+      - genuine direct invocation in a distinct fresh Session
+      - normal visible bounded Skill result
+      - exact invocation and Session provenance
+      - restored active 1.0.1 state and byte-exact protected content
+
+required_commands_and_outputs:
+  deterministic_commands:
+    - npm run -s continuity:doctor
+    - npm run -s continuity:inspect
+    - npm run -s continuity:verify
+    - npm run -s continuity:invoke -- -- --auto
+    - npm run -s continuity:disable
+    - npm run -s continuity:activate
+    - node --test tests/continuity-level-1.test.mjs
+    - node --test .claude/skills/backlog-next/test/*.test.mjs
+  rule: >
+    Capture every exact command actually used, including both Claude Code
+    Session-start commands and both genuine slash-command invocations.
+    Deterministic commands, unit tests, adapter output, or evidence JSON do not
+    themselves count as genuine executor evidence.
+
+preservation_checks:
+  protected_read_only_paths:
+    - .claude/skills/backlog-next/**
+    - CLAUDE.md
+    - continuity/level-1/README.md
+    - continuity/level-1/cli.mjs
+    - continuity/level-1/pack-lock.json
+    - continuity/level-1/pack-manifest.json
+    - continuity/level-1/procedure-contract.json
+    - continuity/level-1/project-binding.json
+    - continuity/level-1/src/**
+    - package.json
+    - tests/continuity-level-1.test.mjs
+    - continuity/evidence/mi-001a/**
+    - continuity/evidence/mi-001d/**
+    - all backlog content and state
+    - all current checks and validators
+    - all journal and runtime content
+    - all repository instructions, hooks, Skills, and application source not otherwise listed
+  temporary_exact_restoration:
+    - continuity/level-1/activation.json
+  required_before_after_proof:
+    - Git revision, branch, upstream, remote ref, index, and worktree comparison
+    - exact changed-file manifest
+    - SHA-256 and byte-size comparison for every protected regular file
+    - complete 19-asset lock and aggregate digest comparison
+    - Level 1 and backlog-next test parity
+    - exact active activation restoration
+  regression_rule: >
+    Any changed protected byte, unpermitted path, failed previously passing
+    check, lost direct behavior, false guarantee, repository-work execution, or
+    non-restored activation state is unconditional FAIL. Restore exact
+    pre-execution bytes without destructive Git history commands before closure;
+    do not fix or redesign the defect inside MI-001E.
+  failure_containment_rule: >
+    Before either Claude Code Session, create a byte-exact temporary recovery
+    copy outside both repositories for every protected path and activation.
+    If an unexpected tracked or untracked mutation occurs, issue unconditional
+    FAIL, restore only the exact affected paths from that copy, verify every
+    digest, and remove the temporary copy. Do not use Git checkout, restore,
+    reset, clean, stash, or history rewriting.
+
+admissible_evidence:
+  required:
+    - real Claude Code process or authenticated product Session output
+    - two distinct observable genuine Session identities
+    - machine-captured command, UTC time, exit, bounded stdout and stderr, and repository-revision records
+    - structured active-boundary and direct-invocation result records
+    - exact before and after manifests, hashes, lock identity, and activation proof
+    - normal visible bounded Skill results with no raw transcript dependency
+  insufficient_or_prohibited:
+    - unit tests alone
+    - mocks, simulations, or fabricated or manually rewritten transcripts
+    - adapter-only, shell-only, or Node-only invocation
+    - screenshots without machine-verifiable provenance
+    - hidden executor state, chat, transcript, or cache as authority
+    - execution of the backlog item selected by the Skill
+    - a claim that the Skill would have run
+
+criteria:
+  C1: >
+    PASS only when genuine Session A traverses the active exact 1.0.1 Level 1
+    boundary, invokes /backlog-next --auto, and returns its normal visible result.
+  C2: >
+    The complete exact 19-asset lock and aggregate digest remain independently
+    verified against the committed 1.0.1 candidate.
+  C3: >
+    PASS only when distinct fresh genuine Session B invokes /backlog-next
+    --auto directly after Level 1 disable and active 1.0.1 is then restored.
+  C4: No Level 2-6 state, guarantee, or canonical repository-work completion is created or claimed.
+  C5: Current content, checks, backlog-next behavior, and test parity remain unchanged.
+  C6: Procedure, Pack, binding, lock, activation, executor, and behavior authority remain observable and unambiguous.
+  C7: Disable, restoration, and any failure containment preserve exact protected bytes and Git history without state conversion.
+
+permitted_nestfolio_scope:
+  temporary_and_must_restore_exactly:
+    - continuity/level-1/activation.json
+  create:
+    - continuity/evidence/mi-001e/00-preflight-provenance.json
+    - continuity/evidence/mi-001e/01-candidate-identity-verification.json
+    - continuity/evidence/mi-001e/02-protected-path-hashes-before.json
+    - continuity/evidence/mi-001e/03-scenario-a-active-level1.json
+    - continuity/evidence/mi-001e/04-scenario-b-direct-disabled.json
+    - continuity/evidence/mi-001e/05-protected-path-hashes-after.json
+    - continuity/evidence/mi-001e/06-final-verdict.json
+    - continuity/evidence/mi-001e/commands/*.json
+  scope_rule: >
+    No implementation, Skill, instruction, Pack, Procedure, binding, lock,
+    adapter, service, test, package, dependency lock, backlog, check, journal,
+    runtime, hook, MI-001A evidence, or MI-001D evidence may change. Final
+    activation must be byte-exact active 1.0.1. Final changes may contain only
+    new deterministic MI-001E evidence files.
+  evidence_rule: >
+    Evidence must be deterministic JSON without credentials, tokens, secrets,
+    raw transcripts, full hidden prompts, unrelated repository content, or
+    unsupported assertions. Bounded visible Skill results and genuine Session
+    identifiers are permitted only to prove the contracted invocations.
+
+prohibited_actions:
+  - modify, repair, redesign, relock, reversion, or upgrade the 1.0.1 candidate
+  - invoke any Skill other than the two exact contracted /backlog-next --auto invocations
+  - execute the backlog task or any repository work selected by backlog-next
+  - run continuity:invoke outside Scenario A and the single disabled-state probe in Scenario B
+  - use more than two Claude Code Sessions or resume Scenario A for Scenario B
+  - inspect or depend on raw Claude transcripts, hidden prompts, chat history, or provider cache
+  - reconstruct, approximate, infer, extract, install, or claim recovery of the original MI-001 output
+  - install packages or modify package-lock.json or another dependency lock
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history in either repository
+  - modify any Nestfolio path outside the permitted execution scope
+  - create Level 2-6 state or guarantees
+  - authorize MI-002 or any broader work
+
+required_capture:
+  - exact commands in execution order with UTC start and end, exit status, bounded stdout, and stderr
+  - continuity-lab and Nestfolio revisions, branches, upstreams, remote refs, and start and end status
+  - Claude Code binary, version, authentication readiness, two distinct Session identities, startup sources, working directories, and model when observable
+  - exact 1.0.1 identity, all 19 lock entries, and independent aggregate computation
+  - explicit statement that 1.0.1 is newly authored and is not recovered MI-001 output
+  - exact active-boundary delegation and genuine Scenario A result
+  - exact disable, disabled probe, genuine Scenario B direct result, and restoration
+  - every C1-C7 result and explicit Level 2-6 absence
+  - exact protected hashes, test parity, final activation, and changed-file manifests
+  - temporary recovery-copy manifest, aggregate digest, restoration disposition, and deletion proof
+  - repository ZIP paths, entry counts, byte sizes, integrity results, and SHA-256 identities
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  pass_rule: >
+    Issue MI-001E UNCONDITIONAL PASS only if authorization and exact bindings
+    pass; the committed 1.0.1 identity and all 19 locked assets verify; genuine
+    Session A proves active Level 1 invocation and normal visible result;
+    distinct fresh genuine Session B proves direct current invocation after
+    disable and normal visible result; active 1.0.1 is restored byte-exactly;
+    C2, C4, C5, C6, and C7 remain valid; all final changes are permitted
+    deterministic evidence only; and no prohibited action occurs.
+  fail_rule: >
+    Any missing, failed, ambiguous, contradictory, inadmissible, skipped,
+    unexecuted, out-of-scope, or provenance-misrepresented required condition
+    after valid execution start requires MI-001E UNCONDITIONAL FAIL. No partial
+    credit or qualified PASS is permitted. Any temporary or unexpected mutation
+    must be restored to the exact start state before closure.
+  no_partial_credit: true
+
+permitted_execution_closure:
+  continuity_lab:
+    create:
+      - docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
+    modify:
+      - sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/context-pack.yaml
+      - sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md
+      - docs/90-state/program-state.md
+      - docs/90-state/artifact-index.md
+      - docs/70-implementation/README.md
+      - README.md
+      - CONTINUITY-NEXT-STEPS.md
+    rule: >
+      Preserve the original authorization terms and append the result. Replace
+      the unused handoff placeholder and create the canonical report only after
+      the unconditional result. Do not commit or push without separate approval.
+  external_output:
+    - continuity-workspace/output/MI-001E/continuity-lab-MI-001E-<result>-<UTC timestamp>.zip
+    - continuity-workspace/output/MI-001E/nestfolio-MI-001E-<result>-<UTC timestamp>.zip
+  no_other_closure_write: true
+
+next_iteration_rule:
+  on_pass: >
+    Record that MI-001D plus MI-001E jointly close the superseding Level 1
+    candidate and genuine-invocation evidence obligation. Select only MI-002 —
+    Reusable Pack Composition, status selected-contract-required, if and only if
+    the MI-001E evidence contains no unresolved Level 1 defect or authority
+    contradiction. Selection is not authorization; do not author, authorize, or
+    execute MI-002 inside MI-001E.
+  on_fail: >
+    Select only MI-001E-R1 — Superseding Candidate Genuine Claude Code
+    Invocation Confirmation Correction, status selected-contract-required,
+    unless the failure is an authorization contradiction that stopped before
+    MI-001E started. Do not select or authorize MI-002.
+
+required_outputs:
+  - exactly one unconditional MI-001E result after valid execution start
+  - completed Context Pack with appended immutable execution closure
+  - completed evidence-linked session handoff and canonical MI-001E report
+  - updated permitted canonical program artifacts
+  - deterministic Nestfolio MI-001E evidence and restored active 1.0.1 state
+  - exact continuity-lab and Nestfolio changed-file manifests
+  - complete repository ZIP deliverables under continuity-workspace/output/MI-001E
+  - exactly one selected contract-required next iteration

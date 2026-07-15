@@ -25,11 +25,11 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 
 **MI-001D — Retained Level 1 Candidate Deliberate Supersession completed with UNCONDITIONAL PASS.** It deliberately created one new active `nestfolio.level-1@1.0.1` / `nestfolio.backlog-next@1.0.1` candidate without recovering or reconstructing MI-001 output. All 19 assets, the fresh aggregate lock, diagnostics, Level 1 and backlog-next tests, mandatory failure fixtures, Level 2–6 absence, isolated disable/re-enable, and byte-exact rollback passed. No Skill or invocation ran.
 
-## Sole selected next iteration
+## Sole authorized next iteration
 
-**MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** is the sole selected next iteration with status `selected-contract-required`. It is not contracted, authorized, or executed.
+**MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** is the sole authorized execution iteration with status `authorized-not-started`. Its separate contract is reviewed and approved, but it has no execution instruction, has not executed, and its result is pending.
 
-Original-output reconstruction or recovery claims, MI-001E execution, MI-002 through MI-007, genuine invocation confirmation, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked pending their own reviewed authorization.
+The contract-review ZIP, review, authorization, commit, or push alone does not start MI-001E. Execution may begin only from the exact clean committed and pushed authorization revision after a separate explicit user instruction. Original-output reconstruction or recovery claims, MI-002 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
 
 ## Canonical starting points
 
@@ -50,6 +50,9 @@ Original-output reconstruction or recovery claims, MI-001E execution, MI-002 thr
 - MI-001D preserved future executable prompt: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/prompt.md`
 - MI-001D report: `docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md`
 - MI-001D completed handoff: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md`
+- MI-001E authorized-not-started contract: `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/context-pack.yaml`
+- MI-001E preserved future executable prompt: `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/prompt.md`
+- MI-001E unused handoff placeholder: `sessions/MI-001E-superseding-candidate-genuine-claude-code-invocation-confirmation/session-handoff.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

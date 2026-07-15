@@ -41,4 +41,4 @@ MI-001C closed without finding a directly verified canonical input archive, an a
 
 **MI-001D — Retained Level 1 Candidate Deliberate Supersession** is complete with UNCONDITIONAL PASS. Nestfolio revision `c7f9ceaf79d1703769d8175774268924119042f6` contains the active `1.0.1` candidate and deterministic evidence under `continuity/evidence/mi-001d/**`. The historical 1.0.0 defect and all earlier FAIL results remain preserved.
 
-**MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** is the sole selected next iteration with status `selected-contract-required`. It is not contracted or authorized. MI-002, genuine invocation, and broader implementation remain blocked.
+**MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** is the sole authorized execution iteration with status `authorized-not-started`. Its reviewed contract permits only two genuine Claude Code invocation scenarios against the exact immutable 1.0.1 candidate, but it has no execution instruction, has not executed, and its result is pending. MI-002 and broader implementation remain blocked.
