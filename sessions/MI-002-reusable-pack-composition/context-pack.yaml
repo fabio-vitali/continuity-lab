@@ -509,3 +509,18 @@ execution_closure:
     status: selected-contract-required
     authorized: false
     started: false
+
+publication_correction_status:
+  correction_iteration: MI-002-R1
+  result: unconditional-fail
+  reason: required canonical read order was not followed after valid execution start
+  nestfolio_revision: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+  nestfolio_mutated: false
+  evidence_regenerated: false
+  published_c7_discrepancy_resolved: false
+  selected_next_iteration:
+    id: MI-002-R2
+    title: Reusable Pack Composition Publication-Dependent C7 Correction Retry
+    status: selected-contract-required
+    authorized: false
+    started: false

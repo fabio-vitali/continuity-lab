@@ -183,12 +183,22 @@ are recorded in
 `continuity/evidence/mi-002/commands/04-final-changed-files.json`. Both are
 inside the contract maximum; there are no other changed paths.
 
+## Publication-dependent correction status
+
+MI-002-R1 closed with **UNCONDITIONAL FAIL** before pre-edit reproduction or
+any Nestfolio mutation. Its exact repository metadata gates passed, but the
+required canonical read order did not: `CONTINUITY-NEXT-STEPS.md` and then the
+R1 Context Pack were read before canonical `docs/90-state/program-state.md`.
+The conjunctive R1 verdict therefore required immediate failure. Nestfolio
+remains exact at published revision
+`cc4e772f0a74886caebd07cff9b5d69d8f12ab48`; no MI-002 evidence was regenerated,
+and the published 22/23 C7 discrepancy remains unresolved.
+
 ## Next iteration
 
-Exactly one next iteration is selected: **MI-003 — Bounded Local Work and
-Scope**, status `selected-contract-required`.
+Exactly one next iteration is selected: **MI-002-R2 — Reusable Pack Composition
+Publication-Dependent C7 Correction Retry**, status
+`selected-contract-required`.
 
-Selection is not authorization. MI-003 was not authored, authorized, or begun.
-Publication of the two MI-002 working trees requires a later separate explicit
-instruction. Until clean pushed reviewed revisions exist and Program State is
-reverified, MI-003 and all broader work remain blocked.
+Selection is not authorization. MI-002-R2 has not been authored, authorized,
+or started. MI-003 remains unauthorized and blocked, as does all broader work.

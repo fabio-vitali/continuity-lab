@@ -63,3 +63,16 @@ rerun the final bounded validation, review the diff, and only then commit and
 push each repository if the user explicitly authorizes publication. MI-003
 contract authoring remains blocked until publication is complete and Program
 State binds the resulting clean pushed revisions.
+
+## Publication-dependent correction disposition
+
+MI-002-R1 later closed with **UNCONDITIONAL FAIL** because its required
+canonical read order was not followed after valid execution start. It stopped
+before pre-edit reproduction and before any Nestfolio mutation. The exact
+published Nestfolio tree at
+`cc4e772f0a74886caebd07cff9b5d69d8f12ab48` remains unchanged, no MI-002
+evidence was regenerated, and the C7 publication discrepancy remains
+unresolved.
+
+MI-002-R2 is selected only as `selected-contract-required`; it is not authored,
+authorized, or started. MI-003 remains blocked.

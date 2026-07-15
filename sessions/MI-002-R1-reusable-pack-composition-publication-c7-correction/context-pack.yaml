@@ -263,3 +263,54 @@ completion_criteria:
   - no correction execution and no Nestfolio modification
   - exact contract-authoring changed-file manifest
   - publication handoff that requires a new control session
+
+execution_closure:
+  status: complete
+  result: MI-002-R1 UNCONDITIONAL FAIL
+  executed_on: 2026-07-15
+  authorization_revision: f46b12a02989c000069313e9178d4929ee38b4c2
+  valid_execution_start: true
+  repository_gates:
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: f46b12a02989c000069313e9178d4929ee38b4c2
+    nestfolio: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    nestfolio_exact_parent: 8f923240b6be1e0373b25b090f6be76139e4b256
+    branches_clean_pushed_and_aligned: true
+  failure:
+    stage: canonical-read-order
+    required_first: docs/90-state/program-state.md
+    observed_first: CONTINUITY-NEXT-STEPS.md
+    observed_second: sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/context-pack.yaml
+    disposition: required order not satisfied; conjunctive verdict forced unconditional fail
+  correction:
+    pre_edit_reproduction_executed: false
+    immutable_objects_verified: false
+    test_fixture_modified: false
+    validation_executed: false
+    evidence_regenerated: false
+  restoration:
+    required: false
+    reason: Nestfolio was never mutated
+    nestfolio_head: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    nestfolio_tree: ffd1f5726bf3d6d41034cabdaf5f3605a342a4d4
+    published_bytes_exact: true
+    staged_unstaged_untracked_changes: none
+  preservation:
+    production_level_2_modified: false
+    level_1_modified: false
+    package_json_modified: false
+    package_lock_json_created_or_modified: false
+    pack_procedure_lock_or_activation_modified: false
+    level_3_to_6_state_created: false
+    selected_backlog_executed: false
+    skill_or_claude_code_invoked: false
+    mi_003_authored_authorized_or_executed: false
+  canonical_changes:
+    nestfolio: none
+    continuity_lab_manifest: sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/execution-changed-files.txt
+  selected_next_iteration:
+    id: MI-002-R2
+    title: Reusable Pack Composition Publication-Dependent C7 Correction Retry
+    status: selected-contract-required
+    authorized: false
+    started: false
