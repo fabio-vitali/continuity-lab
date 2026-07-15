@@ -48,8 +48,17 @@ Context Pack was read before canonical Program State. The contract makes that
 ordering deviation an unconditional failure. Execution stopped before any
 Nestfolio content read or mutation; no candidate projection, human selection,
 Level 3 artifact, test, rebuild, or rollback scenario was executed. The exact
-nine-path continuity-lab failure closure is the next publication operation.
-MI-004 through MI-007 and broader work remain blocked.
+nine-path continuity-lab failure closure is published at exact continuity-lab
+revision `55e81e441e9e2facfda5382c3de57d1b8b3f5c9e`.
+
+**MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction
+Retry** is finalized, reviewed, and `authorized-not-started`. It preserves the
+MI-003 failure and all original objective and execution boundaries; its sole
+correction requires complete Program State as the first and only repository
+content in the first content-read operation, followed by serial complete reads
+in exact order. Contract publication is next. Execution, candidate selection,
+Nestfolio content inspection or mutation, MI-004, and broader work remain
+unauthorized.
 
 ## Canonical starting points
 
@@ -97,6 +106,10 @@ MI-004 through MI-007 and broader work remain blocked.
 - MI-003 contract-authoring manifest: `sessions/MI-003-bounded-local-work-and-scope/changed-files.txt`
 - MI-003 execution-closure manifest: `sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt`
 - MI-003 canonical report: `docs/70-implementation/mi-003-bounded-local-work-and-scope.md`
+- MI-003-R1 finalized correction-retry contract: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml`
+- MI-003-R1 preserved future execution prompt: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md`
+- MI-003-R1 contract handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
+- MI-003-R1 contract-authoring manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

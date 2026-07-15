@@ -61,5 +61,15 @@ The exact bindings and contract identity passed, but the canonical read order
 did not: the Context Pack was read before Program State. C1 failed and the
 conjunctive execution stopped before Nestfolio content read or mutation. No
 candidate, selection, Level 3 state, selected-work implementation, test,
-scenario, rebuild, return, or cancel exists. The exact nine-path continuity-lab
-closure is uncommitted and unstaged; its publication is the next operation.
+scenario, rebuild, return, or cancel exists. Its exact nine-path failure closure
+is published at continuity-lab revision
+`55e81e441e9e2facfda5382c3de57d1b8b3f5c9e`.
+
+**MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction
+Retry** is finalized, reviewed, and authorized-not-started. It preserves the
+original objective, selection boundary, conjunctive verdict, exact bindings,
+read/create/immutable boundaries, S1-S10, F1-F12, deterministic evidence,
+rollback, prohibitions, and immutable MI-003 result. The sole correction makes
+Program State the first and only repository content read after valid metadata
+gates and requires the remaining canonical sequence to be read serially and
+completely. Contract publication is next; execution and MI-004 remain blocked.

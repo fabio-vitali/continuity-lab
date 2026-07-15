@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry remains published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 result remain immutable. MI-003 — Bounded Local Work and Scope is complete with UNCONDITIONAL FAIL. Its exact repository and contract-identity gates passed, but the MI-003 Context Pack was read before canonical Program State, failing C1 under the conjunctive verdict. Execution stopped before any Nestfolio content read or mutation. No candidate projection, inclusion/exclusion rationale, human selection, Level 3 artifact, selected backlog implementation, test, scenario, rebuild, or rollback was executed. The exact nine-path continuity-lab failure closure is the next publication operation; MI-004 remains blocked.**
+**MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry remains published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 result remain immutable. MI-003 — Bounded Local Work and Scope remains one immutable UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State after valid gates; execution stopped before any Nestfolio content read or mutation. MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry is finalized, reviewed, and authorized-not-started from exact failure-closure revision `55e81e441e9e2facfda5382c3de57d1b8b3f5c9e`. It preserves the complete original MI-003 objective and boundaries and corrects only execution discipline by requiring Program State as the first and only repository content in the first content-read operation, followed by serial complete reads in exact order. Its exact nine-path contract publication is next; execution, candidate selection, Nestfolio content inspection or mutation, and MI-004 remain blocked.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -85,7 +85,8 @@ backlog-next 68/68, and regenerated only directly affected evidence. Its
 correction is published at Nestfolio revision
 `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`. MI-003 is complete with
 UNCONDITIONAL FAIL caused by its canonical-read-order deviation; Nestfolio
-remains unchanged.
+remains unchanged. MI-003-R1 is a separately finalized authorized-not-started
+retry contract and does not alter either historical result.
 
 ## Most recent execution result
 
@@ -113,8 +114,39 @@ Zero backlog source entries were read, no candidate identity or
 inclusion/exclusion rationale exists, and no human selection tuple was supplied,
 requested, inferred, or activated. C2-C7, S1-S10, F1-F12, all tests, rebuilds,
 return/cancel, and the twenty-two-addition manifest validation were not
-executed. The exact Nestfolio manifest is empty; rollback was not required.
-Publication of the nine-path continuity-lab closure is the sole next operation.
+executed. The exact Nestfolio manifest is empty; rollback was not required. The
+nine-path failure closure is published at exact continuity-lab revision
+`55e81e441e9e2facfda5382c3de57d1b8b3f5c9e` and remains immutable.
+
+## Selected correction retry
+
+### MI-003-R1 — Canonical Read-Order Correction Retry
+
+Status:
+
+```text
+finalized and reviewed
+authorized-not-started
+execution unauthorized
+publication next
+```
+
+MI-003-R1 is authored from exact published MI-003 failure-closure revision
+`55e81e441e9e2facfda5382c3de57d1b8b3f5c9e` and binds continuity-workspace
+`eb990e114973e42af9935379f6b13f34f2e5e3b8` and Nestfolio
+`fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`. It preserves MI-003 as one
+immutable UNCONDITIONAL FAIL and preserves all MI-002 history. Its sole
+correction requires complete canonical Program State to be the first and only
+repository content opened after all metadata gates pass and requires every
+remaining canonical read to occur one at a time, completely, in exact order.
+
+The retry preserves the original objective, explicit human-selection boundary,
+conjunctive verdict, exact Nestfolio binding, read/create/immutable boundaries,
+S1-S10, F1-F12, deterministic evidence, rollback, and prohibitions. It has not
+read Nestfolio content, inspected backlog sources, derived or selected a
+candidate, created Level 3 state, authorized selected-work implementation,
+invoked Claude Code or a Skill, changed dependencies, created external writes
+or Level 4-6 authority, or executed MI-004.
 
 ## MI-001 result
 
@@ -356,9 +388,10 @@ Canonical report:
 17. MI-002 — original execution complete; unconditional PASS at its exact execution condition; publication-dependent C7 reproducibility corrected by R2 candidate
 18. MI-002-R1 — complete; unconditional FAIL; canonical read order not followed; Nestfolio unchanged
 19. MI-002-R2 — published; unconditional PASS; exact eight-path Nestfolio correction and eleven-path continuity-lab closure
-20. MI-003 — complete; unconditional FAIL caused by canonical read order; no Nestfolio content read or changed; no candidate or selection; nine-path closure publication next
-21. MI-004 through MI-007 — blocked
-22. broader implementation and unrelated migration — blocked
+20. MI-003 — complete; unconditional FAIL caused by canonical read order; no Nestfolio content read or changed; no candidate or selection; immutable nine-path closure published
+21. MI-003-R1 — finalized and authorized-not-started; exact nine-path contract publication next; execution unauthorized
+22. MI-004 through MI-007 — blocked
+23. broader implementation and unrelated migration — blocked
 
 ## Active blockers
 
@@ -368,6 +401,7 @@ Canonical report:
 - MI-002-R1 remains one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation; R2 does not repair or relabel it.
 - MI-002-R2 is published with UNCONDITIONAL PASS at exact Nestfolio correction revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 execution remain immutable history.
 - MI-003 is complete with UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State. Nestfolio remains uninspected and unchanged; no candidate or selection exists. MI-004 through MI-007 remain blocked.
+- MI-003-R1 is finalized and authorized-not-started only. Its nine-path contract candidate must be published in a separate session before any fresh explicit execution instruction; MI-003 and every original artifact remain immutable.
 - Level 2 reusable composition is active in published Nestfolio. Work, Context, Run, Assurance, and Learning remain unauthorized and absent; MI-003 created no Level 3 state.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
 - Broad or unrelated Nestfolio migration remains blocked.
@@ -434,5 +468,9 @@ Canonical report:
 - MI-003 contract-authoring manifest: `sessions/MI-003-bounded-local-work-and-scope/changed-files.txt`
 - MI-003 execution-closure manifest: `sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt`
 - MI-003 report: `docs/70-implementation/mi-003-bounded-local-work-and-scope.md`
+- MI-003-R1 finalized correction-retry contract: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml`
+- MI-003-R1 preserved future execution prompt: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md`
+- MI-003-R1 contract handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
+- MI-003-R1 contract-authoring manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/changed-files.txt`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file
