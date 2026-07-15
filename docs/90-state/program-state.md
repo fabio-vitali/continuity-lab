@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction is complete with UNCONDITIONAL PASS. Two fresh genuine Claude Code Sessions have exact machine-captured process intervals and returned normal bounded `/backlog-next --auto` results through the active boundary and directly while disabled under the exact single-path containment. Exact active 1.0.1, all 3417 tracked bytes, and the Git index bytes and flags were restored. MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation. MI-002 is the sole selected iteration and is authorized-not-started. Its complete unchanged Level 2 reusable-composition contract has contract and execution authorization, but no separate execution instruction has been received and execution has not started.**
+**MI-002 — Reusable Pack Composition is complete with UNCONDITIONAL PASS. The immutable `nestfolio.level-1@1.0.1` Pack and its exact 19-asset `nestfolio.backlog-next@1.0.1` Procedure compose with one new local read-only `continuity.repository-tools@1.0.0` Pack and `continuity.repository-status@1.0.0` Procedure under exact aggregate lock `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26`. C1-C7, all ten success scenarios, all fifteen mandatory failures, atomic activation, neutral-fixture portability, and isolated byte-exact rollback/reapply pass. MI-003 is selected-contract-required only; it is not authorized or started.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -21,7 +21,7 @@ MI-001A executed Scenario A from the committed contract revision with a genuine 
 
 MI-001B executed from the reviewed contract revision and failed at the original-artifact provenance gate. The supplied archive SHA-256 was `0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb`; its ZIP comment was continuity-lab revision `47f89495ced69f464724c52967d077679cdec78a`, and its 115 entries contained 0 of the 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`. Nothing was extracted or installed, no Nestfolio evidence was created, and restoration was not applicable.
 
-MI-002 is authorized-not-started with result pending. The unchanged reviewed boundary composes immutable `nestfolio.level-1@1.0.1` only with one new local read-only reusable repository Procedure under an exact composed lock. It does not extract or promote Nestfolio behavior. The exact publication bindings are continuity-lab `555bea7c4c7d72c7c5070bf3517a6926564b5429` and Nestfolio `8f923240b6be1e0373b25b090f6be76139e4b256`. MI-003 through MI-007 and all broader work remain blocked. Original-output reconstruction or recovery claims remain prohibited. MI-002 cannot start without a later separate explicit execution instruction in a fresh control session.
+MI-002 is complete with unconditional PASS from continuity-lab execution binding `ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3` and Nestfolio execution binding `8f923240b6be1e0373b25b090f6be76139e4b256`. The active Level 2 lock contains exactly two Packs and two Procedures, no override, registry, or remote source. The new reusable Procedure is generic, local, read-only, and network-forbidden; no Nestfolio behavior was extracted or promoted. Exact Level 1 bytes and tests remain unchanged. MI-003 is selected-contract-required but remains unauthorized and unstarted; MI-004 through MI-007 and broader work remain blocked. Publication of both MI-002 working trees requires a separate explicit instruction.
 
 ## Gate history and current validity
 
@@ -36,6 +36,44 @@ MI-002 is authorized-not-started with result pending. The unchanged reviewed bou
 | G6 | passed; valid | combined VS-001 and VS-001A evidence |
 
 The MI-001 and MI-001A FAIL results do not revoke G5 or G6. MI-001D deliberate supersession plus MI-001E and MI-001E-R1 genuine-invocation evidence now close the Level 1 obligation without repairing, relabeling, reconstructing, or recovering the historical 1.0.0 output.
+
+## MI-002 result
+
+**MI-002 — Reusable Pack Composition: UNCONDITIONAL PASS.**
+
+```text
+C1 PASS — exact two-Pack/two-Procedure deterministic resolution
+C2 PASS — exact declarations, permissions, compatibility, file identities, and aggregate self-validation
+C3 PASS — read-only generic repository status in Nestfolio and a neutral Git fixture
+C4 PASS — all fifteen mandatory scenarios fail closed with typed diagnostics
+C5 PASS — immutable 1.0.1 Pack, Procedure, 19 assets, tests, evidence, and direct path preserved
+C6 PASS — authority, source, adapter, Git, route, and guarantees observable
+C7 PASS — CAS activation, history, comparison, isolated rollback/reapply, and no Level 3-6 state
+```
+
+Execution facts:
+
+- start bindings: continuity-workspace `eb990e114973e42af9935379f6b13f34f2e5e3b8`, continuity-lab `ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3`, Nestfolio `8f923240b6be1e0373b25b090f6be76139e4b256`;
+- active composition: `nestfolio.level-1@1.0.1` plus `continuity.repository-tools@1.0.0`;
+- Procedures: `nestfolio.backlog-next@1.0.1` plus `continuity.repository-status@1.0.0`;
+- exact active aggregate: `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26`;
+- selected cardinality: two Packs, two Procedures, zero overrides, zero registries, zero remote sources;
+- tests: MI-002 23/23, retained Level 1 14/14, backlog-next 68/68;
+- required scenarios: ten of ten success; fifteen of fifteen mandatory failures fail closed;
+- reusable execution: same schema in the bound repository and neutral Git fixture; zero repository writes and zero network requests;
+- preserved baseline: 19/19 exact assets, Level 1 aggregate `376c1d5a…ffe4`, Skill `e56fd21…24cd1` and 34126 bytes;
+- no dependency installation, `package-lock.json` change, selected backlog execution, Level 3-6 state, MI-001 recovery claim, commit, or push.
+
+Canonical report: `docs/70-implementation/mi-002-reusable-pack-composition.md`.
+Canonical Nestfolio evidence: `continuity/evidence/mi-002/**` in the uncommitted MI-002 working tree.
+
+## Selected next iteration
+
+**MI-003 — Bounded Local Work and Scope** is selected with status
+`selected-contract-required`. Selection is not authorization. MI-003 has not
+been authored, authorized, or started, and remains blocked until MI-002 is
+reviewed, published through a separate explicit instruction, and rebound in a
+fresh control session.
 
 ## MI-001 result
 
@@ -227,7 +265,7 @@ and backlog-next tests pass 68/68.
 Canonical report:
 `docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md`.
 
-## Sole selected next iteration
+## Recent completed correction
 
 ### MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction
 
@@ -274,18 +312,19 @@ Canonical report:
 14. MI-001D — complete; unconditional PASS; deliberate 1.0.1 supersession verified without invocation or recovery claim
 15. MI-001E — complete; unconditional FAIL; Scenario B produced no normal result and exact Session A start UTC is absent; active 1.0.1 restored
 16. MI-001E-R1 — complete; unconditional PASS; exact-timed active and direct-disabled genuine results; exact restoration
-17. MI-002 — complete unchanged reviewed contract; authorized-not-started; result pending
-18. MI-003 through MI-007 — blocked
-19. broader implementation and unrelated migration — blocked
+17. MI-002 — complete; unconditional PASS; exact reusable composition, activation, failure, and rollback evidence
+18. MI-003 — selected-contract-required; not authored, authorized, or started
+19. MI-004 through MI-007 — blocked
+20. broader implementation and unrelated migration — blocked
 
 ## Active blockers
 
 - The retained historical Nestfolio 1.0.0 candidate identity remains invalid; MI-001D did not relabel or repair it, and no recovery claim is permitted.
 - MI-001B and MI-001C provenance failures remain immutable history; the Level 1 closure relies only on deliberate 1.0.1 supersession and genuine evidence.
 - MI-001E remains historical UNCONDITIONAL FAIL; MI-001E-R1 corrects its two bounded evidence gaps without rewriting that result.
-- MI-002 has a complete unchanged reviewed contract and exact publication bindings; it is authorized-not-started, its inactive prompt cannot be used in this authorization session, and later execution requires a separate explicit instruction in a fresh control session.
-- MI-003 through MI-007 remain blocked.
-- No Level 2 reusable composition machinery has been created or started; Work, Context, Run, Assurance, and Learning remain unauthorized and absent.
+- MI-002 is complete with unconditional PASS, but both execution working trees remain uncommitted and unpushed pending a separate explicit publication instruction.
+- MI-003 is selected-contract-required only; it remains unauthorized and unstarted. MI-004 through MI-007 remain blocked.
+- Level 2 reusable composition is active in the uncommitted Nestfolio candidate. Work, Context, Run, Assurance, and Learning remain unauthorized and absent.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
 - Broad or unrelated Nestfolio migration remains blocked.
 - Nestfolio-specific behavior may not move into Framework Core without repeated cross-project evidence and a new Decision.
@@ -328,9 +367,11 @@ Canonical report:
 - MI-001E-R1 report: `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`
 - MI-001E-R1 Nestfolio evidence: `continuity/evidence/mi-001e-r1/**` at published revision `8f923240b6be1e0373b25b090f6be76139e4b256`, above exact execution binding `c5a54d04fe1d88e36fd6e466b62ae1e4d468d87a`
 - MI-001E-R1 contract-authoring manifest: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/changed-files.txt`
-- MI-002 authorized-not-started contract: `sessions/MI-002-reusable-pack-composition/context-pack.yaml`
-- MI-002 inactive future prompt: `sessions/MI-002-reusable-pack-composition/prompt.md`
-- MI-002 authorization handoff: `sessions/MI-002-reusable-pack-composition/session-handoff.md`
-- MI-002 authorization manifest: `sessions/MI-002-reusable-pack-composition/changed-files.txt`
+- MI-002 completed contract: `sessions/MI-002-reusable-pack-composition/context-pack.yaml`
+- MI-002 preserved inactive execution prompt: `sessions/MI-002-reusable-pack-composition/prompt.md`
+- MI-002 completion handoff: `sessions/MI-002-reusable-pack-composition/session-handoff.md`
+- MI-002 continuity-lab closure manifest: `sessions/MI-002-reusable-pack-composition/changed-files.txt`
+- MI-002 report: `docs/70-implementation/mi-002-reusable-pack-composition.md`
+- MI-002 Nestfolio evidence: `continuity/evidence/mi-002/**` in the uncommitted execution working tree based on `8f923240b6be1e0373b25b090f6be76139e4b256`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file

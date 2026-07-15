@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; records MI-001E-R1 PASS closure and authorized-not-started MI-002 |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | MI-002 authorization handoff requiring a separate later execution instruction |
+| `README.md` | Ratified | Program | Repository orientation; records MI-002 unconditional PASS and MI-003 selection without authorization |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | MI-002 publication handoff and exact next-session instruction |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -23,7 +23,7 @@ superseded_by: null
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
 | `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and authorized-not-started MI-002 boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results and records MI-001E-R1 PASS plus authorized-not-started, unexecuted MI-002 |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results and records MI-001E-R1 PASS plus completed MI-002 unconditional PASS |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
@@ -33,7 +33,8 @@ superseded_by: null
 | `docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md` | Validated | Implementation | Canonical MI-001D report: deliberate new 1.0.1 identity, 19-asset lock, diagnostics/tests/failure/rollback evidence, unconditional PASS, and MI-001E selection |
 | `docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md` | Validated | Implementation | Canonical MI-001E report: exact bindings, two genuine Sessions, C1–C7 results, unconditional FAIL, exact restoration, and MI-001E-R1 selection |
 | `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md` | Validated | Implementation | Canonical MI-001E-R1 report: exact intervals, two genuine normal results, one-path containment, C1–C7 PASS, exact restoration, and MI-002 selection only |
-| `docs/90-state/program-state.md` | Ratified | Program | Active truth: Level 1 closed; MI-002 authorized-not-started with result pending |
+| `docs/70-implementation/mi-002-reusable-pack-composition.md` | Validated | Implementation | Canonical MI-002 report: exact two-Pack/two-Procedure lock, read-only neutral reuse, all success/failure scenarios, rollback/reapply, C1–C7 PASS, and unconditional PASS |
+| `docs/90-state/program-state.md` | Ratified | Program | Active truth: MI-002 unconditional PASS; MI-003 selected-contract-required only |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -113,7 +114,7 @@ superseded_by: null
 | `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md` | Ratified | Session | Preserved exact MI-001E-R1 execution instruction used after clean pushed verification and separate explicit execution instruction |
 | `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md` | Validated | Session | Completed MI-001E-R1 PASS handoff with exact bindings, Sessions, containment, restoration, evidence, and MI-002 selection only |
 | `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for MI-001E-R1 contract authoring, review, and finalization |
-| `sessions/MI-002-reusable-pack-composition/context-pack.yaml` | Validated | Session | Complete unchanged authorized-not-started MI-002 Level 2 contract with exact publication bindings |
-| `sessions/MI-002-reusable-pack-composition/prompt.md` | Provisional | Session | Byte-preserved inactive future execution prompt; not used by the authorization session and insufficient without a separate execution instruction |
-| `sessions/MI-002-reusable-pack-composition/session-handoff.md` | Validated | Session | MI-002 authorization handoff preserving exact bindings, unchanged scope, and the separate execution boundary |
-| `sessions/MI-002-reusable-pack-composition/changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for MI-002 authorization and binding |
+| `sessions/MI-002-reusable-pack-composition/context-pack.yaml` | Validated | Session | Original reviewed MI-002 contract preserved with appended unconditional PASS closure, exact lock, validation, preservation, and MI-003 selection only |
+| `sessions/MI-002-reusable-pack-composition/prompt.md` | Provisional | Session | Byte-preserved inactive historical execution prompt; not used as authority without the separate received instruction |
+| `sessions/MI-002-reusable-pack-composition/session-handoff.md` | Validated | Session | MI-002 completion handoff with result, preservation, evidence, manifests, publication boundary, and MI-003 selection only |
+| `sessions/MI-002-reusable-pack-composition/changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for MI-002 execution closure |

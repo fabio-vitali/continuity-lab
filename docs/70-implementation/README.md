@@ -22,6 +22,7 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-001D — Retained Level 1 Candidate Deliberate Supersession** — **UNCONDITIONAL PASS**. One newly authored active 1.0.1 candidate verifies 19/19 assets, diagnostics, tests, mandatory failures, Level 2–6 absence, isolated disable/re-enable, and byte-exact rollback without invoking any Skill or claiming recovery of MI-001 output.
 - **MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** — **UNCONDITIONAL FAIL**. Scenario A proved the active Level 1 boundary and normal genuine Skill result. Scenario B genuinely invoked the Skill directly after disable, but current clean-tree preflight returned no normal result; exact Session A start UTC is also absent. Active 1.0.1 and all protected bytes were restored.
 - **MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** — **UNCONDITIONAL PASS**. Two fresh genuine Sessions have exact process intervals and normal active and direct-disabled results under the one-path containment. Active 1.0.1, protected bytes, and index metadata were restored exactly.
+- **MI-002 — Reusable Pack Composition** — **UNCONDITIONAL PASS**. One exact local lock composes immutable `nestfolio.level-1@1.0.1` with read-only `continuity.repository-tools@1.0.0`; C1-C7, ten success scenarios, fifteen mandatory failures, neutral reuse, atomic activation, and byte-exact rollback/reapply pass while Level 1 remains unchanged.
 
 Canonical reports:
 
@@ -33,6 +34,8 @@ Canonical reports:
 - `mi-001c-original-mi001-output-artifact-evidence-recovery.md`.
 - `mi-001d-retained-level-1-candidate-deliberate-supersession.md`.
 - `mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md`.
+- `mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`.
+- `mi-002-reusable-pack-composition.md`.
 
 ## Current implementation position
 
@@ -48,4 +51,4 @@ MI-001C closed without finding a directly verified canonical input archive, an a
 
 **MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** is complete with UNCONDITIONAL PASS. Exact-timed Sessions A and B returned normal bounded results; the disabled Scenario B used only the activation-file `skip-worktree` containment, and exact active 1.0.1 plus Git-index metadata were restored. MI-001D, MI-001E, and MI-001E-R1 jointly close the Level 1 obligation.
 
-**MI-002 — Reusable Pack Composition** has a complete unchanged reviewed Level 2 contract under `sessions/MI-002-reusable-pack-composition/` and is authorized-not-started. It composes the immutable 1.0.1 project Pack only with one new read-only generic repository Procedure and requires exact deterministic locking, self-validation, conflict/capability/permission failure, and rollback. No separate execution instruction has been received, MI-002 has not executed, and no implementation report or result exists. Broader implementation remains blocked.
+**MI-002 — Reusable Pack Composition** is complete with UNCONDITIONAL PASS. The active candidate lock aggregate is `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26`; MI-002 tests pass 23/23, retained Level 1 tests 14/14, and backlog-next tests 68/68. Deterministic evidence is under Nestfolio `continuity/evidence/mi-002/**`. MI-003 is selected-contract-required but is not authorized or started. Publication and broader implementation remain blocked pending separate instructions.

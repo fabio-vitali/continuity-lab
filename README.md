@@ -34,7 +34,11 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 Its deterministic Nestfolio evidence is published at exact revision
 `8f923240b6be1e0373b25b090f6be76139e4b256`.
 
-MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation. **MI-002 — Reusable Pack Composition** is the sole selected iteration and is authorized-not-started. Its complete unchanged Level 2 contract is bound to clean pushed continuity-lab publication revision `555bea7c4c7d72c7c5070bf3517a6926564b5429` and Nestfolio revision `8f923240b6be1e0373b25b090f6be76139e4b256`; no separate execution instruction has been received and execution has not started. The contract preserves immutable 1.0.1, composes it only with one new read-only generic repository Procedure, and keeps all Level 3–6 and broader work blocked. Original-output recovery claims, MI-003 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
+MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate and corrected genuine-invocation evidence obligation.
+
+**MI-002 — Reusable Pack Composition is complete with UNCONDITIONAL PASS.** The active candidate composes immutable `nestfolio.level-1@1.0.1` with one new generic read-only `continuity.repository-tools@1.0.0` Pack under exact aggregate lock `73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26`. All C1-C7 criteria, ten success scenarios, fifteen mandatory failures, neutral Git reuse, activation, and rollback/reapply pass. Level 1 remains exact; no Level 3-6 state exists.
+
+**MI-003 — Bounded Local Work and Scope** is the sole selected next iteration with status `selected-contract-required`. It is not authorized or started. The MI-002 working trees remain uncommitted and unpushed pending a separate explicit publication instruction. MI-004 through MI-007, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked.
 
 ## Canonical starting points
 
@@ -63,9 +67,10 @@ MI-001D, MI-001E, and MI-001E-R1 jointly close the superseding Level 1 candidate
 - MI-001E-R1 preserved execution prompt: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/prompt.md`
 - MI-001E-R1 completed handoff: `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/session-handoff.md`
 - MI-001E-R1 canonical report: `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`
-- MI-002 authorized-not-started contract: `sessions/MI-002-reusable-pack-composition/context-pack.yaml`
-- MI-002 inactive future prompt: `sessions/MI-002-reusable-pack-composition/prompt.md`
-- MI-002 contract handoff: `sessions/MI-002-reusable-pack-composition/session-handoff.md`
+- MI-002 completed contract: `sessions/MI-002-reusable-pack-composition/context-pack.yaml`
+- MI-002 preserved execution prompt: `sessions/MI-002-reusable-pack-composition/prompt.md`
+- MI-002 completion handoff: `sessions/MI-002-reusable-pack-composition/session-handoff.md`
+- MI-002 canonical report: `docs/70-implementation/mi-002-reusable-pack-composition.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

@@ -1,7 +1,7 @@
 CONTINUITY-NEXT-STEPS.md
 README.md
-docs/60-migration/README.md
 docs/70-implementation/README.md
+docs/70-implementation/mi-002-reusable-pack-composition.md
 docs/90-state/artifact-index.md
 docs/90-state/program-state.md
 sessions/MI-002-reusable-pack-composition/changed-files.txt
