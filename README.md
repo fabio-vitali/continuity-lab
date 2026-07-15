@@ -25,9 +25,9 @@ PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete.
 
 ## Sole selected next iteration
 
-**MI-001D — Retained Level 1 Candidate Deliberate Supersession** has status `selected-contract-required`. It is not authored, authorized, or executed.
+**MI-001D — Retained Level 1 Candidate Deliberate Supersession** is the sole authorized execution iteration with status `authorized-not-started`. Its separate contract is reviewed and approved, but it has no execution instruction, has not executed, and the earlier contract-review ZIP is not execution authorization.
 
-Candidate reconstruction, repair, installation, deliberate supersession, MI-002 through MI-007, genuine invocation confirmation, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked until a separate reviewed contract authorizes otherwise.
+Original-output reconstruction or recovery claims, MI-002 through MI-007, genuine invocation confirmation, broader implementation, Console work, universal integrations, hosted/commercial work, and broad Nestfolio migration remain blocked. MI-001D may start only from the exact clean committed and pushed authorization revision after a separate explicit user execution instruction.
 
 ## Canonical starting points
 
@@ -44,6 +44,8 @@ Candidate reconstruction, repair, installation, deliberate supersession, MI-002 
 - MI-001C report: `docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md`
 - MI-001C completed contract: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml`
 - MI-001C executable prompt: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md`
+- MI-001D authorized-not-started contract: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml`
+- MI-001D preserved future executable prompt: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/prompt.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

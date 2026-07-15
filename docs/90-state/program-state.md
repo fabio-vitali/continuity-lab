@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-001C — Original MI-001 Output Artifact Evidence Recovery is complete with UNCONDITIONAL FAIL. The bounded sources contained neither the directly verifiable canonical input archive nor the original MI-001 output or a proven byte-identical preserved copy. The only Git ZIP was an unrelated Nestfolio integration fixture, while a zero-byte non-archive file restored under `output/MI-001C` after execution start could not be pre-existing delivery evidence. MI-001D — Retained Level 1 Candidate Deliberate Supersession is the sole selected next iteration with status `selected-contract-required`; it is not authored, authorized, or executed.**
+**MI-001C — Original MI-001 Output Artifact Evidence Recovery is complete with UNCONDITIONAL FAIL. The bounded sources contained neither the directly verifiable canonical input archive nor the original MI-001 output or a proven byte-identical preserved copy. The only Git ZIP was an unrelated Nestfolio integration fixture, while a zero-byte non-archive file restored under `output/MI-001C` after execution start could not be pre-existing delivery evidence. MI-001D — Retained Level 1 Candidate Deliberate Supersession is the sole authorized execution iteration with status `authorized-not-started`; it has no execution instruction, has not executed, and its result is pending.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -21,7 +21,7 @@ MI-001A executed Scenario A from the committed contract revision with a genuine 
 
 MI-001B executed from the reviewed contract revision and failed at the original-artifact provenance gate. The supplied archive SHA-256 was `0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb`; its ZIP comment was continuity-lab revision `47f89495ced69f464724c52967d077679cdec78a`, and its 115 entries contained 0 of the 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`. Nothing was extracted or installed, no Nestfolio evidence was created, and restoration was not applicable.
 
-MI-002 through MI-007 and all broader work remain blocked. No genuine invocation confirmation, candidate reconstruction, candidate installation, or deliberate supersession is authorized. MI-001D requires a separate reviewed contract before any execution.
+MI-002 through MI-007 and all broader work remain blocked. No genuine invocation confirmation or original-output reconstruction or recovery claim is authorized. MI-001D execution may begin only from the exact clean committed and pushed authorization revision after a separate explicit user execution instruction; no such instruction exists yet, so no Nestfolio inspection or mutation may occur.
 
 ## Gate history and current validity
 
@@ -167,14 +167,15 @@ Canonical report: `docs/70-implementation/mi-001c-original-mi001-output-artifact
 Status:
 
 ```text
-selected-contract-required
-not authored
-not authorized
+authorized-not-started
+contract reviewed and approved
+result pending
+no execution instruction
 not executed
 sole selected next iteration
 ```
 
-MI-001D may be considered only through a separate reviewed contract. This closure does not reconstruct, supersede, install, or invoke the candidate.
+MI-001D is governed by the reviewed contract under `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/`. It deliberately defines a new version-distinct candidate rather than recovering or reconstructing the unavailable MI-001 output. The contract forbids Skill execution and invocation. Authorization does not itself start execution; a separate explicit user instruction is still required.
 
 ## Iteration queue
 
@@ -191,7 +192,7 @@ MI-001D may be considered only through a separate reviewed contract. This closur
 11. MI-001A — complete; unconditional FAIL; retained-candidate identity drift identified
 12. MI-001B — complete; unconditional FAIL; original-output provenance failed before extraction or installation; Nestfolio unchanged
 13. MI-001C — complete; unconditional FAIL; no directly verified input archive, admissible output, or delivery chain; Nestfolio unchanged
-14. MI-001D — selected-contract-required; not authored, authorized, or executed
+14. MI-001D — authorized-not-started; contract reviewed and approved; result pending; no execution instruction
 15. MI-002 through MI-007 — blocked
 16. broader implementation and unrelated migration — blocked
 
@@ -200,7 +201,7 @@ MI-001D may be considered only through a separate reviewed contract. This closur
 - The committed Nestfolio candidate identity is invalid: the delivered `SKILL.md` does not match the Pack lock; every Level 1 entry path fails closed with `ASSET_DIGEST_MISMATCH`.
 - MI-001B proved that the supplied archive is a continuity-lab source archive, not the original modified Nestfolio output; the required output artifact and exact recoverable bytes remain unavailable.
 - MI-001C found no admissible original output or proven preserved copy and could not directly verify the canonical input archive.
-- MI-001D is selected-contract-required but has no authored or authorized execution contract.
+- MI-001D is authorized-not-started but has no separate execution instruction and has not executed.
 - No candidate reconstruction, genuine invocation confirmation, `/backlog-next` invocation, or `continuity:invoke` command is authorized.
 - MI-002 through MI-007 remain blocked until the Level 1 evidence obligation is closed and Program State explicitly selects one next iteration.
 - No Level 2 reusable composition, Work, Context, Run, Assurance, or Learning machinery is authorized.
@@ -230,5 +231,8 @@ MI-001D may be considered only through a separate reviewed contract. This closur
 - MI-001C completed contract: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml`
 - MI-001C executable prompt: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md`
 - MI-001C handoff: `sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md`
+- MI-001D authorized-not-started contract: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml`
+- MI-001D preserved future executable prompt: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/prompt.md`
+- MI-001D unused handoff placeholder: `sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file

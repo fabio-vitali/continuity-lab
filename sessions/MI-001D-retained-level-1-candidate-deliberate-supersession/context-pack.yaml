@@ -1,0 +1,330 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-15
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+    - docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md
+    - docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md
+    - sessions/MI-001-procedure-first-adoption/context-pack.yaml
+    - sessions/MI-001-procedure-first-adoption/session-handoff.md
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md
+    - sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml
+    - sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md
+    - sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml
+    - sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md
+  result: pending
+  execution_authorization_rule: >
+    The contract terms are reviewed and authorized with status
+    authorized-not-started, but MI-001D has no execution instruction and must
+    not start. Execution additionally requires this exact authorization to be
+    committed and pushed on clean continuity-lab main plus a separate explicit
+    user instruction to execute MI-001D. The earlier contract-review ZIP is not
+    evidence of the canonical authorization commit, push, or execution approval.
+  canonical_memory_rule: >
+    The committed continuity-lab repository is the only canonical product and
+    program memory. Nestfolio is an execution target bound by canonical records,
+    not an independent product or program authority. Chat, prior executor
+    memory, the lost MI-001 archives, and the contract-review ZIP cannot supply
+    missing requirements or provenance.
+  contradiction_rule: >
+    Before any Nestfolio content inspection or mutation, a future executor must
+    stop if contract authorization, repository bindings, preserved historical
+    results, starting candidate identity, blocked-work statements, or permitted
+    scope conflict. This preauthorization stop is not an MI-001D result.
+
+iteration:
+  id: MI-001D
+  name: Retained Level 1 Candidate Deliberate Supersession
+  type: bounded-level-1-candidate-supersession
+  design_level: L6
+  product_experience_level: 1
+  status: authorized-not-started
+  completion_gate: unconditional-mi-001d-result
+  sole_purpose: >
+    Deliberately replace the invalid retained Level 1 candidate identity with a
+    new, independently authored, version-distinct and fully verified Level 1
+    candidate, without reconstructing or claiming recovery of the original
+    MI-001 output and without invoking the Procedure.
+
+primary_question: >
+  Can the invalid retained nestfolio.level-1@1.0.0 candidate be deliberately
+  superseded by one new truthful Level 1 candidate whose identity, exact asset
+  lock, authority boundaries, compatibility, failure behavior, and byte-exact
+  rollback are independently validated, while preserving every historical FAIL
+  and all Level 2-6 blocks?
+
+canonical_preconditions:
+  - MA-001 remains complete with unconditional PASS and G5 remains valid.
+  - MI-001 remains complete with unconditional FAIL; C2, C4, C5, C6, and C7 remain preserved only as historical MI-001 execution facts.
+  - MI-001A remains complete with unconditional FAIL before Skill invocation.
+  - MI-001B remains complete with unconditional FAIL at the original-output provenance gate before extraction or installation.
+  - MI-001C remains complete with unconditional FAIL after finding no directly verified input archive, admissible output, or delivery chain.
+  - The original MI-001 output is unavailable and must not be reconstructed, inferred, approximated, or claimed recovered.
+  - MI-001D is the sole authorized-not-started iteration; its result is pending and it has not executed.
+  - Genuine invocation confirmation, /backlog-next, continuity:invoke, MI-002 through MI-007, and broader work remain blocked.
+
+repository_bindings:
+  continuity_lab:
+    contract_authoring_baseline: 86bd2532c85c4cc9e412e0cbc770e0543646cd09
+    branch: main
+    required_execution_revision: >
+      The exact clean, reviewed, explicitly authorized, committed, and pushed
+      main revision derived from the MI-001C closure baseline and containing the
+      authorized MI-001D contract. Record the full revision. Prove HEAD,
+      refs/heads/main, upstream, and refs/remotes/origin/main are identical.
+  nestfolio:
+    required_start_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    required_branch: main
+    required_state: >
+      Clean worktree and index at the exact revision, with local main, upstream,
+      and origin/main identical. Do not fetch or otherwise refresh remotes.
+    retained_candidate_commit: b7d597ac5361d3c33b6f44a448373f3f9e79b8dc
+    evidence_only_closure_commit: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+  network_rule: >
+    Do not fetch, pull, browse, query remote services, install dependencies, or
+    use any network operation. Existing local remote-tracking refs may be read.
+
+retained_invalid_identity:
+  pack: nestfolio.level-1@1.0.0
+  procedure: nestfolio.backlog-next@1.0.0
+  entry_point: /backlog-next
+  behavior_authority: .claude/skills/backlog-next/**
+  asset_count: 19
+  recorded_aggregate_lock_digest: 7a4061778f9e89e98cc5c4e3c73ca9990ca4a71838f0cd7af245ffd4d2430602
+  expected_skill:
+    sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    bytes: 33928
+    availability: unavailable-original-output-bytes
+  delivered_skill:
+    sha256: 0de07500cad6a05ee14842edc4375a508d55beb7b318b1a387c0e2b99ff42620
+    bytes: 33164
+  defect: >
+    The committed Skill is byte-identical to the MI-001 source revision while
+    the coherent retained lock expects unavailable modified bytes. The retained
+    1.0.0 identity is invalid and must remain recorded as invalid.
+
+supersession_semantics:
+  identity_rule: >
+    The replacement must retain the Pack id nestfolio.level-1 and Procedure id
+    nestfolio.backlog-next but use a version strictly distinct from 1.0.0. The
+    required version for this bounded supersession is 1.0.1 for both Pack and
+    Procedure. Every manifest, contract, binding, activation record, diagnostic,
+    README, command result, and lock reference must agree on 1.0.1.
+  no_recovery_claim_rule: >
+    Version 1.0.1 is a new candidate authored after MI-001C. No byte, section,
+    digest, manifest, test, or behavior may be described as recovered,
+    restored, original, preserved, or byte-identical to the lost MI-001 output
+    unless the statement is only the historical fact that no such proof exists.
+  skill_rule: >
+    Start only from the exact committed 33164-byte Skill at the Nestfolio start
+    revision. If a visible Level 1 preflight block is required, author it anew
+    from the canonical Level 1 contract and mark it as MI-001D 1.0.1 content.
+    Do not derive wording from remembered or guessed lost bytes. Outside the
+    explicitly bounded new block, the existing Skill bytes and behavior must be
+    preserved unless a separately enumerated compatibility correction is
+    necessary and justified in the final evidence.
+  historical_identity_rule: >
+    Capture the complete pre-change 1.0.0 identity and relevant file digests in
+    MI-001D evidence before mutation. Git history remains the byte authority for
+    the retained invalid candidate. Never relabel or rewrite 1.0.0 as valid.
+  activation_rule: >
+    The delivered successful candidate is active at Level 1 and resolves only
+    nestfolio.level-1@1.0.1 / nestfolio.backlog-next@1.0.1. A disabled or mixed
+    version state cannot pass.
+
+required_candidate_guarantees:
+  present:
+    - exact Procedure, Pack, project-binding, repository, and executor-asset identity
+    - complete SHA-256 lock for every regular file under .claude/skills/backlog-next/**
+    - declared prerequisites, permissions, capabilities, and /backlog-next entry point
+    - truthful visible Level 1 guarantee card and activation diagnostic
+    - fail-closed handling for missing, mismatched, duplicate, corrupt, tampered, or unenumerated assets
+    - explicit disable and byte-exact rollback behavior without state conversion
+  absent:
+    - reusable multi-Pack composition or Level 2 resolution
+    - Work, WorkSelection, Working Set, Scope, or completion-criteria authority
+    - Context Pack formation or execution authority
+    - Session, Run, Checkpoint, Handoff, lease, or effect state
+    - Assurance, Evidence, Guard, Waiver, or completion authority
+    - Decision, Observation, Lesson, Change Proposal, or learning authority
+    - Console, hosted service, universal integration, RBAC, analytics, billing, or commercial control plane
+
+permitted_nestfolio_scope:
+  modify_if_required:
+    - .claude/skills/backlog-next/SKILL.md
+    - CLAUDE.md
+    - continuity/level-1/README.md
+    - continuity/level-1/activation.json
+    - continuity/level-1/cli.mjs
+    - continuity/level-1/pack-lock.json
+    - continuity/level-1/pack-manifest.json
+    - continuity/level-1/procedure-contract.json
+    - continuity/level-1/project-binding.json
+    - continuity/level-1/src/application-service.mjs
+    - continuity/level-1/src/claude-code-adapter.mjs
+    - continuity/level-1/src/core.mjs
+    - continuity/level-1/src/repository-infrastructure.mjs
+    - package.json
+    - tests/continuity-level-1.test.mjs
+  create:
+    - continuity/evidence/mi-001d/supersession-record.json
+    - continuity/evidence/mi-001d/validation-result.json
+    - continuity/evidence/mi-001d/commands/*.json
+  scope_rule: >
+    Change the smallest subset needed. Every changed path must be in this list
+    and must be justified by the 1.0.1 supersession or its deterministic
+    evidence. No backlog, check, journal, runtime, dependency lockfile, unrelated
+    Skill, or application source may change. Do not commit or push Nestfolio.
+  evidence_rule: >
+    Evidence files must be deterministic JSON without transcripts, secret data,
+    raw Skill contents, or assertions unsupported by captured commands.
+
+required_execution_sequence:
+  - id: authorization-and-clean-start
+    actions:
+      - read docs/90-state/program-state.md first
+      - read this Context Pack and prompt from the exact authorized continuity-lab revision
+      - verify both repository bindings and clean states before inspection or mutation
+      - confirm the four unconditional FAIL results and every blocked-work statement
+      - capture tool versions and UTC start time
+  - id: baseline-identity-capture
+    actions:
+      - independently verify the retained 1.0.0 identity fields and all 19 lock entries
+      - verify the coherent aggregate lock digest and the one delivered Skill mismatch
+      - capture protected-path hashes and exact pre-change Git status
+      - prove no original MI-001 artifact or recovered-byte claim is being used
+  - id: author-new-superseding-candidate
+    actions:
+      - create only the deliberate 1.0.1 identity defined by this contract
+      - author any required visible Level 1 Skill preflight as new MI-001D content
+      - compute a fresh exact 19-asset lock from final 1.0.1 behavior-authority bytes
+      - update all bounded identity and diagnostic surfaces consistently
+      - preserve Level 2-6 absence and current backlog-next procedure behavior
+  - id: deterministic-validation
+    actions:
+      - independently recompute every asset SHA-256, byte size, count, and aggregate lock digest
+      - run doctor, inspect, and verify only; do not run invoke
+      - run the Level 1 test suite and existing backlog-next test suite without installing dependencies
+      - exercise every mandatory failure fixture in an isolated temporary copy outside Nestfolio and delete it after capture
+      - prove disable and re-enable in the isolated copy only
+      - prove forbidden higher-level claims fail closed
+  - id: rollback-proof
+    actions:
+      - use the isolated copy to prove removal or rollback restores exact pre-MI-001D protected bytes and no state conversion occurs
+      - leave the Nestfolio working tree with the active 1.0.1 candidate only when every validation passes
+      - on any failure after mutation, restore exact pre-execution Nestfolio bytes and retain no untracked evidence or temporary files
+  - id: single-result-and-closure
+    actions:
+      - issue exactly one MI-001D UNCONDITIONAL PASS or FAIL
+      - after the result, write only the contract-permitted continuity-lab closure
+      - generate the required repository ZIPs outside both repositories
+      - select exactly one next contract-required iteration under the conditional rule
+
+mandatory_validation:
+  success_checks:
+    - 1.0.1 identity is consistent across every declared surface
+    - all 19 assets verify by independent path, SHA-256, byte-size, and aggregate checks
+    - doctor, inspect, and verify return ready with a truthful Level 1 card
+    - deterministic Level 1 tests pass
+    - existing backlog-next baseline is not worsened; environment-only failures must be byte-for-byte and count-for-count equivalent before and after
+    - disable, re-enable, and rollback are proven only in an isolated copy
+    - final Nestfolio diff is confined to the permitted manifest
+  required_failures:
+    - original 1.0.0 retained state fails closed with the recorded Skill digest mismatch
+    - missing primary asset
+    - locked asset digest or byte-size mismatch
+    - aggregate lock digest tamper
+    - missing declared prerequisite or repository identity mismatch
+    - duplicate Procedure id/version
+    - duplicate asset source
+    - corrupt lock
+    - unenumerated or partially locked asset
+    - mixed 1.0.0 and 1.0.1 identity
+    - forbidden Level 2-6 or completion claim
+    - disabled activation
+
+prohibited_actions:
+  - reconstruct, approximate, infer, extract, install, or claim recovery of the original MI-001 output
+  - use the expected 9ff3b13c digest as proof that newly authored bytes are original
+  - invoke Claude Code, /backlog-next, continuity:invoke, any Skill, or any executor simulation presented as genuine invocation
+  - install packages or modify package-lock.json or another dependency lock
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history in either repository
+  - modify any Nestfolio path outside the permitted scope
+  - create Level 2-6 state or guarantees
+  - authorize MI-002 or broader work
+
+required_capture:
+  - exact commands in execution order with UTC start/end, exit status, stdout, and stderr
+  - continuity-lab and Nestfolio revisions, branches, upstreams, and start/end status
+  - pre-change 1.0.0 identity and protected-path digests
+  - exact authored 1.0.1 identity, final 19-entry lock, and independent aggregate computation
+  - explicit statement that 1.0.1 is newly authored and is not recovered MI-001 output
+  - every success and required-failure result
+  - baseline and post-change backlog-next test comparison
+  - isolated disable, re-enable, and byte-exact rollback proof
+  - exact final changed-file manifests and repository ZIP identities
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  pass_rule: >
+    Issue MI-001D UNCONDITIONAL PASS only if authorization and bindings pass;
+    the retained 1.0.0 defect is independently reproduced; one new 1.0.1
+    identity is deliberately authored without a recovery claim; all identity
+    surfaces agree; all 19 final assets and the fresh aggregate lock verify;
+    every success and required-failure check passes; Level 2-6 absence,
+    compatibility, authority, isolated disable/re-enable, exact rollback, and
+    scoped final changes are proven; and no prohibited action occurs.
+  fail_rule: >
+    Any missing, failed, ambiguous, contradictory, unexecuted, out-of-scope, or
+    provenance-misrepresented required condition after valid execution start
+    requires MI-001D UNCONDITIONAL FAIL. No partial credit or qualified PASS is
+    permitted. After mutation, FAIL additionally requires exact restoration of
+    the Nestfolio start state before closure.
+  no_partial_credit: true
+
+permitted_execution_closure:
+  continuity_lab:
+    create:
+      - docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+    modify:
+      - sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/context-pack.yaml
+      - sessions/MI-001D-retained-level-1-candidate-deliberate-supersession/session-handoff.md
+      - docs/90-state/program-state.md
+      - docs/90-state/artifact-index.md
+      - docs/70-implementation/README.md
+      - README.md
+      - CONTINUITY-NEXT-STEPS.md
+    rule: >
+      Preserve the original authorization terms and append the result. Replace
+      the unused handoff placeholder and create the canonical report only after
+      the unconditional result. Do not commit or push without separate approval.
+  external_output:
+    - continuity-workspace/output/MI-001D/continuity-lab-MI-001D-<result>-<UTC timestamp>.zip
+    - continuity-workspace/output/MI-001D/nestfolio-MI-001D-<result>-<UTC timestamp>.zip on PASS only
+  no_other_closure_write: true
+
+next_iteration_rule:
+  on_pass: >
+    Select only MI-001E — Superseding Candidate Genuine Claude Code Invocation
+    Confirmation, status selected-contract-required. MI-001E must receive a
+    separate reviewed contract. Do not authorize or execute it in MI-001D, and
+    do not authorize MI-002.
+  on_fail: >
+    Select only MI-001D-R1 — Retained Level 1 Candidate Deliberate Supersession
+    Correction, status selected-contract-required, unless the failure is an
+    authorization contradiction that stopped before MI-001D started. Do not
+    select invocation confirmation or MI-002.
+
+required_outputs:
+  - exactly one unconditional MI-001D result after valid execution start
+  - completed Context Pack with appended immutable execution closure
+  - completed session handoff and canonical MI-001D report
+  - updated permitted canonical program artifacts
+  - exact continuity-lab and Nestfolio changed-file manifests
+  - complete repository ZIP deliverables under continuity-workspace/output/MI-001D
+  - exactly one selected contract-required next iteration
