@@ -39,17 +39,25 @@ External systems remain authoritative for their objects. Nestfolio-specific beha
 
 Every slice has explicit compatibility, coexistence, authority, validation, Evidence, rollback, abandonment, recovery, cutover, deprecation, retirement, and exclusions in `migration-plan.md`.
 
-## Current authorization
+## Current contract position
 
-The **MI-001 contract is prepared**. MI-001 remains the sole authorized iteration, but execution is permitted only after review and commit and only in a separate fresh session using the exact prompt.
+MI-001 through MI-001E-R1 are complete with their historical results preserved.
+The **MI-002 contract is complete and reviewed**, but neither contract nor
+execution authorization exists. Its exact Level 2 boundary is recorded in
+`../../sessions/MI-002-reusable-pack-composition/context-pack.yaml`.
 
 ```text
-MI-001: authorized-not-started; contracted; not executed
-execution in this session: blocked
-execution after reviewed commit: fresh session only
-MI-002 through MI-007: blocked
+MI-002: reviewed-not-authorized; not executed
+authorization in this session: prohibited
+execution in this session: prohibited
+MI-003 through MI-007: blocked
 ```
 
-No migration slice was executed by MA-001. No implementation artifact was created or modified.
+The reviewed contract composes exact local Pack versions only. It introduces no
+Work, Context, Run, Assurance, Learning, remote registry, dependency solver, or
+broader migration authority.
 
-The contract selects `nestfolio.backlog-next` at `/backlog-next` as the single Level 1 Procedure. The exact review, commit, ZIP, and fresh-session execution procedure is in `../../CONTINUITY-NEXT-STEPS.md`.
+The next permitted operation requires a separate user instruction and is limited
+to publication of the reviewed contract without authorization. Exact binding,
+authorization, and execution remain later separate operations. The exact
+handoff is in `../../CONTINUITY-NEXT-STEPS.md`.

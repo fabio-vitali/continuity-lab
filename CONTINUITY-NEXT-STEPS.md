@@ -1,4 +1,4 @@
-# Continuity — Post-MI-001E-R1 Handoff
+# Continuity — Reviewed MI-002 Contract Handoff
 
 ## Current state
 
@@ -12,26 +12,40 @@
   candidate and corrected genuine-invocation evidence obligation.
 - Exact active 1.0.1, all protected bytes, and Git-index bytes and flags were
   restored after two exact-timed fresh genuine Claude Code Sessions.
-- MI-002 — Reusable Pack Composition is the sole
-  `selected-contract-required` next iteration.
-- MI-002 is not authored, authorized, or executed. Selection is not
-  authorization.
+- MI-002 — Reusable Pack Composition remains the sole selected iteration.
+- Its complete Level 2 contract is reviewed under
+  `sessions/MI-002-reusable-pack-composition/`.
+- MI-002 is not authorized or executed. Contract review is not authorization.
+
+## Reviewed contract boundary
+
+The reviewed contract composes the immutable
+`nestfolio.level-1@1.0.1` / `nestfolio.backlog-next@1.0.1` project Pack with one
+new local reusable Pack, `continuity.repository-tools@1.0.0`, containing only
+read-only `continuity.repository-status@1.0.0`. It requires exact local locking,
+self-validation, deterministic resolution, compatibility, permission,
+capability, conflict, deprecation, atomic activation, comparison, and rollback.
+
+No Nestfolio behavior is extracted or promoted. Work, Scope, Context, Run,
+Assurance, Decision, Learning, remote registries, dependency solvers, Console,
+hosted services, and broader migration remain outside the contract.
 
 ## What may happen next
 
-The next operation, if the user separately requests it, may author a bounded
-MI-002 contract in a fresh control session. Contract authoring must begin from
-clean pushed repository verification and Program State, preserve every
-historical MI-001 through MI-001E-R1 result, and remain within the migration
-architecture's Level 2 composition boundary.
+Only if the user separately requests it, the next operation is a
+**publication-only control session**. It may review this exact ten-path diff,
+commit it, and push it. Publication must leave MI-002
+`reviewed-not-authorized`; it must not inspect Nestfolio or alter the contract
+boundary.
 
-Contract authoring, review, commit, or push alone must not authorize or execute
-MI-002. A later execution would require its own reviewed final contract,
-published bindings, and separate explicit execution instruction.
+After publication, a different fresh control session may bind exact clean pushed
+revisions and authorize the unchanged contract only under another explicit user
+instruction. A third separate instruction would still be required to execute
+MI-002. Review, commit, push, binding, and authorization do not execute it.
 
 ## Work that remains blocked
 
-- execution of MI-002 without a separately reviewed and authorized contract;
+- authorization or execution of MI-002 without a separate explicit user instruction and exact publication bindings;
 - MI-003 through MI-007 and broader migration;
 - any selected Nestfolio backlog task or unrelated repository work;
 - modification, repair, relabeling, relocking, or redesign of immutable 1.0.1;
@@ -41,6 +55,12 @@ published bindings, and separate explicit execution instruction.
 
 ## Canonical artifacts
 
+- reviewed MI-002 Context Pack:
+  `sessions/MI-002-reusable-pack-composition/context-pack.yaml`;
+- inactive future MI-002 prompt:
+  `sessions/MI-002-reusable-pack-composition/prompt.md`;
+- reviewed MI-002 contract handoff:
+  `sessions/MI-002-reusable-pack-composition/session-handoff.md`;
 - completed MI-001E-R1 Context Pack:
   `sessions/MI-001E-R1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction/context-pack.yaml`;
 - preserved MI-001E-R1 execution prompt:

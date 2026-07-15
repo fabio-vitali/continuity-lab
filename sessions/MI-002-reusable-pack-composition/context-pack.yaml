@@ -1,0 +1,467 @@
+contract:
+  status: reviewed-not-authorized
+  authored_on: 2026-07-15
+  reviewed_on: 2026-07-15
+  contract_authorized: false
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  result: pending
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - docs/30-target-architecture/target-architecture.md
+    - docs/40-product-experience/product-experience.md
+    - docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+    - docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
+    - docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md
+  authorization_rule: >
+    This is a complete reviewed contract, not an authorization. It must not be
+    executed merely because it exists, is reviewed, is committed, or is pushed.
+    A later control operation must separately verify and record exact clean
+    pushed repository bindings, change contract_authorized and
+    execution_authorized only under explicit user authority, and provide a
+    separate execution instruction. Until then, prompt.md is inactive.
+
+iteration:
+  id: MI-002
+  name: Reusable Pack Composition
+  type: bounded-migration-implementation
+  design_level: L6
+  product_experience_level: 2
+  status: reviewed-not-authorized
+  completion_gate: unconditional-mi-002-decision
+
+objective:
+  primary_question: >
+    Can the proven immutable nestfolio.level-1@1.0.1 Pack and its
+    nestfolio.backlog-next@1.0.1 Procedure be composed predictably with one new
+    reusable read-only repository Procedure under an exact workspace lock, with
+    deterministic compatibility, permission, capability, conflict, digest,
+    self-validation, comparison, activation-history, and rollback behavior,
+    without introducing Work, Context, Run, Assurance, Learning, a registry
+    service, or Nestfolio semantics into reusable code?
+  independent_value: >
+    A maintainer can inspect one composed Level 2 lock, identify the exact
+    source and permissions of both Procedures, resolve each identity to one
+    exact executor asset, run the reusable read-only Procedure, and return
+    atomically to the proven Level 1 lock without hidden drift.
+
+canonical_inputs:
+  required_read_order:
+    - docs/90-state/program-state.md
+    - sessions/MI-002-reusable-pack-composition/context-pack.yaml
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - decisions/DR-0016-pack-manifests-procedures-and-executor-assets.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - docs/30-target-architecture/target-architecture.md
+    - docs/40-product-experience/product-experience.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+    - docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md
+    - docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md
+    - docs/70-implementation/mi-001d-retained-level-1-candidate-deliberate-supersession.md
+    - docs/70-implementation/mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md
+    - docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md
+    - docs/90-state/artifact-index.md
+  history_rule: >
+    MI-001, MI-001A, MI-001B, MI-001C, and MI-001E remain immutable
+    unconditional FAIL results. MI-001D and MI-001E-R1 remain immutable
+    unconditional PASS results. MI-002 may consume their factual evidence but
+    may not repair, relabel, reconstruct, supersede, or re-grade any result.
+
+publication_bindings:
+  continuity_lab:
+    required_branch: main
+    reviewed_source_revision: 89cb37decc19067e8e0c1a1771b335e4889c4db1
+    future_authorization_revision: unset
+    rule: >
+      Before any later authorization or execution, Git metadata must prove a
+      clean pushed main at one exact revision containing this reviewed contract
+      and its control-artifact updates. The exact revision must be inserted by a
+      separately authorized control operation; no self-reference is required in
+      this reviewed, uncommitted contract.
+  nestfolio:
+    canonical_evidence_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
+    future_execution_revision: unset
+    source_of_binding: >
+      Program State and the validated MI-001E-R1 report identify this as the
+      published revision containing the exact restored active 1.0.1 candidate
+      and deterministic MI-001E-R1 evidence.
+    access_now: prohibited
+    future_access_rule: >
+      This contract-authoring operation grants no Nestfolio inspection or
+      modification authority. A later explicit authorization may permit only
+      the bounded read and write paths declared below, after Git metadata proves
+      the exact clean pushed revision and before repository content is read.
+  unresolved_binding_blocks_execution: true
+
+retained_level_1_baseline:
+  pack: nestfolio.level-1@1.0.1
+  procedure: nestfolio.backlog-next@1.0.1
+  entry_point: /backlog-next
+  behavior_authority: .claude/skills/backlog-next/**
+  asset_count: 19
+  lock_algorithm: SHA-256
+  skill_sha256: e56fd21ae6bb53dfdd2d5d0d239a0200d49d69c82bb171f3336b837a91124cd1
+  skill_bytes: 34126
+  aggregate_lock_digest: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+  provenance: newly authored MI-001D 1.0.1 candidate; never recovered MI-001 output
+  preservation_rule: >
+    The Pack version, Procedure version, 19 behavior-authority assets, individual
+    digests and sizes, aggregate digest, objective, prerequisites, permissions,
+    and /backlog-next mapping are immutable inputs. MI-002 may reference them in
+    a new composed lock but may not edit, relock, reversion, copy as a new
+    identity, or claim to improve them.
+
+selected_level_2_composition:
+  project_pack:
+    identity: nestfolio.level-1@1.0.1
+    class: project-pack
+    procedure: nestfolio.backlog-next@1.0.1
+    semantics_owner: Nestfolio project binding
+  reusable_pack:
+    identity: continuity.repository-tools@1.0.0
+    class: reusable-engineering-pack
+    procedure:
+      identity: continuity.repository-status@1.0.0
+      entry_point: /continuity-repository-status
+      behavior_authority: .claude/skills/continuity-repository-status/**
+      primary_executor_asset: .claude/skills/continuity-repository-status/SKILL.md
+      canonical_spec: continuity/level-2/packs/continuity.repository-tools/1.0.0/procedures/continuity.repository-status.json
+      objective: >
+        Report bounded read-only Git repository identity and status facts for
+        human or agent inspection without selecting Work, authorizing a Scope,
+        starting a Run, validating completion, or mutating repository state.
+      inputs:
+        - explicit repository working directory
+      reads:
+        - Git repository root metadata
+        - HEAD object identity
+        - current branch or detached-HEAD state
+        - configured upstream identity when present
+        - ahead/behind counts when an upstream is locally resolvable
+        - tracked, untracked, staged, and unstaged status names
+      writes: []
+      network: forbidden
+      expected_result:
+        - exact Procedure and Pack identity
+        - repository root and HEAD object identity
+        - branch and upstream state
+        - clean or dirty classification with bounded path list
+        - structured success or typed failure
+      required_capabilities:
+        - local-process-execution
+        - git-read-metadata
+      prohibited_semantics:
+        - Nestfolio backlog, lane, epic, deploy, validator, routing, Guard, or Lesson rules
+        - repository-content interpretation
+        - Work selection or completion
+        - external-system access or mutation
+  composition_cardinality:
+    packs: 2
+    procedures: 2
+    overrides: 0
+    registries: 0
+    remote_sources: 0
+  extraction_rule: >
+    The reusable Procedure is newly authored from generic Git metadata semantics;
+    no Nestfolio behavior, source module, Skill text, current runtime module, or
+    project rule is extracted, moved, generalized, or promoted. Therefore this
+    slice does not assert cross-project evidence for any existing Nestfolio
+    behavior and creates no Core-promotion claim.
+
+level_2_guarantees:
+  active_on_pass:
+    - exactly two immutable Pack versions selected by one composed workspace lock
+    - exactly one resolved Pack, Procedure spec, and executor-asset mapping per Procedure identity
+    - deterministic exact-version resolution with no ranges or network lookup
+    - exact SHA-256 digest and byte-size verification for every selected manifest, Procedure spec, and executor asset
+    - Pack self-validation and composed-lock aggregate verification
+    - explicit compatibility, prerequisite, capability, permission, deprecation, and conflict diagnostics
+    - atomic compare-and-swap lock activation with exact activation history
+    - explicit comparison and byte-exact rollback to the retained Level 1 route
+    - truthful Level 2 guarantee header and explicit Level 3-6 absence
+  explicitly_absent:
+    level_3:
+      - product-owned Work selection, Work Item, Working Set, Scope, route, completion criteria, or backlog authority
+    level_4:
+      - Context Pack, Formation Trace, validation, authorization, refresh, expiration, or revocation
+    level_5:
+      - Session, Run, effect, lease, Checkpoint, Handoff, interruption recovery, or resume
+    level_6:
+      - Assurance Evidence authority, validation plan, Guard, Waiver, completion transition, Decision, Observation, Lesson, or promotion
+    broader:
+      - remote or organization-wide Pack registry
+      - signing, marketplace, trust service, dependency solver, or semantic-version range solver
+      - arbitrary override language or silent last-write-wins behavior
+      - external write integration, Console, hosted service, RBAC, analytics, billing, or commercial packaging
+
+composition_and_resolution_contract:
+  source_model:
+    - every Pack source is a tracked local immutable version directory or the exact retained Level 1 source
+    - every source locator, file path, SHA-256 digest, byte size, and declared permission is lock material
+    - the workspace lock lists exact root Pack versions; no registry or implicit discovery participates
+  deterministic_order:
+    - normalize Pack identities by exact id then exact version
+    - normalize Procedure identities and asset paths lexicographically by UTF-8 byte sequence
+    - serialize lock material as canonical JSON with sorted object keys and LF termination
+    - compute every file SHA-256 from bytes and one aggregate SHA-256 over canonical resolved lock material
+  compatibility:
+    - each Pack declares supported adoption level, executor family, required local capabilities, and permission set
+    - exact compatibility is checked before lock activation and again before resolution or execution
+    - absent or unrecognized compatibility fields block; no permissive default is allowed
+  conflicts:
+    - duplicate Pack id/version with different bytes blocks
+    - duplicate Procedure id/version with different contract or asset bytes blocks
+    - one Procedure identity resolving to multiple assets blocks
+    - two Procedures claiming one adapter entry point or writable asset path blocks
+    - undeclared asset, capability, permission, or source path blocks
+    - incompatible executor, adoption level, prerequisite, or deprecation state blocks
+    - no override is permitted in MI-002; every conflict must be removed by an explicit candidate change before a new lock is proposed
+  deprecation:
+    - deprecation and supersession metadata are inspectable lock inputs
+    - a newly selected deprecated Pack blocks activation in this slice
+    - an already active exact deprecated Pack may only be inspected or rolled back; it is never silently upgraded
+  atomicity:
+    - lock proposal binds the exact prior active-lock digest
+    - activation uses compare-and-swap and one atomic workspace-file replacement
+    - prior-digest mismatch or interrupted replacement leaves the prior active lock authoritative and reports a typed failure
+    - activation history records before and after lock digests, actor, command, UTC, and result without creating Run or Assurance state
+
+authority_and_coexistence:
+  composed_lock: >
+    On a future PASS activation, the new Level 2 workspace lock is the sole
+    target authority for Pack and Procedure resolution through Level 2 command
+    entry points.
+  source_versions: immutable content authorities for their own declarations and assets
+  project_binding: sole owner of Nestfolio paths, backlog semantics, and /backlog-next mapping
+  reusable_pack: sole owner of the generic repository-status Procedure contract and asset
+  adapter: maps each resolved Procedure to its declared executor asset; it cannot change resolution or lifecycle semantics
+  legacy_level_1_route: >
+    Retained only as an explicit rollback target. While Level 2 activation is
+    active, routine Continuity package entry points must route through the Level
+    2 resolver. Direct /backlog-next remains current behavior outside target
+    Pack resolution and is not a second target lock authority.
+  external_authority: Git remains authoritative for repository objects and status facts
+
+implementation_shape:
+  rule: >
+    Exact serialization details may be finalized during an authorized MI-002
+    implementation, but the identities, semantics, algorithms, authority,
+    failure rules, and path boundary in this contract may not change.
+  new_level_2_root: continuity/level-2/**
+  exact_repository_paths:
+    activation: continuity/level-2/activation.json
+    guarantee_card: continuity/level-2/README.md
+    composed_lock: continuity/level-2/packs.lock.json
+    activation_history: continuity/level-2/activation-history.ndjson
+    reusable_pack_manifest: continuity/level-2/packs/continuity.repository-tools/1.0.0/pack-manifest.json
+    reusable_procedure_spec: continuity/level-2/packs/continuity.repository-tools/1.0.0/procedures/continuity.repository-status.json
+    reusable_executor_asset: .claude/skills/continuity-repository-status/SKILL.md
+    cli: continuity/level-2/cli.mjs
+    implementation: continuity/level-2/src/**
+    tests: tests/continuity-level-2.test.mjs
+  exact_package_entry_points:
+    - continuity:pack:list
+    - continuity:pack:install
+    - continuity:pack:resolve
+    - continuity:pack:verify
+    - continuity:procedure:compare
+    - continuity:procedure:run
+  required_logical_artifacts:
+    - Level 2 activation record and guarantee card
+    - immutable reusable Pack manifest and Procedure spec
+    - exact executor asset for continuity.repository-status@1.0.0
+    - composed workspace lock and previous-lock reference
+    - compatibility, conflict, self-validation, compare, and activation-history results
+    - bounded resolver, repository infrastructure, application service, and adapter mapping
+  dependency_direction:
+    - portable identity, digest, capability, permission, and result values have no Nestfolio dependency
+    - application coordination depends on portable contracts only
+    - repository infrastructure owns hashing, bounded Git observation, compare-and-swap, and atomic replacement
+    - Claude Code mapping depends on the resolved lock and declared assets only
+    - Nestfolio binding depends on Pack contracts and cannot modify portable semantics
+
+required_scenarios:
+  success:
+    - verify the exact retained 1.0.1 baseline before any candidate change
+    - self-validate each selected Pack independently and then validate the composed lock
+    - resolve both exact Procedure identities repeatedly and obtain byte-identical ordered results
+    - run continuity.repository-status through the resolved adapter path in the bound repository with no write or network effect
+    - run the same reusable Procedure against a temporary neutral Git fixture outside both repositories and obtain the same result schema without Nestfolio configuration
+    - inspect and compare the retained Level 1 lock with the proposed Level 2 lock, including permissions and resolved assets
+    - activate Level 2 atomically from the exact expected predecessor digest and prove every routine target entry point uses the composed lock
+    - in an isolated candidate copy, roll back byte-exactly to the retained Level 1 route and then reapply the identical Level 2 lock
+    - preserve /backlog-next behavior-authority bytes and its existing direct path while proving the composed mapping resolves exactly that asset
+    - display Level 2 active guarantees and Level 3-6 deliberate absences
+  mandatory_failure:
+    - duplicate Pack identity with divergent bytes
+    - duplicate Procedure identity with divergent spec or asset
+    - competing Procedure entry point or asset-path claim
+    - missing manifest, Procedure spec, executor asset, or declared prerequisite
+    - individual digest or byte-size drift
+    - aggregate lock digest tamper
+    - unenumerated or multiply sourced asset
+    - unsupported executor or adoption-level compatibility
+    - missing required capability
+    - undeclared or widened permission
+    - newly selected deprecated Pack
+    - stale expected predecessor lock digest
+    - interrupted or partial lock replacement
+    - reusable Pack reference to any prohibited Nestfolio semantic or path
+    - attempted Work, Context, Run, Assurance, Learning, completion, registry, or remote-source claim
+
+validation_and_evidence:
+  criteria:
+    C1: >
+      One composed lock resolves exactly the two selected immutable Pack versions
+      and two Procedure identities deterministically, with one asset mapping per
+      identity and no override.
+    C2: >
+      Every manifest, Procedure spec, executor asset, individual digest and size,
+      permission, capability, compatibility field, and aggregate lock digest
+      self-validates before and after activation.
+    C3: >
+      continuity.repository-status is read-only and contains no Nestfolio-only
+      semantics; it returns the same result schema in the bound repository and a
+      neutral temporary Git fixture without network or repository writes.
+    C4: >
+      Every mandatory conflict, digest, capability, permission, compatibility,
+      deprecation, stale-CAS, partial-write, and forbidden-claim scenario fails
+      closed with an unambiguous typed diagnostic.
+    C5: >
+      The immutable nestfolio.level-1@1.0.1 Pack, all 19 behavior assets, the
+      nestfolio.backlog-next@1.0.1 contract and mapping, its tests, and direct
+      current behavior remain exact and usable.
+    C6: >
+      Level 2 authority, Pack sources, project binding, reusable behavior,
+      adapter mapping, Git authority, active and absent guarantees, and command
+      route are observable and unambiguous.
+    C7: >
+      Atomic activation, prior-lock comparison, isolated rollback/reapply, and
+      abandonment preserve exact Level 1 bytes and complete lock/activation
+      history without creating Level 3-6 state.
+  required_evidence:
+    - exact clean pushed repository bindings and bounded inspection manifest
+    - before and after retained-Level-1 identity and 19-asset verification
+    - complete selected Pack, Procedure, and asset manifests with SHA-256 and byte sizes
+    - independently recomputed canonical lock and aggregate digest
+    - repeated deterministic resolution output for both Procedures
+    - Pack self-validation and composition-validation results
+    - reusable/project separation scan and neutral-fixture execution result
+    - exact permission, capability, compatibility, conflict, and deprecation reports
+    - every mandatory failure result from an isolated temporary fixture
+    - compare-and-swap, interrupted-write, activation-history, rollback, and reapply evidence
+    - Level 2 guarantee card and explicit Level 3-6 absence proof
+    - exact changed-file manifests for continuity-lab and Nestfolio
+    - criterion-to-evidence matrix for C1 through C7
+  evidence_format: deterministic JSON plus one canonical English implementation report
+  evidence_spool_rule: >
+    Generate fixture and command evidence outside both repositories until final
+    candidate verification and rollback recovery pass. Copy only the contracted
+    deterministic MI-002 evidence into Nestfolio at closure; delete and verify
+    absence of all temporary fixtures and recovery copies.
+
+rollback_abandonment_and_recovery:
+  rollback: >
+    Deactivate the Level 2 routine route and restore the exact predecessor
+    package entry points and Level 1 activation bytes from a verified external
+    recovery copy. Preserve the proposed composed lock, comparison, failures,
+    and activation attempt in reviewable evidence; never rewrite Pack versions.
+  abandonment: >
+    Record unconditional MI-002 FAIL, restore and verify the exact retained
+    active Level 1 route, preserve all evidence, and select a bounded MI-002
+    corrective contract or architecture review. Do not select MI-003.
+  recovery:
+    - derived validation or comparison output may be regenerated from immutable sources and exact lock material
+    - stale expected predecessor digest requires a fresh proposal; it may not be forced
+    - partial candidate files are preserved for diagnosis outside the active route and the prior lock remains authoritative
+    - ambiguous source, lock, or authority state blocks activation and requires a later explicit human control decision
+  retirement: >
+    No current asset is retired by MI-002. The retained Level 1 route remains the
+    rollback target, and /backlog-next behavior remains directly available.
+
+future_permitted_repository_scope:
+  rule: >
+    These paths are a future maximum, not present authority. They become
+    inspectable or modifiable only if a later explicit authorization updates the
+    contract and exact repository bindings without changing this boundary.
+  continuity_lab_may_modify_on_execution_closure:
+    - sessions/MI-002-reusable-pack-composition/context-pack.yaml
+    - sessions/MI-002-reusable-pack-composition/session-handoff.md
+    - sessions/MI-002-reusable-pack-composition/changed-files.txt
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - docs/70-implementation/README.md
+    - docs/90-state/program-state.md
+    - docs/90-state/artifact-index.md
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+  nestfolio_read_only_if_later_authorized:
+    - CLAUDE.md
+    - package.json
+    - continuity/level-1/**
+    - .claude/skills/backlog-next/**
+    - tests/continuity-level-1.test.mjs
+    - continuity/evidence/mi-001d/**
+    - continuity/evidence/mi-001e/**
+    - continuity/evidence/mi-001e-r1/**
+    - Git metadata required for exact repository binding and status
+  nestfolio_may_modify_only_if_later_authorized:
+    - CLAUDE.md
+    - package.json
+    - continuity/level-2/**
+    - .claude/skills/continuity-repository-status/**
+    - tests/continuity-level-2.test.mjs
+    - continuity/evidence/mi-002/**
+  explicitly_immutable:
+    - package-lock.json
+    - continuity/level-1/**
+    - .claude/skills/backlog-next/**
+    - tests/continuity-level-1.test.mjs
+    - continuity/evidence/mi-001*/**
+    - docs/backlog/**
+    - runtime/**
+  external_temporary_only:
+    - neutral Git fixture
+    - failure-fixture copies
+    - exact rollback recovery copy
+    - pre-publication evidence spool
+
+prohibited_actions:
+  - execute or authorize MI-002 during contract authoring or review
+  - inspect or modify Nestfolio before separate explicit authorization
+  - invoke Claude Code or any Skill during contract authoring or review
+  - modify, repair, relabel, reversion, relock, reconstruct, or claim recovery of MI-001 output or historical 1.0.0
+  - modify the retained 1.0.1 Pack, Procedure, behavior assets, lock identity, or Level 1 tests
+  - move or copy Nestfolio semantics into the reusable Pack or Framework Core
+  - create Work, Context, Run, Assurance, Decision, Learning, completion, or external-authority state
+  - add a registry, remote source, signature service, marketplace, dependency solver, arbitrary override, or silent fallback
+  - install dependencies or change package-lock.json
+  - execute or adopt a selected backlog item
+  - inspect or change Nestfolio paths outside the future bounded scope
+  - commit, push, rewrite history, or publish from this contract-authoring operation
+  - select, authorize, or begin MI-003 or broader work
+
+completion_decision:
+  rule: >
+    A later authorized execution must issue exactly one unconditional PASS or
+    FAIL. PASS requires C1-C7 and every required success and mandatory-failure
+    scenario to pass conjunctively, exact scope compliance, exact retained
+    Level 1 preservation, deterministic composed resolution and rollback, and
+    proof that no Level 3-6 or broader state or claim exists. Otherwise issue
+    unconditional FAIL and restore the exact Level 1 route.
+  result: pending
+
+next_iteration_selection:
+  rule: >
+    Only after a later unconditional MI-002 result may exactly one next
+    iteration be selected. PASS may select MI-003 only when the Evidence proves
+    deterministic reusable composition and rollback; selection is not
+    authorization. FAIL must select a bounded MI-002 correction or architecture
+    review. This reviewed contract does not select or authorize MI-003.
+  selected: pending
