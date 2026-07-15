@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction is complete with UNCONDITIONAL FAIL. Its exact clean pushed repository gates passed, but execution did not follow the required canonical read order: `CONTINUITY-NEXT-STEPS.md` and then the R1 Context Pack were read before canonical `docs/90-state/program-state.md`. The conjunctive verdict required stop before pre-edit reproduction or any Nestfolio mutation. Nestfolio remains exact at published revision `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, so the C7 `ROLLBACK_RECOVERY_IDENTITY_MISMATCH` and 22/23 discrepancy remain unresolved. MI-002-R2 is selected-contract-required only; it is not authored, authorized, or started. MI-003 remains unauthorized and blocked.**
+**MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction remains one immutable UNCONDITIONAL FAIL caused solely by its canonical-read-order deviation after valid repository gates. It stopped before pre-edit reproduction, Nestfolio mutation, validation, or evidence regeneration. Nestfolio remains exact at published revision `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, so the C7 `ROLLBACK_RECOVERY_IDENTITY_MISMATCH` and 22/23 discrepancy remain unresolved. MI-002-R2 is finalized, reviewed, and authorized-not-started for this correction only; contract authorization does not imply execution authorization, and publication is the next valid operation. MI-003 remains unauthorized and blocked.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -21,7 +21,7 @@ MI-001A executed Scenario A from the committed contract revision with a genuine 
 
 MI-001B executed from the reviewed contract revision and failed at the original-artifact provenance gate. The supplied archive SHA-256 was `0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb`; its ZIP comment was continuity-lab revision `47f89495ced69f464724c52967d077679cdec78a`, and its 115 entries contained 0 of the 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`. Nothing was extracted or installed, no Nestfolio evidence was created, and restoration was not applicable.
 
-MI-002's exact implementation remains published and unchanged: continuity-lab `eb49bf54acb97ef2aca32afafaec25985820f41b` and Nestfolio `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, above original execution bindings `ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3` and `8f923240b6be1e0373b25b090f6be76139e4b256`. The active Level 2 lock still contains exactly two Packs and two Procedures, no override, registry, or remote source. The reusable Procedure remains generic, local, read-only, and network-forbidden; exact Level 1 and production Level 2 bytes are not implicated. MI-002-R1 made no Nestfolio or evidence change. Only the publication-dependent C7 test and its dependent claims still require correction. MI-002-R2 is selected-contract-required; MI-003 and broader work remain blocked.
+MI-002's exact implementation remains published and unchanged: continuity-lab `eb49bf54acb97ef2aca32afafaec25985820f41b` and Nestfolio `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, above original execution bindings `ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3` and `8f923240b6be1e0373b25b090f6be76139e4b256`. The active Level 2 lock still contains exactly two Packs and two Procedures, no override, registry, or remote source. The reusable Procedure remains generic, local, read-only, and network-forbidden; exact Level 1 and production Level 2 bytes are not implicated. MI-002-R1 made no Nestfolio or evidence change. Only the publication-dependent C7 test and its dependent claims still require correction. MI-002-R2 is bound to continuity-lab failure closure `60ac7397aa399de1f8f4d0e3456999a797136dd3`, continuity-workspace `eb990e114973e42af9935379f6b13f34f2e5e3b8`, published Nestfolio `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`, and immutable predecessor `8f923240b6be1e0373b25b090f6be76139e4b256`; it is authorized-not-started and not execution-authorized. MI-003 and broader work remain blocked.
 
 ## Gate history and current validity
 
@@ -68,7 +68,7 @@ Execution facts:
 Canonical report: `docs/70-implementation/mi-002-reusable-pack-composition.md`.
 Canonical Nestfolio evidence: `continuity/evidence/mi-002/**` at published revision `cc4e772f0a74886caebd07cff9b5d69d8f12ab48`; affected C7 evidence still requires a separately authorized bounded correction after MI-002-R1 failed before regeneration.
 
-## Correction result and selected retry
+## Correction result and finalized retry
 
 **MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction**
 is complete with **UNCONDITIONAL FAIL**. The failure is solely the required
@@ -77,9 +77,13 @@ regeneration, dependency operation, commit, push, or Nestfolio mutation
 occurred.
 
 **MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction
-Retry** is selected as `selected-contract-required`. Selection is not
-authorization. MI-002-R2 has not been authored, authorized, or started.
-MI-003 remains unauthorized and blocked.
+Retry** is finalized, reviewed, and `authorized-not-started`. Contract
+authorization does not imply execution authorization. Its later execution must
+read canonical Program State first after valid exact repository gates and may
+retry only the immutable-predecessor C7 recovery-fixture correction, bounded
+validation, directly affected evidence regeneration, and necessary canonical
+publication/state binding updates. Contract publication is next. MI-003 remains
+unauthorized and blocked.
 
 ## MI-001 result
 
@@ -320,7 +324,7 @@ Canonical report:
 16. MI-001E-R1 — complete; unconditional PASS; exact-timed active and direct-disabled genuine results; exact restoration
 17. MI-002 — original execution complete; unconditional PASS at its execution condition; published C7 fixture discrepancy identified
 18. MI-002-R1 — complete; unconditional FAIL; canonical read order not followed; Nestfolio unchanged
-19. MI-002-R2 — selected-contract-required; not authored, authorized, or started
+19. MI-002-R2 — finalized and authorized-not-started; publication next; execution unauthorized
 20. MI-003 — blocked; not authored, authorized, or started
 21. MI-004 through MI-007 — blocked
 22. broader implementation and unrelated migration — blocked
@@ -331,7 +335,7 @@ Canonical report:
 - MI-001B and MI-001C provenance failures remain immutable history; the Level 1 closure relies only on deliberate 1.0.1 supersession and genuine evidence.
 - MI-001E remains historical UNCONDITIONAL FAIL; MI-001E-R1 corrects its two bounded evidence gaps without rewriting that result.
 - MI-002 is published, but its C7 recovery fixture uses mutable `HEAD` provenance and now produces 22/23; MI-002-R1 failed before correction and did not resolve this discrepancy.
-- MI-002-R2 is selected-contract-required only. A new bounded contract must be separately authored, reviewed, finalized, published, and explicitly authorized before any retry execution.
+- MI-002-R2 is finalized and authorized-not-started only. Its exact nine-path contract must be separately published, then a new explicit user instruction and exact clean pushed gates are required before execution.
 - MI-003 remains unauthorized, unstarted, and blocked. MI-004 through MI-007 remain blocked.
 - Level 2 reusable composition is active in published Nestfolio. Work, Context, Run, Assurance, and Learning remain unauthorized and absent.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
@@ -388,5 +392,9 @@ Canonical report:
 - MI-002-R1 completion handoff: `sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/session-handoff.md`
 - MI-002-R1 contract-authoring manifest: `sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/changed-files.txt`
 - MI-002-R1 execution-closure manifest: `sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/execution-changed-files.txt`
+- MI-002-R2 finalized correction-retry contract: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml`
+- MI-002-R2 preserved future execution prompt: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/prompt.md`
+- MI-002-R2 contract handoff: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md`
+- MI-002-R2 contract-authoring manifest: `sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/changed-files.txt`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file

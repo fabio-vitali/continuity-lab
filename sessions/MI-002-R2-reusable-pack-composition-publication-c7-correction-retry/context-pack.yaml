@@ -1,0 +1,342 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-15
+  reviewed_on: 2026-07-15
+  finalized_on: 2026-07-15
+  contract_authorized: true
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  result: pending
+  authority:
+    - docs/90-state/program-state.md
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/context-pack.yaml
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/session-handoff.md
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/execution-changed-files.txt
+    - sessions/MI-002-reusable-pack-composition/context-pack.yaml
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - sessions/MI-002-reusable-pack-composition/session-handoff.md
+    - sessions/MI-002-reusable-pack-composition/changed-files.txt
+  authorization_rule: >
+    This finalized contract is authorized-not-started. Contract authoring,
+    review, finalization, authorization, publication, or selection does not
+    authorize execution. Execution may begin only in a later fresh control
+    session after Git metadata proves all three exact clean pushed bindings,
+    continuity-lab is at the exact final published revision containing this
+    unchanged contract, canonical Program State is read first, and the user
+    gives a separate explicit MI-002-R2 execution instruction.
+
+iteration:
+  id: MI-002-R2
+  name: Reusable Pack Composition Publication-Dependent C7 Correction Retry
+  type: bounded-validation-fixture-and-evidence-correction-retry
+  status: authorized-not-started
+  correction_only: true
+  predecessor_result: MI-002-R1 UNCONDITIONAL FAIL
+
+objective:
+  primary_question: >
+    Can the unresolved published MI-002 C7 rollback/reapply test be made
+    independent of mutable execution HEAD by binding its isolated recovery
+    fixture to the exact immutable Level 1 predecessor bytes, restoring 23/23
+    validation after publication without changing production Level 2, any Pack
+    or Procedure identity, any lock or activation material, or retained Level 1?
+  completion_boundary: >
+    Retry only the R1 publication-dependent C7 correction: correct one isolated
+    recovery fixture, perform bounded validation, regenerate only directly
+    affected MI-002 evidence, and make only necessary canonical publication and
+    state binding updates during a later separately authorized execution.
+
+canonical_read_order:
+  rule: >
+    After all repository metadata gates pass and before any other repository
+    content is read, canonical docs/90-state/program-state.md must be read
+    first. Any earlier repository content read, including this Context Pack,
+    requires immediate MI-002-R2 UNCONDITIONAL FAIL under the conjunctive
+    verdict and stop before Nestfolio content inspection, tests, or mutation.
+  required_order:
+    - docs/90-state/program-state.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/context-pack.yaml
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/session-handoff.md
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/execution-changed-files.txt
+    - sessions/MI-002-reusable-pack-composition/context-pack.yaml
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - sessions/MI-002-reusable-pack-composition/session-handoff.md
+    - sessions/MI-002-reusable-pack-composition/changed-files.txt
+    - Nestfolio continuity/evidence/mi-002/commands/04-final-changed-files.json
+    - Nestfolio continuity/evidence/mi-002/01-composition-and-preservation.json
+    - Nestfolio continuity/evidence/mi-002/02-success-scenarios.json
+    - Nestfolio continuity/evidence/mi-002/04-test-attempts.json
+    - Nestfolio continuity/evidence/mi-002/05-criterion-matrix-and-verdict.json
+    - Nestfolio continuity/evidence/mi-002/commands/01-final-level2-tests.json
+    - Nestfolio tests/continuity-level-2.test.mjs C7 tests
+
+publication_bindings:
+  continuity_workspace:
+    required_branch: main
+    revision: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+    mutation: prohibited
+  continuity_lab:
+    required_branch: main
+    contract_authoring_base_revision: 60ac7397aa399de1f8f4d0e3456999a797136dd3
+    base_role: exact published MI-002-R1 failure-closure revision
+    execution_authorization_revision: exact-final-committed-and-pushed-R2-contract-revision
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  nestfolio:
+    required_branch: main
+    published_mi002_revision: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    exact_single_parent_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+    parent_rule: >
+      The published MI-002 revision must have exactly one parent and it must be
+      the immutable predecessor above. Any history, tree, branch, cleanliness,
+      upstream, local origin/main, remote main, or authorization mismatch blocks
+      execution before repository content is read.
+  unresolved_binding_blocks_execution: true
+
+immutable_history:
+  mi_002_r1:
+    result: unconditional-fail
+    sole_cause: canonical-read-order deviation after valid repository gates
+    first_read_required: docs/90-state/program-state.md
+    first_read_observed: CONTINUITY-NEXT-STEPS.md
+    second_read_observed: sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/context-pack.yaml
+    nestfolio_mutated: false
+    tests_executed: false
+    evidence_regenerated: false
+    rule: >
+      MI-002-R1 is one immutable UNCONDITIONAL FAIL and may not be repaired,
+      relabeled, superseded, qualified, or modified by R2.
+  original_mi_002:
+    result: unconditional-pass at exact original execution condition
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: ef9b14cfbb352e1672a17d9b4d1c19dbb97d32d3
+    nestfolio_execution_head: 8f923240b6be1e0373b25b090f6be76139e4b256
+    continuity_lab_published_implementation: eb49bf54acb97ef2aca32afafaec25985820f41b
+    nestfolio_published_implementation: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    active_composition:
+      packs:
+        - nestfolio.level-1@1.0.1
+        - continuity.repository-tools@1.0.0
+      procedures:
+        - nestfolio.backlog-next@1.0.1
+        - continuity.repository-status@1.0.0
+      packs_count: 2
+      procedures_count: 2
+      overrides: 0
+      registries: 0
+      remote_sources: 0
+      retained_level_1_aggregate: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+      active_level_2_aggregate: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+    level_2_tests: 23/23 pass
+    level_1_tests: 14/14 pass
+    backlog_next_tests: 68/68 pass
+    success_scenarios: 10/10 pass
+    mandatory_failure_scenarios: 15/15 pass-failed-closed
+    preservation:
+      retained_assets: 19/19 exact before and after
+      reusable_repository_writes: 0
+      reusable_network_requests: 0
+      package_lock_json: absent before and after
+      level_3_to_6_state_created: false
+      selected_backlog_executed: false
+      mi_001_recovery_claim: false
+    rule: >
+      Preserve this factual result and its exact execution conditions. R2 may
+      correct only the publication-dependent reproducibility claim and may not
+      rewrite or re-grade the original execution result.
+
+established_discrepancy:
+  status: unresolved
+  original_execution_head: 8f923240b6be1e0373b25b090f6be76139e4b256
+  original_condition: uncommitted MI-002 changes above execution HEAD
+  fixture_expression: git show HEAD:package.json
+  original_selected_bytes:
+    path: package.json
+    bytes: 6467
+    sha256: b69da6f561a3ca51b80511efc7cc615412e6e98ba16339f1944218b96e059677
+    role: exact retained Level 1 rollback target
+  published_selected_bytes:
+    revision: cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    path: package.json
+    bytes: 6945
+    sha256: 07b935ab66c83752ebffdeea942a57abac598b18c568b39c027534c6edd2357c
+    role: active Level 2 package route
+  published_failure:
+    suite: node --test tests/continuity-level-2.test.mjs
+    result: 22/23 pass
+    failing_test: C7 isolated rollback restores exact Level 1 bytes and reapply selects the identical lock
+    diagnostic: ROLLBACK_RECOVERY_IDENTITY_MISMATCH
+  interpretation: >
+    The discrepancy is a recovery-fixture provenance defect only. It is not a
+    production Level 2, Pack, Procedure, lock, activation, dependency, package,
+    or retained Level 1 identity defect.
+
+immutable_recovery_binding:
+  source_revision: 8f923240b6be1e0373b25b090f6be76139e4b256
+  package_json:
+    git_object_expression: 8f923240b6be1e0373b25b090f6be76139e4b256:package.json
+    bytes: 6467
+    sha256: b69da6f561a3ca51b80511efc7cc615412e6e98ba16339f1944218b96e059677
+  level_1_activation:
+    git_object_expression: 8f923240b6be1e0373b25b090f6be76139e4b256:continuity/level-1/activation.json
+    bytes: 196
+    sha256: d8d011c6d672cda725f039ddfffb26b9157bb95462538423ac473bb3b37a0650
+  retained_level_1_aggregate: 376c1d5aff39a1477af1b49362f681d246b721b30c1e73b4f6ede247b0c9ffe4
+  active_level_2_aggregate: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+  rule: >
+    The isolated C7 test must read both recovery files from the exact immutable
+    source revision, never from HEAD, a relative revision, the working tree, or
+    an inferred parent. Before either byte sequence is written to the temporary
+    recovery fixture, the test must independently require the exact SHA-256 and
+    byte size above. A missing object or identity mismatch fails closed.
+
+correction_design:
+  pre_edit_reproduction:
+    - require the exact published Nestfolio binding and clean tree
+    - run the Level 2 suite once before editing
+    - require exactly 22 pass and 1 fail
+    - require the sole failure and typed diagnostic recorded above
+    - stop on any additional, missing, or different failure
+  only_test_change: >
+    In tests/continuity-level-2.test.mjs, replace both recovery reads that use
+    HEAD with the immutable source revision and add exact digest and byte-size
+    assertions before constructing the recovery fixture. Do not change test
+    intent, rollback expectations, production behavior, or any other scenario.
+  no_production_fix: >
+    Do not edit continuity/level-2/**, package.json, CLAUDE.md, either Pack or
+    Procedure, activation or lock material, dependencies, retained Level 1,
+    package-lock.json, or any production route.
+  failure_recovery: >
+    Before mutation, keep a verified external copy of every permitted modified
+    Nestfolio path. If R2 cannot satisfy the contract, restore exact published
+    Nestfolio bytes, retain diagnostics outside both canonical repositories,
+    and close MI-002-R2 with UNCONDITIONAL FAIL in continuity-lab.
+
+required_validation:
+  - exact three-repository Git bindings before content read and again at closure
+  - canonical Program State read first after valid metadata gates
+  - exact single-parent relation from published MI-002 revision to immutable predecessor
+  - exact pre-edit 22/23 reproduction and sole typed diagnostic
+  - immutable predecessor Git objects exist and match both locked identities
+  - node --test tests/continuity-level-2.test.mjs returns 23/23
+  - node --test tests/continuity-level-1.test.mjs returns 14/14
+  - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68
+  - composed Pack verification, resolution, comparison, and active guarantee inspection pass
+  - all fifteen mandatory failure scenarios still pass-failed-closed
+  - package.json, absence of package-lock.json, CLAUDE.md, continuity/level-1/**, both Pack identities, both Procedure identities, locks, activation, and production Level 2 bytes equal the published start
+  - no Level 3-6 state, selected backlog execution, repository write by the reusable Procedure, or network request
+  - temporary recovery and fixture directories are deleted with absence proof
+
+permitted_nestfolio_scope:
+  modify:
+    - tests/continuity-level-2.test.mjs
+    - continuity/evidence/mi-002/00-repository-bindings.json
+    - continuity/evidence/mi-002/01-composition-and-preservation.json
+    - continuity/evidence/mi-002/02-success-scenarios.json
+    - continuity/evidence/mi-002/04-test-attempts.json
+    - continuity/evidence/mi-002/05-criterion-matrix-and-verdict.json
+    - continuity/evidence/mi-002/commands/01-final-level2-tests.json
+    - continuity/evidence/mi-002/commands/04-final-changed-files.json
+  evidence_rule: >
+    Preserve original execution facts and regenerate or append only fields
+    directly affected by publication binding, immutable recovery identity,
+    pre-edit failure, corrected C7, final Level 2 validation, and the exact R2
+    correction manifest. Do not rewrite unaffected MI-002 evidence.
+  final_manifest_rule: >
+    The final Nestfolio diff from cc4e772f0a74886caebd07cff9b5d69d8f12ab48
+    may contain only the eight paths above. The original 26-path MI-002
+    publication manifest remains separately identifiable and immutable history.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/70-implementation/mi-002-reusable-pack-composition.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - sessions/MI-002-reusable-pack-composition/context-pack.yaml
+    - sessions/MI-002-reusable-pack-composition/session-handoff.md
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/session-handoff.md
+  create:
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/execution-changed-files.txt
+  rule: >
+    Correct only necessary publication bindings and current state without
+    erasing original MI-002 execution conditions or result and without changing
+    any completed MI-002-R1 artifact. Record one MI-002-R2 unconditional result
+    and exact final manifests. No other continuity-lab write is permitted.
+
+explicitly_immutable:
+  continuity_lab:
+    - sessions/MI-002-R1-reusable-pack-composition-publication-c7-correction/**
+    - historical MI-002 evidence and original execution facts except the exact current-binding fields permitted above
+  nestfolio:
+    - package.json
+    - package-lock.json
+    - CLAUDE.md
+    - continuity/level-1/**
+    - tests/continuity-level-1.test.mjs
+    - .claude/skills/backlog-next/**
+    - .claude/skills/continuity-repository-status/**
+    - continuity/level-2/**
+    - continuity/evidence/mi-001*/**
+    - continuity/evidence/mi-002/03-mandatory-failures.json
+    - continuity/evidence/mi-002/commands/02-final-level1-tests.json
+    - continuity/evidence/mi-002/commands/03-final-backlog-next-tests.json
+  identities:
+    - nestfolio.level-1@1.0.1
+    - nestfolio.backlog-next@1.0.1
+    - continuity.repository-tools@1.0.0
+    - continuity.repository-status@1.0.0
+    - aggregate 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+
+prohibited_actions:
+  - execute MI-002-R2 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio before a separate explicit execution instruction and valid gates
+  - modify any completed MI-002-R1 closure artifact or its unconditional result
+  - modify production Level 2 implementation, package routes, Pack or Procedure declarations, locks, activation, or history
+  - modify retained Level 1 assets, tests, activation, identity, or evidence
+  - change dependencies or create package-lock.json
+  - change the meaning, breadth, or expected outcome of C7 or any other MI-002 test
+  - regenerate or rewrite unaffected MI-002 evidence
+  - create Work, Scope, Context, Run, Assurance, Decision, Learning, completion, registry, remote source, or Level 3-6 state
+  - execute a selected backlog item or invoke Claude Code or any Skill
+  - author, authorize, select anew, or execute MI-003
+  - inspect or modify Nestfolio paths outside the stated read and write boundary
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during correction execution
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  pass_rule: >
+    Issue MI-002-R2 UNCONDITIONAL PASS only if canonical Program State was read
+    first after exact valid gates, the exact pre-edit discrepancy is reproduced,
+    the fixture is bound and digest-verified exactly as contracted, all required
+    validation passes, final Nestfolio and continuity-lab changes remain within
+    exact scope, all immutable history and bytes remain exact, and no prohibited
+    action occurs.
+  fail_rule: >
+    Any missing, different, ambiguous, skipped, drifted, out-of-order,
+    out-of-scope, or failed required condition after valid execution start is
+    MI-002-R2 UNCONDITIONAL FAIL. Restore exact published Nestfolio bytes before
+    closure if any mutation occurred. No qualified PASS, partial result, silent
+    evidence repair, or mutation of the R1 result is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Record MI-002 as publication-corrected and fully validated at new exact
+    published candidate bindings. MI-003 may return only to
+    selected-contract-required; selection is not authorization, and R2 may not
+    author or authorize MI-003.
+  on_fail: >
+    Keep MI-003 blocked and select only another bounded MI-002 correction or an
+    architecture review. Do not broaden implementation scope.
+
+completion_criteria:
+  - finalized reviewed authorized-not-started MI-002-R2 contract
+  - no R2 execution, Nestfolio test, or Nestfolio modification
+  - exact nine-path contract-authoring changed-file manifest
+  - publication handoff requiring a fresh control session and separate explicit instruction
