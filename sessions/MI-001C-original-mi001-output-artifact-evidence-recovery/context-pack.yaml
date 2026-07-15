@@ -1,0 +1,430 @@
+contract:
+  status: authorized-not-started
+  authored_on: 2026-07-15
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - docs/70-implementation/mi-001-procedure-first-adoption.md
+    - docs/70-implementation/mi-001a-genuine-claude-code-invocation-confirmation.md
+    - docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md
+    - sessions/MI-001-procedure-first-adoption/context-pack.yaml
+    - sessions/MI-001-procedure-first-adoption/session-handoff.md
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/context-pack.yaml
+    - sessions/MI-001A-genuine-claude-code-invocation-confirmation/session-handoff.md
+    - sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml
+    - sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md
+  result: pending
+  effective_authorization_rule: >
+    Contract authoring does not execute MI-001C. MI-001C may execute only from
+    a clean continuity-lab main revision containing these exact contract files,
+    after explicit user review, commit, and push. The executor must record that
+    full revision and prove it equals origin/main before candidate discovery.
+    The generated contract ZIP is not evidence of review, commit, or push.
+  canonical_memory_rule: >
+    continuity-lab is the only canonical product and program memory. The two
+    permitted continuity-workspace evidence directories and read-only Git
+    metadata from continuity-lab and Nestfolio are bounded evidence sources
+    only; they are not additional product or program authority.
+  contradiction_rule: >
+    Before the evidence-recovery operation starts, any conflict among the
+    authorization state, repository bindings, canonical MI-001 source binding,
+    input archive identity, required manifest, or required SKILL.md identity
+    prevents execution. Stop without inspecting candidate ZIP contents or
+    modifying any repository, report the contradiction, and identify the
+    owning canonical artifacts. This operational stop is not an MI-001C result.
+
+iteration:
+  id: MI-001C
+  name: Original MI-001 Output Artifact Evidence Recovery
+  type: bounded-read-only-artifact-provenance-recovery
+  design_level: L7
+  product_experience_level: 1
+  status: authorized-not-started
+  completion_gate: unconditional-mi-001c-result
+  sole_purpose: >
+    Locate and prove the unmodified original MI-001 modified Nestfolio output
+    artifact, or a byte-identical preserved copy with a provable delivery chain,
+    through a fully automated, deterministic, read-only search of only the
+    expressly permitted local evidence sources.
+
+objective:
+  primary_question: >
+    Does an admissible archive exist in the bounded evidence sources whose
+    delivery chain proves that it is the original MI-001 output or a
+    byte-identical preserved copy, and whose content independently proves the
+    canonical MI-001 input binding, exact 15-entry delta, and required embedded
+    SKILL.md identity?
+  required_skill:
+    member: .claude/skills/backlog-next/SKILL.md
+    sha256: 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    bytes: 33928
+
+canonical_authorization_preconditions:
+  - MA-001 completed with unconditional PASS and G5 remains valid.
+  - MI-001 completed with unconditional FAIL; C2, C4, C5, C6, and C7 remain preserved factually.
+  - MI-001A completed with unconditional FAIL before Skill invocation.
+  - MI-001B completed with unconditional FAIL at the original-output provenance gate before extraction or installation.
+  - Nestfolio remained unchanged by MI-001B at 63ad0b2da2dfb2192d24e73a9224b65654deadb7.
+  - MI-001C is the sole authorized execution iteration with status authorized-not-started.
+  - MI-001C has not executed and its result is pending.
+  - candidate reconstruction, candidate installation, genuine invocation confirmation, MI-002 through MI-007, and all broader work remain blocked.
+
+repository_bindings:
+  continuity_workspace:
+    contract_authoring_revision: f011140c3f39ac2daa117c8c721b53c6c179871b
+    branch: main
+    required_execution_state: >
+      Record revision, branch, and status. The workspace may contain only the
+      reviewed MI-001C contract ZIP under output/MI-001C in addition to the
+      immutable bounded evidence sources. Any unrelated change is an
+      authorization contradiction.
+  continuity_lab:
+    mi001b_fail_closure_revision: 538f57a6ad3fa2880acb704c865c99fd4ee04c92
+    required_execution_revision: >
+      The exact clean, user-reviewed, pushed main commit derived from the
+      MI-001B FAIL closure and containing these MI-001C contract files. Record
+      its full revision and prove main, origin/main, HEAD, and upstream all
+      resolve consistently before candidate discovery.
+  nestfolio:
+    mi001_recorded_source_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+    mi001_recorded_input_archive_sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+    mi001_recorded_input_zip_comment: 3aa8f4773955541415f615abd80a0a9702bcb416
+    mi001a_scenario_a_inspected_revision: b7d597ac5361d3c33b6f44a448373f3f9e79b8dc
+    mi001b_unchanged_revision: 63ad0b2da2dfb2192d24e73a9224b65654deadb7
+    required_execution_state: >
+      Nestfolio must be clean main at
+      63ad0b2da2dfb2192d24e73a9224b65654deadb7. Prove that the canonical MI-001
+      source commit exists and resolves to the recorded tree. Do not read or
+      modify Nestfolio worktree content; use only the relevant read-only Git
+      history, reflogs, stashes, index, and object database allowed below.
+
+canonical_mi001_binding:
+  source_revision: 3aa8f4773955541415f615abd80a0a9702bcb416
+  input_archive_sha256: 0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be
+  input_zip_comment: 3aa8f4773955541415f615abd80a0a9702bcb416
+  verification_rule: >
+    PASS requires all canonical MI-001 report, Context Pack, handoff, and
+    Program State bindings to agree; the Nestfolio source commit and tree to
+    exist in the object database; and preserved input-archive evidence to hash
+    exactly to the recorded SHA-256, carry the recorded ZIP comment, and
+    correspond byte-for-byte to that source revision. A canonical assertion
+    without direct archive verification is insufficient for PASS.
+  output_artifact_role: >
+    The archive produced and returned by the original MI-001 execution after
+    modifying the bound Nestfolio input, before the later incomplete candidate
+    application commit omitted the intended SKILL.md change.
+
+required_changed_file_manifest:
+  exact_entry_count: 15
+  entries:
+    - status: M
+      path: .claude/skills/backlog-next/SKILL.md
+    - status: M
+      path: CLAUDE.md
+    - status: A
+      path: continuity/level-1/README.md
+    - status: A
+      path: continuity/level-1/activation.json
+    - status: A
+      path: continuity/level-1/cli.mjs
+    - status: A
+      path: continuity/level-1/pack-lock.json
+    - status: A
+      path: continuity/level-1/pack-manifest.json
+    - status: A
+      path: continuity/level-1/procedure-contract.json
+    - status: A
+      path: continuity/level-1/project-binding.json
+    - status: A
+      path: continuity/level-1/src/application-service.mjs
+    - status: A
+      path: continuity/level-1/src/claude-code-adapter.mjs
+    - status: A
+      path: continuity/level-1/src/core.mjs
+    - status: A
+      path: continuity/level-1/src/repository-infrastructure.mjs
+    - status: M
+      path: package.json
+    - status: A
+      path: tests/continuity-level-1.test.mjs
+  verification_rule: >
+    Compare the proven output archive byte-for-byte with the directly verified
+    canonical input archive after normalizing only one common archive wrapper
+    directory when present. The computed delta must contain exactly these 15
+    paths with these statuses, no deletion, rename, type change, extra path, or
+    hidden metadata exception. Do not infer the delta from a later Git commit.
+
+bounded_evidence_sources:
+  permitted_filesystem_roots:
+    - /Users/fabiovitali/WebstormProjects/continuity-workspace/retained-artifacts/MI-001
+    - /Users/fabiovitali/WebstormProjects/continuity-workspace/output
+  permitted_git_repositories:
+    - /Users/fabiovitali/WebstormProjects/continuity-lab
+    - /Users/fabiovitali/WebstormProjects/nestfolio
+  permitted_git_surfaces:
+    - relevant commit and tag history reachable from refs
+    - relevant reflogs and stash refs
+    - relevant index entries
+    - relevant reachable and unreachable object-database objects
+  traversal_rules:
+    - enumerate only the two permitted filesystem roots, without crossing a filesystem boundary
+    - do not follow symbolic links, aliases, Finder aliases, mount redirects, or archive members outside those roots
+    - inspect only regular files and metadata already present before execution
+    - use Git read-only plumbing with GIT_OPTIONAL_LOCKS=0; never materialize an object into either worktree
+    - reject archive absolute paths, parent traversal, duplicate normalized paths, case-colliding paths, unsafe links, encrypted members, and malformed structure
+  expressly_prohibited_sources:
+    - /Users/fabiovitali/Downloads
+    - every other home-directory location
+    - browser data, histories, caches, profiles, and download databases
+    - cloud storage, email, chat, remote services, and network search
+    - every project outside the three authorized workspace roots
+    - unrelated history, objects, content, or paths in either Git repository
+  network_rule: >
+    Do not fetch, pull, clone, browse, query remotes, or use any network service.
+    Existing local origin/main refs may be read but not refreshed.
+
+read_only_operation:
+  immutable_evidence_rule: >
+    Candidate discovery, classification, provenance analysis, archive
+    inspection, input/output comparison, and SKILL.md verification are strictly
+    read-only. Do not create temporary extraction files, update access-control
+    metadata, rename, copy, move, recompress, normalize, repair, quarantine, or
+    delete any evidence source. Do not modify either Git index, worktree, refs,
+    reflogs, stashes, or object database.
+  git_forbidden_mutations:
+    - git add, commit, push, pull, fetch, merge, rebase, reset, checkout, switch, restore, stash, clean, gc, repack, prune, update-ref, replace, notes, or worktree mutation
+    - git fsck --lost-found or any command that writes recovered objects
+  archive_forbidden_mutations:
+    - extraction to disk
+    - archive repair, recompression, comment editing, member editing, or metadata rewriting
+  skill_rule: >
+    Stream the candidate member directly from the archive to hashing and byte
+    counting commands. Never extract it to disk, install it, compare it by
+    editing, or write its contents to stdout, logs, evidence files, or a
+    repository.
+  closure_boundary: >
+    Only after the read-only operation has converged on its one unconditional
+    result may the executor write the contract-permitted continuity-lab closure
+    documents and generate the continuity-lab repository ZIP outside both
+    repositories. These closure writes do not alter any searched evidence
+    source and must not be used retroactively as provenance.
+
+candidate_identity_and_provenance:
+  required_classifications:
+    original_output_proven: >
+      The exact archive bytes returned by the original MI-001 execution, with a
+      complete delivery chain supported by evidence that pre-existed MI-001C.
+    byte_identical_preserved_copy_proven: >
+      Archive bytes whose SHA-256 is identical to the independently proven
+      original output and whose copy or retention edge is supported by
+      pre-existing evidence from the bounded sources.
+    recreated_or_derived: >
+      Any later Git archive, repository ZIP, recompression, reassembly,
+      reconstruction, edited copy, normalized archive, or independently
+      generated archive, even when its extracted file bytes and manifest happen
+      to match the expected values.
+    ambiguous_or_unproven: >
+      Any candidate supported only by filename, location, timestamp,
+      recollection, expected content, matching SKILL.md hash, self-authored ZIP
+      comment, newly generated evidence, or an incomplete or circular chain.
+    non_candidate: >
+      Any file whose format, repository role, or content is incompatible with
+      the original modified Nestfolio output.
+  delivery_chain_rule: >
+    PASS requires an ordered chain from the recorded MI-001 execution output
+    event to the candidate's current bytes. Every node must record path or Git
+    object identity, archive SHA-256, byte size, relevant timestamps and
+    metadata; every edge must cite independent pre-existing evidence from the
+    bounded sources. Content conformity proves identity constraints but cannot
+    prove delivery. The MI-001B continuity-lab source archive and every archive
+    produced after MI-001 solely from Git or expected content are explicitly
+    recreated or non-candidate, never original-output proof.
+  ambiguity_rule: >
+    Multiple admissible candidates are acceptable only when they have the same
+    archive SHA-256 and converge on one proven original-output chain. Conflicting
+    archive hashes, incompatible chains, missing edges, or circular evidence
+    require unconditional FAIL.
+
+deterministic_automation:
+  discovery_order:
+    - enumerate permitted filesystem roots in bytewise lexical path order
+    - enumerate continuity-lab relevant refs, reflogs, stashes, index entries, then object database
+    - enumerate Nestfolio relevant refs, reflogs, stashes, index entries, then object database
+  candidate_order: >
+    Deduplicate by archive SHA-256 and evaluate candidates in ascending SHA-256,
+    then bytewise lexical evidence-location order. Never ask the user to select
+    or interpret a candidate during execution.
+  required_ledger_fields:
+    - evidence location or Git object id
+    - discovery surface
+    - format and byte size
+    - SHA-256
+    - available timestamps, extended attributes, ZIP comment, and delivery metadata
+    - archive integrity and safe-structure result
+    - original-versus-recreated classification with cited evidence
+    - canonical input binding result
+    - exact 15-entry delta result
+    - streamed SKILL.md SHA-256 and byte-size result when safely available
+    - final admissibility disposition
+  no_early_success_rule: >
+    Inventory and classify every discovered candidate before selecting an
+    admissible artifact. A content match cannot short-circuit provenance review.
+
+required_execution_sequence:
+  - id: authorization-and-clean-start
+    actions:
+      - read docs/90-state/program-state.md first and apply the contradiction rule
+      - verify and record all three repository revisions, branches, upstream state, and cleanliness
+      - prove the committed MI-001C contract is present at continuity-lab HEAD and origin/main
+      - confirm every blocked-work statement before candidate discovery
+  - id: canonical-binding-verification
+    actions:
+      - prove the canonical MI-001 source revision and input archive SHA-256 and comment agree across canonical records
+      - prove the source commit and tree exist in the Nestfolio object database
+      - locate and directly verify the bound input archive within the permitted evidence sources
+      - if direct input-archive verification is impossible or contradictory, record the failed binding, complete the bounded read-only inventory and classifications, and converge on FAIL
+  - id: deterministic-candidate-discovery
+    actions:
+      - inventory only the permitted filesystem roots without following links
+      - inspect only relevant read-only Git refs, reflogs, stashes, index entries, and object-database objects
+      - identify archive candidates by content signature and format, not filename alone
+      - compute immutable identity and metadata without copying or extracting
+  - id: classify-provenance-and-delivery
+    actions:
+      - distinguish the original MI-001 output from every recreated or derived archive
+      - build and validate the complete delivery chain for each potentially admissible candidate
+      - reject content-only, circular, self-asserted, ambiguous, reconstructed, or post-hoc provenance
+  - id: verify-candidate-content
+    actions:
+      - test archive integrity and safe normalized structure without extraction
+      - compare candidate output directly with the verified canonical input archive
+      - require the exact 15-entry changed-file manifest and statuses
+      - stream .claude/skills/backlog-next/SKILL.md without installing or writing it
+      - require SHA-256 9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90 and exactly 33928 bytes
+  - id: single-result-and-closure
+    actions:
+      - complete the candidate ledger and issue exactly one unconditional PASS or FAIL
+      - write only the contract-permitted continuity-lab closure after the result
+      - generate only the required complete continuity-lab closure ZIP under continuity-workspace/output/MI-001C
+      - select exactly one next iteration under the conditional next-iteration rule
+
+required_capture:
+  - exact commands in execution order
+  - UTC start and end timestamps for each command
+  - exit status, stdout, and stderr
+  - Git, ZIP, hashing, operating-system, shell, Node, and npm versions used
+  - repository revisions, branches, upstreams, and clean-status records
+  - deterministic inventory and candidate ledger
+  - input archive identity and source-tree binding evidence
+  - original delivery chain and original-versus-recreated classification
+  - exact computed 15-entry changed-file manifest
+  - streamed SKILL.md SHA-256 and exact byte count
+  - proof that all searched evidence and both repositories remained unchanged
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  pass_rule: >
+    Issue MI-001C UNCONDITIONAL PASS only if authorization is valid; the
+    canonical MI-001 source revision and exact input archive are directly
+    verified; one original output archive or byte-identical preserved copy has
+    a complete, non-circular, pre-existing delivery chain; the archive is safe
+    and intact; direct input/output comparison yields exactly the required 15
+    entries and statuses; streamed SKILL.md is SHA-256
+    9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90
+    and 33928 bytes; all candidates have been classified; and no evidence source,
+    Git state, worktree content, or Skill was modified or installed.
+  fail_rule: >
+    Missing direct input-archive verification; no candidate; unproven,
+    ambiguous, circular, reconstructed, or contradictory delivery provenance;
+    recreated-only candidates; unsafe or corrupt archive structure; source,
+    comment, manifest, status, digest, or byte-size mismatch; incomplete search;
+    manual intervention; extraction or installation; any prohibited inspection
+    or mutation; or any inconclusive required check requires MI-001C
+    UNCONDITIONAL FAIL.
+  emission_rule: >
+    After valid authorization starts the operation, every outcome must converge
+    on exactly one unconditional MI-001C result. Candidate-level dispositions
+    are evidence checks, not additional verdicts. No partial, provisional,
+    qualified, or per-candidate overall verdict is permitted.
+  no_partial_credit: true
+
+permitted_execution_scope:
+  continuity_lab_closure:
+    create:
+      - docs/70-implementation/mi-001c-original-mi001-output-artifact-evidence-recovery.md
+    modify:
+      - sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml
+      - sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md
+      - docs/90-state/program-state.md
+      - docs/90-state/artifact-index.md
+      - docs/70-implementation/README.md
+      - README.md
+      - CONTINUITY-NEXT-STEPS.md
+    rule: >
+      Preserve the original authorization terms and append an execution closure.
+      Replace the unused handoff placeholder and create the canonical report.
+      No other continuity-lab file may change. Do not commit or push during the
+      execution session without separate user authorization.
+  continuity_workspace_output:
+    create:
+      - output/MI-001C/continuity-lab-MI-001C-<result>-<UTC timestamp>.zip
+    rule: >
+      Create the complete updated continuity-lab repository ZIP only after the
+      unconditional result. Do not modify or replace any pre-existing evidence
+      file, candidate archive, input archive, or prior output.
+  nestfolio: read-only Git evidence only; no file, index, ref, or object change
+  everything_else: prohibited
+
+explicit_non_goals:
+  - reconstructing, recreating, editing, normalizing, or installing SKILL.md
+  - repairing or applying the retained candidate
+  - invoking /backlog-next, continuity:invoke, Claude Code, or any Skill
+  - proving genuine active-boundary or direct-current invocation
+  - claiming or changing MI-001 C1 or C3
+  - changing the Pack lock or any Nestfolio file
+  - inspecting Downloads, other home locations, browser data, cloud storage, remote services, or unrelated projects
+  - authoring or executing candidate reconstruction or deliberate supersession
+  - authorizing MI-002 or any broader implementation
+  - Level 2-6 state, guarantee, or implementation
+
+required_outputs:
+  continuity_lab:
+    - completed MI-001C Context Pack with appended result
+    - preserved executable prompt
+    - completed evidence-linked session handoff
+    - canonical MI-001C evidence-recovery report
+    - updated Program State, Artifact Index, implementation orientation, repository orientation, and next steps
+  external:
+    - complete updated continuity-lab closure ZIP under continuity-workspace/output/MI-001C
+  return:
+    - authorization and repository-binding results
+    - deterministic candidate ledger and original-versus-recreated classifications
+    - provable delivery chain or explicit proof that none is available
+    - canonical input binding and exact 15-entry manifest verification
+    - streamed SKILL.md digest and byte count disposition
+    - validation commands and results
+    - exact continuity-lab changed-file manifest and confirmation of no Nestfolio change
+    - exactly one unconditional result and exactly one selected contract-required next iteration
+
+next_iteration_rule:
+  on_pass: >
+    Select exactly one separately reviewed iteration named MI-001B-R1 — Proven
+    Original Artifact Candidate Identity Restoration, with status
+    selected-contract-required. It may later contract byte-for-byte installation
+    from the proven artifact, but MI-001C must not author, authorize, or execute
+    it. Genuine invocation confirmation and MI-002 remain blocked.
+  on_fail: >
+    Select exactly one iteration named MI-001D — Retained Level 1 Candidate
+    Deliberate Supersession, with status selected-contract-required. Do not
+    reconstruct or supersede inside MI-001C; do not select an evidence-recovery
+    retry, genuine invocation confirmation, or MI-002.
+
+blocked_until_completion:
+  - candidate reconstruction, repair, installation, or deliberate supersession
+  - every genuine invocation confirmation iteration
+  - /backlog-next and continuity:invoke
+  - MI-002 through MI-007
+  - all broader implementation and migration
+  - Console, hosted services, universal integrations, and commercial work
+  - broad or unrelated Nestfolio changes

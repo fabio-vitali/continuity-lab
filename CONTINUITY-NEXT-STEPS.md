@@ -1,18 +1,16 @@
-# Continuity — After MI-001B Unconditional FAIL
+# Continuity — MI-001C Contract Review and Execution Handoff
 
 ## Current state
 
 - MI-001, MI-001A, and MI-001B are complete with **UNCONDITIONAL FAIL**.
-- The committed Nestfolio candidate still differs from its coherent unchanged lock only at `.claude/skills/backlog-next/SKILL.md`.
-- MI-001B received one archive, SHA-256 `0c3687022316de8841bf94996f39fa3198a5b94b4305266874ee55d7a54febcb`, but it was the continuity-lab source archive for `47f89495ced69f464724c52967d077679cdec78a`, not the original modified Nestfolio output returned by MI-001.
-- The archive contained 0 of the 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`.
-- MI-001B stopped before extraction or installation. Nestfolio remains clean and unchanged at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`.
-- **MI-001C — Original MI-001 Output Artifact Evidence Recovery** is selected with status `selected-contract-required`; it is not contracted, authorized, or executed.
-- MI-002 through MI-007, genuine invocation confirmation, candidate reconstruction, and broader work remain blocked.
+- Nestfolio remains clean and unchanged at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`.
+- **MI-001C — Original MI-001 Output Artifact Evidence Recovery** is the sole `authorized-not-started` execution iteration after this contract is reviewed, committed, and pushed.
+- MI-001C has not executed and its result is pending.
+- Candidate reconstruction, candidate installation, deliberate supersession, genuine invocation confirmation, `/backlog-next`, `continuity:invoke`, MI-002 through MI-007, and broader work remain blocked.
 
-## 1. Review the MI-001B closure
+## 1. Review the contract-authoring change
 
-From continuity-lab, inspect:
+From continuity-lab, run:
 
 ```bash
 git status --short
@@ -21,59 +19,55 @@ git diff -- \
   README.md \
   CONTINUITY-NEXT-STEPS.md \
   docs/70-implementation/README.md \
-  docs/70-implementation/mi-001b-retained-level-1-candidate-identity-restoration.md \
-  docs/90-state/program-state.md \
   docs/90-state/artifact-index.md \
-  sessions/MI-001B-retained-level-1-candidate-identity-restoration/context-pack.yaml \
-  sessions/MI-001B-retained-level-1-candidate-identity-restoration/session-handoff.md
+  docs/90-state/program-state.md
+git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/changed-files.txt || true
+git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/context-pack.yaml || true
+git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md || true
+git diff --no-index /dev/null sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/session-handoff.md || true
 ```
 
-Confirm that:
+Confirm that the contract:
 
-- the verdict is exactly one unconditional FAIL;
-- the provenance failure is bound to the supplied archive identity and contents;
-- no extraction or installation occurred;
-- Nestfolio has no MI-001B change or evidence file;
-- the Pack lock and starting `SKILL.md` remain untouched;
-- no required downstream verification is falsely reported as passing;
-- MI-001C is selected but not authorized;
-- MI-002 and all broader work remain blocked.
+- authorizes only a fully automated, deterministic, read-only evidence-recovery operation;
+- limits filesystem inspection to `continuity-workspace/retained-artifacts/MI-001` and `continuity-workspace/output`;
+- limits repository inspection to relevant read-only Git history, reflogs, stashes, indexes, and object databases in continuity-lab and Nestfolio;
+- excludes Downloads, other home locations, browser data, cloud storage, network resources, and unrelated projects;
+- distinguishes original delivery from every later recreation or derivation;
+- requires a complete, non-circular, pre-existing delivery chain;
+- directly verifies MI-001 source revision `3aa8f4773955541415f615abd80a0a9702bcb416` and input archive SHA-256 `0ff27fc97261b3e782d39af2e563c0a785593f0ba4c3ac5474f20bef42ec13be`;
+- requires the exact 15-entry MI-001 changed-file manifest;
+- streams `SKILL.md` without extraction or installation and requires SHA-256 `9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90`, 33928 bytes;
+- converges on exactly one unconditional result;
+- selects MI-001D deliberate supersession, still contract-required, if the original artifact cannot be recovered;
+- keeps Nestfolio, invocation, MI-002, and broader work blocked.
 
-## 2. Preserve the supplied archive unchanged
+## 2. Commit and push only after explicit approval
 
-Keep this non-matching archive unchanged as execution input evidence:
+Commit exactly the nine paths listed in the contract-authoring manifest. Push the resulting `main` commit to `origin/main`. Record the full pushed revision.
+
+Do not modify or commit Nestfolio. Do not commit the generated ZIP from continuity-workspace into continuity-lab.
+
+## 3. Start a fresh MI-001C execution session
+
+Only after the reviewed continuity-lab commit is pushed and all three repositories satisfy the contract bindings, open a fresh local WebStorm/Codex session rooted at:
 
 ```text
-/Users/fabiovitali/WebstormProjects/continuity-workspace/retained-artifacts/MI-001/continuity-lab-47f89495ced69f464724c52967d077679cdec78a.zip
+/Users/fabiovitali/WebstormProjects/continuity-workspace
 ```
 
-Do not rename, recompress, edit, or replace it in place.
+Paste the complete contents of:
 
-## 3. Review, commit, and push the continuity-lab closure
+```text
+/Users/fabiovitali/WebstormProjects/continuity-lab/sessions/MI-001C-original-mi001-output-artifact-evidence-recovery/prompt.md
+```
 
-Only after reviewing the diff, commit the eight MI-001B closure paths. Do not commit or modify Nestfolio for MI-001B because it has no execution change.
-
-Record the resulting full continuity-lab revision. This closure does not itself authorize MI-001C.
-
-## 4. Author a separate MI-001C contract
-
-MI-001C may be authorized only through a fresh reviewed and committed contract derived from the updated Program State.
-
-Its scope must be evidence recovery only:
-
-- locate the original modified Nestfolio ZIP returned by MI-001, or a byte-identical preserved copy with a provable delivery chain;
-- record archive-level SHA-256, byte size, timestamps, extended attributes, delivery metadata, ZIP comment, and full structure;
-- prove the canonical MI-001 source revision and input-archive binding;
-- prove the exact 15-entry MI-001 changed-file manifest;
-- stream the embedded `SKILL.md` without installation and verify SHA-256 `9ff3b13cc3f422c6845c8e49a7662ea51f5f12713f4a610f967463973391fa90`, 33928 bytes.
-
-MI-001C must not reconstruct, edit, normalize, recompress, install, or invoke the Skill. Any later installation requires another separately reviewed contract after evidence recovery succeeds.
+The execution session must not use conversational memory from contract authoring. It must read the committed contract and apply its exact evidence boundaries.
 
 ## Work that remains blocked
 
-- `/backlog-next` and `continuity:invoke`;
-- genuine active-boundary or direct-current invocation confirmation;
-- candidate reconstruction or installation;
+- reconstruction, editing, installation, repair, or supersession of the retained candidate;
+- `/backlog-next`, `continuity:invoke`, and every genuine invocation confirmation;
 - MI-002 through MI-007;
 - reusable multi-Procedure Pack composition;
 - canonical Work, Context, Session, Run, Assurance, learning, or completion machinery;
