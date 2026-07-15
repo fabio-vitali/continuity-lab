@@ -1,13 +1,13 @@
 contract:
-  status: authorized-not-started
+  status: completed-unconditional-fail
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15
   finalized_on: 2026-07-15
   contract_authorized: true
-  execution_authorized: false
-  execution_instruction_received: false
-  execution_started: false
-  result: pending
+  execution_authorized: true
+  execution_instruction_received: true
+  execution_started: true
+  result: unconditional-fail
   authority:
     - docs/90-state/program-state.md
     - sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
@@ -21,27 +21,22 @@ contract:
     - docs/70-implementation/mi-003-bounded-local-work-and-scope.md
     - sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt
   authorization_rule: >
-    This finalized contract is authorized-not-started. Contract authoring,
-    review, finalization, authorization, publication, or selection does not
-    authorize MI-003-R1 execution. Execution may begin only in a later fresh
-    control session after the user supplies a separate explicit MI-003-R1
-    execution instruction naming the exact published continuity-lab contract
-    revision and all three required repository revisions; Git metadata proves
-    the exact clean pushed bindings; canonical Program State is read first and
-    alone as the first repository content; this contract is unchanged at that
-    revision; and the instruction authorizes only the bounded retry. Backlog
-    work itself remains unauthorized.
+    This contract was finalized and authorized-not-started before publication.
+    The later fresh execution instruction named the exact published revision
+    and all three repository bindings and authorized only the bounded retry.
+    Contract authoring, publication, selection, and execution never authorized
+    backlog work itself.
 
 iteration:
   id: MI-003-R1
   name: Bounded Local Work and Scope Canonical Read-Order Correction Retry
   type: bounded-level-3-local-work-authority-correction-retry
   px_level: 3
-  status: authorized-not-started
+  status: completed-unconditional-fail
   correction_only: true
   predecessor_result: MI-003 UNCONDITIONAL FAIL
   selected_item: null
-  execution_status: not-started
+  execution_status: completed-unconditional-fail
 
 objective:
   primary_question: >
@@ -520,3 +515,106 @@ completion_criteria:
   - no Nestfolio content inspection, mutation, candidate, selection, Skill, Claude Code, dependency operation, commit, or push
   - exact nine-path uncommitted and unstaged continuity-lab contract-authoring manifest
   - publication handoff for a fresh control session
+
+execution_closure:
+  status: completed
+  result: MI-003-R1 UNCONDITIONAL FAIL
+  closed_on: 2026-07-15
+  execution_contract_revision: 6aa004ff01ba9caab242680fbf62e3d53730bf46
+  repository_bindings:
+    continuity_workspace: eb990e114973e42af9935379f6b13f34f2e5e3b8
+    continuity_lab: 6aa004ff01ba9caab242680fbf62e3d53730bf46
+    nestfolio: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    disposition: All exact clean-main alignment and contract-identity gates passed.
+  sole_failure:
+    criterion: C1
+    diagnostic: CANONICAL_READ_PARTIAL
+    path: docs/60-migration/migration-plan.md
+    sequence_position: 6
+    tool_observation: "truncated output; original token count 24062; total output lines 920"
+    disposition: >
+      Program State was first and alone, followed by four complete serial reads.
+      The sixth canonical read returned only a truncated representation. A
+      complete read could not be proven, and rereading would introduce another
+      sequence violation, so execution stopped before Nestfolio inspection.
+  completed_canonical_reads:
+    - docs/90-state/program-state.md
+    - sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml
+    - sessions/MI-003-bounded-local-work-and-scope/context-pack.yaml
+    - sessions/MI-003-bounded-local-work-and-scope/prompt.md
+    - sessions/MI-003-bounded-local-work-and-scope/session-handoff.md
+  candidate_projection:
+    status: not-executed
+    candidate_identity: null
+    considered_source_entries: 0
+  human_selection:
+    status: not-received-and-not-requested
+    source_path: null
+    stable_source_local_identity: null
+    source_revision: null
+    source_sha256: null
+  criteria:
+    C1: fail
+    C2: not-executed
+    C3: not-executed
+    C4: not-executed
+    C5: not-executed
+    C6: not-executed
+    C7: not-executed
+  success_scenarios:
+    S1: not-executed
+    S2: not-executed
+    S3: not-executed
+    S4: not-executed
+    S5: not-executed
+    S6: not-executed
+    S7: not-executed
+    S8: not-executed
+    S9: not-executed
+    S10: not-executed
+  mandatory_failures:
+    F1: not-executed
+    F2: not-executed
+    F3: not-executed
+    F4: not-executed
+    F5: not-executed
+    F6: not-executed
+    F7: not-executed
+    F8: not-executed
+    F9: not-executed
+    F10: not-executed
+    F11: not-executed
+    F12: not-executed
+  validation:
+    level_3_tests: not-executed
+    level_2_tests: not-executed
+    level_1_tests: not-executed
+    backlog_next_tests: not-executed
+    candidates_rebuild: not-executed
+    work_brief_rebuild: not-executed
+    return_transition: not-executed
+    cancel_transition: not-executed
+    final_manifest_validation: not-executed
+  preservation:
+    nestfolio_content_read: false
+    nestfolio_mutated: false
+    nestfolio_manifest: []
+    created_level_3_paths: 0
+    pre_existing_tracked_bytes_changed: 0
+    dependency_operation: false
+    claude_code_invoked: false
+    skill_invoked: false
+    selected_backlog_effort_executed: false
+    level_4_to_6_authority_created: false
+  rollback:
+    required: false
+    cleanup_performed: false
+    reason: No Nestfolio content was inspected and no MI-003 path was created.
+  immutable_history:
+    mi_003: preserved-byte-for-byte
+    mi_002: preserved-byte-for-byte
+  next_valid_operation: >
+    Publish this exact nine-path failure closure in a fresh control session.
+    After publication, select only a separately contracted bounded correction
+    or an explicit architecture review supported by this failure. MI-004 remains
+    blocked.

@@ -52,13 +52,14 @@ nine-path continuity-lab failure closure is published at exact continuity-lab
 revision `55e81e441e9e2facfda5382c3de57d1b8b3f5c9e`.
 
 **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction
-Retry** is finalized, reviewed, and `authorized-not-started`. It preserves the
-MI-003 failure and all original objective and execution boundaries; its sole
-correction requires complete Program State as the first and only repository
-content in the first content-read operation, followed by serial complete reads
-in exact order. Contract publication is next. Execution, candidate selection,
-Nestfolio content inspection or mutation, MI-004, and broader work remain
-unauthorized.
+Retry** is complete with **UNCONDITIONAL FAIL**. All repository and contract
+identity gates passed, and Program State was read first and alone. The retry
+then received only a truncated representation of
+`docs/60-migration/migration-plan.md`; because a complete serial read could not
+be proven and rereading would further violate the sequence, C1 failed with
+`CANONICAL_READ_PARTIAL`. Execution stopped before any Nestfolio content read,
+candidate projection, selection, test, or mutation. MI-003 remains one
+immutable historical failure, and MI-004 and broader work remain blocked.
 
 ## Canonical starting points
 
@@ -110,6 +111,10 @@ unauthorized.
 - MI-003-R1 preserved future execution prompt: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md`
 - MI-003-R1 contract handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
 - MI-003-R1 contract-authoring manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/changed-files.txt`
+- MI-003-R1 completed contract: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml`
+- MI-003-R1 execution handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
+- MI-003-R1 execution-closure manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt`
+- MI-003-R1 canonical report: `docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

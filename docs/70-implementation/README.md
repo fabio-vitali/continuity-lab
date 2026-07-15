@@ -26,6 +26,7 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction** — **UNCONDITIONAL FAIL**. Repository gates passed, but the required canonical read order was not followed. Execution stopped before pre-edit reproduction and before any Nestfolio mutation; that sole historical result remains immutable.
 - **MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** — **UNCONDITIONAL PASS**. Exact 22/23 and the sole typed diagnostic were reproduced; immutable predecessor binding plus pre-write identity checks restored 23/23 with all bounded validation and preservation requirements passing.
 - **MI-003 — Bounded Local Work and Scope** — **UNCONDITIONAL FAIL**. Exact repository and contract-identity gates passed, but the Context Pack was read before canonical Program State. Execution stopped before Nestfolio content read or mutation; candidate derivation, selection, Level 3 creation, tests, scenarios, rebuilds, and rollback were not executed.
+- **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry** — **UNCONDITIONAL FAIL**. Program State was read first and alone, but the sixth canonical read returned a truncated representation of the Migration Plan. C1 failed with `CANONICAL_READ_PARTIAL`; execution stopped before Nestfolio content read or mutation.
 
 Canonical reports:
 
@@ -39,6 +40,8 @@ Canonical reports:
 - `mi-001e-superseding-candidate-genuine-claude-code-invocation-confirmation.md`.
 - `mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md`.
 - `mi-002-reusable-pack-composition.md`.
+- `mi-003-bounded-local-work-and-scope.md`.
+- `mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`.
 
 ## Current implementation position
 
@@ -66,10 +69,9 @@ is published at continuity-lab revision
 `55e81e441e9e2facfda5382c3de57d1b8b3f5c9e`.
 
 **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction
-Retry** is finalized, reviewed, and authorized-not-started. It preserves the
-original objective, selection boundary, conjunctive verdict, exact bindings,
-read/create/immutable boundaries, S1-S10, F1-F12, deterministic evidence,
-rollback, prohibitions, and immutable MI-003 result. The sole correction makes
-Program State the first and only repository content read after valid metadata
-gates and requires the remaining canonical sequence to be read serially and
-completely. Contract publication is next; execution and MI-004 remain blocked.
+Retry** is complete with UNCONDITIONAL FAIL. Exact metadata and contract gates
+passed, Program State was first and alone, and the next four canonical files
+were read completely. The sixth read returned a truncated Migration Plan, so a
+complete canonical sequence could not be proven. No Nestfolio content,
+candidate, selection, Level 3 state, test, scenario, or mutation occurred. The
+historical MI-003 and all MI-002 results remain immutable; MI-004 is blocked.

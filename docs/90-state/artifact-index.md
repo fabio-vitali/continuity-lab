@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; preserves MI-002 and MI-003 history and records the MI-003-R1 authorized-not-started publication candidate |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact fresh-session handoff for publication of the nine-path MI-003-R1 contract candidate |
+| `README.md` | Ratified | Program | Repository orientation; preserves MI-002 and MI-003 history and records the MI-003-R1 unconditional failure |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Exact fresh-session handoff for publication of the nine-path MI-003-R1 failure closure |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -23,7 +23,7 @@ superseded_by: null
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
 | `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and authorized-not-started MI-002 boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results and records the bounded MI-003-R1 canonical-read-order correction retry boundary |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results and records the MI-003-R1 unconditional failure disposition |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
@@ -35,7 +35,8 @@ superseded_by: null
 | `docs/70-implementation/mi-001e-r1-superseding-candidate-genuine-claude-code-invocation-confirmation-correction.md` | Validated | Implementation | Canonical MI-001E-R1 report: exact intervals, two genuine normal results, one-path containment, C1–C7 PASS, exact restoration, and MI-002 selection only |
 | `docs/70-implementation/mi-002-reusable-pack-composition.md` | Validated | Implementation | Original canonical MI-002 report and execution result with immutable MI-002-R1 FAIL plus appended MI-002-R2 PASS correction disposition |
 | `docs/70-implementation/mi-003-bounded-local-work-and-scope.md` | Validated | Implementation | Canonical MI-003 report: exact gates, canonical-read-order C1 failure, no candidate or selection, unchanged Nestfolio, empty Nestfolio manifest, and unconditional FAIL |
-| `docs/90-state/program-state.md` | Ratified | Program | Active truth: immutable MI-003 failure and finalized authorized-not-started MI-003-R1 contract candidate |
+| `docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md` | Validated | Implementation | Canonical MI-003-R1 report: exact gates, partial sixth canonical read, no Nestfolio inspection or mutation, empty manifests, and unconditional FAIL |
+| `docs/90-state/program-state.md` | Ratified | Program | Active truth: immutable MI-003 failure and separate MI-003-R1 unconditional failure |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -134,7 +135,8 @@ superseded_by: null
 | `sessions/MI-003-bounded-local-work-and-scope/session-handoff.md` | Validated | Session | Completed MI-003 FAIL handoff with exact bindings, canonical-read-order failure, no candidate or selection, unchanged Nestfolio, and correction-only continuation |
 | `sessions/MI-003-bounded-local-work-and-scope/changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for MI-003 contract authoring, review, and finalization |
 | `sessions/MI-003-bounded-local-work-and-scope/execution-changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for MI-003 unconditional-FAIL execution closure |
-| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml` | Ratified | Session | Finalized authorized-not-started MI-003-R1 contract preserving MI-003 history and correcting only canonical read discipline |
-| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md` | Provisional | Session | Preserved future MI-003-R1 execution instruction requiring exact publication binding and Program-State-first discipline |
-| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md` | Ratified | Session | MI-003-R1 contract handoff with exact bindings, immutable-history disposition, correction boundary, and publication-only continuation |
+| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/context-pack.yaml` | Validated | Session | Completed MI-003-R1 contract with appended unconditional-FAIL closure for the partial sixth canonical read |
+| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/prompt.md` | Provisional | Session | Preserved historical MI-003-R1 execution instruction; inactive after the unconditional result |
+| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md` | Validated | Session | MI-003-R1 failure handoff with exact bindings, canonical partial-read failure, unchanged Nestfolio, and correction-only continuation |
 | `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/changed-files.txt` | Ratified | Session | Exact nine-path continuity-lab manifest for MI-003-R1 contract authoring, review, and finalization |
+| `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for MI-003-R1 unconditional-FAIL execution closure |
