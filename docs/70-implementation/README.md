@@ -122,7 +122,20 @@ diagnostics; the tracked tree remained unchanged
 (`bd2a95fb965b3e28849c6070b74638d34fe1c393`) and exactly twenty-two additions
 are published at Nestfolio `a760d6f41ff14491d5b008a7f13234ba0221bcec`. The
 selected effort remains NOT implemented and its implementation remains
-separately authorized. The next valid program operation is contracting MI-005
-(or a separately contracted execution of the selected effort) in a fresh
-control session; MI-005 through MI-007 and broader work remain blocked until
-then.
+separately authorized.
+
+**SE-001 — Selected Effort Execution** is contracted and not executed. One
+reviewed bounded execution contract candidate for the selected effort
+`dashboard-bff-awaiting-confirmation-activity-gap` was authored, reviewed,
+and finalized on 2026-07-16 against the authorized Context Pack version 1
+(SHA-256 `e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`)
+at the exact published Level 4 Nestfolio revision
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`. It binds every published Level
+1-4 artifact and the backlog source as read-only inputs by exact digest,
+derives a frozen writable boundary from the published Level 3 Scope and
+Working Set, requires a fail-before/pass-after gap proof, and creates no
+Level 5-6 authority. The next valid program operation is publishing the
+SE-001 contract in a fresh control session with the exact subject
+"Authorize SE-001 selected effort execution"; execution requires a still
+later fresh instruction. MI-005 through MI-007 and broader work remain
+blocked.

@@ -1,0 +1,678 @@
+contract:
+  status: reviewed-publication-candidate
+  authored_on: 2026-07-16
+  reviewed_on: 2026-07-16
+  finalized_on: 2026-07-16
+  contract_authorized: true
+  publication_authorized: false
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  result: pending
+  authority:
+    - docs/90-state/program-state.md
+    - docs/90-state/artifact-index.md
+    - CONTINUITY-NEXT-STEPS.md
+    - README.md
+    - docs/70-implementation/README.md
+    - docs/70-implementation/mi-004-authorized-context-introduction.md
+    - sessions/MI-004-authorized-context-introduction/context-pack.yaml
+    - sessions/MI-004-authorized-context-introduction/prompt.md
+    - sessions/MI-004-authorized-context-introduction/session-handoff.md
+    - sessions/MI-004-authorized-context-introduction/changed-files.txt
+    - sessions/MI-004-authorized-context-introduction/execution-changed-files.txt
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt
+    - decisions/DR-0013-bounded-agent-work-core.md
+    - decisions/DR-0014-repository-local-canonical-state.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+  authorization_rule: >
+    This reviewed contract candidate authorizes neither publication nor
+    execution. Publication requires a later fresh control session that commits
+    exactly the reviewed nine-path contract-authoring delta with the exact
+    subject "Authorize SE-001 selected effort execution" and exact single
+    parent 1b5c4a775ee6673509d1acd5f5676ffd80387dac and pushes it. Execution
+    requires a still later fresh instruction naming the exact published
+    continuity-lab revision and all three repository bindings. Publication of
+    the execution result requires its own later fresh authorization with the
+    exact subject "Publish SE-001 selected effort implementation and
+    evidence". No authoring, review, publication, or execution instruction
+    authorizes MI-005 through MI-007 or broader work.
+
+iteration:
+  id: SE-001
+  name: Selected Effort Execution — dashboard-bff-awaiting-confirmation-activity-gap
+  type: bounded-selected-effort-execution-under-authorized-context
+  px_level: 4
+  status: contracted-not-published-not-executed
+  predecessor_results:
+    - MI-002-R2 UNCONDITIONAL PASS
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+    - MI-003-R2 UNCONDITIONAL PASS
+    - MI-004 UNCONDITIONAL PASS (recorded separately)
+  bound_selected_effort:
+    source_path: docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    source_identity: dashboard-bff-awaiting-confirmation-activity-gap
+    source_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    source_sha256: b656733991c96c4275d11e9a9f2bff7f5ac72cdd298cbc68a4b94b6799dc742d
+    level_3_publication_revision: b9d7264082322e09cfd233819b79f128ef912e31
+    level_4_publication_revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    selection_provenance: explicit human selection recorded by MI-003-R2
+    implementation_authorization: >
+      This contract chain is the separate explicit authorization required by
+      the MI-004 closure for implementing the selected effort. It becomes
+      effective only through the exact publication and execution steps in
+      authorization_rule.
+  bound_context_pack:
+    name: nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap
+    version: 1
+    context_pack_sha256: e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1
+    formation_trace_sha256: 8c05453897a28efc0abc43c143c4657175c7bfed167cf774d783b409b6c94911
+    authorization_record_sha256: a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc
+    adapter_view_sha256: 9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838
+    authorized_by: fabio.vitali (human program owner)
+    authorized_at: 2026-07-16T18:50:36.000Z
+    authorization_scope: >
+      Per DR-0020 and the MI-004 authorization record, the authorized Context
+      Pack version 1 is bounded Level 4 context state and target execution
+      input for the selected effort only. It carries no execution
+      authorization by itself and never authorizes any Run or Level 5-6
+      state. SE-001 execution consumes it exclusively through the
+      digest-matched adapter view.
+
+objective:
+  primary_question: >
+    Can the already selected backlog effort
+    dashboard-bff-awaiting-confirmation-activity-gap be implemented in
+    Nestfolio as one bounded, explicitly authorized repository change —
+    consuming exactly the digest-matched adapter view of the authorized Level
+    4 Context Pack version 1, mutating only the writable boundary
+    deterministically derived from the published Level 3 Scope and Working
+    Set as carried by that Context Pack, proving the pre-existing
+    awaiting-confirmation activity gap with a fail-before/pass-after
+    validation, preserving every byte outside the boundary including all
+    published Level 1-4 artifacts and the backlog source, and passing every
+    contracted validation — while no Session, Run, Checkpoint, Handoff,
+    Assurance, completion, Decision, Learning, or Level 5-6 authority is
+    created or claimed and Levels 1-4 continue truthfully?
+  completion_boundary: >
+    Implement and validate only the bounded repository change described by
+    the bound selected-effort source as scoped by the published Level 3
+    Scope, Working Set, and completion criteria carried in the authorized
+    Context Pack, plus the exact SE-001 evidence set. Do not mutate the
+    backlog source, any Level 3 or Level 4 artifact, or any byte outside the
+    recorded writable boundary and evidence set. Do not record completion,
+    Assurance, Run, or any Level 5-6 state. Do not begin MI-005 through
+    MI-007 or broader work.
+
+repository_bindings:
+  continuity_workspace:
+    required_branch: main
+    revision: 56e10aa92429a8ae793463d1cd1c7ad9542e7f64
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+    content_read: prohibited
+    mutation: prohibited
+    harness_injected_claude_md: >
+      The continuity-workspace CLAUDE.md is injected automatically by the
+      Claude Code harness at session start. That injection is part of the
+      session environment and is not an executor-initiated content read.
+  continuity_lab:
+    required_branch: main
+    contract_authoring_base_revision: 1b5c4a775ee6673509d1acd5f5676ffd80387dac
+    contract_authoring_base_subject: Close MI-004 with UNCONDITIONAL PASS
+    required_execution_contract_revision: must be named exactly by the later execution instruction
+    required_execution_contract_identity: >
+      The named revision must be the clean pushed main revision containing
+      this contract byte-for-byte, with exact single parent
+      1b5c4a775ee6673509d1acd5f5676ffd80387dac and exact subject
+      "Authorize SE-001 selected effort execution".
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  nestfolio:
+    required_branch: main
+    revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    revision_role: >
+      Exact published MI-004 revision, direct child of
+      b9d7264082322e09cfd233819b79f128ef912e31, holding the twenty-two Level 4
+      additions, the twenty-two Level 3 additions, and the active Level 3
+      route for the selected effort. Every published Level 1-4 artifact and
+      every recorded historical result is a read-only input to SE-001.
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  unresolved_or_mismatched_binding_blocks_execution: true
+
+executor_identity:
+  session_executor: >
+    The SE-001 execution session is conducted directly by Claude Code
+    operating under the human's explicit execution instruction. The session
+    executor performs the contracted work itself with its own tools.
+  nested_executor_rule: >
+    Every prohibition on invoking Claude Code or any Skill binds the session
+    executor against delegation: it must not spawn a nested Claude Code
+    instance, sub-agent, background task, or workflow, and must not invoke
+    any Skill, slash command, /backlog-next, continuity:invoke, or other
+    executor procedure. Conducting the contracted work directly in the
+    session does not violate those prohibitions. Running node for tests,
+    validation, and the published continuity tooling's own checks is direct
+    work, not delegation.
+
+canonical_complete_read_protocol:
+  protocol_basis: >
+    SE-001 carries forward the MI-003-R2 segmented canonical complete-read
+    protocol as completed by MI-004, unchanged in substance and adapted only
+    in its path lists. Complete consumption of one logical path must be
+    proved before another path opens; tool-output truncation never counts as
+    completion.
+  metadata_phase: >
+    Before any repository content read, complete every required Git metadata
+    and contract-identity gate separately for all three repositories.
+    Metadata inspection must not open tracked or untracked file content. Any
+    failed or contradictory gate stops before content read and before
+    execution starts.
+  logical_path_session: >
+    A logical-path read session begins when one exact canonical file is
+    opened for plan or payload access and ends only after its completion
+    proof passes. During that session every content-bearing, planning,
+    counting, sizing, digesting, or verification operation may address only
+    that same path. No other repository path may be listed, opened,
+    previewed, diffed, hashed, counted, or batched before the session
+    closes. Directory expansion may occur only at its listed order position
+    and yields individual file paths in bytewise order; each file then
+    receives its own logical-path session.
+  program_state_first_rule: >
+    After all metadata gates pass, the first logical repository path opened
+    must be continuity-lab docs/90-state/program-state.md. It must be the
+    sole logical repository path addressed until every chunk and its
+    whole-path completion proof pass. The first content operation may
+    establish the plan for Program State only; it may not open the SE-001
+    contract or any other path in the same call or in parallel.
+  canonical_source: >
+    Read the exact bytes of each named path from the bound clean revision.
+    Record the repository role, revision, path, Git blob object identity,
+    total byte count, total LF count, total logical-line count, whole-path
+    SHA-256, and whether the final byte is LF. A logical line is an
+    LF-terminated byte record or the non-empty final byte record after the
+    last LF. Empty files have zero logical lines. Require well-formed UTF-8;
+    invalid encoding is CANONICAL_PATH_ENCODING_INVALID and fails C1 before
+    another path opens.
+  read_operation:
+    algorithm_id: claude-code-contiguous-read-coverage-v1
+    rule: >
+      Read the exact bytes of the path from the clean working tree at the
+      bound revision using the session executor's file-read tool, in
+      contiguous, ordered, non-overlapping, forward-only line-range chunks.
+      Read the whole path in one call whenever it fits the tool's response
+      limits. Never read any other path between the chunks of an open
+      logical-path session.
+  output_completeness_gate: >
+    A chunk is consumed only when the tool response presents the requested
+    line range directly and completely, with no truncation, clipping,
+    omission, elision, summarization, or persisted-to-file substitution
+    reported or observable. Any such condition is
+    CANONICAL_SEGMENT_INCOMPLETE. It never counts as completion and the
+    executor must not advance past it.
+  incomplete_chunk_recovery: >
+    After CANONICAL_SEGMENT_INCOMPLETE, the executor may re-read starting at
+    the exact first unconsumed line with a smaller line limit, within the
+    same open logical-path session. Recovery must remain forward-contiguous
+    and non-interleaved and never skips, reorders, or substitutes content.
+    Unrecoverable truncation fails C1 before another path opens.
+  whole_path_completion_proof: >
+    Close a logical-path session only after the consumed chunks form one
+    contiguous line coverage from the first line to the recorded final
+    logical line with no gap or overlap; the covered line count equals the
+    recorded logical-line count; and a final same-path verification proves
+    the working-tree bytes still match the recorded byte count, whole-path
+    SHA-256, and bound Git blob identity. No narrative assertion can replace
+    these machine-verifiable facts.
+  serial_sequence_rule: >
+    After Program State closes, open every remaining logical path one at a
+    time, completely, in the exact order below. Do not parallelize or
+    interleave path sessions. Any earlier, missing, partial, reordered,
+    parallel, batched, extra, or unproved read is SE-001 UNCONDITIONAL FAIL
+    and requires stop before Nestfolio mutation.
+  required_continuity_lab_order:
+    - docs/90-state/program-state.md
+    - sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml
+    - sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md
+    - docs/70-implementation/mi-004-authorized-context-introduction.md
+    - sessions/MI-004-authorized-context-introduction/session-handoff.md
+    - sessions/MI-004-authorized-context-introduction/execution-changed-files.txt
+    - docs/60-migration/migration-plan.md
+    - docs/40-product-experience/product-experience.md
+    - decisions/DR-0013-bounded-agent-work-core.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+  required_nestfolio_order_after_lab_sequence:
+    - package.json
+    - .claude/skills/backlog-next/SKILL.md
+    - continuity/level-1/** in bytewise path order, one logical file path at a time
+    - continuity/level-2/** in bytewise path order, one logical file path at a time
+    - continuity/level-3/** in bytewise path order, one logical file path at a time
+    - continuity/level-4/** in bytewise path order, one logical file path at a time
+    - tests/continuity-level-4.test.mjs
+    - continuity/evidence/mi-004/00-repository-bindings.json
+    - docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    - every writable-boundary path from the recorded boundary derivation, in bytewise path order, one logical file path at a time
+  boundary_paths_read_rule: >
+    The writable-boundary derivation defined in
+    implementation_boundary must complete, with its recorded rebuild proofs,
+    after the docs/backlog source path closes and before the first
+    writable-boundary path opens. Boundary paths that the derivation names
+    but that do not exist at the bound revision are recorded as
+    to-be-created paths and are excluded from the read sequence instead of
+    blocking it.
+  rule_for_missing_named_path: >
+    A missing non-boundary named path, unexpected path form, non-regular
+    file, path collision, inability to establish bytewise order, or
+    inability to prove any complete logical-path session blocks execution
+    before mutation. Do not infer or substitute another source.
+
+immutable_history:
+  mi_004:
+    result: unconditional-pass
+    execution_contract_revision: 757112e7060252eccafe40f9178771b0adc67d17
+    nestfolio_publication_revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    level_4_additions: 22
+    selected_effort_implemented: false
+    rule: >
+      Preserve this result and every MI-004 artifact byte. The published
+      Level 4 artifacts, the authorized Context Pack version 1, its
+      authorization record, and its adapter view are read-only inputs to
+      SE-001 and are never repaired, regenerated, relabeled, edited in
+      place, or reinterpreted.
+  mi_003_r2:
+    result: unconditional-pass
+    execution_contract_revision: f07f95e3fcf2f73d463509f4ed0f3fcd6c3ffeaf
+    nestfolio_publication_revision: b9d7264082322e09cfd233819b79f128ef912e31
+    level_3_additions: 22
+    selected_effort_executed: false
+    rule: >
+      Preserve this result and every R2 artifact byte. The published Level 3
+      artifacts and active route are read-only inputs to SE-001 and are
+      never repaired, regenerated, relabeled, or reinterpreted.
+  mi_003_r1:
+    result: unconditional-fail
+    sole_cause: CANONICAL_READ_PARTIAL on the sixth canonical logical path
+    nestfolio_mutated: false
+    rule: >
+      Preserve this separate result and every R1 artifact and closure byte
+      without repair, relabeling, qualification, supersession, or
+      reinterpretation.
+  mi_003:
+    result: unconditional-fail
+    sole_cause: canonical-read-order deviation
+    published_failure_closure_revision: 55e81e441e9e2facfda5382c3de57d1b8b3f5c9e
+    nestfolio_mutated: false
+    rule: >
+      Preserve this separate result and every original MI-003 artifact and
+      closure byte without repair, relabeling, qualification, or
+      reinterpretation.
+  mi_002_r2:
+    result: published unconditional-pass
+    nestfolio_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    rule: >
+      Preserve the published result, exact eight-path correction, all
+      directly affected evidence, production Level 2, and retained Level 1.
+      MI-002-R1 and the original MI-002 execution remain immutable history.
+  separate_results_rule: >
+    MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS stand as
+    four separate immutable results, and MI-004 PASS is recorded separately.
+    SE-001 may not repair, relabel, re-grade, merge, or reinterpret any of
+    them.
+
+context_delivery_authority:
+  delivery_rule: >
+    SE-001 execution input is exclusively the digest-matched adapter view of
+    the authorized Context Pack version 1. Before any mutation the executor
+    must verify with recorded evidence: the context-pack.json whole-artifact
+    SHA-256 equals the bound context_pack_sha256; the validation result
+    records valid 18/18 on that exact digest; the authorization record
+    SHA-256 equals the bound authorization_record_sha256 and names exactly
+    that identity, version, and digest; the adapter view SHA-256 equals the
+    bound adapter_view_sha256 and digest-links to the authorized pack; and
+    no staleness, rejection, or revocation disposition exists. Absence,
+    multiplicity, mismatch, or an inferred substitute blocks fail-closed.
+  no_reformation_rule: >
+    SE-001 never forms, refreshes, re-validates, re-authorizes, or versions
+    any Context Pack, and never edits any Level 4 artifact. A stale, revoked,
+    or digest-mismatched context blocks execution; the only recovery is a
+    separately contracted later operation.
+  truthful_guarantees_rule: >
+    Per DR-0019, SE-001 reports Level 4 as the active guarantee level and
+    states explicitly that Level 5-6 guarantees (resumable Runs,
+    Evidence-bound completion, Assurance, Learning) are absent. Implementing
+    the selected effort is not a Continuity-trusted completion claim; the
+    backlog source and Level 3-4 artifacts record no completion state
+    change in SE-001.
+
+implementation_boundary:
+  derivation_rule: >
+    Before any mutation, derive the exact writable path set from the
+    published, digest-pinned Level 3 scope.json and working-set.json as
+    carried and delivered by the authorized Context Pack adapter view.
+    The derivation is deterministic (algorithm identity
+    se001-writable-boundary@1), records every considered declaration with
+    its source digest, expands to exact repository-relative file paths in
+    bytewise order, distinguishes existing paths from to-be-created paths,
+    and rebuilds byte-identically across three derivations. The recorded
+    boundary is frozen before the first mutation.
+  boundary_scope_rule: >
+    The writable boundary may contain only Nestfolio implementation and test
+    paths declared by the bound Scope and Working Set for the selected
+    effort. It never contains the backlog source, any continuity/level-1
+    through level-4 path, any continuity/evidence path, package.json,
+    package-lock.json, CLAUDE.md, any .claude path, any .git path, or any
+    path of another effort. A derivation yielding such a path, an empty
+    set, or a non-deterministic set blocks fail-closed before mutation.
+  mutation_rule: >
+    Every SE-001 content mutation must target a recorded writable-boundary
+    path or an exact contracted evidence create path. Modification of
+    existing bytes is permitted only inside the recorded writable boundary
+    and only as required by the bound completion criteria. Everything else
+    is immutable, byte-for-byte, for the whole execution.
+  gap_proof_rule: >
+    The implementation must include a validation that demonstrates the
+    awaiting-confirmation activity gap named by the bound effort source: in
+    an isolated temporary copy at the exact start revision the validation
+    fails, demonstrating the gap; after implementation, in the working tree,
+    the same validation passes. Both runs are recorded with exact commands
+    and digests. If the bound sources prove the gap cannot be demonstrated
+    this way, the mismatch blocks fail-closed and SE-001 closes as
+    UNCONDITIONAL FAIL without repair.
+
+required_preconditions:
+  - all three exact Git bindings pass before any repository content read
+  - every canonical logical-path session passes the segmented complete-read protocol in exact order
+  - the published Level 4 artifacts verify against every bound digest and record valid 18/18 with no stale, rejected, or revoked disposition
+  - the published Level 3 artifacts verify internally and the route remains active for the bound selected effort
+  - the bound selected-effort source is byte-identical to its recorded SHA-256 at the bound Nestfolio revision
+  - the writable boundary derives deterministically, is non-empty, respects boundary_scope_rule, and rebuilds byte-identically across three derivations
+  - all exact SE-001 evidence create paths are absent at the published start
+  - package-lock.json is absent and no dependency operation is needed
+  - Level 4 tests return 23/23 before mutation
+  - Level 3 tests return 23/23 before mutation
+  - MI-002 Level 2 tests return 23/23 before mutation
+  - retained Level 1 tests return 14/14 before mutation
+  - backlog-next tests return 68/68 before mutation without invoking the Skill
+  - the gap-demonstrating validation fails at the exact start revision in an isolated temporary copy
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata and exact committed objects required by this contract
+    - package.json
+    - CLAUDE.md
+    - .claude/skills/backlog-next/SKILL.md
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/level-3/**
+    - continuity/level-4/**
+    - continuity/evidence/mi-002/**
+    - continuity/evidence/mi-003/**
+    - continuity/evidence/mi-004/**
+    - docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - tests/continuity-level-3.test.mjs
+    - tests/continuity-level-4.test.mjs
+    - .claude/skills/backlog-next/test/**
+    - every additional source named by the authorized Context Pack source ledger, read-only unless inside the recorded writable boundary
+  writable_boundary: >
+    Exactly the recorded writable path set derived under
+    implementation_boundary. Modified and created implementation and test
+    paths on PASS must all lie inside it.
+  create_exactly_on_pass_evidence:
+    - continuity/evidence/se-001/00-repository-bindings.json
+    - continuity/evidence/se-001/01-context-delivery.json
+    - continuity/evidence/se-001/02-writable-boundary.json
+    - continuity/evidence/se-001/03-implementation-and-gap-proof.json
+    - continuity/evidence/se-001/04-success-scenarios.json
+    - continuity/evidence/se-001/05-mandatory-failures.json
+    - continuity/evidence/se-001/06-preservation-and-rollback.json
+    - continuity/evidence/se-001/07-criterion-matrix-and-verdict.json
+    - continuity/evidence/se-001/commands/01-level4-tests.json
+    - continuity/evidence/se-001/commands/02-level3-tests.json
+    - continuity/evidence/se-001/commands/03-level2-tests.json
+    - continuity/evidence/se-001/commands/04-level1-tests.json
+    - continuity/evidence/se-001/commands/05-backlog-next-tests.json
+    - continuity/evidence/se-001/commands/06-gap-and-project-validation.json
+    - continuity/evidence/se-001/commands/07-final-changed-files.json
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly: the implementation and test paths changed inside the recorded
+    writable boundary, and the fifteen evidence additions above — with no
+    staged path and no other modified, deleted, renamed, or additional path.
+    Every pre-existing tracked byte outside the recorded writable boundary
+    is immutable, including every Level 1-4 artifact and the backlog source.
+    The delta remains uncommitted and unstaged at execution close;
+    publication is separately authorized.
+  path_absence_rule: >
+    Any pre-existing evidence create path is a collision and blocks
+    execution; it must not be overwritten, adopted, repaired, or deleted.
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, local origin/main, upstream, remote main, clean state, and observed time
+    - repository binding evidence records that Program State was the first and sole logical path and remained sole until its complete proof closed
+    - canonical-read evidence records every path plan, chunk range, channel completeness result, contiguous coverage proof, and final whole-path proof
+    - context-delivery evidence records every bound digest verification and the delivered adapter-view digest
+    - writable-boundary evidence records the derivation inputs, algorithm identity, three rebuild digests, and the frozen path set
+    - implementation evidence records per-path before/after SHA-256, byte counts, and the mapped completion criterion for every changed path
+    - gap-proof evidence records the isolated fail-before run and the working-tree pass-after run with exact commands and digests
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
+    - no chat transcript, hidden manual copy, timestamp-dependent artifact ordering, or unrecorded inference is admissible
+    - temporary fixtures are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-4.test.mjs returns 23/23 after implementation
+    - node --test tests/continuity-level-3.test.mjs returns 23/23 after implementation
+    - node --test tests/continuity-level-2.test.mjs returns 23/23 after implementation
+    - node --test tests/continuity-level-1.test.mjs returns 14/14 after implementation
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68 after implementation without invoking the Skill
+    - the gap-demonstrating validation fails at the isolated start-revision copy and passes in the implemented working tree
+    - every project validation command declared by package.json scripts that the bound Scope names for the effort passes after implementation
+    - the writable boundary rebuilds byte-identically across three derivations
+    - all S1-S10 success scenarios pass
+    - all F1-F12 mandatory failure scenarios fail closed with the exact typed diagnostic in isolated fixtures
+    - final Git and digest comparison proves every pre-existing tracked path outside the recorded writable boundary equals the exact start revision
+    - the final Nestfolio manifest contains exactly the boundary changes plus the fifteen evidence additions, uncommitted and unstaged, with a recorded SHA-256 manifest
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: every bound Level 4 digest verifies and the digest-matched adapter view of authorized Context Pack version 1 is recorded as the sole execution input
+  - id: S2
+    requirement: the writable boundary derives deterministically from the bound Scope and Working Set, respects boundary_scope_rule, and rebuilds byte-identically across three derivations before mutation
+  - id: S3
+    requirement: the implementation satisfies every completion criterion carried by the bound Context Pack for the selected effort, each mapped to observable recorded evidence
+  - id: S4
+    requirement: the gap-demonstrating validation fails at the exact start revision in an isolated temporary copy and passes after implementation in the working tree
+  - id: S5
+    requirement: Level 4, Level 3, Level 2, retained Level 1, and backlog-next suites return 23/23, 23/23, 23/23, 14/14, and 68/68 after implementation without invoking any Skill
+  - id: S6
+    requirement: every changed path lies inside the recorded writable boundary or the exact evidence create set and the final manifest is exact
+  - id: S7
+    requirement: the backlog source, every Level 1-4 artifact, all MI evidence, package.json, dependency state, and every other pre-existing byte outside the boundary remain byte-identical
+  - id: S8
+    requirement: SE-001 reports Level 4 as the active guarantee level and records that Run, Assurance, completion, and Learning authority are absent, with no completion state change in any canonical artifact
+  - id: S9
+    requirement: return and cancel are proven source-preserving in isolated temporary copies — removing the implementation delta restores the byte-identical start revision
+  - id: S10
+    requirement: the evidence set is complete, deterministic, canonically serialized, and the execution delta remains uncommitted and unstaged with a recorded SHA-256 manifest
+
+mandatory_failure_scenarios:
+  - id: F1
+    condition: changed digest in any bound Context Pack source, Scope, route, lock, or Level 3-4 artifact
+    diagnostic: STALE_CONTEXT_DEPENDENCY
+  - id: F2
+    condition: required bound source missing, unreadable, or unresolvable
+    diagnostic: CONTEXT_SOURCE_UNAVAILABLE
+  - id: F3
+    condition: attempt to execute from a draft, non-authorized, stale, rejected, or revoked Context Pack version
+    diagnostic: UNAUTHORIZED_CONTEXT_DELIVERY
+  - id: F4
+    condition: adapter view digest does not match the authorized Context Pack
+    diagnostic: CONTEXT_DELIVERY_MISMATCH
+  - id: F5
+    condition: writable-boundary derivation empty, ambiguous, out-of-scope, or non-deterministic
+    diagnostic: SCOPE_BOUNDARY_UNRESOLVED
+  - id: F6
+    condition: attempted mutation of any path outside the recorded writable boundary and evidence set
+    diagnostic: SCOPE_BOUNDARY_VIOLATION
+  - id: F7
+    condition: attempt to edit any Level 4 artifact or authorized Context Pack version in place
+    diagnostic: CONTEXT_IMMUTABILITY_VIOLATION
+  - id: F8
+    condition: attempt to mutate the backlog source or any Level 3 artifact, status, priority, dependency, or rank
+    diagnostic: SOURCE_MUTATION_PROHIBITED
+  - id: F9
+    condition: dependency installation, removal, upgrade, or package-lock.json creation required or attempted
+    diagnostic: DEPENDENCY_OPERATION_PROHIBITED
+  - id: F10
+    condition: attempt to invoke Claude Code, any Skill, slash command, /backlog-next, continuity:invoke, or any nested executor
+    diagnostic: EXECUTOR_DELEGATION_PROHIBITED
+  - id: F11
+    condition: claim or creation of Session, Run, Checkpoint, Handoff, effect, Assurance, completion, Decision, Learning, or Level 5-6 authority
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+  - id: F12
+    condition: final manifest contains a path outside the recorded writable boundary and exact evidence set
+    diagnostic: MANIFEST_SCOPE_MISMATCH
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata, the complete tracked-tree identity, all
+    critical Level 1-4 and MI evidence digests, the frozen writable
+    boundary with per-path pre-change digests, absence of every evidence
+    create path, and a verified external recovery ledger outside all
+    repositories. Do not copy backlog content or secrets into the recovery
+    ledger.
+  success_rollback_proof: >
+    In isolated temporary copies only, prove that removing the SE-001
+    implementation delta and evidence restores the byte-identical start
+    revision, that the Level 3 and Level 4 representations remain valid and
+    unchanged throughout, and that no false guarantee or completion state
+    survives. Do not mutate the real Level 3-4 artifacts or backlog source.
+  execution_failure: >
+    If any actual execution condition fails after mutation, restore every
+    writable-boundary path to its recorded pre-change bytes, remove only the
+    newly created SE-001 evidence paths, verify Nestfolio is byte-identical
+    and clean at the exact published start revision, retain diagnostics
+    outside all repositories, and close SE-001 as UNCONDITIONAL FAIL in
+    continuity-lab. Never retain a partial implementation after a failed
+    execution.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml
+    - sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md
+  create:
+    - docs/70-implementation/se-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md
+    - sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/execution-changed-files.txt
+  rule: >
+    A later separately authorized execution closure may record only the one
+    SE-001 result and exact execution facts. All MI-002 through MI-004
+    artifacts and the SE-001 prompt and contract-authoring manifest remain
+    immutable.
+
+explicitly_immutable:
+  continuity_workspace: [all content and Git state]
+  continuity_lab_during_execution:
+    - all MI-002, MI-002-R1, MI-002-R2, MI-003, MI-003-R1, MI-003-R2, and MI-004 artifacts and reports
+    - SE-001 prompt and contract-authoring manifest
+    - every path outside the exact SE-001 execution-closure scope
+    - all historical session artifacts and implementation reports
+  nestfolio:
+    - every pre-existing tracked path outside the recorded writable boundary
+    - package.json
+    - package-lock.json absence
+    - CLAUDE.md
+    - docs/backlog/**
+    - .claude/skills/**
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/level-3/**
+    - continuity/level-4/**
+    - continuity/evidence/mi-001*/**
+    - continuity/evidence/mi-002/**
+    - continuity/evidence/mi-003/**
+    - continuity/evidence/mi-004/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - tests/continuity-level-3.test.mjs
+    - tests/continuity-level-4.test.mjs
+
+prohibited_actions:
+  - execute SE-001 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio content before a separate explicit SE-001 execution instruction and valid gates
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during SE-001 execution
+  - modify, repair, relabel, qualify, supersede, re-grade, or reinterpret any MI-002, MI-003, MI-003-R1, MI-003-R2, or MI-004 artifact or result
+  - form, refresh, re-validate, re-authorize, version, or edit any Context Pack or Level 4 artifact
+  - execute from any non-authorized, stale, rejected, or revoked Context Pack version
+  - mutate the backlog source, any Level 3 artifact, status, priority, dependency, rank, or external object
+  - mutate any path outside the recorded writable boundary and exact evidence create set
+  - invoke Claude Code, any Skill, /backlog-next, continuity:invoke, or another executor procedure
+  - spawn a nested Claude Code instance, sub-agent, background task, workflow, Skill, or slash command as a sub-executor
+  - install, remove, or upgrade dependencies, modify package.json, or create package-lock.json
+  - create automatic bidirectional synchronization or external writes
+  - claim completion, record completion state, or create a Session, Run, Checkpoint, Handoff, effect record, Assurance Plan, Evidence authority, Guard, Waiver, Decision, Observation, Lesson, Change Proposal, Level 5-6 state, registry, remote source, universal ranking, Epic orchestration, intake, or themes migration
+  - promote Nestfolio behavior into reusable Pack or Framework Core authority
+  - inspect or modify paths outside the exact read and write boundaries
+  - treat incomplete, truncated, summarized, omitted, elided, or clipped tool output as a complete chunk or path
+  - interleave, batch, parallelize, reorder, skip, or substitute canonical path reads; recovery re-reads must remain forward-contiguous within the same open logical-path session
+  - execute MI-005 through MI-007 or any broader or unrelated implementation, or scope MI-005 or later slices
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 exact repository bindings, segmented canonical complete-read proof, and digest-matched authorized-context delivery authority
+    - C2 deterministic frozen writable boundary with recorded three-derivation rebuild and complete pre-mutation preservation ledger
+    - C3 implementation satisfies every bound completion criterion with recorded fail-before/pass-after gap proof
+    - C4 every mandatory failure blocks with the exact typed diagnostic
+    - C5 backlog source, Level 1-4 artifacts, MI evidence, dependencies, and every pre-existing byte outside the recorded boundary remain exact
+    - C6 authority, route, active Level 4 guarantee, and absent Level 5-6 state are observable, truthful, and unambiguous
+    - C7 deterministic rebuilds, source-preserving return and cancel proofs, cleanup, exact final manifest, and the uncommitted unstaged delta with recorded SHA-256 manifest pass
+  pass_rule: >
+    Issue SE-001 UNCONDITIONAL PASS only if C1-C7, S1-S10, F1-F12, every
+    precondition, every path and segment proof, validation, preservation,
+    rollback, cleanup, and exact-manifest requirement passes conjunctively
+    and no prohibited action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, reordered, interleaved,
+    truncated, clipped, mismatched, out-of-scope, non-deterministic,
+    partial, or failed condition after valid execution start is SE-001
+    UNCONDITIONAL FAIL. No qualified PASS, partial PASS, inferred
+    authorization, silent repair, evidence-only override, historical
+    reinterpretation, or history rewrite is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Preserve MI-002-R2, MI-003, MI-003-R1, and MI-003-R2 as four separate
+    immutable results and MI-004 as a separately recorded result. Record
+    SE-001 separately. The implementation delta becomes publishable only
+    through the separately authorized publication with the exact subject
+    "Publish SE-001 selected effort implementation and evidence".
+    Completion, Assurance, Run, and Learning authority remain absent;
+    MI-005 remains unauthorized until separately contracted, reviewed,
+    published, and explicitly executed.
+  on_fail: >
+    Preserve all separate results and keep MI-005 blocked. Select only a
+    newly bounded correction or explicit architecture review supported by
+    the failure evidence. Do not broaden scope.
+
+completion_criteria:
+  - finalized reviewed internally consistent SE-001 contract publication candidate
+  - contract authorization recorded without publication or execution
+  - the published Level 3 and Level 4 artifacts, the authorized Context Pack version 1, and the active route are bound as read-only inputs by exact digest
+  - implementation occurs only in a separately authorized execution session under this contract
+  - MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS remain four separate immutable results and MI-004 PASS remains separately recorded
+  - the amended executor_identity clause and segmented canonical complete-read protocol carry forward, including the harness-injected CLAUDE.md session-environment clause
+  - no Nestfolio content inspection, mutation, Skill, Claude Code invocation, dependency operation, external write, commit, or push occurs in the authoring session
+  - exact nine-path uncommitted and unstaged continuity-lab contract-authoring manifest
+  - publication handoff for a fresh control session

@@ -101,6 +101,21 @@ MI-003-R1 FAIL, and MI-003-R2 PASS remain four separate immutable results.
 The selected effort remains NOT implemented and its implementation remains
 separately authorized; MI-005 through MI-007 and broader work remain blocked.
 
+**SE-001 — Selected Effort Execution** is contracted and not executed. One
+reviewed bounded execution contract candidate for the selected effort
+`dashboard-bff-awaiting-confirmation-activity-gap` — bound to the authorized
+Context Pack version 1 (SHA-256
+`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`) at the
+exact published Level 4 Nestfolio revision
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`, consumed exclusively through the
+digest-matched adapter view, with a deterministically derived frozen writable
+boundary and a required fail-before/pass-after gap proof — was authored,
+reviewed, and finalized on 2026-07-16. Publication requires the exact subject
+"Authorize SE-001 selected effort execution"; execution requires a still
+later fresh instruction naming the exact published contract revision. The
+selected effort remains NOT implemented until SE-001 executes with
+UNCONDITIONAL PASS.
+
 ## Canonical starting points
 
 - Governance: `docs/00-governance/`
@@ -167,6 +182,10 @@ separately authorized; MI-005 through MI-007 and broader work remain blocked.
 - MI-004 contract-authoring manifest: `sessions/MI-004-authorized-context-introduction/changed-files.txt`
 - MI-004 execution-closure manifest: `sessions/MI-004-authorized-context-introduction/execution-changed-files.txt`
 - MI-004 canonical report: `docs/70-implementation/mi-004-authorized-context-introduction.md`
+- SE-001 reviewed execution contract: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001 preserved future execution prompt: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
+- SE-001 contract-authoring closure and publication handoff: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
+- SE-001 contract-authoring manifest: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
