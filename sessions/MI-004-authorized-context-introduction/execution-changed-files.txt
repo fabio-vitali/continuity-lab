@@ -1,0 +1,23 @@
+Nestfolio publication revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+A continuity/evidence/mi-004/00-repository-bindings.json
+A continuity/evidence/mi-004/01-formation-and-trace.json
+A continuity/evidence/mi-004/02-validation-and-authorization.json
+A continuity/evidence/mi-004/03-success-scenarios.json
+A continuity/evidence/mi-004/04-mandatory-failures.json
+A continuity/evidence/mi-004/05-preservation-and-rollback.json
+A continuity/evidence/mi-004/06-criterion-matrix-and-verdict.json
+A continuity/evidence/mi-004/commands/01-level4-tests.json
+A continuity/evidence/mi-004/commands/02-level3-tests.json
+A continuity/evidence/mi-004/commands/03-level2-tests.json
+A continuity/evidence/mi-004/commands/04-level1-tests.json
+A continuity/evidence/mi-004/commands/05-backlog-next-tests.json
+A continuity/evidence/mi-004/commands/06-final-changed-files.json
+A continuity/level-4/adapter-view.json
+A continuity/level-4/authorization-record.json
+A continuity/level-4/bin/continuity-context.mjs
+A continuity/level-4/context-pack.json
+A continuity/level-4/context-recipe.json
+A continuity/level-4/formation-trace.json
+A continuity/level-4/schema/context-artifacts.schema.json
+A continuity/level-4/validation-result.json
+A tests/continuity-level-4.test.mjs

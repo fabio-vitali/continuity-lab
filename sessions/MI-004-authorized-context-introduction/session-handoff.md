@@ -7,73 +7,61 @@ supersedes: []
 superseded_by: null
 ---
 
-# MI-004 — Contract-Authoring Handoff
+# MI-004 — Execution Closure Handoff
 
 ## Result
 
-The complete MI-004 — Authorized Context Introduction contract candidate was
-derived from canonical sources, authored, reviewed, and finalized on
-2026-07-16 in a fresh isolated control session. It is **authored and NOT
-published**: nothing was committed, staged, or pushed in any repository.
+**MI-004 completed with UNCONDITIONAL PASS on 2026-07-16**, executed directly
+by Claude Code under the published contract at continuity-lab
+`757112e7060252eccafe40f9178771b0adc67d17`.
 
-## Derivation
+All three repository gates passed. The segmented canonical complete-read
+protocol closed 49 canonical logical-path sessions in exact contract order:
+12 continuity-lab paths, then 37 Nestfolio paths with bytewise level-1/2/3
+expansion.
 
-The canonical slice sequence confirms MI-004 without contradiction:
-MI-003 — Bounded Local Work and Scope (PX Level 3) is closed by the MI-003-R2
-UNCONDITIONAL PASS, whose twenty-two Level 3 additions are published at exact
-Nestfolio revision `b9d7264082322e09cfd233819b79f128ef912e31` with an active
-Level 3 route for the selected effort
-`dashboard-bff-awaiting-confirmation-activity-gap`. The accepted migration
-plan (sections 9, 12, and 14) and DR-0023 define the next cumulative slice as
-MI-004 — Authorized Context Introduction (PX Level 4), with prerequisite
-MI-003 PASS satisfied. The contract binds Context formation to the active
-Level 3 route for the selected effort, applies DR-0011 explicit formation and
-DR-0020 explicit human authorization by default, treats the published Level 3
-artifacts and route as read-only inputs, keeps the implementation of the
-selected effort separately authorized and out of scope, and grants no Level
-5-6 authority.
+The explicit DR-0011 formation pipeline produced Context Pack
+`nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap`
+version 1, SHA-256
+`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`, with
+formation trace SHA-256
+`8c05453897a28efc0abc43c143c4657175c7bfed167cf774d783b409b6c94911`.
+Validation returned valid 18/18 on the exact candidate digest. The exact
+human authorization by fabio.vitali (human program owner) at
+2026-07-16T18:50:36.000Z stated: "Autorizzo il Context Pack
+nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap versione 1
+con SHA-256
+e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1." The
+immutable authorization record has SHA-256
+`a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc` and the
+digest-matched adapter view has SHA-256
+`9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838`.
 
-## Bindings recorded by the contract
+## Disposition
 
-- continuity-workspace `56e10aa92429a8ae793463d1cd1c7ad9542e7f64` — immutable,
-  no content read; the harness-injected CLAUDE.md is session environment, not
-  an executor-initiated content read;
-- continuity-lab authoring base `5519ea78b7a093678c2ed87a6c310b20363e28b6`
-  ("Close MI-003-R2 with UNCONDITIONAL PASS"); the execution contract revision
-  must be named by the later execution instruction with exact subject
-  "Authorize MI-004 authorized context introduction" and exact single parent
-  `5519ea78b7a093678c2ed87a6c310b20363e28b6`;
-- Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31` — exact published
-  MI-003-R2 Level 3 revision; metadata gates only in this authoring session,
-  no content read or mutation.
+Exactly the twenty-two permitted Level 4 paths were created, uncommitted,
+during execution; S1-S10 passed; F1-F12 blocked fail-closed with exact typed
+diagnostics; C1-C7 passed conjunctively. Validation suites returned Level 4
+23/23, Level 3 23/23, Level 2 23/23, retained Level 1 14/14, and backlog-next
+68/68 without invoking the Skill. Every pre-existing tracked byte remained
+unchanged (tracked tree `bd2a95fb965b3e28849c6070b74638d34fe1c393`).
+
+The twenty-two additions are published at exact Nestfolio revision
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`, direct child of
+`b9d7264082322e09cfd233819b79f128ef912e31`, with subject
+"Publish MI-004 Level 4 execution artifacts and evidence"; the exact manifest
+is preserved in `execution-changed-files.txt`.
 
 MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS remain four
-separate immutable results. The amended R2 executor_identity clause and the
-segmented canonical complete-read protocol carry forward into the future
-execution session.
-
-## Exact contract-authoring manifest
-
-Exactly nine uncommitted, unstaged continuity-lab paths:
-
-```text
-M CONTINUITY-NEXT-STEPS.md
-M README.md
-M docs/70-implementation/README.md
-M docs/90-state/artifact-index.md
-M docs/90-state/program-state.md
-A sessions/MI-004-authorized-context-introduction/changed-files.txt
-A sessions/MI-004-authorized-context-introduction/context-pack.yaml
-A sessions/MI-004-authorized-context-introduction/prompt.md
-A sessions/MI-004-authorized-context-introduction/session-handoff.md
-```
+separate immutable results; the MI-004 prompt and contract-authoring manifest
+remain immutable. The selected effort remains NOT implemented, its
+implementation remains separately authorized, and MI-005 through MI-007 and
+broader work remain blocked. The authorized Context Pack version 1 is bounded
+Level 4 context state with no Level 5-6 authority.
 
 ## Next valid program operation
 
-Publish the exact reviewed nine-path MI-004 contract-authoring delta from a
-fresh control session with the exact subject
-"Authorize MI-004 authorized context introduction", then push and record the
-published revision. Execution requires a still later fresh instruction naming
-the exact published revision and all three bindings. No instruction in this
-chain authorizes implementation of the selected backlog effort or MI-005+
-work.
+Contract MI-005 (or a separately contracted execution of the selected effort)
+in a fresh control session. Implementation of the selected effort requires a
+separate explicit authorization; MI-005 through MI-007 and broader work remain
+blocked until then.

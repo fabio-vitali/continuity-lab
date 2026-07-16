@@ -28,6 +28,7 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-003 — Bounded Local Work and Scope** — **UNCONDITIONAL FAIL**. Exact repository and contract-identity gates passed, but the Context Pack was read before canonical Program State. Execution stopped before Nestfolio content read or mutation; candidate derivation, selection, Level 3 creation, tests, scenarios, rebuilds, and rollback were not executed.
 - **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry** — **UNCONDITIONAL FAIL**. Program State was read first and alone, but the sixth canonical read returned a truncated representation of the Migration Plan. C1 failed with `CANONICAL_READ_PARTIAL`; execution stopped before Nestfolio content read or mutation.
 - **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry** — **UNCONDITIONAL PASS**. Executed directly by Claude Code on 2026-07-16 under the amended contract; 507 logical-path sessions closed in exact contract order, the deterministic candidate projection rebuilt byte-identically, one explicit human selection matched exactly one eligible candidate, and exactly the twenty-two permitted Level 3 paths were created and published at Nestfolio revision `b9d7264082322e09cfd233819b79f128ef912e31`. The selected effort was NOT executed.
+- **MI-004 — Authorized Context Introduction** — **UNCONDITIONAL PASS**. Executed directly by Claude Code on 2026-07-16 under the published contract at continuity-lab `757112e7060252eccafe40f9178771b0adc67d17`; 49 canonical logical-path sessions closed in exact contract order, the explicit DR-0011 formation pipeline produced Context Pack `nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap` version 1 validated 18/18 and explicitly human-authorized, and exactly the twenty-two permitted Level 4 paths were created and published at Nestfolio revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`. The selected effort was NOT implemented.
 
 Canonical reports:
 
@@ -44,6 +45,7 @@ Canonical reports:
 - `mi-003-bounded-local-work-and-scope.md`.
 - `mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`.
 - `mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md`.
+- `mi-004-authorized-context-introduction.md`.
 
 ## Current implementation position
 
@@ -95,14 +97,32 @@ additions are published at Nestfolio revision
 separate immutable failures. The selected effort is not implemented; its
 implementation requires a separate explicit authorization.
 
-**MI-004 — Authorized Context Introduction** has an authored and reviewed
-contract candidate (2026-07-16) that is NOT published and NOT executed. It
-binds PX Level 4 Context formation to the active Level 3 route for the
-selected effort `dashboard-bff-awaiting-confirmation-activity-gap` at
-Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31`, with explicit human
-Context Pack authorization per DR-0020, the published Level 3 artifacts as
-read-only inputs, and no Level 5-6 authority. The next valid program
-operation is publishing the exact reviewed nine-path MI-004 contract-authoring
-delta in a fresh control session; execution requires a still later fresh
-instruction naming the exact published revision. MI-005 through MI-007 and
-broader work remain blocked.
+**MI-004 — Authorized Context Introduction** is complete with UNCONDITIONAL
+PASS, executed directly by Claude Code on 2026-07-16 under the published
+contract at continuity-lab `757112e7060252eccafe40f9178771b0adc67d17`. The
+segmented canonical complete-read protocol closed 49 canonical logical-path
+sessions in exact contract order (12 continuity-lab paths, then 37 Nestfolio
+paths with bytewise level-1/2/3 expansion). The explicit DR-0011 formation
+pipeline produced Context Pack
+`nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap`
+version 1, SHA-256
+`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`, with
+formation trace SHA-256
+`8c05453897a28efc0abc43c143c4657175c7bfed167cf774d783b409b6c94911` and
+validation valid 18/18. The exact human authorization by fabio.vitali (human
+program owner) at 2026-07-16T18:50:36.000Z matched the one validated version
+and digest; the immutable authorization record (SHA-256
+`a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc`) and
+digest-matched adapter view (SHA-256
+`9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838`) are
+published Level 4 artifacts. Suites returned Level 4 23/23, Level 3 23/23,
+Level 2 23/23, retained Level 1 14/14, and backlog-next 68/68 without
+invoking the Skill; S1-S10 passed; F1-F12 failed closed with exact typed
+diagnostics; the tracked tree remained unchanged
+(`bd2a95fb965b3e28849c6070b74638d34fe1c393`) and exactly twenty-two additions
+are published at Nestfolio `a760d6f41ff14491d5b008a7f13234ba0221bcec`. The
+selected effort remains NOT implemented and its implementation remains
+separately authorized. The next valid program operation is contracting MI-005
+(or a separately contracted execution of the selected effort) in a fresh
+control session; MI-005 through MI-007 and broader work remain blocked until
+then.

@@ -80,18 +80,26 @@ executed; Level 3 holds a bounded candidate representation with an active
 route and no Level 4-6 authority, and its implementation requires a separate
 explicit authorization.
 
-**MI-004 — Authorized Context Introduction** has an authored and reviewed
-contract candidate, created 2026-07-16 in a fresh control session, that is
-**NOT published and NOT executed**. It binds PX Level 4 Context formation to
-the active Level 3 route for the selected effort
-`dashboard-bff-awaiting-confirmation-activity-gap` at Nestfolio
-`b9d7264082322e09cfd233819b79f128ef912e31`, requires explicit human Context
-Pack authorization per DR-0020, treats the published Level 3 artifacts as
-read-only inputs, grants no Level 5-6 authority, and keeps the implementation
-of the selected effort separately authorized. Publication requires a fresh
-control session committing exactly the reviewed nine-path authoring delta
-with subject "Authorize MI-004 authorized context introduction"; execution
-requires a still later fresh instruction naming the exact published revision.
+**MI-004 — Authorized Context Introduction** is complete with **UNCONDITIONAL
+PASS**, executed directly by Claude Code on 2026-07-16 under the published
+contract at continuity-lab `757112e7060252eccafe40f9178771b0adc67d17`. All
+three repository gates passed; the segmented canonical complete-read protocol
+closed 49 canonical logical-path sessions in exact contract order (12
+continuity-lab paths, then 37 Nestfolio paths with bytewise level-1/2/3
+expansion). The explicit DR-0011 formation pipeline produced Context Pack
+`nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap`
+version 1, SHA-256
+`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`, validated
+18/18 and explicitly authorized by fabio.vitali (human program owner) at
+2026-07-16T18:50:36.000Z. Validation suites returned Level 4 23/23, Level 3
+23/23, Level 2 23/23, retained Level 1 14/14, and backlog-next 68/68 without
+invoking the Skill; S1-S10 passed and F1-F12 failed closed with exact typed
+diagnostics. The twenty-two Level 4 additions and evidence are published at
+exact Nestfolio revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`; every
+pre-existing tracked byte is unchanged. MI-002-R2 PASS, MI-003 FAIL,
+MI-003-R1 FAIL, and MI-003-R2 PASS remain four separate immutable results.
+The selected effort remains NOT implemented and its implementation remains
+separately authorized; MI-005 through MI-007 and broader work remain blocked.
 
 ## Canonical starting points
 
@@ -153,10 +161,12 @@ requires a still later fresh instruction naming the exact published revision.
 - MI-003-R2 contract-authoring manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/changed-files.txt`
 - MI-003-R2 execution-closure manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt`
 - MI-003-R2 canonical report: `docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md`
-- MI-004 authored-not-published contract candidate: `sessions/MI-004-authorized-context-introduction/context-pack.yaml`
-- MI-004 preserved future execution prompt: `sessions/MI-004-authorized-context-introduction/prompt.md`
-- MI-004 contract-authoring handoff: `sessions/MI-004-authorized-context-introduction/session-handoff.md`
+- MI-004 completed contract: `sessions/MI-004-authorized-context-introduction/context-pack.yaml`
+- MI-004 preserved historical execution prompt: `sessions/MI-004-authorized-context-introduction/prompt.md`
+- MI-004 execution closure handoff: `sessions/MI-004-authorized-context-introduction/session-handoff.md`
 - MI-004 contract-authoring manifest: `sessions/MI-004-authorized-context-introduction/changed-files.txt`
+- MI-004 execution-closure manifest: `sessions/MI-004-authorized-context-introduction/execution-changed-files.txt`
+- MI-004 canonical report: `docs/70-implementation/mi-004-authorized-context-introduction.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
