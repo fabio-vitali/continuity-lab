@@ -27,13 +27,7 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 - **MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** — **UNCONDITIONAL PASS**. Exact 22/23 and the sole typed diagnostic were reproduced; immutable predecessor binding plus pre-write identity checks restored 23/23 with all bounded validation and preservation requirements passing.
 - **MI-003 — Bounded Local Work and Scope** — **UNCONDITIONAL FAIL**. Exact repository and contract-identity gates passed, but the Context Pack was read before canonical Program State. Execution stopped before Nestfolio content read or mutation; candidate derivation, selection, Level 3 creation, tests, scenarios, rebuilds, and rollback were not executed.
 - **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry** — **UNCONDITIONAL FAIL**. Program State was read first and alone, but the sixth canonical read returned a truncated representation of the Migration Plan. C1 failed with `CANONICAL_READ_PARTIAL`; execution stopped before Nestfolio content read or mutation.
-
-MI-003-R2 is a published amended contract candidate bound to a direct Claude
-Code session executor, not a completed implementation slice. It may correct
-only canonical complete-read proof through deterministic, contiguous,
-non-interleaved chunks whose tool responses explicitly prove absence of
-truncation. It preserves MI-003 and MI-003-R1 as separate immutable failures
-and leaves MI-004 blocked.
+- **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry** — **UNCONDITIONAL PASS**. Executed directly by Claude Code on 2026-07-16 under the amended contract; 507 logical-path sessions closed in exact contract order, the deterministic candidate projection rebuilt byte-identically, one explicit human selection matched exactly one eligible candidate, and exactly the twenty-two permitted Level 3 paths were created and published at Nestfolio revision `b9d7264082322e09cfd233819b79f128ef912e31`. The selected effort was NOT executed.
 
 Canonical reports:
 
@@ -49,6 +43,7 @@ Canonical reports:
 - `mi-002-reusable-pack-composition.md`.
 - `mi-003-bounded-local-work-and-scope.md`.
 - `mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`.
+- `mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md`.
 
 ## Current implementation position
 
@@ -84,10 +79,20 @@ candidate, selection, Level 3 state, test, scenario, or mutation occurred. The
 historical MI-003 and all MI-002 results remain immutable; MI-004 is blocked.
 
 **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read
-Correction Retry** is published, amended for a direct Claude Code session
-executor, and unexecuted. Program State remains the first and sole logical path
-until its contiguous chunks close with exact byte, line, blob, and SHA-256
-coverage. Every chunk must be explicitly complete; truncation can fail C1 but
-cannot masquerade as completion, and recovery must remain forward-contiguous.
-Every other MI-003 objective, authority, scope, scenario, validation, rollback,
-and prohibition remains unchanged.
+Correction Retry** is complete with UNCONDITIONAL PASS, executed directly by
+Claude Code on 2026-07-16 under the amended contract at continuity-lab
+`f07f95e3fcf2f73d463509f4ed0f3fcd6c3ffeaf`. The segmented canonical
+complete-read protocol closed 507 logical-path sessions in exact contract
+order (19 continuity-lab paths, then 488 Nestfolio paths; the sole multi-chunk
+path was `docs/60-migration/migration-plan.md` in 4 forward-contiguous
+chunks). The candidate projection considered 462 sources with 98 eligible and
+rebuilt byte-identically across three derivations; the explicit human
+selection matched exactly one eligible candidate,
+`dashboard-bff-awaiting-confirmation-activity-gap`. S1-S10, F1-F12, and C1-C7
+passed; suites returned 23/23, 23/23, 14/14, and 68/68; the twenty-two
+additions are published at Nestfolio revision
+`b9d7264082322e09cfd233819b79f128ef912e31`. MI-003 and MI-003-R1 remain
+separate immutable failures. The selected effort is not implemented; its
+implementation requires a separate explicit authorization, and the next valid
+program operation is contracting MI-004 (or a separately contracted execution
+of the selected effort) in a fresh control session.

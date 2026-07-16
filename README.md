@@ -62,14 +62,23 @@ candidate projection, selection, test, or mutation. MI-003 remains one
 immutable historical failure, and MI-004 and broader work remain blocked.
 
 **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read
-Correction Retry** is published and amended, with explicit human authorization,
-for a direct Claude Code session executor. Its sole correction replaces
-single-response complete-read proof with contiguous, ordered, forward-only
-chunk reads, one logical path at a time, with explicit no-truncation gates,
-forward-contiguous recovery, and whole-path byte, SHA-256, and Git blob
-verification. Program State remains the first and sole logical repository path
-until its proof closes. MI-003 and MI-003-R1 remain separate immutable
-UNCONDITIONAL FAIL results; MI-003-R2 execution and MI-004 remain unauthorized.
+Correction Retry** is complete with **UNCONDITIONAL PASS**, executed directly
+by Claude Code on 2026-07-16 under the amended contract at continuity-lab
+`f07f95e3fcf2f73d463509f4ed0f3fcd6c3ffeaf`. All three repository gates passed;
+the segmented canonical complete-read protocol closed 507 logical-path
+sessions in exact contract order; the deterministic candidate projection
+considered 462 sources and found 98 eligible, rebuilding byte-identically
+across three derivations; and the explicit human selection matched exactly one
+eligible candidate, `dashboard-bff-awaiting-confirmation-activity-gap`.
+Exactly the twenty-two permitted Level 3 paths were created; S1-S10 passed;
+F1-F12 blocked fail-closed with exact typed diagnostics; C1-C7 passed
+conjunctively; validation suites returned 23/23, 23/23, 14/14, and 68/68. The
+twenty-two additions are published at exact Nestfolio revision
+`b9d7264082322e09cfd233819b79f128ef912e31`. MI-003 and MI-003-R1 remain two
+separate immutable UNCONDITIONAL FAIL results. The selected effort was NOT
+executed; Level 3 holds a bounded candidate representation with an active
+route and no Level 4-6 authority, and its implementation requires a separate
+explicit authorization.
 
 ## Canonical starting points
 
@@ -125,10 +134,12 @@ UNCONDITIONAL FAIL results; MI-003-R2 execution and MI-004 remain unauthorized.
 - MI-003-R1 execution handoff: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/session-handoff.md`
 - MI-003-R1 execution-closure manifest: `sessions/MI-003-R1-bounded-local-work-and-scope-canonical-read-order-correction-retry/execution-changed-files.txt`
 - MI-003-R1 canonical report: `docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md`
-- MI-003-R2 finalized correction-retry contract candidate: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml`
-- MI-003-R2 preserved future execution prompt: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/prompt.md`
-- MI-003-R2 publication handoff: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md`
+- MI-003-R2 completed correction-retry contract: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml`
+- MI-003-R2 preserved historical execution prompt: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/prompt.md`
+- MI-003-R2 execution closure handoff: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md`
 - MI-003-R2 contract-authoring manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/changed-files.txt`
+- MI-003-R2 execution-closure manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt`
+- MI-003-R2 canonical report: `docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

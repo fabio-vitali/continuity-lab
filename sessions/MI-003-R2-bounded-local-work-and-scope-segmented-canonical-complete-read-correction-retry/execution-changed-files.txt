@@ -1,0 +1,23 @@
+Nestfolio publication revision: b9d7264082322e09cfd233819b79f128ef912e31
+A continuity/evidence/mi-003/00-repository-bindings.json
+A continuity/evidence/mi-003/01-candidate-discovery.json
+A continuity/evidence/mi-003/02-selection-scope-and-route.json
+A continuity/evidence/mi-003/03-success-scenarios.json
+A continuity/evidence/mi-003/04-mandatory-failures.json
+A continuity/evidence/mi-003/05-preservation-and-rollback.json
+A continuity/evidence/mi-003/06-criterion-matrix-and-verdict.json
+A continuity/evidence/mi-003/commands/01-level3-tests.json
+A continuity/evidence/mi-003/commands/02-level2-tests.json
+A continuity/evidence/mi-003/commands/03-level1-tests.json
+A continuity/evidence/mi-003/commands/04-backlog-next-tests.json
+A continuity/evidence/mi-003/commands/05-final-changed-files.json
+A continuity/level-3/bin/continuity-work.mjs
+A continuity/level-3/candidates.json
+A continuity/level-3/route.json
+A continuity/level-3/schema/work-artifacts.schema.json
+A continuity/level-3/scope.json
+A continuity/level-3/work-brief.json
+A continuity/level-3/work-selection.json
+A continuity/level-3/work.json
+A continuity/level-3/working-set.json
+A tests/continuity-level-3.test.mjs
