@@ -11,7 +11,7 @@ superseded_by: null
 
 ## Current phase
 
-**MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS stand as four separate immutable results. MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry remains published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 result remain immutable. MI-003 remains one immutable UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State. MI-003-R1 remains one immutable UNCONDITIONAL FAIL caused solely by the truncated sixth canonical read. MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry completed with UNCONDITIONAL PASS on 2026-07-16, executed directly by Claude Code under the amended contract at continuity-lab `f07f95e3fcf2f73d463509f4ed0f3fcd6c3ffeaf`; its twenty-two Level 3 additions and evidence are published at exact Nestfolio revision `b9d7264082322e09cfd233819b79f128ef912e31`. The Level 3 route is active at that revision for the selected effort `dashboard-bff-awaiting-confirmation-activity-gap`. The selected effort is NOT implemented and its implementation requires a separate explicit authorization. The next valid program operation is contracting MI-004 (or a separately contracted execution of the selected effort) in a fresh control session.**
+**MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS stand as four separate immutable results. MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry remains published with UNCONDITIONAL PASS at exact Nestfolio revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 result remain immutable. MI-003 remains one immutable UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State. MI-003-R1 remains one immutable UNCONDITIONAL FAIL caused solely by the truncated sixth canonical read. MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry completed with UNCONDITIONAL PASS on 2026-07-16, executed directly by Claude Code under the amended contract at continuity-lab `f07f95e3fcf2f73d463509f4ed0f3fcd6c3ffeaf`; its twenty-two Level 3 additions and evidence are published at exact Nestfolio revision `b9d7264082322e09cfd233819b79f128ef912e31`. The Level 3 route is active at that revision for the selected effort `dashboard-bff-awaiting-confirmation-activity-gap`. The selected effort is NOT implemented and its implementation requires a separate explicit authorization. The MI-004 — Authorized Context Introduction contract candidate was authored and reviewed on 2026-07-16 in a fresh control session and is NOT published: its exact nine-path contract-authoring delta is uncommitted and unstaged above continuity-lab `5519ea78b7a093678c2ed87a6c310b20363e28b6`. The next valid program operation is publishing that exact reviewed nine-path delta in a fresh control session with subject "Authorize MI-004 authorized context introduction"; execution requires a still later fresh instruction naming the exact published revision.**
 
 MA-001 remains complete with unconditional PASS; G5 remains passed and valid. The accepted migration architecture and DR-0023 remain canonical. TA-002, PX-001, and the combined VS-001/VS-001A G6 result remain valid.
 
@@ -443,8 +443,9 @@ Canonical report:
 20. MI-003 — complete; unconditional FAIL caused by canonical read order; no Nestfolio content read or changed; no candidate or selection; immutable nine-path closure published
 21. MI-003-R1 — complete; unconditional FAIL caused by a partial sixth canonical read; no Nestfolio content read or changed
 22. MI-003-R2 — complete; unconditional PASS; twenty-two Level 3 additions published at Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31`; selected effort not implemented
-23. MI-004 through MI-007 — blocked; the next valid operation is contracting MI-004 (or a separately contracted execution of the selected effort) in a fresh control session
-24. broader implementation and unrelated migration — blocked
+23. MI-004 — Authorized Context Introduction contract candidate authored and reviewed on 2026-07-16; NOT published and NOT executed; publication and execution remain separately authorized
+24. MI-005 through MI-007 — blocked
+25. broader implementation and unrelated migration — blocked
 
 ## Active blockers
 
@@ -455,7 +456,8 @@ Canonical report:
 - MI-002-R2 is published with UNCONDITIONAL PASS at exact Nestfolio correction revision `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`; MI-002-R1 and the original MI-002 execution remain immutable history.
 - MI-003 is complete with UNCONDITIONAL FAIL caused solely by reading its Context Pack before canonical Program State. Nestfolio remains uninspected and unchanged; no candidate or selection exists. MI-004 through MI-007 remain blocked.
 - MI-003-R1 is complete and published with UNCONDITIONAL FAIL caused solely by the partial sixth canonical read; MI-003 and every original and R1 artifact remain immutable.
-- MI-003-R2 is complete with UNCONDITIONAL PASS; MI-003 and MI-003-R1 remain separate immutable UNCONDITIONAL FAIL results. The next valid program operation is contracting MI-004 (or a separately contracted execution of the selected effort) in a fresh control session.
+- MI-003-R2 is complete with UNCONDITIONAL PASS; MI-003 and MI-003-R1 remain separate immutable UNCONDITIONAL FAIL results.
+- The MI-004 — Authorized Context Introduction contract candidate is authored and reviewed but NOT published and NOT executed. Publication requires a fresh control session committing exactly the reviewed nine-path authoring delta with subject "Authorize MI-004 authorized context introduction"; execution requires a still later fresh instruction naming the exact published revision. Neither authorizes implementation of the selected backlog effort.
 - The Level 3 route is active at Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31` for the selected effort `dashboard-bff-awaiting-confirmation-activity-gap`. Level 3 holds a bounded candidate representation only; the selected effort is NOT implemented and its implementation requires a separate explicit authorization.
 - Level 2 reusable composition is active in published Nestfolio. Context, Run, Assurance, and Learning remain unauthorized and absent; no Level 4-6 state exists.
 - Console, universal integrations, hosted services, RBAC, analytics, billing, commercial packaging, and commercial control plane remain blocked.
@@ -538,5 +540,9 @@ Canonical report:
 - MI-003-R2 execution-closure manifest: `sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt`
 - MI-003-R2 report: `docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md`
 - MI-003-R2 Nestfolio evidence: `continuity/level-3/**`, `continuity/evidence/mi-003/**`, and `tests/continuity-level-3.test.mjs` published at revision `b9d7264082322e09cfd233819b79f128ef912e31`, direct child of `fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6`
+- MI-004 authored-not-published contract candidate: `sessions/MI-004-authorized-context-introduction/context-pack.yaml`
+- MI-004 preserved future execution prompt: `sessions/MI-004-authorized-context-introduction/prompt.md`
+- MI-004 contract-authoring handoff: `sessions/MI-004-authorized-context-introduction/session-handoff.md`
+- MI-004 contract-authoring manifest: `sessions/MI-004-authorized-context-introduction/changed-files.txt`
 - MI-001A Scenario A evidence: Nestfolio `continuity/evidence/mi-001a/scenario-a/**` at `63ad0b2da2dfb2192d24e73a9224b65654deadb7`
 - Active program truth: this file

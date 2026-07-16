@@ -1,0 +1,621 @@
+contract:
+  status: authored-not-published
+  authored_on: 2026-07-16
+  reviewed_on: 2026-07-16
+  finalized_on: 2026-07-16
+  contract_authorized: true
+  publication_authorized: false
+  execution_authorized: false
+  execution_instruction_received: false
+  execution_started: false
+  result: null
+  authority:
+    - docs/90-state/program-state.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/context-pack.yaml
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt
+    - docs/60-migration/migration-plan.md
+    - docs/40-product-experience/product-experience.md
+    - decisions/DR-0011-explicit-context-formation-pipeline.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+  authorization_rule: >
+    This reviewed contract candidate authorizes neither publication nor
+    execution. Publication requires a later fresh control session that commits
+    exactly the reviewed nine-path contract-authoring delta with the exact
+    subject "Authorize MI-004 authorized context introduction" and pushes it.
+    Execution requires a still later fresh instruction naming the exact
+    published continuity-lab revision and all three repository bindings. No
+    authoring, review, publication, or execution instruction authorizes
+    implementation of the selected backlog effort, and no MI-004 instruction
+    authorizes MI-005 or broader work.
+
+iteration:
+  id: MI-004
+  name: Authorized Context Introduction
+  type: bounded-level-4-authorized-context-introduction
+  px_level: 4
+  status: contract-authored-not-published
+  predecessor_results:
+    - MI-002-R2 UNCONDITIONAL PASS
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+    - MI-003-R2 UNCONDITIONAL PASS
+  bound_selected_effort:
+    source_path: docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    source_identity: dashboard-bff-awaiting-confirmation-activity-gap
+    source_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    source_sha256: b656733991c96c4275d11e9a9f2bff7f5ac72cdd298cbc68a4b94b6799dc742d
+    level_3_publication_revision: b9d7264082322e09cfd233819b79f128ef912e31
+    effort_implementation: separately authorized and out of MI-004 scope
+  execution_status: not-executed
+
+objective:
+  primary_question: >
+    Can the active Level 3 route for the selected effort
+    dashboard-bff-awaiting-confirmation-activity-gap be bound to an
+    explainable, immutable, validated, explicitly human-authorized Context
+    Pack — formed through the explicit DR-0011 pipeline over the exact
+    published Level 3 Work, WorkSelection, Working Set, Scope, and route
+    artifacts, the exact Level 2 Pack lock, and bounded read-only repository
+    sources at Nestfolio b9d7264082322e09cfd233819b79f128ef912e31 — with a
+    complete source and exclusion ledger, recorded gaps and contradictions,
+    digest-matched adapter delivery, deterministic rebuild, and
+    source-preserving rejection, revocation, staleness, and downgrade-to-Level-3
+    behavior, while Levels 1-3 continue truthfully and no Level 5-6 authority
+    exists?
+  completion_boundary: >
+    Implement and validate only the Level 4 Context formation, validation,
+    human authorization, and digest-matched delivery boundary for the one
+    already selected effort. Do not perform the selected effort, mutate its
+    backlog source or any Level 3 artifact, create durable Session, Run,
+    Checkpoint, Handoff, effect, Assurance, completion, Decision, or Learning
+    authority, or begin MI-005 or broader work.
+
+repository_bindings:
+  continuity_workspace:
+    required_branch: main
+    revision: 56e10aa92429a8ae793463d1cd1c7ad9542e7f64
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+    content_read: prohibited
+    mutation: prohibited
+    harness_injected_claude_md: >
+      The continuity-workspace CLAUDE.md is injected automatically by the
+      Claude Code harness at session start. That injection is part of the
+      session environment and is not an executor-initiated content read.
+  continuity_lab:
+    required_branch: main
+    contract_authoring_base_revision: 5519ea78b7a093678c2ed87a6c310b20363e28b6
+    contract_authoring_base_subject: Close MI-003-R2 with UNCONDITIONAL PASS
+    required_execution_contract_revision: must be named exactly by the later execution instruction
+    required_execution_contract_identity: >
+      The named revision must be the clean pushed main revision containing this
+      contract byte-for-byte, with exact single parent
+      5519ea78b7a093678c2ed87a6c310b20363e28b6 and exact subject
+      "Authorize MI-004 authorized context introduction".
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  nestfolio:
+    required_branch: main
+    revision: b9d7264082322e09cfd233819b79f128ef912e31
+    revision_role: >
+      Exact published MI-003-R2 revision holding the twenty-two Level 3
+      additions and the active Level 3 route for the selected effort. All
+      published Level 3 artifacts and the active route are read-only inputs to
+      MI-004.
+    required_state: clean and exactly aligned HEAD, local origin/main, upstream, and remote main
+  unresolved_or_mismatched_binding_blocks_execution: true
+
+executor_identity:
+  session_executor: >
+    The MI-004 execution session is conducted directly by Claude Code
+    operating under the human's explicit execution instruction. The session
+    executor performs the contracted work itself with its own tools.
+  nested_executor_rule: >
+    Every prohibition on invoking Claude Code or any Skill binds the session
+    executor against delegation: it must not spawn a nested Claude Code
+    instance, sub-agent, background task, or workflow, and must not invoke any
+    Skill, slash command, /backlog-next, continuity:invoke, or other executor
+    procedure. Conducting the contracted work directly in the session does not
+    violate those prohibitions. F11 remains the required fail-closed behavior
+    of the created Level 4 tooling and is unchanged.
+
+canonical_complete_read_protocol:
+  protocol_basis: >
+    MI-004 carries forward the MI-003-R2 segmented canonical complete-read
+    protocol unchanged in substance, adapted only in its path lists. Complete
+    consumption of one logical path must be proved before another path opens;
+    tool-output truncation never counts as completion.
+  metadata_phase: >
+    Before any repository content read, complete every required Git metadata
+    and contract-identity gate separately for all three repositories. Metadata
+    inspection must not open tracked or untracked file content. Any failed or
+    contradictory gate stops before content read and before execution starts.
+  logical_path_session: >
+    A logical-path read session begins when one exact canonical file is opened
+    for plan or payload access and ends only after its completion proof
+    passes. During that session every content-bearing, planning, counting,
+    sizing, digesting, or verification operation may address only that same
+    path. No other repository path may be listed, opened, previewed, diffed,
+    hashed, counted, or batched before the session closes. Directory expansion
+    may occur only at its listed order position and yields individual file
+    paths in bytewise order; each file then receives its own logical-path
+    session.
+  program_state_first_rule: >
+    After all metadata gates pass, the first logical repository path opened
+    must be continuity-lab docs/90-state/program-state.md. It must be the sole
+    logical repository path addressed until every chunk and its whole-path
+    completion proof pass. The first content operation may establish the plan
+    for Program State only; it may not open the MI-004 Context Pack or any
+    other path in the same call or in parallel.
+  canonical_source: >
+    Read the exact bytes of each named path from the bound clean revision.
+    Record the repository role, revision, path, Git blob object identity,
+    total byte count, total LF count, total logical-line count, whole-path
+    SHA-256, and whether the final byte is LF. A logical line is an
+    LF-terminated byte record or the non-empty final byte record after the
+    last LF. Empty files have zero logical lines. Require well-formed UTF-8;
+    invalid encoding is CANONICAL_PATH_ENCODING_INVALID and fails C1 before
+    another path opens.
+  read_operation:
+    algorithm_id: claude-code-contiguous-read-coverage-v1
+    rule: >
+      Read the exact bytes of the path from the clean working tree at the
+      bound revision using the session executor's file-read tool, in
+      contiguous, ordered, non-overlapping, forward-only line-range chunks.
+      Read the whole path in one call whenever it fits the tool's response
+      limits. Never read any other path between the chunks of an open
+      logical-path session.
+  output_completeness_gate: >
+    A chunk is consumed only when the tool response presents the requested
+    line range directly and completely, with no truncation, clipping,
+    omission, elision, summarization, or persisted-to-file substitution
+    reported or observable. Any such condition is
+    CANONICAL_SEGMENT_INCOMPLETE. It never counts as completion and the
+    executor must not advance past it.
+  incomplete_chunk_recovery: >
+    After CANONICAL_SEGMENT_INCOMPLETE, the executor may re-read starting at
+    the exact first unconsumed line with a smaller line limit, within the same
+    open logical-path session. Recovery must remain forward-contiguous and
+    non-interleaved and never skips, reorders, or substitutes content.
+    Unrecoverable truncation fails C1 before another path opens.
+  whole_path_completion_proof: >
+    Close a logical-path session only after the consumed chunks form one
+    contiguous line coverage from the first line to the recorded final logical
+    line with no gap or overlap; the covered line count equals the recorded
+    logical-line count; and a final same-path verification proves the
+    working-tree bytes still match the recorded byte count, whole-path
+    SHA-256, and bound Git blob identity. No narrative assertion can replace
+    these machine-verifiable facts.
+  serial_sequence_rule: >
+    After Program State closes, open every remaining logical path one at a
+    time, completely, in the exact order below. Do not parallelize or
+    interleave path sessions. Any earlier, missing, partial, reordered,
+    parallel, batched, extra, or unproved read is MI-004 UNCONDITIONAL FAIL
+    and requires stop before Nestfolio mutation.
+  required_continuity_lab_order:
+    - docs/90-state/program-state.md
+    - sessions/MI-004-authorized-context-introduction/context-pack.yaml
+    - sessions/MI-004-authorized-context-introduction/prompt.md
+    - docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/session-handoff.md
+    - sessions/MI-003-R2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry/execution-changed-files.txt
+    - docs/60-migration/migration-plan.md
+    - docs/40-product-experience/product-experience.md
+    - decisions/DR-0011-explicit-context-formation-pipeline.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+  required_nestfolio_order_after_lab_sequence:
+    - package.json
+    - .claude/skills/backlog-next/SKILL.md
+    - continuity/level-1/** in bytewise path order, one logical file path at a time
+    - continuity/level-2/** in bytewise path order, one logical file path at a time
+    - continuity/level-3/** in bytewise path order, one logical file path at a time
+    - tests/continuity-level-3.test.mjs
+    - continuity/evidence/mi-003/00-repository-bindings.json
+    - docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+  rule_for_missing_named_path: >
+    A missing path, unexpected path form, non-regular file, path collision,
+    inability to establish bytewise order, or inability to prove any complete
+    logical-path session blocks execution before mutation. Do not infer or
+    substitute another source.
+
+immutable_history:
+  mi_003_r2:
+    result: unconditional-pass
+    execution_contract_revision: f07f95e3fcf2f73d463509f4ed0f3fcd6c3ffeaf
+    nestfolio_publication_revision: b9d7264082322e09cfd233819b79f128ef912e31
+    level_3_additions: 22
+    selected_effort_executed: false
+    rule: >
+      Preserve this result and every R2 artifact byte. The published Level 3
+      artifacts and active route are read-only inputs to MI-004 and are never
+      repaired, regenerated, relabeled, or reinterpreted.
+  mi_003_r1:
+    result: unconditional-fail
+    sole_cause: CANONICAL_READ_PARTIAL on the sixth canonical logical path
+    nestfolio_mutated: false
+    rule: >
+      Preserve this separate result and every R1 artifact and closure byte
+      without repair, relabeling, qualification, supersession, or
+      reinterpretation.
+  mi_003:
+    result: unconditional-fail
+    sole_cause: canonical-read-order deviation
+    published_failure_closure_revision: 55e81e441e9e2facfda5382c3de57d1b8b3f5c9e
+    nestfolio_mutated: false
+    rule: >
+      Preserve this separate result and every original MI-003 artifact and
+      closure byte without repair, relabeling, qualification, or
+      reinterpretation.
+  mi_002_r2:
+    result: published unconditional-pass
+    nestfolio_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    rule: >
+      Preserve the published result, exact eight-path correction, all directly
+      affected evidence, production Level 2, and retained Level 1. MI-002-R1
+      and the original MI-002 execution remain immutable history.
+  four_separate_results_rule: >
+    MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS stand as
+    four separate immutable results. MI-004 may not repair, relabel, re-grade,
+    merge, or reinterpret any of them.
+
+context_formation_authority:
+  formation_pipeline: >
+    Context formation must follow the explicit DR-0011 pipeline with recorded
+    per-stage results: frame objective and output contract; bind workspace and
+    revision; load the exact Level 2 Pack lock; discover candidate sources
+    within the declared read-only scope; resolve authority, revision,
+    freshness, and access limitations; select bounded source slices with
+    recorded rationale; record explicit exclusions; diagnose contradictions,
+    staleness, omissions, and pending decisions; assemble an immutable
+    candidate Context Pack and Formation Trace; validate; apply the explicit
+    authorization policy; export without changing canonical state.
+  authorization_default: >
+    Per DR-0020 the sole authorization path in MI-004 is explicit human review
+    and authorization of the exact validated Context Pack version and digest.
+    No deterministic auto-authorization policy exists, may be created, may be
+    accepted, or may be exercised during MI-004.
+  human_authorization_rule: >
+    After formation and validation, the executor must present the validated
+    Context Pack identity, version, whole-artifact SHA-256 digest, source and
+    exclusion ledger summary, and recorded gaps, and stop. The user must then
+    explicitly authorize exactly one validated Context Pack version by its
+    identity, version, and exact SHA-256 digest in a later message. Absence,
+    multiplicity, mismatch, or an inferred substitute blocks authorization.
+    Human authorization authorizes only the Level 4 context authority and
+    digest-matched delivery view; it never authorizes implementation of the
+    selected backlog effort, any Run, or any Level 5-6 state.
+  rejection_revocation_staleness: >
+    Rejection is an explicit non-authorization disposition that preserves the
+    candidate and its rationale. Revocation applies after authorization,
+    disables delivery, and returns the effort to Level 3. Expiration and
+    dependency change are exposed as stale with explicit reasons. Authorized
+    Context Pack versions are never edited in place; refresh and reformation
+    create new versions.
+  target_authority: >
+    The current backlog remains planning authority; the Level 3 artifacts
+    remain the local execution representation; the authorized Context Pack
+    version and Formation Trace become target authority only for target
+    execution input. No current prompt, chat summary, or generated preview
+    becomes canonical context.
+
+required_preconditions:
+  - all three exact Git bindings pass before any repository content read
+  - every canonical logical-path session passes the segmented complete-read protocol in exact order
+  - the published Level 3 artifacts verify internally (route active for the bound selected effort; work, work-selection, working-set, scope, route, and work-brief digest-consistent)
+  - the bound selected-effort source is byte-identical to its recorded SHA-256 at the bound Nestfolio revision
+  - all permitted Nestfolio create paths are absent at the published start
+  - package-lock.json is absent and no dependency operation is needed
+  - Level 3 tests return 23/23 before mutation
+  - MI-002 Level 2 tests return 23/23 before mutation
+  - retained Level 1 tests return 14/14 before mutation
+  - backlog-next tests return 68/68 before mutation without invoking the Skill
+  - exact two-Pack/two-Procedure Level 2 identity and both aggregate locks verify
+  - the context recipe, read-only source scope, exclusions, and delivery boundary are explicit before formation
+  - formation, validation, and rebuild are deterministic and record all considered sources
+  - exactly one explicit human authorization matches the one validated Context Pack version and digest
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata and exact committed objects required by this contract
+    - package.json
+    - CLAUDE.md
+    - .claude/skills/backlog-next/SKILL.md
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/level-3/**
+    - continuity/evidence/mi-002/**
+    - continuity/evidence/mi-003/**
+    - docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - tests/continuity-level-3.test.mjs
+    - .claude/skills/backlog-next/test/**
+  create_exactly_on_pass:
+    - continuity/level-4/bin/continuity-context.mjs
+    - continuity/level-4/schema/context-artifacts.schema.json
+    - continuity/level-4/context-recipe.json
+    - continuity/level-4/formation-trace.json
+    - continuity/level-4/context-pack.json
+    - continuity/level-4/validation-result.json
+    - continuity/level-4/authorization-record.json
+    - continuity/level-4/adapter-view.json
+    - tests/continuity-level-4.test.mjs
+    - continuity/evidence/mi-004/00-repository-bindings.json
+    - continuity/evidence/mi-004/01-formation-and-trace.json
+    - continuity/evidence/mi-004/02-validation-and-authorization.json
+    - continuity/evidence/mi-004/03-success-scenarios.json
+    - continuity/evidence/mi-004/04-mandatory-failures.json
+    - continuity/evidence/mi-004/05-preservation-and-rollback.json
+    - continuity/evidence/mi-004/06-criterion-matrix-and-verdict.json
+    - continuity/evidence/mi-004/commands/01-level4-tests.json
+    - continuity/evidence/mi-004/commands/02-level3-tests.json
+    - continuity/evidence/mi-004/commands/03-level2-tests.json
+    - continuity/evidence/mi-004/commands/04-level1-tests.json
+    - continuity/evidence/mi-004/commands/05-backlog-next-tests.json
+    - continuity/evidence/mi-004/commands/06-final-changed-files.json
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly the twenty-two added paths above, with no modified, deleted,
+    renamed, staged, or additional path. Existing tracked bytes are immutable,
+    including every Level 3 artifact and the backlog source.
+  path_absence_rule: >
+    Any pre-existing permitted create path is a collision and blocks
+    execution; it must not be overwritten, adopted, repaired, or deleted.
+
+artifact_semantics:
+  serialization: canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+  context_recipe: >
+    Explicit declaration of the formation inputs: bound Work, WorkSelection,
+    Working Set, Scope, route, and Level 2 lock identities and digests, the
+    declared read-only source scope, exclusion policy, delivery boundary, and
+    formation algorithm identity.
+  formation_trace: >
+    Immutable per-stage record of the DR-0011 pipeline: every considered
+    source with locator, owner, revision, digest, freshness, inclusion or
+    exclusion reason, selected slice boundary, diagnosed gaps, contradictions,
+    omissions, and unresolved questions, plus the exact resulting candidate
+    digest.
+  context_pack: >
+    Immutable digest-identified execution input contract binding exact Work,
+    WorkSelection, Working Set, Scope, route, repository, Pack lock, and
+    source revisions and digests; the complete source and exclusion ledger;
+    recorded gaps, contradictions, and uncertainty; the objective and exact
+    execution instruction boundary; and the explicit statement that Level 5-6
+    guarantees are absent. It carries no execution authorization by itself.
+  validation_result: >
+    Recorded structural, Scope, lock, capability, contradiction, and
+    completeness validation of the exact candidate digest, with per-rule
+    results; validation cannot pass by narrative.
+  authorization_record: >
+    Immutable record of the exact human authorization: actor statement,
+    authorized Context Pack identity, version, and digest, authorization time,
+    permitted scope of use, and rollback boundary. Rejection dispositions are
+    recorded with the same identification rigor.
+  adapter_view: >
+    Deterministic digest-linked delivery projection of the authorized Context
+    Pack: exactly what the executor would receive, the omitted
+    inspect-only material with reasons, and delivery provenance. It is derived
+    state, rebuildable byte-identically, and carries no authority of its own.
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: the DR-0011 formation pipeline runs with recorded per-stage results and formation-trace and context-pack artifacts rebuild byte-identically across three derivations
+  - id: S2
+    requirement: every considered source has a typed inclusion or exclusion entry with owner, authority, exact revision, and SHA-256
+  - id: S3
+    requirement: validation covers structural, Scope, lock, capability, contradiction, and completeness rules with recorded per-rule results on the exact candidate digest
+  - id: S4
+    requirement: exactly one explicit human authorization matches the one validated Context Pack version and digest and produces an immutable authorization record
+  - id: S5
+    requirement: an explicit rejection disposition preserves the candidate non-authorized with rationale, proven in an isolated temporary copy
+  - id: S6
+    requirement: revocation of an authorized version disables delivery and returns the effort to Level 3, preserving all versions, proven in an isolated temporary copy
+  - id: S7
+    requirement: the adapter view rebuilds byte-identically, digest-matches the authorized Context Pack, and truthfully states absent Level 5-6 guarantees
+  - id: S8
+    requirement: a changed source digest marks the pack stale with the exact changed dependency and blocks delivery, proven in an isolated temporary copy
+  - id: S9
+    requirement: Level 3, Level 2, retained Level 1, and backlog-next test suites remain exact
+  - id: S10
+    requirement: final backlog source, Level 3 artifacts, package, dependencies, lower levels, MI-002 and MI-003 evidence, Git index, and all pre-existing tracked bytes remain unchanged
+
+mandatory_failure_scenarios:
+  - id: F1
+    condition: stale bound Work, Scope, route, lock, or source revision or digest
+    diagnostic: STALE_CONTEXT_DEPENDENCY
+  - id: F2
+    condition: required source missing, unreadable, or unresolvable
+    diagnostic: CONTEXT_SOURCE_UNAVAILABLE
+  - id: F3
+    condition: contradictory sources without a recorded resolution
+    diagnostic: CONTEXT_CONTRADICTION_UNRESOLVED
+  - id: F4
+    condition: corrupt or digest-mismatched formation input artifact
+    diagnostic: CONTEXT_INPUT_CORRUPT
+  - id: F5
+    condition: required material exceeds the declared bounded delivery and cannot be safely delivered
+    diagnostic: CONTEXT_DELIVERY_UNBOUNDED
+  - id: F6
+    condition: no explicit human authorization, multiple or mismatched authorization tuples, or any attempted automatic authorization
+    diagnostic: CONTEXT_AUTHORIZATION_MISSING
+  - id: F7
+    condition: attempt to deliver a draft, formed, validated-but-unauthorized, stale, rejected, or revoked version
+    diagnostic: UNAUTHORIZED_CONTEXT_DELIVERY
+  - id: F8
+    condition: adapter view digest does not match the authorized Context Pack
+    diagnostic: CONTEXT_DELIVERY_MISMATCH
+  - id: F9
+    condition: attempt to edit an authorized Context Pack version in place
+    diagnostic: CONTEXT_IMMUTABILITY_VIOLATION
+  - id: F10
+    condition: attempt to mutate the backlog source, any Level 3 artifact, or any other pre-existing tracked byte
+    diagnostic: SOURCE_MUTATION_PROHIBITED
+  - id: F11
+    condition: attempt to execute the selected effort or invoke Claude Code or any Skill
+    diagnostic: WORK_EXECUTION_PROHIBITED
+  - id: F12
+    condition: claim or creation of Session, Run, Checkpoint, Handoff, effect, Assurance, completion, Decision, Learning, or Level 5-6 authority
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses the contracted canonical serialization
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, local origin/main, upstream, remote main, clean state, and observed time
+    - repository binding evidence records that Program State was the first and sole logical path and remained sole until its complete proof closed
+    - canonical-read evidence records every path plan, chunk range, channel completeness result, contiguous coverage proof, and final whole-path proof
+    - the formation trace includes every considered source and blob SHA-256 without copying unrelated source content into evidence
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - authorization evidence records the exact human statement, authorized digest, and match verification
+    - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
+    - no chat transcript, hidden manual copy, timestamp-dependent artifact ordering, or unrecorded inference is admissible
+    - temporary fixtures are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-4.test.mjs returns all tests passing
+    - node --test tests/continuity-level-3.test.mjs returns 23/23
+    - node --test tests/continuity-level-2.test.mjs returns 23/23
+    - node --test tests/continuity-level-1.test.mjs returns 14/14
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68
+    - all S1-S10 success scenarios pass
+    - all F1-F12 mandatory failure scenarios fail closed with the exact typed diagnostic
+    - context-pack.json, formation-trace.json, and adapter-view.json each rebuild byte-identically from canonical sources
+    - isolated rejection, revocation, and staleness fixtures each restore the exact source-preserving Level 3 condition
+    - final Git and digest comparison proves every pre-existing tracked path equals the exact start revision
+    - final Nestfolio manifest contains exactly twenty-two additions and no other status
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata, the complete tracked-tree identity, all
+    critical Level 1-3 and MI-002/MI-003 digests, absence of every create
+    path, and a verified external recovery ledger outside all repositories.
+    Do not copy backlog content or secrets into the recovery ledger.
+  success_rollback_proof: >
+    In isolated temporary copies only, exercise rejection, revocation, and
+    staleness transitions from the authorized Level 4 representation. Each
+    transition must preserve the original source tuple, every Level 3
+    artifact, and all immutable Context Pack versions, disable Level 4
+    delivery, and return the effort to Level 3 without any false context
+    guarantee. Do not mutate the real Level 3 artifacts or backlog source.
+  execution_failure: >
+    If any actual execution condition fails after mutation, remove only the
+    newly created MI-004 paths, verify Nestfolio is byte-identical and clean
+    at the exact published start revision, retain diagnostics outside all
+    repositories, and close MI-004 as UNCONDITIONAL FAIL in continuity-lab.
+    Never retain partial Level 4 authority after a failed execution.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - sessions/MI-004-authorized-context-introduction/context-pack.yaml
+    - sessions/MI-004-authorized-context-introduction/session-handoff.md
+  create:
+    - docs/70-implementation/mi-004-authorized-context-introduction.md
+    - sessions/MI-004-authorized-context-introduction/execution-changed-files.txt
+  rule: >
+    A later separately authorized execution closure may record only the one
+    MI-004 result and exact execution facts. All MI-002, MI-003, MI-003-R1,
+    and MI-003-R2 artifacts and the MI-004 prompt and authoring manifest
+    remain immutable.
+
+explicitly_immutable:
+  continuity_workspace: [all content and Git state]
+  continuity_lab_during_execution:
+    - all MI-002, MI-002-R1, MI-002-R2, MI-003, MI-003-R1, and MI-003-R2 artifacts and reports
+    - MI-004 prompt and contract-authoring manifest
+    - every path outside the exact MI-004 execution-closure scope
+    - all historical session artifacts and implementation reports
+  nestfolio:
+    - every pre-existing tracked path at b9d7264082322e09cfd233819b79f128ef912e31
+    - package.json
+    - package-lock.json absence
+    - CLAUDE.md
+    - docs/backlog/**
+    - .claude/skills/**
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/level-3/**
+    - continuity/evidence/mi-001*/**
+    - continuity/evidence/mi-002/**
+    - continuity/evidence/mi-003/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - tests/continuity-level-3.test.mjs
+
+prohibited_actions:
+  - execute MI-004 during contract authoring, review, finalization, authorization, or publication
+  - inspect or modify Nestfolio content before a separate explicit MI-004 execution instruction and valid gates
+  - commit, push, fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history during MI-004 execution
+  - modify, repair, relabel, qualify, supersede, re-grade, or reinterpret any MI-002, MI-003, MI-003-R1, or MI-003-R2 artifact or result
+  - perform any implementation work described by the selected backlog effort
+  - invoke Claude Code, any Skill, /backlog-next, continuity:invoke, or another executor procedure
+  - spawn a nested Claude Code instance, sub-agent, background task, workflow, Skill, or slash command as a sub-executor
+  - mutate the backlog source, any Level 3 artifact, status, priority, dependency, rank, or external object
+  - create automatic bidirectional synchronization or external writes
+  - modify package.json, dependencies, package-lock.json, Level 1, Level 2, Level 3, or MI-002/MI-003 evidence
+  - authorize a Context Pack automatically, by policy, by inference, by executor judgment, or by generic confirmation
+  - create or accept a deterministic auto-authorization policy
+  - deliver, execute from, or claim authority for any non-authorized, stale, rejected, or revoked Context Pack version
+  - edit any authorized Context Pack version in place
+  - create a Session, Run, Checkpoint, Handoff, effect record, Assurance Plan, Evidence authority, Guard, Waiver, Decision, Observation, Lesson, Change Proposal, completion claim, Level 5-6 state, registry, remote source, universal ranking, Epic orchestration, intake, or themes migration
+  - promote Nestfolio behavior into reusable Pack or Framework Core authority
+  - inspect or modify paths outside the exact read and create boundaries
+  - treat incomplete, truncated, summarized, omitted, elided, or clipped tool output as a complete chunk or path
+  - interleave, batch, parallelize, reorder, skip, or substitute canonical path reads; recovery re-reads must remain forward-contiguous within the same open logical-path session
+  - execute MI-005 or any broader or unrelated implementation, or scope MI-005 or later slices
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 exact repository bindings, segmented canonical complete-read proof, and explicit human authorization authority
+    - C2 explicit reproducible DR-0011 formation with complete source and exclusion ledger and deterministic rebuild
+    - C3 internally exact recipe, Formation Trace, Context Pack, validation result, authorization record, and adapter view
+    - C4 every mandatory failure blocks with the exact typed diagnostic
+    - C5 backlog source, Level 3 artifacts, all pre-existing bytes, MI-002/MI-003 evidence, lower levels, dependencies, and direct paths remain exact
+    - C6 formation, validation, authorization, delivery, route, Git, and absent-guarantee authority is observable and unambiguous
+    - C7 deterministic rebuild, source-preserving rejection, revocation, staleness, and downgrade, cleanup, and exact final manifest pass with no Level 5-6 authority
+  pass_rule: >
+    Issue MI-004 UNCONDITIONAL PASS only if C1-C7, S1-S10, F1-F12, every
+    precondition, every path and segment proof, validation, preservation,
+    rollback, cleanup, and exact-manifest requirement passes conjunctively and
+    no prohibited action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, reordered, interleaved, truncated,
+    clipped, mismatched, out-of-scope, non-deterministic, partial, or failed
+    condition after valid execution start is MI-004 UNCONDITIONAL FAIL. No
+    qualified PASS, partial PASS, inferred authorization, silent repair,
+    evidence-only override, historical reinterpretation, or history rewrite is
+    permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Preserve MI-002-R2, MI-003, MI-003-R1, and MI-003-R2 as four separate
+    immutable results and record MI-004 separately. Preserve the authorized
+    Level 4 representation as bounded context state with no Level 5-6
+    authority. MI-005 remains unauthorized until separately contracted,
+    reviewed, published, and explicitly executed; implementation of the
+    selected effort remains separately authorized.
+  on_fail: >
+    Preserve all separate results and keep MI-005 blocked. Select only a newly
+    bounded correction or explicit architecture review supported by the
+    failure evidence. Do not broaden scope.
+
+completion_criteria:
+  - finalized reviewed internally consistent MI-004 contract publication candidate
+  - contract authorization recorded without publication or execution
+  - the published Level 3 artifacts and active route are bound as read-only inputs
+  - implementation of the selected backlog effort remains separately authorized and out of scope
+  - explicit human authorization is required for any Context Pack activation
+  - MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, and MI-003-R2 PASS remain four separate immutable results
+  - the amended R2 executor_identity clause and segmented canonical complete-read protocol carry forward, including the harness-injected CLAUDE.md session-environment clause
+  - no Nestfolio content inspection mutation candidate formation authorization Skill Claude Code dependency operation external write commit or push
+  - exact nine-path uncommitted and unstaged continuity-lab contract-authoring manifest
+  - publication handoff for a fresh control session

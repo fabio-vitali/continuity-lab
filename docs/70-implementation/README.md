@@ -93,6 +93,16 @@ passed; suites returned 23/23, 23/23, 14/14, and 68/68; the twenty-two
 additions are published at Nestfolio revision
 `b9d7264082322e09cfd233819b79f128ef912e31`. MI-003 and MI-003-R1 remain
 separate immutable failures. The selected effort is not implemented; its
-implementation requires a separate explicit authorization, and the next valid
-program operation is contracting MI-004 (or a separately contracted execution
-of the selected effort) in a fresh control session.
+implementation requires a separate explicit authorization.
+
+**MI-004 — Authorized Context Introduction** has an authored and reviewed
+contract candidate (2026-07-16) that is NOT published and NOT executed. It
+binds PX Level 4 Context formation to the active Level 3 route for the
+selected effort `dashboard-bff-awaiting-confirmation-activity-gap` at
+Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31`, with explicit human
+Context Pack authorization per DR-0020, the published Level 3 artifacts as
+read-only inputs, and no Level 5-6 authority. The next valid program
+operation is publishing the exact reviewed nine-path MI-004 contract-authoring
+delta in a fresh control session; execution requires a still later fresh
+instruction naming the exact published revision. MI-005 through MI-007 and
+broader work remain blocked.
