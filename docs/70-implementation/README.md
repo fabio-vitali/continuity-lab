@@ -233,8 +233,27 @@ publication state, diagnostically proven green by SE-001-R2), removed
 afterward with absence proof, while Level 2, retained Level 1, and
 backlog-next post-implementation runs and the uncommitted-unstaged close
 state stay in the real working tree. The immutable published suites stay
-untouched. The next valid program operation is executing SE-001-R3 under
-the published contract — in the publishing session per DR-0024
-aggregated phases with gates still valid, or in a later fresh session
-under the preserved prompt with the exact published revision resolved;
-MI-005 through MI-007 and broader work remain blocked.
+untouched.
+
+**SE-001-R3 — Selected Effort Execution: executed 2026-07-17,
+UNCONDITIONAL PASS.** Executed in the publishing session itself under
+DR-0024 aggregated phases at published contract revision `9c655741…`.
+Every binding verified fail-closed; frozen boundary with three
+byte-identical rebuilds (`67eed30f…`); five pre-mutation suites green;
+gap proof fail-before (isolated start-revision copy, 3/3 failing on the
+absent DECISION_PACKET_UPDATED handler) and pass-after (implemented
+tree, 3/3); retained SE-001-R2 delta applied byte-exactly inside the
+boundary; corrected validation green — Level 4 23/23 and Level 3 23/23
+in the isolated committed validation copy (throwaway commit `1b1415e7…`
+removed with absence proof), Level 2 23/23, retained Level 1 14/14,
+backlog-next 68/68, dashboard-bff 70/70, investor-adpt 14/14,
+typecheck, typed fixtures in the real working tree; full-manifest
+outside-boundary immutability; source-preserving return/cancel proofs;
+fifteen evidence files created (iteration id SE-001-R3); conjunctive
+C1-C7 verdict PASS. The 26-path Nestfolio delta remains uncommitted and
+unstaged (manifest `8affe6ca…`). Report:
+`se-001-r3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
+The next valid program operation is the separately authorized
+publication with the exact subject "Publish SE-001 selected effort
+implementation and evidence"; MI-005 through MI-007 and broader work
+remain blocked.

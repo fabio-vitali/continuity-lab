@@ -82,9 +82,43 @@ remains NOT implemented at authoring time.
 The exact nine-path delta of this session is recorded in
 `changed-files.txt` beside this file.
 
+## Execution closure (2026-07-17)
+
+SE-001-R3 was executed on 2026-07-17 in this same publishing session
+under DR-0024 aggregated phases, at the published contract revision
+`9c65574116536cb7e556f83be1ff8cdbc2165618` with all gates still valid,
+and closed with **UNCONDITIONAL PASS**. Every binding verified
+fail-closed (pack `e58c9bc1…`, validation 18/18, authorization
+`a23ec489…`, adapter view `9062458c…` rebuilt byte-identically,
+stale-check clean, route active); the frozen boundary rebuilt three
+times byte-identically (derivation digest `67eed30f…`, 60 existing + 3
+to-be-created paths); the five pre-mutation suites were green (23/23,
+23/23, 23/23, 14/14, 68/68); the gap validation (`c3724e16…`) failed in
+the isolated start-revision copy (3/3 failing on the absent
+DECISION_PACKET_UPDATED handler) and passed in the implemented tree
+(3/3); the retained SE-001-R2 delta applied byte-exactly (11 paths, all
+inside the boundary); the corrected post-implementation validation
+returned Level 4 **23/23** and Level 3 **23/23** in the isolated
+committed validation copy (throwaway commit `1b1415e7…` on the exact
+start revision, removed with absence proof, no real-history pollution)
+and Level 2 23/23, retained Level 1 14/14, backlog-next 68/68,
+dashboard-bff 70/70, investor-adpt 14/14, typecheck, and typed fixtures
+green in the real working tree; outside-boundary immutability proved by
+full 3523-path manifest recomputation; return/cancel proved
+source-preserving in isolated copies; the fifteen evidence files were
+created with iteration id SE-001-R3; the conjunctive C1-C7 verdict
+issued UNCONDITIONAL PASS. The Nestfolio delta (26 paths) remains
+uncommitted and unstaged with recorded SHA-256 manifest `8affe6ca…`
+(bytes retained at `~/continuity-recovery/se-001-r3/ledger/`). Full
+report: `docs/70-implementation/se-001-r3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
+The exact continuity-lab closure delta is recorded in
+`execution-changed-files.txt` beside this file.
+
 ## Next valid program operation
 
-Execute SE-001-R3 under the published contract: per DR-0024 aggregated
-phases the publishing session executes immediately after publication with
-gates still valid, or a later fresh session executes under `prompt.md`
-beside this file with the exact published revision resolved.
+The separately authorized publication of the SE-001 selected effort
+implementation and evidence with the exact subject "Publish SE-001
+selected effort implementation and evidence", committing exactly the
+26-path uncommitted delta (manifest `8affe6ca…`) on Nestfolio main on
+top of `89ef74ee…`. MI-005 through MI-007 and broader work remain
+blocked.

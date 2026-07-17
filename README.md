@@ -159,22 +159,27 @@ paths were correctly not created. The selected effort remains NOT
 implemented.
 
 **SE-001-R3 — Selected Effort Execution — post-implementation
-validation-environment correction** was contracted and published on
-2026-07-17, carrying every product-level binding forward unchanged from
-SE-001-R2 with exactly ONE session-choreography correction fixing the
-SE-001-R2 sole root cause: the contracted "after implementation" Level 4
-and Level 3 suite runs execute in an isolated committed validation copy
-outside all three repositories — the exact start revision
-`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` with the implementation delta
-committed on top as a throwaway commit in the copy only (the future
-publication state, diagnostically proven green by SE-001-R2), removed
-afterward with absence proof — while Level 2, retained Level 1, and
-backlog-next post-implementation runs and the uncommitted-unstaged close
-state stay in the real working tree. The immutable published suites stay
-untouched. The next valid program operation is executing SE-001-R3 under
-the published contract (same publishing session per DR-0024 aggregated
-phases, or a later fresh session under the preserved prompt with the
-exact published revision resolved).
+validation-environment correction** was contracted, published, and
+executed on 2026-07-17 in one session under DR-0024 aggregated phases,
+closing with **UNCONDITIONAL PASS**. Every product-level binding was
+carried forward unchanged from SE-001-R2; the sole correction ran the
+post-implementation Level 4 and Level 3 suites in an isolated committed
+validation copy outside all repositories (throwaway commit on the exact
+start revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, removed with
+absence proof), fixing the SE-001-R2 purity-guard contradiction. All
+validations passed: fail-closed digest-matched context delivery, frozen
+boundary with three byte-identical rebuilds, five pre-mutation suites
+green, fail-before/pass-after gap proof, corrected Level 4 23/23 and
+Level 3 23/23 in the committed copy, Level 2 23/23, retained Level 1
+14/14, backlog-next 68/68, dashboard-bff 70/70, investor-adpt 14/14,
+typecheck, and typed fixtures in the real working tree, full-manifest
+outside-boundary immutability, and source-preserving return/cancel
+proofs. The selected effort is implemented and its fifteen evidence
+files exist (iteration id SE-001-R3); the 26-path Nestfolio delta
+remains uncommitted and unstaged with recorded SHA-256 manifest
+`8affe6ca…`. The next valid program operation is the separately
+authorized publication with the exact subject "Publish SE-001 selected
+effort implementation and evidence".
 
 ## Canonical starting points
 
@@ -264,6 +269,8 @@ exact published revision resolved).
 - SE-001-R3 preserved future execution prompt: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
 - SE-001-R3 authoring and publication handoff: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
 - SE-001-R3 contract-authoring manifest: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
+- SE-001-R3 execution-closure manifest: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/execution-changed-files.txt`
+- SE-001-R3 report: `docs/70-implementation/se-001-r3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
