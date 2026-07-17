@@ -1,38 +1,36 @@
-# Continuity — SE-001-R3 Correction Handoff
+# Continuity — SE-001-R3 Execution Handoff
 
 ## Current state
 
-- **SE-001-R2 — Selected Effort Execution — retry against the corrected
-  revision** was executed on 2026-07-17 in a fresh session naming the exact
-  published contract revision `30a66168f2b0d3b3e9d39b2e50ce8b4ba2c78814`
-  and closed with **UNCONDITIONAL FAIL**: the required validation "Level 4
-  / Level 3 tests return 23/23 after implementation" failed in the working
-  tree with the contract-mandated uncommitted implementation delta present
-  (Level 4 22/23 on S10; Level 3 11/23 with ten failure fixtures cascading
-  to the F10 `tracked byte mutated` guard). Sole structural root cause: the
-  published suites' working-tree purity guards treat ANY uncommitted delta
-  — including the contract-mandated implementation modifications and the
-  fifteen evidence creations — as a violation, so the contract's
-  "uncommitted delta at close" and "23/23 after implementation"
-  requirements are jointly unsatisfiable for every possible execution (the
-  same defect class as SE-001-R1's publication-dependent HEAD-pinning).
-- Everything before the failed validation passed: session gates,
-  fail-closed digest-matched context delivery, the deterministic frozen
-  writable boundary (three byte-identical rebuilds, 60 existing + 3
-  to-be-created paths), the five pre-mutation suites (23/23, 23/23, 23/23,
-  14/14, 68/68), the fail-before/pass-after gap proof, the
-  boundary-contained implementation (investor-adpt forwards
-  DECISION_PACKET_UPDATED advisory→investor; dashboard-bff records one
-  status-filtered awaiting-confirmation Activity row per decision),
-  dashboard-bff 70/70, investor-adpt 14/14, typecheck, and typed fixtures.
-  Diagnostic proof retained: with the identical delta committed in an
-  isolated temporary clone (the future publication state) all five suites
-  return 23/23, 23/23, 23/23, 14/14, 68/68.
-- Full rollback restored Nestfolio byte-identical and clean at the exact
-  start revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`; the fifteen
-  evidence paths were correctly not created. Diagnostics, the preserved
-  implementation delta bytes, and their SHA-256 manifest are retained at
-  `~/continuity-recovery/se-001-r2/` (admissible planning input).
+- **SE-001-R3 — Selected Effort Execution — post-implementation
+  validation-environment correction** is contracted and published at
+  `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/`.
+  Every product-level binding is carried forward unchanged from SE-001-R2
+  (selected effort, Context Pack version 1 digests — pack `e58c9bc1…`,
+  authorization record `a23ec489…`, adapter view `9062458c…`, validation
+  valid 18/18 — exclusive adapter-view consumption,
+  `se001-writable-boundary@1` with three byte-identical rebuilds, the
+  fail-before/pass-after gap proof, S1-S10, F1-F12, conjunctive C1-C7,
+  the fifteen `continuity/evidence/se-001/` paths recording iteration id
+  SE-001-R3, no dependency operation, no Skill delegation, the
+  uncommitted unstaged delta with recorded SHA-256 manifest, and the
+  separate publication authorization with the exact subject "Publish
+  SE-001 selected effort implementation and evidence").
+- The ONE correction, fixing the SE-001-R2 sole structural root cause
+  (working-tree purity guards jointly unsatisfiable with the mandated
+  uncommitted delta): the contracted "after implementation" Level 4 and
+  Level 3 suite runs execute in an isolated committed validation copy
+  OUTSIDE all three repositories — the exact start revision
+  `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` with the implementation
+  delta committed on top as a throwaway commit in the copy only (the
+  future publication state, diagnostically proven green by SE-001-R2:
+  23/23, 23/23, 23/23, 14/14, 68/68), removed afterward with absence
+  proof. Level 2, retained Level 1, and backlog-next post-implementation
+  runs stay in the real working tree. The immutable published suites
+  stay untouched.
+- The retained SE-001-R2 ledger at `~/continuity-recovery/se-001-r2/`
+  (failure-diagnosis.md; implementation-delta-bytes/ with manifest
+  SHA-256 `ad5e94bc…`) is admissible planning input only.
 - MI-002-R2 `UNCONDITIONAL PASS`, MI-003 `UNCONDITIONAL FAIL`, MI-003-R1
   `UNCONDITIONAL FAIL`, MI-003-R2 `UNCONDITIONAL PASS`, MI-004
   `UNCONDITIONAL PASS`, SE-001-R1 `UNCONDITIONAL FAIL`, MI-004-R1
@@ -43,18 +41,19 @@
 
 ## Next valid operation
 
-Author, review, and publish under DR-0024 one bounded **SE-001-R3**
-correction contract that keeps every product-level binding unchanged
-(selected effort, Context Pack version 1 digests, exclusive adapter-view
-consumption, se001-writable-boundary@1, gap proof, S/F/C sets, the fifteen
-evidence paths, the uncommitted unstaged delta with recorded SHA-256
-manifest, the separate publication authorization) and corrects only the
-post-implementation suite validation choreography: the contracted "after
-implementation" Level 3 and Level 4 suite runs execute in an isolated
-temporary copy with the implementation delta committed on top of the exact
-start revision (the future publication state, diagnostically proven green
-by SE-001-R2), while the real working tree keeps the delta uncommitted and
-unstaged per the publication rule. No product artifact is repaired; the
-immutable published suites stay untouched. Per DR-0024 aggregated phases
-the publishing session may execute immediately after publication with
-gates still valid. No other program operation is valid.
+Execute SE-001-R3 under the published contract: re-verify every binding
+fail-closed, derive and freeze the writable boundary, run the five suites
+green at the start revision, prove the gap fail-before in an isolated
+start-revision copy, implement the effort inside the frozen boundary,
+prove the gap pass-after, run the corrected post-implementation
+validations (isolated committed copy for Level 4/Level 3; real working
+tree for Level 2, retained Level 1, and backlog-next, plus the
+dashboard-bff and investor-adpt unit suites, dashboard-bff typecheck, and
+check-typed-fixtures), create the fifteen evidence files on PASS, apply
+the conjunctive unconditional verdict, leave the Nestfolio delta
+uncommitted and unstaged with a recorded SHA-256 manifest, and commit and
+push only the continuity-lab execution closure. Per DR-0024 aggregated
+phases the publishing session executes immediately after publication with
+gates still valid; otherwise a later fresh session executes under the
+preserved `prompt.md` with the exact published revision resolved. No
+other program operation is valid.

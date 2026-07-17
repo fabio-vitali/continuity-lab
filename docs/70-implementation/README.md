@@ -213,9 +213,28 @@ byte-identical and clean at the exact start revision; the fifteen
 evidence paths were correctly not created; the selected effort remains
 NOT implemented. Report:
 `se-001-r2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
-The next valid program operation is authoring and publishing under
-DR-0024 one bounded SE-001-R3 correction contract defining the
-post-implementation suite runs in an isolated committed copy (product
-bindings unchanged; the immutable suites untouched), with same-session
-execution per DR-0024 aggregated phases; MI-005 through MI-007 and
-broader work remain blocked.
+**SE-001-R3 — Selected Effort Execution — post-implementation
+validation-environment correction** is contracted and published. It
+carries every product-level binding forward unchanged from SE-001-R2 —
+exclusive digest-matched adapter-view consumption of the authorized
+Context Pack version 1 (pack `e58c9bc1…`, authorization record
+`a23ec489…`, adapter view `9062458c…`, validation valid 18/18), the
+deterministic frozen writable boundary (`se001-writable-boundary@1`,
+three byte-identical rebuilds), the fail-before/pass-after gap proof,
+S1-S10, F1-F12, the conjunctive C1-C7 verdict, and the fifteen
+`continuity/evidence/se-001/` paths (evidence records iteration id
+SE-001-R3) — with exactly ONE correction fixing the SE-001-R2 sole root
+cause: the contracted "after implementation" Level 4 and Level 3 suite
+runs execute in an isolated committed validation copy outside all three
+repositories (the exact start revision
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` with the implementation delta
+committed on top as a throwaway commit in the copy only — the future
+publication state, diagnostically proven green by SE-001-R2), removed
+afterward with absence proof, while Level 2, retained Level 1, and
+backlog-next post-implementation runs and the uncommitted-unstaged close
+state stay in the real working tree. The immutable published suites stay
+untouched. The next valid program operation is executing SE-001-R3 under
+the published contract — in the publishing session per DR-0024
+aggregated phases with gates still valid, or in a later fresh session
+under the preserved prompt with the exact published revision resolved;
+MI-005 through MI-007 and broader work remain blocked.

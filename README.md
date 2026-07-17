@@ -156,9 +156,25 @@ in an isolated temporary clone all five suites verify truthfully
 rollback restored Nestfolio byte-identical and clean at the exact start
 revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`; the fifteen evidence
 paths were correctly not created. The selected effort remains NOT
-implemented. The next valid program operation is the bounded SE-001-R3
-correction contract (post-implementation suite runs in an isolated
-committed copy; product bindings unchanged).
+implemented.
+
+**SE-001-R3 — Selected Effort Execution — post-implementation
+validation-environment correction** was contracted and published on
+2026-07-17, carrying every product-level binding forward unchanged from
+SE-001-R2 with exactly ONE session-choreography correction fixing the
+SE-001-R2 sole root cause: the contracted "after implementation" Level 4
+and Level 3 suite runs execute in an isolated committed validation copy
+outside all three repositories — the exact start revision
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` with the implementation delta
+committed on top as a throwaway commit in the copy only (the future
+publication state, diagnostically proven green by SE-001-R2), removed
+afterward with absence proof — while Level 2, retained Level 1, and
+backlog-next post-implementation runs and the uncommitted-unstaged close
+state stay in the real working tree. The immutable published suites stay
+untouched. The next valid program operation is executing SE-001-R3 under
+the published contract (same publishing session per DR-0024 aggregated
+phases, or a later fresh session under the preserved prompt with the
+exact published revision resolved).
 
 ## Canonical starting points
 
@@ -244,6 +260,10 @@ committed copy; product bindings unchanged).
 - SE-001-R2 contract-authoring manifest: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
 - SE-001-R2 execution-closure manifest: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/execution-changed-files.txt`
 - SE-001-R2 report: `docs/70-implementation/se-001-r2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`
+- SE-001-R3 published correction contract: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001-R3 preserved future execution prompt: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
+- SE-001-R3 authoring and publication handoff: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
+- SE-001-R3 contract-authoring manifest: `sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
