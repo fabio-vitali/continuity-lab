@@ -67,3 +67,46 @@ explicit authorization. No Work completion, Assurance, Evidence-bound
 completion, or Level 6 state exists. Ten immutable results now stand;
 MI-006 becomes the next contractable slice. Report:
 `docs/70-implementation/mi-005-resumable-run-cutover.md`.
+
+## Publication (2026-07-17)
+
+The separately authorized publication above was executed in a fresh
+session under DR-0024. Session gates verified continuity-workspace and
+continuity-lab clean on main (continuity-lab HEAD
+`0d62e00ea981d3e7fa7bb7192d9f052c2ca634cb`) and Nestfolio HEAD
+`363283bcc97b1e04710db0e7f759ffffddb18b69` carrying exactly the recorded
+47-path delta unstaged and byte-exact against the recorded SHA-256
+manifest (manifest self-hash
+`3edd7a87a539184c89be3b1edf84be5559c551f93dde0f9b4d07a5fa0f4efd2a`
+recomputed and verified via the same `digestJson`/`stableStringify`
+functions in `runtime/continuity/lib/utils.mjs` that froze it; `git
+status --porcelain -uall` listed exactly those 47 paths, nothing
+staged). The 47 paths were staged and committed as one commit, exact
+subject "Publish MI-005 resumable run cutover Level 5 evidence", sole
+parent `363283bcc97b1e04710db0e7f759ffffddb18b69`, published at exact
+Nestfolio revision `eafa09b81a600bd58fe8f4639298a182039d21f5`, and
+pushed to `origin/main`.
+
+The required suites were re-confirmed at the current revision before
+commit: Level 5 7/7, engine 9/9, Level 2 23/23, Level 1 14/14,
+backlog-next 68/68 in the real tree; Level 4 23/23 and Level 3 23/23 in
+an isolated committed validation copy (real `.git` via `git clone` of
+Nestfolio, landing at the base revision `363283bc…`, the 47-path delta
+copied in and committed as a throwaway commit with `--no-verify`, per
+the SE-001-R3 mechanics; the copy was removed afterward with absence
+proof). At the published revision Nestfolio is clean and Level 5,
+engine, Level 2, Level 1, and backlog-next return **7/7**, **9/9**,
+**23/23**, **14/14**, and **68/68** respectively in the real working
+tree, and Level 4 and Level 3 return **23/23** and **23/23**
+respectively — reconfirmed directly in the real working tree once
+clean, since the working-tree purity guard is satisfied by the commit
+itself. Publication is repository state only; it records no completion,
+Run, Assurance, or Level 5-6 authority beyond what MI-005 already
+recorded. MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS,
+MI-004 PASS, SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3
+PASS, and MI-005 PASS remain ten separate immutable results, unrepaired
+and unrelabeled; every prior immutable result and the current-journal
+tree remain unchanged. MI-006 (Evidence-Bound Completion and Guard
+Coexistence) becomes the next contractable slice; MI-006, MI-007, and
+broader work remain blocked pending separate contracting, review,
+publication, and explicit authorization.

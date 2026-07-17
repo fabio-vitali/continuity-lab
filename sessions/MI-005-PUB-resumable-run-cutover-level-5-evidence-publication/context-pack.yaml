@@ -1,0 +1,22 @@
+contract:
+  queue_position: 31
+  queue_summary: "MI-005-PUB — published 2026-07-17; the MI-005 resumable run cutover Level 5 evidence committed and pushed at exact Nestfolio revision `eafa09b81a600bd58fe8f4639298a182039d21f5`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded"
+  provenance_note: >
+    Retroactive representation directory authored by the DR-0025 pattern on
+    2026-07-17, mirroring sessions/SE-001-PUB-selected-effort-implementation-publication/.
+    The MI-005 resumable run cutover Level 5 evidence publication (exact
+    Nestfolio revision eafa09b81a600bd58fe8f4639298a182039d21f5, sole parent
+    363283bcc97b1e04710db0e7f759ffffddb18b69, exact commit subject "Publish
+    MI-005 resumable run cutover Level 5 evidence") was executed on
+    2026-07-17 by a control session that created no session directory of
+    its own; its canonical record lives in
+    docs/90-state/program-state.md and in
+    sessions/MI-005-resumable-run-cutover/session-handoff.md. This directory
+    exists so that every queue-visible program event corresponds to exactly
+    one sessions/ directory (DR-0025); it records no new facts and claims no
+    completion, Run, Assurance, or Level 5-6 authority.
+
+iteration:
+  id: MI-005-PUB
+  name: MI-005 Resumable Run Cutover Level 5 Evidence Publication
+  type: publication-closure

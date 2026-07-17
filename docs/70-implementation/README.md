@@ -41,6 +41,7 @@ edit it by hand. Full detail lives in each iteration's canonical report.
 - SE-001-R3 — executed 2026-07-17; unconditional PASS with the isolated committed-copy validation correction; selected effort implemented as a 26-path uncommitted delta at Nestfolio `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (manifest `8affe6ca94271d646217d03e1931736da73188c4766df80a2d484ed2069f450a`); publication separately authorized
 - SE-001-PUB — published 2026-07-17; the SE-001 selected effort implementation and evidence committed and pushed at exact Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded
 - MI-005 — complete; unconditional PASS; executed 2026-07-17; one new target Run run-mi005 created in the DR-0014 store, genuinely started and fresh-session resumed across two human-launched Claude Code Sessions, keyed effect executed once and deduplicated on replay, closed at Level 5 operational scope only; 47-path Nestfolio execution delta uncommitted; selected effort not completed
+- MI-005-PUB — published 2026-07-17; the MI-005 resumable run cutover Level 5 evidence committed and pushed at exact Nestfolio revision `eafa09b81a600bd58fe8f4639298a182039d21f5`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded
 <!-- generated:implementation-slices:end -->
 
 Canonical reports:
@@ -293,3 +294,29 @@ PASS remain nine separate immutable results, unrepaired and
 unrelabeled. MI-005 through MI-007 and broader work remain blocked
 pending separate contracting, review, publication, and explicit
 authorization.
+
+**MI-005 resumable run cutover Level 5 evidence — published
+2026-07-17.** Session gates verified continuity-workspace and
+continuity-lab clean on main and Nestfolio HEAD
+`363283bcc97b1e04710db0e7f759ffffddb18b69` carrying exactly the
+recorded 47-path delta unstaged and byte-exact against manifest
+`3edd7a87…` (manifest self-hash also verified). The 47 paths were
+staged and committed as one commit, exact subject "Publish MI-005
+resumable run cutover Level 5 evidence", sole parent
+`363283bcc97b1e04710db0e7f759ffffddb18b69`, published at exact
+Nestfolio revision `eafa09b81a600bd58fe8f4639298a182039d21f5`, and
+pushed to `origin/main`. At the published revision Nestfolio is clean
+and Level 5, engine, Level 2, Level 1, and backlog-next return 7/7,
+9/9, 23/23, 14/14, and 68/68 respectively in the real working tree,
+and Level 4 and Level 3 return 23/23 and 23/23 respectively (verified
+first in an isolated committed validation copy, throwaway commit
+removed with absence proof, then reconfirmed directly in the real
+working tree once clean). Publication is repository state only; it
+records no completion, Run, Assurance, or Level 5-6 authority beyond
+what MI-005 already recorded. MI-002-R2 PASS, MI-003 FAIL, MI-003-R1
+FAIL, MI-003-R2 PASS, MI-004 PASS, SE-001-R1 FAIL, MI-004-R1 PASS,
+SE-001-R2 FAIL, SE-001-R3 PASS, and MI-005 PASS remain ten separate
+immutable results, unrepaired and unrelabeled. MI-006 becomes the next
+contractable slice; MI-006, MI-007, and broader work remain blocked
+pending separate contracting, review, publication, and explicit
+execution.
