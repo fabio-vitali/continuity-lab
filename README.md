@@ -136,8 +136,23 @@ Nestfolio revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (sole parent
 `a760d6f41ff14491d5b008a7f13234ba0221bcec`, exactly two changed paths, no
 artifact or evidence byte touched); at that revision Level 4 returns 23/23,
 Level 3 23/23, Level 2 23/23, retained Level 1 14/14, and backlog-next
-68/68 without any Skill. The next valid program operation is re-contracting
-the selected-effort execution as SE-001-R2 against that revision.
+68/68 without any Skill.
+
+**SE-001-R2 — Selected Effort Execution — retry against the corrected
+revision** is contracted and published, not executed. It carries every
+SE-001/SE-001-R1 product-level binding forward unchanged — the selected
+effort `dashboard-bff-awaiting-confirmation-activity-gap`, the authorized
+Context Pack version 1 (SHA-256
+`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`),
+exclusive digest-matched adapter-view consumption, the deterministic frozen
+writable boundary (`se001-writable-boundary@1`), the fail-before/pass-after
+gap proof, and the fifteen `continuity/evidence/se-001/` paths (evidence
+records iteration id SE-001-R2) — against the corrected published Nestfolio
+start revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, where all five
+suites are green. Per DR-0024 execution is authorized in the publishing
+session immediately after publication, or in a later fresh session naming
+the exact published contract revision. The selected effort remains NOT
+implemented until SE-001-R2 executes with UNCONDITIONAL PASS.
 
 ## Canonical starting points
 
@@ -217,6 +232,10 @@ the selected-effort execution as SE-001-R2 against that revision.
 - SE-001-R1 report: `docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`
 - MI-004-R1 report: `docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md`
 - MI-004-R1 completed contract: `sessions/MI-004-R1-level-4-suite-revision-binding-correction/context-pack.yaml`
+- SE-001-R2 active execution contract: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001-R2 preserved future execution prompt: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
+- SE-001-R2 authoring and publication handoff: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
+- SE-001-R2 contract-authoring manifest: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

@@ -175,7 +175,24 @@ all seven published artifact digests exact, two-path diff, sole parent
 at exact Nestfolio revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`.
 MI-004's recorded 23/23 at its original execution condition and the
 SE-001-R1 UNCONDITIONAL FAIL remain separate immutable results. Report:
-`mi-004-r1-level-4-suite-revision-binding-correction.md`. The next valid
-program operation is authoring, reviewing, and publishing SE-001-R2
-against the corrected revision; MI-005 through MI-007 and broader work
+`mi-004-r1-level-4-suite-revision-binding-correction.md`.
+
+**SE-001-R2 — Selected Effort Execution — retry against the corrected
+revision** is contracted and published, not executed. It carries every
+SE-001/SE-001-R1 product-level binding forward unchanged — exclusive
+digest-matched adapter-view consumption of the authorized Context Pack
+version 1 (pack `e58c9bc1…`, authorization record `a23ec489…`, adapter
+view `9062458c…`, validation valid 18/18), the deterministic frozen
+writable boundary (`se001-writable-boundary@1`, three byte-identical
+rebuilds), the fail-before/pass-after gap proof, S1-S10, F1-F12, the
+conjunctive C1-C7 verdict, and the fifteen `continuity/evidence/se-001/`
+paths (evidence records iteration id SE-001-R2) — against the corrected
+published Nestfolio start revision
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, where the "all suites green
+before mutation" preconditions are satisfiable (verified by MI-004-R1).
+The SE-001-R1 UNCONDITIONAL FAIL remains immutable history; SE-001-R2 is
+a new iteration, not a re-grade. The next valid program operation is
+executing SE-001-R2 under its authorization_rule (the publishing session
+immediately after publication, or a later fresh session naming the exact
+published contract revision); MI-005 through MI-007 and broader work
 remain blocked.

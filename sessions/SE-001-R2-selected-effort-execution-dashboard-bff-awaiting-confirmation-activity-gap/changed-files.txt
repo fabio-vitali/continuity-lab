@@ -1,0 +1,9 @@
+M CONTINUITY-NEXT-STEPS.md
+M README.md
+M docs/70-implementation/README.md
+M docs/90-state/artifact-index.md
+M docs/90-state/program-state.md
+A sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt
+A sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml
+A sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md
+A sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md
