@@ -38,3 +38,32 @@ published revision, with the human program owner launching the two
 genuine Claude Code validation Sessions defined by the contract.
 MI-006, MI-007, and broader work remain blocked. All nine immutable
 results and the SE-001-PUB publication record are unchanged.
+
+## Execution closure (2026-07-17, DR-0024)
+
+MI-005 was executed from the published contract revision
+`9477a7d120aff64833f1824ca99b91ded89bc40b` and closed with UNCONDITIONAL
+PASS. The orchestrating session ran on `claude-opus-4-8`; the human
+program owner launched the two genuine validation Sessions on
+`claude-sonnet-5` (`session-mi005-1` id `d8e31071-caf8-4622-9e8c-2a4cc88afccb`;
+fresh `session-mi005-2` id `34ad63b5-ff75-4f9f-8c63-58fd90bb31ab`).
+One new target Run `run-mi005` was created in the DR-0014 store: start
+from a digest-matched adapter view, one keyed effect executed once and
+deduplicated on replay, a verified intermediate Checkpoint and published
+Handoff, a transcript-free fresh-session resume with freshness
+validation and lease acquisition, and a final verified Checkpoint. The
+Run is closed at Level 5 operational scope only (final verified
+Checkpoint plus lease-releasing recovery via `interrupt` because
+Session 2 ended without a deliberate pause; no `validate`/`complete`).
+F1-F12 blocked fail-closed with exact diagnostics; every required suite
+verified (Level 4/3 23/23 in an isolated committed copy per SE-001-R3
+mechanics; Level 5 7/7, Level 2 23/23, Level 1 14/14, backlog-next
+68/68, engine 9/9 in the real tree); the current journal is
+byte-identical; the derived index rebuilds deterministically; the audit
+ledger is append-only. The 47-path Nestfolio execution delta (manifest
+self-hash `3edd7a87a539184c89be3b1edf84be5559c551f93dde0f9b4d07a5fa0f4efd2a`)
+remains uncommitted and unstaged; its publication requires separate
+explicit authorization. No Work completion, Assurance, Evidence-bound
+completion, or Level 6 state exists. Ten immutable results now stand;
+MI-006 becomes the next contractable slice. Report:
+`docs/70-implementation/mi-005-resumable-run-cutover.md`.

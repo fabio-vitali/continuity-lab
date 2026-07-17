@@ -1,0 +1,66 @@
+# MI-005 — Resumable Run Cutover — execution-closure manifest (2026-07-17)
+# Result: UNCONDITIONAL PASS. Executed under DR-0024.
+
+## continuity-lab execution-closure changes (this commit)
+M README.md
+M CONTINUITY-NEXT-STEPS.md
+M docs/70-implementation/README.md
+M docs/90-state/artifact-index.md
+M docs/90-state/program-state.md
+M sessions/MI-005-resumable-run-cutover/context-pack.yaml
+M sessions/MI-005-resumable-run-cutover/session-handoff.md
+A docs/70-implementation/mi-005-resumable-run-cutover.md
+A sessions/MI-005-resumable-run-cutover/execution-changed-files.txt
+
+## Nestfolio execution delta — 47 paths, UNCOMMITTED and UNSTAGED at close
+# base revision 363283bcc97b1e04710db0e7f759ffffddb18b69; manifest self-hash
+# 3edd7a87a539184c89be3b1edf84be5559c551f93dde0f9b4d07a5fa0f4efd2a; publication
+# of this delta requires a separate explicit authorization.
+# 45 created + 2 modified:
+M .continuity/audit.ndjson
+M .continuity/derived/index.json
+A continuity/level-5/run-binding.json
+A continuity/level-5/engine-lock.json
+A tests/continuity-level-5.test.mjs
+A continuity/dogfood/mi-005-effect.txt
+A continuity/evidence/mi-005/00-repository-bindings.json
+A continuity/evidence/mi-005/01-store-binding-and-route.json
+A continuity/evidence/mi-005/02-run-preparation-and-rehearsal.json
+A continuity/evidence/mi-005/03-two-session-continuity.json
+A continuity/evidence/mi-005/04-success-scenarios.json
+A continuity/evidence/mi-005/05-mandatory-failures.json
+A continuity/evidence/mi-005/06-preservation-and-rollback.json
+A continuity/evidence/mi-005/07-criterion-matrix-and-verdict.json
+A continuity/evidence/mi-005/commands/01-level5-tests.json
+A continuity/evidence/mi-005/commands/02-engine-tests.json
+A continuity/evidence/mi-005/commands/03-level4-tests.json
+A continuity/evidence/mi-005/commands/04-level3-tests.json
+A continuity/evidence/mi-005/commands/05-level2-tests.json
+A continuity/evidence/mi-005/commands/06-level1-tests.json
+A continuity/evidence/mi-005/commands/07-backlog-next-tests.json
+A continuity/evidence/mi-005/commands/08-final-changed-files.json
+A continuity/artifacts/runs/run-mi005.json
+A continuity/artifacts/work-items/dashboard-bff-awaiting-confirmation-activity-gap.json
+A continuity/artifacts/scopes/scope-mi005-run-continuity.json
+A continuity/artifacts/working-sets/ws-mi005.json
+A continuity/artifacts/sessions/session-mi005-1.json
+A continuity/artifacts/sessions/session-mi005-2.json
+A continuity/artifacts/context-packs/run-mi005.json
+A continuity/artifacts/formation-traces/run-mi005.json
+A continuity/artifacts/pack-locks/run-mi005.json
+A continuity/artifacts/validation-plans/run-mi005.json
+A continuity/artifacts/checkpoints/run-mi005-cp-1.json
+A continuity/artifacts/checkpoints/run-mi005-final-2.json
+A continuity/artifacts/handoffs/run-mi005-session-mi005-1.json
+A continuity/artifacts/handoffs/run-mi005-session-mi005-2.json
+A .continuity/runs/run-mi005/head.json
+A .continuity/runs/run-mi005/lease.json
+A .continuity/runs/run-mi005/effects.json
+A .continuity/derived/execution-views/run-mi005-session-mi005-1.md
+A .continuity/derived/execution-views/run-mi005-session-mi005-2.md
+A .continuity/executor-sessions/session-mi005-1-start.json
+A .continuity/executor-sessions/session-mi005-1-end.json
+A .continuity/executor-sessions/session-mi005-1.ndjson
+A .continuity/executor-sessions/session-mi005-2-start.json
+A .continuity/executor-sessions/session-mi005-2-end.json
+A .continuity/executor-sessions/session-mi005-2.ndjson
