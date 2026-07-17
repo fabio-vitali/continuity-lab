@@ -1,3 +1,7 @@
+contract:
+  queue_position: 2
+  queue_summary: "RI-001 — complete; G2 valid"
+
 iteration:
   id: RI-001
   type: current-system-inventory

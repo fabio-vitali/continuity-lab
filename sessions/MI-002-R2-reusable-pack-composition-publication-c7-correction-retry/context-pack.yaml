@@ -1,4 +1,6 @@
 contract:
+  queue_position: 19
+  queue_summary: "MI-002-R2 — published; unconditional PASS; exact eight-path Nestfolio correction and eleven-path continuity-lab closure"
   status: complete
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15

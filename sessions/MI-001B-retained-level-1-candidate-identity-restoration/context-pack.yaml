@@ -1,4 +1,6 @@
 contract:
+  queue_position: 12
+  queue_summary: "MI-001B — complete; unconditional FAIL; original-output provenance failed before extraction or installation; Nestfolio unchanged"
   status: authorized-not-started
   authored_on: 2026-07-14
   authority:

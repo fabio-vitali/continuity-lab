@@ -1,4 +1,6 @@
 contract:
+  queue_position: 20
+  queue_summary: "MI-003 — complete; unconditional FAIL caused by canonical read order; no Nestfolio content read or changed; no candidate or selection; immutable nine-path closure published"
   status: completed-unconditional-fail
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15

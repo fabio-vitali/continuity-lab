@@ -1,4 +1,6 @@
 contract:
+  queue_position: 27
+  queue_summary: "SE-001-R2 — executed 2026-07-17; unconditional FAIL on the post-implementation validation; the working-tree purity guards of the published suites are jointly unsatisfiable with the contracted uncommitted close state; full rollback restored the exact start revision byte-identical; selected effort not implemented"
   status: completed-unconditional-fail
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17

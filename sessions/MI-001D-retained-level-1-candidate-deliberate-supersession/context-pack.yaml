@@ -1,4 +1,6 @@
 contract:
+  queue_position: 14
+  queue_summary: "MI-001D — complete; unconditional PASS; deliberate 1.0.1 supersession verified without invocation or recovery claim"
   status: authorized-not-started
   authored_on: 2026-07-15
   authority:

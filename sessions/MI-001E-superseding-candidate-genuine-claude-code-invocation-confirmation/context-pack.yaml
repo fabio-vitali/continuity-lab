@@ -1,4 +1,6 @@
 contract:
+  queue_position: 15
+  queue_summary: "MI-001E — complete; unconditional FAIL; Scenario B produced no normal result and exact Session A start UTC is absent; active 1.0.1 restored"
   status: authorized-not-started
   authored_on: 2026-07-15
   authority:

@@ -1,4 +1,6 @@
 contract:
+  queue_position: 25
+  queue_summary: "SE-001-R1 — executed 2026-07-17; unconditional FAIL on the Level 4 suite precondition (21/23 at the published start revision; publication-dependent HEAD-pinning); no Nestfolio mutation; selected effort not implemented"
   status: completed-unconditional-fail
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17

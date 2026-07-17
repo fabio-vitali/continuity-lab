@@ -1,4 +1,6 @@
 contract:
+  queue_position: 8
+  queue_summary: "PX-001 — complete; PASS; G4 valid"
   status: authorized
   authored_on: 2026-07-14
   authority:

@@ -1,4 +1,6 @@
 contract:
+  queue_position: 17
+  queue_summary: "MI-002 — original execution complete; unconditional PASS at its exact execution condition; publication-dependent C7 reproducibility corrected by R2 candidate"
   status: complete
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15

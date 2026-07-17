@@ -1,4 +1,6 @@
 contract:
+  queue_position: 11
+  queue_summary: "MI-001A — complete; unconditional FAIL; retained-candidate identity drift identified"
   status: authorized-not-started
   authored_on: 2026-07-14
   authority:

@@ -13,22 +13,34 @@ Implementation proceeds only through explicitly authorized bounded slices with r
 
 ## Completed implementation and validation slices
 
-- **VS-001 — Resumable Agent Work Session** — historical **FAIL**; repository mechanics remain valid.
-- **VS-001A — Interactive Claude Code Session Confirmation** — **PASS**; G6 remains passed on combined evidence.
-- **MI-001 — Procedure-First Adoption** — **UNCONDITIONAL FAIL**. The Level 1 candidate and deterministic verification were produced, but the required genuine executor scenarios were unavailable. C2, C4, C5, C6, and C7 remain preserved factually.
-- **MI-001A — Genuine Claude Code Invocation Confirmation** — **UNCONDITIONAL FAIL**. The committed candidate omitted the intended modified `SKILL.md`; the boundary failed closed before delegation, `/backlog-next` was not invoked, and Scenario B was not executed.
-- **MI-001B — Retained Level 1 Candidate Identity Restoration** — **UNCONDITIONAL FAIL**. The only supplied archive was a continuity-lab source archive containing 0 of 15 required MI-001 Nestfolio manifest entries and no `SKILL.md`; provenance failed before extraction or installation and Nestfolio remained unchanged.
-- **MI-001C — Original MI-001 Output Artifact Evidence Recovery** — **UNCONDITIONAL FAIL**. No directly verifiable input archive or admissible original output was found; the only Git ZIP was an unrelated fixture, a post-start zero-byte output was a non-candidate, no delivery chain/delta/Skill identity could be proven, and Nestfolio remained unchanged.
-- **MI-001D — Retained Level 1 Candidate Deliberate Supersession** — **UNCONDITIONAL PASS**. One newly authored active 1.0.1 candidate verifies 19/19 assets, diagnostics, tests, mandatory failures, Level 2–6 absence, isolated disable/re-enable, and byte-exact rollback without invoking any Skill or claiming recovery of MI-001 output.
-- **MI-001E — Superseding Candidate Genuine Claude Code Invocation Confirmation** — **UNCONDITIONAL FAIL**. Scenario A proved the active Level 1 boundary and normal genuine Skill result. Scenario B genuinely invoked the Skill directly after disable, but current clean-tree preflight returned no normal result; exact Session A start UTC is also absent. Active 1.0.1 and all protected bytes were restored.
-- **MI-001E-R1 — Superseding Candidate Genuine Claude Code Invocation Confirmation Correction** — **UNCONDITIONAL PASS**. Two fresh genuine Sessions have exact process intervals and normal active and direct-disabled results under the one-path containment. Active 1.0.1, protected bytes, and index metadata were restored exactly.
-- **MI-002 — Reusable Pack Composition** — original execution **UNCONDITIONAL PASS** at its exact condition; MI-002-R2 corrects only the later publication-dependent C7 fixture provenance and does not re-grade the original result.
-- **MI-002-R1 — Reusable Pack Composition Publication-Dependent C7 Correction** — **UNCONDITIONAL FAIL**. Repository gates passed, but the required canonical read order was not followed. Execution stopped before pre-edit reproduction and before any Nestfolio mutation; that sole historical result remains immutable.
-- **MI-002-R2 — Reusable Pack Composition Publication-Dependent C7 Correction Retry** — **UNCONDITIONAL PASS**. Exact 22/23 and the sole typed diagnostic were reproduced; immutable predecessor binding plus pre-write identity checks restored 23/23 with all bounded validation and preservation requirements passing.
-- **MI-003 — Bounded Local Work and Scope** — **UNCONDITIONAL FAIL**. Exact repository and contract-identity gates passed, but the Context Pack was read before canonical Program State. Execution stopped before Nestfolio content read or mutation; candidate derivation, selection, Level 3 creation, tests, scenarios, rebuilds, and rollback were not executed.
-- **MI-003-R1 — Bounded Local Work and Scope Canonical Read-Order Correction Retry** — **UNCONDITIONAL FAIL**. Program State was read first and alone, but the sixth canonical read returned a truncated representation of the Migration Plan. C1 failed with `CANONICAL_READ_PARTIAL`; execution stopped before Nestfolio content read or mutation.
-- **MI-003-R2 — Bounded Local Work and Scope Segmented Canonical Complete-Read Correction Retry** — **UNCONDITIONAL PASS**. Executed directly by Claude Code on 2026-07-16 under the amended contract; 507 logical-path sessions closed in exact contract order, the deterministic candidate projection rebuilt byte-identically, one explicit human selection matched exactly one eligible candidate, and exactly the twenty-two permitted Level 3 paths were created and published at Nestfolio revision `b9d7264082322e09cfd233819b79f128ef912e31`. The selected effort was NOT executed.
-- **MI-004 — Authorized Context Introduction** — **UNCONDITIONAL PASS**. Executed directly by Claude Code on 2026-07-16 under the published contract at continuity-lab `757112e7060252eccafe40f9178771b0adc67d17`; 49 canonical logical-path sessions closed in exact contract order, the explicit DR-0011 formation pipeline produced Context Pack `nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap` version 1 validated 18/18 and explicitly human-authorized, and exactly the twenty-two permitted Level 4 paths were created and published at Nestfolio revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`. The selected effort was NOT implemented.
+This list is regenerated by `scripts/generate-program-indices.mjs` from the
+`queue_summary` fields in `sessions/*/context-pack.yaml` (DR-0025); do not
+edit it by hand. Full detail lives in each iteration's canonical report.
+
+<!-- generated:implementation-slices:begin -->
+- VS-001 — complete; historical FAIL preserved
+- VS-001A — complete; PASS; G6 valid
+- MI-001 — complete; unconditional FAIL; C2/C4/C5/C6/C7 preserved factually
+- MI-001A — complete; unconditional FAIL; retained-candidate identity drift identified
+- MI-001B — complete; unconditional FAIL; original-output provenance failed before extraction or installation; Nestfolio unchanged
+- MI-001C — complete; unconditional FAIL; no directly verified input archive, admissible output, or delivery chain; Nestfolio unchanged
+- MI-001D — complete; unconditional PASS; deliberate 1.0.1 supersession verified without invocation or recovery claim
+- MI-001E — complete; unconditional FAIL; Scenario B produced no normal result and exact Session A start UTC is absent; active 1.0.1 restored
+- MI-001E-R1 — complete; unconditional PASS; exact-timed active and direct-disabled genuine results; exact restoration
+- MI-002 — original execution complete; unconditional PASS at its exact execution condition; publication-dependent C7 reproducibility corrected by R2 candidate
+- MI-002-R1 — complete; unconditional FAIL; canonical read order not followed; Nestfolio unchanged
+- MI-002-R2 — published; unconditional PASS; exact eight-path Nestfolio correction and eleven-path continuity-lab closure
+- MI-003 — complete; unconditional FAIL caused by canonical read order; no Nestfolio content read or changed; no candidate or selection; immutable nine-path closure published
+- MI-003-R1 — complete; unconditional FAIL caused by a partial sixth canonical read; no Nestfolio content read or changed
+- MI-003-R2 — complete; unconditional PASS; twenty-two Level 3 additions published at Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31`; selected effort not implemented
+- MI-004 — complete; unconditional PASS; twenty-two Level 4 additions published at Nestfolio `a760d6f41ff14491d5b008a7f13234ba0221bcec`; selected effort not implemented
+- SE-001 — published at continuity-lab `4b2158701dc7de9b7596f4ea1d9879bd45da6407`; never executed; no execution result; superseded by SE-001-R1 under DR-0024 with all artifacts byte-preserved
+- SE-001-R1 — executed 2026-07-17; unconditional FAIL on the Level 4 suite precondition (21/23 at the published start revision; publication-dependent HEAD-pinning); no Nestfolio mutation; selected effort not implemented
+- MI-004-R1 — complete; unconditional PASS; two-path bound-revision containment correction published at Nestfolio `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`; the published Level 4 suite verifies truthfully at the published revision and at any later revision containing the bound revision of record
+- SE-001-R2 — executed 2026-07-17; unconditional FAIL on the post-implementation validation; the working-tree purity guards of the published suites are jointly unsatisfiable with the contracted uncommitted close state; full rollback restored the exact start revision byte-identical; selected effort not implemented
+- SE-001-R3 — executed 2026-07-17; unconditional PASS with the isolated committed-copy validation correction; selected effort implemented as a 26-path uncommitted delta at Nestfolio `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (manifest `8affe6ca94271d646217d03e1931736da73188c4766df80a2d484ed2069f450a`); publication separately authorized
+- SE-001-PUB — published 2026-07-17; the SE-001 selected effort implementation and evidence committed and pushed at exact Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded
+<!-- generated:implementation-slices:end -->
 
 Canonical reports:
 

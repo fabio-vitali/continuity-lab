@@ -1,4 +1,6 @@
 contract:
+  queue_position: 26
+  queue_summary: "MI-004-R1 — complete; unconditional PASS; two-path bound-revision containment correction published at Nestfolio `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`; the published Level 4 suite verifies truthfully at the published revision and at any later revision containing the bound revision of record"
   status: complete
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17

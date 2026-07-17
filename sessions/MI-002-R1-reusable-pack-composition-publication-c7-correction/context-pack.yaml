@@ -1,4 +1,6 @@
 contract:
+  queue_position: 18
+  queue_summary: "MI-002-R1 — complete; unconditional FAIL; canonical read order not followed; Nestfolio unchanged"
   status: authorized-not-started
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15

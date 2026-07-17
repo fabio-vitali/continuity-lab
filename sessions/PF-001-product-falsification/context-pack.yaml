@@ -1,3 +1,7 @@
+contract:
+  queue_position: 1
+  queue_summary: "PF-001 — complete"
+
 iteration:
   id: PF-001
   type: product-falsification

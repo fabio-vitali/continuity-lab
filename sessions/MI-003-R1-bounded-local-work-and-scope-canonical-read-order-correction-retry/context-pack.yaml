@@ -1,4 +1,6 @@
 contract:
+  queue_position: 21
+  queue_summary: "MI-003-R1 — complete; unconditional FAIL caused by a partial sixth canonical read; no Nestfolio content read or changed"
   status: completed-unconditional-fail
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15

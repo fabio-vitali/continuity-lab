@@ -1,3 +1,7 @@
+contract:
+  queue_position: 5
+  queue_summary: "TA-002 — complete; G3 passed"
+
 iteration:
   id: TA-002
   type: target-architecture-revision

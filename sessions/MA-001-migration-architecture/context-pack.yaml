@@ -1,4 +1,6 @@
 contract:
+  queue_position: 9
+  queue_summary: "MA-001 — complete; PASS; G5 valid"
   status: authorized
   authored_on: 2026-07-14
   authority:

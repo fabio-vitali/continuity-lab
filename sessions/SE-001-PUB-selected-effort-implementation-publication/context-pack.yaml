@@ -1,0 +1,23 @@
+contract:
+  queue_position: 29
+  queue_summary: "SE-001-PUB — published 2026-07-17; the SE-001 selected effort implementation and evidence committed and pushed at exact Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded"
+  provenance_note: >
+    Retroactive representation directory authored by the DR-0025 backfill on
+    2026-07-17. The SE-001 selected effort implementation and evidence
+    publication (exact Nestfolio revision
+    363283bcc97b1e04710db0e7f759ffffddb18b69, sole parent
+    89ef74ee32740d30b2ddc7f0eb69f24a1374eea6, exact commit subject
+    "Publish SE-001 selected effort implementation and evidence") was
+    executed on 2026-07-17 by a control session that created no session
+    directory of its own; its canonical record lives in
+    docs/90-state/program-state.md and in
+    sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md.
+    This directory exists so that every queue-visible program event
+    corresponds to exactly one sessions/ directory (DR-0025); it records no
+    new facts and claims no completion, Run, Assurance, or Level 5-6
+    authority.
+
+iteration:
+  id: SE-001-PUB
+  name: SE-001 Selected Effort Implementation and Evidence Publication
+  type: publication-closure

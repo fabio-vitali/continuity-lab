@@ -1,4 +1,6 @@
 contract:
+  queue_position: 10
+  queue_summary: "MI-001 — complete; unconditional FAIL; C2/C4/C5/C6/C7 preserved factually"
   status: authorized-not-started
   authored_on: 2026-07-14
   authority:

@@ -1,3 +1,7 @@
+contract:
+  queue_position: 4
+  queue_summary: "PI-001 — complete"
+
 iteration:
   id: PI-001
   type: product-intent-realignment

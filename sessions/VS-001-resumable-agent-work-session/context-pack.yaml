@@ -1,3 +1,7 @@
+contract:
+  queue_position: 6
+  queue_summary: "VS-001 — complete; historical FAIL preserved"
+
 iteration:
   id: VS-001
   name: Resumable Agent Work Session

@@ -1,4 +1,6 @@
 contract:
+  queue_position: 13
+  queue_summary: "MI-001C — complete; unconditional FAIL; no directly verified input archive, admissible output, or delivery chain; Nestfolio unchanged"
   status: authorized-not-started
   authored_on: 2026-07-15
   authority:

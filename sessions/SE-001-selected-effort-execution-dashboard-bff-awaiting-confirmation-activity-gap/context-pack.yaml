@@ -1,4 +1,6 @@
 contract:
+  queue_position: 24
+  queue_summary: "SE-001 — published at continuity-lab `4b2158701dc7de9b7596f4ea1d9879bd45da6407`; never executed; no execution result; superseded by SE-001-R1 under DR-0024 with all artifacts byte-preserved"
   status: reviewed-publication-candidate
   authored_on: 2026-07-16
   reviewed_on: 2026-07-16

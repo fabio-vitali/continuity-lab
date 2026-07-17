@@ -1,4 +1,6 @@
 contract:
+  queue_position: 16
+  queue_summary: "MI-001E-R1 — complete; unconditional PASS; exact-timed active and direct-disabled genuine results; exact restoration"
   status: authorized-not-started
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15

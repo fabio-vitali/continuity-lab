@@ -1,3 +1,7 @@
+contract:
+  queue_position: 7
+  queue_summary: "VS-001A — complete; PASS; G6 valid"
+
 iteration:
   id: VS-001A
   name: Interactive Claude Code Session Confirmation

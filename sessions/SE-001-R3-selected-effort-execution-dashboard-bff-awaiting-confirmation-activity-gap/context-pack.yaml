@@ -1,4 +1,6 @@
 contract:
+  queue_position: 28
+  queue_summary: "SE-001-R3 — executed 2026-07-17; unconditional PASS with the isolated committed-copy validation correction; selected effort implemented as a 26-path uncommitted delta at Nestfolio `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (manifest `8affe6ca94271d646217d03e1931736da73188c4766df80a2d484ed2069f450a`); publication separately authorized"
   status: completed-unconditional-pass
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17

@@ -1,3 +1,7 @@
+contract:
+  queue_position: 3
+  queue_summary: "TA-001 — historical; superseded as active baseline"
+
 iteration:
   id: TA-001
   type: target-architecture

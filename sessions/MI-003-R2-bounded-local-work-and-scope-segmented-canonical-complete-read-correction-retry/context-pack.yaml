@@ -1,4 +1,6 @@
 contract:
+  queue_position: 22
+  queue_summary: "MI-003-R2 — complete; unconditional PASS; twenty-two Level 3 additions published at Nestfolio `b9d7264082322e09cfd233819b79f128ef912e31`; selected effort not implemented"
   status: completed-unconditional-pass
   authored_on: 2026-07-15
   reviewed_on: 2026-07-15
