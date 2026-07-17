@@ -1,0 +1,16 @@
+A docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md
+A sessions/MI-004-R1-level-4-suite-revision-binding-correction/execution-changed-files.txt
+M CONTINUITY-NEXT-STEPS.md
+M README.md
+M docs/70-implementation/README.md
+M docs/90-state/artifact-index.md
+M docs/90-state/program-state.md
+M sessions/MI-004-R1-level-4-suite-revision-binding-correction/context-pack.yaml
+M sessions/MI-004-R1-level-4-suite-revision-binding-correction/session-handoff.md
+
+Nestfolio correction (published separately at
+89ef74ee32740d30b2ddc7f0eb69f24a1374eea6, subject "Correct MI-004 Level 4
+suite revision binding", sole parent
+a760d6f41ff14491d5b008a7f13234ba0221bcec):
+M continuity/level-4/bin/continuity-context.mjs
+M tests/continuity-level-4.test.mjs

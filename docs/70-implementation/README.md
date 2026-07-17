@@ -155,3 +155,27 @@ remains immutable, correct history. Report:
 The next valid program operation is one bounded DR-0024 correction
 contract for the publication-dependent Level 4 suite defect; MI-005
 through MI-007 and broader work remain blocked.
+
+**MI-004-R1 — Level 4 Publication-Dependent Suite Revision-Binding
+Correction** was authored, published at continuity-lab
+`dfaa906f375735f3458d271e723165a744c5b8a4`, and executed in the same
+session on 2026-07-17 under DR-0024 aggregated phases, closing with
+**UNCONDITIONAL PASS**. Exactly two Nestfolio paths changed:
+`formCandidate` stage 2 now requires bound-revision containment
+(ancestor-or-equal) instead of HEAD equality with the same
+`STALE_CONTEXT_DEPENDENCY` diagnostic and a byte-identical recorded stage
+result, and the suite derives `REV` from the committed
+`context-recipe.json` `bound_inputs.repository_revision`. Pre-edit
+reproduction (21/23, sole causes S1 and F3), interim uncommitted check
+(22/23, sole failure S10), and full validation at the corrected committed
+revision (Level 4 23/23, Level 3 23/23, Level 2 23/23, retained Level 1
+14/14, backlog-next 68/68, stale-check clean, byte-identical adapter view,
+all seven published artifact digests exact, two-path diff, sole parent
+`a760d6f4…`) all matched the contract exactly. The correction is published
+at exact Nestfolio revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`.
+MI-004's recorded 23/23 at its original execution condition and the
+SE-001-R1 UNCONDITIONAL FAIL remain separate immutable results. Report:
+`mi-004-r1-level-4-suite-revision-binding-correction.md`. The next valid
+program operation is authoring, reviewing, and publishing SE-001-R2
+against the corrected revision; MI-005 through MI-007 and broader work
+remain blocked.

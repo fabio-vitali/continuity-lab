@@ -1,50 +1,52 @@
-# Continuity — Level 4 Suite Correction Handoff
+# Continuity — SE-001-R2 Re-Contracting Handoff
 
 ## Current state
 
-- **SE-001-R1 — Selected Effort Execution** executed on 2026-07-17 under a
-  fresh instruction naming the exact published contract revision
-  `6db0c0e4f876c11e1942e42cad821c6da0157796` and closed with
-  **UNCONDITIONAL FAIL**: the required precondition "Level 4 tests return
-  23/23 before mutation" returned 21/23 at the exact published Nestfolio
-  start revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`.
-- Sole root cause (publication-dependent, structural): the published
-  Level 4 suite hard-codes
-  `REV = 'b9d7264082322e09cfd233819b79f128ef912e31'` and
-  `formCandidate` requires `git rev-parse HEAD` to equal it, so the suite
-  self-invalidates once the MI-004 delta itself is committed. `S1` blocks
-  with `STALE_CONTEXT_DEPENDENCY`; the `F3` fixture cascades to the same
-  diagnostic instead of `CONTEXT_CONTRADICTION_UNRESOLVED`.
-- Execution blocked fail-closed BEFORE any Nestfolio mutation. Session
-  gates, the fail-closed digest-matched context delivery verification
-  (pack `e58c9bc1…`, validation 18/18, authorization `authorized`, adapter
-  view `9062458c…` rebuilt byte-identically), the frozen writable boundary
-  (`se001-writable-boundary@1`, three byte-identical rebuilds,
-  `b186ebb1…`), and the other four suites (Level 3 23/23, Level 2 23/23,
-  retained Level 1 14/14, backlog-next 68/68) all passed first. Nestfolio
-  remains byte-identical and clean at the start revision; the fifteen
-  evidence paths were correctly not created; the selected effort remains
-  NOT implemented. Report:
-  `docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
+- **MI-004-R1 — Level 4 Publication-Dependent Suite Revision-Binding
+  Correction** was authored, published at continuity-lab
+  `dfaa906f375735f3458d271e723165a744c5b8a4`, and executed in the same
+  session on 2026-07-17 under DR-0024 aggregated phases, closing with
+  **UNCONDITIONAL PASS**. The correction is published at exact Nestfolio
+  revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (sole parent
+  `a760d6f41ff14491d5b008a7f13234ba0221bcec`, exactly two changed paths:
+  the Level 4 tool and the Level 4 suite).
+- The published Level 4 suite now verifies truthfully: `formCandidate`
+  stage 2 requires the bound revision to be contained in the current
+  HEAD's ancestry (ancestor-or-equal) instead of equal to HEAD, and the
+  suite derives `REV` from the committed `context-recipe.json`
+  (`bound_inputs.repository_revision` =
+  `b9d7264082322e09cfd233819b79f128ef912e31`). At the corrected revision:
+  Level 4 23/23, Level 3 23/23, Level 2 23/23, retained Level 1 14/14,
+  backlog-next 68/68 without any Skill; stale-check clean; adapter view
+  rebuilt byte-identically (`9062458c…`); all seven published Level 4
+  artifact digests exact. Report:
+  `docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md`.
 - MI-002-R2 `UNCONDITIONAL PASS`, MI-003 `UNCONDITIONAL FAIL`, MI-003-R1
-  `UNCONDITIONAL FAIL`, MI-003-R2 `UNCONDITIONAL PASS`, and MI-004
-  `UNCONDITIONAL PASS` remain separate immutable results; SE-001 remains
-  published-superseded with no execution result; SE-001-R1 is now one
-  immutable UNCONDITIONAL FAIL. MI-004 is not re-graded by this failure.
-- The authorized Context Pack version 1 and the active Level 3 route are
-  unchanged and remain valid Level 4 context state. MI-005 through MI-007
-  and broader work remain blocked.
+  `UNCONDITIONAL FAIL`, MI-003-R2 `UNCONDITIONAL PASS`, MI-004
+  `UNCONDITIONAL PASS`, and SE-001-R1 `UNCONDITIONAL FAIL` remain separate
+  immutable results; MI-004's recorded 23/23 at its original execution
+  condition is not repaired, relabeled, or reinterpreted. SE-001 remains
+  published-superseded with no execution result.
+- The authorized Context Pack
+  `nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap`
+  version 1 remains bounded Level 4 context state with unchanged digests
+  (pack `e58c9bc1…`, authorization record `a23ec489…`, adapter view
+  `9062458c…`); the Level 3 route remains active; the selected effort
+  remains NOT implemented. MI-005 through MI-007 and broader work remain
+  blocked.
 
 ## Next valid operation
 
-Author, review, and publish under DR-0024 one bounded correction contract
-(MI-002-R2 precedent for a publication-dependent defect) that makes the
-published Level 4 suite verify truthfully at the published revision:
-rebind the `S1` formation check and the failure-scenario fixtures to the
-committed bound revision recorded by the artifacts instead of the moving
-HEAD, publish the corrected suite as a new Nestfolio revision, and record
-suite results 23/23 at that revision. The selected-effort execution is
-then re-contracted against the new published revision. The ready-to-run
+Author, review, and publish under DR-0024 the SE-001-R2 contract
+re-contracting the selected-effort execution
+`dashboard-bff-awaiting-confirmation-activity-gap` against corrected
+Nestfolio revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, carrying
+the SE-001 product bindings forward unchanged: exclusive consumption
+through the digest-matched adapter view of Context Pack version 1, the
+deterministic frozen writable boundary (`se001-writable-boundary@1`), the
+fail-before/pass-after gap proof, the fifteen create-exactly-on-PASS
+evidence paths, and the full suite gates. Per DR-0024 the execution may
+follow in the same session when context allows. The ready-to-run
 authoring prompt is saved at
-`~/continuity-handoffs/l4-suite-correction-authoring-prompt.txt`. No other
+`~/continuity-handoffs/se-001-r2-contract-authoring-prompt.txt`. No other
 program operation is valid.

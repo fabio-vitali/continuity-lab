@@ -1,6 +1,6 @@
 ---
 artifact_id: SESSION-HANDOFF-MI-004-R1
-status: provisional
+status: validated
 owner: session
 last_updated: 2026-07-17
 supersedes: []
@@ -58,10 +58,32 @@ blocked.
 The exact authoring delta is recorded in `changed-files.txt` beside this
 file.
 
+## Execution closure (2026-07-17, same session)
+
+MI-004-R1 was executed in the same session immediately after the contract
+publication at continuity-lab `dfaa906f375735f3458d271e723165a744c5b8a4`
+(DR-0024 aggregated phases) and closed with **UNCONDITIONAL PASS**. The
+contracted sequence matched exactly: pre-edit reproduction 21/23 with sole
+causes S1 and F3; two bounded edits only; interim uncommitted check 22/23
+with sole failure S10; correction commit with the exact subject "Correct
+MI-004 Level 4 suite revision binding"; full validation at the corrected
+committed revision (Level 4 23/23, Level 3 23/23, Level 2 23/23, retained
+Level 1 14/14, backlog-next 68/68 without any Skill; stale-check clean;
+adapter view rebuilt byte-identically `9062458c…`; all seven published
+Level 4 artifact digests exact; two-path diff; sole parent `a760d6f4…`);
+push only after all validations passed. Published Nestfolio HEAD:
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`. prompt.md was not consumed.
+External evidence: `~/continuity-recovery/mi-004-r1/`. Canonical report:
+`docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md`.
+The exact continuity-lab closure delta is recorded in
+`execution-changed-files.txt` beside this file.
+
 ## Next valid program operation
 
-Execute MI-004-R1 under this contract (same session per DR-0024, or a later
-fresh session via prompt.md). On PASS, the next valid program operation
-becomes authoring, reviewing, and publishing SE-001-R2 against the
-corrected published Nestfolio revision, carrying the SE-001 product
-bindings forward.
+Author, review, and publish under DR-0024 the SE-001-R2 contract
+re-contracting the selected-effort execution
+dashboard-bff-awaiting-confirmation-activity-gap against corrected
+Nestfolio revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, carrying
+the SE-001 product bindings forward unchanged. Per DR-0024 the execution
+may follow in the same session when context allows. MI-005 remains
+blocked.

@@ -121,9 +121,23 @@ Nestfolio mutation — session gates, the digest-matched context delivery
 verification, the frozen writable boundary, and the other four suites all
 passed first — so Nestfolio remains byte-identical at the start revision
 and the selected effort remains NOT implemented. MI-004's recorded 23/23 at
-its original execution condition remains immutable history. The next valid
-program operation is one bounded correction contract for the
-publication-dependent Level 4 suite defect.
+its original execution condition remains immutable history.
+
+**MI-004-R1 — Level 4 Publication-Dependent Suite Revision-Binding
+Correction** was authored, published, and executed in one session on
+2026-07-17 under DR-0024 aggregated phases and closed with **UNCONDITIONAL
+PASS**. The published Level 4 suite now verifies truthfully at the
+published revision and at any later revision containing the bound revision
+of record: `formCandidate` stage 2 requires bound-revision containment
+(ancestor-or-equal) instead of HEAD equality with the same
+`STALE_CONTEXT_DEPENDENCY` diagnostic, and the suite derives `REV` from the
+committed `context-recipe.json`. The correction is published at exact
+Nestfolio revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (sole parent
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`, exactly two changed paths, no
+artifact or evidence byte touched); at that revision Level 4 returns 23/23,
+Level 3 23/23, Level 2 23/23, retained Level 1 14/14, and backlog-next
+68/68 without any Skill. The next valid program operation is re-contracting
+the selected-effort execution as SE-001-R2 against that revision.
 
 ## Canonical starting points
 
@@ -196,10 +210,13 @@ publication-dependent Level 4 suite defect.
 - SE-001 contract-authoring closure and publication handoff: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
 - SE-001 contract-authoring manifest: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
 - Development-process decision: `decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md`
-- SE-001-R1 active execution contract: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001-R1 completed execution contract: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
 - SE-001-R1 preserved future execution prompt: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
 - SE-001-R1 authoring and publication handoff: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
 - SE-001-R1 contract-authoring manifest: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
+- SE-001-R1 report: `docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`
+- MI-004-R1 report: `docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md`
+- MI-004-R1 completed contract: `sessions/MI-004-R1-level-4-suite-revision-binding-correction/context-pack.yaml`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 

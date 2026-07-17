@@ -1,12 +1,14 @@
 contract:
-  status: authorized
+  status: complete
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17
   finalized_on: 2026-07-17
+  executed_on: 2026-07-17
   process_regime: DR-0024 lightened development process
   contract_authorized: true
   execution_authorized: true
-  result: pending
+  execution_started: true
+  result: unconditional-pass
   authority:
     - docs/90-state/program-state.md
     - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
@@ -29,7 +31,7 @@ iteration:
   id: MI-004-R1
   name: Level 4 Publication-Dependent Suite Revision-Binding Correction
   type: bounded-publication-dependent-suite-correction
-  status: authorized
+  status: complete
   correction_only: true
   predecessor_results: >
     MI-004 UNCONDITIONAL PASS (immutable, recorded 23/23 at its original
@@ -351,3 +353,78 @@ completion_criteria:
     manifests
   - end-of-session handoff per continuity-workspace CLAUDE.md naming one
     recommended next operation
+
+execution_closure:
+  status: complete
+  result: MI-004-R1 UNCONDITIONAL PASS
+  executed_on: 2026-07-17
+  same_session_as_authoring: true
+  contract_publication_revision: dfaa906f375735f3458d271e723165a744c5b8a4
+  valid_execution_start: true
+  repository_gates:
+    continuity_workspace: 384d4b7d2deb0bd78cc74557340ab07f46790f4a
+    continuity_lab: dfaa906f375735f3458d271e723165a744c5b8a4
+    nestfolio_start: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    branches_clean_at_start: true
+  pre_edit_reproduction:
+    command: node --test tests/continuity-level-4.test.mjs
+    tests: 23
+    pass: 21
+    fail: 2
+    failures: exactly S1 (STALE_CONTEXT_DEPENDENCY at stage 2) and F3
+      (observed STALE_CONTEXT_DEPENDENCY instead of
+      CONTEXT_CONTRADICTION_UNRESOLVED)
+  correction:
+    tool_stage_2: bound-revision containment (commit object exists and
+      merge-base --is-ancestor) replaces HEAD equality; same
+      STALE_CONTEXT_DEPENDENCY diagnostic; recorded stage result string
+      byte-identical
+    suite_rev: derived from committed context-recipe.json
+      bound_inputs.repository_revision
+      (b9d7264082322e09cfd233819b79f128ef912e31)
+    corrected_paths: 2
+    corrected_tool_sha256: f6e4067330a50e3d53b2281d51a5b224150076ecb0d1564012ff7cebe301d247
+    corrected_suite_sha256: e21bbb7a0f1efc411b64a7ea7d988d1db88b5f4c6df60f0082e0d3c0e3a9a628
+  interim_uncommitted_check:
+    pass: 22
+    fail: 1
+    sole_failure: S10 (truthful report of the two uncommitted tracked
+      modifications)
+  validation_at_corrected_revision:
+    level_4_tests: 23/23 pass
+    level_3_tests: 23/23 pass
+    level_2_tests: 23/23 pass
+    retained_level_1_tests: 14/14 pass
+    backlog_next_tests: 68/68 pass
+    skill_invoked: false
+    stale_check: clean
+    adapter_view_rebuild_sha256: 9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838
+    published_artifact_digests: all seven exact
+    diff_from_start: exactly the two permitted paths
+    sole_parent: a760d6f41ff14491d5b008a7f13234ba0221bcec
+  publication:
+    nestfolio_published_revision: 89ef74ee32740d30b2ddc7f0eb69f24a1374eea6
+    nestfolio_commit_subject: Correct MI-004 Level 4 suite revision binding
+    nestfolio_changed_paths: 2
+    continuity_lab_commit_subject: Close MI-004-R1 Level 4 suite revision-binding correction
+    status: published
+  evidence:
+    external: ~/continuity-recovery/mi-004-r1/ (execution-summary.md,
+      command streams, digests)
+    canonical_report: docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md
+    nestfolio_evidence_paths_created: 0
+  preservation:
+    published_level_4_artifacts: exact (seven digests verified)
+    levels_1_to_3: exact
+    mi_evidence: exact
+    backlog_source: exact
+    recorded_results: MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL,
+      MI-003-R2 PASS, MI-004 PASS, SE-001-R1 FAIL all separate and immutable
+    selected_effort_implemented: false
+    level_5_6_state_created: false
+  next_iteration:
+    selected: SE-001-R2 — Selected Effort Execution re-contracting against
+      89ef74ee32740d30b2ddc7f0eb69f24a1374eea6
+    status: selected-contract-required
+    authorized: false
+    started: false
