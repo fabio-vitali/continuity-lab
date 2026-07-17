@@ -1,0 +1,662 @@
+contract:
+  status: contracted-published
+  authored_on: 2026-07-17
+  reviewed_on: 2026-07-17
+  finalized_on: 2026-07-17
+  published_on: 2026-07-17
+  process_regime: DR-0024 lightened development process
+  contract_authorized: true
+  publication_authorized: true
+  execution_authorized: false
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - docs/30-target-architecture/target-architecture.md
+    - docs/20-current-system/current-runtime-map.md
+    - docs/70-implementation/vs-001-resumable-agent-work-session.md
+    - docs/70-implementation/vs-001a-claude-code-session-confirmation.md
+    - docs/70-implementation/mi-004-authorized-context-introduction.md
+    - docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md
+    - sessions/SE-001-R3-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml
+    - decisions/DR-0014-repository-local-canonical-state.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
+    - decisions/DR-0025-generated-program-indices-and-current-phase-compaction.md
+  authorization_rule: >
+    This contract is authored, reviewed, and published in one development
+    session under DR-0024. Publication requires the human program owner's
+    explicit approval of the reviewed contract. Execution is NOT authorized
+    by the authoring session: it requires either a later fresh session
+    launched under prompt.md beside this file with the exact published
+    contract revision resolved, or an explicit same-session extension of
+    authorization by the human program owner after publication. The
+    execution additionally requires the human program owner to launch the
+    two genuine Claude Code validation Sessions defined under
+    two_session_validation_scenario; the orchestrating executor cannot
+    substitute for them. Nothing here authorizes MI-006, MI-007, current
+    journal retirement, or broader work.
+
+iteration:
+  id: MI-005
+  name: Resumable Run Cutover
+  type: bounded-level-5-resumable-run-cutover
+  px_level: 5
+  status: contracted-published
+  predecessor_results:
+    - MI-002-R2 UNCONDITIONAL PASS
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+    - MI-003-R2 UNCONDITIONAL PASS
+    - MI-004 UNCONDITIONAL PASS
+    - SE-001-R1 UNCONDITIONAL FAIL
+    - MI-004-R1 UNCONDITIONAL PASS
+    - SE-001-R2 UNCONDITIONAL FAIL
+    - SE-001-R3 UNCONDITIONAL PASS
+    - SE-001-PUB published repository state at Nestfolio 363283bcc97b1e04710db0e7f759ffffddb18b69 (no execution result)
+  bound_selected_effort:
+    source_path: docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    source_identity: dashboard-bff-awaiting-confirmation-activity-gap
+    source_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    source_sha256: b656733991c96c4275d11e9a9f2bff7f5ac72cdd298cbc68a4b94b6799dc742d
+    level_3_publication_revision: b9d7264082322e09cfd233819b79f128ef912e31
+    level_4_publication_revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    level_4_correction_revision: 89ef74ee32740d30b2ddc7f0eb69f24a1374eea6
+    implementation_publication_revision: 363283bcc97b1e04710db0e7f759ffffddb18b69
+    role_in_mi_005: >
+      The selected effort is the one target-routed Work effort of the
+      program. Its Level 3 route remains active and its implementation is
+      published (SE-001-R3/SE-001-PUB) without any completion, Run, or
+      Assurance state. MI-005 creates the first target Run FOR this effort's
+      target route. The Run's contracted work is the bounded resumable-run
+      continuity validation itself; it never re-implements, mutates, or
+      completes the effort, and never changes any backlog, Level 3, or
+      Level 4 byte.
+  bound_context_pack:
+    name: nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap
+    version: 1
+    context_pack_sha256: e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1
+    formation_trace_sha256: 8c05453897a28efc0abc43c143c4657175c7bfed167cf774d783b409b6c94911
+    authorization_record_sha256: a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc
+    adapter_view_sha256: 9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838
+    authorized_by: fabio.vitali (human program owner)
+    authorized_at: 2026-07-16T18:50:36.000Z
+    binding_rule: >
+      Per the migration plan, the target Run binds the authorized Level 4
+      Context Pack version 1 and the Level 2 lock exactly, by digest, at Run
+      creation and again at every resume freshness validation. The pack is
+      authorized for exactly this effort, and the MI-005 Run is a Run of
+      exactly this effort's target route, so the authorization scope is
+      respected. MI-005 never forms, refreshes, re-validates, re-authorizes,
+      versions, or edits any Context Pack; a stale, revoked, or
+      digest-mismatched context blocks fail-closed.
+  bound_level_2_lock:
+    packs: nestfolio.level-1@1.0.1 plus continuity.repository-tools@1.0.0
+    procedures: nestfolio.backlog-next@1.0.1 plus continuity.repository-status@1.0.0
+    aggregate_sha256: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+
+objective:
+  primary_question: >
+    Can operational Run authority cut over to the target store without dual
+    Run state — that is, can one new target Run for the program's one
+    target-routed effort be created in the declared DR-0014 target
+    operational store, started by a genuine Claude Code Session from an
+    adapter-produced execution view, deliberately interrupted at a verified
+    Checkpoint with a published Handoff, and resumed by a separately
+    launched fresh genuine Claude Code Session from repository-local state
+    alone — with a material keyed effect executed once and deduplicated on
+    replay, single-writer lease protection, freshness validation against the
+    exact bound repository/Context Pack/lock/engine digests, append-only
+    audit, deterministic derived-index rebuild, and machine-captured
+    executor provenance — while every existing current journal Run
+    continues to drain untouched under the current journal's own authority,
+    no Run is ever dual-written or converted between stores, and no
+    Evidence-bound completion, Assurance, or Level 6 authority is created
+    or claimed?
+  completion_boundary: >
+    Implement and validate only the Level 5 resumable-run boundary for one
+    new target Run of the already selected, already implemented effort. Do
+    not re-implement or mutate the effort, its backlog source, or any
+    Level 1-4 artifact. Do not read, write, convert, import, or retire any
+    current journal Run beyond the contracted read-only route check and
+    byte-identity proof. Do not record Work completion, Assurance,
+    Evidence-bound completion, Guard, Waiver, Decision, Learning, or
+    Level 6 state. Do not rerun or rewrite run-vs001 or run-vs001a. Do not
+    use parallel agents for the contracted Run. Do not begin MI-006,
+    MI-007, or broader work.
+
+session_gates:
+  rule: >
+    Per DR-0024, before execution starts: continuity-workspace,
+    continuity-lab, and Nestfolio are on main with clean working trees;
+    continuity-lab HEAD is the exact published revision containing this
+    contract (same-session execution uses the revision just pushed;
+    later-session execution uses the revision named by prompt.md);
+    Nestfolio HEAD is 363283bcc97b1e04710db0e7f759ffffddb18b69, the
+    published SE-001 implementation revision (subject "Publish SE-001
+    selected effort implementation and evidence"). Every published
+    Level 1-4 artifact, every VS-001/VS-001A artifact, and every recorded
+    historical result is a read-only input. A wrong branch, dirty tree, or
+    missing contract stops the session before any Nestfolio mutation. No
+    multi-way alignment gates, remote-ref checks, or byte-level authoring
+    manifests apply.
+
+executor_identity:
+  session_executor: >
+    The MI-005 execution session is conducted directly by Claude Code
+    operating under authorization_rule. It orchestrates preparation,
+    verification, failure scenarios, evidence, and closure with its own
+    tools.
+  sub_agent_rule: >
+    Per DR-0024 the orchestrating executor may use its own sub-agents and
+    tools for mechanical work at its discretion. Delegating contracted work
+    to the product's executor procedures — any Skill, /backlog-next,
+    continuity:invoke — remains prohibited. Running node for tests,
+    validation, the pinned engine's CLI, and the published continuity
+    tooling's own checks is direct work, not delegation.
+  genuine_session_rule: >
+    The two validation Sessions defined under
+    two_session_validation_scenario must be real, separately launched
+    Claude Code processes with hook-recorded provenance (distinct Claude
+    Code session ids, startup_source startup, no transcript resume, exact
+    machine-captured UTC). They are launched by the human program owner in
+    the Nestfolio repository. A sub-agent, background task, simulated
+    process, forged record, or the orchestrating session itself
+    substituting for either Session is UNCONDITIONAL FAIL. Missing
+    machine-captured session timing independently requires FAIL (MI-001E
+    precedent).
+
+target_operational_store:
+  definition_rule: >
+    The MI-005 target operational store is the DR-0014 two-class
+    repository-local store already implemented and validated by
+    VS-001/VS-001A and present unchanged at the bound Nestfolio revision.
+    MI-005 defines its authority for target Runs, pins its implementation
+    by digest, and adds only new records with new identities. This
+    satisfies the migration-plan prerequisite that the target operational
+    store is defined by the MI-005 contract, using the validated mechanics
+    as architectural evidence without rerunning them.
+  durable_class: >
+    Versioned reviewable artifacts under continuity/artifacts/** (work-item
+    references, working sets, scopes, runs, checkpoints, handoffs, context
+    references, pack locks, validation plans/results, engine-internal
+    evidence, observations, lessons). Immutable versions are corrected only
+    through new versions and explicit supersession. MI-005 creates only new
+    files here; every pre-existing file is byte-immutable.
+  operational_class: >
+    The declared inspectable operational state store under .continuity/
+    (runs/<run-id>/ holding the CAS-mutated run head, single-writer lease,
+    and keyed-effects ledger; derived/ holding the rebuildable index and
+    digest-linked execution views; executor-sessions/ holding hook-recorded
+    executor provenance; audit.ndjson as the append-only operation audit
+    ledger). Location, format, and ownership are exactly the
+    VS-001-implemented layout. The store is worktree-local and untracked
+    during execution; the immutable close state of every MI-005 record is
+    committed at publication as the durable export (VS-001A precedent), so
+    backup and export behavior is Git itself.
+  engine_binding: >
+    The store engine is the pinned read-only implementation at
+    runtime/continuity/** (lib, adapters/claude-code including cli.mjs and
+    the SessionStart/SessionEnd hooks, tools, tests) together with the hook
+    registration in .claude/settings.json. Before any mutation the executor
+    records the exact SHA-256 of every engine file and of
+    .claude/settings.json into continuity/level-5/engine-lock.json and
+    verifies them against the bound revision. The engine is never modified;
+    if the pinned engine cannot satisfy a contracted policy without
+    violating this contract's write boundary, execution blocks fail-closed
+    with ENGINE_POLICY_MISMATCH and MI-005 closes UNCONDITIONAL FAIL
+    without repair.
+  level_5_binding_artifact: >
+    continuity/level-5/run-binding.json declares, in canonical JSON: the
+    target Run identity and store paths; the bound effort, Context Pack,
+    Level 2 lock, and repository revision digests; the lease policy; the
+    effect-key policy; the freshness policy; the cutover and drain
+    declaration; the sharing boundary; and the explicit statement that
+    Level 6 guarantees are absent. tests/continuity-level-5.test.mjs
+    validates this binding deterministically against the repository.
+
+lease_policy:
+  - one single-writer lease per Run; acquisition only at start or at resume after freshness validation passes
+  - the lease records holder identity (Continuity session id, Claude Code session id where applicable, process id, host, acquired-at UTC)
+  - a conflicting second live writer is rejected fail-closed with LEASE_CONFLICT; reads are lease-free
+  - the lease is released at deliberate pause, at Run close, and by recovery after unexpected stop
+  - dead-process reclamation is permitted only same-host with the staleness check and the reclamation recorded in the audit ledger
+  - no lease is ever taken on, or copied from, any current journal Run
+
+effect_key_policy:
+  - every material repeatable side effect receives a deterministic effect key before execution
+  - effect lifecycle states are planned, started, completed, failed, compensated, and unknown
+  - a completed keyed effect is replayed as deduplicated without re-execution and without rewriting its record
+  - an unknown effect blocks automatic retry and resume until explicitly reconciled by the human
+  - retry is permitted only for effects classified retryable and only under the same effect key
+  - the sole contracted material effect is key mi005-material-effect creating continuity/dogfood/mi-005-effect.txt with the exact content declared in run-binding.json; effort-implementation effects are prohibited (the effort is already implemented and published)
+
+cutover_and_drain_boundary:
+  new_run_cutover: >
+    The target Run run-mi005 is a new Run with a new target identity,
+    created only in the target operational store. No current journal Run is
+    ever read into, imported, converted, rewritten, relabeled, or
+    re-keyed as target state, and no target state is ever written into the
+    current journal.
+  drain_rule: >
+    The current journal at the Git common directory journal/ path remains
+    the sole operational authority for every Run it already contains
+    (30 run directories at contract time, 29 holding parked awaiting
+    decisions). Those Runs finish or remain parked under the current
+    journal and its own tooling. MI-005 performs zero writes under the
+    journal path; its only reads are the contracted read-only route check
+    and the before/after byte-identity proof over the journal tree.
+    Current-journal retirement is out of MI-005 scope.
+  dual_writer_prohibition: >
+    One effort has at most one active Run across both stores. Before Run
+    creation the executor enumerates the current journal run identities
+    read-only and records that none is an active current Run for the bound
+    effort, and that no other target Run exists. Any conflict blocks
+    fail-closed with DUAL_RUN_ROUTE_CONFLICT before any mutation. The
+    route record is written into run-binding.json and re-verified at
+    resume.
+
+start_resume_adapter_path: >
+  The start/resume path is exactly the validated VS-001A mechanism, reused
+  read-only with new identities: a Claude Code Session launched in
+  Nestfolio with CONTINUITY_ACTION (start or resume), CONTINUITY_RUN_ID,
+  CONTINUITY_SESSION_ID, and for start CONTINUITY_WORKING_SET_ID causes
+  the registered SessionStart hook to invoke the pinned adapter CLI, which
+  produces a digest-linked execution view, verifies its SHA-256, injects
+  it into the session context, and records machine-captured provenance
+  under .continuity/executor-sessions/. Start delivers the Run's exact
+  next action; resume performs freshness validation (repository
+  fingerprint, Context Pack digest, Level 2 lock aggregate, pack-lock and
+  engine asset digests) and acquires the lease before delivering the
+  resume view. Sessions without the Continuity environment leave the
+  lifecycle untouched. The execution views are derived, rebuildable, and
+  carry no authority of their own.
+
+sharing_boundary: >
+  At every durable boundary the active Run is represented by an immutable
+  verified Checkpoint and a published Handoff referencing it, with no
+  transcript dependency: the deliberate interruption of Session 1
+  publishes Handoff plus verified Checkpoint before the Session ends, and
+  the Run close records a final verified Checkpoint. A Checkpoint records
+  at least Run revision and state, repository revision and working-tree
+  fingerprint, completed keyed effects, exact next action, pending
+  decisions and blockers, Context Pack and lock digests, and adapter and
+  session provenance. Only a verified Checkpoint may be used for resume.
+  At publication the complete immutable close state is committed, so the
+  Run history transfers with the repository.
+
+two_session_validation_scenario:
+  phase_0_prepare: >
+    The orchestrating executor verifies all preconditions, writes
+    engine-lock.json and run-binding.json, performs the read-only route
+    check, and prepares the target Run: a read-only target Work reference
+    for the bound effort (exact source revision and digests, per the
+    migration plan's backlog-to-Work-reference transformation, with no
+    status authority over any source), working set ws-mi005, the Scope
+    reference binding the published Level 3 scope digest
+    db7a45278e8f4a270552e3ae1db3695b70e07d1624b27bcdc28f6417883a5ad6, the
+    context reference binding Context Pack version 1 by exact digest, the
+    pack-lock reference, and the Run run-mi005 brought to ready with the
+    contracted bounded step plan and effect classification.
+  phase_1_first_session: >
+    The human program owner launches genuine Claude Code Session 1 in
+    Nestfolio with CONTINUITY_ACTION=start, CONTINUITY_RUN_ID=run-mi005,
+    CONTINUITY_SESSION_ID=session-mi005-1,
+    CONTINUITY_WORKING_SET_ID=ws-mi005. The hook records provenance,
+    digest-matches and injects the start view. Session 1 executes exactly
+    the delivered next actions: performs keyed effect mi005-material-effect
+    once, captures the intermediate Checkpoint and has it verified,
+    publishes the Handoff, deliberately interrupts the Session, and ends.
+    The SessionEnd hook must record the end after the verified Checkpoint
+    and published Handoff.
+  phase_2_fresh_resume: >
+    The human program owner separately launches genuine fresh Claude Code
+    Session 2 in Nestfolio with CONTINUITY_ACTION=resume,
+    CONTINUITY_RUN_ID=run-mi005, CONTINUITY_SESSION_ID=session-mi005-2 —
+    a distinct Claude Code session id with startup_source startup and no
+    transcript dependency. Resume freshness validation passes against the
+    exact bound digests and the lease is acquired. Session 2 replays
+    effect key mi005-material-effect and must observe deduplicated without
+    rewrite, captures the final Checkpoint and has it verified, closes the
+    Run through the engine's internal bounded closure over the contracted
+    run criteria, and ends.
+  phase_3_validate_and_close: >
+    The orchestrating executor verifies every record, ordering proof, and
+    digest; executes the mandatory failure scenarios in isolated fixtures;
+    proves derived-index rebuild and audit prefix preservation; proves
+    current-journal byte-identity; runs every required suite; freezes and
+    verifies the final manifest; and closes MI-005 with the conjunctive
+    verdict.
+  truthful_closure_rule: >
+    Engine-internal Run closure is Level 5 operational Run state only. It
+    is not Evidence-bound Work completion, which remains MI-006 authority.
+    The selected effort's backlog source, Level 3 Work artifacts, and
+    Level 4 artifacts record no status change; no Work Item becomes
+    completed; Level 6 guarantees are explicitly recorded as absent.
+
+write_set_rehearsal: >
+  Before any real-tree mutation, the orchestrating executor rehearses the
+  complete mechanics — preparation, start, effect, checkpoint, handoff,
+  interruption, resume, deduplication, final checkpoint, close, index
+  rebuild — in an isolated temporary copy of Nestfolio outside all three
+  repositories, driving the pinned adapter CLI directly (the rehearsal
+  needs no genuine Sessions; genuine provenance is required only in the
+  real execution). The rehearsal records the exact produced write-set:
+  every created path and every modified path with before/after digests.
+  The write-set is frozen and must satisfy nestfolio_scope exactly; a
+  rehearsal write outside the permitted classes blocks the real execution
+  fail-closed with ENGINE_POLICY_MISMATCH. The real execution must
+  produce exactly the frozen write-set plus the contracted evidence and
+  executor-provenance records; any deviation is MANIFEST_SCOPE_MISMATCH.
+  The copy is removed with absence proof.
+
+required_preconditions:
+  - the session gates in session_gates pass before any Nestfolio mutation
+  - every engine file and .claude/settings.json verify against the recorded engine-lock digests at the bound revision
+  - the published Level 4 artifacts verify against every bound digest, record valid 18/18, and carry no stale, rejected, or revoked disposition
+  - the published Level 3 artifacts verify internally and the route remains active for the bound selected effort
+  - the bound selected-effort source is byte-identical to its recorded SHA-256 at the bound Nestfolio revision
+  - the Level 2 lock verifies with aggregate 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+  - the read-only route check records no active current journal Run for the bound effort and no existing target Run, and records the current journal tree digest
+  - all fixed create paths under nestfolio_scope are absent at the published start and no path under .continuity/runs/run-mi005 or continuity/level-5 exists
+  - package-lock.json changes and dependency operations are not needed (pnpm-lock.yaml is byte-immutable)
+  - Level 4 tests return 23/23, Level 3 tests 23/23, Level 2 tests 23/23, retained Level 1 tests 14/14, and backlog-next tests 68/68 before mutation without invoking any Skill
+  - the pinned engine's own test suite (node --test runtime/continuity/test/*.test.mjs) exits 0 with zero failures before mutation
+  - the write-set rehearsal completed in the isolated copy and its frozen write-set satisfies nestfolio_scope exactly
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata, exact committed objects, and the Git common directory journal/ tree (route check and byte-identity proof only)
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json
+    - .claude/skills/backlog-next/SKILL.md and .claude/skills/backlog-next/test/**
+    - runtime/continuity/** (the pinned engine)
+    - continuity/level-1/** through continuity/level-4/**
+    - continuity/artifacts/**, continuity/bindings/**, continuity/packs/**, continuity/dogfood/** (pre-existing files)
+    - .continuity/** pre-existing files, including the tracked VS-001/VS-001A records
+    - continuity/evidence/mi-002/**, mi-003/**, mi-004/**, se-001/**, vs001a/** and every other evidence tree
+    - docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    - tests/continuity-level-1.test.mjs through tests/continuity-level-4.test.mjs
+  create_fixed_paths_on_pass:
+    - continuity/level-5/run-binding.json
+    - continuity/level-5/engine-lock.json
+    - tests/continuity-level-5.test.mjs
+    - continuity/dogfood/mi-005-effect.txt
+    - continuity/evidence/mi-005/00-repository-bindings.json
+    - continuity/evidence/mi-005/01-store-binding-and-route.json
+    - continuity/evidence/mi-005/02-run-preparation-and-rehearsal.json
+    - continuity/evidence/mi-005/03-two-session-continuity.json
+    - continuity/evidence/mi-005/04-success-scenarios.json
+    - continuity/evidence/mi-005/05-mandatory-failures.json
+    - continuity/evidence/mi-005/06-preservation-and-rollback.json
+    - continuity/evidence/mi-005/07-criterion-matrix-and-verdict.json
+    - continuity/evidence/mi-005/commands/01-level5-tests.json
+    - continuity/evidence/mi-005/commands/02-engine-tests.json
+    - continuity/evidence/mi-005/commands/03-level4-tests.json
+    - continuity/evidence/mi-005/commands/04-level3-tests.json
+    - continuity/evidence/mi-005/commands/05-level2-tests.json
+    - continuity/evidence/mi-005/commands/06-level1-tests.json
+    - continuity/evidence/mi-005/commands/07-backlog-next-tests.json
+    - continuity/evidence/mi-005/commands/08-final-changed-files.json
+  create_engine_write_set_classes: >
+    Engine-produced creates are permitted only as new files with MI-005
+    identities under: continuity/artifacts/** (new artifact files only),
+    .continuity/runs/run-mi005/**, .continuity/derived/execution-views/
+    (the two new session views), and .continuity/executor-sessions/
+    (the session-mi005-1 and session-mi005-2 hook records). The exact
+    paths are frozen by the write-set rehearsal plus the genuine-session
+    provenance records and recorded in the final manifest.
+  modify_exactly:
+    - ".continuity/audit.ndjson — append-only: the recorded pre-execution bytes must remain the exact unmodified prefix of the final file, proven by prefix digest comparison"
+    - ".continuity/derived/index.json — derived non-authoritative projection, rewritten only by the pinned engine's deterministic rebuild; the pre-execution snapshot remains recoverable from Git history"
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly: the twenty-one fixed create paths, the frozen engine
+    write-set creates, and the two permitted modified paths — with no
+    staged path and no other modified, deleted, renamed, or additional
+    path. Every other pre-existing tracked byte, including every
+    Level 1-4 artifact, every VS-001/VS-001A record, the backlog source,
+    and the entire current journal tree, is byte-immutable for the whole
+    execution. The delta remains uncommitted and unstaged at execution
+    close; publication is separately authorized.
+  path_absence_rule: >
+    Any pre-existing fixed create path is a collision and blocks
+    execution; it must not be overwritten, adopted, repaired, or deleted.
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: the two-class target store, pinned engine digests, hook registration, and Level 5 binding verify exactly and are recorded in engine-lock.json and run-binding.json
+  - id: S2
+    requirement: Run run-mi005 is created binding the exact Work reference, Scope digest, Context Pack version 1 digest, Level 2 lock aggregate, repository revision and working-tree fingerprint, and lease policy, with the route check proving no current-journal or target dual Run for the effort
+  - id: S3
+    requirement: genuine Session 1 starts from the digest-matched adapter start view with hook-recorded provenance (distinct Claude Code session id, startup_source startup) and completes keyed effect mi005-material-effect exactly once
+  - id: S4
+    requirement: the intermediate Checkpoint is captured and verified and the Handoff is published before Session 1 ends, with machine-captured UTC ordering proof (SessionEnd after Checkpoint and Handoff)
+  - id: S5
+    requirement: genuine fresh Session 2 (distinct session id, startup_source startup, no transcript dependency) resumes from the verified Checkpoint after passing freshness validation against the exact bound repository/Context Pack/lock/engine digests and acquires the lease
+  - id: S6
+    requirement: Session 2's replay of effect key mi005-material-effect returns deduplicated without re-execution or record rewrite, and exactly one completed effect record exists at close
+  - id: S7
+    requirement: the final Checkpoint is captured and verified and the Run closes through the engine's bounded internal closure, with the truthful record that this is Level 5 operational closure only and no Work completion, Assurance, or Level 6 state exists
+  - id: S8
+    requirement: the derived index is deleted and rebuilt deterministically with zero canonical loss, and the audit ledger's pre-execution bytes are proven to be the exact prefix of its final bytes
+  - id: S9
+    requirement: the current journal tree is byte-identical before and after execution (digest comparison over every journal run), the drain rule is recorded, and no dual writer existed at any point
+  - id: S10
+    requirement: the evidence set is complete, deterministic, and canonically serialized; all isolated fixtures and the rehearsal copy are removed with absence proof; the execution delta remains uncommitted and unstaged with a recorded SHA-256 manifest matching scope_rule exactly
+
+mandatory_failure_scenarios:
+  - id: F1
+    condition: stale repository fingerprint, Context Pack digest, Level 2 lock, pack lock, or engine asset digest at start or resume
+    diagnostic: STALE_RUN
+  - id: F2
+    condition: corrupt, digest-mismatched, schema-invalid, or unverified checkpoint offered for resume
+    diagnostic: INVALID_CHECKPOINT
+  - id: F3
+    condition: effect in unknown state at resume or retry
+    diagnostic: UNKNOWN_EFFECT_BLOCKS_RETRY
+  - id: F4
+    condition: conflicting second live writer attempts start, resume, or mutation while the lease is held
+    diagnostic: LEASE_CONFLICT
+  - id: F5
+    condition: attempt to create or start a target Run for an effort that already has an active current journal Run or another target Run
+    diagnostic: DUAL_RUN_ROUTE_CONFLICT
+  - id: F6
+    condition: attempt to write target state into the current journal, or to import, convert, rewrite, or re-key any current journal Run as target state
+    diagnostic: JOURNAL_CONVERSION_PROHIBITED
+  - id: F7
+    condition: corrupt or deleted derived index or execution view
+    diagnostic: reads fail closed with CORRUPT_PROJECTION until the deterministic rebuild from canonical state succeeds; the projection never wins a conflict and no canonical state is lost
+  - id: F8
+    condition: unexpected Session termination without deliberate pause
+    diagnostic: recovery reconstructs the latest valid state, records an interrupted Session, and requires a recovery Checkpoint before continuation; unreconstructable state blocks with UNRECOVERABLE_RUN_STATE
+  - id: F9
+    condition: start or resume against a non-authorized, stale, rejected, revoked, or digest-mismatched Context Pack version or adapter view
+    diagnostic: UNAUTHORIZED_CONTEXT_DELIVERY
+  - id: F10
+    condition: attempt to delegate contracted work to any Skill, slash command, /backlog-next, continuity:invoke, or other product executor procedure, or to substitute a non-genuine process for either validation Session
+    diagnostic: EXECUTOR_DELEGATION_PROHIBITED
+  - id: F11
+    condition: claim or creation of Work completion, Evidence-bound completion, Assurance Plan authority, Guard, Waiver, Decision, Learning, or Level 6 state
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+  - id: F12
+    condition: any executor or engine write outside the frozen write-set, fixed create paths, and permitted modify set
+    diagnostic: MANIFEST_SCOPE_MISMATCH
+  fixture_rule: >
+    F1 through F9 are exercised in isolated temporary fixtures outside all
+    three repositories with exact expected/observed diagnostics, exit
+    codes, fixture digests, and cleanup proof; they never mutate the real
+    Run or repositories. F10 through F12 are standing prohibitions whose
+    fail-closed behavior is verified structurally.
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, clean state, and observed time for all three repositories, plus the current journal tree digest
+    - store-binding evidence records every engine-lock digest verification, the hook registration digest, and the route check result
+    - run-preparation evidence records every prepared artifact with digests, the rehearsal write-set with before/after digests, and the freeze proof
+    - two-session evidence records both hook-recorded session records verbatim by digest, the execution-view digest matches, the machine-captured UTC ordering, the effect execution and deduplicated replay records, both verified Checkpoints, and the published Handoff
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
+    - no chat transcript, hidden manual copy, timestamp-dependent artifact ordering, or unrecorded inference is admissible
+    - temporary fixtures and copies are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-5.test.mjs returns all tests passing
+    - node --test runtime/continuity/test/*.test.mjs exits 0 with zero failures after execution
+    - node --test tests/continuity-level-4.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-3.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-2.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-1.test.mjs returns 14/14 after execution
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68 after execution without invoking the Skill
+    - all S1-S10 success scenarios pass
+    - all F1-F12 mandatory failure scenarios fail closed with the exact typed diagnostic
+    - the current journal tree digest after execution equals the recorded pre-execution digest
+    - final Git and digest comparison proves every pre-existing tracked path other than the two permitted modified paths equals the exact start revision, and the two modified paths satisfy their modify_exactly rules
+    - the final Nestfolio manifest contains exactly the paths permitted by scope_rule, uncommitted and unstaged, with a recorded SHA-256 manifest
+  suite_environment_rule: >
+    If any published Level 1-4 suite carries a working-tree purity guard
+    that the contracted uncommitted MI-005 delta makes unsatisfiable in
+    the working tree, that suite's after-execution run executes in an
+    isolated committed validation copy exactly per the SE-001-R3
+    corrected-validation-environment mechanics (throwaway commit in a
+    temporary copy outside all three repositories, per-path delta digest
+    equality, clean copy status, removal with absence proof); the
+    pre-mutation runs and all purity-guard-free suites run in the real
+    working tree.
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata for all three repositories, the complete
+    Nestfolio tracked-tree identity, the current journal tree digest, the
+    pre-execution bytes and digests of the two permitted modify paths, all
+    critical Level 1-4 and VS-001/VS-001A digests, absence of every fixed
+    create path, and a verified external recovery ledger outside all
+    repositories. Do not copy backlog content or secrets into the recovery
+    ledger.
+  operational_rollback_proof: >
+    In an isolated temporary copy only, prove the operational rollback
+    class of the migration plan: pause or cancel the target Run, capture
+    the best available Checkpoint and Handoff, release the lease, and show
+    that no completed effect is repeated, no unknown effect is retried,
+    nothing is written into the current journal, and the Run history
+    remains immutable and readable. The real Run is never cancelled on
+    PASS.
+  execution_failure: >
+    If any actual execution condition fails after mutation, restore the
+    two permitted modify paths to their recorded pre-execution bytes,
+    remove only the newly created MI-005 paths, verify Nestfolio is
+    byte-identical and clean at the exact published start revision, retain
+    diagnostics outside all repositories, and close MI-005 as
+    UNCONDITIONAL FAIL in continuity-lab. Never retain partial Level 5
+    authority, never convert the failed target Run into the current
+    journal, and never repeat effects whose outcome is unknown.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - scripts/generate-program-indices.mjs (queue tail text only, if the recorded blocked tail requires it)
+    - sessions/MI-005-resumable-run-cutover/context-pack.yaml
+    - sessions/MI-005-resumable-run-cutover/session-handoff.md
+  create:
+    - docs/70-implementation/mi-005-resumable-run-cutover.md
+    - sessions/MI-005-resumable-run-cutover/execution-changed-files.txt
+  rule: >
+    The execution closure records only the one MI-005 result and exact
+    execution facts, and performs the DR-0025 closure obligations
+    (queue_summary update, index regeneration, --check). All MI-002
+    through SE-001-PUB artifacts and every VS-001/VS-001A artifact remain
+    immutable. Per DR-0024 the closure may be committed and pushed in the
+    executing session with a concise subject-only message; the Nestfolio
+    execution delta stays uncommitted pending its separate publication
+    authorization.
+
+explicitly_immutable:
+  continuity_workspace: [all content during execution]
+  continuity_lab_during_execution:
+    - all MI-002 through MI-004-R1, SE-001, SE-001-R1, SE-001-R2, SE-001-R3, and SE-001-PUB artifacts and reports
+    - all VS-001 and VS-001A artifacts and reports
+    - the MI-005 prompt and contract-authoring manifest
+    - every path outside the exact MI-005 execution-closure scope
+  nestfolio:
+    - every pre-existing tracked path except the two permitted modify paths under their modify_exactly rules
+    - the entire Git common directory journal/ tree
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json, .claude/skills/**
+    - runtime/continuity/** and every other runtime/** path
+    - docs/backlog/**
+    - continuity/level-1/** through continuity/level-4/**
+    - continuity/evidence/mi-001*/** through continuity/evidence/se-001/** and continuity/evidence/vs001a/**
+    - every pre-existing continuity/artifacts/**, continuity/bindings/**, continuity/packs/**, continuity/dogfood/**, and .continuity/** file
+    - tests/continuity-level-1.test.mjs through tests/continuity-level-4.test.mjs
+
+prohibited_actions:
+  - execute MI-005 outside authorization_rule
+  - inspect or modify Nestfolio content before execution validly starts and session gates pass
+  - commit or push the Nestfolio execution delta during execution (isolated-copy throwaway commits under suite_environment_rule and the rehearsal are not real-repository commits); fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history in any real repository during execution
+  - modify, repair, relabel, qualify, supersede, re-grade, or reinterpret any recorded historical result or artifact
+  - rerun, rewrite, extend, or mutate run-vs001, run-vs001a, or any VS-001/VS-001A record
+  - read, write, convert, import, re-key, or retire any current journal Run beyond the contracted read-only route check and byte-identity proof
+  - dual-write any Run across the current journal and the target store, or create a second active Run for the bound effort
+  - form, refresh, re-validate, re-authorize, version, or edit any Context Pack or Level 4 artifact
+  - start or resume from any non-authorized, stale, rejected, revoked, or digest-mismatched context or checkpoint
+  - modify the pinned engine, the hooks, .claude/settings.json, or any Skill
+  - re-implement, extend, or mutate the selected effort's implementation, its backlog source, or any Level 1-4 artifact
+  - repeat a completed keyed effect, retry an unknown effect, or bypass the lease
+  - use a sub-agent, background task, simulated process, or the orchestrating session itself as either genuine validation Session, or fabricate provenance records
+  - install, remove, or upgrade dependencies, modify package.json, or mutate pnpm-lock.yaml
+  - claim Work completion or create Evidence-bound completion, Assurance Plan authority, Guard, Waiver, Decision, Observation, Lesson, Change Proposal, Level 6 state, registry, remote source, universal ranking, Epic orchestration, intake, or themes migration
+  - promote Nestfolio behavior into reusable Pack or Framework Core authority
+  - use parallel agents for the contracted Run, or migrate any Epic or additional effort
+  - execute MI-006 or MI-007 or any broader or unrelated implementation, or scope MI-006 or later slices
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 session gates, engine and store binding, Level 4/Level 3/Level 2 digest verification, and route check pass fail-closed before mutation
+    - C2 exact Run creation binding, frozen rehearsed write-set, and complete pre-mutation preservation ledger
+    - C3 real two-Session start/resume with machine-captured provenance and ordering, verified Checkpoints, published Handoff, and keyed-effect deduplication
+    - C4 every mandatory failure blocks with the exact typed diagnostic
+    - C5 current journal, backlog source, Levels 1-4, VS-001/VS-001A records, and every byte outside the permitted sets remain exact
+    - C6 authority, route, cutover and drain rule, lease, store ownership, and absent Level 6 guarantees are observable, truthful, and unambiguous
+    - C7 deterministic index rebuild, audit prefix preservation, operational rollback proof, cleanup with absence proofs, and the exact uncommitted final manifest pass
+  pass_rule: >
+    Issue MI-005 UNCONDITIONAL PASS only if C1-C7, S1-S10, F1-F12, every
+    precondition, validation, preservation, rollback, cleanup, and
+    exact-manifest requirement passes conjunctively and no prohibited
+    action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, mismatched, out-of-scope,
+    non-deterministic, partial, or failed condition after valid execution
+    start is MI-005 UNCONDITIONAL FAIL. No qualified PASS, partial PASS,
+    inferred authorization, silent repair, evidence-only override,
+    historical reinterpretation, or history rewrite is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Record MI-005 separately; every prior result remains a separate
+    immutable result. The target operational store holds one closed target
+    Run with its immutable history; no active Run persists; Level 5 is a
+    proven bounded guarantee for target-routed Runs and Level 6 remains
+    absent. The current journal continues to drain its own Runs and
+    retires only under a later explicitly contracted operation. MI-006
+    (Evidence-Bound Completion and Guard Coexistence) becomes the next
+    contractable slice; it remains unauthorized until separately
+    contracted, reviewed, published, and explicitly executed.
+  on_fail: >
+    Preserve all separate results and keep MI-006 and MI-007 blocked.
+    Select only a newly bounded correction or explicit review supported by
+    the failure evidence. Do not broaden scope.
+
+completion_criteria:
+  - internally consistent MI-005 contract authored, reviewed by the human program owner, and published on continuity-lab main in one DR-0024 session
+  - execution not started in the authoring phase; Nestfolio uninspected beyond the recorded bounded targeted grounding reads
+  - the target operational store, lease policy, effect-key policy, start/resume adapter path, and sharing boundary are defined by this contract as the migration plan requires
+  - the two-Claude-Code-session validation scenario is genuine, bounded, and human-launched
+  - the cutover boundary routes new Runs to the target store and drains current journal Runs untouched, with dual-write prohibited fail-closed
+  - all nine immutable results and the SE-001-PUB publication record remain unrepaired, unrelabeled, and unreinterpreted
+  - DR-0025 closure obligations performed at session closure (queue_position 30, queue_summary, index regeneration, --check exit 0)
+  - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
