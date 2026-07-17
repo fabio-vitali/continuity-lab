@@ -131,17 +131,27 @@ records no execution result. On 2026-07-17, under DR-0024, it is superseded
 by SE-001-R1 with every SE-001 artifact byte preserved as immutable history.
 
 **SE-001-R1 — Selected Effort Execution — lightened-process supersession**
-is contracted and published, not executed. It carries every SE-001
-product-level binding forward unchanged: the selected effort
-`dashboard-bff-awaiting-confirmation-activity-gap`, the authorized Context
-Pack version 1 (SHA-256
-`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`) at the
-exact published Level 4 Nestfolio revision
-`a760d6f41ff14491d5b008a7f13234ba0221bcec`, exclusive digest-matched
-adapter-view consumption, the deterministic frozen writable boundary
-(`se001-writable-boundary@1`, three byte-identical rebuilds), the
-fail-before/pass-after gap proof, S1-S10, F1-F12, the conjunctive C1-C7
-verdict, and the fifteen `continuity/evidence/se-001/` paths. Session
-choreography is lightened per DR-0024. The next valid program operation is
-executing SE-001-R1 in a fresh session naming the exact published contract
-revision. MI-005 through MI-007 and broader work remain blocked.
+executed on 2026-07-17 under a fresh instruction naming the exact published
+contract revision `6db0c0e4f876c11e1942e42cad821c6da0157796` and closed
+with **UNCONDITIONAL FAIL**: the required precondition "Level 4 tests
+return 23/23 before mutation" returned 21/23 at the exact published
+Nestfolio start revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`. Sole
+root cause: the published Level 4 suite is HEAD-pinned to the
+pre-publication revision `b9d7264082322e09cfd233819b79f128ef912e31`
+(hard-coded `REV` plus the `formCandidate` stage-2 HEAD equality check) and
+self-invalidates once the MI-004 delta itself is committed; `S1` blocks
+with `STALE_CONTEXT_DEPENDENCY` and the `F3` fixture cascades to the same
+diagnostic. Execution blocked fail-closed BEFORE any Nestfolio mutation:
+session gates, the fail-closed digest-matched context delivery
+verification, the deterministic frozen writable boundary
+(`se001-writable-boundary@1`, three byte-identical rebuilds,
+`b186ebb1222344a506aadf97ce29ed9831c88772f05dabff7a7f09c5902da361`), and
+the other four suites (Level 3 23/23, Level 2 23/23, retained Level 1
+14/14, backlog-next 68/68) passed first; Nestfolio remains byte-identical
+and clean at the start revision and the selected effort remains NOT
+implemented. MI-004's recorded 23/23 at its original execution condition
+remains immutable, correct history. Report:
+`se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
+The next valid program operation is one bounded DR-0024 correction
+contract for the publication-dependent Level 4 suite defect; MI-005
+through MI-007 and broader work remain blocked.

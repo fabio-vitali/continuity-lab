@@ -1,6 +1,6 @@
 ---
 artifact_id: SESSION-HANDOFF-SE-001-R1
-status: provisional
+status: validated
 owner: session
 last_updated: 2026-07-17
 supersedes: []
@@ -51,9 +51,38 @@ selected effort remains NOT implemented.
 The exact ten-path delta of this session is recorded in `changed-files.txt`
 beside this file.
 
+## Execution closure (2026-07-17)
+
+SE-001-R1 was executed on 2026-07-17 in a fresh session under the
+instruction naming the exact published contract revision
+`6db0c0e4f876c11e1942e42cad821c6da0157796` and closed with
+**UNCONDITIONAL FAIL**: the required precondition "Level 4 tests return
+23/23 before mutation" failed (21/23) at the exact published Nestfolio
+start revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`. Sole root
+cause: the published Level 4 suite is HEAD-pinned to the pre-publication
+revision `b9d7264082322e09cfd233819b79f128ef912e31` and self-invalidates
+once the MI-004 delta itself is committed (S1 blocks with
+`STALE_CONTEXT_DEPENDENCY`; the F3 fixture cascades to the same
+diagnostic). Execution blocked fail-closed BEFORE any Nestfolio mutation:
+session gates, the fail-closed digest-matched context delivery
+verification, the frozen writable boundary (three byte-identical rebuilds,
+digest `b186ebb1222344a506aadf97ce29ed9831c88772f05dabff7a7f09c5902da361`),
+and the other four suites (Level 3 23/23, Level 2 23/23, retained Level 1
+14/14, backlog-next 68/68) all passed first. Nestfolio remains
+byte-identical and clean at the start revision (full tracked-tree manifest
+recomputed equal); the selected effort remains NOT implemented; the
+fifteen evidence paths were correctly not created. Full report:
+`docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
+Diagnostics are retained outside all repositories at
+`~/continuity-recovery/se-001-r1/`. The exact continuity-lab closure delta
+is recorded in `execution-changed-files.txt` beside this file.
+
 ## Next valid program operation
 
-Execute SE-001-R1 in a fresh session using the preserved instruction in
-`prompt.md` with the placeholder replaced by the exact published revision.
-The execution handoff, including the fully resolved launch command, is
-saved at `~/continuity-handoffs/se-001-r1-execution-prompt.txt`.
+Author, review, and publish under DR-0024 one bounded correction contract
+(MI-002-R2 precedent for a publication-dependent defect) that makes the
+published Level 4 suite verify truthfully at the published revision —
+rebinding the S1 formation check and the failure-scenario fixtures to the
+committed bound revision instead of the moving HEAD — and publishes a new
+Nestfolio revision; the selected-effort execution is then re-contracted
+against that revision. MI-005 remains blocked.

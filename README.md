@@ -109,19 +109,21 @@ Experimental Phase**, it is superseded by **SE-001-R1**, with every SE-001
 artifact byte preserved as immutable history.
 
 **SE-001-R1 — Selected Effort Execution — lightened-process supersession**
-is contracted and published, not executed. It carries every SE-001
-product-level binding forward unchanged — the selected effort
-`dashboard-bff-awaiting-confirmation-activity-gap`, the authorized Context
-Pack version 1 (SHA-256
-`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`) at the
-exact published Level 4 Nestfolio revision
-`a760d6f41ff14491d5b008a7f13234ba0221bcec`, exclusive digest-matched
-adapter-view consumption, the deterministically derived frozen writable
-boundary, and the required fail-before/pass-after gap proof — and lightens
-session choreography only per DR-0024. Execution requires a fresh
-instruction naming the exact published contract revision. The selected
-effort remains NOT implemented until SE-001-R1 executes with UNCONDITIONAL
-PASS.
+executed on 2026-07-17 under a fresh instruction naming the exact published
+contract revision and closed with **UNCONDITIONAL FAIL**: the required
+precondition "Level 4 tests return 23/23 before mutation" returned 21/23 at
+the exact published Nestfolio start revision
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`. Sole root cause: the published
+Level 4 suite is HEAD-pinned to the pre-publication revision
+`b9d7264082322e09cfd233819b79f128ef912e31` and self-invalidates once the
+MI-004 delta itself is committed. Execution blocked fail-closed BEFORE any
+Nestfolio mutation — session gates, the digest-matched context delivery
+verification, the frozen writable boundary, and the other four suites all
+passed first — so Nestfolio remains byte-identical at the start revision
+and the selected effort remains NOT implemented. MI-004's recorded 23/23 at
+its original execution condition remains immutable history. The next valid
+program operation is one bounded correction contract for the
+publication-dependent Level 4 suite defect.
 
 ## Canonical starting points
 

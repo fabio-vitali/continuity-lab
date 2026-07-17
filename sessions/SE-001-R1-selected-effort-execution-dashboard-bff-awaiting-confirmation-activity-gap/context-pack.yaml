@@ -1,12 +1,27 @@
 contract:
-  status: contracted-and-published
+  status: completed-unconditional-fail
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17
   finalized_on: 2026-07-17
+  executed_on: 2026-07-17
   process_regime: DR-0024 lightened development process
-  execution_authorized: false
-  execution_started: false
-  result: pending
+  execution_authorized: true
+  execution_started: true
+  result: unconditional-fail
+  failure_cause: >
+    Required precondition "Level 4 tests return 23/23 before mutation"
+    failed at the exact published start revision
+    a760d6f41ff14491d5b008a7f13234ba0221bcec: the suite returned 21/23.
+    Sole root cause: the published Level 4 suite is HEAD-pinned to the
+    pre-publication revision b9d7264082322e09cfd233819b79f128ef912e31
+    (hard-coded REV plus the formCandidate stage-2 HEAD equality check) and
+    self-invalidates once the MI-004 delta itself is committed; S1 blocks
+    with STALE_CONTEXT_DEPENDENCY and the F3 fixture observes that same
+    diagnostic instead of CONTEXT_CONTRADICTION_UNRESOLVED. Execution
+    blocked fail-closed BEFORE any Nestfolio mutation; no boundary path was
+    written, no evidence path was created, and the selected effort remains
+    NOT implemented. See
+    docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md.
   authority:
     - docs/90-state/program-state.md
     - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
@@ -29,7 +44,7 @@ iteration:
   name: Selected Effort Execution — dashboard-bff-awaiting-confirmation-activity-gap — lightened-process supersession
   type: bounded-selected-effort-execution-under-authorized-context
   px_level: 4
-  status: contracted-published-not-executed
+  status: executed-unconditional-fail
   supersession_rule: >
     SE-001-R1 supersedes the SE-001 contract published at continuity-lab
     4b2158701dc7de9b7596f4ea1d9879bd45da6407 (subject "Authorize SE-001

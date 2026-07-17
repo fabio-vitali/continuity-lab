@@ -11,8 +11,8 @@ superseded_by: null
 
 | Artifact | Status | Owner | Canonical role |
 |---|---|---|---|
-| `README.md` | Ratified | Program | Repository orientation; preserves MI-002 through MI-004 history and records the superseded SE-001 and the active published SE-001-R1 contract |
-| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Current-state summary and handoff pointer for executing SE-001-R1 |
+| `README.md` | Ratified | Program | Repository orientation; preserves MI-002 through MI-004 history and records the superseded SE-001 and the executed SE-001-R1 UNCONDITIONAL FAIL |
+| `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Current-state summary and handoff pointer for the bounded Level 4 suite correction after the SE-001-R1 UNCONDITIONAL FAIL |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
@@ -23,7 +23,7 @@ superseded_by: null
 | `docs/50-validation/product-falsification-report.md` | Validated | Validation | Historical PF-001 evidence interpreted through the corrected Product Foundation |
 | `docs/60-migration/README.md` | Ratified | Migration | Migration navigation, accepted G5 result, slice sequence, and authorized-not-started MI-002 boundary |
 | `docs/60-migration/migration-plan.md` | Validated | Migration | Canonical MA-001 current-to-target mapping, authority ledger, seven reversible slices, M1–M16 results, and G5 PASS |
-| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results, records the completed MI-003-R2 and MI-004 UNCONDITIONAL PASS slices, the superseded SE-001, and the contracted published not-executed SE-001-R1 |
+| `docs/70-implementation/README.md` | Ratified | Implementation | Preserves historical results, records the completed MI-003-R2 and MI-004 UNCONDITIONAL PASS slices, the superseded SE-001, and the executed SE-001-R1 UNCONDITIONAL FAIL |
 | `docs/70-implementation/vs-001-resumable-agent-work-session.md` | Validated | Implementation | Historical VS-001 FAIL with still-valid repository-mechanics evidence |
 | `docs/70-implementation/vs-001a-claude-code-session-confirmation.md` | Validated | Implementation | Genuine Claude Code executor confirmation and combined G6 PASS evidence |
 | `docs/70-implementation/mi-001-procedure-first-adoption.md` | Validated | Implementation | Canonical MI-001 implementation report, criterion matrix, unconditional FAIL, and MI-001A selection |
@@ -38,7 +38,8 @@ superseded_by: null
 | `docs/70-implementation/mi-003-r1-bounded-local-work-and-scope-canonical-read-order-correction-retry.md` | Validated | Implementation | Canonical MI-003-R1 report: exact gates, partial sixth canonical read, no Nestfolio inspection or mutation, empty manifests, and unconditional FAIL |
 | `docs/70-implementation/mi-003-r2-bounded-local-work-and-scope-segmented-canonical-complete-read-correction-retry.md` | Validated | Implementation | Canonical MI-003-R2 report: exact gates, 507 closed logical-path sessions, deterministic candidate projection, explicit human selection, twenty-two published additions, unconditional PASS, and unimplemented selected effort |
 | `docs/70-implementation/mi-004-authorized-context-introduction.md` | Validated | Implementation | Canonical MI-004 report: exact gates, 49 closed logical-path sessions, DR-0011 formation, validation 18/18, exact human authorization, twenty-two published additions, unconditional PASS, and unimplemented selected effort |
-| `docs/90-state/program-state.md` | Ratified | Program | Active truth: the immutable historical results, the authorized Level 4 Context Pack, the active Level 3 route, the DR-0024 lightened development process, the superseded SE-001, the published not-executed SE-001-R1, and blocked MI-005+ |
+| `docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md` | Validated | Implementation | Canonical SE-001-R1 report: UNCONDITIONAL FAIL on the Level 4 suite precondition (21/23; publication-dependent HEAD-pinning), fail-closed before any Nestfolio mutation, exact verified deliveries, frozen boundary, and the bounded-correction next operation |
+| `docs/90-state/program-state.md` | Ratified | Program | Active truth: the immutable historical results, the authorized Level 4 Context Pack, the active Level 3 route, the DR-0024 lightened development process, the superseded SE-001, the executed SE-001-R1 UNCONDITIONAL FAIL, and blocked MI-005+ |
 | `docs/90-state/artifact-index.md` | Ratified | Program | This canonical artifact registry |
 | `sources/nestfolio-runtime.yaml` | Ratified | Current system | Exact historical source binding used by RI-001; not inspected by MA-001 |
 | `decisions/DR-0001-separate-canonical-design-repository.md` | Validated | Governance | Separate canonical design repository |
@@ -157,7 +158,8 @@ superseded_by: null
 | `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md` | Superseded | Session | Preserved SE-001 execution instruction; inactive after the DR-0024 supersession; immutable history |
 | `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md` | Validated | Session | SE-001 contract-authoring closure with exact bindings, contract identity, manifest, and publication handoff; historical |
 | `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt` | Validated | Session | Exact nine-path continuity-lab manifest for SE-001 contract authoring, review, and finalization; historical |
-| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml` | Provisional | Session | Active SE-001-R1 execution contract: SE-001 product-level bindings unchanged, DR-0024 lightened session choreography; published, not executed |
-| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md` | Provisional | Session | Preserved future SE-001-R1 execution instruction; usable only with the exact published revision and a separate explicit execution instruction |
-| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md` | Provisional | Session | SE-001-R1 authoring and publication handoff recording the DR-0024 regime, bindings, supersession, and next valid operation |
-| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt` | Provisional | Session | Exact ten-path continuity-lab delta for the DR-0024 adoption and SE-001-R1 contract authoring and publication |
+| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml` | Validated | Session | Completed SE-001-R1 execution contract closed UNCONDITIONAL FAIL on 2026-07-17 (Level 4 suite precondition 21/23; publication-dependent HEAD-pinning); product-level bindings preserved unchanged |
+| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md` | Validated | Session | Preserved SE-001-R1 execution instruction; consumed by the 2026-07-17 execution; immutable history |
+| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md` | Validated | Session | SE-001-R1 authoring, publication, and execution-closure handoff recording the DR-0024 regime, bindings, the UNCONDITIONAL FAIL cause, and the bounded-correction next operation |
+| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt` | Validated | Session | Exact ten-path continuity-lab delta for the DR-0024 adoption and SE-001-R1 contract authoring and publication |
+| `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/execution-changed-files.txt` | Validated | Session | Exact nine-path continuity-lab delta for the SE-001-R1 execution closure; Nestfolio delta empty (fail-closed before mutation) |
