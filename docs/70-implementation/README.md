@@ -2,7 +2,7 @@
 artifact_id: IMPLEMENTATION-INDEX
 status: ratified
 owner: implementation
-last_updated: 2026-07-16
+last_updated: 2026-07-17
 supersedes: []
 superseded_by: null
 ---
@@ -124,18 +124,24 @@ are published at Nestfolio `a760d6f41ff14491d5b008a7f13234ba0221bcec`. The
 selected effort remains NOT implemented and its implementation remains
 separately authorized.
 
-**SE-001 — Selected Effort Execution** is contracted and not executed. One
-reviewed bounded execution contract candidate for the selected effort
-`dashboard-bff-awaiting-confirmation-activity-gap` was authored, reviewed,
-and finalized on 2026-07-16 against the authorized Context Pack version 1
-(SHA-256 `e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`)
-at the exact published Level 4 Nestfolio revision
-`a760d6f41ff14491d5b008a7f13234ba0221bcec`. It binds every published Level
-1-4 artifact and the backlog source as read-only inputs by exact digest,
-derives a frozen writable boundary from the published Level 3 Scope and
-Working Set, requires a fail-before/pass-after gap proof, and creates no
-Level 5-6 authority. The next valid program operation is publishing the
-SE-001 contract in a fresh control session with the exact subject
-"Authorize SE-001 selected effort execution"; execution requires a still
-later fresh instruction. MI-005 through MI-007 and broader work remain
-blocked.
+**SE-001 — Selected Effort Execution** was published on 2026-07-16 at exact
+continuity-lab revision `4b2158701dc7de9b7596f4ea1d9879bd45da6407` (subject
+"Authorize SE-001 selected effort execution") and was never executed; it
+records no execution result. On 2026-07-17, under DR-0024, it is superseded
+by SE-001-R1 with every SE-001 artifact byte preserved as immutable history.
+
+**SE-001-R1 — Selected Effort Execution — lightened-process supersession**
+is contracted and published, not executed. It carries every SE-001
+product-level binding forward unchanged: the selected effort
+`dashboard-bff-awaiting-confirmation-activity-gap`, the authorized Context
+Pack version 1 (SHA-256
+`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`) at the
+exact published Level 4 Nestfolio revision
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`, exclusive digest-matched
+adapter-view consumption, the deterministic frozen writable boundary
+(`se001-writable-boundary@1`, three byte-identical rebuilds), the
+fail-before/pass-after gap proof, S1-S10, F1-F12, the conjunctive C1-C7
+verdict, and the fifteen `continuity/evidence/se-001/` paths. Session
+choreography is lightened per DR-0024. The next valid program operation is
+executing SE-001-R1 in a fresh session naming the exact published contract
+revision. MI-005 through MI-007 and broader work remain blocked.

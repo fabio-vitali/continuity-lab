@@ -2,7 +2,7 @@
 artifact_id: LAB-README
 status: ratified
 owner: program
-last_updated: 2026-07-16
+last_updated: 2026-07-17
 supersedes: []
 superseded_by: null
 ---
@@ -101,20 +101,27 @@ MI-003-R1 FAIL, and MI-003-R2 PASS remain four separate immutable results.
 The selected effort remains NOT implemented and its implementation remains
 separately authorized; MI-005 through MI-007 and broader work remain blocked.
 
-**SE-001 — Selected Effort Execution** is contracted and not executed. One
-reviewed bounded execution contract candidate for the selected effort
-`dashboard-bff-awaiting-confirmation-activity-gap` — bound to the authorized
-Context Pack version 1 (SHA-256
+**SE-001 — Selected Effort Execution** was published on 2026-07-16 at exact
+continuity-lab revision `4b2158701dc7de9b7596f4ea1d9879bd45da6407` (subject
+"Authorize SE-001 selected effort execution") and was never executed. On
+2026-07-17, under **DR-0024 — Lightened Development Process for the Solo
+Experimental Phase**, it is superseded by **SE-001-R1**, with every SE-001
+artifact byte preserved as immutable history.
+
+**SE-001-R1 — Selected Effort Execution — lightened-process supersession**
+is contracted and published, not executed. It carries every SE-001
+product-level binding forward unchanged — the selected effort
+`dashboard-bff-awaiting-confirmation-activity-gap`, the authorized Context
+Pack version 1 (SHA-256
 `e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`) at the
 exact published Level 4 Nestfolio revision
-`a760d6f41ff14491d5b008a7f13234ba0221bcec`, consumed exclusively through the
-digest-matched adapter view, with a deterministically derived frozen writable
-boundary and a required fail-before/pass-after gap proof — was authored,
-reviewed, and finalized on 2026-07-16. Publication requires the exact subject
-"Authorize SE-001 selected effort execution"; execution requires a still
-later fresh instruction naming the exact published contract revision. The
-selected effort remains NOT implemented until SE-001 executes with
-UNCONDITIONAL PASS.
+`a760d6f41ff14491d5b008a7f13234ba0221bcec`, exclusive digest-matched
+adapter-view consumption, the deterministically derived frozen writable
+boundary, and the required fail-before/pass-after gap proof — and lightens
+session choreography only per DR-0024. Execution requires a fresh
+instruction naming the exact published contract revision. The selected
+effort remains NOT implemented until SE-001-R1 executes with UNCONDITIONAL
+PASS.
 
 ## Canonical starting points
 
@@ -182,11 +189,18 @@ UNCONDITIONAL PASS.
 - MI-004 contract-authoring manifest: `sessions/MI-004-authorized-context-introduction/changed-files.txt`
 - MI-004 execution-closure manifest: `sessions/MI-004-authorized-context-introduction/execution-changed-files.txt`
 - MI-004 canonical report: `docs/70-implementation/mi-004-authorized-context-introduction.md`
-- SE-001 reviewed execution contract: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
-- SE-001 preserved future execution prompt: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
+- SE-001 published superseded execution contract: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001 preserved superseded execution prompt: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
 - SE-001 contract-authoring closure and publication handoff: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
 - SE-001 contract-authoring manifest: `sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
+- Development-process decision: `decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md`
+- SE-001-R1 active execution contract: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001-R1 preserved future execution prompt: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
+- SE-001-R1 authoring and publication handoff: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
+- SE-001-R1 contract-authoring manifest: `sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
-Chat is not canonical memory. Every next iteration requires a fresh isolated session and exactly one reviewed contract.
+Chat is not canonical memory. Iterations run under reviewed contracts;
+development-session choreography follows DR-0024's lightened process, while
+product-level guarantees remain strict and adversarial-ready.

@@ -1,13 +1,11 @@
-# Continuity — SE-001 Contract-Publication Handoff
+# Continuity — SE-001-R1 Execution Handoff
 
 ## Current state
 
 - **MI-004 — Authorized Context Introduction** completed with `UNCONDITIONAL
-  PASS` on 2026-07-16, executed directly by Claude Code under the published
-  contract at continuity-lab `757112e7060252eccafe40f9178771b0adc67d17`. Its
-  twenty-two Level 4 additions and evidence are published at exact Nestfolio
-  revision `a760d6f41ff14491d5b008a7f13234ba0221bcec`, direct child of
-  `b9d7264082322e09cfd233819b79f128ef912e31`.
+  PASS` on 2026-07-16; its twenty-two Level 4 additions and evidence are
+  published at exact Nestfolio revision
+  `a760d6f41ff14491d5b008a7f13234ba0221bcec`.
 - The explicitly human-authorized Context Pack
   `nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap`
   version 1 (SHA-256
@@ -15,28 +13,26 @@
   bounded Level 4 context state for the selected effort
   `dashboard-bff-awaiting-confirmation-activity-gap`; the Level 3 route
   remains active and no Level 5-6 authority exists.
-- **SE-001 — Selected Effort Execution** is contracted: one reviewed bounded
-  execution contract candidate for the selected effort was authored and
-  finalized on 2026-07-16 as an uncommitted, unstaged nine-path
-  continuity-lab delta
-  (`sessions/SE-001-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/`).
-  It is neither published nor executed; the selected effort remains NOT
-  implemented.
+- **SE-001** was published on 2026-07-16 at continuity-lab
+  `4b2158701dc7de9b7596f4ea1d9879bd45da6407` (subject "Authorize SE-001
+  selected effort execution") and was never executed. On 2026-07-17, under
+  **DR-0024 — Lightened Development Process for the Solo Experimental
+  Phase**, it is superseded by **SE-001-R1**, which carries every
+  product-level binding forward unchanged and lightens session choreography
+  only. Every SE-001 artifact remains byte-immutable history.
 - MI-002-R2 `UNCONDITIONAL PASS`, MI-003 `UNCONDITIONAL FAIL`, MI-003-R1
   `UNCONDITIONAL FAIL`, and MI-003-R2 `UNCONDITIONAL PASS` remain four
-  separate immutable results; MI-004 is recorded separately, and all MI-002
-  history is preserved.
-- MI-005 through MI-007 and broader work remain blocked.
+  separate immutable results; MI-004 is recorded separately.
+- The selected effort remains NOT implemented. MI-005 through MI-007 and
+  broader work remain blocked.
 
 ## Next valid operation
 
-Publish the SE-001 contract in a fresh control session: verify clean aligned
-main branches at continuity-workspace
-`56e10aa92429a8ae793463d1cd1c7ad9542e7f64` and Nestfolio
-`a760d6f41ff14491d5b008a7f13234ba0221bcec`, verify continuity-lab HEAD
-`1b5c4a775ee6673509d1acd5f5676ffd80387dac` carrying exactly the nine-path
-SE-001 contract-authoring delta, then commit that delta with the exact
-subject "Authorize SE-001 selected effort execution" and push. Publication
-authorizes only the contract; execution requires a still later fresh
-instruction naming the exact published continuity-lab revision. No other
-program operation is valid.
+Execute SE-001-R1 in a fresh session. The preserved instruction is
+`sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`;
+the ready-to-run handoff with the exact published revision substituted and
+the fully resolved launch command is saved at
+`~/continuity-handoffs/se-001-r1-execution-prompt.txt`. Execution leaves the
+Nestfolio implementation delta uncommitted; its publication requires a
+separate later authorization with the exact subject "Publish SE-001 selected
+effort implementation and evidence". No other program operation is valid.
