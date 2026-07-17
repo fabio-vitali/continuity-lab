@@ -1,0 +1,353 @@
+contract:
+  status: authorized
+  authored_on: 2026-07-17
+  reviewed_on: 2026-07-17
+  finalized_on: 2026-07-17
+  process_regime: DR-0024 lightened development process
+  contract_authorized: true
+  execution_authorized: true
+  result: pending
+  authority:
+    - docs/90-state/program-state.md
+    - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
+    - docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md
+    - sessions/SE-001-R1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml
+    - sessions/MI-002-R2-reusable-pack-composition-publication-c7-correction-retry/context-pack.yaml
+    - sessions/MI-004-authorized-context-introduction/context-pack.yaml
+    - external diagnostics at ~/continuity-recovery/se-001-r1/ (read-only failure evidence)
+  authorization_rule: >
+    Per DR-0024 aggregated phases, execution of this correction is authorized
+    in the same session immediately after this contract is committed and
+    pushed on continuity-lab main, with all session gates still valid. If the
+    authoring session does not execute, execution is authorized in a later
+    fresh session only under prompt.md beside this file with the exact
+    published contract revision resolved. Nothing in this contract authorizes
+    the selected-effort implementation, SE-001-R2 authoring, MI-005, or
+    broader work.
+
+iteration:
+  id: MI-004-R1
+  name: Level 4 Publication-Dependent Suite Revision-Binding Correction
+  type: bounded-publication-dependent-suite-correction
+  status: authorized
+  correction_only: true
+  predecessor_results: >
+    MI-004 UNCONDITIONAL PASS (immutable, recorded 23/23 at its original
+    execution condition); SE-001-R1 UNCONDITIONAL FAIL (immutable, sole cause
+    is the publication-dependent defect corrected here). Neither result is
+    repaired, relabeled, or reinterpreted by this correction.
+
+objective:
+  primary_question: >
+    Can the published Level 4 suite be made to verify truthfully at the
+    published revision a760d6f41ff14491d5b008a7f13234ba0221bcec and at any
+    later revision containing it, by rebinding the S1 formation check and
+    every failure-scenario fixture to the committed bound revision recorded
+    by the published Level 4 artifacts instead of the moving HEAD, without
+    changing one byte of any published Level 4 JSON artifact, any Level 1-3
+    artifact, any MI evidence, or the backlog source?
+  completion_boundary: >
+    Correct exactly two Nestfolio paths (the Level 4 tool stage-2 revision
+    check and the Level 4 suite revision constant), validate all five suites
+    at the corrected committed revision, publish exactly one Nestfolio
+    correction commit, and close MI-004-R1 in continuity-lab. No
+    selected-effort implementation, no SE-001-R2 contract, no MI-005.
+
+established_defect:
+  source: >
+    SE-001-R1 UNCONDITIONAL FAIL evidence (canonical report and external
+    diagnostics at ~/continuity-recovery/se-001-r1/). Sole, structural,
+    publication-dependent.
+  facts:
+    - tests/continuity-level-4.test.mjs hard-codes
+      REV = 'b9d7264082322e09cfd233819b79f128ef912e31' (the Level 3
+      publication revision at which MI-004 executed with its delta
+      uncommitted)
+    - formCandidate stage 2 "bind-workspace-and-revision"
+      (continuity/level-4/bin/continuity-context.mjs) requires
+      git rev-parse HEAD to equal the bound revision and otherwise blocks
+      with STALE_CONTEXT_DEPENDENCY
+    - after the MI-004 publication commit created
+      a760d6f41ff14491d5b008a7f13234ba0221bcec, HEAD can never again equal
+      the pinned revision in the published tree
+    - observed at the published revision: suite 21/23; S1 blocks with
+      STALE_CONTEXT_DEPENDENCY; the F3 fixture observes
+      STALE_CONTEXT_DEPENDENCY instead of CONTEXT_CONTRADICTION_UNRESOLVED
+      (cascade of the same cause)
+  bound_revision_of_record: >
+    The committed bound revision recorded by the published artifacts is
+    b9d7264082322e09cfd233819b79f128ef912e31, recorded canonically at
+    continuity/level-4/context-recipe.json bound_inputs.repository_revision
+    and as source_revision throughout context-pack.json and
+    formation-trace.json. Formation already reads every source as committed
+    bytes at that revision (git rev-parse <rev>:<path>); the only HEAD
+    dependence is the stage-2 equality check.
+
+session_gates:
+  regime: DR-0024
+  continuity_workspace: { branch: main, state: clean }
+  continuity_lab:
+    branch: main
+    state: clean
+    authoring_base_revision: 24779bd08106f2b8b8e7a9adf2df950fb2c206de
+    base_role: exact published SE-001-R1 failure-closure revision
+    execution_requires: HEAD contains this contract, committed and pushed
+  nestfolio:
+    branch: main
+    state: clean
+    start_revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    start_role: exact published MI-004 revision at which the defect is observable
+  rule: >
+    Stop on any contradiction. Do not rewrite published history anywhere.
+    An unpushed local correction commit that fails validation is not
+    published history and must be removed during failure recovery.
+
+authoring_time_verified_facts:
+  tool_digest_binding: >
+    Verified during contract authoring at the start revision: no published
+    Level 4 artifact records a digest of
+    continuity/level-4/bin/continuity-context.mjs. The sole reference is the
+    non-digest descriptive string "deliverer" in adapter-view.json.
+    checkStaleness probes exactly seven pack-recorded dependency digests
+    (source tuple, level-3 work/scope/route, level-2 lock, level-1 lock,
+    package.json) and neither the tool nor the suite. A bounded tool change
+    therefore cannot create a stale or digest-mismatch condition; the
+    execution phase must re-verify stale-check clean after the correction.
+  test_only_preference_resolution: >
+    A test-only change cannot restore truthful verification: S1 requires the
+    rebuilt context-pack and formation-trace to be byte-identical to the
+    committed artifacts, which record source_revision b9d7264082322e0…, so
+    the suite must keep forming at that bound revision, while the defective
+    HEAD-equality check lives in the tool. The bounded stage-2 tool change
+    below is therefore required, and is permitted exactly because the tool
+    is not digest-bound by any published Level 4 artifact.
+  s9_pinned_map: >
+    The suite's PINNED identity map covers Level 1-3 artifacts, the
+    backlog-next Skill source, package.json, the backlog source, and the
+    Level 1-3 suites only; it pins neither tests/continuity-level-4.test.mjs
+    nor the Level 4 tool, so the correction cannot break S9.
+  f1_fixture_independence: >
+    The F1 fixture exercises checkStaleness digest drift and does not depend
+    on the stage-2 revision check; it must keep producing
+    STALE_CONTEXT_DEPENDENCY unchanged after the correction.
+  pre_correction_identities:
+    continuity/level-4/bin/continuity-context.mjs:
+      sha256: 6bbfadd2be2708a0a1397e6e4ebf45076a57f07bf8608855d567d63a131dd841
+      bytes: 40260
+    tests/continuity-level-4.test.mjs:
+      sha256: 117f6ac7fa44bd9ecbd88023ac21823a09fccbb18732ed0f139c68323b4180f1
+      bytes: 14691
+
+correction_design:
+  pre_edit_reproduction:
+    - require Nestfolio clean at a760d6f41ff14491d5b008a7f13234ba0221bcec
+    - run node --test tests/continuity-level-4.test.mjs once before editing
+    - require exactly 21 pass and 2 fail
+    - require the two failures to be exactly S1 (STALE_CONTEXT_DEPENDENCY at
+      stage 2) and F3 (observed STALE_CONTEXT_DEPENDENCY instead of
+      CONTEXT_CONTRADICTION_UNRESOLVED)
+    - stop on any additional, missing, or different failure
+  tool_change: >
+    In continuity/level-4/bin/continuity-context.mjs stage 2
+    "bind-workspace-and-revision" only: replace the HEAD-equality
+    requirement with a bound-revision containment requirement. The bound
+    revision must resolve to an existing commit object in the repository and
+    must be contained in the current HEAD's ancestry (ancestor-or-equal,
+    git merge-base --is-ancestor semantics). On violation block with the
+    same typed diagnostic STALE_CONTEXT_DEPENDENCY and a message naming the
+    bound revision and the current HEAD. The recorded stage-2 result string
+    must remain exactly "nestfolio bound at <rev>" so the rebuilt
+    formation-trace stays byte-identical to the committed artifact. No other
+    behavior, stage, diagnostic, schema, or export changes.
+  test_change: >
+    In tests/continuity-level-4.test.mjs only: derive the suite's bound
+    revision from the committed published artifact instead of a duplicated
+    literal — REV becomes the value of
+    continuity/level-4/context-recipe.json bound_inputs.repository_revision
+    read at runtime. Every S1-S10 and F1-F12 fixture keeps receiving that
+    committed bound revision of record; no scenario's meaning, breadth, or
+    expected diagnostic changes.
+  truthfulness_property: >
+    After the correction the suite verifies the published Level 4 state
+    truthfully at a760d6f41ff14491d5b008a7f13234ba0221bcec and at any later
+    revision whose history contains the bound revision of record, because
+    formation reads committed bytes at the bound revision and stage 2
+    verifies containment instead of equality with a moving HEAD. A repository
+    that does not contain the bound revision still blocks fail-closed with
+    STALE_CONTEXT_DEPENDENCY.
+  interim_check: >
+    With the two edits uncommitted, node --test
+    tests/continuity-level-4.test.mjs must return exactly 22 pass and 1 fail
+    with the sole failure S10 — the truthful report that two tracked paths
+    are modified in the working tree. Any other failure set stops the
+    correction before commit.
+  commit_then_validate: >
+    Commit exactly the two corrected paths in Nestfolio with the exact
+    subject "Correct MI-004 Level 4 suite revision binding" (subject-only,
+    no body, no trailer). Run every required validation below at the
+    corrected committed revision with a clean tree. Push only after every
+    required validation passes.
+  failure_recovery: >
+    If any required validation fails before push: retain diagnostics,
+    command records, and streams at ~/continuity-recovery/mi-004-r1/,
+    reset the unpublished local commit back to
+    a760d6f41ff14491d5b008a7f13234ba0221bcec, verify the tree is
+    byte-identical and clean at that revision, and close MI-004-R1 with
+    UNCONDITIONAL FAIL in continuity-lab. Published history is never
+    rewritten.
+
+required_validation:
+  - pre-edit reproduction exactly as contracted (21/23, sole causes S1 and F3)
+  - interim uncommitted check exactly as contracted (22/23, sole failure S10)
+  - at the corrected committed revision, clean tree, without invoking any
+    Skill:
+      - node --test tests/continuity-level-4.test.mjs returns 23/23
+      - node --test tests/continuity-level-3.test.mjs returns 23/23
+      - node --test tests/continuity-level-2.test.mjs returns 23/23
+      - node --test tests/continuity-level-1.test.mjs returns 14/14
+      - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68
+  - stale-check clean at the corrected revision
+  - adapter view rebuilt byte-identically in memory (adapter-view --out=none)
+    with SHA-256 9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838
+  - published Level 4 artifact digests exact at the corrected revision:
+      context-pack.json e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1;
+      authorization-record.json a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc;
+      adapter-view.json 9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838;
+      context-recipe.json 1b8f7e70477f48de8a821ba6c66991c1d9841adaff34b0055033681ffa5d0365;
+      formation-trace.json 8c05453897a28efc0abc43c143c4657175c7bfed167cf774d783b409b6c94911;
+      validation-result.json c526b961fe50c53eed3b89d792f1d0bde28e790b12f5d53a7f715362add5d9d3;
+      schema/context-artifacts.schema.json 72e3977b854a03ef2f194193b11b8dd021ece1804bb6e4682044715c24d97bf6
+  - git diff --name-only from a760d6f41ff14491d5b008a7f13234ba0221bcec to the
+    corrected revision lists exactly the two permitted paths and nothing else
+  - the corrected revision's sole parent is
+    a760d6f41ff14491d5b008a7f13234ba0221bcec
+
+permitted_nestfolio_scope:
+  modify:
+    - continuity/level-4/bin/continuity-context.mjs
+    - tests/continuity-level-4.test.mjs
+  create: []
+  rule: >
+    The final Nestfolio diff from the start revision may contain exactly the
+    two modify paths above. No evidence path is created or modified; the
+    MI-004 evidence remains immutable history recording 23/23 at its
+    original execution condition, and MI-004-R1 evidence is retained
+    externally at ~/continuity-recovery/mi-004-r1/ plus the canonical
+    continuity-lab closure.
+
+permitted_continuity_lab_execution_closure:
+  create:
+    - docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md
+    - sessions/MI-004-R1-level-4-suite-revision-binding-correction/execution-changed-files.txt
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - sessions/MI-004-R1-level-4-suite-revision-binding-correction/context-pack.yaml
+    - sessions/MI-004-R1-level-4-suite-revision-binding-correction/session-handoff.md
+  rule: >
+    Record one MI-004-R1 unconditional result, the exact two-path Nestfolio
+    manifest, the new published Nestfolio HEAD, and current state without
+    erasing any recorded execution condition or result. Closure commit
+    subject: "Close MI-004-R1 Level 4 suite revision-binding correction"
+    (subject-only). No other continuity-lab write is permitted.
+
+explicitly_immutable:
+  nestfolio:
+    - continuity/level-4/context-pack.json
+    - continuity/level-4/formation-trace.json
+    - continuity/level-4/validation-result.json
+    - continuity/level-4/authorization-record.json
+    - continuity/level-4/adapter-view.json
+    - continuity/level-4/context-recipe.json
+    - continuity/level-4/schema/**
+    - continuity/level-1/**
+    - continuity/level-2/**
+    - continuity/level-3/**
+    - continuity/evidence/**
+    - docs/backlog/**
+    - tests/continuity-level-1.test.mjs
+    - tests/continuity-level-2.test.mjs
+    - tests/continuity-level-3.test.mjs
+    - .claude/skills/**
+    - package.json (and continued absence of package-lock.json)
+  results: >
+    MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004
+    PASS, and SE-001-R1 FAIL stand as separate immutable results. MI-004's
+    recorded 23/23 at its original execution condition is never repaired,
+    relabeled, or reinterpreted. SE-001 remains published-superseded with no
+    execution result.
+  context_pack_authority: >
+    The explicitly human-authorized Context Pack
+    nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap
+    version 1 remains bounded Level 4 context state with digests
+    e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1 (pack),
+    a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc
+    (authorization record), and
+    9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838
+    (adapter view); no re-authorization occurs and no Level 5-6 authority is
+    created.
+
+prohibited_actions:
+  - implement the selected effort or any part of it
+  - author, authorize, or execute SE-001-R2, MI-005, or broader work
+  - modify any explicitly immutable byte, path, or recorded result
+  - create or modify any Nestfolio evidence path
+  - change any diagnostic identifier, scenario meaning, scenario breadth, or
+    expected outcome other than restoring F3's contracted observation of
+    CONTEXT_CONTRADICTION_UNRESOLVED
+  - change dependencies, install packages, or create package-lock.json
+  - invoke any Skill, /backlog-next, or continuity:invoke for the suites or
+    the correction
+  - create Work, Scope, Context, Run, Assurance, Decision, Learning,
+    completion, or Level 5-6 state
+  - rewrite published history, force-push, or amend any pushed commit
+  - push the Nestfolio correction before every required validation passes
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  pass_rule: >
+    Issue MI-004-R1 UNCONDITIONAL PASS only if the session gates held, the
+    pre-edit defect reproduced exactly as contracted, both bounded edits
+    stayed within the two permitted paths, the interim check returned its
+    exact contracted result, every required validation passed at the
+    corrected committed revision, the published Nestfolio correction commit
+    contains exactly the two paths with the exact contracted subject, every
+    explicitly immutable byte and recorded result remains exact, and no
+    prohibited action occurred.
+  fail_rule: >
+    Any missing, different, ambiguous, skipped, drifted, out-of-scope, or
+    failed required condition after valid execution start is MI-004-R1
+    UNCONDITIONAL FAIL. Apply failure_recovery before closure if any
+    Nestfolio mutation occurred. No qualified PASS, partial result, or
+    silent repair is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    The next valid program operation is authoring, reviewing, and publishing
+    under DR-0024 the SE-001-R2 contract re-contracting the selected-effort
+    execution dashboard-bff-awaiting-confirmation-activity-gap against the
+    corrected published Nestfolio revision, carrying the SE-001 product
+    bindings forward unchanged: exclusive consumption through the
+    digest-matched adapter view of Context Pack version 1 (digests pinned
+    above), the deterministic frozen writable boundary
+    (se001-writable-boundary@1), the fail-before/pass-after gap proof, and
+    the fifteen create-exactly-on-PASS evidence paths. Selection is not
+    authorization; MI-005 remains blocked.
+  on_fail: >
+    Keep SE-001-R2 and MI-005 blocked and select only another bounded
+    correction or explicit review supported by the failure evidence. Do not
+    broaden scope.
+
+completion_criteria:
+  - published MI-004-R1 contract on continuity-lab main
+  - executed correction with one published two-path Nestfolio commit and the
+    new HEAD SHA recorded, or a contracted failure closure with Nestfolio
+    restored byte-exact to the start revision
+  - all five suites green at the corrected revision without any Skill
+  - continuity-lab closure published with the canonical report and exact
+    manifests
+  - end-of-session handoff per continuity-workspace CLAUDE.md naming one
+    recommended next operation

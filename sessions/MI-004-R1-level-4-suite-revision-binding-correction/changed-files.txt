@@ -1,0 +1,4 @@
+A sessions/MI-004-R1-level-4-suite-revision-binding-correction/changed-files.txt
+A sessions/MI-004-R1-level-4-suite-revision-binding-correction/context-pack.yaml
+A sessions/MI-004-R1-level-4-suite-revision-binding-correction/prompt.md
+A sessions/MI-004-R1-level-4-suite-revision-binding-correction/session-handoff.md
