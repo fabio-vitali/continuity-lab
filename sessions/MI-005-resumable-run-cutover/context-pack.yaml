@@ -1,9 +1,12 @@
 contract:
+  queue_position: 30
+  queue_summary: "MI-005 — Resumable Run Cutover contract authored, reviewed, and published at continuity-lab 9477a7d120aff64833f1824ca99b91ded89bc40b; execution separately authorized; not executed"
   status: contracted-published
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17
   finalized_on: 2026-07-17
   published_on: 2026-07-17
+  published_contract_revision: 9477a7d120aff64833f1824ca99b91ded89bc40b
   process_regime: DR-0024 lightened development process
   contract_authorized: true
   publication_authorized: true

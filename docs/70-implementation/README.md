@@ -40,6 +40,7 @@ edit it by hand. Full detail lives in each iteration's canonical report.
 - SE-001-R2 — executed 2026-07-17; unconditional FAIL on the post-implementation validation; the working-tree purity guards of the published suites are jointly unsatisfiable with the contracted uncommitted close state; full rollback restored the exact start revision byte-identical; selected effort not implemented
 - SE-001-R3 — executed 2026-07-17; unconditional PASS with the isolated committed-copy validation correction; selected effort implemented as a 26-path uncommitted delta at Nestfolio `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` (manifest `8affe6ca94271d646217d03e1931736da73188c4766df80a2d484ed2069f450a`); publication separately authorized
 - SE-001-PUB — published 2026-07-17; the SE-001 selected effort implementation and evidence committed and pushed at exact Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded
+- MI-005 — Resumable Run Cutover contract authored, reviewed, and published at continuity-lab 9477a7d120aff64833f1824ca99b91ded89bc40b; execution separately authorized; not executed
 <!-- generated:implementation-slices:end -->
 
 Canonical reports:
