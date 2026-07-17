@@ -37,7 +37,7 @@ const SESSIONS_DIR = join(ROOT, 'sessions');
 const PROGRAM_STATE = join(ROOT, 'docs', '90-state', 'program-state.md');
 const IMPL_README = join(ROOT, 'docs', '70-implementation', 'README.md');
 const PERMANENT_TAIL = [
-  'MI-006 and MI-007 — blocked',
+  'MI-007 — blocked',
   'broader implementation and unrelated migration — blocked',
 ];
 const IMPLEMENTATION_ID = /^(VS|MI|SE)-/;

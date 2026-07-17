@@ -1,0 +1,768 @@
+contract:
+  queue_position: 32
+  queue_summary: "MI-006 — Evidence-Bound Completion and Guard Coexistence — contracted and published; execution blocked pending explicit authorization; binds the Level 6 Assurance portion (criterion-to-Evidence completion of the one target-routed effort dashboard-bff-awaiting-confirmation-activity-gap, Guard classification and coexistence with current checks) to the pinned engine at Nestfolio eafa09b81a600bd58fe8f4639298a182039d21f5"
+  status: contracted-published
+  authored_on: 2026-07-18
+  reviewed_on: 2026-07-18
+  finalized_on: 2026-07-18
+  published_on: 2026-07-18
+  published_contract_revision: PENDING-PUBLICATION
+  execution_contract_revision: PENDING-PUBLICATION
+  process_regime: DR-0024 lightened development process
+  contract_authorized: true
+  publication_authorized: true
+  execution_authorized: false
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - docs/40-product-experience/product-experience.md
+    - docs/30-target-architecture/target-architecture.md
+    - docs/00-governance/design-levels.md
+    - docs/70-implementation/vs-001-resumable-agent-work-session.md
+    - docs/70-implementation/vs-001a-claude-code-session-confirmation.md
+    - docs/70-implementation/mi-004-authorized-context-introduction.md
+    - docs/70-implementation/mi-005-resumable-run-cutover.md
+    - sessions/MI-005-resumable-run-cutover/context-pack.yaml
+    - decisions/DR-0005-separate-goal-and-guard.md
+    - decisions/DR-0014-repository-local-canonical-state.md
+    - decisions/DR-0017-govern-assurance-and-learning-promotion.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0020-explicit-human-context-authorization-by-default.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
+    - decisions/DR-0025-generated-program-indices-and-current-phase-compaction.md
+  authorization_rule: >
+    This contract is authored, reviewed, and published in one development
+    session under DR-0024. Publication requires the human program owner's
+    explicit approval of the reviewed contract. Execution is NOT authorized
+    by the authoring session: it requires either a later fresh session
+    launched under prompt.md beside this file with the exact published
+    contract revision resolved, or an explicit same-session extension of
+    authorization by the human program owner after publication. Nothing here
+    authorizes MI-007, current journal retirement, learning promotion, or
+    broader work.
+
+iteration:
+  id: MI-006
+  name: Evidence-Bound Completion and Guard Coexistence
+  type: bounded-level-6-assurance-completion-cutover
+  px_level: 6
+  px_portion: assurance
+  status: contracted-published
+  predecessor_results:
+    - MI-002-R2 UNCONDITIONAL PASS
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+    - MI-003-R2 UNCONDITIONAL PASS
+    - MI-004 UNCONDITIONAL PASS
+    - SE-001-R1 UNCONDITIONAL FAIL
+    - MI-004-R1 UNCONDITIONAL PASS
+    - SE-001-R2 UNCONDITIONAL FAIL
+    - SE-001-R3 UNCONDITIONAL PASS
+    - MI-005 UNCONDITIONAL PASS
+    - SE-001-PUB published repository state at Nestfolio 363283bcc97b1e04710db0e7f759ffffddb18b69 (no execution result)
+    - MI-005-PUB published Level 5 evidence at Nestfolio eafa09b81a600bd58fe8f4639298a182039d21f5 (no execution result)
+  bound_nestfolio_revision: eafa09b81a600bd58fe8f4639298a182039d21f5
+  bound_selected_effort:
+    source_path: docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    source_identity: dashboard-bff-awaiting-confirmation-activity-gap
+    source_revision: fd5e58b35e665fa5fa0db3c2c31ea5561442f9b6
+    source_sha256: b656733991c96c4275d11e9a9f2bff7f5ac72cdd298cbc68a4b94b6799dc742d
+    level_3_publication_revision: b9d7264082322e09cfd233819b79f128ef912e31
+    level_4_publication_revision: a760d6f41ff14491d5b008a7f13234ba0221bcec
+    level_4_correction_revision: 89ef74ee32740d30b2ddc7f0eb69f24a1374eea6
+    implementation_publication_revision: 363283bcc97b1e04710db0e7f759ffffddb18b69
+    level_5_run: run-mi005 (closed at Level 5 operational scope only; immutable; never reopened, reused, or completed by MI-006)
+    role_in_mi_006: >
+      The selected effort is the one target-routed Work effort of the
+      program. Its Level 3 route is active, its authorized Level 4 Context
+      Pack version 1 is bound by digest, its implementation and evidence are
+      published (SE-001-PUB at 363283bc), and one Level 5 target Run
+      (run-mi005) was created and closed at operational scope only
+      (MI-005-PUB at eafa09b8). MI-006 performs the first Evidence-bound Work
+      completion of this effort: it forms an Assurance Plan mapping the
+      effort's declared completion criteria to typed Evidence, validates
+      each criterion, classifies the relevant current checks (validators
+      versus Guards), and completes the target Work Item through the pinned
+      engine when every criterion has accepted Evidence or an authorized
+      Waiver. MI-006 never re-implements or mutates the effort's
+      implementation, backlog planning text, Level 1-5 artifacts, or the
+      run-mi005 record; the sole permitted canonical planning mutation is the
+      engine's atomic completion write-back of the backlog item's tracking
+      fields (status/closed/validation_gate).
+  effort_completion_criteria_source: >
+    The effort's declared completion criteria are the three criteria recorded
+    in the published Level 3 work-brief
+    (continuity/level-3/work-brief.json, "criteria" array) at the bound
+    Nestfolio revision, exactly:
+    (1) investigation determines whether the dashboard recent-activity feed
+    is expected to show an awaiting-confirmation item and whether it
+    currently surfaces one via DECISION_PACKET_CREATED or the DecisionPacket
+    update CDC;
+    (2) if a real gap is confirmed, the signal is sourced from the
+    DecisionPacket AWAITING_CONFIRMATION status via the existing row CDC,
+    never from the removed dead event;
+    (3) dashboard-bff unit and integration suites remain green and the
+    removed USER_CONFIRMATION_REQUESTED handler is not reintroduced.
+    MI-006 binds these three criteria into the target Work Item without
+    altering their wording and maps each to a typed validator and required
+    Evidence mode; it never invents, removes, or re-scopes a criterion.
+  bound_context_pack:
+    name: nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap
+    version: 1
+    context_pack_sha256: e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1
+    formation_trace_sha256: 8c05453897a28efc0abc43c143c4657175c7bfed167cf774d783b409b6c94911
+    authorization_record_sha256: a23ec489098ba487ac27da2f1ae8c8752916a462517bae553ead7f4e062221cc
+    adapter_view_sha256: 9062458c02bf4ac816cbd7d72af3f1ed3c0e91246217dc83811afc4bedbbe838
+    authorized_by: fabio.vitali (human program owner)
+    authorized_at: 2026-07-16T18:50:36.000Z
+    binding_rule: >
+      MI-006 binds the authorized Level 4 Context Pack version 1 and the
+      Level 2 lock exactly, by digest, at Run creation and at every freshness
+      validation. The pack is authorized for exactly this effort and the
+      MI-006 completion Run is a Run of exactly this effort's target route,
+      so the authorization scope is respected. MI-006 never forms, refreshes,
+      re-validates, re-authorizes, versions, or edits any Context Pack; a
+      stale, revoked, or digest-mismatched context blocks fail-closed.
+  bound_level_2_lock:
+    packs: nestfolio.level-1@1.0.1 plus continuity.repository-tools@1.0.0
+    procedures: nestfolio.backlog-next@1.0.1 plus continuity.repository-status@1.0.0
+    aggregate_sha256: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+  bound_level_3_scope:
+    scope_digest: db7a45278e8f4a270552e3ae1db3695b70e07d1624b27bcdc28f6417883a5ad6
+
+objective:
+  primary_question: >
+    Can the one target-routed Work effort be Evidence-bound completed — moved
+    to a trusted target completed state through the pinned engine — only when
+    every declared completion criterion has accepted typed Evidence or an
+    explicit authorized Waiver, with a criterion-to-Evidence matrix spanning
+    at least a deterministic mode and at least one non-deterministic mode
+    (agent review and human review), while the current Nestfolio checks
+    (dashboard-bff unit and integration suites, commit and ship gates, audit
+    tooling) and external systems (Git) remain the sole authorities for their
+    own underlying results; a current check becomes a target Guard only
+    through explicit owner, applicability, evaluation mode, required Evidence,
+    severity, exception policy, and lifecycle classification, never automatic
+    conversion; completion is blocked fail-closed on any stale, failed,
+    missing, invalid, unsupported, or unavailable Evidence, on any
+    out-of-Scope effect, on any unresolved Decision, and on any failing
+    blocking Guard; a distinct authorized Waiver path exists and is separate
+    from a pass, is scoped and evidence-linked, and reopens the block on
+    expiry; and it is proven that neither a commit nor a model narrative
+    alone can complete the Work — while no Decision authority, Observation,
+    Lesson, Change Proposal, learning promotion, or other MI-007 or Level 6
+    Decision-and-Learning state is created or claimed?
+  completion_boundary: >
+    Implement and validate only the Level 6 Assurance portion — Evidence-bound
+    completion and Guard coexistence — for the one already selected, already
+    implemented, already Level-5-run effort, through the pinned engine
+    unmodified. Do not re-implement or mutate the effort's implementation, its
+    Level 1-5 artifacts, or any other backlog source. The sole permitted
+    canonical planning mutation is the engine's atomic completion write-back
+    of this one effort's backlog tracking fields. Do not create, claim, or
+    record any Observation, Lesson, Change Proposal, Decision, learning
+    promotion, Guard minting from an agent suggestion, universal registry,
+    remote source, Console, or Level 6 Decision-and-Learning state (MI-007).
+    Do not modify the pinned engine, hooks, or any Skill. Do not read, write,
+    convert, import, re-key, or retire any current journal Run beyond the
+    contracted read-only route check and byte-identity proof. Do not reopen,
+    reuse, or complete run-mi005. Do not begin MI-007 or broader work.
+
+engine_binding:
+  rule: >
+    The store engine is the pinned read-only implementation at
+    runtime/continuity/** (lib including workflow.mjs and store.mjs,
+    adapters/claude-code including cli.mjs and the SessionStart/SessionEnd
+    hooks, tools, tests) together with the hook registration in
+    .claude/settings.json, exactly as pinned and verified by MI-005. The
+    engine already implements the complete Evidence-bound completion loop —
+    validation-plan formation from Work Item criteria, typed validators,
+    immutable validation-result and evidence artifacts, the completion gate
+    (COMPLETION_GATE_BLOCKED on any non-passed criterion or missing linked
+    Evidence), lease-gated atomic completion, and the backlog completion
+    write-back. MI-006 uses this machinery unmodified: it introduces no engine
+    code and changes no engine byte. Before any mutation the executor records
+    the exact SHA-256 of every engine file and of .claude/settings.json into
+    continuity/level-6/engine-lock.json and verifies them against the bound
+    revision; a mismatch blocks fail-closed with ENGINE_ASSET_MISMATCH. If the
+    pinned engine cannot satisfy a contracted Assurance policy without
+    violating this contract's write boundary, execution blocks fail-closed
+    with ENGINE_POLICY_MISMATCH and MI-006 closes UNCONDITIONAL FAIL without
+    repair or engine modification.
+  level_6_binding_artifact: >
+    continuity/level-6/completion-binding.json declares, in canonical JSON:
+    the target Work Item identity and store paths; the bound effort, Context
+    Pack, Level 2 lock, Level 3 scope, and repository revision digests; the
+    criterion-to-Evidence-mode matrix; the validator-versus-Guard
+    classification with each Guard's full metadata; the Waiver policy; the
+    coexistence route record for the referenced current checks and external
+    gates; the atomic-completion policy; and the explicit statement that no
+    MI-007 Decision-and-Learning state (Observation, Lesson, Change Proposal,
+    learning promotion) is created. tests/continuity-level-6.test.mjs
+    validates this binding deterministically against the repository and the
+    produced target artifacts.
+
+session_gates:
+  rule: >
+    Per DR-0024, before execution starts: continuity-workspace,
+    continuity-lab, and Nestfolio are on main with clean working trees;
+    continuity-lab HEAD is the exact published revision containing this
+    contract (same-session execution uses the revision just pushed;
+    later-session execution uses the revision named by prompt.md);
+    Nestfolio HEAD is eafa09b81a600bd58fe8f4639298a182039d21f5, the published
+    MI-005 Level 5 evidence revision (subject "Publish MI-005 resumable run
+    cutover Level 5 evidence"). Every published Level 1-5 artifact, every
+    VS-001/VS-001A/MI-005 record, and every recorded historical result is a
+    read-only input except the single permitted backlog completion write-back.
+    A wrong branch, dirty tree, or missing contract stops the session before
+    any Nestfolio mutation. No multi-way alignment gates, remote-ref checks, or
+    byte-level authoring manifests apply.
+
+executor_identity:
+  session_executor: >
+    The MI-006 execution session is conducted directly by Claude Code
+    operating under authorization_rule. It orchestrates preparation, Work
+    Item and Guard authoring, Assurance Plan formation, validation, Evidence
+    production, completion, failure scenarios, evidence, and closure with its
+    own tools, driving the pinned adapter CLI and the pinned engine directly.
+  sub_agent_rule: >
+    Per DR-0024 the orchestrating executor may use its own sub-agents and
+    tools for mechanical work at its discretion. Delegating contracted work
+    to the product's executor procedures — any Skill, /backlog-next,
+    continuity:invoke — remains prohibited and is a mandatory failure (F10).
+    Running node for tests, validation, the pinned engine's CLI, and the
+    published continuity tooling's own checks is direct work, not delegation.
+  no_separate_genuine_session_rule: >
+    MI-006 does NOT require a separately launched human-provenanced Claude
+    Code validation Session (the resume-genuineness claim was intrinsic to
+    MI-005 only). The completion gate's rigor comes from the engine, which
+    requires every criterion to be status passed with a linked immutable
+    Evidence artifact of the declared type; a narrative that does not produce
+    the required typed Evidence cannot flip a criterion to passed. The
+    orchestrating executor produces the deterministic Evidence directly (real
+    suite runs) and the agent-review Evidence as its own typed artifact
+    recorded with the executor's provenance; the human-review Evidence is an
+    explicit program-owner authorization record with machine-captured UTC
+    (MI-004 authorization precedent). Agent-review and human-review Evidence
+    remain distinct typed modes and are never collapsed into the deterministic
+    mode or into one opaque score (DR-0017).
+
+assurance_plan:
+  formation_rule: >
+    MI-006 authors the effort's target Work Item binding
+    (continuity/bindings/nestfolio/work-items/) carrying the three unchanged
+    Level 3 criteria, and forms the Assurance Plan (validation plan) through
+    the pinned engine from that Work Item. Each criterion is mapped to exactly
+    one typed validator and one required Evidence mode. The completion policy
+    is the engine's all-required-criteria-pass-with-evidence. The plan binds
+    the exact effort source revision and digest, the Level 3 scope digest, the
+    Level 4 Context Pack version 1 digest, and the Level 2 lock aggregate.
+  criterion_to_evidence_matrix:
+    - criterion: 1
+      statement: investigation determines expected-versus-actual recent-activity behavior for L2 AWAITING_CONFIRMATION decisions
+      validation_mode: agent-review plus human-review
+      evidence: >
+        A typed agent-review Evidence artifact recording the executor's
+        investigation finding (expected behavior, actual behavior, and whether
+        a real gap exists), plus a typed human-review Evidence artifact: the
+        program owner's explicit authorization accepting the investigation
+        finding. Neither a commit message nor an unrecorded narrative
+        satisfies this criterion.
+    - criterion: 2
+      statement: if a real gap is confirmed, the signal is sourced from the DecisionPacket AWAITING_CONFIRMATION status via the existing row CDC, never from the removed dead event
+      validation_mode: deterministic plus agent-review
+      evidence: >
+        A deterministic command Evidence artifact from the dashboard-bff
+        integration suite asserting the awaiting-confirmation projection is
+        sourced from the DecisionPacket status CDC path, plus a typed
+        agent-review Evidence artifact confirming the sourcing is the existing
+        CDC row path and not the removed dead event. If the investigation
+        finds no real gap, this criterion is satisfied by the recorded
+        no-gap finding and the deterministic proof that no dead-event source
+        was introduced.
+    - criterion: 3
+      statement: dashboard-bff unit and integration suites remain green and the removed USER_CONFIRMATION_REQUESTED handler is not reintroduced
+      validation_mode: deterministic
+      evidence: >
+        A deterministic command Evidence artifact from the green dashboard-bff
+        unit and integration suites, plus a deterministic file/absence
+        Evidence artifact proving the removed USER_CONFIRMATION_REQUESTED
+        handler is absent. This criterion's absence condition is additionally
+        the subject of the classified target Guard defined under
+        guard_classification.
+  external_evidence_reference: >
+    The Git published-implementation revision (363283bc) and the current
+    commit/ship gate results are referenced once, read-only, as an
+    external-authority provenance record (locator, digest, freshness) inside
+    the coexistence route record. MI-006 declares no second Git or CI verdict,
+    duplicates no external object, and never treats an unavailable external
+    result as a pass.
+  mode_distinctness_rule: >
+    Deterministic, agent-review, and human-review Evidence are recorded as
+    distinct typed modes with separate provenance and authority and are never
+    merged into one score (DR-0017). The completion matrix must cover at least
+    the deterministic mode and at least one of agent-review or human-review;
+    this contract requires all three across the three criteria.
+
+guard_classification:
+  rule: >
+    MI-006 classifies the relevant current checks explicitly. The dashboard-bff
+    unit and integration suites are classified as validators / project rules
+    (deterministic Evidence sources referenced by the Assurance Plan); they
+    keep their own authority and are NOT automatically Guards. The current Git
+    commit and ship gates remain the underlying authorities for their own
+    results and are referenced once with exact provenance; they are not
+    converted into Guards. To prove the target Guard classification mechanism,
+    MI-006 classifies exactly one concrete condition as a target Guard with
+    full metadata following the existing guard-binding schema
+    (schema_version, id, version, status, condition, rationale, applicability,
+    evaluation_mode, severity, owner, exception_policy) and stores it under
+    continuity/bindings/nestfolio/guards/. No current check is automatically
+    minted into a Guard; any attempt to convert a check to a Guard without
+    this explicit classification is a mandatory failure (F-AUTO-GUARD).
+  classified_guard:
+    id: nestfolio-dashboard-bff-no-dead-user-confirmation-requested-handler
+    condition: >
+      The dashboard-bff service does not reintroduce the removed dead
+      USER_CONFIRMATION_REQUESTED event handler; the awaiting-confirmation
+      signal, if surfaced, is sourced only from the DecisionPacket
+      AWAITING_CONFIRMATION status via the existing row CDC.
+    rationale: >
+      This is a condition that must REMAIN true over time (a Guard per
+      DR-0005), distinct from the completion criteria that must BECOME true.
+      Reintroducing the dead event is a regression the effort's whole point
+      was to prevent.
+    applicability: Work Item dashboard-bff-awaiting-confirmation-activity-gap and the dashboard-bff service
+    evaluation_mode: deterministic
+    severity: blocking
+    owner: fabio.vitali (human program owner)
+    exception_policy: >
+      No automatic exception. A temporary exception requires an explicit
+      authorized, scoped, evidence-linked Waiver; expiry reopens the block.
+  goal_versus_guard_note: >
+    The three completion criteria are Goal-shaped (conditions to make true for
+    this Work Item). The classified Guard is Guard-shaped (a condition to keep
+    true). DR-0005 forbids collapsing them into one entity or lifecycle; MI-006
+    keeps completion criteria and the Guard as separate objects with separate
+    authority.
+
+waiver_path:
+  rule: >
+    MI-006 demonstrates the distinct authorized Waiver path WITHOUT waiving any
+    real effort criterion (all three real criteria must be satisfied by
+    accepted Evidence for the genuine completion). The Waiver mechanism is
+    exercised in an isolated temporary fixture outside all three repositories,
+    on a synthetic criterion, proving that a Waiver: is explicit and authorized
+    by a declared human authority; is scoped and time-bounded; is
+    evidence-linked; is recorded as DISTINCT from a pass (never rendered as
+    passing Evidence); and, on expiry, reopens the blocked criterion. A Waiver
+    is never created automatically (auto-waiver is a mandatory failure).
+
+completion_execution:
+  scope: >
+    On PASS, MI-006 performs the first real Evidence-bound Work completion of
+    the program through the pinned engine in the real Nestfolio working tree
+    (human program owner authorization Q1: complete the effort for real). The
+    completion is atomic: the engine's completeRun transitions the target Work
+    Item to completed, the working set to completed, records the final verified
+    Checkpoint, links every accepted Evidence artifact, and writes back the one
+    backlog item's tracking fields (status shipped, closed date, validation
+    gate referencing run-mi006 and the final Checkpoint). This is the sole
+    permitted mutation of a canonical planning source.
+  preconditions_for_completion: >
+    Completion runs only after: every criterion is status passed with a linked
+    immutable Evidence artifact of the declared type; the classified Guard
+    evaluates true; no effect is out of the Level 3 Scope; no Decision is
+    unresolved; the active mutating lease is held by the completing session;
+    and the backlog item's current bytes equal the Work Item's declared
+    source.sha256 (a mismatch blocks fail-closed as STALE). Any unmet
+    precondition blocks with the engine's COMPLETION_GATE_BLOCKED (or the
+    exact typed diagnostic) and MI-006 does not force completion.
+  backlog_writeback_truthfulness: >
+    The backlog write-back is truthful: the effort's implementation genuinely
+    shipped at Nestfolio 363283bc and its evidence is published. The write-back
+    updates only the tracking fields the engine writes; it does not rewrite the
+    planning narrative, re-rank, or synchronize any other backlog item, and it
+    is fully reversible during execution (the whole delta stays uncommitted and
+    the pre-write backlog bytes are recorded for byte-exact rollback).
+
+target_run:
+  rule: >
+    MI-006 creates one new bounded Level 6 target Run run-mi006 in the DR-0014
+    target operational store, bound to the effort's target Work Item, working
+    set ws-mi006, the Level 3 Scope digest, the Level 4 Context Pack version 1
+    digest, the Level 2 lock aggregate, and the bound repository revision and
+    working-tree fingerprint. run-mi006 is a distinct Run with a new identity;
+    run-mi005 is closed and is never reopened, reused, converted, or completed.
+    The dual-run route check proves no active current-journal Run and no other
+    active target Run exists for the effort before Run creation
+    (DUAL_RUN_ROUTE_CONFLICT otherwise). run-mi006's contracted work is exactly
+    the Assurance and completion of the effort; it performs no effort
+    re-implementation and no material side effect beyond the contracted
+    Assurance, Evidence, and completion records.
+  lease_and_audit: >
+    Completion requires the single-writer lease (LEASE_REQUIRED otherwise); the
+    lease is released at completion. The audit ledger is append-only: the
+    recorded pre-execution bytes remain the exact prefix of the final file. The
+    derived index is a rebuildable non-authoritative projection.
+
+write_set_rehearsal: >
+  Before any real-tree mutation, the orchestrating executor rehearses the
+  complete mechanics — Work Item and Guard authoring, Run creation, Assurance
+  Plan formation, validation, Evidence production, the classified-Guard
+  evaluation, the completion including the backlog write-back, index rebuild,
+  and rollback — in an isolated temporary copy of Nestfolio outside all three
+  repositories, driving the pinned adapter CLI and engine directly. The
+  rehearsal records the exact produced write-set: every created path and every
+  modified path with before/after digests, including the backlog write-back
+  path. The write-set is frozen and must satisfy nestfolio_scope exactly; a
+  rehearsal write outside the permitted classes blocks the real execution
+  fail-closed with ENGINE_POLICY_MISMATCH. The real execution must produce
+  exactly the frozen write-set plus the contracted evidence records; any
+  deviation is MANIFEST_SCOPE_MISMATCH. The copy is removed with absence proof.
+
+required_preconditions:
+  - the session gates in session_gates pass before any Nestfolio mutation
+  - every engine file and .claude/settings.json verify against the recorded engine-lock digests at the bound revision (ENGINE_ASSET_MISMATCH otherwise)
+  - the published Level 4 artifacts verify against every bound digest, record valid 18/18, and carry no stale, rejected, or revoked disposition
+  - the published Level 3 artifacts verify internally and the route remains active for the bound selected effort
+  - the bound selected-effort backlog source is byte-identical to its recorded SHA-256 at the bound Nestfolio revision and equals the Work Item's declared source.sha256
+  - the Level 2 lock verifies with aggregate 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+  - the published Level 5 run-binding and engine-lock verify and run-mi005 is closed (no active target Run for the effort)
+  - the read-only route check records no active current journal Run for the bound effort and no other active target Run, and records the current journal tree digest
+  - all fixed create paths under nestfolio_scope are absent at the published start and no path under .continuity/runs/run-mi006, continuity/level-6, the effort Work Item binding, or the classified Guard binding exists
+  - package-lock.json changes and dependency operations are not needed (pnpm-lock.yaml is byte-immutable)
+  - before mutation, without invoking any Skill: Level 5 tests 7/7, engine suite 9/9 (exit 0), Level 4 23/23, Level 3 23/23, Level 2 23/23, retained Level 1 14/14, and backlog-next 68/68
+  - the dashboard-bff unit and integration suites run green at the bound revision and are recorded as deterministic Evidence sources
+  - the write-set rehearsal completed in the isolated copy and its frozen write-set satisfies nestfolio_scope exactly
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata, exact committed objects, and the Git common directory journal/ tree (route check and byte-identity proof only)
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json
+    - .claude/skills/backlog-next/SKILL.md and .claude/skills/backlog-next/test/**
+    - runtime/continuity/** (the pinned engine) and every other runtime/** path
+    - continuity/level-1/** through continuity/level-5/**
+    - continuity/artifacts/**, continuity/bindings/** (pre-existing files), continuity/packs/**, continuity/dogfood/** (pre-existing files)
+    - .continuity/** pre-existing files, including the tracked VS-001/VS-001A/MI-005 records
+    - continuity/evidence/mi-002/** through continuity/evidence/mi-005/**, se-001/**, vs001a/** and every other evidence tree
+    - the dashboard-bff service source and tests referenced by the deterministic validators (read-only; never modified)
+    - tests/continuity-level-1.test.mjs through tests/continuity-level-5.test.mjs
+  create_fixed_paths_on_pass:
+    - continuity/level-6/completion-binding.json
+    - continuity/level-6/engine-lock.json
+    - tests/continuity-level-6.test.mjs
+    - continuity/bindings/nestfolio/work-items/dashboard-bff-awaiting-confirmation-activity-gap.json
+    - continuity/bindings/nestfolio/guards/mi006-dashboard-bff-no-dead-user-confirmation-requested-handler.json
+    - continuity/evidence/mi-006/00-repository-bindings.json
+    - continuity/evidence/mi-006/01-engine-lock-and-route.json
+    - continuity/evidence/mi-006/02-work-item-and-assurance-plan.json
+    - continuity/evidence/mi-006/03-criterion-evidence-and-modes.json
+    - continuity/evidence/mi-006/04-guard-classification-and-coexistence.json
+    - continuity/evidence/mi-006/05-completion-and-atomicity.json
+    - continuity/evidence/mi-006/06-mandatory-failures.json
+    - continuity/evidence/mi-006/07-waiver-path.json
+    - continuity/evidence/mi-006/08-preservation-and-rollback.json
+    - continuity/evidence/mi-006/09-criterion-matrix-and-verdict.json
+    - continuity/evidence/mi-006/commands/01-level6-tests.json
+    - continuity/evidence/mi-006/commands/02-engine-tests.json
+    - continuity/evidence/mi-006/commands/03-level5-tests.json
+    - continuity/evidence/mi-006/commands/04-level4-tests.json
+    - continuity/evidence/mi-006/commands/05-level3-tests.json
+    - continuity/evidence/mi-006/commands/06-level2-tests.json
+    - continuity/evidence/mi-006/commands/07-level1-tests.json
+    - continuity/evidence/mi-006/commands/08-backlog-next-tests.json
+    - continuity/evidence/mi-006/commands/09-dashboard-bff-unit-tests.json
+    - continuity/evidence/mi-006/commands/10-dashboard-bff-integration-tests.json
+    - continuity/evidence/mi-006/commands/11-final-changed-files.json
+  create_engine_write_set_classes: >
+    Engine-produced creates are permitted only as new files with MI-006
+    identities under: continuity/artifacts/** (new validation-plans,
+    validation-results, evidence, runs, checkpoints, handoffs, work-item
+    references, working-set references, scope references, context references,
+    and pack-lock references only — NO observations and NO lessons, which are
+    MI-007), .continuity/runs/run-mi006/**, .continuity/derived/execution-views/
+    (the new execution view), and .continuity/executor-sessions/ (the MI-006
+    executor session record produced by the adapter start). The exact paths are
+    frozen by the write-set rehearsal and recorded in the final manifest.
+  modify_exactly:
+    - "docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md — the single permitted canonical planning mutation: the engine's atomic completion write-back of the item's tracking fields only (status shipped, closed date, validation_gate); the planning narrative is otherwise byte-identical and pre-write bytes are recorded for rollback"
+    - ".continuity/audit.ndjson — append-only: the recorded pre-execution bytes must remain the exact unmodified prefix of the final file, proven by prefix digest comparison"
+    - ".continuity/derived/index.json — derived non-authoritative projection, rewritten only by the pinned engine's deterministic rebuild; the pre-execution snapshot remains recoverable from Git history"
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly: the fixed create paths, the frozen engine write-set creates, and
+    the three permitted modified paths — with no staged path and no other
+    modified, deleted, renamed, or additional path. Every other pre-existing
+    tracked byte, including every Level 1-5 artifact, every VS-001/VS-001A and
+    MI-005 record, every other backlog item, the pinned engine, and the entire
+    current journal tree, is byte-immutable for the whole execution. The delta
+    remains uncommitted and unstaged at execution close; publication is
+    separately authorized.
+  path_absence_rule: >
+    Any pre-existing fixed create path is a collision and blocks execution; it
+    must not be overwritten, adopted, repaired, or deleted.
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: the pinned engine digests, hook registration, and Level 6 binding verify exactly and are recorded in engine-lock.json and completion-binding.json; the Level 1-5 artifacts and the run-mi005 closure verify read-only
+  - id: S2
+    requirement: the effort's target Work Item binding is authored carrying the three unchanged Level 3 criteria mapped to typed validators and required Evidence modes, and the classified Guard is authored with full metadata; the route check proves no active current-journal or target dual Run for the effort
+  - id: S3
+    requirement: Run run-mi006 is created binding the exact Work reference, Scope digest, Context Pack version 1 digest, Level 2 lock aggregate, repository revision and working-tree fingerprint, and lease policy, and the Assurance Plan (validation plan) is formed from the Work Item with completion policy all-required-criteria-pass-with-evidence
+  - id: S4
+    requirement: each criterion is validated and produces a linked immutable Evidence artifact of the declared type; the deterministic Evidence comes from real green suite runs and a real absence check, the agent-review Evidence is a distinct typed artifact, and the human-review Evidence is the program owner's explicit authorization record with machine-captured UTC
+  - id: S5
+    requirement: the criterion-to-Evidence matrix covers the deterministic, agent-review, and human-review modes as distinct typed modes with separate provenance and authority, never collapsed into one score
+  - id: S6
+    requirement: the dashboard-bff suites are classified as validators and the one classified Guard evaluates true; the current Git commit/ship gates and the published implementation revision are referenced once with exact provenance and no second verdict; the coexistence route record is written
+  - id: S7
+    requirement: with every criterion passed and Evidence-linked, the classified Guard true, no out-of-Scope effect, no unresolved Decision, and the lease held, the engine atomically completes the Work Item, records the final verified Checkpoint, links all Evidence, and performs the truthful backlog completion write-back; the completion is the program's first Evidence-bound Work completion
+  - id: S8
+    requirement: the derived index is deleted and rebuilt deterministically with zero canonical loss, and the audit ledger's pre-execution bytes are proven to be the exact prefix of its final bytes
+  - id: S9
+    requirement: the current journal tree is byte-identical before and after execution (digest comparison over every journal run), no dual writer existed at any point, and no current journal Run was read into, converted, or completed
+  - id: S10
+    requirement: the evidence set is complete, deterministic, and canonically serialized; all isolated fixtures and the rehearsal copy are removed with absence proof; the execution delta remains uncommitted and unstaged with a recorded SHA-256 manifest matching scope_rule exactly
+
+mandatory_failure_scenarios:
+  - id: F1
+    condition: a criterion has failing, stale, missing, invalid, unsupported, or unavailable Evidence, or Evidence bound to a mismatched repository fingerprint or effort revision
+    diagnostic: COMPLETION_GATE_BLOCKED (with the specific typed cause STALE_EVIDENCE, MISSING_EVIDENCE, INVALID_EVIDENCE, UNSUPPORTED_EVIDENCE_MODE, or UNAVAILABLE_EVIDENCE as applicable); completion prohibited
+  - id: F2
+    condition: an attempt to complete the Work while any criterion is not status passed
+    diagnostic: COMPLETION_GATE_BLOCKED; Work returns to validation_failed or blocked, never completed
+  - id: F3
+    condition: an attempt to complete with a criterion marked passed but no linked immutable Evidence artifact
+    diagnostic: COMPLETION_GATE_BLOCKED (missing_evidence)
+  - id: F4
+    condition: an effect or completion action outside the bound Level 3 Scope
+    diagnostic: OUT_OF_SCOPE_EFFECT blocks completion
+  - id: F5
+    condition: an unresolved Decision required by the effort or context blocks completion
+    diagnostic: UNRESOLVED_DECISION_BLOCKS_COMPLETION
+  - id: F6
+    condition: the classified blocking Guard evaluates false (for example a reintroduced dead handler) at completion
+    diagnostic: GUARD_BLOCKS_COMPLETION
+  - id: F-AUTO-GUARD
+    condition: an attempt to treat a current check as a target Guard, or to mint a Guard from an agent suggestion, without the explicit owner/scope/severity/exception/lifecycle classification
+    diagnostic: AUTOMATIC_GUARD_MINTING_PROHIBITED
+  - id: F-AUTO-WAIVER
+    condition: an attempt to create a Waiver automatically or to render a Waiver as passing Evidence
+    diagnostic: AUTOMATIC_OR_DISGUISED_WAIVER_PROHIBITED
+  - id: F-NARRATIVE
+    condition: an attempt to complete the Work on the strength of a commit message or model narrative alone, without the required typed Evidence
+    diagnostic: COMPLETION_GATE_BLOCKED; proves a commit or narrative alone cannot complete Work
+  - id: F-STALE-CONTEXT
+    condition: start, validate, or complete against a non-authorized, stale, rejected, revoked, or digest-mismatched Context Pack version, adapter view, Level 2 lock, Level 3 scope, or engine asset
+    diagnostic: STALE_RUN or UNAUTHORIZED_CONTEXT_DELIVERY
+  - id: F-WAIVER-EXPIRY
+    condition: a scoped Waiver reaches expiry
+    diagnostic: the waived criterion's block reopens; a completion relying on the expired Waiver is blocked
+  - id: F10
+    condition: attempt to delegate contracted work to any Skill, slash command, /backlog-next, continuity:invoke, or other product executor procedure
+    diagnostic: EXECUTOR_DELEGATION_PROHIBITED
+  - id: F11
+    condition: claim or creation of any MI-007 or Level 6 Decision-and-Learning state — Observation, Lesson, Change Proposal, learning promotion, automatic rule/Guard/Skill/Pack mutation, universal registry, remote source, or Console
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+  - id: F12
+    condition: any executor or engine write outside the frozen write-set, fixed create paths, and permitted modify set (including any modification of the pinned engine, hooks, Skills, or any backlog item other than the one permitted completion write-back)
+    diagnostic: MANIFEST_SCOPE_MISMATCH
+  fixture_rule: >
+    F1 through F6, F-AUTO-GUARD, F-AUTO-WAIVER, F-NARRATIVE, F-STALE-CONTEXT,
+    and F-WAIVER-EXPIRY are exercised in isolated temporary fixtures outside
+    all three repositories with exact expected/observed diagnostics, exit
+    codes, fixture digests, and cleanup proof; they never mutate the real Run,
+    the real Work Item completion, or the repositories. F10 through F12 are
+    standing prohibitions whose fail-closed behavior is verified structurally.
+
+coexistence:
+  rule: >
+    Current gates continue independently. The dashboard-bff unit and
+    integration suites and the Git commit/ship gates remain the sole
+    authorities for their own underlying results. Target Assurance invokes or
+    observes them at most once and records exact provenance (argv, cwd role,
+    exit code, stdout/stderr digests, revision, freshness). There is no second
+    Git or CI verdict, no duplicated external object, and no current check is
+    retired by MI-006. A current check retires only after target coverage and
+    project authority accept replacement — deferred beyond MI-006.
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, clean state, and observed time for all three repositories, plus the current journal tree digest
+    - engine-lock evidence records every engine-lock digest verification and the hook registration digest
+    - work-item and assurance-plan evidence record the authored Work Item, the three unchanged criteria with their validator and Evidence-mode mapping, and the formed validation plan by digest
+    - criterion evidence records, per criterion, the validator, the produced immutable Evidence artifact id/revision/digest, the mode, and the repository fingerprint binding
+    - guard evidence records the classified Guard by digest, the validator-versus-Guard classification, and the coexistence route record with each referenced current check's provenance
+    - completion evidence records the atomic completion: the final Checkpoint, the Work Item completed transition, the linked Evidence set, and the backlog write-back before/after digests
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - waiver evidence records the isolated-fixture Waiver demonstration: authority, scope, expiry, evidence link, distinctness from a pass, and reopen-on-expiry proof
+    - criterion evidence references exact source and artifact digests; narrative alone cannot pass a criterion
+    - no chat transcript, hidden manual copy, timestamp-dependent artifact ordering, or unrecorded inference is admissible
+    - temporary fixtures and copies are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-6.test.mjs returns all tests passing
+    - node --test runtime/continuity/test/*.test.mjs exits 0 with zero failures after execution
+    - node --test tests/continuity-level-5.test.mjs returns 7/7 after execution
+    - node --test tests/continuity-level-4.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-3.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-2.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-1.test.mjs returns 14/14 after execution
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68 after execution without invoking the Skill
+    - the dashboard-bff unit and integration suites return green after execution (recorded as deterministic Evidence)
+    - all S1-S10 success scenarios pass
+    - all mandatory failure scenarios fail closed with the exact typed diagnostic
+    - the current journal tree digest after execution equals the recorded pre-execution digest
+    - final Git and digest comparison proves every pre-existing tracked path other than the three permitted modified paths equals the exact start revision, and the three modified paths satisfy their modify_exactly rules
+    - the final Nestfolio manifest contains exactly the paths permitted by scope_rule, uncommitted and unstaged, with a recorded SHA-256 manifest
+  suite_environment_rule: >
+    Because the permitted backlog completion write-back mutates a tracked file,
+    any published Level 1-5 suite or backlog-next suite that carries a
+    working-tree purity guard or hashes the backlog runs its after-execution
+    validation in an isolated committed validation copy exactly per the
+    SE-001-R3 / MI-005 corrected-validation-environment mechanics (throwaway
+    commit in a temporary copy outside all three repositories, per-path delta
+    digest equality, clean copy status, removal with absence proof); the
+    pre-mutation runs and all purity-guard-free suites run in the real working
+    tree.
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata for all three repositories, the complete
+    Nestfolio tracked-tree identity, the current journal tree digest, the
+    pre-execution bytes and digests of the three permitted modify paths
+    (including the backlog item), all critical Level 1-5 and
+    VS-001/VS-001A/MI-005 digests, absence of every fixed create path, and a
+    verified external recovery ledger outside all repositories. Do not copy
+    backlog planning content or secrets into the recovery ledger beyond the
+    digests needed for rollback.
+  completion_rollback_proof: >
+    In an isolated temporary copy only, prove that the completion is reversible
+    before applying it in the real tree: complete the Work in the copy, then
+    restore the backlog item, Work Item, and Run to their pre-completion bytes
+    and show the tree is byte-identical, no unknown effect is retried, and
+    nothing is written into the current journal. The real completion is applied
+    only after this proof.
+  execution_failure: >
+    If any actual execution condition fails after mutation, restore the three
+    permitted modify paths (including the backlog item) to their recorded
+    pre-execution bytes, remove only the newly created MI-006 paths, verify
+    Nestfolio is byte-identical and clean at the exact published start revision,
+    retain diagnostics outside all repositories, and close MI-006 as
+    UNCONDITIONAL FAIL in continuity-lab. Never retain partial Level 6
+    completion authority, never leave the Work Item half-completed, and never
+    write into the current journal.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - scripts/generate-program-indices.mjs (queue tail text only, if the recorded blocked tail requires it)
+    - sessions/MI-006-evidence-bound-completion-and-guard-coexistence/context-pack.yaml
+    - sessions/MI-006-evidence-bound-completion-and-guard-coexistence/session-handoff.md
+  create:
+    - docs/70-implementation/mi-006-evidence-bound-completion-and-guard-coexistence.md
+    - sessions/MI-006-evidence-bound-completion-and-guard-coexistence/execution-changed-files.txt
+  rule: >
+    The execution closure records only the one MI-006 result and exact
+    execution facts, and performs the DR-0025 closure obligations
+    (queue_summary update, index regeneration, --check). All MI-002 through
+    MI-005-PUB artifacts and every VS-001/VS-001A/MI-005 record remain
+    immutable. Per DR-0024 the closure may be committed and pushed in the
+    executing session with a concise subject-only message; the Nestfolio
+    execution delta stays uncommitted pending its separate publication
+    authorization.
+
+explicitly_immutable:
+  continuity_workspace: [all content during execution]
+  continuity_lab_during_execution:
+    - all MI-002 through MI-005-PUB artifacts and reports
+    - all VS-001 and VS-001A artifacts and reports
+    - the MI-006 prompt and contract-authoring manifest
+    - every path outside the exact MI-006 execution-closure scope
+  nestfolio:
+    - every pre-existing tracked path except the three permitted modify paths under their modify_exactly rules
+    - the entire Git common directory journal/ tree
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json, .claude/skills/**
+    - runtime/** including the entire pinned engine runtime/continuity/**
+    - docs/backlog/** except the one permitted completion write-back to docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    - continuity/level-1/** through continuity/level-5/**
+    - continuity/evidence/mi-001*/** through continuity/evidence/mi-005/** and continuity/evidence/se-001/** and continuity/evidence/vs001a/**
+    - every pre-existing continuity/artifacts/**, continuity/bindings/**, continuity/packs/**, continuity/dogfood/**, and .continuity/** file
+    - tests/continuity-level-1.test.mjs through tests/continuity-level-5.test.mjs
+    - the dashboard-bff service source and tests (read-only Evidence sources; never modified)
+
+prohibited_actions:
+  - execute MI-006 outside authorization_rule
+  - inspect or modify Nestfolio content before execution validly starts and session gates pass
+  - commit or push the Nestfolio execution delta during execution (isolated-copy throwaway commits under suite_environment_rule and the rehearsal are not real-repository commits); fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history in any real repository during execution
+  - modify, repair, relabel, qualify, supersede, re-grade, or reinterpret any recorded historical result or artifact
+  - reopen, reuse, convert, re-key, or complete run-mi005 or any VS-001/VS-001A record
+  - read, write, convert, import, re-key, or retire any current journal Run beyond the contracted read-only route check and byte-identity proof
+  - dual-write any Run across the current journal and the target store, or create a second active Run for the bound effort
+  - modify the pinned engine runtime/continuity/**, the hooks, .claude/settings.json, or any Skill; introduce any engine code
+  - re-implement, extend, or mutate the selected effort's implementation, its Level 1-5 artifacts, or any dashboard-bff service source
+  - mutate any backlog item other than the one permitted completion write-back to the bound effort's item, or rewrite that item's planning narrative
+  - form, refresh, re-validate, re-authorize, version, or edit any Context Pack or Level 4 artifact
+  - start, validate, or complete from any non-authorized, stale, rejected, revoked, or digest-mismatched context, scope, lock, or engine asset
+  - collapse deterministic, agent-review, and human-review Evidence into one opaque score, or treat an unavailable external result as a pass
+  - mint a Guard automatically from a check or an agent suggestion, or create a Waiver automatically or render it as passing Evidence
+  - complete the Work on a commit message or model narrative alone, or force completion past the engine's completion gate
+  - create or claim any Observation, Lesson, Change Proposal, Decision, learning promotion, automatic rule/Guard/Skill/Pack mutation, universal registry, remote source, universal ranking, Epic orchestration, intake, themes migration, or Console (MI-007 and beyond)
+  - install, remove, or upgrade dependencies, modify package.json, or mutate pnpm-lock.yaml
+  - use parallel agents for the contracted Run, or migrate any Epic or additional effort
+  - execute MI-007 or any broader or unrelated implementation, or scope MI-007 or later slices
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 session gates, engine-lock verification, Level 5/4/3/2 digest verification, run-mi005-closed check, and route check pass fail-closed before mutation
+    - C2 the effort Work Item and the classified Guard are authored exactly (three unchanged criteria mapped to typed validators and Evidence modes; Guard full metadata), and the Assurance Plan is formed from the Work Item with the engine's completion policy
+    - C3 every criterion is validated and produces a linked immutable Evidence artifact of the declared type, spanning distinct deterministic, agent-review, and human-review modes with separate provenance
+    - C4 the dashboard-bff suites are classified as validators, the one classified Guard is authored and evaluates true, current gates and the published revision are referenced once with exact provenance and no second verdict, and the coexistence route record is written
+    - C5 the Work Item is atomically Evidence-bound completed through the pinned engine with the final verified Checkpoint, the linked Evidence set, and the truthful backlog write-back, and the completion is reversible-proven before application
+    - C6 every mandatory failure blocks with the exact typed diagnostic — including missing/stale/invalid/unsupported/unavailable Evidence, out-of-Scope effect, unresolved Decision, blocking-Guard-false, automatic Guard minting, automatic/disguised Waiver, narrative-alone completion, and Waiver expiry
+    - C7 current journal, Levels 1-5, VS-001/VS-001A/MI-005 records, the pinned engine, and every byte outside the permitted sets remain exact; deterministic index rebuild, audit prefix preservation, cleanup with absence proofs, and the exact uncommitted final manifest pass
+  pass_rule: >
+    Issue MI-006 UNCONDITIONAL PASS only if C1-C7, S1-S10, every mandatory
+    failure, every precondition, validation, preservation, rollback, cleanup,
+    and exact-manifest requirement passes conjunctively and no prohibited
+    action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, mismatched, out-of-scope,
+    non-deterministic, partial, or failed condition after valid execution
+    start is MI-006 UNCONDITIONAL FAIL. No qualified PASS, partial PASS,
+    inferred authorization, silent repair, evidence-only override, historical
+    reinterpretation, or history rewrite is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Record MI-006 separately; every prior result remains a separate immutable
+    result. The one target-routed effort is Evidence-bound completed at
+    Level 6 Assurance scope: trusted completion is a proven bounded guarantee,
+    Guard coexistence with current checks is proven, and the MI-007
+    Decision-and-Learning portion remains absent. The Nestfolio execution delta
+    remains uncommitted; its publication requires separate explicit
+    authorization. MI-007 (Governed Learning and Selective Current-Runtime
+    Retirement) becomes the next contractable slice; it remains unauthorized
+    until separately contracted, reviewed, published, and explicitly executed.
+  on_fail: >
+    Preserve all separate results and keep MI-007 blocked. Select only a newly
+    bounded correction or explicit review supported by the failure evidence.
+    Do not broaden scope.
+
+completion_criteria:
+  - internally consistent MI-006 contract authored, reviewed by the human program owner, and published on continuity-lab main in one DR-0024 session
+  - execution not started in the authoring phase; Nestfolio uninspected beyond the recorded bounded targeted grounding reads
+  - the Assurance Plan, criterion-to-Evidence matrix, Guard classification, Waiver path, atomic completion, and coexistence route record are defined by this contract as the migration plan requires
+  - the effort Work Item binds the three unchanged Level 3 criteria; the pinned engine is used unmodified
+  - the completion write-back is bounded to the one effort's backlog tracking fields, is truthful, and is reversible during execution
+  - all ten immutable results and the SE-001-PUB and MI-005-PUB publication records remain unrepaired, unrelabeled, and unreinterpreted
+  - DR-0025 closure obligations performed at session closure (queue_position 32, queue_summary, generator tail update, index regeneration, --check exit 0)
+  - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
