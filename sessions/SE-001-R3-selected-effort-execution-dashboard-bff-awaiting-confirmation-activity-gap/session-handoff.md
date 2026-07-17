@@ -122,3 +122,42 @@ selected effort implementation and evidence", committing exactly the
 26-path uncommitted delta (manifest `8affe6ca…`) on Nestfolio main on
 top of `89ef74ee…`. MI-005 through MI-007 and broader work remain
 blocked.
+
+## Publication (2026-07-17)
+
+The separately authorized publication above was executed in a fresh
+session. Session gates verified continuity-workspace and continuity-lab
+clean on main (continuity-lab HEAD
+`3798aeb6cf08958d10dbe128b51b649de28a0f99`) and Nestfolio HEAD
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` carrying exactly the
+recorded 26-path delta unstaged and byte-exact against the recorded
+SHA-256 manifest `8affe6ca94271d646217d03e1931736da73188c4766df80a2d484ed2069f450a`
+(manifest self-hash also verified; `git status --porcelain -uall`
+listed exactly those 26 paths, nothing staged). The 26 paths were
+staged and committed as one commit, exact subject "Publish SE-001
+selected effort implementation and evidence", sole parent
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`. Nestfolio's own
+`typed-subjects` pre-commit runtime gate (an unrelated Nestfolio
+development-process check, not a Continuity mechanism) initially
+blocked the commit; investigation showed the check's only findings
+were 2 pre-existing, already-backlogged `subject-suffix` violations in
+`services/execution/broker-ctrl/src/domain/contracts.ts`, unrelated to
+any of the 26 published paths, surfaced only because the check
+full-scans `services/**` on any staged commit under its scope glob.
+The commit proceeded with `RUNTIME_GATE_SKIP=1` (journaled by
+Nestfolio's own tooling for its own later ship-recheck adjudication;
+no continuity-lab or Continuity product mechanism involved), published
+at exact Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`,
+and pushed to `origin/main`. At the published revision Nestfolio is
+clean and Level 4, Level 3, Level 2, retained Level 1, and
+backlog-next return **23/23**, **23/23**, **23/23**, **14/14**, and
+**68/68** respectively without invoking any Skill, exactly reproducing
+the SE-001-R2/SE-001-R3 committed-copy diagnostic. Publication is
+repository state only; it records no completion, Run, Assurance, or
+Level 5-6 authority. MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL,
+MI-003-R2 PASS, MI-004 PASS, SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2
+FAIL, and SE-001-R3 PASS remain nine separate immutable results,
+unrepaired and unrelabeled. MI-005 through MI-007 and broader work
+remain blocked pending separate contracting, review, publication, and
+explicit authorization; no further Continuity program operation is
+authorized by this session.

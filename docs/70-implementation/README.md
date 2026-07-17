@@ -257,3 +257,26 @@ The next valid program operation is the separately authorized
 publication with the exact subject "Publish SE-001 selected effort
 implementation and evidence"; MI-005 through MI-007 and broader work
 remain blocked.
+
+**SE-001 selected effort implementation and evidence — published
+2026-07-17.** Session gates verified continuity-workspace and
+continuity-lab clean on main and Nestfolio HEAD
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6` carrying exactly the
+recorded 26-path delta unstaged and byte-exact against manifest
+`8affe6ca…` (manifest self-hash also verified). The 26 paths were
+staged and committed as one commit, exact subject "Publish SE-001
+selected effort implementation and evidence", sole parent
+`89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, published at exact
+Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`, and
+pushed to `origin/main`. At the published revision Nestfolio is clean
+and Level 4, Level 3, Level 2, retained Level 1, and backlog-next
+return 23/23, 23/23, 23/23, 14/14, and 68/68 respectively without
+invoking any Skill, exactly reproducing the SE-001-R2/SE-001-R3
+committed-copy diagnostic. Publication is repository state only; it
+records no completion, Run, Assurance, or Level 5-6 authority.
+MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004
+PASS, SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, and SE-001-R3
+PASS remain nine separate immutable results, unrepaired and
+unrelabeled. MI-005 through MI-007 and broader work remain blocked
+pending separate contracting, review, publication, and explicit
+authorization.
