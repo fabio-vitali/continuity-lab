@@ -191,8 +191,31 @@ published Nestfolio start revision
 `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, where the "all suites green
 before mutation" preconditions are satisfiable (verified by MI-004-R1).
 The SE-001-R1 UNCONDITIONAL FAIL remains immutable history; SE-001-R2 is
-a new iteration, not a re-grade. The next valid program operation is
-executing SE-001-R2 under its authorization_rule (the publishing session
-immediately after publication, or a later fresh session naming the exact
-published contract revision); MI-005 through MI-007 and broader work
-remain blocked.
+a new iteration, not a re-grade.
+
+**SE-001-R2 — Selected Effort Execution — retry: executed 2026-07-17,
+UNCONDITIONAL FAIL.** The required validation "Level 4 / Level 3 tests
+return 23/23 after implementation" failed in the working tree with the
+contract-mandated uncommitted implementation delta present (Level 4 22/23
+on S10; Level 3 11/23 with ten failure fixtures cascading to the F10
+`tracked byte mutated` guard). Sole structural root cause: the published
+suites' working-tree purity guards are jointly unsatisfiable with the
+contract's uncommitted-delta close state for every possible execution —
+the same defect class as SE-001-R1's publication-dependent HEAD-pinning.
+Everything before the failed validation passed (gates, fail-closed
+delivery, frozen boundary with three rebuilds, five pre-mutation suites
+green, fail-before/pass-after gap proof, boundary-contained
+implementation, dashboard-bff 70/70, investor-adpt 14/14, typecheck,
+typed fixtures), and with the identical delta committed in an isolated
+temporary clone all five suites return 23/23, 23/23, 23/23, 14/14, 68/68
+(diagnostic proof retained). Full rollback restored Nestfolio
+byte-identical and clean at the exact start revision; the fifteen
+evidence paths were correctly not created; the selected effort remains
+NOT implemented. Report:
+`se-001-r2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`.
+The next valid program operation is authoring and publishing under
+DR-0024 one bounded SE-001-R3 correction contract defining the
+post-implementation suite runs in an isolated committed copy (product
+bindings unchanged; the immutable suites untouched), with same-session
+execution per DR-0024 aggregated phases; MI-005 through MI-007 and
+broader work remain blocked.

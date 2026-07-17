@@ -1,12 +1,39 @@
 contract:
-  status: published
+  status: completed-unconditional-fail
   authored_on: 2026-07-17
   reviewed_on: 2026-07-17
   finalized_on: 2026-07-17
+  executed_on: 2026-07-17
   process_regime: DR-0024 lightened development process
   execution_authorized: true
-  execution_started: false
-  result: null
+  execution_started: true
+  result: unconditional-fail
+  failure_cause: >
+    Required validation "Level 4 tests return 23/23 after implementation /
+    Level 3 tests return 23/23 after implementation" failed in the Nestfolio
+    working tree with the contract-mandated uncommitted implementation delta
+    present at the exact start revision
+    89ef74ee32740d30b2ddc7f0eb69f24a1374eea6: Level 4 returned 22/23 (S10)
+    and Level 3 returned 11/23 (S4/S10 direct, ten F-fixtures cascading to
+    the F10 "tracked byte mutated" guard). Sole structural root cause: the
+    published suites' working-tree purity guards treat ANY uncommitted
+    delta — including the contract-mandated implementation modifications
+    and the fifteen evidence creations — as a violation, so requirements
+    (uncommitted delta at close) and (23/23 after implementation) are
+    jointly unsatisfiable in the working tree for every possible execution;
+    same defect class as SE-001-R1's publication-dependent HEAD-pinning.
+    Diagnostic proof retained: with the identical delta committed in an
+    isolated temporary clone (future publication state) all five suites
+    return 23/23, 23/23, 23/23, 14/14, 68/68. Everything before the failed
+    validation passed (gates, fail-closed delivery, frozen boundary with
+    three rebuilds, five pre-mutation suites green, fail-before/pass-after
+    gap proof, boundary-contained implementation, dashboard-bff 70/70,
+    investor-adpt 14/14, typecheck, typed fixtures). Full rollback applied
+    per execution_failure: Nestfolio restored byte-identical and clean at
+    the exact start revision (manifest a2a9fc99… recomputed equal); the
+    selected effort remains NOT implemented; the fifteen evidence paths
+    were correctly not created. See docs/70-implementation/
+    se-001-r2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md.
   authority:
     - docs/90-state/program-state.md
     - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md

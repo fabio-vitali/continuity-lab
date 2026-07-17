@@ -139,20 +139,26 @@ Level 3 23/23, Level 2 23/23, retained Level 1 14/14, and backlog-next
 68/68 without any Skill.
 
 **SE-001-R2 — Selected Effort Execution — retry against the corrected
-revision** is contracted and published, not executed. It carries every
-SE-001/SE-001-R1 product-level binding forward unchanged — the selected
-effort `dashboard-bff-awaiting-confirmation-activity-gap`, the authorized
-Context Pack version 1 (SHA-256
-`e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1`),
-exclusive digest-matched adapter-view consumption, the deterministic frozen
-writable boundary (`se001-writable-boundary@1`), the fail-before/pass-after
-gap proof, and the fifteen `continuity/evidence/se-001/` paths (evidence
-records iteration id SE-001-R2) — against the corrected published Nestfolio
-start revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`, where all five
-suites are green. Per DR-0024 execution is authorized in the publishing
-session immediately after publication, or in a later fresh session naming
-the exact published contract revision. The selected effort remains NOT
-implemented until SE-001-R2 executes with UNCONDITIONAL PASS.
+revision** was contracted, published, and executed on 2026-07-17 in a fresh
+session naming the exact published contract revision
+`30a66168f2b0d3b3e9d39b2e50ce8b4ba2c78814`, closing with **UNCONDITIONAL
+FAIL**: the required validation "Level 4 / Level 3 tests return 23/23 after
+implementation" failed in the working tree with the contract-mandated
+uncommitted implementation delta present, whose sole structural root cause
+is that the published suites' working-tree purity guards are jointly
+unsatisfiable with the contract's uncommitted-delta close state for every
+possible execution (the same defect class as SE-001-R1's
+publication-dependent HEAD-pinning). Everything before the failed
+validation passed, including the fail-before/pass-after gap proof and the
+boundary-contained implementation, and with the identical delta committed
+in an isolated temporary clone all five suites verify truthfully
+(diagnostic proof retained at `~/continuity-recovery/se-001-r2/`). Full
+rollback restored Nestfolio byte-identical and clean at the exact start
+revision `89ef74ee32740d30b2ddc7f0eb69f24a1374eea6`; the fifteen evidence
+paths were correctly not created. The selected effort remains NOT
+implemented. The next valid program operation is the bounded SE-001-R3
+correction contract (post-implementation suite runs in an isolated
+committed copy; product bindings unchanged).
 
 ## Canonical starting points
 
@@ -232,10 +238,12 @@ implemented until SE-001-R2 executes with UNCONDITIONAL PASS.
 - SE-001-R1 report: `docs/70-implementation/se-001-r1-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`
 - MI-004-R1 report: `docs/70-implementation/mi-004-r1-level-4-suite-revision-binding-correction.md`
 - MI-004-R1 completed contract: `sessions/MI-004-R1-level-4-suite-revision-binding-correction/context-pack.yaml`
-- SE-001-R2 active execution contract: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
+- SE-001-R2 completed execution contract: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/context-pack.yaml`
 - SE-001-R2 preserved future execution prompt: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/prompt.md`
-- SE-001-R2 authoring and publication handoff: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
+- SE-001-R2 authoring, publication, and execution-closure handoff: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/session-handoff.md`
 - SE-001-R2 contract-authoring manifest: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/changed-files.txt`
+- SE-001-R2 execution-closure manifest: `sessions/SE-001-R2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap/execution-changed-files.txt`
+- SE-001-R2 report: `docs/70-implementation/se-001-r2-selected-effort-execution-dashboard-bff-awaiting-confirmation-activity-gap.md`
 - Program State: `docs/90-state/program-state.md`
 - Human next steps: `CONTINUITY-NEXT-STEPS.md`
 
