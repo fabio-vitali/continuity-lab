@@ -2,7 +2,7 @@
 artifact_id: IMPLEMENTATION-INDEX
 status: ratified
 owner: implementation
-last_updated: 2026-07-17
+last_updated: 2026-07-18
 supersedes: []
 superseded_by: null
 ---
@@ -42,7 +42,7 @@ edit it by hand. Full detail lives in each iteration's canonical report.
 - SE-001-PUB — published 2026-07-17; the SE-001 selected effort implementation and evidence committed and pushed at exact Nestfolio revision `363283bcc97b1e04710db0e7f759ffffddb18b69`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded
 - MI-005 — complete; unconditional PASS; executed 2026-07-17; one new target Run run-mi005 created in the DR-0014 store, genuinely started and fresh-session resumed across two human-launched Claude Code Sessions, keyed effect executed once and deduplicated on replay, closed at Level 5 operational scope only; 47-path Nestfolio execution delta uncommitted; selected effort not completed
 - MI-005-PUB — published 2026-07-17; the MI-005 resumable run cutover Level 5 evidence committed and pushed at exact Nestfolio revision `eafa09b81a600bd58fe8f4639298a182039d21f5`; repository state only; no completion, Run, Assurance, or Level 5-6 authority recorded
-- MI-006 — Evidence-Bound Completion and Guard Coexistence — contracted and published; execution blocked pending explicit authorization; binds the Level 6 Assurance portion (criterion-to-Evidence completion of the one target-routed effort dashboard-bff-awaiting-confirmation-activity-gap, Guard classification and coexistence with current checks) to the pinned engine at Nestfolio eafa09b81a600bd58fe8f4639298a182039d21f5
+- MI-006 — Evidence-Bound Completion and Guard Coexistence — executed 2026-07-18 under DR-0024; UNCONDITIONAL FAIL (ENGINE_POLICY_MISMATCH) fail-closed before any Nestfolio mutation: the pinned engine cannot form the effort's Level 6 Assurance Plan or Evidence-bound complete it without violating the write boundary, because the effort work-item id dashboard-bff-awaiting-confirmation-activity-gap is occupied by an immutable in_progress MI-005 record (rev 2) and selectWork returns REVISION_CONFLICT; Nestfolio unchanged at eafa09b8; ten prior immutable results and SE-001-PUB/MI-005-PUB unchanged; MI-007 blocked
 <!-- generated:implementation-slices:end -->
 
 Canonical reports:

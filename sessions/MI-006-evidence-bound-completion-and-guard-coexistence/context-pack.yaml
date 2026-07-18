@@ -1,17 +1,19 @@
 contract:
   queue_position: 32
-  queue_summary: "MI-006 — Evidence-Bound Completion and Guard Coexistence — contracted and published; execution blocked pending explicit authorization; binds the Level 6 Assurance portion (criterion-to-Evidence completion of the one target-routed effort dashboard-bff-awaiting-confirmation-activity-gap, Guard classification and coexistence with current checks) to the pinned engine at Nestfolio eafa09b81a600bd58fe8f4639298a182039d21f5"
-  status: contracted-published
+  queue_summary: "MI-006 — Evidence-Bound Completion and Guard Coexistence — executed 2026-07-18 under DR-0024; UNCONDITIONAL FAIL (ENGINE_POLICY_MISMATCH) fail-closed before any Nestfolio mutation: the pinned engine cannot form the effort's Level 6 Assurance Plan or Evidence-bound complete it without violating the write boundary, because the effort work-item id dashboard-bff-awaiting-confirmation-activity-gap is occupied by an immutable in_progress MI-005 record (rev 2) and selectWork returns REVISION_CONFLICT; Nestfolio unchanged at eafa09b8; ten prior immutable results and SE-001-PUB/MI-005-PUB unchanged; MI-007 blocked"
+  status: executed-unconditional-fail
+  result: unconditional-fail
   authored_on: 2026-07-18
   reviewed_on: 2026-07-18
   finalized_on: 2026-07-18
   published_on: 2026-07-18
-  published_contract_revision: PENDING-PUBLICATION
-  execution_contract_revision: PENDING-PUBLICATION
+  executed_on: 2026-07-18
+  published_contract_revision: 6a94e73c864627c3c33a27f3a891005df22984df
+  execution_contract_revision: 6a94e73c864627c3c33a27f3a891005df22984df
   process_regime: DR-0024 lightened development process
   contract_authorized: true
   publication_authorized: true
-  execution_authorized: false
+  execution_authorized: true
   authority:
     - docs/90-state/program-state.md
     - docs/60-migration/migration-plan.md
@@ -766,3 +768,76 @@ completion_criteria:
   - all ten immutable results and the SE-001-PUB and MI-005-PUB publication records remain unrepaired, unrelabeled, and unreinterpreted
   - DR-0025 closure obligations performed at session closure (queue_position 32, queue_summary, generator tail update, index regeneration, --check exit 0)
   - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
+
+execution_closure:
+  executed_on: 2026-07-18
+  process_regime: DR-0024 lightened development process
+  executor: Claude Code (claude-opus-4-8), direct execution session
+  verdict: UNCONDITIONAL FAIL
+  primary_diagnostic: ENGINE_POLICY_MISMATCH
+  nestfolio_state: unchanged and clean at eafa09b81a600bd58fe8f4639298a182039d21f5 (zero-path execution delta; no run-mi006, no continuity/level-6, no continuity/evidence/mi-006, no Work Item binding, no Guard binding, no backlog write-back)
+  fail_closed_before_mutation: true
+  session_gates_verified:
+    - continuity-workspace, continuity-lab, Nestfolio on main with clean working trees
+    - continuity-lab HEAD 6a94e73c864627c3c33a27f3a891005df22984df (published MI-006 contract, subject-exact)
+    - Nestfolio HEAD eafa09b81a600bd58fe8f4639298a182039d21f5 (published MI-005 Level 5 evidence)
+  preconditions_verified_before_blocker:
+    - engine-lock: 20 runtime/continuity/** files plus .claude/settings.json byte-identical to the Level 5 lock; aggregate 7e31ff56a10ca6b1715b29f02132e66c80e321921b41dcb55329db2e0f320a38; hook registration digest 73387f347f43d0f6a154f83ed54c3bdaee0e0b6ba6dbf3120ebf5b8c28834378; settings 999e828d22fcf1cf1e66eb81260a4f8ff3a36b2387adf117ca84602e65c2c6b7
+    - bound digests verified — Context Pack v1 e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1, Level 3 scope db7a45278e8f4a270552e3ae1db3695b70e07d1624b27bcdc28f6417883a5ad6, Level 2 aggregate 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26, effort source b656733991c96c4275d11e9a9f2bff7f5ac72cdd298cbc68a4b94b6799dc742d
+    - run-mi005 closed (status interrupted, lease inactive, no active session); no active target Run for the effort
+    - read-only route check clear — no active current-journal Run for the effort; .git/journal 89 files across 30 run directories; journal tree digest ae1506534f72092ec0200473e36d6d0ee39a8ce6a89444a2d4bf64e4ebd01b30 (byte-immutable; MI-006 wrote nothing under the journal)
+    - all fixed create paths absent at start
+    - baseline suites green in the real tree — Level 5 7/7, Level 4 23/23, Level 3 23/23, Level 2 23/23, Level 1 14/14, engine 9/9, backlog-next 68/68, dashboard-bff unit 70/70
+  root_cause: >
+    The pinned engine (runtime/continuity/**, unmodified) cannot form the
+    contracted Level 6 Assurance Plan from a fresh Work Item carrying the three
+    unchanged Level 3 criteria for the effort, nor Evidence-bound complete it,
+    without violating this contract's write boundary. The engine models exactly
+    one Work Item artifact per work_id, and completeRun's backlog write-back
+    (updateBacklogItem) requires workItem.id to equal the backlog id
+    dashboard-bff-awaiting-confirmation-activity-gap. That work-item artifact
+    already exists at revision 2, status in_progress, committed at
+    eafa09b8 as an immutable MI-005 record carrying the dogfood criterion
+    mi005-keyed-effect-materialized (not the three Level 3 criteria), because
+    MI-005 executed its Level 5 dogfood Run using the effort's real work id.
+    selectWork(effort) therefore returns REVISION_CONFLICT (expected_revision 0,
+    actual_revision 2 — confirmed empirically in an isolated copy outside all
+    three repositories, since removed with absence proof), and reusing or
+    advancing the existing Work Item via startRun/completeRun would mutate an
+    immutable MI-005 record (prohibited) and validate the wrong criteria. No
+    engine path exists without engine modification (prohibited) or an
+    immutability violation (prohibited). This is exactly the engine_binding
+    ENGINE_POLICY_MISMATCH condition: MI-006 closes UNCONDITIONAL FAIL without
+    repair or engine modification.
+  secondary_finding_owner_authorized: >
+    An independent contract-specification defect was also found and authorized
+    around by the human program owner (2026-07-18T11:38:34Z): criterion 2 and
+    criterion 3 deterministic Evidence reference the dashboard-bff integration
+    suite, but the awaiting-confirmation projection is asserted only in the unit
+    suite and the integration suite targets real deployed AWS (not run in a
+    local bounded Continuity session; SE-001 itself relied on the unit suite
+    plus non-regression). The owner authorized reading criterion 2/3 Evidence as
+    the unit suite plus a byte-identity/non-regression proof. This was not the
+    cause of the FAIL (the ENGINE_POLICY_MISMATCH is) but is recorded for the
+    correction.
+  immutable_ledger: >
+    MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004 PASS,
+    SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3 PASS, and MI-005
+    PASS remain ten separate immutable results; SE-001-PUB and MI-005-PUB
+    publication records are unchanged. MI-006 UNCONDITIONAL FAIL is a separate
+    new immutable result. MI-007 and broader work remain blocked.
+  next_operation: >
+    Per next_iteration_rule.on_fail: a newly bounded correction supported by the
+    failure evidence, not a broadened scope. Because the root cause is a hard
+    engine/immutability constraint (the effort's work-item id is permanently
+    occupied by an immutable in_progress MI-005 record), enabling the effort's
+    Level 6 Evidence-bound completion requires a program-level decision:
+    either (a) an engine revision providing a fresh Level 6 completion path for
+    an effort whose work-item id was already used by a prior Run (for example a
+    re-keyed or additional Work Item lineage, or a completion that does not
+    collide), or (b) a re-scoped MI-006-R1 that explicitly authorizes advancing
+    the existing in_progress Work Item to completed under a revised criteria
+    mapping and a bounded, explicit immutability exception for that single
+    transition — and that also corrects the criterion 2/3 integration-suite
+    Evidence wording to the unit suite plus non-regression. Both are new
+    decisions/contracts and are not authorized by this session.

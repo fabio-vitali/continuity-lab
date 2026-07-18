@@ -1,0 +1,13 @@
+README.md
+CONTINUITY-NEXT-STEPS.md
+docs/70-implementation/README.md
+docs/70-implementation/mi-006-evidence-bound-completion-and-guard-coexistence.md
+docs/90-state/artifact-index.md
+docs/90-state/program-state.md
+sessions/MI-006-evidence-bound-completion-and-guard-coexistence/context-pack.yaml
+sessions/MI-006-evidence-bound-completion-and-guard-coexistence/execution-changed-files.txt
+sessions/MI-006-evidence-bound-completion-and-guard-coexistence/session-handoff.md
+
+Nestfolio execution delta: EMPTY. MI-006 closed UNCONDITIONAL FAIL
+(ENGINE_POLICY_MISMATCH) fail-closed before any Nestfolio mutation; Nestfolio
+is byte-identical and clean at eafa09b81a600bd58fe8f4639298a182039d21f5.

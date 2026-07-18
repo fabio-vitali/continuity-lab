@@ -1,42 +1,54 @@
-# Continuity — MI-006 Contract Publication Handoff
+# Continuity — MI-006 Execution-Closure Handoff (UNCONDITIONAL FAIL)
 
 ## Current state
 
-- **MI-006 — Evidence-Bound Completion and Guard Coexistence contract
-  authored, reviewed by the human program owner, and published on
-  continuity-lab main 2026-07-18** under the DR-0024 lightened development
-  process. It is the Level 6 Assurance-portion cutover: it binds the
-  Evidence-bound completion and Guard machinery the pinned engine already
-  implements to the one target-routed effort
-  `dashboard-bff-awaiting-confirmation-activity-gap`, at the bound Nestfolio
-  revision `eafa09b81a600bd58fe8f4639298a182039d21f5`, introducing no engine
-  code.
-- Two recorded human program-owner design decisions: (1) MI-006 applies the
-  program's first Evidence-bound Work completion for real, including the
-  engine's truthful backlog completion write-back (single permitted canonical
-  planning mutation, reversible because the delta stays uncommitted);
-  (2) no separately launched genuine validation Session is required — the
-  completion gate's rigor comes from the engine's typed-Evidence requirement.
-- The criterion-to-Evidence matrix spans distinct deterministic,
-  agent-review, and human-review modes across the three unchanged Level 3
-  criteria; one condition (removed dead `USER_CONFIRMATION_REQUESTED` handler
-  not reintroduced) is classified as a target Guard while the dashboard-bff
-  suites remain validators; a distinct authorized Waiver path and the full
-  fail-closed scenario set are contracted.
-- DR-0025 closure performed: `queue_position: 32`, `queue_summary` set, the
-  generator's permanent blocked tail reduced to "MI-007 — blocked", indices
-  regenerated, `node scripts/generate-program-indices.mjs --check` exit 0.
-- The ten immutable results plus the SE-001-PUB and MI-005-PUB publication
-  records remain unrepaired, unrelabeled, and unreinterpreted.
+- **MI-006 — Evidence-Bound Completion and Guard Coexistence executed
+  2026-07-18 under DR-0024 and closed UNCONDITIONAL FAIL
+  (`ENGINE_POLICY_MISMATCH`)**, fail-closed before any Nestfolio mutation.
+  Executed from published contract revision
+  `6a94e73c864627c3c33a27f3a891005df22984df`. Nestfolio is byte-identical and
+  clean at `eafa09b81a600bd58fe8f4639298a182039d21f5`; the execution delta is
+  empty.
+- **Root cause.** The pinned engine (unmodified) cannot form the effort's
+  Level 6 Assurance Plan from a fresh Work Item carrying the three Level 3
+  criteria, nor Evidence-bound complete it, without violating the write
+  boundary. The engine keys one Work Item per `work_id`, and the truthful
+  backlog write-back forces `workItem.id` to be the effort id
+  `dashboard-bff-awaiting-confirmation-activity-gap`; that work-item artifact
+  already exists at revision 2, status `in_progress`, as an immutable MI-005
+  record (dogfood criterion `mi005-keyed-effect-materialized`) because MI-005
+  ran its Level 5 dogfood Run on the effort's real work id. `selectWork(effort)`
+  returns `REVISION_CONFLICT` (proven empirically in an isolated copy, removed
+  with absence proof); reusing/advancing the existing Work Item would mutate an
+  immutable MI-005 record and validate the wrong criteria.
+- All session gates, the engine-lock, every bound Level 5/4/3/2 digest, the
+  run-mi005-closed check, the route check, and the baseline suites (Level 5
+  7/7, Level 4 23/23, Level 3 23/23, Level 2 23/23, Level 1 14/14, engine 9/9,
+  backlog-next 68/68, dashboard-bff unit 70/70) verified green before the
+  blocker.
+- A separate owner-authorized secondary finding (criterion 2/3 Evidence names
+  the dashboard-bff *integration* suite, but the projection is *unit*-tested and
+  the integration suite targets real deployed AWS; owner authorized unit suite
+  plus non-regression, UTC `2026-07-18T11:38:34.000Z`) is recorded but is not
+  the cause.
+- MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004 PASS,
+  SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3 PASS, and MI-005
+  PASS remain ten separate immutable results; SE-001-PUB and MI-005-PUB are
+  unchanged. MI-006 UNCONDITIONAL FAIL is a separate new immutable result.
+- DR-0025 closure performed: `queue_position 32`, `queue_summary` set to the
+  FAIL result, `result: unconditional-fail`, indices regenerated,
+  `node scripts/generate-program-indices.mjs --check` exit 0.
 
 ## Next valid operation
 
-Execute the published MI-006 contract in a later session (or an explicit
-same-session extension) using
-`sessions/MI-006-evidence-bound-completion-and-guard-coexistence/prompt.md`,
-with the exact published continuity-lab contract revision pinned in the
-launch handoff. This is judgment-plus-mechanics execution against a fully
-specified contract — use `claude-opus-4-8` or `claude-fable-5`. No Continuity
-program operation beyond executing MI-006 is currently authorized; MI-007 and
-broader work remain blocked pending separate contracting, review,
-publication, and explicit authorization.
+Author a newly bounded correction supported by the failure evidence (do not
+broaden scope), in a design/contract-authoring session (judgment work —
+`claude-fable-5` or `claude-opus-4-8`). The correction is a program-level
+decision: either (a) an engine revision that provides a fresh Level 6
+completion path for an effort whose work-item id was already used by a prior
+Run, or (b) a re-scoped MI-006-R1 that explicitly authorizes advancing the
+existing `in_progress` Work Item to completed under a revised criteria mapping
+and a bounded immutability exception — and in either case corrects the
+criterion 2/3 integration-suite Evidence wording to the unit suite plus
+non-regression. MI-007 and broader work remain blocked pending separate
+contracting, review, publication, and explicit authorization.
