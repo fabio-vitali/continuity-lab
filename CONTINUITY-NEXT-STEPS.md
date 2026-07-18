@@ -1,54 +1,48 @@
-# Continuity — MI-006 Execution-Closure Handoff (UNCONDITIONAL FAIL)
+# Continuity — MI-006-R1 Contract Publication Handoff
 
 ## Current state
 
-- **MI-006 — Evidence-Bound Completion and Guard Coexistence executed
-  2026-07-18 under DR-0024 and closed UNCONDITIONAL FAIL
-  (`ENGINE_POLICY_MISMATCH`)**, fail-closed before any Nestfolio mutation.
-  Executed from published contract revision
-  `6a94e73c864627c3c33a27f3a891005df22984df`. Nestfolio is byte-identical and
-  clean at `eafa09b81a600bd58fe8f4639298a182039d21f5`; the execution delta is
-  empty.
-- **Root cause.** The pinned engine (unmodified) cannot form the effort's
-  Level 6 Assurance Plan from a fresh Work Item carrying the three Level 3
-  criteria, nor Evidence-bound complete it, without violating the write
-  boundary. The engine keys one Work Item per `work_id`, and the truthful
-  backlog write-back forces `workItem.id` to be the effort id
-  `dashboard-bff-awaiting-confirmation-activity-gap`; that work-item artifact
-  already exists at revision 2, status `in_progress`, as an immutable MI-005
-  record (dogfood criterion `mi005-keyed-effect-materialized`) because MI-005
-  ran its Level 5 dogfood Run on the effort's real work id. `selectWork(effort)`
-  returns `REVISION_CONFLICT` (proven empirically in an isolated copy, removed
-  with absence proof); reusing/advancing the existing Work Item would mutate an
-  immutable MI-005 record and validate the wrong criteria.
-- All session gates, the engine-lock, every bound Level 5/4/3/2 digest, the
-  run-mi005-closed check, the route check, and the baseline suites (Level 5
-  7/7, Level 4 23/23, Level 3 23/23, Level 2 23/23, Level 1 14/14, engine 9/9,
-  backlog-next 68/68, dashboard-bff unit 70/70) verified green before the
-  blocker.
-- A separate owner-authorized secondary finding (criterion 2/3 Evidence names
-  the dashboard-bff *integration* suite, but the projection is *unit*-tested and
-  the integration suite targets real deployed AWS; owner authorized unit suite
-  plus non-regression, UTC `2026-07-18T11:38:34.000Z`) is recorded but is not
-  the cause.
-- MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004 PASS,
-  SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3 PASS, and MI-005
-  PASS remain ten separate immutable results; SE-001-PUB and MI-005-PUB are
-  unchanged. MI-006 UNCONDITIONAL FAIL is a separate new immutable result.
-- DR-0025 closure performed: `queue_position 32`, `queue_summary` set to the
-  FAIL result, `result: unconditional-fail`, indices regenerated,
-  `node scripts/generate-program-indices.mjs --check` exit 0.
+- **MI-006-R1 — Evidence-Bound Completion Existing-Work-Item Rebinding
+  Correction is authored, owner-reviewed, and published on continuity-lab
+  main (2026-07-18, DR-0024)** as the single newly bounded correction of the
+  MI-006 UNCONDITIONAL FAIL (`ENGINE_POLICY_MISMATCH`). Contract:
+  `sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/context-pack.yaml`.
+- **Approved design (owner decision, option (b) reconciled — no engine
+  code).** The existing in_progress Work Item
+  `dashboard-bff-awaiting-confirmation-activity-gap` (immutable MI-005
+  record, revision-2 base `313af590…`) advances to Evidence-bound completed
+  under exactly ONE bounded immutability exception: a contracted rebinding
+  write (pinned store API, `expectedRevision 2`) binding the three unchanged
+  Level 3 criteria, then the pinned engine's `startRun`/`validateRun`/
+  `completeRun` as the new Run `run-mi006-r1` with the truthful backlog
+  write-back. A bounded formation exception direct-authors the new completion
+  Scope and ready Working Set — the exact preparation mechanism MI-005 itself
+  used and evidenced. Every other MI-005/VS-001/VS-001A record is pinned
+  byte-identical; `run-mi005` is never reopened (on PASS it becomes
+  permanently non-resumable by staleness — accepted, documented, no byte
+  change).
+- **Both MI-006 findings are corrected**: criterion 2/3 deterministic
+  Evidence is the dashboard-bff unit suite plus byte-identity/non-regression
+  of the integration files (they target real deployed AWS), and the four
+  published suite assertions that pin the current backlog bytes (Level 4
+  S7/S8/S9, Level 5 effort-source test) get a bounded completion-aware
+  correction — proven empirically to be the complete breakage set.
+- **The full corrected path was proven end-to-end in an isolated scout copy**
+  outside all three repositories (since removed): rebinding rev 2→3,
+  formation writes, `startRun` with the three-criterion Assurance Plan,
+  `validateRun` all-passed, `completeRun` with Work Item completed (rev 5)
+  and backlog status shipped.
+- **Immutable ledger**: eleven separate immutable results (MI-002-R2 PASS
+  through MI-006 FAIL) plus SE-001-PUB and MI-005-PUB remain unrepaired and
+  unrelabeled. Nestfolio is untouched at `eafa09b8`.
+- **Execution is NOT authorized yet**; DR-0025 closure performed
+  (queue_position 33, `--check` exit 0).
 
 ## Next valid operation
 
-Author a newly bounded correction supported by the failure evidence (do not
-broaden scope), in a design/contract-authoring session (judgment work —
-`claude-fable-5` or `claude-opus-4-8`). The correction is a program-level
-decision: either (a) an engine revision that provides a fresh Level 6
-completion path for an effort whose work-item id was already used by a prior
-Run, or (b) a re-scoped MI-006-R1 that explicitly authorizes advancing the
-existing `in_progress` Work Item to completed under a revised criteria mapping
-and a bounded immutability exception — and in either case corrects the
-criterion 2/3 integration-suite Evidence wording to the unit suite plus
-non-regression. MI-007 and broader work remain blocked pending separate
-contracting, review, publication, and explicit authorization.
+Execute MI-006-R1 from the exact published contract revision in a fresh
+session launched with the saved execution prompt under
+`~/continuity-handoffs/` (conjunctive unconditional verdict on a new
+immutable result — judgment work: `claude-opus-4-8`). MI-007 and broader
+work remain blocked pending separate contracting, review, publication, and
+explicit authorization.

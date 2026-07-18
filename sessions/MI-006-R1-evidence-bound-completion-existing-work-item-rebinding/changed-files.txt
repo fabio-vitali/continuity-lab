@@ -1,0 +1,7 @@
+CONTINUITY-NEXT-STEPS.md
+docs/70-implementation/README.md
+docs/90-state/program-state.md
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/changed-files.txt
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/context-pack.yaml
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/prompt.md
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/session-handoff.md
