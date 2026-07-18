@@ -1,0 +1,38 @@
+MI-006-R1 execution closure — continuity-lab changed files (committed):
+
+README.md
+CONTINUITY-NEXT-STEPS.md
+docs/70-implementation/README.md
+docs/70-implementation/mi-006-r1-evidence-bound-completion-existing-work-item-rebinding.md
+docs/90-state/artifact-index.md
+docs/90-state/program-state.md
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/context-pack.yaml
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/execution-changed-files.txt
+sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/session-handoff.md
+
+Nestfolio execution delta: UNCOMMITTED and UNSTAGED at Nestfolio
+eafa09b81a600bd58fe8f4639298a182039d21f5 (publication separately authorized).
+52 paths — 6 modified, 46 created — SHA-256 manifest self-hash
+840c12c0ae31e1884a4221372b873be5576bcd7097485d29bcb938e7d0b93fea.
+
+Modified (6):
+  .continuity/audit.ndjson                                                    (append-only; pre-exec bytes preserved as exact prefix)
+  .continuity/derived/index.json                                             (derived non-authoritative rebuild)
+  continuity/artifacts/work-items/dashboard-bff-awaiting-confirmation-activity-gap.json  (immutability exception: rev 2 -> 3 -> 4 -> 5 completed)
+  docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md           (truthful completion write-back: status shipped; b656733 -> ea565c07)
+  tests/continuity-level-4.test.mjs                                          (bounded 3-assertion completion-aware correction S7/S8/S9)
+  tests/continuity-level-5.test.mjs                                          (bounded 1-assertion completion-aware correction: effort-source)
+
+Created (46):
+  fixed create paths (6): continuity/level-6/completion-binding.json, engine-lock.json,
+    criterion-1-investigation-review.json, checks/criterion-3-non-regression-check.mjs,
+    tests/continuity-level-6.test.mjs,
+    continuity/bindings/nestfolio/guards/mi006-r1-dashboard-bff-no-dead-user-confirmation-requested-handler.json
+  fixed create evidence (22): continuity/evidence/mi-006-r1/00..10 plus commands/01..11
+  formation writes (2): continuity/artifacts/scopes/scope-mi006-r1-completion.json,
+    continuity/artifacts/working-sets/ws-mi006-r1.json
+  pinned-engine run-mi006-r1 write-set (16): runs, sessions/session-mi006-r1-1,
+    context-packs, formation-traces, pack-locks, validation-plans,
+    validation-results (x3), evidence (x3), checkpoints/run-mi006-r1-final-1,
+    .continuity/runs/run-mi006-r1/{head,lease}, .continuity/derived/execution-views/run-mi006-r1-session-mi006-r1-1.md
+  (no observations, no lessons, no handoffs, no effects — MI-007 and interrupt scope absent)

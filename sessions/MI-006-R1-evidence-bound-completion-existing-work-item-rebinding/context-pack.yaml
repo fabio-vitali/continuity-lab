@@ -1,6 +1,6 @@
 contract:
   queue_position: 33
-  queue_summary: "MI-006-R1 — Evidence-Bound Completion Existing-Work-Item Rebinding Correction — contracted and published; execution blocked pending explicit authorization; corrects the MI-006 ENGINE_POLICY_MISMATCH FAIL by advancing the existing in_progress Work Item under one bounded immutability exception (contracted rebinding to the three Level 3 criteria, then pinned-engine startRun/validateRun/completeRun as run-mi006-r1), with contracted formation of a new completion Scope and Working Set per the MI-005 preparation precedent, criterion 2/3 Evidence corrected to the unit suite plus integration-file non-regression, and a bounded completion-aware correction of four published suite assertions"
+  queue_summary: "MI-006-R1 — Evidence-Bound Completion Existing-Work-Item Rebinding Correction — executed 2026-07-18 under DR-0024; UNCONDITIONAL PASS: the program's first Evidence-bound Work completion, through the pinned engine unmodified, advancing the existing in_progress Work Item (rev 2 -> 3 rebinding write expectedRevision 2 -> 4 startRun -> 5 completeRun) under one bounded immutability exception bound to the three Level 3 criteria, with formation of scope-mi006-r1-completion and ws-mi006-r1, three linked immutable Evidence artifacts spanning deterministic/agent-review/human-review modes, the classified dead-handler Guard evaluated true, the truthful backlog completion write-back (status shipped, b656733 -> ea565c07), and the bounded four-assertion completion-aware suite correction; every mandatory failure fail-closed with the exact diagnostic; Nestfolio 52-path delta uncommitted (6 modified, 46 created; manifest 840c12c0); run-mi005 byte-identical and now permanently non-resumable by staleness (accepted, documented); twelve immutable results and SE-001-PUB/MI-005-PUB unchanged; MI-007 blocked"
   status: contracted-published
   authored_on: 2026-07-18
   reviewed_on: 2026-07-18
@@ -1068,3 +1068,91 @@ completion_criteria:
   - all eleven prior immutable results and the SE-001-PUB and MI-005-PUB publication records remain immutable
   - DR-0025 closure obligations performed at session closure (queue_position 33, queue_summary, index regeneration, --check exit 0)
   - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
+
+execution_closure:
+  executed_on: 2026-07-18
+  process_regime: DR-0024 lightened development process
+  executor: Claude Code (claude-opus-4-8), direct execution session
+  verdict: UNCONDITIONAL PASS
+  published_contract_revision: 80d70ac9bf9f1252474a9fbed414a0ef6ee57061
+  nestfolio_start_revision: eafa09b81a600bd58fe8f4639298a182039d21f5
+  nestfolio_execution_delta: uncommitted and unstaged (52 paths — 6 modified, 46 created); SHA-256 manifest self-hash 840c12c0ae31e1884a4221372b873be5576bcd7097485d29bcb938e7d0b93fea; publication separately authorized
+  significance: the program's first Evidence-bound Work completion, executed through the pinned engine unmodified; no engine byte changed
+  preconditions_verified_before_mutation:
+    - session gates (three repositories clean on main; continuity-lab HEAD at the published contract revision; Nestfolio HEAD eafa09b8)
+    - engine-lock 20 files plus .claude/settings.json byte-identical; aggregate 7e31ff56…; hook 73387f34…; settings 999e828d…
+    - bound digests — Context Pack v1 e58c9bc1…, Level 3 scope db7a4527…, Level 2 aggregate 73bbb7c9…, effort source b656733…
+    - revision-2 Work Item base 313af590… (envelope 011336b8…) revision 2 in_progress; full 16-record MI-005 byte-identity list verified
+    - run-mi005 closed (interrupted, lease inactive); read-only route check clear; journal tree digest 57b5e86a… (89 files/30 dirs; unchanged after execution)
+    - fixed create paths absent; baseline suites green (L5 7/7, L4 23/23, L3 23/23, L2 23/23, L1 14/14, engine 9/9, backlog-next 68/68, dashboard-bff unit 70/70); integration files byte-identical
+  three_transition_advancement:
+    - "rev 3 rebinding write (pinned store API, expectedRevision 2): file a4f87ccd…, envelope 25a06fdb…; exactly the ten contracted field changes; source.sha256 byte-equal b656733…"
+    - "rev 4 engine startRun run-mi006-r1: file 9ea241cb…, envelope 985b707b…"
+    - "rev 5 engine completeRun run-mi006-r1: file 363acbe2…, envelope 918cb597… (status completed)"
+  formation:
+    - scope-mi006-r1-completion revision 1 (envelope 053fc05b…; allowed_write_paths empty; effect_classes empty)
+    - ws-mi006-r1 revision 1 (envelope fe881095…) binding the rebound Work Item at revision 3
+  assurance_and_evidence: >
+    The Assurance Plan was formed by the pinned engine startRun from the rebound
+    Work Item with the three unchanged Level 3 criteria and policy
+    all-required-criteria-pass-with-evidence. validateRun produced three linked
+    immutable Evidence artifacts, all passed: c1 (agent-review + human-review; the
+    criterion-1 review record carries the owner authorization "Autorizzo il
+    finding", machine-captured UTC 2026-07-18T13:04:57.000Z), c2 (deterministic
+    dashboard-bff unit suite 70/70 plus a distinct agent-review sourcing
+    confirmation), c3 (deterministic non-regression: integration-file byte-identity
+    plus removed-dead-handler check). Modes are distinct and never merged (DR-0017).
+  guard_and_coexistence: >
+    Exactly one target Guard was classified with full metadata
+    (nestfolio-dashboard-bff-no-dead-user-confirmation-requested-handler,
+    definition 74008f12…), referenced by the rebound Work Item and evaluated true.
+    The dashboard-bff suites remain validators (not auto-minted Guards); the Git
+    commit/ship gates and the published implementation revision 363283bc are
+    referenced once, read-only, with no second verdict.
+  completion: >
+    completeRun atomically transitioned the Work Item to completed (rev 5), the
+    Working Set to completed, recorded the final verified Checkpoint
+    run-mi006-r1-final-1, linked all Evidence, and performed the truthful backlog
+    write-back (status shipped, closed 2026-07-18; b656733 -> ea565c07; only
+    tracking fields written). The single-writer lease was released at completion;
+    the audit ledger is append-only (pre-exec bytes the exact prefix); the derived
+    index rebuilt deterministically; the full correction was proven byte-exactly
+    reversible in an isolated copy before real application.
+  mandatory_failures: >
+    F1/F2/F3/F-NARRATIVE -> COMPLETION_GATE_BLOCKED; F4 -> OUT_OF_SCOPE_EFFECT;
+    F-REBIND-CONFLICT -> REVISION_CONFLICT (and IMMUTABLE_ARTIFACT_EXISTS on a
+    formation collision); F-STALE-CONTEXT -> STALE_RUN; F5 ->
+    UNRESOLVED_DECISION_BLOCKS_COMPLETION; F6 -> GUARD_BLOCKS_COMPLETION;
+    F-AUTO-GUARD -> AUTOMATIC_GUARD_MINTING_PROHIBITED; F-AUTO-WAIVER ->
+    AUTOMATIC_OR_DISGUISED_WAIVER_PROHIBITED; F-WAIVER-EXPIRY ->
+    WAIVER_EXPIRED_CRITERION_REOPENED — all in isolated fixtures with exit 1 and
+    cleanup proof. F-EXCEPTION-OVERREACH, F10, F11, F12 verified structurally. The
+    distinct authorized Waiver path was demonstrated on a synthetic criterion (no
+    real criterion waived).
+  suite_correction_and_manifest: >
+    The four self-invalidating published assertions (Level 4 S7/S8/S9, Level 5
+    effort-source) received the bounded completion-aware correction and pass in both
+    the pre-completion and post-completion states (totals unchanged 23 and 7; no
+    product or engine code touched). Post-completion the corrected Level 4 23/23 and
+    Level 3 23/23 verified in an isolated committed validation copy (SE-001-R3 /
+    MI-005 mechanics; working-tree purity guards) and Level 6 10/10, Level 5 7/7,
+    Level 2 23/23, Level 1 14/14, engine 9/9, backlog-next 68/68, dashboard-bff unit
+    70/70 in the real tree. Every MI-005/VS-001/VS-001A byte-identity record is
+    unchanged, the journal tree digest is byte-identical, and the final Nestfolio
+    manifest satisfies scope_rule exactly (6 modified, 46 created, nothing staged).
+  accepted_documented_consequence: >
+    run-mi005 became permanently non-resumable by staleness (its final Checkpoint
+    pins work_item revision 2); no run-mi005 byte changed; not a repair,
+    relabeling, or reinterpretation of the MI-005 PASS.
+  immutable_ledger: >
+    MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004 PASS,
+    SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3 PASS, MI-005 PASS, and
+    MI-006 FAIL remain eleven separate immutable results; MI-006-R1 UNCONDITIONAL
+    PASS is a separate new immutable result (the twelfth); SE-001-PUB and MI-005-PUB
+    are unchanged.
+  next_operation: >
+    The Nestfolio execution delta remains uncommitted; its publication requires
+    separate explicit authorization. MI-007 (Governed Learning and Selective
+    Current-Runtime Retirement) becomes the next contractable slice; MI-007 and
+    broader work remain blocked pending separate contracting, review, publication,
+    and explicit authorization.
