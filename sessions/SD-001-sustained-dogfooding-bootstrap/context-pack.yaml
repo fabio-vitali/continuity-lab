@@ -1,6 +1,6 @@
 contract:
   queue_position: 35
-  queue_summary: "SD-001 — Sustained Dogfooding Bootstrap — contracted-published 2026-07-18 under DR-0024; the first bounded contract of the sustained-dogfooding validation period against the twelve Product Foundation success criteria: on execution it freezes the contracted measurement protocol and opens the append-only dogfooding ledger under continuity/evidence/sd-001/ (operational definitions for non-trivial Work Items, sampled resumptions, multi-item efforts, and overhead sampling; every count derived from existing store artifacts and contemporaneous ledger appends; weekly cadence; no new product mechanism ahead of evidence), records the owner-confirmed period-start marker, and establishes the standing period rules with the pinned engine frozen; the period begins at the SD-001-PUB publication commit on Nestfolio main; the period verdict is a separately contracted later session and is never issued by SD-001; execution and publication remain blocked pending explicit authorization"
+  queue_summary: "SD-001 — Sustained Dogfooding Bootstrap — executed 2026-07-18 under DR-0024; UNCONDITIONAL PASS: every precondition verified fail-closed before mutation (session gates, engine-lock aggregate 7e31ff56…, the bound criteria-source whole-file digest 223df289… with section title verified, the pre-execution audit/index/journal digests, the fixed-path absences, and the baseline suites); the frozen measurement protocol was materialized exactly as contracted (digest 95f7f45e…); the owner's live verbatim period-start confirmation (vai) was captured with machine-captured UTC and the append-only ledger was created with entry 0 exactly per entry_zero, explicitly recording the period as NOT yet begun; F-PROTOCOL-DRIFT and F-LEDGER-REWRITE were demonstrated in isolated fixtures with exact digests and cleanup proof, the remaining seven mandatory failures verified structurally; full byte-identity proven (audit ledger, derived index, and journal tree unchanged; every pre-existing tracked path equal to the exact start revision); all required suites pass (learning 11/11, L6 10/10, L5 7/7, L4 23/23 and L3 23/23 in an isolated committed validation copy, L2 23/23, L1 14/14, engine 9/9, backlog-next 68/68); Nestfolio 2-path delta uncommitted and unstaged (manifest self-hash da770f29…); fourteen immutable results now stand; publication (SD-001-PUB) separately authorized"
   status: contracted-published
   authored_on: 2026-07-18
   reviewed_on: 2026-07-18
@@ -564,3 +564,21 @@ completion_criteria:
   - all thirteen prior immutable results and the SE-001-PUB, MI-005-PUB, MI-006-R1-PUB, and MI-007-PUB publication records remain immutable and unrepaired
   - DR-0025 closure obligations performed at session closure (queue_position 35, queue_summary, index regeneration, --check exit 0)
   - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
+
+execution_closure:
+  executed_on: 2026-07-18
+  executor: Claude Code (claude-sonnet-5), direct execution session, DR-0024
+  executed_from_published_contract_revision: 0585f8a576f914b3edfe2518e294730d20ccb87c
+  bound_nestfolio_revision: 914456ce44c271d5bb38b22d985448011d6adcf9
+  result: UNCONDITIONAL PASS
+  live_owner_capture:
+    - "period-start confirmation — \"vai\" @ 2026-07-18T19:22:53.000Z"
+  no_placeholder_remains: true
+  protocol_file_sha256: 95f7f45ebc7212b6d0782cca6165c0f9d2a831ab39fd132f4e4c917ab43cd3bb
+  ledger_entry_zero_sha256: 74e8af2b3f27383e3291811035525f5582fb6de870ce0c43b3f3ad598dce023d
+  suites: learning 11/11, L6 10/10, L5 7/7, L4 23/23 (committed copy), L3 23/23 (committed copy), L2 23/23, L1 14/14, engine 9/9, backlog-next 68/68
+  nestfolio_execution_delta: 2 paths created (continuity/evidence/sd-001/dogfooding-protocol.md, continuity/evidence/sd-001/dogfooding-ledger.md); uncommitted and unstaged; SHA-256 manifest self-hash da770f29f65535bef51b916e6ef9c9f69c7cd150fefd0477454036dba9e585af; publication separately authorized (SD-001-PUB)
+  byte_identity: audit ledger 6648d4dd…, derived index 5c25ba96…, journal tree 12c6689c… (89 files) all unchanged before/after; every pre-existing tracked path equal to the exact start revision
+  external_recovery_ledger: ~/continuity-recovery/sd-001/ledger/
+  immutable_ledger: SD-001 UNCONDITIONAL PASS is a separate new immutable result (the fourteenth); the thirteen prior results and SE-001-PUB/MI-005-PUB/MI-006-R1-PUB/MI-007-PUB are unchanged
+  report: docs/70-implementation/sd-001-sustained-dogfooding-bootstrap.md

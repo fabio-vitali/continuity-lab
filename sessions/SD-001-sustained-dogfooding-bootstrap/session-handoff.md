@@ -1,56 +1,73 @@
-# SD-001 — Contract Authoring Handoff
+# SD-001 — Execution Closure Handoff
 
 ## What this session did
 
-Designed, authored, owner-reviewed, and published the SD-001 — Sustained
-Dogfooding Bootstrap contract (`context-pack.yaml` beside this file) in one
-DR-0024 session, from continuity-lab `8a8cc8cba0cbe2b40b8e9d058b7bcaf72dd7d0b1`
-(MI-007-PUB closure) with Nestfolio read-only at
-`914456ce44c271d5bb38b22d985448011d6adcf9` (published MI-007-PUB revision).
+Executed the published SD-001 — Sustained Dogfooding Bootstrap contract
+(`context-pack.yaml` beside this file) from continuity-lab
+`0585f8a576f914b3edfe2518e294730d20ccb87c`, bound Nestfolio
+`914456ce44c271d5bb38b22d985448011d6adcf9`, under DR-0024, with the human
+program owner (fabio.vitali) available in-session for the live period-start
+confirmation. It closed **UNCONDITIONAL PASS** — the first bounded contract
+opening the sustained-dogfooding validation period under governance. SD-001
+performed NO store write: neither `continuity/artifacts/**` nor
+`.continuity/**` changed by one byte.
 
-Sustained dogfooding is not a numbered migration slice: it is the validation
-period against the twelve Product Foundation success criteria (section
-"Sustained Nestfolio dogfooding success criteria — Provisional Validation
-Contract", SHA-256 `223df2894f1b265ea46d16ce9a6031d48d15078ce391cc10db8dab385563f3ab`).
-SD-001 is the minimal bounded first contract that opens the period under
-governance.
+## What was produced (Nestfolio, uncommitted)
 
-## Owner-approved design (2026-07-18, in-session)
+- **Frozen measurement protocol**
+  `continuity/evidence/sd-001/dogfooding-protocol.md` materialized with
+  exactly the contracted normative content (five definitions, twelve
+  criterion derivations, cadence, frozen-protocol/amendment rules). SHA-256
+  `95f7f45ebc7212b6d0782cca6165c0f9d2a831ab39fd132f4e4c917ab43cd3bb`.
+- **Append-only dogfooding ledger**
+  `continuity/evidence/sd-001/dogfooding-ledger.md` created with entry 0
+  exactly per `entry_zero`: the owner's live verbatim period-start
+  confirmation ("vai", machine-captured UTC `2026-07-18T19:22:53.000Z`), the
+  published contract revision, the bound Nestfolio revision, the protocol
+  and criteria-source digests, the period-start-at-publication rule
+  (explicitly recording the period has NOT begun yet), and the zeroed
+  counters. Entry-0 SHA-256
+  `74e8af2b3f27383e3291811035525f5582fb6de870ce0c43b3f3ad598dce023d`.
+- No store artifact, audit-ledger byte, or derived-index byte was created,
+  advanced, or rebuilt.
 
-The human program owner approved all three recommendations:
+## Verification
 
-1. **Measurement**: a frozen measurement protocol plus an append-only
-   dogfooding ledger under `continuity/evidence/sd-001/` — contemporaneous
-   sampling (criteria 1, 3, 4, 9 cannot be reconstructed retroactively),
-   weekly cadence, every count derived from existing store artifacts; no
-   new product mechanism ahead of evidence.
-2. **Naming**: `SD-001`, new SD prefix, queue_position 35 (the generator's
-   permanent tail shifts automatically; no script change).
-3. **Authoring and publication** in this session; execution NOT authorized.
-
-Key contract properties: SD-001 performs NO store write (only two created
-evidence files); the pinned engine stays frozen for the whole period
-(defects route through the MI-007 governed-learning path plus a separately
-contracted bounded slice); the period begins at the SD-001-PUB publication
-commit's committer UTC; routine ledger appends ship with Nestfolio's normal
-mechanisms (no per-append program ceremony); the period verdict (working
-name SD-002) is a separately contracted later session and is never issued
-by SD-001.
+- All preconditions verified fail-closed before mutation: session gates,
+  engine-lock (20 files + `.claude/settings.json`, aggregate `7e31ff56…`),
+  the bound criteria-source whole-file digest `223df289…` (section title
+  verified), the pre-execution audit/index/journal digests, the fixed-path
+  absence, and the baseline suites (all green).
+- F-PROTOCOL-DRIFT and F-LEDGER-REWRITE demonstrated in isolated fixtures
+  outside all three repositories with exact digests and cleanup proof; the
+  remaining seven mandatory failures verified structurally.
+- Post-execution byte-identity proven (audit ledger, derived index, journal
+  tree unchanged; every pre-existing tracked Nestfolio path equal to the
+  exact start revision). All required suites pass post-execution (learning
+  11/11, Level 6 10/10, Level 5 7/7, Level 2 23/23, Level 1 14/14, engine
+  9/9, backlog-next 68/68 in the real tree; Level 4 23/23 and Level 3 23/23
+  in an isolated committed validation copy — throwaway commit, removed with
+  absence proof, never entered any real repository history).
+- Nestfolio delta: **0 modified, 2 created, nothing staged**, uncommitted
+  and unstaged, manifest self-hash
+  `da770f29f65535bef51b916e6ef9c9f69c7cd150fefd0477454036dba9e585af`.
+- External recovery ledger: `~/continuity-recovery/sd-001/ledger/`.
 
 ## Immutable ledger
 
 MI-002-R2 PASS, MI-003 FAIL, MI-003-R1 FAIL, MI-003-R2 PASS, MI-004 PASS,
-SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3 PASS, MI-005
-PASS, MI-006 FAIL, MI-006-R1 PASS, and MI-007 PASS remain thirteen separate
-immutable results; SE-001-PUB, MI-005-PUB, MI-006-R1-PUB, and MI-007-PUB
-are unchanged.
+SE-001-R1 FAIL, MI-004-R1 PASS, SE-001-R2 FAIL, SE-001-R3 PASS, MI-005 PASS,
+MI-006 FAIL, MI-006-R1 PASS, and MI-007 PASS remain thirteen separate
+immutable results; SD-001 UNCONDITIONAL PASS is the fourteenth. SE-001-PUB,
+MI-005-PUB, MI-006-R1-PUB, and MI-007-PUB are unchanged.
 
 ## Next valid operation
 
-**Execute SD-001** from the published contract revision, in a fresh session
-launched under `prompt.md` beside this file, with the human program owner
-in-session for the live period-start confirmation. Scripted materialization
-of contract-fixed content with deterministic checks — `claude-sonnet-5`
-per the workspace model policy (any surprise stops fail-closed for
-escalation). On PASS, SD-001-PUB (separately authorized; same-session
-extension permitted) starts the dogfooding period.
+**SD-001-PUB** — publish the uncommitted 2-path Nestfolio execution delta
+(manifest self-hash `da770f29…`) at Nestfolio `914456ce…`: verify
+byte-exact, stage, commit as one subject-only commit "Start SD-001
+sustained dogfooding period" on Nestfolio main, push. Mechanical
+publication session — `claude-sonnet-5`. It requires separate explicit
+authorization; the dogfooding period begins at that commit's committer UTC.
+SD-001-PUB, sustained dogfooding, its period verdict (working name SD-002),
+and broader work remain blocked pending it.

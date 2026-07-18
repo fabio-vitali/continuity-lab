@@ -1,0 +1,38 @@
+SD-001 execution closure — continuity-lab changed files (committed):
+
+README.md
+CONTINUITY-NEXT-STEPS.md
+docs/90-state/program-state.md
+docs/90-state/artifact-index.md
+docs/70-implementation/sd-001-sustained-dogfooding-bootstrap.md
+sessions/SD-001-sustained-dogfooding-bootstrap/context-pack.yaml
+sessions/SD-001-sustained-dogfooding-bootstrap/execution-changed-files.txt
+sessions/SD-001-sustained-dogfooding-bootstrap/session-handoff.md
+
+Nestfolio execution delta: UNCOMMITTED and UNSTAGED at Nestfolio
+914456ce44c271d5bb38b22d985448011d6adcf9 (publication separately authorized
+as SD-001-PUB). 2 paths — 0 modified, 2 created — SHA-256 manifest
+self-hash da770f29f65535bef51b916e6ef9c9f69c7cd150fefd0477454036dba9e585af.
+
+Created (2):
+  continuity/evidence/sd-001/dogfooding-protocol.md   (frozen measurement protocol; SHA-256 95f7f45e…)
+  continuity/evidence/sd-001/dogfooding-ledger.md      (append-only ledger; entry 0 exactly per entry_zero; SHA-256 74e8af2b…)
+
+Modified (0): none. SD-001 performs NO store write — neither
+continuity/artifacts/** nor .continuity/** changed by one byte. Confirmed:
+.continuity/audit.ndjson, .continuity/derived/index.json, and the .git/journal
+tree digest are byte-identical before and after; `git status --porcelain` in
+Nestfolio shows exactly one entry, `?? continuity/evidence/sd-001/`.
+
+No run, work-item, checkpoint, handoff, context-pack, scope, working-set,
+formation-trace, pack-lock, validation-plan/result, executor-session,
+observation, lesson, decision, or change-proposal artifact of any kind was
+created, advanced, or mutated. recordLesson, selectWork, startRun,
+resumeRun, validateRun, and completeRun were never invoked.
+
+External recovery ledger (outside all three repositories):
+~/continuity-recovery/sd-001/ledger/
+  repository-bindings-before.json
+  pre-change-digests.json
+  final-delta-manifest.json
+  fixture-cleanup-proof.txt
