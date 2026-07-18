@@ -1,0 +1,5 @@
+docs/90-state/program-state.md
+sessions/SD-001-sustained-dogfooding-bootstrap/changed-files.txt
+sessions/SD-001-sustained-dogfooding-bootstrap/context-pack.yaml
+sessions/SD-001-sustained-dogfooding-bootstrap/prompt.md
+sessions/SD-001-sustained-dogfooding-bootstrap/session-handoff.md

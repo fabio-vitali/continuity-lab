@@ -1,0 +1,566 @@
+contract:
+  queue_position: 35
+  queue_summary: "SD-001 — Sustained Dogfooding Bootstrap — contracted-published 2026-07-18 under DR-0024; the first bounded contract of the sustained-dogfooding validation period against the twelve Product Foundation success criteria: on execution it freezes the contracted measurement protocol and opens the append-only dogfooding ledger under continuity/evidence/sd-001/ (operational definitions for non-trivial Work Items, sampled resumptions, multi-item efforts, and overhead sampling; every count derived from existing store artifacts and contemporaneous ledger appends; weekly cadence; no new product mechanism ahead of evidence), records the owner-confirmed period-start marker, and establishes the standing period rules with the pinned engine frozen; the period begins at the SD-001-PUB publication commit on Nestfolio main; the period verdict is a separately contracted later session and is never issued by SD-001; execution and publication remain blocked pending explicit authorization"
+  status: contracted-published
+  authored_on: 2026-07-18
+  reviewed_on: 2026-07-18
+  finalized_on: 2026-07-18
+  published_on: 2026-07-18
+  published_contract_revision: PENDING-PUBLICATION
+  execution_contract_revision: PENDING-PUBLICATION
+  process_regime: DR-0024 lightened development process
+  contract_authorized: true
+  publication_authorized: true
+  execution_authorized: false
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - docs/10-product/product-foundation.md
+    - docs/40-product-experience/product-experience.md
+    - docs/70-implementation/mi-006-r1-evidence-bound-completion-existing-work-item-rebinding.md
+    - docs/70-implementation/mi-007-governed-learning-and-selective-current-runtime-retirement.md
+    - sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/context-pack.yaml
+    - decisions/DR-0005-separate-goal-and-guard.md
+    - decisions/DR-0014-repository-local-canonical-state.md
+    - decisions/DR-0017-govern-assurance-and-learning-promotion.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
+    - decisions/DR-0025-generated-program-indices-and-current-phase-compaction.md
+  authorization_rule: >
+    This contract is authored, reviewed, and published in one development
+    session under DR-0024. Publication requires the human program owner's
+    explicit approval of the reviewed contract; the owner approved the
+    recommended design (frozen measurement protocol plus append-only ledger
+    under continuity/evidence/sd-001/, the SD-001 naming with queue position
+    35, and authoring-plus-publication) in the authoring session on
+    2026-07-18. Execution is NOT authorized by the authoring session: it
+    requires either a later fresh session launched under prompt.md beside
+    this file with the exact published contract revision resolved, or an
+    explicit same-session extension of authorization by the human program
+    owner after publication. Execution requires the human program owner
+    available in-session for the period-start confirmation. Nothing here
+    authorizes the period verdict, retirement of any current mechanism,
+    engine modification, themes/intake/Epic/deploy migration, a universal
+    registry, a hosted service, or broader work beyond the standing period
+    rules below.
+
+iteration:
+  id: SD-001
+  name: Sustained Dogfooding Bootstrap
+  type: validation-period-bootstrap
+  px_level: "1-6 (sustained real use of the already-proven bounded guarantees)"
+  px_portion: sustained-dogfooding-validation-period
+  status: contracted-published
+  predecessor_results:
+    - MI-002-R2 UNCONDITIONAL PASS
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+    - MI-003-R2 UNCONDITIONAL PASS
+    - MI-004 UNCONDITIONAL PASS
+    - SE-001-R1 UNCONDITIONAL FAIL
+    - MI-004-R1 UNCONDITIONAL PASS
+    - SE-001-R2 UNCONDITIONAL FAIL
+    - SE-001-R3 UNCONDITIONAL PASS
+    - MI-005 UNCONDITIONAL PASS
+    - MI-006 UNCONDITIONAL FAIL (ENGINE_POLICY_MISMATCH)
+    - MI-006-R1 UNCONDITIONAL PASS (the program's first Evidence-bound Work completion)
+    - MI-007 UNCONDITIONAL PASS (the program's first governed Decision-and-Learning slice)
+    - SE-001-PUB published repository state at Nestfolio 363283bcc97b1e04710db0e7f759ffffddb18b69 (no execution result)
+    - MI-005-PUB published Level 5 evidence at Nestfolio eafa09b81a600bd58fe8f4639298a182039d21f5 (no execution result)
+    - MI-006-R1-PUB published Level 6 assurance at Nestfolio 6229bb010d76723aaec0385c923b157762ee512e (no execution result)
+    - MI-007-PUB published governed learning evidence at Nestfolio 914456ce44c271d5bb38b22d985448011d6adcf9 (no execution result)
+  prerequisites_verified_in_authoring:
+    - "MI-007 PASS: the accepted Level 6 operational loop is complete (selection, authorized context, resumable Runs, Evidence-bound completion and Guard coexistence, governed Decision-and-Learning); per migration-plan section 9, sustained dogfooding can now test Product Foundation success criteria without implying full feature restoration"
+    - "sustained dogfooding is NOT a numbered migration slice with a pre-drafted template: it is a validation period against the Product Foundation Provisional Validation Contract; this bootstrap is the minimal bounded first contract that starts it under governance"
+    - "the twelve required outcome criteria and the minimum dogfooding period are bound below by digest to docs/10-product/product-foundation.md at continuity-lab 8a8cc8cba0cbe2b40b8e9d058b7bcaf72dd7d0b1"
+    - "every measurement input already exists as a product mechanism: store Work Items, Runs, Checkpoints, Sessions, Handoffs, Evidence, Lessons, Observations, Decisions, Change Proposals, and Guards under continuity/artifacts/**, plus the append-only audit ledger; no new product mechanism is required or introduced"
+  bound_nestfolio_revision: 914456ce44c271d5bb38b22d985448011d6adcf9
+  bound_criteria_source:
+    path: docs/10-product/product-foundation.md
+    repository: continuity-lab
+    revision: 8a8cc8cba0cbe2b40b8e9d058b7bcaf72dd7d0b1
+    sha256: 223df2894f1b265ea46d16ce9a6031d48d15078ce391cc10db8dab385563f3ab
+    section: "Sustained Nestfolio dogfooding success criteria — Provisional Validation Contract"
+    minimum_period: at least six consecutive weeks of active development; at least twenty non-trivial Work Items managed through Continuity; at least five multi-item or multi-session work efforts including at least two Epics or equivalent grouped workflows; at least fifteen resumptions after a session boundary or interruption
+    threshold_change_rule: thresholds may be revised before implementation only through an explicit validation Decision (Product Foundation); any such revision is a contracted protocol amendment, never a silent edit
+
+validation_period_frame:
+  rule: >
+    SD-001 is a bootstrap, not the period and not its verdict. Executing
+    SD-001 creates the frozen measurement protocol and the append-only
+    dogfooding ledger as Nestfolio evidence records, captures the owner's
+    period-start confirmation, and closes with a bounded verdict on the
+    bootstrap itself. The dogfooding period begins at the committer UTC of
+    the SD-001-PUB publication commit that lands both files on Nestfolio
+    main; from that moment the standing_period_rules below govern dogfooded
+    work. The period verdict — adjudicating the twelve criteria against the
+    ledger and the store after the minimum period is satisfiable — is a
+    separately contracted later session (working name SD-002 — Sustained
+    Dogfooding Verdict) and is never issued, anticipated, or partially
+    claimed by SD-001 or by any ledger entry. The protocol records
+    truthfully; the verdict session adjudicates; interpretation questions
+    (for example whether a zero-activity calendar week breaks consecutive
+    weeks) are recorded as facts during the period and decided by the human
+    program owner at the verdict, not reinterpreted mid-period.
+
+objective:
+  primary_question: >
+    Can the sustained Nestfolio dogfooding period be opened under governance
+    with contemporaneous, attributable measurement toward the twelve Product
+    Foundation success criteria — using only existing Continuity mechanisms
+    (store artifacts, audit ledger, suites, Guards) plus one frozen protocol
+    document and one append-only observational ledger — such that every
+    criterion has a defined derivation, every sample is captured in the
+    session it measures, the pinned engine and every published record stay
+    byte-identical, no new product mechanism is invented ahead of evidence,
+    and the period verdict remains a separately contracted human
+    adjudication?
+  completion_boundary: >
+    Implement and validate only the bootstrap: the two contracted files
+    under continuity/evidence/sd-001/, the owner's period-start
+    confirmation, the fixture demonstrations, and the bounded conjunctive
+    verdict on the bootstrap. Do not create, advance, or mutate any store
+    artifact; do not append to the audit ledger; do not rebuild the derived
+    index; do not start any Run, Work Item, or dogfooded effort; do not
+    issue or partially claim any of the twelve criteria; do not modify the
+    engine, any Skill, any Pack, any binding, any published suite, or any
+    pre-existing byte anywhere; do not begin the period itself (it begins
+    at publication); do not contract or anticipate the verdict session.
+
+engine_binding:
+  rule: >
+    The store engine remains the pinned read-only implementation at
+    runtime/continuity/** together with the hook registration in
+    .claude/settings.json, exactly as pinned by MI-005 and re-verified by
+    MI-006, MI-006-R1, and MI-007 (aggregate engine digest
+    7e31ff56a10ca6b1715b29f02132e66c80e321921b41dcb55329db2e0f320a38; hook
+    registration digest
+    73387f347f43d0f6a154f83ed54c3bdaee0e0b6ba6dbf3120ebf5b8c28834378;
+    settings digest
+    999e828d22fcf1cf1e66eb81260a4f8ff3a36b2387adf117ca84602e65c2c6b7).
+    SD-001 introduces no engine code, changes no engine byte, and — unlike
+    every prior executed slice — performs NO store write at all: the
+    bootstrap touches neither continuity/artifacts/** nor
+    .continuity/audit.ndjson nor .continuity/derived/index.json. The engine
+    stays frozen for the whole dogfooding period: an engine defect surfaced
+    by real use is recorded as a governed Observation through the MI-007
+    learning path plus a ledger event, and its fix requires a separately
+    contracted bounded slice; the period may continue on unaffected work
+    meanwhile. Before any mutation the executor verifies every engine file
+    and .claude/settings.json against the recorded engine-lock digests at
+    the bound revision; a mismatch blocks fail-closed with
+    ENGINE_ASSET_MISMATCH.
+
+measurement_protocol:
+  rule: >
+    continuity/evidence/sd-001/dogfooding-protocol.md is the frozen
+    measurement protocol for the whole period. Its normative content is
+    fixed by this contract: the execution session materializes exactly the
+    definitions, derivations, and cadence below into the file (English,
+    markdown), records its SHA-256 in ledger entry 0, and from that moment
+    any byte change to the file is PROTOCOL_FROZEN_VIOLATION; the only
+    amendment path is a contracted protocol amendment (with an explicit
+    validation Decision when a Product Foundation threshold changes). The
+    protocol and the ledger are observational bookkeeping ONLY: they carry
+    no rule authority, are never read by the engine, gate nothing
+    automatically, and are not product mechanism.
+  definitions:
+    non_trivial_work_item: >
+      A store Work Item (continuity/artifacts/work-items/**) for real
+      Nestfolio development whose completion requires explicit completion
+      criteria and whose implementation changes product source, tests,
+      infrastructure, or product documentation. Pure Continuity
+      bookkeeping (ledger appends, evidence packaging), typo-class fixes,
+      and this bootstrap itself are trivial and never counted.
+      Classification is recorded in the ledger at the item's first
+      appearance and is not silently reclassified.
+    sampled_resumption: >
+      Every resumption during the period is a sample (the population is
+      the sample; no selection bias is possible). A resumption is a fresh
+      Claude Code Session — new session identity — that continues
+      in-progress dogfooded work after a session boundary or interruption,
+      either by resuming an open Run through the pinned engine or by
+      selecting the next action for in-progress work from repository
+      state. Each sample is appended contemporaneously (in the same
+      session it measures) with: machine-captured UTC, session identity,
+      Run/Work Item references, the source of the next action (store
+      artifacts, Handoff, Checkpoint, backlog state — versus prior chat
+      transcript reconstruction), whether the identified next action
+      proved correct, and any material-loss, duplicated-effect, or
+      silently-skipped-step event observed (criteria 1, 2, and 3 inputs).
+    multi_item_effort: >
+      Two or more related Work Items spanning two or more Sessions,
+      grouped by a Working Set, a docs/backlog type:epic bucket, or an
+      explicit grouping declaration in the ledger. Epic-equivalent: a
+      type:epic backlog bucket or Working Set with three or more Work
+      Items worked through Continuity during the period (criteria
+      inputs for the five-effort/two-Epic minimum).
+    overhead_sample: >
+      Per working session, a contemporaneous self-report: minutes spent on
+      Continuity bookkeeping and state recording versus total active
+      development minutes (criterion 9 input). Absence of a sample for a
+      session is recorded as a gap, never backfilled.
+    active_week: >
+      Consecutive seven-day UTC windows counted from the period start
+      (the SD-001-PUB committer UTC). A week with at least one dogfooded
+      working session is active. The ledger records activity truthfully
+      per week; whether a zero-activity week breaks "six consecutive
+      weeks of active development" is adjudicated by the owner at the
+      verdict, not by the protocol.
+  criterion_derivations:
+    - "1 work continuity: resumption samples — correct next action without chat reconstruction, target at least 90 percent"
+    - "2 state integrity: resumption samples — material Work Item, scope constraint, accepted Decision, or completion-criterion loss events, target zero material losses"
+    - "3 resumable execution: store Run/Checkpoint records plus resumption samples — duplicated completed effects or silent skips on tested recoveries, target at least 90 percent clean"
+    - "4 evidence-bound completion: derived mechanically from the store — completed non-trivial Work Items with explicit criteria and linked validation Evidence, target at least 90 percent"
+    - "5 practical work selection: ledger events — next Work Item or Working Set selected from repository state without manual priority/dependency reconstruction in chat"
+    - "6 skill reuse: ledger events recording each executable skill or procedure invocation on a real task — target at least three skills each reused on three or more real tasks"
+    - "7 learning loop: store lessons/observations/decisions/change-proposals plus owner-applied changes through the MI-007 governed path — target at least five evidence-backed Lessons with at least two reused through an updated Skill, validator, check, Guard, or Pack rule"
+    - "8 project-specific separation: period-close classification review of continuity/bindings/** versus core, plus ledger events recording any promotion pressure"
+    - "9 operational overhead: overhead samples — Continuity bookkeeping below 15 percent of active development time"
+    - "10 no forced external duplication: ledger events recording any forced wholesale copy of external backlog/CI/policy state, target none forced"
+    - "11 failure visibility: ledger events recording unresolved decisions, failed validation, stale state, and unavailable evidence, each visible and fail-closed with its typed diagnostic, never a silent completion claim"
+    - "12 developer preference: the owner's explicit statement captured at the verdict session, never before"
+  cadence: >
+    One ledger append per calendar week of the period (weekly entry: week
+    number, activity summary, running counters), plus event appends at each
+    resumption sample, each non-trivial Work Item first appearance and
+    completion, each skill-reuse event, each overhead sample, and each
+    notable failure-visibility or duplication event. A missed week or
+    missing sample is recorded as an explicit gap entry; nothing is
+    silently backfilled. Ledger appends are committed on Nestfolio main
+    through the repository's normal ship mechanisms and may share a commit
+    with the work they record or stand alone; no program-level publication
+    ceremony applies to routine appends — the ceremony remains only for
+    this bootstrap (SD-001-PUB) and for the verdict session's own records.
+
+ledger:
+  path: continuity/evidence/sd-001/dogfooding-ledger.md
+  rule: >
+    Append-only for the whole period: previously appended bytes are never
+    modified or deleted (LEDGER_APPEND_ONLY_VIOLATION); a correction is a
+    new entry referencing the corrected one. Every entry carries
+    machine-captured UTC (date -u at capture). Entries are recorded in the
+    session they measure (RETROACTIVE_MEASUREMENT_PROHIBITED otherwise;
+    gaps are recorded as gaps). The ledger carries no rule authority and
+    is never read by the engine.
+  entry_zero: >
+    The period-start marker, written at execution with: machine-captured
+    UTC; the owner's verbatim period-start confirmation with its
+    machine-captured UTC; the published SD-001 contract revision; the
+    bound Nestfolio revision 914456ce44c271d5bb38b22d985448011d6adcf9; the
+    protocol file SHA-256; the bound criteria source (path, continuity-lab
+    revision, SHA-256, section title) and the minimum-period text; the
+    period-start rule (the period begins at the committer UTC of the
+    SD-001-PUB commit that lands this file on Nestfolio main); and the
+    zeroed counters (non-trivial Work Items 0 of 20; multi-item efforts 0
+    of 5 with Epics 0 of 2; resumption samples 0 of 15; active weeks 0 of
+    6).
+
+standing_period_rules:
+  effective_from: the SD-001-PUB publication commit on Nestfolio main
+  authorized_during_period:
+    - backlog-routed Nestfolio product work conducted through the Continuity Level 1-6 mechanisms as real development — selection, authorized context, resumable Runs with Checkpoints and Handoffs, Evidence-bound completion for non-trivial items, and governed learning — using the pinned engine and its store API unmodified
+    - Working Set and Scope preparation through the pinned store API where the engine requires it (the exact MI-005/MI-006-R1 evidenced preparation mechanism)
+    - store artifacts, audit appends, and derived-index rebuilds produced by the pinned engine and store API as side effects of real work
+    - governed learning through the MI-007 path — Observations, Lessons, Decisions, Change Proposals, and owner-applied changes through each target artifact's own lifecycle
+    - current-route mechanisms for current-routed work exactly per the MI-007 retirement inventory (nothing is retired; automatic check promotion for target-routed work remains prohibited)
+    - ledger and protocol reads by anyone; ledger appends per the cadence rule, committed with the repository's normal ship mechanisms
+  blocked_during_period_unless_separately_contracted:
+    - any byte change to runtime/continuity/**, the hook registration, or .claude/settings.json (engine frozen; defect path via governed Observation plus a separately contracted bounded slice)
+    - any edit to a published continuity suite except a separately contracted correction of a self-invalidating assertion (the MI-004-R1/MI-006-R1 precedent class)
+    - any mutation, repair, relabeling, or reinterpretation of any immutable result, published record, or recorded historical artifact
+    - Skills, Packs, or bindings changes outside the MI-007 governed-learning owner-applied path (normal current-route behavior such as the backlog-next dossier remains current-routed and permitted)
+    - promotion of anything into Framework Core; universal registry; remote source; hosted service; Console
+    - the period verdict, any per-criterion pass/fail claim, and any early closure claim
+    - broader or unrelated implementation and migration (themes/intake/Epic/deploy breadth beyond what real backlog-routed work naturally exercises through existing mechanisms)
+
+session_gates:
+  rule: >
+    Per DR-0024, before execution starts: continuity-workspace,
+    continuity-lab, and Nestfolio are on main with clean working trees;
+    continuity-lab HEAD is the exact published revision containing this
+    contract (same-session execution uses the revision just pushed;
+    later-session execution uses the revision named by the launch handoff);
+    Nestfolio HEAD is 914456ce44c271d5bb38b22d985448011d6adcf9, the
+    published MI-007-PUB governed learning evidence revision (subject
+    "Publish MI-007 governed learning and selective current-runtime
+    retirement evidence"). Every published artifact and every recorded
+    historical result is a read-only input; the only permitted mutations
+    are the two fixed create paths. A wrong branch, dirty tree, or missing
+    contract stops the session before any Nestfolio mutation. No multi-way
+    alignment gates, remote-ref checks, or byte-level authoring manifests
+    apply.
+
+executor_identity:
+  session_executor: >
+    The SD-001 execution session is conducted directly by Claude Code
+    operating under authorization_rule. Every check is deterministic and
+    every artifact's content is fixed by this contract; the session is
+    scripted materialization plus verification, suitable for the mechanical
+    model tier per the workspace model policy. Any surprise or ambiguity
+    stops fail-closed for escalation rather than being interpreted in
+    place.
+  sub_agent_rule: >
+    Per DR-0024 the orchestrating executor may use its own sub-agents and
+    tools for mechanical work at its discretion. Delegating contracted work
+    to the product's executor procedures — any Skill, /backlog-next,
+    continuity:invoke, run-backward.mjs — remains prohibited and is a
+    mandatory failure (F-DELEGATION). Running node for tests and the
+    published continuity tooling's own checks is direct work, not
+    delegation.
+  owner_interaction_rule: >
+    The owner's period-start confirmation is captured live during
+    execution: the executor presents the period-start statement (the
+    period begins at the SD-001-PUB publication commit and the standing
+    period rules take effect from it) to the human program owner in the
+    session and records the verbatim reply with machine-captured UTC in
+    ledger entry 0 and the evidence. Silence, refusal, or contradiction is
+    PERIOD_START_AUTHORIZATION_WITHHELD: execution stops fail-closed, the
+    rollback rule applies, and SD-001 closes UNCONDITIONAL FAIL — the
+    confirmation is never inferred, defaulted, or narrated into existence.
+
+byte_identity_guarantees: >
+  Every pre-existing tracked byte in Nestfolio is byte-immutable for the
+  whole execution — there are no permitted modify paths. Verified by
+  SHA-256 before and after for at least: the pinned engine set and
+  .claude/settings.json (engine-lock digests above); the audit ledger
+  .continuity/audit.ndjson and the derived index
+  .continuity/derived/index.json (untouched — SD-001 performs no store
+  write); every continuity/artifacts/** record (in aggregate by tree
+  digest); the completed backlog item ea565c07…; the applied MI-007
+  binding f602eeb0…; the published suites; and the entire Git common
+  directory journal/ tree (digest recorded at start, byte-identical at
+  close). The final Git status and manifest prove everything else.
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata, exact committed objects, and the Git common directory journal/ tree (byte-identity proof only)
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json, .claude/skills/**
+    - runtime/** including the entire pinned engine runtime/continuity/**
+    - continuity/** pre-existing trees without exception (levels, artifacts, bindings, packs, dogfood, evidence)
+    - .continuity/** without exception (no audit append, no index rebuild)
+    - docs/backlog/** (read-only; no dogfooded work starts in SD-001)
+    - tests/continuity-*.test.mjs (published suites; never edited)
+  create_fixed_paths_on_pass:
+    - continuity/evidence/sd-001/dogfooding-protocol.md
+    - continuity/evidence/sd-001/dogfooding-ledger.md
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly the two fixed create paths — no staged path, no modified,
+    deleted, renamed, or additional path, and no adapter- or
+    engine-produced record of any kind (SD-001 invokes neither). The delta
+    remains uncommitted and unstaged at execution close; publication is
+    separately authorized (SD-001-PUB), which may be granted as an
+    explicit same-session extension by the human program owner.
+  path_absence_rule: >
+    Any pre-existing path under continuity/evidence/sd-001/ is a collision
+    and blocks execution; it must not be overwritten, adopted, repaired,
+    or deleted.
+
+required_preconditions:
+  - the session gates in session_gates pass before any Nestfolio mutation
+  - every engine file and .claude/settings.json verify against the recorded engine-lock digests at the bound revision (ENGINE_ASSET_MISMATCH otherwise)
+  - the bound criteria source verifies byte-identical to SHA-256 223df2894f1b265ea46d16ce9a6031d48d15078ce391cc10db8dab385563f3ab at the continuity-lab revision containing this published contract, and its section title matches exactly
+  - the pre-execution digests of the audit ledger, the derived index, and the journal tree are recorded (they must be byte-identical at close)
+  - both fixed create paths and the continuity/evidence/sd-001/ directory are absent
+  - the human program owner is available in-session for the period-start confirmation (owner_interaction_rule); execution does not start otherwise
+  - before mutation, without invoking any Skill: learning 11/11, Level 6 10/10, Level 5 7/7, Level 4 23/23, Level 3 23/23, Level 2 23/23, Level 1 14/14, engine 9/9, backlog-next 68/68 (the tree is clean at the published MI-007-PUB revision, so all run in the real tree)
+  - package-lock/pnpm-lock changes and dependency operations are not needed (pnpm-lock.yaml is byte-immutable)
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: session gates, engine-lock digests, the bound criteria-source digest, the pre-execution audit/index/journal digests, and the fixed-path absences verify fail-closed before any mutation, and the baseline suites are green
+  - id: S2
+    requirement: the protocol file is materialized with exactly the contracted normative content (definitions, twelve criterion derivations, cadence, frozen-protocol and amendment rules) and its SHA-256 is recorded
+  - id: S3
+    requirement: the ledger is created with entry 0 exactly per entry_zero, including the owner's live verbatim period-start confirmation with machine-captured UTC and the zeroed counters
+  - id: S4
+    requirement: every mandatory failure scenario is demonstrated per fixture_rule with its exact diagnostic and cleanup proof
+  - id: S5
+    requirement: post-execution, every required suite passes (learning, Level 6/5/2/1, engine, and backlog-next in the real tree; Level 4 23/23 and Level 3 23/23 in an isolated committed validation copy per the SE-001-R3/MI-005 mechanics), and the audit ledger, derived index, journal tree, and every byte-identity record are byte-identical to their pre-execution digests
+  - id: S6
+    requirement: the final Nestfolio manifest contains exactly the two fixed create paths, uncommitted and unstaged, with a recorded SHA-256 manifest; the execution closure and DR-0025 obligations complete in continuity-lab
+
+mandatory_failure_scenarios:
+  - id: F-PROTOCOL-DRIFT
+    condition: any byte change to dogfooding-protocol.md after its digest is recorded in ledger entry 0, outside a contracted protocol amendment
+    diagnostic: PROTOCOL_FROZEN_VIOLATION
+  - id: F-LEDGER-REWRITE
+    condition: any modification or deletion of previously appended ledger bytes (the recorded prior bytes must remain the exact prefix of the file after every append)
+    diagnostic: LEDGER_APPEND_ONLY_VIOLATION
+  - id: F-RETROACTIVE-SAMPLE
+    condition: a resumption or overhead sample recorded in a later session than the one it measures, or a backfilled gap presented as a sample
+    diagnostic: RETROACTIVE_MEASUREMENT_PROHIBITED
+  - id: F-START-WITHHELD
+    condition: the owner withholds, refuses, or contradicts the period-start confirmation
+    diagnostic: PERIOD_START_AUTHORIZATION_WITHHELD; execution stops fail-closed and SD-001 closes UNCONDITIONAL FAIL under the rollback rule
+  - id: F-STORE-WRITE
+    condition: any store artifact creation or advancement, audit append, or derived-index rebuild during the bootstrap execution
+    diagnostic: BOOTSTRAP_STORE_WRITE_PROHIBITED
+  - id: F-MECHANISM-INVENTION
+    condition: any new product mechanism created ahead of evidence — engine code, a new artifact kind consumed by the engine, automation reading the ledger or protocol, or any executable coupling of the bootstrap files to product behavior
+    diagnostic: MECHANISM_AHEAD_OF_EVIDENCE_PROHIBITED
+  - id: F-VERDICT-CLAIM
+    condition: any claim, in any artifact or closure text, that one of the twelve criteria passed or failed, that the period closed, or that the verdict is anticipated
+    diagnostic: PERIOD_VERDICT_OUT_OF_SCOPE
+  - id: F-DELEGATION
+    condition: attempt to delegate contracted work to any Skill, slash command, /backlog-next, continuity:invoke, run-backward.mjs, or other product executor procedure
+    diagnostic: EXECUTOR_DELEGATION_PROHIBITED
+  - id: F-SCOPE
+    condition: any write outside the two fixed create paths (including any modification of the pinned engine, hooks, Skills, any published suite, any backlog item, any store, binding, or evidence record, or any .continuity/** byte)
+    diagnostic: MANIFEST_SCOPE_MISMATCH
+  fixture_rule: >
+    F-PROTOCOL-DRIFT and F-LEDGER-REWRITE are exercised in isolated
+    temporary fixtures outside all three repositories with exact
+    expected/observed diagnostics, before/after digests, and cleanup
+    proof (copy the two produced files into the fixture, mutate, prove
+    detection by digest and prefix comparison). F-RETROACTIVE-SAMPLE,
+    F-START-WITHHELD, F-STORE-WRITE, F-MECHANISM-INVENTION,
+    F-VERDICT-CLAIM, F-DELEGATION, and F-SCOPE are standing prohibitions
+    verified structurally (the byte-identity proofs, the final manifest,
+    the absence of any store/audit/index change, the closure text, and the
+    recorded commands); F-START-WITHHELD additionally documents the
+    stop-and-fail semantics without fabricating a withheld reply.
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, clean state, and observed time for all three repositories, plus the journal tree digest
+    - engine-lock evidence records every engine-lock digest verification, and preservation evidence records the audit/index/journal before-and-after digests
+    - the period-start evidence records the owner's verbatim confirmation with its machine-captured UTC and the full entry-0 bytes digest
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - no chat transcript, hidden manual copy, timestamp-dependent artifact ordering, or unrecorded inference is admissible; narrative alone proves nothing
+    - temporary fixtures and copies are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-6-learning.test.mjs returns 11/11 after execution
+    - node --test tests/continuity-level-6.test.mjs returns 10/10 after execution
+    - node --test tests/continuity-level-5.test.mjs returns 7/7 after execution
+    - node --test tests/continuity-level-4.test.mjs returns 23/23 after execution in an isolated committed validation copy (working-tree purity guards; SE-001-R3/MI-005 mechanics)
+    - node --test tests/continuity-level-3.test.mjs returns 23/23 after execution in the same isolated committed validation copy
+    - node --test tests/continuity-level-2.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-1.test.mjs returns 14/14 after execution
+    - node --test runtime/continuity/test/*.test.mjs exits 0 with zero failures after execution
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68 after execution without invoking the Skill
+    - all S1-S6 success scenarios pass
+    - all mandatory failure scenarios are demonstrated per fixture_rule
+    - the audit ledger, derived index, and journal tree digests after execution equal the recorded pre-execution digests
+    - final Git and digest comparison proves every pre-existing tracked path equals the exact start revision
+    - the final Nestfolio manifest contains exactly the two fixed create paths, uncommitted and unstaged, with a recorded SHA-256 manifest
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata for all three repositories, the complete
+    Nestfolio tracked-tree identity, the journal tree digest, the audit
+    ledger and derived index digests, absence of both fixed create paths,
+    and a verified external recovery ledger outside all repositories.
+  execution_failure: >
+    If any condition fails after mutation starts (including
+    PERIOD_START_AUTHORIZATION_WITHHELD), remove both newly created SD-001
+    paths and the continuity/evidence/sd-001/ directory, verify Nestfolio
+    is byte-identical and clean at the exact published start revision,
+    retain diagnostics outside all repositories, and close SD-001 as
+    UNCONDITIONAL FAIL in continuity-lab. Never retain a partial protocol
+    or ledger, and never leave the period ambiguously opened: the period
+    begins only at a successful SD-001-PUB publication.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/90-state/program-state.md
+    - sessions/SD-001-sustained-dogfooding-bootstrap/context-pack.yaml
+    - sessions/SD-001-sustained-dogfooding-bootstrap/session-handoff.md
+  create:
+    - docs/70-implementation/sd-001-sustained-dogfooding-bootstrap.md
+    - sessions/SD-001-sustained-dogfooding-bootstrap/execution-changed-files.txt
+  rule: >
+    The execution closure records only the one SD-001 result and exact
+    execution facts, and performs the DR-0025 closure obligations
+    (queue_summary update, index regeneration, --check). Every prior
+    immutable result and publication record remains immutable. Per DR-0024
+    the closure may be committed and pushed in the executing session with
+    a concise subject-only message; the Nestfolio delta stays uncommitted
+    pending its separate publication authorization (SD-001-PUB).
+
+explicitly_immutable:
+  continuity_workspace: [all content during execution]
+  continuity_lab_during_execution:
+    - all MI-002 through MI-007 artifacts and reports
+    - all VS-001 and VS-001A artifacts and reports
+    - the SD-001 prompt and contract-authoring manifest
+    - every path outside the exact SD-001 execution-closure scope
+  nestfolio:
+    - every pre-existing tracked path without exception
+    - the entire Git common directory journal/ tree
+    - .continuity/** including the audit ledger and derived index
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json, .claude/skills/**
+    - runtime/** including the entire pinned engine runtime/continuity/**
+    - docs/backlog/** without exception
+    - continuity/** pre-existing trees without exception
+    - tests/continuity-*.test.mjs (all published suites)
+
+prohibited_actions:
+  - execute SD-001 outside authorization_rule
+  - inspect or modify Nestfolio content before execution validly starts and session gates pass
+  - commit or push the Nestfolio delta during execution (isolated-copy throwaway commits under the suite mechanics are not real-repository commits); fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history in any real repository during execution
+  - modify, repair, relabel, qualify, supersede, re-grade, or reinterpret any recorded historical result or artifact
+  - create, advance, or mutate any store artifact of any kind; append to the audit ledger; rebuild the derived index; invoke recordLesson, selectWork, startRun, resumeRun, validateRun, or completeRun
+  - start any dogfooded Work Item, Run, or effort inside SD-001 (real work begins only after publication under the standing period rules)
+  - mutate any backlog item, any published suite, the pinned engine runtime/continuity/**, the hooks, .claude/settings.json, or any Skill; introduce any engine code
+  - couple the protocol or ledger to product behavior in any executable way, or create automation that reads them
+  - claim, anticipate, or partially issue the period verdict or any per-criterion outcome
+  - fabricate, default, infer, or reuse any owner statement; the period-start confirmation must be captured live with machine-captured UTC
+  - install, remove, or upgrade dependencies, modify package.json, or mutate pnpm-lock.yaml
+  - contract, scope, or begin the verdict session, themes/intake/Epic/deploy migration, a universal registry, a hosted service, or any broader or unrelated work
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 session gates, engine-lock verification, the bound criteria-source digest, the pre-execution preservation digests, the fixed-path absences, and the baseline suites pass fail-closed before mutation
+    - C2 the protocol file carries exactly the contracted normative content and its recorded digest, and the ledger carries entry 0 exactly per entry_zero with the owner's live verbatim period-start confirmation and machine-captured UTC
+    - C3 no store artifact, audit byte, index byte, journal byte, or any other pre-existing byte changed anywhere (full byte-identity)
+    - C4 every mandatory failure scenario is demonstrated per fixture_rule with its exact diagnostic, and no prohibited action occurs
+    - C5 all required suites pass per required_validation, and all fixtures and copies are removed with absence proof
+    - C6 the final manifest is exactly the two fixed create paths, uncommitted and unstaged, with a recorded SHA-256 manifest, and the continuity-lab closure with DR-0025 obligations completes
+  pass_rule: >
+    Issue SD-001 UNCONDITIONAL PASS only if C1-C6, S1-S6, every mandatory
+    failure demonstration, every precondition, validation, preservation,
+    rollback, cleanup, and exact-manifest requirement passes conjunctively
+    and no prohibited action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, mismatched, out-of-scope,
+    non-deterministic, partial, or failed condition after valid execution
+    start — including a withheld period-start confirmation — is SD-001
+    UNCONDITIONAL FAIL. No qualified PASS, partial PASS, inferred
+    authorization, silent repair, evidence-only override, historical
+    reinterpretation, or history rewrite is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Record SD-001 separately; every prior result remains a separate
+    immutable result. The Nestfolio two-path delta remains uncommitted;
+    its publication (SD-001-PUB — verify byte-exact against the recorded
+    manifest, stage, commit as one subject-only commit "Start SD-001
+    sustained dogfooding period" on Nestfolio main, push) requires
+    separate explicit authorization, which the owner may grant as a
+    same-session extension. The dogfooding period begins at the SD-001-PUB
+    committer UTC; from then the standing_period_rules govern real
+    backlog-routed Nestfolio work through Continuity, with contemporaneous
+    ledger measurement toward the twelve criteria. The period verdict
+    (working name SD-002) becomes contractable at the earliest when the
+    minimum period is satisfiable, and never earlier; broader and
+    unrelated work remain blocked.
+  on_fail: >
+    Preserve all separate results. Select only a newly bounded correction
+    or explicit review supported by the failure evidence. Do not broaden
+    scope. The period does not begin.
+
+completion_criteria:
+  - internally consistent SD-001 contract authored, reviewed by the human program owner, and published on continuity-lab main in one DR-0024 session
+  - execution not started in the authoring phase; the only Nestfolio interactions of the authoring session are recorded bounded targeted grounding reads
+  - the measurement protocol (definitions, twelve criterion derivations, cadence), the append-only ledger with its period-start marker, the standing period rules with the engine frozen, and the separately contracted verdict boundary are defined by this contract without inventing any new product mechanism
+  - all thirteen prior immutable results and the SE-001-PUB, MI-005-PUB, MI-006-R1-PUB, and MI-007-PUB publication records remain immutable and unrepaired
+  - DR-0025 closure obligations performed at session closure (queue_position 35, queue_summary, index regeneration, --check exit 0)
+  - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
