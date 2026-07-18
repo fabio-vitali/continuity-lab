@@ -1,0 +1,7 @@
+docs/70-implementation/README.md
+docs/90-state/program-state.md
+scripts/generate-program-indices.mjs
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/changed-files.txt
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/context-pack.yaml
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/prompt.md
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/session-handoff.md

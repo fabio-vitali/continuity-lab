@@ -1,0 +1,849 @@
+contract:
+  queue_position: 34
+  queue_summary: "MI-007 — Governed Learning and Selective Current-Runtime Retirement — contract authored, owner-reviewed, and published 2026-07-18 under DR-0024; the Level 6 Decision-and-Learning slice over the completed effort's run-mi006-r1 Evidence: five fixed Observations (four factual, reviewed at execution to the contracted accepted/duplicate/deferred/rejected outcomes, plus one provenance-preserving historical import from the current LESSONS.md dossier), one accepted candidate Lesson and one rejected-unsafe Lesson, one durable Decision and one separate Change Proposal, exactly ONE owner-applied additive project-binding rule (the deterministic-evidence boundary rule) applied only after the recorded Decision and acceptance, a retirement inventory classifying six current mechanisms (retained/deferred/rejected; NONE retired in this bound), all through the pinned store API with the engine unmodified and every published record byte-identical; execution blocked pending explicit authorization"
+  status: contracted-published
+  authored_on: 2026-07-18
+  reviewed_on: 2026-07-18
+  finalized_on: 2026-07-18
+  published_on: 2026-07-18
+  published_contract_revision: PENDING-PUBLICATION
+  execution_contract_revision: PENDING-PUBLICATION
+  process_regime: DR-0024 lightened development process
+  contract_authorized: true
+  publication_authorized: true
+  execution_authorized: false
+  authority:
+    - docs/90-state/program-state.md
+    - docs/60-migration/migration-plan.md
+    - docs/40-product-experience/product-experience.md
+    - docs/30-target-architecture/target-architecture.md
+    - docs/00-governance/design-levels.md
+    - docs/70-implementation/mi-005-resumable-run-cutover.md
+    - docs/70-implementation/mi-006-evidence-bound-completion-and-guard-coexistence.md
+    - docs/70-implementation/mi-006-r1-evidence-bound-completion-existing-work-item-rebinding.md
+    - sessions/MI-006-R1-evidence-bound-completion-existing-work-item-rebinding/context-pack.yaml
+    - decisions/DR-0005-separate-goal-and-guard.md
+    - decisions/DR-0014-repository-local-canonical-state.md
+    - decisions/DR-0017-govern-assurance-and-learning-promotion.md
+    - decisions/DR-0019-cumulative-adoption-with-explicit-guarantee-levels.md
+    - decisions/DR-0023-cumulative-strangler-migration-by-guarantee-level.md
+    - decisions/DR-0024-lightened-development-process-for-solo-experimental-phase.md
+    - decisions/DR-0025-generated-program-indices-and-current-phase-compaction.md
+  authorization_rule: >
+    This contract is authored, reviewed, and published in one development
+    session under DR-0024. Publication requires the human program owner's
+    explicit approval of the reviewed contract; the owner approved the
+    recommended full-loop design (four reviewed factual Observations plus one
+    historical import, one owner-applied additive change, six-mechanism
+    retirement inventory with no actual retirement) in the authoring session
+    on 2026-07-18. Execution is NOT authorized by the authoring session: it
+    requires either a later fresh session launched under prompt.md beside
+    this file with the exact published contract revision resolved, or an
+    explicit same-session extension of authorization by the human program
+    owner after publication. Nothing here authorizes MI-008 or later slices,
+    themes/intake/Epic/deploy migration, actual retirement of any current
+    component, a universal registry, a hosted service, or broader work.
+
+iteration:
+  id: MI-007
+  name: Governed Learning and Selective Current-Runtime Retirement
+  type: bounded-level-6-decision-and-learning
+  px_level: 6
+  px_portion: decision-and-learning
+  status: contracted-published
+  predecessor_results:
+    - MI-002-R2 UNCONDITIONAL PASS
+    - MI-003 UNCONDITIONAL FAIL
+    - MI-003-R1 UNCONDITIONAL FAIL
+    - MI-003-R2 UNCONDITIONAL PASS
+    - MI-004 UNCONDITIONAL PASS
+    - SE-001-R1 UNCONDITIONAL FAIL
+    - MI-004-R1 UNCONDITIONAL PASS
+    - SE-001-R2 UNCONDITIONAL FAIL
+    - SE-001-R3 UNCONDITIONAL PASS
+    - MI-005 UNCONDITIONAL PASS
+    - MI-006 UNCONDITIONAL FAIL (ENGINE_POLICY_MISMATCH)
+    - MI-006-R1 UNCONDITIONAL PASS (the program's first Evidence-bound Work completion)
+    - SE-001-PUB published repository state at Nestfolio 363283bcc97b1e04710db0e7f759ffffddb18b69 (no execution result)
+    - MI-005-PUB published Level 5 evidence at Nestfolio eafa09b81a600bd58fe8f4639298a182039d21f5 (no execution result)
+    - MI-006-R1-PUB published Level 6 assurance at Nestfolio 6229bb010d76723aaec0385c923b157762ee512e (no execution result)
+  prerequisites_verified_in_authoring:
+    - "MI-006 PASS: satisfied by MI-006-R1 UNCONDITIONAL PASS (the single bounded correction selected per the MI-006 next_iteration_rule.on_fail; the MI-006 FAIL remains a separate immutable result)"
+    - "at least one factual Observation from a target Run: the published run-mi006-r1 Evidence provides the four factual Observation sources bound below by digest"
+    - "one current lesson/finding suitable for historical or candidate import: the current dossier .claude/skills/backlog-next/LESSONS.md (SHA-256 eea79ec7be3f8370b491b3eb764159b89a8849ca7a45a875602a81de1549c1a3), F-30 entry, bound below as the historical import source"
+    - "explicit reviewer and target artifact owner: fabio.vitali, the human program owner, is both the learning reviewer and the target artifact owner for the one applied change"
+  bound_nestfolio_revision: 6229bb010d76723aaec0385c923b157762ee512e
+  bound_completed_effort:
+    source_path: docs/backlog/dashboard-bff-awaiting-confirmation-activity-gap.md
+    source_identity: dashboard-bff-awaiting-confirmation-activity-gap
+    completed_source_sha256: ea565c07025ffa9643895ea8074bd9ca20d8deb4e1be682b476ca77712e5a2c2
+    work_item_completed_revision_5_sha256: 363acbe26e154b574bbe0491b97889cdddbfcd69dfbc9cacb86072ed52b7e602
+    completing_run: run-mi006-r1 (completed; its record bytes are immutable for this contract)
+    role_in_mi_007: >
+      The completed effort is the program's one target-routed Work effort and
+      the sole source of target-routed learning material. MI-007 reads its
+      run-mi006-r1 Evidence read-only and converts findings into governed
+      target learning records; it never reopens, revalidates, re-completes,
+      or mutates the effort, its Work Item, its Run, or its backlog item.
+  bound_learning_sources:
+    - id: run-mi006-r1 evidence mi006r1-c1-investigation
+      path: continuity/artifacts/evidence/run-mi006-r1-mi006r1-c1-investigation.json
+      sha256: afd1e24b35224a3c92475a05eb4c198f799eb695f0092a14b628320ea2887f0f
+    - id: run-mi006-r1 evidence mi006r1-c2-cdc-sourcing
+      path: continuity/artifacts/evidence/run-mi006-r1-mi006r1-c2-cdc-sourcing.json
+      sha256: 05d2314133133e7cafedc489a8b53429e652dcbfb24bef2eb50bfd0d068c791b
+    - id: run-mi006-r1 evidence mi006r1-c3-non-regression
+      path: continuity/artifacts/evidence/run-mi006-r1-mi006r1-c3-non-regression.json
+      sha256: a3e3ab815c0c2d9793eba1e3f08b59382d9fd97f96d71b258cf79ecee701b718
+    - id: classified dead-handler Guard definition
+      path: continuity/bindings/nestfolio/guards/mi006-r1-dashboard-bff-no-dead-user-confirmation-requested-handler.json
+      sha256: 74008f124ccc9962f94592a03d9a03fe492565e696cc3176a11a2c6066591f4a
+    - id: MI-006 UNCONDITIONAL FAIL execution closure (root cause and owner-authorized secondary finding, machine-captured UTC 2026-07-18T11:38:34.000Z)
+      path: continuity-lab docs/70-implementation/mi-006-evidence-bound-completion-and-guard-coexistence.md at revision 893f7e04769798452c9fcd3716ea34459f1a51dd
+    - id: MI-006-R1 accepted documented consequence (run-mi005 permanent non-resumability by staleness)
+      path: continuity-lab docs/70-implementation/mi-006-r1-evidence-bound-completion-existing-work-item-rebinding.md at the published contract revision 80d70ac9bf9f1252474a9fbed414a0ef6ee57061 lineage
+    - id: current lesson dossier historical-import source
+      path: .claude/skills/backlog-next/LESSONS.md
+      sha256: eea79ec7be3f8370b491b3eb764159b89a8849ca7a45a875602a81de1549c1a3
+      entry: "F-30 — always stamp `closed: <today>` at ship (shared with backlog-next-epic)"
+  bound_level_2_lock:
+    packs: nestfolio.level-1@1.0.1 plus continuity.repository-tools@1.0.0
+    procedures: nestfolio.backlog-next@1.0.1 plus continuity.repository-status@1.0.0
+    aggregate_sha256: 73bbb7c9199a79e00208115f1f7ba469be7e42e1bd20d1d72bfc726ac048df26
+  bound_level_3_scope:
+    scope_digest: db7a45278e8f4a270552e3ae1db3695b70e07d1624b27bcdc28f6417883a5ad6
+  bound_level_4_context_pack:
+    name: nestfolio.context.dashboard-bff-awaiting-confirmation-activity-gap
+    version: 1
+    context_pack_sha256: e58c9bc1978d6799cccda96c2520ea1f7f41ab8b88e8a055ff968cd7b8ce15c1
+    binding_rule: >
+      Bound read-only for digest verification only. MI-007 is a governance
+      slice over already-produced Evidence: it forms no new Context Pack,
+      Run, Checkpoint, or Handoff and never re-validates or re-authorizes any
+      Level 4 artifact.
+
+objective:
+  primary_question: >
+    Can Evidence-backed findings from the completed target Work be reviewed —
+    under explicit human authority — into reusable target learning records
+    (factual Observations, a candidate Lesson, a durable Decision, and a
+    separate Change Proposal), with exactly one accepted project-level change
+    applied by the target artifact owner through that artifact's own
+    lifecycle and everything else left unpromoted, such that no learning
+    record ever directly mutates a Skill, Guard, validator, Pack, or binding,
+    automatic check promotion is proven prohibited for target-routed work, a
+    provenance-preserving historical import from the current lesson dossier
+    is demonstrated, and a retirement inventory classifies the current
+    backward-edge mechanisms explicitly (retained/deferred/rejected, none
+    retired) — while the pinned engine, every published record including
+    every run-mi006-r1 and VS-001 learning artifact, and every current
+    mechanism remain byte-identical?
+  completion_boundary: >
+    Implement and validate only the Level 6 Decision-and-Learning portion for
+    learning material sourced from the one completed target-routed effort.
+    All target learning records are NEW artifacts direct-authored through the
+    pinned store API at fixed contracted paths; the one applied change is a
+    NEW additive file under continuity/bindings/nestfolio/decisions/. The
+    only pre-existing paths that change are the append-only audit ledger and
+    the derived index rebuild. Do not create or complete any Run, Work Item,
+    Checkpoint, Handoff, or Context Pack; do not mutate any backlog item, any
+    published suite, the pinned engine, any Skill, any Pack, any Guard, any
+    validator, or any pre-existing store or binding record; do not use the
+    engine's recordLesson (it would advance the published run-mi006-r1
+    record); do not invoke the current backward-edge mint/consider/curate
+    path for anything; do not retire, disable, or delete any current
+    mechanism; do not promote anything into Framework Core; do not begin
+    MI-008, sustained-dogfooding scope, or broader work.
+
+engine_binding:
+  rule: >
+    The store engine is the pinned read-only implementation at
+    runtime/continuity/** together with the hook registration in
+    .claude/settings.json, exactly as pinned by MI-005 and re-verified by
+    MI-006 and MI-006-R1 (aggregate engine digest
+    7e31ff56a10ca6b1715b29f02132e66c80e321921b41dcb55329db2e0f320a38; hook
+    registration digest
+    73387f347f43d0f6a154f83ed54c3bdaee0e0b6ba6dbf3120ebf5b8c28834378;
+    settings digest
+    999e828d22fcf1cf1e66eb81260a4f8ff3a36b2387adf117ca84602e65c2c6b7).
+    MI-007 introduces no engine code and changes no engine byte. The engine's
+    own store API (createStore(root) from the pinned
+    runtime/continuity/lib/store.mjs, imported unmodified as a library) is
+    the sole permitted mechanism for every contracted store write:
+    writeArtifact with expectedRevision 0 for each creation and with the
+    exact prior revision for each contracted advancement (REVISION_CONFLICT
+    and IMMUTABLE_ARTIFACT_EXISTS abort fail-closed), appendAudit for the
+    audit trail, and rebuildIndex for the derived index. The engine's
+    recordLesson function is explicitly NOT used: it appends
+    observation/lesson references to the owning Run artifact, and
+    run-mi006-r1 is a published immutable record that must remain
+    byte-identical; the direct store-API authoring below is the same
+    contracted preparation mechanism MI-005 and MI-006-R1 used and
+    evidenced. Before any mutation the executor verifies every engine file
+    and .claude/settings.json against the recorded engine-lock digests at
+    the bound revision; a mismatch blocks fail-closed with
+    ENGINE_ASSET_MISMATCH.
+  engine_verified_in_authoring: >
+    The authoring session verified against the pinned engine source at the
+    bound revision that: the store API is kind-generic (writeArtifact
+    resolves continuity/artifacts/<kind>/<id>.json for any kind, so the new
+    decisions and change-proposals kinds require no engine change);
+    rebuildIndex auto-discovers new kind directories; expectedRevision
+    conflicts fail closed with the typed REVISION_CONFLICT and immutable
+    collisions with IMMUTABLE_ARTIFACT_EXISTS (both raised on the error's
+    typed code); recordLesson writes to the owning Run artifact and is
+    therefore excluded; and no published suite enumerates the observations,
+    lessons, decisions, or change-proposals directories, so the contracted
+    creations break no published assertion. The store mechanics (creation,
+    contracted advancement, both fail-closed codes, audit append, and index
+    rebuild over the new kinds) were proven empirically in an isolated
+    scratch store outside all three repositories, since removed.
+  level_6_learning_binding_artifact: >
+    continuity/level-6/learning-binding.json declares, in canonical JSON:
+    the bound Nestfolio revision and the engine-lock digests; every bound
+    learning source by path and digest; the five Observation, two Lesson,
+    one Decision, and one Change Proposal artifacts by fixed id with their
+    contracted statuses and revision chains; the one applied change by path
+    with its required provenance chain; the ordering rule (Decision and
+    accepted Change Proposal strictly before the applied file exists); the
+    no-auto-promotion digest sets; the retirement-inventory reference; and
+    the explicit statement that no Run, Work Item, Checkpoint, Handoff, or
+    Context Pack is created and no current mechanism is retired.
+    tests/continuity-level-6-learning.test.mjs validates this binding
+    deterministically against the repository and the produced artifacts.
+
+learning_lifecycles:
+  rule: >
+    Per DR-0017 the four lifecycles are separate and none carries rule
+    authority by itself. An Observation is a raw evidence-linked finding
+    with no rule authority. A Lesson is a reviewed reusable statement that
+    may be accepted, rejected, superseded, retired, or proposed for
+    promotion — never executed. A Change Proposal is an explicit proposal to
+    modify a Skill, Procedure, validator, Guard, Pack, or project binding,
+    identifying supporting Evidence, expected benefit, risk, validation
+    plan, and required authority. Only a reviewed and accepted change,
+    applied by the target artifact owner through that artifact's own
+    lifecycle, updates a canonical rule or binding. Deterministic checks,
+    agent review, and human review remain distinct modes (DR-0017);
+    Goal-shaped completion criteria and Guard-shaped standing conditions
+    remain separate entities (DR-0005). No current or target learning record
+    can directly mutate a Skill, Guard, validator, Pack, or binding; current
+    findings and lessons remain historical source artifacts; target-routed
+    work cannot use automatic check promotion; current backward-edge flows
+    remain available for current-routed work only.
+  human_floor: >
+    Every review outcome, the Lesson acceptance, the Decision, and the
+    application authorization are explicit acts of the human program owner
+    (fabio.vitali), captured verbatim during execution with machine-captured
+    UTC (date -u at capture; the MI-004/MI-006-R1 authorization precedent)
+    and recorded inside the corresponding artifact. The contracted outcomes
+    below are the owner-reviewed design of this contract; at execution the
+    owner explicitly confirms each one. A withheld or contradicting
+    confirmation blocks fail-closed with REVIEW_AUTHORIZATION_WITHHELD and
+    MI-007 closes UNCONDITIONAL FAIL without forcing any outcome.
+
+observations:
+  rule: >
+    Exactly five Observation artifacts are created at the fixed ids below
+    via the pinned store API (expectedRevision 0, revision 1, status
+    recorded, with source provenance by exact path/digest and evidence
+    references by id/digest). The four factual Observations are then
+    advanced exactly once each (expectedRevision 1, revision 2) to record
+    the owner-confirmed review outcome with reviewer, verbatim quoted
+    confirmation, machine-captured UTC, and rationale. The historical import
+    (observation 05) is never advanced, reviewed into a target Lesson, or
+    promoted. No other Observation is created and no pre-existing
+    observation artifact (the two VS-001 records) is touched.
+  fixed_artifacts:
+    - id: observation-mi007-01-deterministic-evidence-sourcing
+      statement: >
+        The MI-006 contract bound the dashboard-bff integration suite as
+        deterministic Evidence for Level 3 criteria 2 and 3, but that suite
+        targets real deployed AWS and cannot execute inside a bounded local
+        session; MI-006 recorded this as the owner-authorized secondary
+        finding (machine-captured UTC 2026-07-18T11:38:34.000Z) and
+        MI-006-R1 corrected the deterministic Evidence to the dashboard-bff
+        unit suite plus a byte-identity non-regression proof of the
+        integration-suite files.
+      sources: MI-006 execution closure at 893f7e04…; run-mi006-r1 Evidence mi006r1-c3-non-regression a3e3ab81… and mi006r1-c2-cdc-sourcing 05d23141…
+      contracted_review_outcome: accepted (proceeds to lesson-mi007-01 and the separate Change Proposal)
+    - id: observation-mi007-02-dead-handler-guard-duplicate
+      statement: >
+        The condition that the removed dead USER_CONFIRMATION_REQUESTED
+        handler must not be reintroduced was surfaced again by
+        run-mi006-r1's criterion-3 Evidence; the condition is already
+        governed by the classified target Guard
+        nestfolio-dashboard-bff-no-dead-user-confirmation-requested-handler
+        (definition 74008f12…), referenced by the completed Work Item and
+        evaluated true.
+      sources: run-mi006-r1 Evidence mi006r1-c3-non-regression a3e3ab81…; Guard definition 74008f12…
+      contracted_review_outcome: duplicate (already governed by the classified Guard; no new Lesson, Proposal, or Guard is created from it)
+    - id: observation-mi007-03-run-mi005-staleness
+      statement: >
+        After the effort's Work Item advanced past revision 2, run-mi005
+        became permanently non-resumable by staleness (its final Checkpoint
+        pins work_item revision 2; the engine's freshness validation returns
+        STALE_RUN); MI-006-R1 recorded this as an accepted, documented
+        consequence with no byte change to any run-mi005 record.
+      sources: MI-006-R1 report accepted-documented-consequence section; MI-005 byte-identity evidence
+      contracted_review_outcome: deferred (no action in this bound; any staleness-recovery capability is a separately contracted future slice; not a defect)
+    - id: observation-mi007-04-occupied-work-item-conflict
+      statement: >
+        MI-006 closed UNCONDITIONAL FAIL with ENGINE_POLICY_MISMATCH because
+        the pinned engine keys exactly one Work Item per work_id and the
+        effort's id was occupied by an immutable in_progress MI-005 record;
+        selectWork returned REVISION_CONFLICT (expected_revision 0,
+        actual_revision 2) and no engine path existed without engine
+        modification or an immutability violation.
+      sources: MI-006 execution closure at 893f7e04…; MI-006-R1 contract immutability_exception
+      contracted_review_outcome: rejected (the derived candidate lesson-mi007-02 is unsafe; see lessons)
+    - id: observation-mi007-05-historical-import-f30
+      statement: >
+        Historical import from the current lesson dossier
+        .claude/skills/backlog-next/LESSONS.md (SHA-256 eea79ec7…), entry
+        "F-30 — always stamp `closed: <today>` at ship": the explicit
+        closed: stamp is the authoritative ship date and the only one immune
+        to across-midnight drift. For target-routed work this behavior is
+        already provided by the pinned engine's truthful completion
+        write-back, proven by run-mi006-r1 (backlog b656733… advanced to
+        ea565c07… with status shipped and closed 2026-07-18).
+      sources: .claude/skills/backlog-next/LESSONS.md eea79ec7… (exact heading quoted); run-mi006-r1 completion evidence
+      contracted_review_outcome: none — status historical at revision 1 permanently; provenance-preserving import only, never promoted
+
+lessons:
+  rule: >
+    Exactly two Lesson artifacts are created at the fixed ids below via the
+    pinned store API. Lessons carry no rule authority; promotion fields
+    always record automatic false, and the only path from lesson-mi007-01 to
+    any canonical change is the separate Change Proposal below.
+  fixed_artifacts:
+    - id: lesson-mi007-01-deterministic-evidence-boundary
+      derived_from: observation-mi007-01-deterministic-evidence-sourcing (by id/revision/digest)
+      statement: >
+        Before binding a validator as deterministic Evidence for a
+        completion criterion, verify the validator is executable within the
+        boundary of the session that must produce the Evidence; a validator
+        that depends on external infrastructure may enter a bounded contract
+        only as a byte-identity/non-regression subject or as separately
+        produced, provenance-recorded external Evidence.
+      lifecycle: created revision 1 status candidate with safety_review pending-human-review; advanced once (expectedRevision 1, revision 2) to status accepted recording the owner's verbatim confirmation with machine-captured UTC; promotion remains {status proposal-created, target_changes [change-proposal-mi007-01 by id], automatic false} — the Lesson itself never applies anything
+    - id: lesson-mi007-02-automatic-rebinding-rejected
+      derived_from: observation-mi007-04-occupied-work-item-conflict (by id/revision/digest)
+      statement: >
+        Candidate (rejected): on an occupied work-item id the engine should
+        automatically rebind or advance the existing record so completion
+        can proceed.
+      lifecycle: created revision 1 status rejected with safety_review {status unsafe, rationale "An automatic immutability exception would let any Run mutate immutable records without owner authorization; the safe path is a contracted, owner-approved, bounded exception as MI-006-R1 performed."}; promotion {status not_promoted, target_changes [], automatic false}; never advanced
+
+decision_and_change_proposal:
+  rule: >
+    Exactly one durable Decision and one Change Proposal are created at the
+    fixed ids below via the pinned store API. The Decision is the target
+    Durable Decision object (migration plan "introduce" row): it records the
+    owner's explicit decision to accept change-proposal-mi007-01 for
+    application by the target artifact owner, with the verbatim quoted
+    authorization and machine-captured UTC. The Change Proposal is a
+    separate artifact from the Lesson (DR-0017): created revision 1 status
+    proposed; advanced (expectedRevision 1, revision 2) to status accepted
+    referencing the Decision by id/revision/digest; advanced once more
+    (expectedRevision 2, revision 3) to status applied referencing the
+    applied file by path and digest. No other Decision or Change Proposal is
+    created; neither artifact ever mutates any target artifact itself.
+  fixed_artifacts:
+    - id: decision-mi007-01-accept-deterministic-evidence-boundary-change
+      content: decision to accept change-proposal-mi007-01 and authorize the target artifact owner to apply it through the Nestfolio binding's own lifecycle; decided_by fabio.vitali (human program owner); verbatim quoted authorization; machine-captured UTC; supporting refs to observation-mi007-01, lesson-mi007-01, and the bound Evidence digests
+    - id: change-proposal-mi007-01-deterministic-evidence-boundary-rule
+      content: >
+        target_artifact
+        continuity/bindings/nestfolio/decisions/mi007-deterministic-evidence-boundary-rule.json
+        (a NEW additive accepted-decision record in the Nestfolio project
+        binding); supporting evidence observation-mi007-01 and lesson-mi007-01
+        by id/revision/digest plus the bound run-mi006-r1 Evidence digests;
+        expected benefit (prevents rebinding non-executable validators as
+        deterministic Evidence — the defect class that cost the MI-006
+        iteration); risk (none to runtime behavior: an additive,
+        non-executable governance record); validation plan (the
+        deterministic learning suite validates schema, provenance chain,
+        ordering, and digest bindings; the derived index rebuild lists the
+        new record); required authority (the target artifact owner,
+        fabio.vitali); rollback (remove the added file — no other byte
+        depends on it).
+
+applied_change:
+  rule: >
+    Exactly ONE accepted project-level change is applied, by the target
+    artifact owner's explicit authorization, as the NEW file
+    continuity/bindings/nestfolio/decisions/mi007-deterministic-evidence-boundary-rule.json
+    (canonical JSON): schema_version, id
+    mi007-deterministic-evidence-boundary-rule, status accepted, the rule
+    statement (the lesson-mi007-01 statement as a project-binding rule for
+    future target-routed criterion Evidence binding), applies_to (criterion
+    Evidence binding for target-routed Nestfolio work; explicitly
+    non-executable — future contracts cite it, nothing enforces it
+    automatically), authority fabio.vitali (human program owner), the
+    verbatim application authorization with machine-captured UTC, and the
+    full provenance chain (change-proposal, decision, lesson, observation,
+    and source Evidence by id/revision/digest). The file is created ONLY
+    after the Decision artifact and the Change Proposal's accepted revision
+    exist, and the ordering is proven by the audit ledger sequence and the
+    machine-captured UTCs recorded in the evidence. Application through the
+    binding's own lifecycle means exactly this owner-authorized additive
+    record with provenance and validation; it changes no existing byte, so
+    no Pack lock, Level 1-6 artifact, or suite is touched, and rollback is
+    file removal restoring the exact start tree.
+  no_auto_promotion_proof: >
+    The executor proves by SHA-256 comparison that .claude/skills/** and
+    .claude/settings.json, continuity/packs/**, runtime/**, all
+    tests/continuity-level-*.test.mjs published suites, every pre-existing
+    continuity/bindings/** file (including the Guard definition 74008f12…
+    and the VS-001 accepted-decision records), and every pre-existing
+    continuity/artifacts/** and .continuity/** file except the two
+    permitted modify paths are byte-identical to the bound revision for the
+    whole execution, and that before the Decision and accepted-proposal
+    records exist no target-artifact byte anywhere has changed. The one
+    applied file is the sole binding addition and appears only after the
+    recorded approvals.
+
+retirement_inventory:
+  rule: >
+    continuity/level-6/retirement-inventory.json (canonical JSON) classifies
+    exactly the six current backward-edge mechanisms below, each with: the
+    mechanism, its current implementation reference, the migration-plan row
+    it instantiates, the classification (retained / deferred / rejected for
+    target-routed use), the no-active-dependency basis (route facts recorded
+    read-only: the one target-routed effort is completed; no active target
+    Run exists; the current journal serves current-routed work only), and
+    the explicit statement that NOTHING is retired, disabled, or deleted in
+    this bound. Exact retirement timing remains with later sustained
+    dogfooding per the migration plan's open-questions register.
+  classifications:
+    - mechanism: ship-time mint consideration (backlog-next SKILL.md step 6.4b; run-backward.mjs consider)
+      classification: retained for current-routed work; REJECTED for target-routed work — the completed effort's Level 6 completion flowed through the pinned engine with no mint consideration, and automatic check promotion for target-routed work is prohibited (proven by the no-auto-promotion proof and fixture F-TARGET-ROUTED-MINT)
+    - mechanism: check minting/ratification with human floor (run-backward.mjs mint)
+      classification: retained for current-routed work; for target-routed work its function is REPLACED by the governed Observation-Lesson-Change-Proposal-owner-application loop this contract proves end-to-end
+    - mechanism: check keep/retire/supersede curation (run-backward.mjs curate; retire/supersede/keep decisions)
+      classification: retained — human authority and history preserved; target-lifecycle adaptation DEFERRED
+    - mechanism: finding-to-backlog intake (backlog-add hot-path router)
+      classification: retained current; target migration DEFERRED — MI-007 references findings as Observations but does not automate backlog creation
+    - mechanism: registry loading and check lifecycle YAML
+      classification: retained — current YAML remains invocable as a validator; target Guard activation only by explicit classification (proven by MI-006-R1); broad migration DEFERRED
+    - mechanism: deploy and affected-integration gate
+      classification: retained as project-specific; migration DEFERRED — referenced as external Evidence only
+  out_of_scope_confirmations: themes, intake breadth, Epic orchestration, and deploy behavior remain in the Nestfolio binding or current route per the migration-plan exclusions; no universal registry and no hosted service exist or are claimed
+
+session_gates:
+  rule: >
+    Per DR-0024, before execution starts: continuity-workspace,
+    continuity-lab, and Nestfolio are on main with clean working trees;
+    continuity-lab HEAD is the exact published revision containing this
+    contract (same-session execution uses the revision just pushed;
+    later-session execution uses the revision named by the launch handoff);
+    Nestfolio HEAD is 6229bb010d76723aaec0385c923b157762ee512e, the
+    published MI-006-R1 Level 6 assurance revision (subject "Publish
+    MI-006-R1 evidence-bound completion Level 6 assurance"). Every
+    published artifact and every recorded historical result is a read-only
+    input except the exact permitted mutation sets of this contract. A
+    wrong branch, dirty tree, or missing contract stops the session before
+    any Nestfolio mutation. No multi-way alignment gates, remote-ref
+    checks, or byte-level authoring manifests apply.
+
+executor_identity:
+  session_executor: >
+    The MI-007 execution session is conducted directly by Claude Code
+    operating under authorization_rule. It orchestrates the store writes,
+    the owner review capture, the applied change, the retirement inventory,
+    the failure scenarios, evidence, and closure with its own tools,
+    driving the pinned store API directly as a library.
+  sub_agent_rule: >
+    Per DR-0024 the orchestrating executor may use its own sub-agents and
+    tools for mechanical work at its discretion. Delegating contracted work
+    to the product's executor procedures — any Skill, /backlog-next,
+    continuity:invoke, run-backward.mjs — remains prohibited and is a
+    mandatory failure (F10). Running node for tests, the pinned store API,
+    and the published continuity tooling's own checks is direct work, not
+    delegation.
+  owner_interaction_rule: >
+    The owner review is captured live during execution: the executor
+    presents each contracted outcome (the four review outcomes, the Lesson
+    acceptance, the Decision, and the application authorization) to the
+    human program owner in the session, records each verbatim reply with
+    machine-captured UTC, and embeds the quotes in the corresponding
+    artifacts and evidence. Silence, refusal, or contradiction on any item
+    is REVIEW_AUTHORIZATION_WITHHELD: execution stops fail-closed, the
+    rollback rule applies, and MI-007 closes UNCONDITIONAL FAIL — outcomes
+    are never inferred, defaulted, or narrated into existence.
+
+byte_identity_guarantees: >
+  Every pre-existing record stays byte-identical for the whole execution
+  except the two permitted modify paths, verified by SHA-256 before and
+  after for at least this enumerated set (and by the final Git status and
+  manifest for everything else):
+  continuity/artifacts/runs/run-mi006-r1.json
+  87cba425ff92262293dc0d7a43641f7858c618694e96d09990b0fd0ca9071dd0;
+  continuity/artifacts/work-items/dashboard-bff-awaiting-confirmation-activity-gap.json
+  363acbe26e154b574bbe0491b97889cdddbfcd69dfbc9cacb86072ed52b7e602;
+  continuity/artifacts/validation-plans/run-mi006-r1.json
+  3f5190768ec06800ea48e35fa60adb6e8415dded95f106fedb3e61124b1d23f7;
+  continuity/artifacts/checkpoints/run-mi006-r1-final-1.json
+  46c93abbb31ae2a71379536b1883009ca335a8efcc6a0dd8873360bdd0af4068;
+  the three run-mi006-r1 evidence artifacts afd1e24b…, 05d23141…,
+  a3e3ab81…; continuity/artifacts/scopes/scope-mi006-r1-completion.json
+  1903ac95e2203b5b5f7347612a20a9d8a4058c53d033f235b7d2ef90fcff73e0;
+  continuity/artifacts/working-sets/ws-mi006-r1.json
+  16b27b0507d3cf5f79ee46c82e553dab5276fc68af58dbca80010d72b5509367;
+  continuity/artifacts/sessions/session-mi006-r1-1.json
+  b0a7c8d9f39cb2b93b02fb1c123ed0fa67d615ba24a51adf4899cba236b799fc;
+  continuity/artifacts/context-packs/run-mi006-r1.json
+  d47cc67233d9e4ff0ae9ff7291fb69c59a839aa6a2f177c8e4c084244a9d361b;
+  continuity/artifacts/pack-locks/run-mi006-r1.json
+  be5778b0b0edb5842cd0673ae078a37dfc6b9ea5c02592acbc7e14f8f78f95d9;
+  continuity/artifacts/formation-traces/run-mi006-r1.json
+  580af1f634eb4468ef9d337e39b316c189b8e511d86fa293410d1733f6799b1d;
+  continuity/level-6/completion-binding.json
+  803863bb2e0021d1ebb70a506a242bbb7cb4d8b8f9c2bfc4a4db69a62adac8c4;
+  the Guard definition 74008f12…; the completed backlog item ea565c07…;
+  the two VS-001 observation records d87f0095… and 1d72c5c1…; the two
+  VS-001 lesson records b44e3216… and cdb9c3a2…; the current lesson
+  dossier .claude/skills/backlog-next/LESSONS.md eea79ec7…; and the
+  entire Git common directory journal/ tree (digest recorded at start,
+  byte-identical at close).
+
+nestfolio_scope:
+  read_only_sources:
+    - .git metadata, exact committed objects, and the Git common directory journal/ tree (route facts and byte-identity proof only)
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json, .claude/skills/** (including the LESSONS.md import source)
+    - runtime/** including the entire pinned engine runtime/continuity/**
+    - continuity/level-1/** through continuity/level-6/** pre-existing files
+    - continuity/artifacts/** pre-existing files, continuity/bindings/** pre-existing files, continuity/packs/**, continuity/dogfood/**
+    - .continuity/** pre-existing files except the two permitted modify paths
+    - continuity/evidence/** pre-existing trees
+    - docs/backlog/** (read-only; no completion write-back or any other mutation occurs in MI-007)
+    - tests/continuity-level-1.test.mjs through tests/continuity-level-6.test.mjs (published suites; never edited)
+  create_fixed_paths_on_pass:
+    - continuity/level-6/learning-binding.json
+    - continuity/level-6/retirement-inventory.json
+    - tests/continuity-level-6-learning.test.mjs
+    - continuity/artifacts/observations/observation-mi007-01-deterministic-evidence-sourcing.json
+    - continuity/artifacts/observations/observation-mi007-02-dead-handler-guard-duplicate.json
+    - continuity/artifacts/observations/observation-mi007-03-run-mi005-staleness.json
+    - continuity/artifacts/observations/observation-mi007-04-occupied-work-item-conflict.json
+    - continuity/artifacts/observations/observation-mi007-05-historical-import-f30.json
+    - continuity/artifacts/lessons/lesson-mi007-01-deterministic-evidence-boundary.json
+    - continuity/artifacts/lessons/lesson-mi007-02-automatic-rebinding-rejected.json
+    - continuity/artifacts/decisions/decision-mi007-01-accept-deterministic-evidence-boundary-change.json
+    - continuity/artifacts/change-proposals/change-proposal-mi007-01-deterministic-evidence-boundary-rule.json
+    - continuity/bindings/nestfolio/decisions/mi007-deterministic-evidence-boundary-rule.json
+    - continuity/evidence/mi-007/00-repository-bindings.json
+    - continuity/evidence/mi-007/01-engine-lock-and-preservation.json
+    - continuity/evidence/mi-007/02-observations-and-provenance.json
+    - continuity/evidence/mi-007/03-review-outcomes-and-authorizations.json
+    - continuity/evidence/mi-007/04-lessons-and-safety-review.json
+    - continuity/evidence/mi-007/05-decision-and-change-proposal.json
+    - continuity/evidence/mi-007/06-applied-change-and-ordering-proof.json
+    - continuity/evidence/mi-007/07-no-auto-promotion-proof.json
+    - continuity/evidence/mi-007/08-retirement-inventory.json
+    - continuity/evidence/mi-007/09-mandatory-failures.json
+    - continuity/evidence/mi-007/10-suites-and-manifest.json
+    - continuity/evidence/mi-007/commands/01-learning-tests.json
+    - continuity/evidence/mi-007/commands/02-level6-tests.json
+    - continuity/evidence/mi-007/commands/03-level5-tests.json
+    - continuity/evidence/mi-007/commands/04-level4-tests.json
+    - continuity/evidence/mi-007/commands/05-level3-tests.json
+    - continuity/evidence/mi-007/commands/06-level2-tests.json
+    - continuity/evidence/mi-007/commands/07-level1-tests.json
+    - continuity/evidence/mi-007/commands/08-engine-tests.json
+    - continuity/evidence/mi-007/commands/09-backlog-next-tests.json
+    - continuity/evidence/mi-007/commands/10-final-changed-files.json
+  create_engine_write_set_classes: >
+    The only additional permitted creates are records the pinned adapter or
+    store produces itself as a side effect of the contracted operations
+    (executor-session records under .continuity/executor-sessions/**, if
+    any). NO run, checkpoint, handoff, session, context-pack,
+    formation-trace, pack-lock, validation-plan, validation-result,
+    evidence, scope, working-set, or work-item store artifact is created;
+    the appearance of any such artifact is MANIFEST_SCOPE_MISMATCH.
+  modify_exactly:
+    - ".continuity/audit.ndjson — append-only via the pinned appendAudit: one typed record per contracted store write, review capture, application, and rebuild; the recorded pre-execution bytes must remain the exact unmodified prefix of the final file, proven by prefix digest comparison"
+    - ".continuity/derived/index.json — derived non-authoritative projection, rewritten only by the pinned engine's deterministic rebuildIndex (which discovers the new decisions and change-proposals kinds); the pre-execution snapshot remains recoverable from Git history"
+  scope_rule: >
+    On PASS the Nestfolio diff from the exact start revision must contain
+    exactly: the fixed create paths, any adapter-produced
+    executor-session records, and the two permitted modified paths — with
+    no staged path and no other modified, deleted, renamed, or additional
+    path. Every other pre-existing tracked byte is byte-immutable for the
+    whole execution. The delta remains uncommitted and unstaged at
+    execution close; publication is separately authorized.
+  path_absence_rule: >
+    Any pre-existing fixed create path (including the decisions and
+    change-proposals kind directories containing any conflicting id) is a
+    collision and blocks execution; it must not be overwritten, adopted,
+    repaired, or deleted.
+
+write_set_rehearsal: >
+  Before any real-tree mutation, the orchestrating executor rehearses the
+  complete mechanics — every store creation and contracted advancement in
+  order, the audit appends, the applied change with its ordering proof, the
+  learning binding, the retirement inventory, the new learning suite
+  passing, the derived index rebuild over the new kinds, and byte-exact
+  rollback to the start state — in an isolated temporary copy outside all
+  three repositories, driving the pinned store API directly. The rehearsal
+  freezes the exact write-set (every created path and the two modified
+  paths with before/after digests); the real execution must produce exactly
+  the frozen write-set, and any deviation is MANIFEST_SCOPE_MISMATCH. The
+  owner-review capture is NOT rehearsed with fabricated quotes: rehearsal
+  artifacts carry the fixed placeholder REHEARSAL-PENDING-OWNER-CAPTURE in
+  the authorization fields, and the real execution replaces them only with
+  the genuinely captured owner statements. The copy is removed with absence
+  proof.
+
+required_preconditions:
+  - the session gates in session_gates pass before any Nestfolio mutation
+  - every engine file and .claude/settings.json verify against the recorded engine-lock digests at the bound revision (ENGINE_ASSET_MISMATCH otherwise)
+  - every bound learning source verifies byte-identical to its pinned digest, and every byte_identity_guarantees record verifies at start
+  - the bound Level 2 lock aggregate 73bbb7c9…, Level 3 scope db7a4527…, and Level 4 Context Pack e58c9bc1… digests verify read-only
+  - run-mi006-r1 is completed and run-mi005 is closed; no active target Run and no active current-journal Run exists (route facts recorded read-only; the journal tree digest is recorded at start)
+  - all fixed create paths are absent, including the decisions and change-proposals kind directories containing no conflicting id
+  - the human program owner is available in-session for the live review capture (owner_interaction_rule); execution does not start otherwise
+  - before mutation, without invoking any Skill: Level 6 10/10, Level 5 7/7, Level 4 23/23, Level 3 23/23, Level 2 23/23, Level 1 14/14, engine 9/9, backlog-next 68/68 (the tree is clean at the published revision, so all run in the real tree)
+  - the write-set rehearsal completed in the isolated copy, its frozen write-set satisfies nestfolio_scope exactly, and the learning suite passed there
+  - package-lock/pnpm-lock changes and dependency operations are not needed (pnpm-lock.yaml is byte-immutable)
+
+bounded_success_scenarios:
+  - id: S1
+    requirement: session gates, engine-lock digests, every bound learning-source digest, every byte-identity record, the route facts, and the fixed-path absences verify fail-closed before any mutation, and the baseline suites are green
+  - id: S2
+    requirement: the five Observations are created at the fixed ids through the pinned store API with expectedRevision 0, each carrying exact source provenance by path/digest and evidence references by id/digest
+  - id: S3
+    requirement: the four factual Observations are advanced exactly once each to the contracted review outcomes (accepted, duplicate, deferred, rejected) with the owner's verbatim confirmations and machine-captured UTCs; the historical import remains at revision 1 status historical, never reviewed or promoted
+  - id: S4
+    requirement: lesson-mi007-01 is created as candidate pending-human-review and advanced to accepted on the owner's confirmation; lesson-mi007-02 is created rejected with safety_review unsafe and never advanced; both record promotion automatic false and neither mutates anything
+  - id: S5
+    requirement: decision-mi007-01 records the owner's durable Decision with the verbatim quoted authorization and machine-captured UTC, and change-proposal-mi007-01 advances proposed-to-accepted-to-applied with the Decision and applied-file references by id/revision/digest at the contracted revisions
+  - id: S6
+    requirement: the one applied change exists as the contracted additive binding record with the full provenance chain, created strictly after the Decision and accepted-proposal records (proven by audit order and machine-captured UTCs), and the learning suite validates it deterministically
+  - id: S7
+    requirement: the no-auto-promotion proof passes — every pre-existing Skill, Pack, engine, suite, binding, store, and lock byte is proven byte-identical, and no target-artifact byte changed before the recorded approvals; the one applied file is the sole binding addition
+  - id: S8
+    requirement: the retirement inventory classifies exactly the six mechanisms with the contracted classifications and no-active-dependency bases, records the out-of-scope confirmations, and states explicitly that nothing is retired, disabled, or deleted
+  - id: S9
+    requirement: the audit ledger's pre-execution bytes are the exact prefix of its final bytes with one typed record per contracted operation; the derived index rebuilds deterministically discovering the decisions and change-proposals kinds with zero canonical loss; the journal tree digest is byte-identical at close
+  - id: S10
+    requirement: all required suites pass post-execution (the learning suite and Level 6/5/2/1, engine, and backlog-next in the real tree; Level 4 23/23 and Level 3 23/23 in an isolated committed validation copy per the SE-001-R3/MI-005 mechanics); the evidence set is complete, deterministic, and canonically serialized; all isolated fixtures and the rehearsal copy are removed with absence proof; the execution delta remains uncommitted and unstaged with a recorded SHA-256 manifest matching scope_rule exactly
+
+mandatory_failure_scenarios:
+  - id: F-AUTO-PROMOTION
+    condition: an attempt to create or modify any file under continuity/bindings/**, continuity/packs/**, .claude/skills/**, runtime/**, or any published suite as a consequence of an Observation or Lesson without the accepted Change Proposal and recorded owner Decision
+    diagnostic: AUTOMATIC_PROMOTION_PROHIBITED
+  - id: F-LESSON-AUTHORITY
+    condition: an attempt to treat an Observation or Lesson (accepted or otherwise) as executable authority for any rule, Guard, validator, Pack, or binding mutation
+    diagnostic: LEARNING_RECORD_HAS_NO_RULE_AUTHORITY
+  - id: F-REVIEW-WITHHELD
+    condition: the owner withholds, refuses, or contradicts any contracted review outcome, the Lesson acceptance, the Decision, or the application authorization
+    diagnostic: REVIEW_AUTHORIZATION_WITHHELD; execution stops fail-closed and MI-007 closes UNCONDITIONAL FAIL under the rollback rule
+  - id: F-REVIEW-CONFLICT
+    condition: a store creation finds its fixed path occupied, or a contracted advancement finds an unexpected revision
+    diagnostic: IMMUTABLE_ARTIFACT_EXISTS or REVISION_CONFLICT; execution blocks fail-closed before any further mutation
+  - id: F-IMPORT-PROVENANCE
+    condition: a historical import without the exact source path, digest, and quoted entry provenance
+    diagnostic: IMPORT_PROVENANCE_MISSING
+  - id: F-OUTCOME-PROMOTION
+    condition: an attempt to derive a Change Proposal or applied change from an Observation reviewed duplicate, deferred, or rejected, or from the historical import
+    diagnostic: REVIEW_OUTCOME_PROHIBITS_PROMOTION
+  - id: F-TARGET-ROUTED-MINT
+    condition: an attempt to run the current backward-edge mint/consider/curate path (run-backward.mjs) for the target-routed completed effort or any MI-007 learning record
+    diagnostic: TARGET_ROUTED_AUTOMATIC_CHECK_PROMOTION_PROHIBITED
+  - id: F-RETIRE-ACTIVE
+    condition: an attempt to mark any current mechanism retired, disabled, or deleted (in the inventory or on disk) in this bound, or any inventory claim lacking its no-active-dependency basis
+    diagnostic: RETIREMENT_BLOCKED_ACTIVE_DEPENDENCY
+  - id: F-UNAUTHORIZED-APPLY
+    condition: the applied-change file exists or is written without the recorded owner Decision, accepted proposal, and verbatim application authorization with machine-captured UTC
+    diagnostic: UNAUTHORIZED_TARGET_CHANGE
+  - id: F-CORE-PROMOTION
+    condition: an attempt to promote any learning record, rule, or mechanism into Framework Core (runtime/continuity/**) or to claim cross-project generality
+    diagnostic: FRAMEWORK_CORE_PROMOTION_PROHIBITED (cross-project evidence and a Decision would be required; neither exists)
+  - id: F10
+    condition: attempt to delegate contracted work to any Skill, slash command, /backlog-next, continuity:invoke, run-backward.mjs, or other product executor procedure
+    diagnostic: EXECUTOR_DELEGATION_PROHIBITED
+  - id: F11
+    condition: claim or creation of any MI-008-or-later state — sustained-dogfooding scope, themes/intake/Epic/deploy migration, universal registry, remote source, hosted service, Console, automated backlog creation from Observations, or any new Run, Work Item, Checkpoint, Handoff, or Context Pack
+    diagnostic: FORBIDDEN_HIGHER_LEVEL_CLAIM
+  - id: F12
+    condition: any executor or engine write outside the frozen write-set, fixed create paths, permitted adapter records, and two permitted modify paths (including any modification of the pinned engine, hooks, Skills, any published suite, any backlog item, or any pre-existing store or binding record)
+    diagnostic: MANIFEST_SCOPE_MISMATCH
+  fixture_rule: >
+    F-REVIEW-CONFLICT, F-IMPORT-PROVENANCE, F-OUTCOME-PROMOTION,
+    F-UNAUTHORIZED-APPLY, and F-RETIRE-ACTIVE are exercised in isolated
+    temporary fixtures outside all three repositories with exact
+    expected/observed diagnostics, exit codes, fixture digests, and cleanup
+    proof (the store's own typed REVISION_CONFLICT and
+    IMMUTABLE_ARTIFACT_EXISTS demonstrated against a fixture store; the
+    contracted diagnostics demonstrated by the executor's own fail-closed
+    checks). F-AUTO-PROMOTION, F-LESSON-AUTHORITY, F-TARGET-ROUTED-MINT,
+    F-CORE-PROMOTION, F-REVIEW-WITHHELD, F10, F11, and F12 are standing
+    prohibitions verified structurally (the no-auto-promotion digest proof,
+    the audit-order proof, the final manifest, and the absence of any
+    run-backward.mjs invocation in the recorded commands); F-REVIEW-WITHHELD
+    additionally documents the stop-and-fail semantics without fabricating a
+    withheld reply.
+
+deterministic_evidence:
+  rules:
+    - every JSON evidence file uses canonical JSON with recursively sorted object keys, UTF-8, two-space indentation, and one LF terminator
+    - every command record contains argv, cwd role, start and end UTC, exit code, stdout SHA-256, stderr SHA-256, and parsed result
+    - repository bindings include branch, HEAD, clean state, and observed time for all three repositories, plus the journal tree digest
+    - engine-lock evidence records every engine-lock digest verification
+    - observation evidence records, per artifact, the full bytes digest at each revision, the source provenance, and the evidence references
+    - review evidence records each verbatim owner quote with its machine-captured UTC and the artifact revision it advanced
+    - decision/proposal evidence records the full revision chains with per-revision digests and cross-references
+    - applied-change evidence records the file digest, the provenance chain, and the audit-order proof (the Decision and accepted-proposal audit records strictly precede the application record)
+    - no-auto-promotion evidence records every compared digest set with before/after values
+    - retirement evidence records the six classifications with their route-fact bases
+    - scenario evidence records expected diagnostic, observed diagnostic, exit code, fixture digest, and cleanup result
+    - no chat transcript, hidden manual copy, timestamp-dependent artifact ordering, or unrecorded inference is admissible; narrative alone proves nothing
+    - temporary fixtures and copies are outside all three repositories and are removed with absence proof
+  required_validation:
+    - node --test tests/continuity-level-6-learning.test.mjs returns all tests passing
+    - node --test tests/continuity-level-6.test.mjs returns 10/10 after execution
+    - node --test tests/continuity-level-5.test.mjs returns 7/7 after execution
+    - node --test tests/continuity-level-4.test.mjs returns 23/23 after execution in an isolated committed validation copy (working-tree purity guards; SE-001-R3/MI-005 mechanics)
+    - node --test tests/continuity-level-3.test.mjs returns 23/23 after execution in the same isolated committed validation copy
+    - node --test tests/continuity-level-2.test.mjs returns 23/23 after execution
+    - node --test tests/continuity-level-1.test.mjs returns 14/14 after execution
+    - node --test runtime/continuity/test/*.test.mjs exits 0 with zero failures after execution
+    - node --test .claude/skills/backlog-next/test/*.test.mjs returns 68/68 after execution without invoking the Skill
+    - all S1-S10 success scenarios pass
+    - all mandatory failure scenarios are demonstrated per fixture_rule
+    - the journal tree digest after execution equals the recorded pre-execution digest
+    - final Git and digest comparison proves every pre-existing tracked path other than the two permitted modify paths equals the exact start revision
+    - the final Nestfolio manifest contains exactly the paths permitted by scope_rule, uncommitted and unstaged, with a recorded SHA-256 manifest
+
+preservation_and_rollback:
+  before_write: >
+    Record exact Git metadata for all three repositories, the complete
+    Nestfolio tracked-tree identity, the journal tree digest, the
+    pre-execution bytes and digests of the two permitted modify paths,
+    every byte_identity_guarantees digest, absence of every fixed create
+    path, and a verified external recovery ledger outside all
+    repositories.
+  execution_failure: >
+    If any condition fails after mutation starts (including
+    REVIEW_AUTHORIZATION_WITHHELD), restore the two permitted modify paths
+    to their recorded pre-execution bytes, remove every newly created
+    MI-007 path, verify Nestfolio is byte-identical and clean at the exact
+    published start revision, retain diagnostics outside all repositories,
+    and close MI-007 as UNCONDITIONAL FAIL in continuity-lab. Never retain
+    partial learning state, never leave a Change Proposal accepted or
+    applied without its recorded authorizations, and never write into the
+    current journal.
+
+permitted_continuity_lab_execution_closure:
+  modify:
+    - README.md
+    - CONTINUITY-NEXT-STEPS.md
+    - docs/70-implementation/README.md
+    - docs/90-state/artifact-index.md
+    - docs/90-state/program-state.md
+    - scripts/generate-program-indices.mjs (queue tail text only, if the recorded blocked tail requires it)
+    - sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/context-pack.yaml
+    - sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/session-handoff.md
+  create:
+    - docs/70-implementation/mi-007-governed-learning-and-selective-current-runtime-retirement.md
+    - sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/execution-changed-files.txt
+  rule: >
+    The execution closure records only the one MI-007 result and exact
+    execution facts, and performs the DR-0025 closure obligations
+    (queue_summary update, index regeneration, --check). Every prior
+    immutable result and publication record remains immutable. Per DR-0024
+    the closure may be committed and pushed in the executing session with a
+    concise subject-only message; the Nestfolio execution delta stays
+    uncommitted pending its separate publication authorization.
+
+explicitly_immutable:
+  continuity_workspace: [all content during execution]
+  continuity_lab_during_execution:
+    - all MI-002 through MI-006-R1 artifacts and reports
+    - all VS-001 and VS-001A artifacts and reports
+    - the MI-007 prompt and contract-authoring manifest
+    - every path outside the exact MI-007 execution-closure scope
+  nestfolio:
+    - every pre-existing tracked path except the two permitted modify paths under their modify_exactly rules
+    - the entire Git common directory journal/ tree
+    - package.json, pnpm-lock.yaml, CLAUDE.md, .claude/settings.json, .claude/skills/**
+    - runtime/** including the entire pinned engine runtime/continuity/**
+    - docs/backlog/** without exception (MI-007 performs no backlog write-back)
+    - continuity/level-1/** through continuity/level-6/** pre-existing files
+    - continuity/evidence/** pre-existing trees
+    - every pre-existing continuity/artifacts/**, continuity/bindings/**, continuity/packs/**, continuity/dogfood/**, and .continuity/** file except the two permitted modify paths
+    - tests/continuity-level-1.test.mjs through tests/continuity-level-6.test.mjs (all published suites)
+
+prohibited_actions:
+  - execute MI-007 outside authorization_rule
+  - inspect or modify Nestfolio content before execution validly starts and session gates pass
+  - commit or push the Nestfolio execution delta during execution (isolated-copy throwaway commits under the suite mechanics and the rehearsal are not real-repository commits); fetch, pull, merge, rebase, reset, checkout, restore, stash, clean, or rewrite history in any real repository during execution
+  - modify, repair, relabel, qualify, supersede, re-grade, or reinterpret any recorded historical result or artifact
+  - create, advance, or mutate any Run, Work Item, Working Set, Scope, Checkpoint, Handoff, Session, Context Pack, formation trace, pack lock, validation plan, validation result, or Evidence store artifact; invoke recordLesson, selectWork, startRun, resumeRun, validateRun, or completeRun
+  - advance, rewrite, or delete any pre-existing store, binding, or evidence record; touch the two VS-001 observation and two VS-001 lesson records in any way
+  - mutate any backlog item, any published suite, the pinned engine runtime/continuity/**, the hooks, .claude/settings.json, or any Skill; introduce any engine code
+  - use the current backward-edge path (run-backward.mjs mint/consider/curate) for anything in this session
+  - apply, stage, or draft any target change beyond the one contracted applied-change file, or create it before the recorded Decision and acceptance exist
+  - derive any Change Proposal or applied change from a duplicate, deferred, rejected, or historical record
+  - retire, disable, or delete any current mechanism, or claim a retirement in the inventory
+  - promote anything into Framework Core, claim cross-project generality, or create a universal registry, remote source, hosted service, or Console
+  - fabricate, default, infer, or rehearse-then-reuse any owner review statement; every authorization quote must be captured live with machine-captured UTC
+  - collapse deterministic, agent-review, and human-review authority into one opaque score
+  - install, remove, or upgrade dependencies, modify package.json, or mutate pnpm-lock.yaml
+  - automate backlog creation from Observations, or migrate themes, intake, Epic, or deploy behavior
+  - execute MI-008 or any broader or unrelated implementation, or scope later slices
+
+verdict:
+  type: conjunctive-unconditional-single-result
+  criteria:
+    - C1 session gates, engine-lock verification, every bound learning-source and byte-identity digest, the route facts, the fixed-path absences, and the baseline suites pass fail-closed before mutation
+    - C2 the five Observations are created exactly as contracted with exact provenance, and the four factual review outcomes are advanced exactly once each to accepted/duplicate/deferred/rejected on the owner's live verbatim confirmations with machine-captured UTCs; the historical import is provenance-complete and never promoted
+    - C3 the two Lessons carry the contracted lifecycles (accepted candidate; rejected-unsafe) with promotion automatic false, and no learning record mutates or authorizes anything by itself
+    - C4 the durable Decision and the separate Change Proposal carry the contracted revision chains and cross-references, and the one applied change exists only after the recorded approvals with the full provenance chain, validated deterministically and proven ordered by the audit ledger
+    - C5 the no-auto-promotion proof passes over every contracted digest set, the retirement inventory records exactly the six contracted classifications with no-active-dependency bases and zero actual retirement, and the out-of-scope confirmations are recorded
+    - C6 every mandatory failure scenario is demonstrated per fixture_rule with its exact typed diagnostic, and no prohibited action occurs
+    - C7 the audit prefix, derived-index rebuild, journal byte-identity, every byte-identity record, all required suites (learning suite plus Level 6/5/4/3/2/1, engine, backlog-next per required_validation), cleanup with absence proofs, and the exact uncommitted final manifest pass
+  pass_rule: >
+    Issue MI-007 UNCONDITIONAL PASS only if C1-C7, S1-S10, every mandatory
+    failure demonstration, every precondition, validation, preservation,
+    rollback, cleanup, and exact-manifest requirement passes conjunctively
+    and no prohibited action occurs.
+  fail_rule: >
+    Any missing, skipped, ambiguous, stale, mismatched, out-of-scope,
+    non-deterministic, partial, or failed condition after valid execution
+    start — including any withheld owner confirmation — is MI-007
+    UNCONDITIONAL FAIL. No qualified PASS, partial PASS, inferred
+    authorization, silent repair, evidence-only override, historical
+    reinterpretation, or history rewrite is permitted.
+
+next_iteration_rule:
+  on_pass: >
+    Record MI-007 separately; every prior result remains a separate
+    immutable result. The accepted Level 6 operational loop is complete:
+    selection (MI-003), authorized context (MI-004), resumable Runs
+    (MI-005), Evidence-bound completion and Guard coexistence (MI-006-R1),
+    and governed Decision-and-Learning with a selective retirement
+    inventory (MI-007) are all proven bounded guarantees on the pinned
+    engine. Deferred current capabilities remain explicit future
+    candidates, not hidden migration debt. The Nestfolio execution delta
+    remains uncommitted; its publication requires separate explicit
+    authorization (MI-007-PUB, mirroring the prior publication records).
+    Per the migration plan, sustained dogfooding against the Product
+    Foundation success criteria becomes the next contractable program
+    phase; it and broader work remain blocked pending separate
+    contracting, review, publication, and explicit authorization.
+  on_fail: >
+    Preserve all separate results. Select only a newly bounded correction
+    or explicit review supported by the failure evidence. Do not broaden
+    scope.
+
+completion_criteria:
+  - internally consistent MI-007 contract authored, reviewed by the human program owner, and published on continuity-lab main in one DR-0024 session
+  - execution not started in the authoring phase; the only Nestfolio interactions of the authoring session are the recorded bounded targeted grounding reads and the isolated scratch-store scout outside all three repositories (since removed)
+  - the DR-0017 lifecycles, the five Observations with contracted outcomes, the two Lessons, the durable Decision, the separate Change Proposal, the one owner-applied additive change with ordering proof, the no-auto-promotion proof, the historical import, and the six-mechanism retirement inventory with zero actual retirement are defined by this contract as the migration plan requires
+  - the pinned engine is used unmodified through its own store API; recordLesson is excluded; every published record including run-mi006-r1 and the VS-001 learning records is pinned byte-identical
+  - all twelve prior immutable results and the SE-001-PUB, MI-005-PUB, and MI-006-R1-PUB publication records remain immutable and unrepaired
+  - DR-0025 closure obligations performed at session closure (queue_position 34, queue_summary, permanent-tail reduction, index regeneration, --check exit 0)
+  - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
