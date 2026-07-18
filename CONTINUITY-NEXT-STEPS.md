@@ -1,58 +1,42 @@
-# Continuity — MI-006-R1 Execution Closure Handoff
+# Continuity — MI-006-R1 Publication Closure Handoff
 
 ## Current state
 
-- **MI-006-R1 — Evidence-Bound Completion Existing-Work-Item Rebinding
-  Correction executed 2026-07-18 under DR-0024 and closed UNCONDITIONAL
-  PASS** — the program's first Evidence-bound Work completion, executed
-  directly by Claude Code (`claude-opus-4-8`) through the pinned engine
-  unmodified (no engine byte changed). Report:
-  `docs/70-implementation/mi-006-r1-evidence-bound-completion-existing-work-item-rebinding.md`.
-- **What happened.** From the published contract revision `80d70ac9…`, every
-  precondition verified fail-closed before mutation. The effort's existing
-  `in_progress` Work Item `dashboard-bff-awaiting-confirmation-activity-gap`
-  advanced from the immutable revision-2 MI-005 base to completed through
-  exactly three contracted transitions — rev 3 rebinding write (pinned store
-  API, `expectedRevision 2`), rev 4 engine `startRun`, rev 5 engine
-  `completeRun` — under one bounded immutability exception bound to the three
-  Level 3 criteria, with a bounded formation exception
-  (`scope-mi006-r1-completion`, `ws-mi006-r1`). Three linked immutable
-  Evidence artifacts span distinct deterministic, agent-review, and
-  human-review modes (criterion 1 carries the owner authorization "Autorizzo
-  il finding", UTC `2026-07-18T13:04:57.000Z`); one dead-handler Guard was
-  classified and evaluated true; `completeRun` performed the truthful backlog
-  write-back (`status shipped`; `b656733…` → `ea565c07…`). Every mandatory
-  failure fail-closed with its exact diagnostic; the Waiver path was
-  demonstrated on a synthetic criterion; the four self-invalidating published
-  assertions received the bounded completion-aware correction and pass in both
-  states.
-- **State of the tree.** The Nestfolio execution delta is **uncommitted and
-  unstaged** at Nestfolio `eafa09b81a600bd58fe8f4639298a182039d21f5` — 52
-  paths (6 modified, 46 created), SHA-256 manifest self-hash `840c12c0…`,
-  satisfying `scope_rule` exactly. Every MI-005/VS-001/VS-001A record is
-  byte-identical, the current journal tree is byte-identical, and `run-mi005`
-  is now permanently non-resumable by staleness (accepted, documented; no byte
-  change).
-- **Immutable ledger.** MI-002-R2 PASS through MI-006 FAIL remain eleven
-  separate immutable results; **MI-006-R1 UNCONDITIONAL PASS is the twelfth**;
-  SE-001-PUB and MI-005-PUB are unchanged. The continuity-lab execution
-  closure is committed and pushed; DR-0025 closure performed (queue_position
-  33, `--check` exit 0).
+- **MI-006-R1 evidence-bound completion Level 6 assurance — published
+  2026-07-18.** The recorded 52-path delta (manifest self-hash
+  `840c12c0ae31e1884a4221372b873be5576bcd7097485d29bcb938e7d0b93fea`) was
+  verified byte-exact — including the completed Work Item (revision 5, status
+  completed) and the backlog frontmatter (status `shipped`, closed
+  2026-07-18) — staged, and committed as one commit on Nestfolio main, exact
+  subject "Publish MI-006-R1 evidence-bound completion Level 6 assurance",
+  sole parent `eafa09b81a600bd58fe8f4639298a182039d21f5`, published at exact
+  Nestfolio revision `6229bb010d76723aaec0385c923b157762ee512e`, and pushed to
+  `origin/main`.
+- A pre-existing repository ship-gate (`backlog-index-matches`:
+  `docs/BACKLOG.md` stale relative to the already-frozen backlog frontmatter
+  change) was resolved via the repository's own journaled `RUNTIME_GATE_SKIP`
+  mechanism, after clearing an unrelated stale journal writer lease for the
+  same runId (dead pid; same machine, confirmed by unbroken uptime; only the
+  local mDNS hostname string differed). The skip is journaled for
+  ship-recheck adjudication and did not alter the 52-path manifest or its
+  self-hash.
+- At the published revision Nestfolio is clean and Level 6, Level 5, Level 4,
+  Level 3, Level 2, Level 1, engine, and backlog-next return 10/10, 7/7,
+  23/23, 23/23, 23/23, 14/14, 9/9, and 68/68 respectively, all directly in the
+  real working tree once clean.
+- Publication is repository state only; it records no completion, Run,
+  Assurance, or Level 6 authority beyond what MI-006-R1 already recorded.
+  MI-002-R2 `PASS`, MI-003 `FAIL`, MI-003-R1 `FAIL`, MI-003-R2 `PASS`,
+  MI-004 `PASS`, SE-001-R1 `FAIL`, MI-004-R1 `PASS`, SE-001-R2 `FAIL`,
+  SE-001-R3 `PASS`, MI-005 `PASS`, and MI-006 `FAIL` stand as eleven separate
+  immutable results, and MI-006-R1 `PASS` stands as the twelfth, unrepaired
+  and unrelabeled.
 
 ## Next valid operation
 
-A human decision is pending: **authorize publication of the MI-006-R1
-Nestfolio Level 6 completion delta** (the `continuity/level-6/**`, the
-classified Guard binding, `tests/continuity-level-6.test.mjs`, the
-`continuity/evidence/mi-006-r1/**` evidence, the completed Work Item revision
-chain, and the frozen `run-mi006-r1` engine write-set, plus the six modified
-paths) as one commit on Nestfolio `main`, exactly as SE-001-PUB and MI-005-PUB
-published their deltas. **Recommended option: authorize and publish
-(MI-006-R1-PUB)** — a mechanical publication session (`claude-sonnet-5`) that
-verifies the recorded 52-path delta byte-exact against the manifest self-hash
-`840c12c0…`, stages and commits it with a concise subject-only message at sole
-parent `eafa09b8`, pushes, and records the new Nestfolio revision. No
-completion, Run, or Level 6 authority beyond what MI-006-R1 already recorded is
-created by publication. MI-007 (Governed Learning and Selective Current-Runtime
-Retirement) and broader work remain blocked pending separate contracting,
-review, publication, and explicit authorization.
+MI-007 (Governed Learning and Selective Current-Runtime Retirement) becomes
+the next contractable slice. This is judgment-heavy contract authoring — use
+`claude-opus-4-8` or `claude-fable-5`. No Continuity program operation
+beyond contracting MI-007 is currently authorized; MI-007 and broader work
+remain blocked pending separate contracting, review, publication, and
+explicit authorization.
