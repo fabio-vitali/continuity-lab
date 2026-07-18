@@ -1,0 +1,42 @@
+MI-007 execution closure — continuity-lab changed files (committed):
+
+README.md
+CONTINUITY-NEXT-STEPS.md
+docs/70-implementation/README.md
+docs/70-implementation/mi-007-governed-learning-and-selective-current-runtime-retirement.md
+docs/90-state/artifact-index.md
+docs/90-state/program-state.md
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/context-pack.yaml
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/execution-changed-files.txt
+sessions/MI-007-governed-learning-and-selective-current-runtime-retirement/session-handoff.md
+
+Nestfolio execution delta: UNCOMMITTED and UNSTAGED at Nestfolio
+6229bb010d76723aaec0385c923b157762ee512e (publication separately authorized as
+MI-007-PUB). 36 paths — 2 modified, 34 created — SHA-256 manifest self-hash
+53c29538ee56b2b620dcb9ec48509feacee29e62d76351578c8cca7a33878c19.
+
+Modified (2):
+  .continuity/audit.ndjson                    (append-only; pre-exec 23067 bytes preserved as exact prefix; 28 MI-007 records appended)
+  .continuity/derived/index.json              (derived non-authoritative rebuild; discovered new decisions + change-proposals kinds)
+
+Created (34):
+  target learning artifacts via the pinned store API (9):
+    continuity/artifacts/observations/observation-mi007-01-deterministic-evidence-sourcing.json  (rev 2, accepted)
+    continuity/artifacts/observations/observation-mi007-02-dead-handler-guard-duplicate.json     (rev 2, duplicate)
+    continuity/artifacts/observations/observation-mi007-03-run-mi005-staleness.json              (rev 2, deferred)
+    continuity/artifacts/observations/observation-mi007-04-occupied-work-item-conflict.json      (rev 2, rejected)
+    continuity/artifacts/observations/observation-mi007-05-historical-import-f30.json            (rev 1, historical import; never promoted)
+    continuity/artifacts/lessons/lesson-mi007-01-deterministic-evidence-boundary.json            (rev 2, accepted; promotion.automatic false)
+    continuity/artifacts/lessons/lesson-mi007-02-automatic-rebinding-rejected.json               (rev 1, rejected; safety_review unsafe)
+    continuity/artifacts/decisions/decision-mi007-01-accept-deterministic-evidence-boundary-change.json  (rev 1, decided)
+    continuity/artifacts/change-proposals/change-proposal-mi007-01-deterministic-evidence-boundary-rule.json  (rev 3, applied)
+  one owner-applied additive project binding (1):
+    continuity/bindings/nestfolio/decisions/mi007-deterministic-evidence-boundary-rule.json      (file sha256 f602eeb0…; sole binding addition; after recorded approvals)
+  level-6 binding + inventory + learning suite (3):
+    continuity/level-6/learning-binding.json
+    continuity/level-6/retirement-inventory.json
+    tests/continuity-level-6-learning.test.mjs                                                    (deterministic; 11/11)
+  fixed create evidence (21): continuity/evidence/mi-007/00..10 plus commands/01..10
+  (no run, work-item, checkpoint, handoff, context-pack, scope, working-set, formation-trace,
+   pack-lock, validation-plan/result, or executor-session artifact — recordLesson never invoked;
+   no current mechanism retired; MI-008 scope absent)

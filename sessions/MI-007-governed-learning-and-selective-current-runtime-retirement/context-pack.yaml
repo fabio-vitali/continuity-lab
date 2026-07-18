@@ -1,6 +1,6 @@
 contract:
   queue_position: 34
-  queue_summary: "MI-007 — Governed Learning and Selective Current-Runtime Retirement — contract authored, owner-reviewed, and published 2026-07-18 under DR-0024; the Level 6 Decision-and-Learning slice over the completed effort's run-mi006-r1 Evidence: five fixed Observations (four factual, reviewed at execution to the contracted accepted/duplicate/deferred/rejected outcomes, plus one provenance-preserving historical import from the current LESSONS.md dossier), one accepted candidate Lesson and one rejected-unsafe Lesson, one durable Decision and one separate Change Proposal, exactly ONE owner-applied additive project-binding rule (the deterministic-evidence boundary rule) applied only after the recorded Decision and acceptance, a retirement inventory classifying six current mechanisms (retained/deferred/rejected; NONE retired in this bound), all through the pinned store API with the engine unmodified and every published record byte-identical; execution blocked pending explicit authorization"
+  queue_summary: "MI-007 — Governed Learning and Selective Current-Runtime Retirement — executed 2026-07-18 under DR-0024; UNCONDITIONAL PASS: the program's first governed Decision-and-Learning slice over the completed effort's run-mi006-r1 Evidence, through the pinned store API with the engine unmodified (recordLesson never invoked); five Observations (four reviewed live to accepted/duplicate/deferred/rejected, one F-30 historical import never promoted), two Lessons (accepted candidate; rejected-unsafe), one durable Decision and one separate Change Proposal advanced proposed-to-accepted-to-applied, and exactly ONE owner-applied additive project-binding rule created only after the recorded Decision and acceptance (audit-order and machine-captured UTC proven); no-auto-promotion proof over every Skill/Pack/engine/suite/binding/store/lock digest; six-mechanism retirement inventory retiring nothing; every mandatory failure fail-closed with its exact diagnostic; all suites green (learning 11/11, L6 10/10, L5 7/7, L4 23/23, L3 23/23, L2 23/23, L1 14/14, engine 9/9, backlog-next 68/68); Nestfolio 36-path delta uncommitted (2 modified, 34 created; manifest 53c29538); pinned engine and every run-mi006-r1/VS-001 record byte-identical; thirteen immutable results; MI-007-PUB and sustained dogfooding blocked"
   status: contracted-published
   authored_on: 2026-07-18
   reviewed_on: 2026-07-18
@@ -847,3 +847,21 @@ completion_criteria:
   - all twelve prior immutable results and the SE-001-PUB, MI-005-PUB, and MI-006-R1-PUB publication records remain immutable and unrepaired
   - DR-0025 closure obligations performed at session closure (queue_position 34, queue_summary, permanent-tail reduction, index regeneration, --check exit 0)
   - execution handoff saved to ~/continuity-handoffs/ with the exact published revision and a fully resolved launch command
+
+execution_closure:
+  executed_on: 2026-07-18
+  executor: Claude Code (claude-opus-4-8), direct execution session, DR-0024
+  executed_from_published_contract_revision: 29b592c04162507b9495737a3214149a03de3cee
+  bound_nestfolio_revision: 6229bb010d76723aaec0385c923b157762ee512e
+  result: UNCONDITIONAL PASS
+  live_owner_captures:
+    - "observation-mi007-01 accepted / -02 duplicate / -03 deferred / -04 rejected — \"Confermo: 01 accepted, 02 duplicate, 03 deferred, 04 rejected\" @ 2026-07-18T16:56:45.000Z"
+    - "lesson-mi007-01 acceptance — \"confermo\" @ 2026-07-18T16:58:57.000Z"
+    - "decision-mi007-01 durable Decision — \"ok\" @ 2026-07-18T17:00:48.000Z"
+    - "application authorization (applied binding) — \"ok\" @ 2026-07-18T17:01:57.000Z"
+  no_placeholder_remains: true
+  suites: learning 11/11, L6 10/10, L5 7/7, L4 23/23 (committed copy), L3 23/23 (committed copy), L2 23/23, L1 14/14, engine 9/9, backlog-next 68/68
+  nestfolio_execution_delta: 36 paths (2 modified, 34 created); uncommitted and unstaged; SHA-256 manifest self-hash 53c29538ee56b2b620dcb9ec48509feacee29e62d76351578c8cca7a33878c19; publication separately authorized (MI-007-PUB)
+  applied_binding_file_sha256: f602eeb0c9e438821c312cea6a3e112c0035a41ee39e18b6c0ec40360145050d
+  immutable_ledger: MI-007 UNCONDITIONAL PASS is a separate new immutable result (the thirteenth); the twelve prior results and SE-001-PUB/MI-005-PUB/MI-006-R1-PUB are unchanged
+  report: docs/70-implementation/mi-007-governed-learning-and-selective-current-runtime-retirement.md
