@@ -11,6 +11,8 @@ superseded_by: null
 
 This repository is the canonical product, architecture, migration, program-state, contract, and validation memory for **Continuity**, a repository-native framework for sustained coding-agent work with Claude Code as the first executor.
 
+New to Continuity? Start with the non-normative developer guide: `docs/developer-guide.md`.
+
 ## Current program position
 
 PF-001, RI-001, PI-001, TA-002, VS-001/VS-001A, PX-001, and MA-001 are complete. G2 through G6 remain valid under their recorded evidence.
