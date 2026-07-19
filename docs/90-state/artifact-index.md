@@ -2,7 +2,7 @@
 artifact_id: STATE-ARTIFACT-INDEX
 status: ratified
 owner: program
-last_updated: 2026-07-18
+last_updated: 2026-07-19
 supersedes: []
 superseded_by: null
 ---
@@ -14,6 +14,7 @@ superseded_by: null
 | `README.md` | Ratified | Program | Repository orientation; preserves MI-002 through MI-004 history and records the superseded SE-001, the executed SE-001-R1 UNCONDITIONAL FAIL, the MI-004-R1 UNCONDITIONAL PASS correction, the executed SE-001-R2 UNCONDITIONAL FAIL, the executed SE-001-R3 UNCONDITIONAL PASS, the published SE-001 selected effort implementation and evidence at Nestfolio `363283bc…`, the published MI-005 Level 5 evidence at Nestfolio `eafa09b8…`, the published MI-006-R1 Level 6 assurance evidence at Nestfolio `6229bb01…`, the executed MI-007 UNCONDITIONAL PASS governed Decision-and-Learning slice, and the published MI-007 governed learning and selective current-runtime retirement evidence at Nestfolio `914456ce…` |
 | `CONTINUITY-NEXT-STEPS.md` | Ratified | Program | Current-state summary and handoff pointer reflecting the published MI-007 governed learning and selective current-runtime retirement evidence at Nestfolio `914456ce…`; sustained dogfooding blocked pending separate contracting, review, publication, and explicit authorization |
 | `docs/developer-guide.md` | Provisional | Program | Non-normative developer onboarding guide: what Continuity is, repository layout, domain model, fail-closed semantics, the six validated levels, the end-to-end execution loop, and current-phase sharp edges; owning artifacts win on any conflict |
+| `docs/integration-guide.md` | Provisional | Program | Non-normative integration guide for target repositories, with the validated Nestfolio integration as the worked example: integration footprint, packs, executor wiring, digest pinning, execution loop, scope, evidence-bound completion, adoption levels, and sharp edges; owning artifacts win on any conflict |
 | `docs/00-governance/product-development-operating-model.md` | Ratified | Governance | Program lifecycle, gates, iteration rules, and contradiction handling |
 | `docs/00-governance/artifact-governance.md` | Ratified | Governance | Canonical artifact ownership, status, review, and change rules |
 | `docs/00-governance/design-levels.md` | Ratified | Governance | L1–L7 design-level boundaries and authority |
